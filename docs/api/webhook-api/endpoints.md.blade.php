@@ -98,7 +98,7 @@ The returned `token` should be saved and used to validate the webhook origin. It
 The `conditions` lists consists of an `array` of objects, with the following properties:
 
 * `key`: the key used on the object that is passed along with the specified event
-* `condition`: a [condition](endpoints.md#conditions) used to check the value against
+* `condition`: a [condition](/docs/api/webhook-api/endpoints/endpoints#conditions) used to check the value against
 * `value`: \(Optional\) a value used to check the `key` against. This is not needed for the `falsy` and `truthy` conditions. In case of `between` and `not-between`, you'll have to provide an object like this: `"value": { "min": "someValue", "max": "someValue" }`
 
 ### Endpoint
@@ -111,7 +111,7 @@ POST /api/webhooks
 
 | Name | Type | Description | Required |
 | :--- | :---: | :--- | :---: |
-| event | string | The name of the [event](endpoints.md#events) to be listened for. | Yes |
+| event | string | The name of the [event](/docs/api/webhook-api/endpointsendpoints#events) to be listened for. | Yes |
 | target | string | The target URL for the HTTP payload. | Yes |
 | enabled | string | The value to enable or disable the webhook. | No |
 | conditions | array | The list of conditions required to trigger the webhook. | Yes |
