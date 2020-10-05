@@ -6,7 +6,7 @@ title: Spinning Up Your First Testnet
 
 ## Step 1: Start Docker Testnet Database
 
-You already generated docker files during the[ development environment setup](setting-up-your-development-environment/#step-7-1-database-setup-using-docker) \(if not please run the following commands as specified [here](setting-up-your-development-environment/#step-7-1-database-setup-using-docker)\).
+You already generated docker files during the[ development environment setup](/docs/core/how-to-guides/setting-up-your-development-environment/linux#step-7-setting-up-the-development-database) \(if not please run the following commands as specified [here](setting-up-your-development-environment/#step-7-1-database-setup-using-docker)\).
 
 ```bash
 cd core/docker/development/testnet #testnet docker folder
