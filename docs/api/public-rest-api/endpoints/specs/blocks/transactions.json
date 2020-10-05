@@ -1,0 +1,30 @@
+{
+    "title": "List All Transactions in a Block",
+    "description": "Instead of deserializing the block's payload; you can also obtain the transactions of each block as proper transaction objects directly.",
+    "method": "GET",
+    "path": "blocks/{id|height}/transactions",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the block to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "height": {
+            "type": "path",
+            "description": "The height of the block to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

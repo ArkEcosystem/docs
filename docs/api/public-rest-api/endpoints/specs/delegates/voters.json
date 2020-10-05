@@ -1,0 +1,38 @@
+{
+    "title": "List All Voters of a Delegate",
+    "description": "Obtaining the voters of a Delegate is trivial as well. This endpoint returns **active** voters. To acquire historical voters, it is better to query the database directly.",
+    "method": "GET",
+    "path": "delegates/{username|address|publicKey}/voters",
+    "parameters": {
+        "address": {
+            "type": "path",
+            "description": "The address of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "publicKey": {
+            "type": "path",
+            "description": "The public key of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "username": {
+            "type": "path",
+            "description": "The username of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

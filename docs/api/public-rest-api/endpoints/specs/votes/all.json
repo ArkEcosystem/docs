@@ -1,0 +1,20 @@
+{
+    "title": "List All Votes",
+    "description": "All voting transactions may be obtained through this API. This is the equivalent of `transactions/search` with the body parameter `type: 3`.",
+    "method": "GET",
+    "path": "votes",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

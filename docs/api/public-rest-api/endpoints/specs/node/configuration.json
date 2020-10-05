@@ -1,0 +1,6 @@
+{
+    "title": "Retrieve the configuration",
+    "description": "Used to access a Node's configuration and the network it is attached to (identified by the `nethash`).",
+    "method": "GET",
+    "path": "node/configuration"
+}

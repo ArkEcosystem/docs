@@ -1,0 +1,38 @@
+{
+    "title": "List All Blocks of a Delegate",
+    "description": "The `delegate` resource allows you to obtain blocks from a specific Delegate. This is the equivalent of [searching for blocks](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/api/public/v2/blocks.html#search-all-blocks) using the `generatorPublicKey`.",
+    "method": "GET",
+    "path": "delegates/{username|address|publicKey}/blocks",
+    "parameters": {
+        "address": {
+            "type": "path",
+            "description": "The address of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "publicKey": {
+            "type": "path",
+            "description": "The public key of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "username": {
+            "type": "path",
+            "description": "The username of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

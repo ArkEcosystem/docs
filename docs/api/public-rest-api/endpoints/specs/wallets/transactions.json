@@ -1,0 +1,25 @@
+{
+    "title": "List All Transactions of a Wallet",
+    "description": "All transactions belonging to a wallet can be obtained using this API. Equivalent to `transactions/search` with parameters `senderId` and `recipientId`.",
+    "method": "GET",
+    "path": "wallets/{id}/transactions",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the wallet to be retrieved.",
+            "rules": ["required", "string"]
+        },
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

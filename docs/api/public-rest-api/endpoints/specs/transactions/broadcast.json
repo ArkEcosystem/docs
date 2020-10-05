@@ -1,0 +1,13 @@
+{
+    "title": "Broadcast Transactions",
+    "description": "Creating the correct payload for a transaction is non-trivial, as it requires cryptographic functions and a specific serialization protocol. Our [crypto SDKs](/docs/sdk) provide the functionality needed in most major programming languages. You can read more about it in the send transaction section.",
+    "method": "POST",
+    "path": "transactions",
+    "parameters": {
+        "transactions": {
+            "type": "body",
+            "description": "The list of transactions to broadcast.",
+            "rules": ["nullable", "array"]
+        }
+    }
+}

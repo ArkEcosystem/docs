@@ -1,0 +1,18 @@
+{
+    "title": "Retrieve a block",
+    "description": "Blocks may be retrieved by ID or by height. The height is an incremental integer.",
+    "method": "GET",
+    "path": "blocks/{id|height}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the block to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "height": {
+            "type": "path",
+            "description": "The height of the block to be retrieved.",
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

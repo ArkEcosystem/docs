@@ -1,0 +1,6 @@
+{
+    "title": "Retrieve the status",
+    "description": "The status allows for health checking, showing if the node is in sync with the network.",
+    "method": "GET",
+    "path": "node/status"
+}

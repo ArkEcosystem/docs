@@ -1,0 +1,13 @@
+{
+    "title": "Retrieve a Peer",
+    "description": "Specific peers can be found by IP address. Note that a peer may have their Public API disabled, and thus they are only reachable by the internal `p2p` API.",
+    "method": "GET",
+    "path": "peers/{ip}",
+    "parameters": {
+        "ip": {
+            "type": "path",
+            "description": "The IP address of the peer to be retrieved.",
+            "rules": ["required", "integer"]
+        }
+    }
+}

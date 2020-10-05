@@ -1,0 +1,6 @@
+{
+    "title": "Get Transaction Fees (Non-Dynamic)",
+    "description": "The static transaction fees are significantly higher than the dynamic transaction fees. Use the [node resource](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/api/public/v2/node.html#retrieve-the-configuration) to find dynamic fees, and prefer using these.",
+    "method": "GET",
+    "path": "transactions/fees"
+}

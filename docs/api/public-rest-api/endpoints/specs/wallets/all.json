@@ -1,0 +1,20 @@
+{
+    "title": "List All Wallets",
+    "description": "A paginated API is provided to obtain all wallets, including empty ones.",
+    "method": "GET",
+    "path": "wallets",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "title": "Search for a Delegate",
+    "description": "For fine-grained searches, use the `search` endpoint.",
+    "method": "POST",
+    "path": "delegates/search",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        },
+        "address": {
+            "type": "body",
+            "description": "The address of the delegate to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "publicKey": {
+            "type": "body",
+            "description": "The public key of the delegate to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "username": {
+            "type": "body",
+            "description": "The username of the delegate to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "usernames": {
+            "type": "body",
+            "description": "The usernames of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "approval": {
+            "type": "body",
+            "description": "The approval rate of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "approval.from": {
+            "type": "body",
+            "description": "The lower limit of the approval rate.",
+            "rules": ["nullable", "integer"]
+        },
+        "approval.to": {
+            "type": "body",
+            "description": "The upper limit of the approval rate.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedFees": {
+            "type": "body",
+            "description": "The forged fees of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedFees.from": {
+            "type": "body",
+            "description": "The lower limit of the forged fees.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedFees.to": {
+            "type": "body",
+            "description": "The upper limit of the forged fees.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedRewards": {
+            "type": "body",
+            "description": "The forged rewards of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedRewards.from": {
+            "type": "body",
+            "description": "The lower limit of the forged rewards.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedRewards.to": {
+            "type": "body",
+            "description": "The upper limit of the forged rewards.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedTotal": {
+            "type": "body",
+            "description": "The forged total of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedTotal.from": {
+            "type": "body",
+            "description": "The lower limit of the forged total.",
+            "rules": ["nullable", "integer"]
+        },
+        "forgedTotal.to": {
+            "type": "body",
+            "description": "The upper limit of the forged total.",
+            "rules": ["nullable", "integer"]
+        },
+        "producedBlocks": {
+            "type": "body",
+            "description": "The produced blocks count of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "producedBlocks.from": {
+            "type": "body",
+            "description": "The lower limit of the produced blocks count.",
+            "rules": ["nullable", "integer"]
+        },
+        "producedBlocks.to": {
+            "type": "body",
+            "description": "The upper limit of the produced blocks count.",
+            "rules": ["nullable", "integer"]
+        },
+        "voteBalance": {
+            "type": "body",
+            "description": "The vote balance of the delegates to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "voteBalance.from": {
+            "type": "body",
+            "description": "The lower limit of the vote balance.",
+            "rules": ["nullable", "integer"]
+        },
+        "voteBalance.to": {
+            "type": "body",
+            "description": "The upper limit of the vote balance.",
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

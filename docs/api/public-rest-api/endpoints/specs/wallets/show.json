@@ -1,0 +1,13 @@
+{
+    "title": "Retrieve a Wallet",
+    "description": "Specific wallets can be obtained either by their `publicKey` or `address`.",
+    "method": "GET",
+    "path": "wallets/{id}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the wallet to be retrieved.",
+            "rules": ["required", "string"]
+        }
+    }
+}

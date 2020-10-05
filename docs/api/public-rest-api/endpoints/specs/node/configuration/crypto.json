@@ -1,0 +1,6 @@
+{
+    "title": "Retrieve the Cryptography Configuration",
+    "description": "Used to access a Node's configuration for the `@arkecosystem/crypto` package that handles all cryptography operations.",
+    "method": "GET",
+    "path": "node/configuration/crypto"
+}

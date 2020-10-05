@@ -1,0 +1,14 @@
+{
+    "title": "Retrieve a Vote",
+    "description": "Votes may be retrieved using their transaction ID. Note the `asset` field, which contains the `votes` object. The first character of each item in the array indicates if it was a vote: `+`, or unvote: `-`, followed by the public key of the Delegate.",
+    "method": "GET",
+    "path": "votes/{id}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the vote to be retrieved.",
+            "example": "beb8dd43c640f562704090159154b2742afba7eacada9e8edee447e34e7675c6",
+            "rules": ["required", "integer"]
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "title": "List All Transactions",
+    "description": "The paginated API is used to query for multiple transactions. You can apply _filters_ through the query parameter to search for specific transactions.",
+    "method": "GET",
+    "path": "transactions",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        },
+        "type": {
+            "type": "query",
+            "description": "The transaction type to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "blockId": {
+            "type": "query",
+            "description": "The block id to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "id": {
+            "type": "query",
+            "description": "The transaction id to be retrieved.",
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "title": "Get an Unconfirmed Transaction",
+    "description": "As with confirmed transactions, you may query for unconfirmed transactions directly.",
+    "method": "GET",
+    "path": "transactions/unconfirmed/{id}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the transaction to be retrieved.",
+            "rules": ["required", "string"]
+        }
+    }
+}

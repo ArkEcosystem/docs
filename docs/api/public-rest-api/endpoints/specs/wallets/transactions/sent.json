@@ -1,0 +1,25 @@
+{
+    "title": "List All Sent Transactions of a Wallet",
+    "description": "Outgoing transactions can be obtained as well, Equivalent to `transactions/search` with parameter `senderId` set.\n> Note that the balance of a wallet does not equal `totalIncoming - totalOutgoing` if the wallet is a Delegate. You must then also add the total reward from transaction fees and forged blocks to their balance.",
+    "method": "GET",
+    "path": "wallets/{id}/transactions/sent",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the wallet to be retrieved.",
+            "rules": ["required", "string"]
+        },
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

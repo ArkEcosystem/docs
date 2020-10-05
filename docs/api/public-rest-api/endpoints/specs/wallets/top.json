@@ -1,0 +1,20 @@
+{
+    "title": "List All Top Wallets",
+    "description": "Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the ARK ICO.",
+    "method": "GET",
+    "path": "wallets/top",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        }
+    }
+}

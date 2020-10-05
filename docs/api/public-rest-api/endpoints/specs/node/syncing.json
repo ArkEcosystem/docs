@@ -1,0 +1,6 @@
+{
+    "title": "Retrieve the Syncing Status",
+    "description": "The `syncing` resource is very much alike `node/status`, providing information on the syncing progress. If a node is not syncing but significantly behind in blocks, it might be time to perform a check.",
+    "method": "GET",
+    "path": "node/syncing"
+}

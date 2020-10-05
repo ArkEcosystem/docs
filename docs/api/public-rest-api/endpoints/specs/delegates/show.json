@@ -1,0 +1,26 @@
+{
+    "title": "Retrieve a Delegate",
+    "description": "You can query for a specific delegate by username, address, and public key; thus the following queries will result in an identical response. Note that public keys are always known for delegates, as they have previously transmitted a registration transaction. This is not the case for regular wallets.",
+    "method": "GET",
+    "path": "delegates/{username|address|publicKey}",
+    "parameters": {
+        "address": {
+            "type": "path",
+            "description": "The address of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "publicKey": {
+            "type": "path",
+            "description": "The public key of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        },
+        "username": {
+            "type": "path",
+            "description": "The username of the delegate to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "string"]
+        }
+    }
+}

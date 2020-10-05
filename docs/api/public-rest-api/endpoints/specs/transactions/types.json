@@ -1,0 +1,6 @@
+{
+    "title": "Get Transaction Types",
+    "description": "The transaction types are network specific. ARK currently supports eight different types, but BridgeChains may define more or less if needed for their business purpose.",
+    "method": "GET",
+    "path": "transactions/types"
+}

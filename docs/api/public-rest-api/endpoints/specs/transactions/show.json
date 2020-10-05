@@ -1,0 +1,13 @@
+{
+    "title": "Retrieve a Transaction",
+    "description": "Obtaining a transaction by ID does not require advanced logic; as the API does not return a serialized transaction, but a nicer [DTO](https://en.wikipedia.org/wiki/Data_transfer_object).",
+    "method": "GET",
+    "path": "transactions/{id}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the transaction to be retrieved.",
+            "rules": ["required", "string"]
+        }
+    }
+}

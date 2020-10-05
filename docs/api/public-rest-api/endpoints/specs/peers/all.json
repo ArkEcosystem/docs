@@ -1,0 +1,45 @@
+{
+    "title": "List All Peers",
+    "description": "Returns all peers known by the Node. These are not necessarily all peers; only public Nodes appear here.",
+    "method": "GET",
+    "path": "peers",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        },
+        "port": {
+            "type": "query",
+            "description": "The port by which the resources will be filtered.",
+            "rules": ["nullable", "integer"]
+        },
+        "status": {
+            "type": "query",
+            "description": "The status by which the resources will be filtered.",
+            "rules": ["nullable", "string"]
+        },
+        "os": {
+            "type": "query",
+            "description": "The operating system by which the resources will be filtered.",
+            "rules": ["nullable", "string"]
+        },
+        "version": {
+            "type": "query",
+            "description": "The node version by which the resources will be filtered.",
+            "rules": ["nullable", "string"]
+        }
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "title": "Search for Transactions",
+    "description": "For fine-grained searches, use the `search` endpoint. Note that unless you use specific body parameters, the response might contain a large number of transactions (hundreds of thousands). It is best to filter as many transactions node side, instead of dissecting the response client side.",
+    "method": "POST",
+    "path": "transactions/search",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "rules": ["nullable", "integer"]
+        },
+        "id": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "blockId": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "type": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "version": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "senderPublicKey": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "senderId": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "recipientId": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "ownerId": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "vendorFieldHex": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp.from": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp.to": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "amount": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "amount.from": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "amount.to": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "fee": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "fee.from": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        },
+        "fee.to": {
+            "type": "body",
+            "description": "TODO",
+            "rules": ["nullable", "integer"]
+        }
+    }
+}
