@@ -122,7 +122,7 @@ To be eligible for compensation for reporting of a valid security vulnerability,
 
 * The Researcher must never have publicly disclosed the exploit or vulnerability.
 
-* The Researcher must not maliciously initiate an exploit on ARK Public Network. If testing is required for a potential vulnerability or to reproduce it, please use [ARK Development Network](https://dexplorer.ark.io) or set up your own [local ARK-based chain](https://learn.ark.dev/core-getting-started/spinning-up-your-first-testnet).
+* The Researcher must not maliciously initiate an exploit on ARK Public Network. If testing is required for a potential vulnerability or to reproduce it, please use [ARK Development Network](https://dexplorer.ark.io) or set up your own [local ARK-based chain](/docs/core/how-to-guides/setting-up-your-development-environment/spinning-up-your-first-testnet).
 
 * The Researcher must be able to completely reproduce and demonstrate the vulnerability or provide valid instructions so that our development team can do the same. This will allow us to properly test any patches prior to release.
 
