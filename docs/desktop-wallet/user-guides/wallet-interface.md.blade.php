@@ -2,7 +2,7 @@
 title: Wallet Navigation
 ---
 
-## Wallet Navigation
+# Wallet Navigation
 
 After opening the ARK Desktop Wallet application for the first time, you will be greeted with security instructions. Please read every slide, as each one provides essential details on how you can better protect your funds.
 
