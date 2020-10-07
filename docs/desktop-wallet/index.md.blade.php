@@ -7,6 +7,9 @@
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/wallet-interface" name="Wallet Navigation" />
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/how-to-create-or-import-wallets" name="Create or Import Wallet" />
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/how-to-add-a-contact" name="Add a Contact" />
+<x-general.sidebar-link path="/docs/desktop-wallet/introduction-to-ark-rewards" name="ARK Rewards (Staking)" />
+<x-general.sidebar-link path="/docs/desktop-wallet/cryptoasset-integrations" name="Cryptoasset Integrations" />
+
 
 ## Transactions
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/how-to-send" name="Send ARK Transfer" />

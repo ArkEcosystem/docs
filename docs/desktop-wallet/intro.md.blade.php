@@ -16,6 +16,8 @@ To get started with the ARK Desktop Wallet, follow the documentation below for g
         ['path' => '/docs/desktop-wallet/user-guides/wallet-interface', 'name' => 'Wallet Navigation'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-create-or-import-wallets', 'name' => 'Create or Import Wallets'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-add-a-contact', 'name' => 'Add a Contact'],
+        ['path' => '/docs/desktop-wallet/introduction-to-ark-rewards', 'name' => 'ARK Rewards (Staking)'],
+        ['path' => '/docs/desktop-wallet/cryptoasset-integrations', 'name' => 'Cryptoasset Integrations'],
     ]"
 />
 
