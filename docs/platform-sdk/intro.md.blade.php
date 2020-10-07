@@ -6,7 +6,7 @@ title: Introduction
 
 ## Coins
 
-The **Coin** section will introduce you to Coins. Coin are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardises user experience across the board. All of them adhere to the contracts laid out in the [specification](http://docs.ark.io.test/docs/platform-sdk/specification).
+The **Coin** section will introduce you to Coins. Coin are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardises user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 <x-link-collection
     :links="[
@@ -39,7 +39,7 @@ The **Markets** section will introduce you to Cryptocurrency Data Services. Thes
 
 ## HTTP Clients
 
-The **HTTP Clients** section will introduce you to HTTP communication. The Platform SDK itself is agnostic as to what HTTP Client you want to use as long as it adheres to the contracts laid out in the [specification](http://docs.ark.io.test/docs/platform-sdk/specification). This will make it easier to get the SDK working in different environments, like Electron, because you can use packages that were built specifically for your environment.
+The **HTTP Clients** section will introduce you to HTTP communication. The Platform SDK itself is agnostic as to what HTTP Client you want to use as long as it adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification). This will make it easier to get the SDK working in different environments, like Electron, because you can use packages that were built specifically for your environment.
 
 <x-link-collection
     :links="[
@@ -112,7 +112,6 @@ The **Utility** section will introduce you to supportive functionality. The pack
 <x-link-collection
     :links="[
         ['path' => '/docs/platform-sdk/utility/news', 'name' => 'News'],
-        ['path' => '/docs/platform-sdk/utility/plugins', 'name' => 'Plugins'],
         ['path' => '/docs/platform-sdk/utility/support', 'name' => 'Support'],
     ]"
 />
