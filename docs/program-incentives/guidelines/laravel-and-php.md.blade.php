@@ -50,3 +50,9 @@ Static Analysis is your best friend when it comes to writing maintainable code. 
 These tools should always be used with their most strict configurations. This ensures that the code stays maintainable and makes use of the latest PHP features and best practices for the version that we are currently using. For older projects the introduction of those tools will mean a migration over time to resolve all of the issues that get reported. Every developer should resolve a few of the issues reported by those tools when he has a few minutes time for it.
 
 Do keep in mind that some issues might be false-positives because things like [Facades](https://laravel.com/docs/8.x/facades) require additional type hints and comments in your code so that these tools can understand what the underlying binding of a facade is doing. A few of the aforementioned tools have plugins for Laravel that try to solve this issue but you might still occasionally end up with false-positives.
+
+## Front-End Interactions
+
+If you need interactivity for certain functionality or want to avoid page reloads you should use [Laravel Livewire](https://laravel-livewire.com/) and [Alpine.js](https://github.com/alpinejs/alpine). Livewire allows you to seamlessly integrate with the back-end without having to build a separate API for communication with the back-end. Alpine provides you with an expressive API to manipulate the DOM without having to pull in heavyweights like [Vue](https://vuejs.org/) or [React](https://reactjs.org/).
+
+If you find yourself in a situation where you think Livewire or Alpine are insufficient you should make your case for why you think it is necessary to use a different solution or framework for the task at hand.
