@@ -1,6 +1,6 @@
 ---
 title: An Introduction to ARK Rewards (Staking)
-----
+---
 
 # An Introduction to ARK Rewards (Staking)
 
