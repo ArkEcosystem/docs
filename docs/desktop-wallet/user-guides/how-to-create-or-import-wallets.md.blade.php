@@ -8,36 +8,20 @@ The ARK Desktop Wallet allows you to both create new wallets and import existing
 
 ### Creating a New Wallet
 
-* **Pick an address to claim**
+![Pick an address to claim](/storage/docs/docs/desktop-wallet/assets/chooseaddress.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/chooseaddress.png)
+![Save your 12-word BIP39 Passphrase](/storage/docs/docs/desktop-wallet/assets/walletbackup.png)
 
-* **Save your 12-word BIP39 Passphrase**
+![Prove that you have saved your Passphrase](/storage/docs/docs/desktop-wallet/assets/passphraseverification.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/walletbackup.png)
+![(Optional) Require a password to decrypt the Passphrase for an added layer of security](/storage/docs/docs/desktop-wallet/assets/passwordencryption.png)
 
-* **Prove that you have saved your Passphrase**
-
-![](/storage/docs/docs/desktop-wallet/assets/passphraseverification.png)
-
-* _\(Optional\)_ **Require a password to decrypt the Passphrase for an added layer of security**
-
-![](/storage/docs/docs/desktop-wallet/assets/passwordencryption.png)
-
-* _\(Optional\)_ **Name the new wallet and copy its address**
-
-![](/storage/docs/docs/desktop-wallet/assets/creationconfirmation.png)
+![(Optional) Name the new wallet and copy its address](/storage/docs/docs/desktop-wallet/assets/creationconfirmation.png)
 
 ### Importing Your Wallet
 
-* **Import your wallet by providing its address, passphrase, or both**
+![Import your wallet by providing its address, passphrase, or both](/storage/docs/docs/desktop-wallet/assets/importwallet.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/importwallet.png)
+![(Optional) Require a password to decrypt the Passphrase for an added layer of security](/storage/docs/docs/desktop-wallet/assets/passwordencryption2.png)
 
-* _\(Optional\)_ **Require a password to decrypt the Passphrase for an added layer of security**
-
-![](/storage/docs/docs/desktop-wallet/assets/passwordencryption2.png)
-
-* _\(Optional\)_ **Name the new wallet and copy its address**
-
-![](/storage/docs/docs/desktop-wallet/assets/importconfirmation.png)
+![(Optional) Name the new wallet and copy its address](/storage/docs/docs/desktop-wallet/assets/importconfirmation.png)
