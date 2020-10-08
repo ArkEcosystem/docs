@@ -14,7 +14,7 @@ By utilizing ARK Deployer, you gain a fully functioning, standalone blockchain, 
 
 There are three steps in the process: **Prepare**, **Customize**, and **Deploy**.
 
-![Preapre, Customize and Deploy](/storage/docs/docs/deployer/assets/prepareCustomizeDeploy.png)
+![Prepare, Customize and Deploy](/storage/docs/docs/deployer/assets/prepareCustomizeDeploy.png)
 
 
 ### **Prepare**
