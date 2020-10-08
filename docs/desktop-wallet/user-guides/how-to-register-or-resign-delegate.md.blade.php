@@ -8,21 +8,13 @@ title: How to Register or Resign a Delegate?
 
 Registering as a delegate is a simple transaction. It provides network nodes with a record of the sending address opening itself to accept votes from other wallets. You can only vote for an address that was registered in this fashion.
 
-* **Expose more options in the wallet detail page by clicking the icon in the header**
+![Expose more options in the wallet detail page by clicking the icon in the header](/storage/docs/docs/desktop-wallet/assets/moreicon.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/moreicon.png)
+![Click the Register delegate button](/storage/docs/docs/desktop-wallet/assets/registerdelegatebutton.png)
 
-* **Click the** _**Register delegate**_ **button**
+![Enter your desired Username, Transaction fee and security details; then click Next](/storage/docs/docs/desktop-wallet/assets/delegateregistration.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/registerdelegatebutton.png)
-
-* **Enter your desired Username, Transaction fee and security details; then click** _**Next**_
-
-![](/storage/docs/docs/desktop-wallet/assets/delegateregistration.png)
-
-* **Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either** _**Send**_**,** _**Back**_ **or** _**Save**_
-
-![](/storage/docs/docs/desktop-wallet/assets/submitdelegateregistration.png)
+![Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitdelegateregistration.png)
 
 ##  **Resign your Delegate**
 

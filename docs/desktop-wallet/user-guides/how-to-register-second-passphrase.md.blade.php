@@ -8,22 +8,12 @@ Security is critical. By issuing a second signature transaction, you tell networ
 
 ## Register a Second Passphrase
 
-* **Show more options in the wallet detail page by clicking the icon in the header**
+![Show more options in the wallet detail page by clicking the icon in the header](/storage/docs/docs/desktop-wallet/assets/moreicon.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/moreicon.png)
+![Click the Second passphrase button](/storage/docs/docs/desktop-wallet/assets/secondsignaturebutton.png)
 
-* **Click the** _**Second passphrase**_ **button**
+![Save your 12-word BIP39 second Passphrase and click Next](/storage/docs/docs/desktop-wallet/assets/secondsignaturegeneration.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/secondsignaturebutton.png)
+![Prove that you have saved your second Passphrase, select your desired transaction fee, enter your security details and click Next](/storage/docs/docs/desktop-wallet/assets/secondsignatureverification.png)
 
-* **Save your 12-word BIP39 second Passphrase and click** _**Next**_
-
-![](/storage/docs/docs/desktop-wallet/assets/secondsignaturegeneration.png)
-
-* **Prove that you have saved your second Passphrase, select your desired transaction fee, enter your security details and click** _**Next**_
-
-![](/storage/docs/docs/desktop-wallet/assets/secondsignatureverification.png)
-
-* **Verify the second signature transaction details and Submit, Cancel or Save it by clicking either** _**Send**_**,** _**Back**_ **or** _**Save**_
-
-![](/storage/docs/docs/desktop-wallet/assets/submitsecondsignature.png)
+![Verify the second signature transaction details and Submit, Cancel or Save it by clicking either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitsecondsignature.png)

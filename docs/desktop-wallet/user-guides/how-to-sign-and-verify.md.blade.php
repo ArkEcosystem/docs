@@ -12,13 +12,9 @@ Message signing and verifying is all done under the **Sign** tab of the wallet d
 
 With a signed message, others can verify that a given message and signature combination originate from you.
 
-* **Input your security details and the message to sign, then click** _**Sign**_
+![Input your security details and the message to sign, then click Sign](/storage/docs/docs/desktop-wallet/assets/signmessage.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/signmessage.png)
-
-* **Your signed message will appear under the Sign tab of the wallet detail page**
-
-![](/storage/docs/docs/desktop-wallet/assets/signedmessages.png)
+![Your signed message will appear under the Sign tab of the wallet detail page](/storage/docs/docs/desktop-wallet/assets/signedmessages.png)
 
 #### Verifying a Message
 
@@ -32,10 +28,6 @@ The ARK network will only know your public key once you have sent a transaction.
 
 For demonstration purposes, the images below are shown from the perspective of a second wallet, assuming the necessary details to verify the message were provided to the verifying user.
 
-* **Enter the message to verify, the public key of the wallet which was used to sign the message and the resulting signature, then click** _**Next**_
+![Enter the message to verify, the public key of the wallet which was used to sign the message and the resulting signature, then click Next](/storage/docs/docs/desktop-wallet/assets/verifymessage.png)
 
-![](/storage/docs/docs/desktop-wallet/assets/verifymessage.png)
-
-* **See whether the message was successfully verified or not**
-
-![](/storage/docs/docs/desktop-wallet/assets/verifiedmessage.png)
+![See whether the message was successfully verified or not](/storage/docs/docs/desktop-wallet/assets/verifiedmessage.png)
