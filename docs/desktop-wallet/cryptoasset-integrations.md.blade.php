@@ -31,7 +31,7 @@ The following cryptoassets are already in the initial stages of integration with
 
 ## Integration Requests
 
-We are currently not taking communnity integration requests. If you would like a specific cryptoasset to be added to the [ARK Desktop Wallet](https://ark.io/wallet), please encourage them to register at [MarketSquare](https://marketsquare.io) and reach out to us directly. 
+We are currently not taking community integration requests. If you would like a specific cryptoasset to be added to the [ARK Desktop Wallet](https://ark.io/wallet), please encourage them to register at [MarketSquare](https://marketsquare.io) and reach out to us directly. 
 
 We will add new assets based on a series of factors to include:
 
