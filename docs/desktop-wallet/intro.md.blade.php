@@ -7,7 +7,6 @@ title: Introduction
 ## What Is It?
 The ARK Desktop Wallet is an application which allows you to manage ARK transactions. It provides an extensive set of functionalities, including management of profiles and wallets, the creation of both online and offline transactions, wallet summary, stylistic customizations, multilingual support, various currency integrations including BTC and much more!
 
-
 ## Getting Started
 To get started with the ARK Desktop Wallet, follow the documentation below for guides on Installation, Wallet Navigation, Creating Wallets and more...
 <x-link-collection
@@ -16,6 +15,8 @@ To get started with the ARK Desktop Wallet, follow the documentation below for g
         ['path' => '/docs/desktop-wallet/user-guides/wallet-interface', 'name' => 'Wallet Navigation'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-create-or-import-wallets', 'name' => 'Create or Import Wallets'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-add-a-contact', 'name' => 'Add a Contact'],
+        ['path' => '/docs/desktop-wallet/introduction-to-ark-rewards', 'name' => 'ARK Rewards (Staking)'],
+        ['path' => '/docs/desktop-wallet/cryptoasset-integrations', 'name' => 'Cryptoasset Integrations'],
     ]"
 />
 
