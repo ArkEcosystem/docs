@@ -3,6 +3,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk" name="Introduction" />
 <x-general.sidebar-link path="/docs/platform-sdk/architecture" name="Architecture" />
 <x-general.sidebar-link path="/docs/platform-sdk/specification" name="Specification" />
+<x-general.sidebar-link path="/docs/platform-sdk/testing" name="Testing" />
 
 ## Coins
 
