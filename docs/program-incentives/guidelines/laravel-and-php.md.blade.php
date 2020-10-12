@@ -37,6 +37,14 @@ Avoid extending the controller that ships with Laravel if you don't need any of 
 
 This should rarely be the case because middlewares should be applied either in the `RouteServiceProvider` or inside the route files by using the `middleware` method for specific routes or `group(['middleware' => []])` method to apply the same middleware to multiple endpoints. Validation should be performed by calling `$request->validate()` or using by using [Form Request Validation](https://laravel.com/docs/8.x/validation#form-request-validation) to extract more complex rules and processing out of the controller.
 
+## Database Migrations
+
+You should always avoid the usage of the `down` method in migrations which can be used for database rollbacks. There are several reasons why you should avoid the usage of this method but the primary reason is the loss of data in production. It is quite risky to rollback a production database and more often than not you will lose data and have to apply a database backup which costs even more time.
+
+The `down` methods also make it more difficult to follow the order in which things are applied and what exactly is happening because a single `add_post_id_to_images` migration technically could also be `drop_post_id_to_images` at the same time because it has an `up` and `down` method which add and drop the same column depending on how it is used. Using separate migrations for those tasks makes it more clear what is happening and the `down` method is dead code until you actually need it, which should rarely be the case.
+
+You can listen to https://www.laravelpodcast.com/episodes/5fc5650b for some more info on why the `down` method is a bad idea and shouldn't be used in production applications.
+
 ## Testing
 
 Always use [Pest](https://pestphp.com/) for testing of PHP projects. It offers an an expressive API, comparable to [Jest](https://jestjs.io/), and massively reduces the amount of boilerplate that is needed to maintain our test suites. Pest is a relatively new tool that is gaining traction fast, which means you might encounter bugs, so submit a pull request with a fix if you do.
