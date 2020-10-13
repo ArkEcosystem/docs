@@ -48,7 +48,7 @@ Migrate the config you have in your `plugins.js` into the `app.json` file : for 
 {
     "package": "@arkecosystem/core-p2p",
     "options": {
-        "minimumNetworkReach": 10
+        "yourConfigParameterFromPluginsJs": "yourValue"
     }
 },
 ```
