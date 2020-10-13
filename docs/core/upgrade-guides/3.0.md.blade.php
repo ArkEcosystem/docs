@@ -1,5 +1,5 @@
 ---
-title: Core 3.0
+title: Core 2.7 to 3.0
 ---
 
 ARK `v3.0` is a major update **not backward compatible with `v2.7.x`**.
