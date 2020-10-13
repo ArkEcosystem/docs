@@ -55,7 +55,7 @@ Migrate the config you have in your `plugins.js` into the `app.json` file : for 
 
 Careful, you have a few spots where you can put your options : the main ones are `core`, `relay` and `forger`. As you guessed this is where to specify the options when running full node, only relay, or only forger.
 
-### Step 3. Firewall settings / iptables
+### Step 3. Firewall settings & IP Tables
 
 Core now uses three different ports for p2p : for devnet they are 4002, 4012, and 4022. We are providing you a script to create some specific rules on these ports to prevent abuse, but **for now just be sure that you are allowing tcp traffic to these ports**.
 
@@ -75,6 +75,6 @@ On core startup a database migration will be running : expect 10/15 minutes for 
 
 Then run the iptables script : `v3-iptables.sh`.
 
-### Reporting Problems <a id="reporting-problems"></a>
+### Reporting Problems
 
 If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
