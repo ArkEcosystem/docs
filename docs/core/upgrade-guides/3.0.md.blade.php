@@ -84,7 +84,7 @@ If you happen to experience any issues please [open an issue](https://github.com
 
 ### Database migration script
 
-```
+```sql
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
