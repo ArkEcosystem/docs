@@ -1,14 +1,15 @@
 ---
 title: Core 2.7 to 3.0
 ---
+# 3.0
 
 ARK `v3.0` is a major update **not backward compatible with `v2.7.x`**.
 
 **Release information:**
 
-* **Upgrade time**: medium - upgrading to `v3.0` requires configuration changes and a database migration.
+* **Upgrade time**: **medium** - upgrading to `v3.0` requires configuration changes and a database migration.
 * **Complexity**: **high**
-* **Risk**: high - `v3.0` is not backward compatible with `v2.7`.
+* **Risk**: **high** - `v3.0` is not backward compatible with `v2.7`.
 
 ## Upgrade Steps
 
@@ -30,59 +31,15 @@ yarn global upgrade
 
 When this is finished, you should see version 12 installed when you run `node -v` again!
 
-### Step 1. Remove `app.js` from your configuration folder
+### Step 1. Create Database Migration Script
 
-Locate `app.js` in your configuration folder (for devnet it could be `~/.config/ark-core/devnet`). Remove the file.
-
-###  Step 2. Migrate `plugins.js` to `app.json`
-
-Copy over the `app.json` file from core repository : 
-
-[https://raw.githubusercontent.com/ArkEcosystem/core/develop/packages/core/bin/config/devnet/app.json](https://raw.githubusercontent.com/ArkEcosystem/core/develop/packages/core/bin/config/devnet/app.json)
-
-Into your config folder (same folder as in step 1).
-
-Migrate the config you have in your `plugins.js` into the `app.json` file : for this you can specify for each package the config in the `options` field, for example :
+Create a database migration script by copying the script provided below. We'll name the script `v3-migrations.sql`
 
 ```
-{
-    "package": "package-name",
-    "options": {
-        "yourConfigParameterFromPluginsJs": "yourValue"
-    }
-},
+nano v3-migrations.sql
 ```
 
-Careful, you have a few spots where you can put your options : the main ones are `core`, `relay` and `forger`. As you guessed this is where to specify the options when running full node, only relay, or only forger.
-
-### Step 3. Firewall settings & IP Tables
-
-Core now uses three different ports for p2p : for devnet they are 4002, 4012, and 4022. We are providing you a script to create some specific rules on these ports to prevent abuse, but **for now just be sure that you are allowing tcp traffic to these ports**.
-
-### Step 4. Update core
-
-First, make sure that in your current directory you have the database migration script (you can copy-paste it from the *Scripts* section below).
-Name this script `v3-migrations.sql`.
-
-Run these commands (adapt the `psql` one with your user and database):
-
-```
-pm2 stop all && ark snapshot:rollback --height=5635000
-psql -U ark -h 127.0.0.1 -d ark_devnet -f v3-migrations.sql
-ark update && pm2 start all
-```
-
-On core startup a database migration will be running : expect 10/15 minutes for it to complete.
-
-Then run the iptables script (you can copy-paste it from the *Scripts* section below).
-
-### Reporting Problems
-
-If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
-
-## Scripts
-
-### Database migration script
+Paste the following script into your `v3-migrations.sql` file and save the file.
 
 ```sql
 SET statement_timeout = 0;
@@ -155,7 +112,16 @@ ALTER TABLE ONLY public.migrations
 
 ```
 
-### Iptables script
+### Step 2. Create iptables Script
+Core now uses three different ports for p2p : for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse. **Please ensure that you are allowing tcp traffic to these ports.**
+
+Create an iptables script by copying the script provided below. We'll name the script `v3-iptables.sh`
+
+```
+nano v3-iptables.sh
+```
+
+Paste the following script into your `v3-iptables.sh` file and save the file.
 
 ```bash
 #!/usr/bin/env bash
@@ -249,6 +215,63 @@ case "$1" in
        ;;
 esac
 ```
+
+### Start the IP Tables Script
+
+To start the IP Tables script, you can run the following command.
+```
+bash v3-iptables.sh start
+````
+
+### Step 3. Update & Start Core
+
+<x-alert type="danger">
+**WARNING:** The commands below will remove and reset your configuration files in `~/.config/ark-core/devnet`. **Please backup any configuation files that you may need later such as your `delegate.json`, `plugin.js` & `.env` files.**
+</x-alert>
+First, make sure that in your current directory you have the **database migration script**. 
+
+Run these commands (adapt the `psql` command with your user and database):
+
+```
+pm2 stop all && ark snapshot:rollback --height=5635000
+```
+```
+psql -U ark -h 127.0.0.1 -d ark_devnet -f v3-migrations.sql
+```
+```
+ark update 
+```
+**Backup your delegate.json file if applicable.**
+```
+cp ~/.config/ark-core/devnet/delegates.json ~/delegate.json.backup
+```
+```
+rm -rf ~/.config/ark-core/ && ark config:publish --token=ark --network=devnet --reset
+```
+**Copy over backup delegate.json file if applicable**
+```
+cp ~/delegate.json.backup ~/.config/ark-core/devnet/delegates.json
+```
+```
+pm2 start all
+```
+<x-alert type=warning>
+In your logs you may see repeat messages about connecting to your database such as `Connecting to database: ark_devnet`. This is due to the database migration and can take up to 1 hour to complete depending on hardware.
+</x-alert>
+
+<x-alert type=info>
+Each runmode (`core`, `relay`, & `forger`) now contains their own configuration for plugins. This coniguration file can be located here: `~/.config/ark-core/devnet/app.js`
+</x-alert>
+
+### Troubleshoot
+If you run into any issues during the upgrade process, please run the following command:
+```
+yarn global upgrade
+```
+
+### Reporting Problems
+
+If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
 
 ## API changes
 
