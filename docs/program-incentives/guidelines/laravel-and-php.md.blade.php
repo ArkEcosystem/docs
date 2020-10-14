@@ -64,3 +64,63 @@ Do keep in mind that some issues might be false-positives because things like [F
 If you need interactivity for certain functionality or want to avoid page reloads you should use [Laravel Livewire](https://laravel-livewire.com/) and [Alpine.js](https://github.com/alpinejs/alpine). Livewire allows you to seamlessly integrate with the back-end without having to build a separate API for communication with the back-end. Alpine provides you with an expressive API to manipulate the DOM without having to pull in heavyweights like [Vue](https://vuejs.org/) or [React](https://reactjs.org/).
 
 If you find yourself in a situation where you think Livewire or Alpine are insufficient you should make your case for why you think it is necessary to use a different solution or framework for the task at hand.
+
+## Livewire
+
+### Rendering
+
+Livewire can automatically determine the view that should be used. This means that you should generally omit the `render` method and let Livewire figure out what should be rendered. This means less code to think about and no room for human error in referencing a wrong view.
+
+If you are working on a project that makes use of DDD you will either have to keep the render method because of the way that Livewire resolves the view location or overwrite the method that resolves the view location to only take the class name into account instead of the FQCN of the component. Overriding the resolution method is recommended if a large number of components are used.
+
+### State Management
+
+When working with Livewire you will work a lot with models and their array representations or small bits of data from them that you will need to update. All of this data should be looked at as the state of the component and be stored in a `$state` array that will hold all of the values that are modified on the component. An exception to this rule are models that are passed to the `mount` method because these models will not be modified directly, they only are modified through updates that are using the state data.
+
+#### Good
+
+```php
+<?php
+
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+
+class UpdateUserNameForm extends Component
+{
+    public User $user;
+    public array $state = [];
+
+    public function mount(User $user)
+    {
+        $this->user  = $user;
+        $this->state = ['name' => $user->name];
+    }
+}
+```
+
+#### Bad
+
+```php
+<?php
+
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+
+class UpdateUserNameForm extends Component
+{
+    public User $user;
+    public string $name;
+
+    public function mount(User $user)
+    {
+        $this->user = $user;
+        $this->name = $user->name;
+    }
+}
+```
+
+### Validation
+
+Always ensure to apply validation before performing an action that makes use of component state. This validation can be either performed in real-time or at the time of a method call. If a method is being executed based on events or instant feedback is executed it is recommended to use real-time validation for faster feedback for an improved UX.
