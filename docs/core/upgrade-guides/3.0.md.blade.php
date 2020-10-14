@@ -27,8 +27,6 @@ To do this, run the following commands:
 sudo sed -i s/node_10/node_12/ /etc/apt/sources.list.d/nodesource.list
 sudo sed -i s/node_11/node_12/ /etc/apt/sources.list.d/nodesource.list
 sudo apt-get update && sudo apt-get upgrade
-
-yarn global upgrade
 ```
 
 When this is finished, you should see version 12 installed when you run `node -v` again!
