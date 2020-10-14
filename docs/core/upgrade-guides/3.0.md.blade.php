@@ -38,7 +38,7 @@ When this is finished, you should see version 12 installed when you run `node -v
 Use `wget` to fetch the `v3-migrations.sql` script.
 
 ```
-wget -N dsnapshots.ark.io/v3-migrations.sql
+wget -N https://dsnapshots.ark.io/v3-migrations.sql
 ```
 
 ### Step 2. iptables Script
@@ -49,7 +49,7 @@ Core now uses three different ports for p2p: for **devnet** they are **4002**, *
 Use `wget` to fetch the `v3-iptables.sh` script.
 
 ```
-wget -N dsnapshots.ark.io/v3-iptables.sh
+wget -N https://dsnapshots.ark.io/v3-iptables.sh
 ```
 
 ### Start the IP Tables Script
