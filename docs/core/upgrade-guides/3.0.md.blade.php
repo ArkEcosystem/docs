@@ -41,23 +41,11 @@ Use `wget` to fetch the `v3-migrations.sql` script.
 wget -N https://dsnapshots.ark.io/v3-migrations.sql
 ```
 
-### Step 2. iptables Script
+### Step 2. Port Config
 
-Core now uses three different ports for p2p: for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse.
+Core now uses three different ports for p2p: for **devnet** they are **4002**, **4012**, and **4022**.  
 **Please ensure that you are allowing tcp traffic to these ports.**
 
-Use `wget` to fetch the `v3-iptables.sh` script.
-
-```
-wget -N https://dsnapshots.ark.io/v3-iptables.sh
-```
-
-### Start the IP Tables Script
-
-To start the IP Tables script, you can run the following command.
-```
-bash v3-iptables.sh start
-````
 
 ### Step 3. Update & Start Core
 
