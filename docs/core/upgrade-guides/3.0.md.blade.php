@@ -115,6 +115,7 @@ ALTER TABLE ONLY public.migrations
 ```
 
 ### Step 2. Create iptables Script
+
 Core now uses three different ports for p2p: for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse.
 **Please ensure that you are allowing tcp traffic to these ports.**
 
@@ -232,7 +233,7 @@ bash v3-iptables.sh start
 **WARNING:** The commands below will remove and reset your configuration files in `~/.config/ark-core/devnet`. 
 **Please backup any configuation files that you may need later such as your `delegate.json`, `plugin.js` & `.env` files.**
 </x-alert>
-First, make sure that in your current directory you have the **database migration script** (where you created the v3-migrations.sql file). 
+First, make sure that in your current directory you have the **database migration script** (where you created the `v3-migrations.sql` file). 
 
 Run these commands (adapt the `psql` command with your user and database, default DB password is `password`):
 
@@ -246,7 +247,7 @@ psql -U ark -h 127.0.0.1 -d ark_devnet -f v3-migrations.sql
 ark update 
 ```
 
-> **Backup your delegate.json file if applicable with the command below:**
+> *Backup your delegate.json file if applicable with the command below:*
 ```
 cp ~/.config/ark-core/devnet/delegates.json ~/delegate.json.backup
 ```
@@ -254,7 +255,8 @@ cp ~/.config/ark-core/devnet/delegates.json ~/delegate.json.backup
 ```
 rm -rf ~/.config/ark-core/ && ark config:publish --token=ark --network=devnet --reset
 ```
-> **Copy over backup delegate.json file if applicable with the command below:*
+
+> *Copy over backup delegate.json file if applicable with the command below:*
 ```
 cp ~/delegate.json.backup ~/.config/ark-core/devnet/delegates.json
 ```
