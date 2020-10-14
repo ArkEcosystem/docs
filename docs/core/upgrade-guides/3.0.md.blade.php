@@ -262,6 +262,9 @@ cp ~/delegate.json.backup ~/.config/ark-core/devnet/delegates.json
 ```
 
 ```
+yarn global upgrade
+```
+```
 pm2 start all
 ```
 <x-alert type=warning>
@@ -271,13 +274,6 @@ In your logs you may see repeat messages about connecting to your database such 
 <x-alert type=info>
 Each runmode (`core`, `relay`, & `forger`) now contains their own configuration for plugins. This configuration file can be located here: `~/.config/ark-core/devnet/app.json`
 </x-alert>
-
-### Troubleshoot
-
-If you run into any issues during the upgrade process (after you start the node process), please run the following command (and start the node process after):
-```
-yarn global upgrade
-```
 
 ### Reporting Problems
 
