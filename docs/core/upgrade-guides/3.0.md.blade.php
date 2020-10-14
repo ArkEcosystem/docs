@@ -33,20 +33,20 @@ yarn global upgrade
 
 When this is finished, you should see version 12 installed when you run `node -v` again!
 
-### Step 1. Copy Database Migration Script
+### Step 1. Database Migration Script
 
-Use `wget` to copy over the `v3-migrations.sql` script.
+Use `wget` to fetch the `v3-migrations.sql` script.
 
 ```
 wget -N dsnapshots.ark.io/v3-migrations.sql
 ```
 
-### Step 2. Copy the iptables Script
+### Step 2. iptables Script
 
 Core now uses three different ports for p2p: for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse.
 **Please ensure that you are allowing tcp traffic to these ports.**
 
-Use `wget` to copy over the `v3-iptables.sh` script.
+Use `wget` to fetch the `v3-iptables.sh` script.
 
 ```
 wget -N dsnapshots.ark.io/v3-iptables.sh
