@@ -130,12 +130,12 @@ Paste the following script into your `v3-iptables.sh` file and save the file (ca
 ```bash
 #!/usr/bin/env bash
 #mainnet_ports P2P_GLOBAL=4001,P2P_BLOCKS=4011,P2P_TX=4021 / devnet_ports P2P_GLOBAL=4002,P2P_BLOCKS=4012,P2P_TX=4022 / testnet_ports P2P_GLOBAL=4000,P2P_BLOCKS=4010,P2P_TX=4020
-P2P_GLOBAL=4000
+P2P_GLOBAL=4002
 P2P_GLOBAL_CONN=10
 CONNPS=10
 BURST=30
-P2P_BLOCKS=4010
-P2P_TX=4020
+P2P_BLOCKS=4012
+P2P_TX=4022
 TXCONNPS=10
 TXBURST=50
 
