@@ -7,9 +7,9 @@ ARK `v3.0` is a major update **not backward compatible with `v2.7.x`**.
 
 **Release information:**
 
-* **Upgrade time**: **medium** - upgrading to `v3.0` requires configuration changes and a database migration.
-* **Complexity**: **high**
-* **Risk**: **high** - `v3.0` is not backward compatible with `v2.7`.
+* **Upgrade time**: ***medium*** - upgrading to `v3.0` requires configuration changes and a database migration.
+* **Complexity**: ***high***
+* **Risk**: ***high*** - `v3.0` is not backward compatible with `v2.7`.
 
 ## Upgrade Steps
 
@@ -19,7 +19,9 @@ ARK `v3.0` is a major update **not backward compatible with `v2.7.x`**.
 
 ### Prerequisites
 
-Check what node version you have currently installed by running `node -v` . **If this shows a version below 12, you will have to update this before proceeding with the installation**. To do this, run the following commands:
+Check what node version you have currently installed by running `node -v` . **If this shows a version below 12, you will have to update this before proceeding with the installation**. 
+
+To do this, run the following commands:
 
 ```bash
 sudo sed -i s/node_10/node_12/ /etc/apt/sources.list.d/nodesource.list
@@ -39,7 +41,7 @@ Create a database migration script by copying the script provided below. We'll n
 nano v3-migrations.sql
 ```
 
-Paste the following script into your `v3-migrations.sql` file and save the file.
+Paste the following script into your `v3-migrations.sql` file and save the file (can press the copy icon on the right of the script below to copy the content of the block).
 
 ```sql
 SET statement_timeout = 0;
@@ -113,7 +115,8 @@ ALTER TABLE ONLY public.migrations
 ```
 
 ### Step 2. Create iptables Script
-Core now uses three different ports for p2p : for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse. **Please ensure that you are allowing tcp traffic to these ports.**
+Core now uses three different ports for p2p: for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse.
+**Please ensure that you are allowing tcp traffic to these ports.**
 
 Create an iptables script by copying the script provided below. We'll name the script `v3-iptables.sh`
 
@@ -121,7 +124,7 @@ Create an iptables script by copying the script provided below. We'll name the s
 nano v3-iptables.sh
 ```
 
-Paste the following script into your `v3-iptables.sh` file and save the file.
+Paste the following script into your `v3-iptables.sh` file and save the file (can press the copy icon on the right of the script below to copy the content of the block).
 
 ```bash
 #!/usr/bin/env bash
@@ -216,7 +219,7 @@ case "$1" in
 esac
 ```
 
-### Start the IP Tables Script
+## Start the IP Tables Script
 
 To start the IP Tables script, you can run the following command.
 ```
@@ -226,11 +229,12 @@ bash v3-iptables.sh start
 ### Step 3. Update & Start Core
 
 <x-alert type="danger">
-**WARNING:** The commands below will remove and reset your configuration files in `~/.config/ark-core/devnet`. **Please backup any configuation files that you may need later such as your `delegate.json`, `plugin.js` & `.env` files.**
+**WARNING:** The commands below will remove and reset your configuration files in `~/.config/ark-core/devnet`. 
+**Please backup any configuation files that you may need later such as your `delegate.json`, `plugin.js` & `.env` files.**
 </x-alert>
-First, make sure that in your current directory you have the **database migration script**. 
+First, make sure that in your current directory you have the **database migration script** (where you created the v3-migrations.sql file). 
 
-Run these commands (adapt the `psql` command with your user and database):
+Run these commands (adapt the `psql` command with your user and database, default DB password is `password`):
 
 ```
 pm2 stop all && ark snapshot:rollback --height=5635000
@@ -241,30 +245,34 @@ psql -U ark -h 127.0.0.1 -d ark_devnet -f v3-migrations.sql
 ```
 ark update 
 ```
-**Backup your delegate.json file if applicable.**
+
+> **Backup your delegate.json file if applicable with the command below:**
 ```
 cp ~/.config/ark-core/devnet/delegates.json ~/delegate.json.backup
 ```
+
 ```
 rm -rf ~/.config/ark-core/ && ark config:publish --token=ark --network=devnet --reset
 ```
-**Copy over backup delegate.json file if applicable**
+> **Copy over backup delegate.json file if applicable with the command below:*
 ```
 cp ~/delegate.json.backup ~/.config/ark-core/devnet/delegates.json
 ```
+
 ```
 pm2 start all
 ```
 <x-alert type=warning>
-In your logs you may see repeat messages about connecting to your database such as `Connecting to database: ark_devnet`. This is due to the database migration and can take up to 1 hour to complete depending on hardware.
+In your logs you may see repeat messages about connecting to your database such as `Connecting to database: ark_devnet`. This is due to the database migration and can take up to 1 hour to complete depending on your server hardware.
 </x-alert>
 
 <x-alert type=info>
-Each runmode (`core`, `relay`, & `forger`) now contains their own configuration for plugins. This coniguration file can be located here: `~/.config/ark-core/devnet/app.js`
+Each runmode (`core`, `relay`, & `forger`) now contains their own configuration for plugins. This configuration file can be located here: `~/.config/ark-core/devnet/app.json`
 </x-alert>
 
 ### Troubleshoot
-If you run into any issues during the upgrade process, please run the following command:
+
+If you run into any issues during the upgrade process (after you start the node process), please run the following command (and start the node process after):
 ```
 yarn global upgrade
 ```
