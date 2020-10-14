@@ -33,194 +33,26 @@ yarn global upgrade
 
 When this is finished, you should see version 12 installed when you run `node -v` again!
 
-### Step 1. Create Database Migration Script
+### Step 1. Copy Database Migration Script
 
-Create a database migration script by copying the script provided below. We'll name the script `v3-migrations.sql`
-
-```
-nano v3-migrations.sql
-```
-
-Paste the following script into your `v3-migrations.sql` file and save the file (can press the copy icon on the right of the script below to copy the content of the block).
-
-```sql
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET client_min_messages = warning;
-SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
-DROP TABLE IF EXISTS public.migrations;
-
-CREATE TABLE public.migrations (
-    id integer NOT NULL,
-    "timestamp" bigint NOT NULL,
-    name character varying NOT NULL
-);
-
-CREATE SEQUENCE public.migrations_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER SEQUENCE public.migrations_id_seq OWNED BY public.migrations.id;
-
-
-ALTER TABLE ONLY public.migrations ALTER COLUMN id SET DEFAULT nextval('public.migrations_id_seq'::regclass);
-
-COPY public.migrations (id, "timestamp", name) FROM stdin;
-1	180305100000	CreateWalletsTable20180305100000
-2	180305200000	CreateRoundsTable20180305200000
-3	180305300000	CreateBlocksTable20180305300000
-4	180305400000	CreateTransactionsTable20180305400000
-5	181129400000	AddBlockIdIndexToTransactionsTable20181129400000
-6	181204100000	AddGeneratorPublicKeyIndexToBlocksTable20181204100000
-7	181204200000	AddTimestampIndexToBlocksTable20181204200000
-8	181204300000	AddSenderPublicKeyIndexToTransactionsTable20181204300000
-9	181204400000	AddRecipientIdIndexToTransactionsTable20181204400000
-10	190307000000	DropWalletsTable20190307000000
-11	190606000000	AddBlockIdForeignKeyOnTransactionsTable20190606000000
-12	190619000000	DropIdColumnFromRoundsTable20190619000000
-13	190626000000	EnforceChainedBlocks20190626000000
-14	190718000000	CheckPreviousBlockAddSchema20190718000000
-15	190803000000	AddTypeGroupColumnToTransactionsTable20190803000000
-16	190806000000	AddNonceColumnToTransactionsTable20190806000000
-17	190905000000	ChangeSetRowNonceToUseMaxNonce20190905000000
-18	190917000000	AddAssetColumnToTransactionsTable20190917000000
-19	191003000000	MigrateVendorFieldHex20191003000000
-20	191008000000	AddTypeIndexToTransactionsTable20191008000000
-21	200304000000	AddTypeGroupIndexToTransactionsTable20200304000000
-22	200317000000	AddBlocksAndTransactionsIndexes20200317000000
-\.
-
-
-SELECT pg_catalog.setval('public.migrations_id_seq', 22, true);
-
-
-ALTER TABLE ONLY public.migrations
-    ADD CONSTRAINT "PK_8c82d7f526340ab734260ea46be" PRIMARY KEY (id);
+Use `wget` to copy over the `v3-migrations.sql` script.
 
 ```
+wget -N dsnapshots.ark.io/v3-migrations.sql
+```
 
-### Step 2. Create iptables Script
+### Step 2. Copy the iptables Script
 
 Core now uses three different ports for p2p: for **devnet** they are **4002**, **4012**, and **4022**. We are providing you a script to create some specific rules on these ports to prevent abuse.
 **Please ensure that you are allowing tcp traffic to these ports.**
 
-Create an iptables script by copying the script provided below. We'll name the script `v3-iptables.sh`
+Use `wget` to copy over the `v3-iptables.sh` script.
 
 ```
-nano v3-iptables.sh
+wget -N dsnapshots.ark.io/v3-iptables.sh
 ```
 
-Paste the following script into your `v3-iptables.sh` file and save the file (can press the copy icon on the right of the script below to copy the content of the block).
-
-```bash
-#!/usr/bin/env bash
-#mainnet_ports P2P_GLOBAL=4001,P2P_BLOCKS=4011,P2P_TX=4021 / devnet_ports P2P_GLOBAL=4002,P2P_BLOCKS=4012,P2P_TX=4022 / testnet_ports P2P_GLOBAL=4000,P2P_BLOCKS=4010,P2P_TX=4020
-P2P_GLOBAL=4002
-P2P_GLOBAL_CONN=10
-CONNPS=10
-BURST=30
-P2P_BLOCKS=4012
-P2P_TX=4022
-TXCONNPS=10
-TXBURST=50
-
-#Initialize p2p limiter
-start_limit() {
-
-table=$(sudo iptables -nL P2P_LIMIT 2> /dev/null)
-myip=$(ifconfig `ip route | grep default | head -1 | sed 's/\(.*dev \)\([a-z0-9]*\)\(.*\)/\2/g'` | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | head -1)
-
-if [[ $table ]]; then
-        #P2P_GLOBAL limits
-        sudo iptables -F P2P_LIMIT
-        sudo iptables -A P2P_LIMIT -p tcp --syn -m connlimit --connlimit-above ${P2P_GLOBAL_CONN} --connlimit-mask 32 -j REJECT --reject-with tcp-reset
-        sudo iptables -A P2P_LIMIT -m hashlimit --hashlimit-mode srcip --hashlimit-upto ${CONNPS}/sec --hashlimit-burst ${BURST} --hashlimit-name core_p2p_limit -j ACCEPT
-        sudo iptables -A P2P_LIMIT -p tcp -j REJECT --reject-with tcp-reset
-        #P2P_BLOCKS limits
-        sudo iptables -F P2P_BLOCKS
-        sudo iptables -A P2P_BLOCKS -p tcp --syn -m connlimit --connlimit-above ${P2P_GLOBAL_CONN} --connlimit-mask 32 -j REJECT --reject-with tcp-reset
-        sudo iptables -A P2P_BLOCKS -m state --state NEW,ESTABLISHED,RELATED -m recent --set
-        sudo iptables -A P2P_BLOCKS -m state --state NEW,ESTABLISHED,RELATED -m recent --update --seconds 8 --hitcount 2 -j DROP
-        #P2P_TX limits
-        sudo iptables -F P2P_TX
-        sudo iptables -A P2P_TX -p tcp --syn -m connlimit --connlimit-above ${P2P_GLOBAL_CONN} --connlimit-mask 32 -j REJECT --reject-with tcp-reset
-        sudo iptables -A P2P_TX -m hashlimit --hashlimit-mode srcip --hashlimit-upto ${TXCONNPS}/sec --hashlimit-burst ${TXBURST} --hashlimit-name core_tx_limit -j ACCEPT
-        sudo iptables -A P2P_TX -p tcp -j REJECT --reject-with tcp-reset
-        echo "Connection Limits exist, resetting rules"
-
-else
-        echo "Applying Connection Limits"
-        #P2P_GLOBAL limits
-        sudo iptables -N P2P_LIMIT
-        sudo iptables -I INPUT -p tcp -d $myip --dport ${P2P_GLOBAL} -j P2P_LIMIT
-        sudo iptables -A P2P_LIMIT -p tcp --syn -m connlimit --connlimit-above ${P2P_GLOBAL_CONN} --connlimit-mask 32 -j REJECT --reject-with tcp-reset
-        sudo iptables -A P2P_LIMIT -m hashlimit --hashlimit-mode srcip --hashlimit-upto ${CONNPS}/sec --hashlimit-burst ${BURST} --hashlimit-name core_p2p_limit -j ACCEPT
-        sudo iptables -A P2P_LIMIT -p tcp -j REJECT --reject-with tcp-reset
-        #P2P_BLOCKS limits
-        sudo iptables -N P2P_BLOCKS
-        sudo iptables -I INPUT -p tcp -d $myip --dport ${P2P_BLOCKS} -j P2P_BLOCKS
-        sudo iptables -A P2P_BLOCKS -p tcp --syn -m connlimit --connlimit-above ${P2P_GLOBAL_CONN} --connlimit-mask 32 -j REJECT --reject-with tcp-reset
-        sudo iptables -A P2P_BLOCKS -m state --state NEW,ESTABLISHED,RELATED -m recent --set
-        sudo iptables -A P2P_BLOCKS -m state --state NEW,ESTABLISHED,RELATED -m recent --update --seconds 8 --hitcount 2 -j DROP
-        #P2P_TX limits
-        sudo iptables -N P2P_TX
-        sudo iptables -I INPUT -p tcp -d $myip --dport ${P2P_TX} -m conntrack --ctstate NEW -j P2P_TX
-        sudo iptables -A P2P_TX -p tcp --syn -m connlimit --connlimit-above ${P2P_GLOBAL_CONN} --connlimit-mask 32 -j REJECT --reject-with tcp-reset
-        sudo iptables -A P2P_TX -m hashlimit --hashlimit-mode srcip --hashlimit-upto ${TXCONNPS}/sec --hashlimit-burst ${TXBURST} --hashlimit-name core_tx_limit -j ACCEPT
-        sudo iptables -A P2P_TX -p tcp -j REJECT --reject-with tcp-reset
-
-fi
-}
-
-#Stop limit
-stop_limit() {
-
-table=$(sudo iptables -nL P2P_LIMIT 2> /dev/null)
-myip=$(ifconfig `ip route | grep default | head -1 | sed 's/\(.*dev \)\([a-z0-9]*\)\(.*\)/\2/g'` | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | head -1)
-
-if [[ $table ]]; then
-        #P2P_GLOBAL limits
-        sudo iptables -F P2P_LIMIT
-        sudo iptables -D INPUT -p tcp -d $myip --dport ${P2P_GLOBAL} -j P2P_LIMIT > /dev/null 2>&1
-        sudo iptables -X P2P_LIMIT
-        #P2P_BLOCKS limits
-        sudo iptables -F P2P_BLOCKS
-        sudo iptables -D INPUT -p tcp -d $myip --dport ${P2P_BLOCKS} -j P2P_BLOCKS > /dev/null 2>&1
-        sudo iptables -X P2P_BLOCKS
-        #P2P_TX limits
-        sudo iptables -F P2P_TX
-        sudo iptables -D INPUT -p tcp -d $myip --dport ${P2P_TX} -m conntrack --ctstate NEW -j P2P_TX
-        sudo iptables -X P2P_TX
-        echo "Removed Connection Limits!"
-fi
-}
-
-case "$1" in
-    start)   start_limit ;;
-    stop)    stop_limit;;
-    restart) stop_limit; start_limit ;;
-    *) echo "usage: $0 start|stop|restart" >&2
-       exit 1
-       ;;
-esac
-```
-
-## Start the IP Tables Script
+### Start the IP Tables Script
 
 To start the IP Tables script, you can run the following command.
 ```
