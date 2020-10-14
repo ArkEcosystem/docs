@@ -93,6 +93,10 @@ rm -rf ~/.config/ark-core/ && ark config:publish --token=ark --network=devnet --
 cp ~/delegate.json.backup ~/.config/ark-core/devnet/delegates.json
 ```
 
+<x-alert type="info">
+**Note:** If you had any other custom changes to your `plugins.js` or `.env` files, now is the time to re-apply those changes.
+</x-alert>
+
 ```
 yarn global upgrade
 ```
