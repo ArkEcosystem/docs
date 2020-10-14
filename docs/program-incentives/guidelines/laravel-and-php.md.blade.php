@@ -80,8 +80,6 @@ When working with Livewire you will work a lot with models and their array repre
 #### Good
 
 ```php
-<?php
-
 namespace App\Http\Livewire;
 
 use Livewire\Component;
@@ -102,8 +100,6 @@ class UpdateUserNameForm extends Component
 #### Bad
 
 ```php
-<?php
-
 namespace App\Http\Livewire;
 
 use Livewire\Component;
