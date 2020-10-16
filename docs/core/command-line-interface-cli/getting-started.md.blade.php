@@ -910,6 +910,24 @@ Install a plugin from an npm package name, git repository url or local file.
 ark plugin:install {npm|git|file}
 ```
 
+##### NPM
+
+```bash
+ark plugin:install @vendor/pkg
+```
+
+##### Git
+
+```bash
+ark plugin:install git@github.com:vendor/pkg.git
+```
+
+##### Usage
+
+```bash
+ark plugin:install /path/to/some/vendor/pkg.tar.gz
+```
+
 ### plugin:update
 
 Update a plugin based on its name. If the name contains a scope like `@arkecosystem` than this scope needs to be included.
