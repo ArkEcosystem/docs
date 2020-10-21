@@ -143,3 +143,11 @@
 <x-general.sidebar-link path="/docs/core/releases/2.5" name="2.5" />
 <x-general.sidebar-link path="/docs/core/releases/2.6" name="2.6" />
 <x-general.sidebar-link path="/docs/core/releases/3.0" name="3.0" />
+
+## V3 Testing
+
+<x-general.sidebar-link path="/docs/core/v3-testing/intro" name="Introduction" />
+<x-general.sidebar-link path="/docs/core/v3-testing/creating-v3-node" name="Core V3 Server Setup" />
+<x-general.sidebar-link path="/docs/core/v3-testing/cli-testing" name="Core CLI" />
+<x-general.sidebar-link path="/docs/core/v3-testing/transactions" name="Transactions" />
+<x-general.sidebar-link path="/docs/core/v3-testing/v3-plugins" name="Core 3.0 Plugins" />
