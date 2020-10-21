@@ -142,7 +142,6 @@
 <x-general.sidebar-link path="/docs/core/releases/2.4" name="2.4" />
 <x-general.sidebar-link path="/docs/core/releases/2.5" name="2.5" />
 <x-general.sidebar-link path="/docs/core/releases/2.6" name="2.6" />
-<x-general.sidebar-link path="/docs/core/releases/3.0" name="3.0" />
 
 ## V3 Testing
 
