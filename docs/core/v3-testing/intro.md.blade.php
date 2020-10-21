@@ -26,7 +26,7 @@ As you test different aspects of Core V3, you are encouraged to use your own ini
 The objectives of this test period is to ensure that the Core 3.0's feature set function as designed, identify potential pain points and areas for improvement, and to report any bugs or defects to the ARK.io Team. 
 
 ## Preparation
-Throughout this documentation, we will be using various tools to test Core V3.0 and our suite of products that have been upgraded to be compatible with the latest release of ARK Core. 
+Throughout this documentation, we will be using various tools to test Core V3.0 that have been upgraded to be compatible with the latest release of ARK Core. 
 
 ### Core V3 Server Setup
 If your server was previously operational on devnet with Core 2.7, then please follow this upgrade guide:
@@ -61,13 +61,6 @@ The ARK Explorer is a pivotal tool to use whilst testing. You can find the ARK D
 
 All of the issues will need to be opened via ARK’s Core Github repository at http://github.com/arkecosystem/core/issues with detailed information on what the bug does, how to reproduce the bug, and even a potential solution. If you’re suggesting an improvement then please provide detailed information on what feature/performance/improvement can be implemented.
 
-## ARK Core CLI
-ARK Core comes packaged with a robust command line interface (CLI) which is an essential tool that enables any node operator to update, manage, or monitor their node installation without the need for external programs. 
-
-To get stuck in with testing ARK Core CLI, jump to the document below:
-
-<livewire:page-reference path="/docs/core/v3-testing/cli-testing" />
-
 ## Transactions
 
 Transactions are an integral component of the ARK Core Framework and requires thorough testing to ensure that not only each transaction type can be sent successfully but also that our surrounding products display the correct detail where applicable. 
@@ -75,6 +68,13 @@ Transactions are an integral component of the ARK Core Framework and requires th
 To get stuck in with testing Transactions, you can follow this document below:
 
 <livewire:page-reference path="/docs/core/v3-testing/transactions" />
+
+## ARK Core CLI
+ARK Core comes packaged with a robust command line interface (CLI) which is an essential tool that enables any node operator to update, manage, or monitor their node installation without the need for external programs. 
+
+To get stuck in with testing ARK Core CLI, jump to the document below:
+
+<livewire:page-reference path="/docs/core/v3-testing/cli-testing" />
 
 ## Plugin Development
 Testers who previously created Plugins for Core are encouraged to migrate their Plugins to be functional with Core V3 to increase test coverage and report any pain points found during the migration process.

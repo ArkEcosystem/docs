@@ -172,9 +172,6 @@ ark snapshot:dump
 ```
 - Ensure the process completes without errors.
 - Make a note of the filename of your snapshot. This will look like `1-5235743`
-<x-alert type="warning">
-Before running this command, please ensure that you have enough space on your server to perform this action.
-</x-alert>
 
 Once you have taken a snapshot of your database, you can restore the snapshot with the following command:
 ```

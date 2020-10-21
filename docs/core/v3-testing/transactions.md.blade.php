@@ -10,9 +10,12 @@ Transactions are an integral component of the ARK Core Framework and requires th
 - **Balances are updated correctly in the Explorer.**
 - **Alternatively, you can check the API to check that details of the transactions are correct. You can find an example of a Send transaction [here](https://dexplorer.ark.io/api/transactions/ce72b48016d3fa1c68f21dfd33a7396f852546c4cb34f99d1ccb240fa1a35b2a)**
 
+## Prerequisites
+Before testing transactions, you will be required to download a Core 3.0 compatible Desktop Wallet which can be found [here](/docs/core/v3-testing/intro#desktop-wallet)
+
+Guides for sending all transactions within the Desktop Wallet can be found [here](/docs/desktop-wallet/intro#transactions)
 <x-alert type="info">
-- Guides for sending all transactions within the Desktop Wallet can be found [here](/docs/desktop-wallet/intro#transactions)
-- Using a JSON Viewer browser extension such as [this](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) makes viewing API data in a browser much easier to read.
+Using a JSON Viewer browser extension such as [this](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) makes viewing API data in a browser much easier to read.
 </x-alert>
 
 As you progress through this document, you are encouraged to test scenarios that you think of that we may have not detailed. 
@@ -202,7 +205,7 @@ Using the `businessname` example from above, we could resign the entity with the
 
 ## Entity Transaction Testing 
 
-Register, update and resign various entites and ensure that the data is correctly displayed via API or the Explorer.
+Register, update and resign various entities and ensure that the data and balances are correctly displayed via API or the Explorer.
 
 <x-alert type="info">
 Registered entity names need to be unique by **type**. If a business called `businessname` is already registered, any attempt to register another business titled `businessname` should fail.
