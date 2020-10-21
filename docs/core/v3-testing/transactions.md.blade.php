@@ -33,7 +33,7 @@ The transfer transaction enables a user to broadcast a transaction to the networ
 ## Multipayment Transaction
 This type is designed to reduce the payload on the blockchain by enabling multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. ARK Core (devnet) will allow allow up to 128 payments to be combined within a single transaction. 
 
-- Before sending a transaction, check the balances of the sender and recipients via the explorer or API
+- Before sending a transaction, note the balances of the sender and recipients via the explorer or API
 - Using the desktop wallet, send a multipayment transaction to X amounts of recipients. 
 - Once forged, check the balances of the sender and recipients and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly. 
@@ -44,7 +44,7 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 ## Delegate Registration 
 A user or organization can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
 
-- Before sending a Delegate Registration transaction, check the balances of the sender via the explorer or API
+- Before sending a Delegate Registration transaction, note the balances of the sender via the explorer or API
 - Using the desktop wallet, send a Delegate Registration transaction.
 - Once forged, check the balances of the sender and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly. 
@@ -55,7 +55,7 @@ A user or organization can register their address to become a delegate and secur
 A key feature of the ARK DPoS model is that each address can vote for one delegate of their choosing to secure the network. A vote and unvote transaction type is therefore necessary to enable this functionality. Once an address votes for a delegate, funds can enter and leave the address as needed, and vote weight adjusts automatically. Voting does not send funds to the delegate’s ARK address in question - it only assigns vote weight
 
 ## Vote
-- Before sending a vote transaction check the balances of the sender via the explorer or API.
+- Before sending a vote transaction note the balances of the sender via the explorer or API.
 - Select a delegate and note the amount of DARK voting for them and the amount of wallets voting for them.
 - Using the Desktop Wallet, send a Vote transaction to vote for your selected delegate. 
 - Once forged, check the balances of the sender and view the delegate you are voting for to ensure that the details are updated correctly. 
