@@ -85,13 +85,4 @@ To get stuck in with Plugin Development, follow the link below:
 
 ## SDKs (Coming Soon)
 
-ARK Core currently provides SDK support for several different languages such as:
-- PHP  
-- Python  
-- Java
-- Go
-- TypeScript
-- C++
-
-Testing on SDK's will begin soon. Stay tuned for an update on this. 
 
