@@ -4,7 +4,7 @@ title: Configuration
 
 # Configuration
 
-ARK Core provides a wide variety of ways to configure how it behaves, what plugins are used, who is forging and more. Each option is documented, so head over to the [ARK Core repository](configuration.md) and dive in. All of this configuration can be found in the `app.js`, `delegates.json` and `peers.json` files of the respective network you are using.
+ARK Core provides a wide variety of ways to configure how it behaves, what plugins are used, who is forging and more. Each option is documented, so head over to the [ARK Core repository](https://github.com/ArkEcosystem/core/) and dive in. All of this configuration can be found in the `app.js`, `delegates.json` and `peers.json` files of the respective network you are using.
 
 ## Service Configuration
 
