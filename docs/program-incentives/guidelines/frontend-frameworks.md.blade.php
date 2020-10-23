@@ -10,7 +10,7 @@ These guidelines apply to our general frontend stack (css, html, svg, js) and th
 
 ## CSS
 
-We make use of [TailwindCSS]() to keep our lives easier, and to increase the speed at which our frontend components can be created.
+We make use of [TailwindCSS](https://tailwindcss.com/) to keep our lives easier, and to increase the speed at which our frontend components can be created.
 
 ### Tailwind in Views
 
