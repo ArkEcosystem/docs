@@ -40,7 +40,7 @@ You can find a new version of the Desktop Wallet that's compatible with Core v3 
 *Note: This release also includes new functionality that enables you to unvote and vote delegates within the same transaction.*
 - **Windows** link can be found [here](https://github.com/ArkEcosystem/desktop-wallet/suites/1345717663/artifacts/21756947)
 - **Mac** download can be found [here](https://github.com/ArkEcosystem/desktop-wallet/suites/1345717663/artifacts/21756946)
-- **Linux** download can be found [here](https://github.com/ArkEcosystem/desktop-wallet/suites/1345717663/artifacts/21756947e)
+- **Linux** download can be found [here](https://github.com/ArkEcosystem/desktop-wallet/suites/1345717663/artifacts/21756945)
 <x-alert type="warning">
 To download from the links above you are required to be logged in to GitHub otherwise you may see 404 errors 
 </x-alert>
