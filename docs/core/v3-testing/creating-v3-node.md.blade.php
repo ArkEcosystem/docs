@@ -41,7 +41,7 @@ cd ~
 ```
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh)
 ```
 (When prompted, select the **devnet** network)
 <x-alert type="warning">
