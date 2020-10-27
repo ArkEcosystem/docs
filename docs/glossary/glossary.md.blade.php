@@ -517,7 +517,7 @@ A service that crawls Blockchain data looking for tasks to perform. Component of
 
 ### Encryption Password
 Alphanumeric password set by the user to encrypt and secure a passphrase, mnemonic, seed, or other type of private key. Does not unlock Blockchain data directly, instead exposes the key.  
-**More:** [Private Key](glossary#private-key), [Blockchain](glossary#blockchain), [Passphrase](glossary#passphrase), [Mnemonic](glossary#mnemonic), [Key](glossary#key), [PoS](glossary#pos)
+**More:** [Private Key](glossary#private-key), [Blockchain](glossary#blockchain), [Passphrase](glossary#passphrase), [Mnemonic](glossary#mnemonic), [Key](glossary#key)
 
 ### Entity Declaration Transaction Type
 Transaction type as of ARK Core v2.7 that allows people or organizations to register data on the ARK Public Network via IPFS. Critical component of MarketSquare.  
