@@ -125,6 +125,6 @@ Aferwards you will have to start your core processes again. This can be done by 
 After restarting, your node will first execute migrations to get the database ready for v2.6. Please be aware that this can take upward of 30 minutes to complete depending on your server specs.
 </x-alert>
 
-### Reporting Problems <a id="reporting-problems"></a>
+### Reporting Problems
 
 If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
