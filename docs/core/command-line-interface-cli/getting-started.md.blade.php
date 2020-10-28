@@ -376,7 +376,7 @@ Get the value of an environment variable
 #### Usage
 
 ```bash
-ark env:get KEY
+ark env:get --key=KEY
 ```
 
 #### Flags
@@ -385,13 +385,14 @@ ark env:get KEY
 | :--- | :--- | :---: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
+| --key | the key of which the value should be retrieved | :white_checkmark: |
 
 #### Examples
 
 #### Get the Log Level
 
 ```bash
-ark env:get CORE_LOG_LEVEL
+ark env:get --key=CORE_LOG_LEVEL
 ```
 
 ### env:list
@@ -451,7 +452,7 @@ Set the value of an environment variable
 #### Usage
 
 ```bash
-ark env:set KEY VALUE
+ark env:set --key=KEY --value=VALUE
 ```
 
 #### Flags
@@ -460,13 +461,15 @@ ark env:set KEY VALUE
 | :--- | :--- | :---: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
+| --key | the key of the value that should be updated | :white_checkmark: |
+| --value | the new value of the key that shuld be updated | :white_checkmark: |
 
 #### Examples
 
 #### Set the Log Level
 
 ```bash
-ark env:set CORE_LOG_LEVEL info
+ark env:set --key=CORE_LOG_LEVEL --value=info
 ```
 
 ### forger:log
