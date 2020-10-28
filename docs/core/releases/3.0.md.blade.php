@@ -56,6 +56,7 @@ After restarting, your node will first execute migrations to get the database re
 - The `/v2` path segment in API URLs has been deprecated in 2.0 and removed in 3.0
 - `SocketCluster` has been replaced with `@hapi/nes`
 - `oclif` has been replaced with a custom CLI for greater control and extensibility of its behaviours
+- All `POST /search` endpoints exposed through the API have been deprecated in favour of dot-notation query parameters
 
 ### Reporting Problems
 
