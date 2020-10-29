@@ -42,6 +42,11 @@
 <x-general.sidebar-link path="/docs/core/command-line-interface-cli/getting-started" name="Getting Started" />
 <x-general.sidebar-link path="/docs/core/command-line-interface-cli/developing-commands" name="Developing Commands" />
 
+## Configuration
+
+<x-general.sidebar-link path="/docs/core/configuration/getting-started" name="Getting Started" />
+<x-general.sidebar-link path="/docs/core/configuration/environment-variables" name="Environment Variables" />
+
 ## Transactions
 
 <x-general.sidebar-link path="/docs/core/transactions/transaction-lifecycle" name="Understanding Transaction Lifecycle" />
