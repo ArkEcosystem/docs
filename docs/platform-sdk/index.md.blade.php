@@ -5,6 +5,17 @@
 <x-general.sidebar-link path="/docs/platform-sdk/specification" name="Specification" />
 <x-general.sidebar-link path="/docs/platform-sdk/testing" name="Testing" />
 
+## SDK
+
+<x-general.sidebar-link path="/docs/platform-sdk/sdk" name="ADA" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/coins" name="Coins" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/contracts" name="Contracts" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/data" name="Data" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/dto" name="DTO" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/exceptions" name="Exceptions" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/helpers" name="Helpers" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk/http" name="HTTP" />
+
 ## Coins
 
 <x-general.sidebar-link path="/docs/platform-sdk/coins/ada" name="ADA" />

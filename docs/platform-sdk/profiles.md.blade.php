@@ -4,7 +4,7 @@ title: Profiles
 
 # Profiles
 
-This is a Profile System for the Desktop/Mobile Wallet, based on the Platform SDK. The implementation makes use of various Platform SDK components and adheres to the contracts laid out in the [specification](http://docs.ark.io.test/docs/platform-sdk/specification).
+This is a Profile System for the Desktop/Mobile Wallet, based on the Platform SDK. The implementation makes use of various Platform SDK components and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 ## Repository
 

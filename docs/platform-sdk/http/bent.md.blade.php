@@ -4,7 +4,7 @@ title: bent
 
 # bent
 
-This is an HTTP Client for the Platform SDK. The implementation makes use of [bent](https://github.com/mikeal/bent) and adheres to the contracts laid out in the [specification](http://docs.ark.io.test/docs/platform-sdk/specification).
+This is an HTTP Client for the Platform SDK. The implementation makes use of [bent](https://github.com/mikeal/bent) and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 ## Repository
 
