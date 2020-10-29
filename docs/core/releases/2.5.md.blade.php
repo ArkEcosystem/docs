@@ -36,6 +36,6 @@ This section addresses developers and lists notable changes during this version 
 
 All v2 API endpoints now return `BigInt` values as `string` to avoid rounding issues for chains that use very large supplies. This should only affect developers that haven't properly handled `BigInt` values already, meaning you treated `BigInt` values as numbers instead of casting them after receiving them.
 
-## Reporting Problems <a id="reporting-problems"></a>
+## Reporting Problems
 
 If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
