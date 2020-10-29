@@ -7,7 +7,7 @@
 
 ## SDK
 
-<x-general.sidebar-link path="/docs/platform-sdk/sdk" name="ADA" />
+<x-general.sidebar-link path="/docs/platform-sdk/sdk" name="Introduction" />
 <x-general.sidebar-link path="/docs/platform-sdk/sdk/coins" name="Coins" />
 <x-general.sidebar-link path="/docs/platform-sdk/sdk/contracts" name="Contracts" />
 <x-general.sidebar-link path="/docs/platform-sdk/sdk/data" name="Data" />
