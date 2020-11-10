@@ -4,7 +4,6 @@ title: Laravel & PHP
 
 # Laravel & PHP
 
-
 <x-alert type="info">
 **These guidelines are based on the [Laravel & PHP](https://spatie.be/guidelines/laravel-php) Guidelines by [Spatie](https://spatie.be/) as they provide a solid foundation for modern development.** Our guidelines contain slight modifications that are applicable to how we organise and develop projects in our day-to-day business operations.
 </x-alert>
@@ -125,9 +124,9 @@ Always ensure to apply validation before performing an action that makes use of 
 
 For localization, we make use of `kebab-case` for keys that contain nested entries and `snake_case` for key value pairs. As for parameters, we use `camelCase`
 
-Use `@lang` `trans()` and `__()` in that order of priority when possible.
+Use `@ lang()`, `trans()` and `__()` in that order of priority when possible.
 
-#### Single Key 
+#### Single Key
 
 ```php
 return [
@@ -148,19 +147,19 @@ return [
         'bar'     => 'baz',
         'foo_bar' => 'buz'
     ]
-    
+
     // Bad
     'foo' => [
         'bar'     => 'baz',
         'foo-bar' => 'buz'
     ]
-    
+
     // Good
     'foo-bar' => [
         'bar'     => 'baz',
         'foo_bar' => 'buz'
     ]
-    
+
     // Bad
     'foo_bar' => [
         'bar'     => 'baz',
