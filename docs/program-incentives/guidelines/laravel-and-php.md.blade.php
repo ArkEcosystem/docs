@@ -170,6 +170,7 @@ return [
 ```
 
 #### Parameters
+
 ```php
 return [
     // Good
