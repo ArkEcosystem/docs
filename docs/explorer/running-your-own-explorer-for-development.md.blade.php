@@ -1,8 +1,8 @@
 ---
-title: Development
+title: How To Deploy Blockchain Explorer For Development?
 ---
 
-# Development
+# How To Deploy Blockchain Explorer For Development?
 
 Currently the instructions are for Valet
 

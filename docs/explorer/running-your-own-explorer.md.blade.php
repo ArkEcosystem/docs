@@ -1,8 +1,8 @@
 ---
-title: Deployment
+title: How To Deploy Blockchain Explorer?
 ---
 
-# Deployment
+# How To Deploy Blockchain Explorer?
 
 Deploying the Explorer requires a few things to guarantee smooth operation. If you don't want to deal with all of the deployment hassle we would recommend to use [Laravel Forge](https://forge.laravel.com/) and [Laravel Envoyer](https://envoyer.io/) or [Laravel Vapor](https://vapor.laravel.com/) if you prefer to go serverless and forget about scaling.
 

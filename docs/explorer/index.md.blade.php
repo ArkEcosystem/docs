@@ -4,9 +4,9 @@
 
 ## Getting Started
 
-<x-general.sidebar-link path="/docs/explorer/development" name="Development" />
-<x-general.sidebar-link path="/docs/explorer/deployment" name="Deployment" />
-<x-general.sidebar-link path="/docs/explorer/docker" name="Docker" />
+<x-general.sidebar-link path="/docs/explorer/running-your-own-explorer" name="Deployment" />
+<x-general.sidebar-link path="/docs/explorer/running-your-own-explorer-with-docker" name="Docker" />
+<x-general.sidebar-link path="/docs/explorer/running-your-own-explorer-for-development" name="Development" />
 
 ## Archived
 
