@@ -120,3 +120,64 @@ class UpdateUserNameForm extends Component
 ### Validation
 
 Always ensure to apply validation before performing an action that makes use of component state. This validation can be either performed in real-time or at the time of a method call. If a method is being executed based on events or instant feedback is executed it is recommended to use real-time validation for faster feedback for an improved UX.
+
+### Localization
+
+For localization, we make use of `kebab-case` for keys that contain nested entries and `snake_case` for key value pairs. As for parameters, we use `camelCase`
+
+Use `@lang` `trans()` and `__()` in that order of priority when possible.
+
+#### Single Key 
+
+```php
+return [
+    // Good
+    'foo'     => 'bar'
+    'foo_bar' => 'baz'
+    // Bad
+    'foo-bar' => 'baz'
+]
+```
+
+#### Nested Entry
+
+```php
+return [
+    // Good
+    'foo' => [
+        'bar'     => 'baz',
+        'foo_bar' => 'buz'
+    ]
+    
+    // Bad
+    'foo' => [
+        'bar'     => 'baz',
+        'foo-bar' => 'buz'
+    ]
+    
+    // Good
+    'foo-bar' => [
+        'bar'     => 'baz',
+        'foo_bar' => 'buz'
+    ]
+    
+    // Bad
+    'foo_bar' => [
+        'bar'     => 'baz',
+        'foo_bar' => 'buz'
+    ]
+]
+```
+
+#### Parameters
+
+```php
+return [
+    // Good
+    'foo'     => 'bar :bazFoo'
+    'foo_bar' => 'baz :bazFoo'
+    // Bad
+    'foo'     => 'baz :baz_foo'
+    'foo-bar' => 'baz :baz-foo'
+]
+```
