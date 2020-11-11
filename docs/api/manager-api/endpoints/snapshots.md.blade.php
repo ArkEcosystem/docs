@@ -119,6 +119,57 @@ Empty result means that snapshot creation process is started successfully. It do
 }
 ```
 
+## Restore snapshot
+
+### Method
+
+```bash
+snapshots.restore
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+| params.name | string | Snapshot name. | Yes |
+| params.truncate | boolean | Truncate database (false). | No |
+| params.verify | boolean | Verify data on restore (false). | No |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+
+Empty result means that snapshot restore process is started successfully. It does not guarantee that snapshot process will complete successfully.
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "snapshots.restore",
+	"params": { "blocks": "1-9793", "truncate": true, "verify": true }
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {}
+}
+```
+
 ## Delete snapshot
 
 ### Method
