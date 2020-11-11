@@ -27,6 +27,7 @@ info.coreVersion
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
 | result.currentVersion | string | Used core version. | Yes |
 | result.latestVersion | string | Latest core version from NPM. | Yes |
 
@@ -78,6 +79,7 @@ info.coreStatus
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
 | result.status | string | Core / rely process status. | Yes |
 | result.syncing | boolean | Determine if node is currently syncing | No |
 
@@ -139,6 +141,7 @@ info.blockchainHeight
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
 | result.height | number | Node height. | Yes |
 | result.randomNodeHeight | number | Random node height. | No |
 | result.randomNodeIp | string | Random node ip. | No |
@@ -166,5 +169,76 @@ info.blockchainHeight
         "randomNodeHeight": 765,
         "randomNodeIp": "127.0.0.1"
     }
+}
+```
+
+## Get disk space
+
+### Method
+
+```bash
+info.diskSpace
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+| params.showAllDisks | boolean | Show data for all available disks. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object / array | Result. | Yes |
+| result.filesystem | string | Filesystem label. | Yes |
+| result.size | number | Full filesystem size (KB). | Yes |
+| result.used | number | Used filesystem size (KB). | Yes |
+| result.available | number | Available filesystem size (KB). | Yes |
+| result.capacity | number | Used filesystem size (%). | Yes |
+| result.mountpoint | string | Mountpoint. | Yes |
+
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "info.diskSpace",
+	"params": { "showAllDisks": true }
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "filesystem": "/dev/disk1s1",
+            "size": 499963174912,
+            "used": 11290525696,
+            "available": 19293650944,
+            "capacity": 0.37,
+            "mountpoint": "/"
+        },
+        {
+            "filesystem": "devfs",
+            "size": 194560,
+            "used": 194560,
+            "available": 0,
+            "capacity": 1,
+            "mountpoint": "/dev"
+        }
+    ]
 }
 ```
