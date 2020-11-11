@@ -58,3 +58,74 @@ log.log
     }
 }
 ```
+
+## Get Pm2 archived logs
+
+### Method
+
+```bash
+log.archived
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | array | Result. | Yes |
+| result.name | string | Log file name. | Yes |
+| result.size | number | Log file size (KB). | Yes |
+| result.downloadLink | string | Download link. Get file via standard HTTP GET request. | Yes |
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "log.archived",
+	"params": {}
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "name": "ark-core-error.log",
+            "size": 2,
+            "downloadLink": "/log/archived/ark-core-error.log"
+        },
+        {
+            "name": "ark-core-out.log",
+            "size": 2766,
+            "downloadLink": "/log/archived/ark-core-out.log"
+        },
+        {
+            "name": "ark-forger-error.log",
+            "size": 2,
+            "downloadLink": "/log/archived/ark-forger-error.log"
+        },
+        {
+            "name": "ark-forger-out.log",
+            "size": 1124,
+            "downloadLink": "/log/archived/ark-forger-out.log"
+        }
+    ]
+}
+```
+
