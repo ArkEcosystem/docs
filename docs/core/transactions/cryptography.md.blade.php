@@ -92,7 +92,7 @@ The DEC representation is the "base 10" interpretation of our PrivateKey and giv
 
 ### WIF \(PrivateKey\)
 
-WIF stands for "Wallet Import Format", and is a [BASE58](cryptographybase-58-check)-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for ARK Mainnet & Devnet Network.
+WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for ARK Mainnet & Devnet Network.
 
 ![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
 
@@ -262,7 +262,7 @@ ARK Signatures use DER Encoding.
 
 ### ECDSA
 
-[ECDSA](https://en.bitcoinwiki.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) is a ["Digital Signature Algorithm"](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) variant based on and ["Modular Arithmetic"](https://en.wikipedia.org/wiki/Modular_arithmetic).
+[ECDSA](https://en.bitcoinwiki.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) is a ["Digital Signature Algorithm"](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) variant d on and ["Modular Arithmetic"](https://en.wikipedia.org/wiki/Modular_arithmetic).
 
 It is a standard to sign and verify transactions/messages and Signatures using [Elliptical Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
