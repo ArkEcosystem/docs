@@ -51,5 +51,5 @@ Let's execute this installation step.
 
 **WRITE DOWN AND SECURE THESE ADDRESSES AND PASSPHRASES.** They will only be shown once. These are the most important addresses you will likely ever encounter, as they contain the initial tokens as configured in ARK Deployer. If you chose Basic, this number is 125 million tokens for each network's genesis address. These genesis passphrases also exist at \`~/.bridgechain/TESTNET\_DEVNET\_MAINNET/BRIDGECHAIN\_NAME/genesisWallet.json\` respectively. Take the proper precautions to secure or move the funds.
 
-1. Once the installation is complete, you will be prompted to declare **Mainnet**, **Devnet**, or **Testnet** network. Make your choice. More on the nature of these networks can be found in [Network Requirements](../prepare/network-requirements.md) section.
+1. Once the installation is complete, you will be prompted to declare **Mainnet**, **Devnet**, or **Testnet** network. Make your choice. More on the nature of these networks can be found in [Network Requirements](../prepare/network-requirements) section.
 2. At this point your genesis node will automatically reboot after a short pause. Then, your bridgechain and Explorer will autostart.

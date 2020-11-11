@@ -54,7 +54,7 @@ Setup docker database config and run Postgres DB via Docker. Follow the steps fr
 
 ## STEP 3: Start Local Testnet Blockchain
 
-Start local blockchain with testnet running on your developer computer. Follow steps defined in here: [Spinning Up Your First Testnet](docs/core/how-to-guides/setting-up-your-development-environment/spinning-up-your-first-testnet#step-2-testnet-network-boot)
+Start local blockchain with testnet running on your developer computer. Follow steps defined in here: [Spinning Up Your First Testnet](/docs/core/how-to-guides/setting-up-your-development-environment/spinning-up-your-first-testnet#step-2-testnet-network-boot)
 
 ## STEP 4: Send New Custom Transaction To The Local Node
 

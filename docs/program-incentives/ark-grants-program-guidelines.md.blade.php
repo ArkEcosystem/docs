@@ -27,7 +27,7 @@ In addition to the above, all projects approved and funded by ARK.io are require
 * All projects will be open source.
 * The source code for the project will be owned by ARK.io and will be made available under a relevant open source license determined on a case by case basis. 
 * Projects will be managed in a repository hosted by ARK.io to ensure long term availability of project source code. 
-* Projects should be developed in TypeScript whenever possible and must follow ARK.io coding standards as outlined in the [Technologies](ark-grants-program-guidelines.md#technologies) section of this document. 
+* Projects should be developed in TypeScript whenever possible and must follow ARK.io coding standards as outlined in the [Technologies](ark-grants-program-guidelines#technologies) section of this document. 
 
 If you are uncomfortable providing any of these items or agreeing to the guidelines as outlined in this document, we will be unable to approve your application and/or fund your project. 
 

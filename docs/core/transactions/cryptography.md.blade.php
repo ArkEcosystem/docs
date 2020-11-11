@@ -19,7 +19,7 @@ The **passphrase** is the master password \(key\) for your ARK tokens. Every ARK
 Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. **We CANNOT recover any lost passphrases.**
 </x-alert>
 
-A [passphrase](/faq/passphrases.html) is a "key to the castle." It is used to directly calculate the [PrivateKey](/docs/core/transactions/cryptography#privatekey) of an ARK account and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
+A passphrase is a "key to the castle." It is used to directly calculate the [PrivateKey](/docs/core/transactions/cryptography#privatekey) of an ARK account and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
 
 We can technically use any word, phrase, or string as a passphrase which will result in a valid ARK [Address](/docs/core/transactions/cryptography#address-wallet) or Wallet; however, it is heavily discouraged as the security of an address relies on the randomness of its Passphrase. Humans are bad at creating randomness, and entering sequences of random letters and numbers isn't easy to do accurately.
 
@@ -64,7 +64,7 @@ const fixture = {
 
 ## PrivateKey
 
-A PrivateKey is a 256-bit integer represented by a 32-byte Hex-encoded string of 64 characters obtained via [SHA256 hashing](https://en.bitcoinwiki.org/wiki/SHA-256) of a [Passphrase](../core-getting-started/setting-up-your-development-environment/#introduction).
+A PrivateKey is a 256-bit integer represented by a 32-byte Hex-encoded string of 64 characters obtained via [SHA256 hashing](https://en.bitcoinwiki.org/wiki/SHA-256) of a [Passphrase](/docs/core/how-to-guides/setting-up-your-development-environment/intro).
 
 ![PrivateKey Generation Steps](/storage/docs/docs/core/assets/private_key_nologo.svg)
 
@@ -92,11 +92,11 @@ The DEC representation is the "base 10" interpretation of our PrivateKey and giv
 
 ### WIF \(PrivateKey\)
 
-WIF stands for "Wallet Import Format", and is a [BASE58](cryptography.md#base-58-check)-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for [ARK Mainnet & Devnet Network](core-network-profiles.md)\).
+WIF stands for "Wallet Import Format", and is a [BASE58](cryptographybase-58-check)-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for ARK Mainnet & Devnet Network.
 
 ![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
 
-It's essentially a more useable/human-readable [PrivateKey](cryptography.md#privatekey) and should be treated with the same diligence with regards to storage and security.
+It's essentially a more useable/human-readable [PrivateKey](cryptography#privatekey) and should be treated with the same diligence with regards to storage and security.
 
 ## PublicKey
 
@@ -108,7 +108,7 @@ ARK also uses "Point Compression" to obtain compressed PublicKeys that are 33-by
 
 ## Address / Wallet
 
-An ARK address is shareable much like an e-mail address. It is the destination to which ARK tokens can be sent, and is obtained from a [PublicKey](cryptography.md#publickey) via a combination of RIPEMD160 hashing and Base58Check encoding prefixed by a single network byte.
+An ARK address is shareable much like an e-mail address. It is the destination to which ARK tokens can be sent, and is obtained from a [PublicKey](cryptography#publickey) via a combination of RIPEMD160 hashing and Base58Check encoding prefixed by a single network byte.
 
 Since an address is derived from a PublicKey, that means it is also mathematically tied to a PrivateKey and Passphrase.
 
@@ -250,7 +250,7 @@ The following is a full prefix-byte table for custom Address construction and is
 
 ## Signature
 
-A Signature is essentially proof that a message or transaction was "signed" by a particular [PrivateKey](cryptography.md#privatekey) / [Passphrase](cryptography.md#introduction).
+A Signature is essentially proof that a message or transaction was "signed" by a particular [PrivateKey](cryptography#privatekey) / [Passphrase](cryptography#introduction).
 
 Remember that this same PrivateKey also has a matching PublicKey. That means a Signature is computationally linked to its corresponding PublicKey using ECDSA and SECP256K1 standards.
 
@@ -338,7 +338,7 @@ DER Encoded Signature:
 
 [Base58Check](https://en.bitcoin.it/wiki/Base58Check_encoding) encoding is used to produce human readable/typeable text from a hash.
 
-It is used to encode a [PrivateKey](cryptography.md#privatekey) and is also the final step to encoding an [ARK address](cryptography.md#address-wallet).
+It is used to encode a [PrivateKey](cryptography#privatekey) and is also the final step to encoding an [ARK address](cryptography#address-wallet).
 
 ## Hashing
 

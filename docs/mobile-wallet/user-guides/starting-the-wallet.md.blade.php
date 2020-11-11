@@ -26,4 +26,4 @@ Your new profile must then be assigned a name and a network. Mainnet is the one 
 
 ![](/storage/docs/docs/mobile-wallet/assets/arkwallet6.png)
 
-Once you have entered your name, you can sign in by touching the profile you created and by entering the PIN you created earlier. From there, you can click on the bottom-right button to either create or import a wallet. You can find a guide on creating or importing wallets [here](/docs/mobile-wallet/how-to-create-or-import-a-wallet#importing-a-wallet).
+Once you have entered your name, you can sign in by touching the profile you created and by entering the PIN you created earlier. From there, you can click on the bottom-right button to either create or import a wallet. You can find a guide on creating or importing wallets [here](/docs/mobile-wallet/user-guides/how-to-create-or-import-a-wallet#importing-a-wallet).

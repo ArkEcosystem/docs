@@ -6,7 +6,7 @@ title: Delegate Resignation Transaction Specification
 
 This transaction type enables delegates to block potential voters from voting for them if they choose to withdraw their status as delegates. A non-reversible transaction can be sent to the network to indicate that the delegate should no longer be included in any future forging rounds.
 
-This transaction acts as a “kill command” for [delegates](../terminology.md#delegate) who wish to resign or retire their delegate. Activating a delegate resignation will mean delegates will no longer be able to receive any new votes. Plus, for actively forging delegates, enabling delegate resignation will mean they permanently drop out of the top 51. This provides a clean and simple way to retire a delegate.
+This transaction acts as a “kill command” for delegates who wish to resign or retire their delegate. Activating a delegate resignation will mean delegates will no longer be able to receive any new votes. Plus, for actively forging delegates, enabling delegate resignation will mean they permanently drop out of the top 51. This provides a clean and simple way to retire a delegate.
 
 | References |  |
 | :--- | :--- |

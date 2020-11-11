@@ -6,7 +6,7 @@ title: Spinning Up Your First Testnet
 
 ## Step 1: Start Docker Testnet Database
 
-You already generated docker files during the[ development environment setup](/docs/core/how-to-guides/setting-up-your-development-environment/linux#step-7-setting-up-the-development-database) \(if not please run the following commands as specified [here](setting-up-your-development-environment/#step-7-1-database-setup-using-docker)\).
+You already generated docker files during the[ development environment setup](/docs/core/how-to-guides/setting-up-your-development-environment/linux#step-7-setting-up-the-development-database) \(if not please run the following commands as specified [here](/docs/core/how-to-guides/setting-up-your-development-environment/linux#step-71-database-setup-using-docker)\).
 
 ```bash
 cd core/docker/development/testnet #testnet docker folder
@@ -75,7 +75,7 @@ Your core server is now running and responding to your requests. Look at the [Pu
 
 1. [Retrieve Node Configuration](/docs/api/public-rest-api/endpoints/node#retrieve-the-configuration)
 2. [Retrieve The Cryptography Configuration](/docs/api/public-rest-api/endpoints/node#retrieve-the-cryptography-configuration)
-3. [List All Transactions](/docs/api//public-rest-api/endpoints/transactions#list-all-transactions)
+3. [List All Transactions](/docs/api/public-rest-api/endpoints/transactions#list-all-transactions)
 4. [Explore more endpoints](/docs/api/)
 
 <x-alert type="info">

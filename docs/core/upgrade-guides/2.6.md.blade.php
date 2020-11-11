@@ -111,7 +111,7 @@ sudo apt-get install -y libjemalloc-dev
 ark update --no-restart
 ```
 
-#### For more information about using the ARK CLI interface go[ here.](../../devops-guides/usinge-core-command-line-interface.md) <a id="step-1-add-core-magistrate-transactions-package"></a>
+#### For more information about using the ARK CLI interface go[ here.](/docs/core/command-line-interface-cli/developing-commands) <a id="step-1-add-core-magistrate-transactions-package"></a>
 
 2. The above command will keep the node processes running. After it has completed, you will have to make sure to delete the processes from pm2 to make it properly report the memory and cpu statistics based on jemalloc. You can do this by running:
 
