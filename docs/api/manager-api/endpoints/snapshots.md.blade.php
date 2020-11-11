@@ -65,6 +65,60 @@ snapshots.list
 }
 ```
 
+## Create snapshot
+
+### Method
+
+```bash
+snapshots.create
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+| params.codec | string | Snapshot codec (default, json). | No |
+| params.skipCompression | boolean | Skip data compression (false). | No |
+| params.start | boolean | First block included in snapshot. | No |
+| params.end | boolean | Last block included in snapshot. | No |
+
+Given start and end height may be changed to match nearest round start.
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+
+Empty result means that snapshot creation process is started successfully. It does not guarantee that snapshot process will complete successfully.
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "snapshots.create",
+	"params": { "codec": "json", "skipCompression": true, "start": 1, "end": 200 }
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {}
+}
+```
+
 ## Delete snapshot
 
 ### Method
