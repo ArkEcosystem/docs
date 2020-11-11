@@ -99,7 +99,7 @@ export class ConsoleLogger implements Contracts.Logger {
 ```
 
 1. We create a new class which ideally should be named as `ImplementationType`, in this case the implementation is `Console` and the type is `Logger`, which refers to the overall `Log` feature.
-2. We implement the `Contracts.Logger` contract which defines what methods a logger needs to implement and expose. You can take a look at [Contracts.Logger](managers-and-drivers.md) on GitHub to learn more about it.
+2. We implement the `Contracts.Logger` contract which defines what methods a logger needs to implement and expose. You can take a look at [Contracts.Logger](managers-and-drivers) on GitHub to learn more about it.
 3. We create a `make` method which is called by the `LogManager` to do all of the setup that is needed to get the driver up and running.
 4. We implement all of the method that are specified in `Contracts.Logger` to satisfy the contract and avoid issues with how it behaves.
 
