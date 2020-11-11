@@ -66,3 +66,55 @@ process.list
     ]
 }
 ```
+
+## Stop pm2 process
+
+### Method
+
+```bash
+process.stop
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+| params.name | string | Pm2 process name / ID. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+| result.name | string | Pm2 process name. | Yes |
+| result.status | string | Pm2 process new status. | Yes |
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "process.stop",
+	"params": { "name": "ark-core" }
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {
+        "name": "ark-core",
+        "status": "stopped"
+    }
+}
+```
