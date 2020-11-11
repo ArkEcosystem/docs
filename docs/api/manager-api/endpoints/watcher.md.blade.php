@@ -63,3 +63,23 @@ watcher.getEvents
     }
 }
 ```
+
+### Supported query parameters
+
+| Name | Type |
+| :--- | :---: |
+| $eq | equal |
+| $ne | not equal |
+| $lt | less than |
+| $lte | less than or equal |
+| $gt | greater than |
+| $gte | greater than or equal |
+| $like | like |
+
+### Query example
+
+```javascript
+"data": {
+    name: { $like: "starts_with_string%" }
+}
+```
