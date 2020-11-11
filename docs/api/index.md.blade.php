@@ -27,6 +27,9 @@
 <x-general.sidebar-link path="/docs/api/webhook-api/usage" name="Usage" />
 <x-general.sidebar-link path="/docs/api/webhook-api/endpoints" name="Endpoints" />
 
+## Manager API
+<x-general.sidebar-link path="/docs/api/manager-api/getting-started" name="Getting Started" />
+
 ## Elasticsearch API
 
 <x-general.sidebar-link path="/docs/api/elasticsearch-api/getting-started" name="Getting Started" />
