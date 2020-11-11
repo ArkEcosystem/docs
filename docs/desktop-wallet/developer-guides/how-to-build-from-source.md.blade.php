@@ -128,8 +128,8 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## Credits
 
-This project exists thanks to all the people who [contribute](../../contributors).
+This project exists thanks to all the people who [contribute](https://github.com/ArkEcosystem/desktop-wallet/graphs/contributors).
 
 ## License
 
-[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
+[MIT](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/LICENSE) © [ARK Ecosystem](https://ark.io)

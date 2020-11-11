@@ -51,7 +51,7 @@ Once everything is set up and configured, we can move on to developing the plugi
 ## Step 3: Module Registration Within Network Configuration
 
 <x-alert type="info">
-In order to make sure that your plugin is registered and loaded when **core node starts** you need to modify the **plugin.js** file related to the current [network run mode.](../../concepts/core-node-running-modes.md#available-running-modes)
+In order to make sure that your plugin is registered and loaded when **core node starts** you need to modify the **plugin.js** file related to the current [network run mode.](/docs/core/how-to-guides/setting-up-your-development-environment/core-node-running-modes)
 </x-alert>
 
 Since, we are running[ local development environment](/docs/core/how-to-guides/setting-up-your-development-environment/setup-local-blockchain-explorer) we need to edit the Testnet configuration \(folder: `core/packages/core/bin/config/testnet/plugins.js` and add our **module name** to the list of loaded modules. This is also a good place to set up module default properties, that are defined in **default.ts** file in our module root folder.

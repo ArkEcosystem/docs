@@ -50,7 +50,7 @@ In short, you will want to look into this component when your new transaction ty
 
 ### Tables
 
-> [src/components/tables/\*.vue](../../concepts/transaction-types/vote-and-unvote-transaction.md)
+> [src/components/tables/\*.vue](/docs/core/transactions/transaction-types/vote-and-unvote-transaction)
 
 The Explorer consists mostly of tables that show information fetches from the blockchain. These tables have specific columsn that fit a general transaction, but if you require different columns to show properties of your new transaction type \(e.g. `businesses` or `timelock`\), you will want to add a new table component in this directory to properly show it. The simplest way would be to take a look at how the other tables are constructed here, and create your own version with the columns you need.
 

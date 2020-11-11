@@ -29,7 +29,7 @@ yarn setup  #run Lerna to clean, bootstrap and build the core packages
 
 ## Step 2: Generate the Docker Configurations
 
-ARK Core includes several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the [network](../../concepts/core-network-profiles.md) and token.
+ARK Core includes several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
 
 For instance, you could use this command \(to be run from `core` root folder\):
 
@@ -37,7 +37,7 @@ For instance, you could use this command \(to be run from `core` root folder\):
 yarn docker ark
 ```
 
-This command creates a new directory \(`docker`\) that contains 1 folder per network. You can read more about generating of Docker configurations [here.](linux.md#step-7-1-database-setup-using-docker)
+This command creates a new directory \(`docker`\) that contains 1 folder per network. You can read more about generating of Docker configurations [here.](linux#step-7-1-database-setup-using-docker)
 
 <x-alert type="info">
 Once your basic docker configurations are generated, you can select one of the two available **approaches** on how to best utilize the most fitting docker development setup.
@@ -45,8 +45,8 @@ Once your basic docker configurations are generated, you can select one of the t
 
 In the next sections we will explain two approaches on how you can setup you development environment with docker:
 
-1. [**Run a PostgreSQL container while using NodeJS from your local environment**](docker.md#approach-1-containerize-only-the-persistent-store)
-2. [**Run a PostgreSQL container, build and run ARK-Core using a mounted volume**](docker.md#approach-2-serve-core-server-as-a-collection-of-containers)
+1. [**Run a PostgreSQL container while using NodeJS from your local environment**](docker#approach-1-containerize-only-the-persistent-store)
+2. [**Run a PostgreSQL container, build and run ARK-Core using a mounted volume**](docker#approach-2-serve-core-server-as-a-collection-of-containers)
 
 ## Approach 1: Containerize Only the Persistent Store
 

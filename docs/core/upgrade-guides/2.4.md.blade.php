@@ -164,7 +164,7 @@ sed -i 's/core-json-rpc/core-exchange-json-rpc/g' ~/.config/ark-core/mainnet/plu
 
 > Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 
-Make sure that [Step 1](2.4.md#step-1-add-core-state-package), [Step 2](2.4.md#step-2-add-core-wallet-api-package), [Step 3](2.4.md#step-3-update-core-p2p-configuration), [Step 4](2.4.md#step-4-update-core-forger-configuration) and [Step 5](2.4.md#step-5-update-core-json-rpc-to-core-exchange-json-rpc) were successfully completed before running the `ark update` command via the cli.
+Make sure that [Step 1](2.4#step-1-add-core-state-package), [Step 2](2.4#step-2-add-core-wallet-api-package), [Step 3](2.4#step-3-update-core-p2p-configuration), [Step 4](2.4#step-4-update-core-forger-configuration) and [Step 5](2.4#step-5-update-core-json-rpc-to-core-exchange-json-rpc) were successfully completed before running the `ark update` command via the cli.
 
 **To update to v2.4 run the following command:**
 

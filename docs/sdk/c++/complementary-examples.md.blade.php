@@ -9,7 +9,7 @@ title: Complementary Examples
 
 ## Prerequisites
 
-Before we get started we need to make sure that all of the required dependencies are installed. These dependencies are the [Crypto SDK](/docs/sdk/c++/crypto) and [Client SDK](/docs/sdk/c++/client). You can head on over to their documentations to read more about them but for now we are only concerned with installing them to get up and running.
+Before we get started we need to make sure that all of the required dependencies are installed. These dependencies are the [Crypto SDK](/docs/sdk/c++/crypto/api-documentation) and [Client SDK](/docs/sdk/c++/client/api-documentation). You can head on over to their documentations to read more about them but for now we are only concerned with installing them to get up and running.
 
 Also note that [CMake](https://cmake.org/download/) is the recommended build tool.
 

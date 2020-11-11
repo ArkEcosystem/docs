@@ -44,7 +44,7 @@ export class LogManager extends Support.Manager<Contracts.Logger> {
 ```
 
 1. We create a new class which ideally should be named as `FeatureManager`, in this case the feature is `Log` which is responsible for all logging functionality so we name the class `LogManager`.
-2. We extend the `Support.Manager` class an inherit all of its methods and let it know that is responsible for managing logger drivers by type hinting `Contracts.Logger`. You can take a look at [Support.Manager](managers-and-drivers.md) on GitHub to learn more about it.
+2. We extend the `Support.Manager` class an inherit all of its methods and let it know that is responsible for managing logger drivers by type hinting `Contracts.Logger`. You can take a look at [Support.Manager](managers-and-drivers) on GitHub to learn more about it.
 3. We create a `createConsoleDriver` method which will be responsible for instantiating our console-specific driver implementation.
 4. We create a `getDefaultDriver` method which in our case returns `console` as the desired default driver.
 

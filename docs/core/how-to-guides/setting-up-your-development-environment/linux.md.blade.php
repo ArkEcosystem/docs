@@ -168,7 +168,7 @@ sudo usermod -aG sudo ark
 sudo su - ark
 ```
 
-After creating and logging under `ark` user, you can execute the following script to install development tools and dependencies from [Technology Stack](../../getting-started/technology-stack.md). If your default user isn't `ark`, you should copy and modify the script source below \(database section\).
+After creating and logging under `ark` user, you can execute the following script to install development tools and dependencies from [Technology Stack](/docs/core/getting-started/technology-stack). If your default user isn't `ark`, you should copy and modify the script source below \(database section\).
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/learn-ark/bash-helper-scripts/master/dev-setup.sh)
