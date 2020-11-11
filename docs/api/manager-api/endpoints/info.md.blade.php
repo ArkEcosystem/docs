@@ -292,3 +292,53 @@ info.diskSpace
     }
 }
 ```
+
+## Get next forging slot
+
+### Method
+
+```bash
+info.nextForgingSlot
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+| result.remainingTime | number | Remaining time till next slot. (ms). | Yes |
+
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "info.nextForgingSlot",
+	"params": {}
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {
+        "remainingTime": 7000
+    }
+}
+```
