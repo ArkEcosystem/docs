@@ -342,3 +342,74 @@ info.nextForgingSlot
     }
 }
 ```
+
+## Get last forged block
+
+### Method
+
+```bash
+info.lastForgedBlock
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "info.lastForgedBlock",
+	"params": {}
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {
+        "serialized": "0000000068b3da0653040000e4a912ff56bd69a80000000000000000000000000000000000000000000000000000000000000000e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b85503807f9abe33fb390546bb5dcab075dd1136d0b98c54420c8c463c4ed3545161b23045022100eee1e9bea6895793cc1ce1811c8c9b327fb050d229834f20f10fc3d2e0551ac402204d0cc4e557cdc16d002c71e2dddaac7ec6c3f356e677985da1a74becea3e0acc",
+        "verification": {
+            "errors": [],
+            "containsMultiSignatures": false,
+            "verified": true
+        },
+        "transactions": [],
+        "data": {
+            "id": "963100951063532680",
+            "idHex": "0d5d9f3656fb9488",
+            "blockSignature": "3045022100eee1e9bea6895793cc1ce1811c8c9b327fb050d229834f20f10fc3d2e0551ac402204d0cc4e557cdc16d002c71e2dddaac7ec6c3f356e677985da1a74becea3e0acc",
+            "generatorPublicKey": "03807f9abe33fb390546bb5dcab075dd1136d0b98c54420c8c463c4ed3545161b2",
+            "payloadHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "payloadLength": 0,
+            "reward": "0",
+            "totalFee": "0",
+            "totalAmount": "0",
+            "numberOfTransactions": 0,
+            "previousBlock": "16476721599592884648",
+            "previousBlockHex": "e4a912ff56bd69a8",
+            "height": 1107,
+            "timestamp": 114996072,
+            "version": 0
+        }
+    }
+}
+```
