@@ -18,7 +18,7 @@ So what’s new? Well, quite a lot actually… In the most exciting feature-pack
 
 ### New Features:
 
-* \*\*\*\* **Generic Transaction Interface \(GTI\)** — Developers can use the GTI to create custom transaction types tailored to their exact needs using custom logic. An alternative to smart contracts, the GTI on ARK Core gives developers an incredibly simple way to build their own applications using ARK’s blockchain technology — simple, clean and very effective.
+* \*\*\*\* **Generic Transaction Interface \(GTI\)** — Developers can use the GTI to create custom transaction types tailored to their exact needs using custom logic. An alternative to smart contracts, the GTI on ARK Core gives developers an incredibly simple way to build their own applications f ARK’s blockchain technology — simple, clean and very effective.
 * \*\*\*\* **Nonces for Transactions** - We’ve added nonces for transactions, which means adding a sequential number to transactions to make them unique. This helps mitigate the risk of replay attacks and makes the blockchain even more secure.
 
 ### **New Transaction Types:**
@@ -113,7 +113,7 @@ sudo apt-get install -y libjemalloc-dev
 ark update --no-restart
 ```
 
-#### For more information about using the ARK CLI interface go[ here.](../../devops-guides/usinge-core-command-line-interface.md) <a id="step-1-add-core-magistrate-transactions-package"></a>
+#### For more information about using the ARK CLI interface go[ here.](/docs/core/command-line-interface-cli/getting-started) <a id="step-1-add-core-magistrate-transactions-package"></a>
 
 2. The above command will keep the node processes running. After it has completed, you will have to make sure to delete the processes from pm2 to make it properly report the memory and cpu statistics based on jemalloc. You can do this by running:
 
@@ -129,4 +129,4 @@ After restarting, your node will first execute migrations to get the database re
 
 ### Reporting Problems
 
-If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
+If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report) with a detailed description of the problem, steps to reproduce it and info about your environment.
