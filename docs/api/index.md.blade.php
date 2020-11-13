@@ -28,6 +28,21 @@
 <x-general.sidebar-link path="/docs/api/webhook-api/usage" name="Usage" />
 <x-general.sidebar-link path="/docs/api/webhook-api/endpoints" name="Endpoints" />
 
+## Manager API
+<x-general.sidebar-link path="/docs/api/manager-api/getting-started" name="Getting Started" />
+<x-general.sidebar-link
+    path="/docs/api/manager-api/endpoints"
+    name="Endpoints"
+    :children="[
+        ['path' => '/docs/api/manager-api/endpoints/configuration', 'name' => 'Configuration'],
+        ['path' => '/docs/api/manager-api/endpoints/info', 'name' => 'Info'],
+        ['path' => '/docs/api/manager-api/endpoints/log', 'name' => 'Log'],
+        ['path' => '/docs/api/manager-api/endpoints/process', 'name' => 'Process'],
+        ['path' => '/docs/api/manager-api/endpoints/snapshots', 'name' => 'Snapshots'],
+        ['path' => '/docs/api/manager-api/endpoints/watcher', 'name' => 'Watcher'],
+    ]"
+/>
+
 ## Elasticsearch API
 
 <x-general.sidebar-link path="/docs/api/elasticsearch-api/getting-started" name="Getting Started" />
