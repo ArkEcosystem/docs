@@ -96,7 +96,7 @@ Given start and end height may be changed to match nearest round start.
 | jsonrpc | string | The protocol version. | Yes |
 | result | object | Result. | Yes |
 
-Empty result means that snapshot creation process is started successfully. It does not guarantee that snapshot process will complete successfully.
+An empty result means that snapshot creation process has started successfully. It does not guarantee that snapshot process will complete successfully.
 
 ### Request
 
