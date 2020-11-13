@@ -13,7 +13,7 @@ All HTTP requests have to be sent with the `Content-Type: application/vnd.api+js
 
 ## Installation
 
-The Manager API comes by default with an installation of core. In case you don't have it installed, you can add it manually by running `yarn global add @arkecosystem/core-manager`.
+The Manager API comes within an installation of Core by default. If you don't have it installed, you can add it manually by running `yarn global add @arkecosystem/core-manager`.
 
 ## Alias
 
@@ -21,7 +21,7 @@ The Manager API comes by default with an installation of core. In case you don't
 
 ## Configuration
 
-The Manager API comes with default configuration. Additionally you can customize API specific settings in .env or app.json file.
+The Manager API comes with default configuration. Additionally, you can customize API specific settings in .env or app.json file.
 
 <x-alert type="warning">
 We strongly recommend setting basic authentication using Argon2Id hashing method with custom secret and using HTTPS access only.
@@ -29,7 +29,7 @@ We strongly recommend setting basic authentication using Argon2Id hashing method
 
 ### Argon2Id Authentication
 
-It is recommend to make configuration changes for defining user access and IP whitelisting within your app.json file.
+It is recommended to make configuration changes for defining user access and IP whitelisting within your app.json file.
 
 ```javascript
 {
@@ -58,7 +58,7 @@ It is also possible to use wildcards to indicate a range of IPs \(e.g. `"12.34.5
 
 ### Token authentication
 
-Alternatively instead basic authentication, token authentication can be enabled (not recommend).
+Alternatively, instead of using basic authentication, token authentication can be enabled (not recommend).
 
 ```javascript
 {
@@ -83,10 +83,10 @@ It is recommended to make configuration changes to these options by working with
 
 | Variable | Description | Type | Default |
 | :--- | :--- | :---: | :---: |
-| CORE\_MONITOR\_DISABLED | Enables or disabled the manager API plugin | boolean | `false` |
+| CORE\_MONITOR\_DISABLED | Enables or disables the manager API plugin | boolean | `false` |
 | CORE\_MONITOR\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
 | CORE\_MONITOR\_PORT | The API port on which the plugin will listen | integer | `4005` |
-| CORE\_MONITOR\_SSL | Enables or disabled the manager API plugin using SSL. | boolean | `false` |
+| CORE\_MONITOR\_SSL | Enables or disables the manager API plugin using SSL. | boolean | `false` |
 | CORE\_MONITOR\_SSL\_HOST | The host to expose the HTTPS API on | string | `"0.0.0.0"` |
 | CORE\_MONITOR\_SSL\_PORT | The host to expose the HTTPS API on | port | `8445` |
 | CORE\_MONITOR\_SSL\_KEY | Determines where SSL key is located. | port | `8445` |
@@ -95,10 +95,11 @@ It is recommended to make configuration changes to these options by working with
 
 ## Requirements
 
-Manager API obtains some of the required data from running core or relay and forger process.
-Be aware that HTTP server is running on node instance and that all processes are run with ark [process_name]":start option.
-This way the process is run as Pm2 process, which is necessary, because Pm2 IPC is used for getting some data required by manager API.
-
+Manager API obtains some of the required data from running either a `core` **or** `relay` & `forger` process.  
+<x-alert type="info">
+Be aware that the HTTP server is running on a node instance and that all processes are run with `ark [process_name]:start` option.
+Using this method, the process is run as a PM2 process, which is necessary because PM2 IPC is used for getting some data required by manager API. Read more about starting processes in our [Core CLI Documentation](/docs/core/command-line-interface-cli/getting-started).
+</x-alert>
 ## Final checks
 
 After making changes to the manager API configuration, you will need to restart your manager process for the changes to take effect.

@@ -4,7 +4,7 @@ title: Process
 
 # Process
 
-## Get Pm2 process list
+## Get PM2 process list
 
 ### Method
 
@@ -30,8 +30,8 @@ process.list
 | result | array | Result. | Yes |
 | result.pid | number | Process ID. | Yes |
 | result.name | number | Process name. | Yes |
-| result.pm_id | number | Pm2 process ID. | Yes |
-| result.status | string | Pm2 process status. | Yes |
+| result.pm_id | number | PM2 process ID. | Yes |
+| result.status | string | PM2 process status. | Yes |
 | result.monit.memory | number | Used memory. (KB) | Yes |
 | result.monit.cpu | number | Used processor. (%) | Yes |
 
@@ -83,7 +83,7 @@ process.stop
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
-| params.name | string | Pm2 process name / ID. | Yes |
+| params.name | string | PM2 process name / ID. | Yes |
 
 ### Result
 
@@ -92,8 +92,8 @@ process.stop
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | result | object | Result. | Yes |
-| result.name | string | Pm2 process name. | Yes |
-| result.status | string | Pm2 process new status. | Yes |
+| result.name | string | PM2 process name. | Yes |
+| result.status | string | PM2 process new status. | Yes |
 
 ### Request
 
@@ -167,7 +167,7 @@ process.start
 }
 ```
 
-## Restart Pm2 process
+## Restart PM2 process
 
 ### Method
 
@@ -183,7 +183,7 @@ process.restart
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
-| params.name | string | Pm2 process name. | Yes |
+| params.name | string | PM2 process name. | Yes |
 
 ### Result
 
@@ -192,8 +192,8 @@ process.restart
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | result | object | Result. | Yes |
-| result.name | string | Pm2 process name. | Yes |
-| result.status | string | Pm2 process status. | Yes |
+| result.name | string | PM2 process name. | Yes |
+| result.status | string | PM2 process status. | Yes |
 
 ### Request
 

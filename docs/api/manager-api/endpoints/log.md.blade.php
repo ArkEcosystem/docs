@@ -4,7 +4,7 @@ title: Log
 
 # Log
 
-## Get Pm2 process log
+## Get PM2 process log
 
 ### Method
 
@@ -20,7 +20,7 @@ log.log
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
-| params.name | string | Pm2 process name. | Yes |
+| params.name | string | PM2 process name. | Yes |
 | params.fromLine | number | Return data from line. | No |
 | params.range | number | Return data lines in range. | No |
 | params.showError | boolean | Show error log. | No |
@@ -59,7 +59,7 @@ log.log
 }
 ```
 
-## Get Pm2 archived logs
+## Get PM2 archived logs
 
 ### Method
 
