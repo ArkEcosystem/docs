@@ -12,6 +12,7 @@
         ['path' => '/docs/api/public-rest-api/endpoints/blockchain', 'name' => 'Blockchain'],
         ['path' => '/docs/api/public-rest-api/endpoints/blocks', 'name' => 'Blocks'],
         ['path' => '/docs/api/public-rest-api/endpoints/delegates', 'name' => 'Delegates'],
+        ['path' => '/docs/api/public-rest-api/endpoints/entities', 'name' => 'Entities'],
         ['path' => '/docs/api/public-rest-api/endpoints/node', 'name' => 'Node'],
         ['path' => '/docs/api/public-rest-api/endpoints/peers', 'name' => 'Peers'],
         ['path' => '/docs/api/public-rest-api/endpoints/transactions', 'name' => 'Transactions'],

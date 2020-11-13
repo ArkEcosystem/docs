@@ -1,0 +1,94 @@
+{
+    "title": "List All Entities",
+    "description": "The paginated API is used to query for multiple entities. You can apply _filters_ through the query parameter to search for specific entities.",
+    "method": "GET",
+    "path": "entities",
+    "parameters": {
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": [
+                "nullable",
+                "integer"
+            ]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": [
+                "nullable",
+                "integer"
+            ]
+        },
+        "id": {
+            "type": "query",
+            "description": "The entity id to be retrieved.",
+            "rules": [
+                "nullable",
+                "string"
+            ]
+        },
+        "address": {
+            "type": "query",
+            "description": "The address for which entities are to be retrieved.",
+            "rules": [
+                "nullable",
+                "string"
+            ]
+        },
+        "publicKey": {
+            "type": "query",
+            "description": "The public key for which entities are to be retrieved.",
+            "rules": [
+                "nullable",
+                "string"
+            ]
+        },
+        "isResigned": {
+            "type": "query",
+            "description": "The flag to indicate that resigned entites should be retrieved.",
+            "rules": [
+                "nullable",
+                "boolean"
+            ]
+        },
+        "type": {
+            "type": "query",
+            "description": "The type of entities to be retrieved.",
+            "rules": [
+                "nullable",
+                "integer",
+                "min:0",
+                "max:255"
+            ]
+        },
+        "subType": {
+            "type": "query",
+            "description": "The sub-type of entities to be retrieved.",
+            "rules": [
+                "nullable",
+                "integer",
+                "min:0",
+                "max:255"
+            ]
+        },
+        "data.name": {
+            "type": "query",
+            "description": "The name of the entities to be retrieved.",
+            "rules": [
+                "nullable",
+                "string"
+            ]
+        },
+        "data.ipfsData": {
+            "type": "query",
+            "description": "The IPFS Hash of the entities to be retrieved.",
+            "rules": [
+                "nullable",
+                "string"
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "title": "Retrieve an Entity",
+    "description": "Specific entities can be retrieved by the ID of their registration transaction.",
+    "method": "GET",
+    "path": "entities/{id}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The identifier of the registration transaction of the entity to be retrieved.",
+            "rules": [
+                "required",
+                "string"
+            ]
+        }
+    }
+}
