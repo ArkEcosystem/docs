@@ -10,13 +10,13 @@ Code Reviews are important and need to be done frequently so they should be as f
 
 ## Keep Pull-Requests below 500 lines of changes (Cause of potential rejection)
 
-Large Pull-Requests are practically asking for bugs to slip through because of the sheer amount of changes that has to be kept in mind and how it affects all the working parts of the application. Another downside of large Pull-Requests is that they are difficult to revert later on because there will be a lot of conflicts which means you need to through the whole review process again with new code.
+Large Pull-Requests are practically asking for bugs to slip through because of the sheer amount of changes that have to be kept in mind and how it affects all the working parts of the application. Another downside of large Pull-Requests is that they are difficult to revert later on because there will be a lot of conflicts which means you need to go through the whole review process again with new code.
 
 **The reviewer is allowed, and encouraged, to reject Pull-Requests that (subjectively) are too large to reduce the cognitive load required to easily review the Pull-Request.**
 
 ## Keep Pull-Requests focused on a single issue (Link to a project-management task)
 
-It's easy to get sidetracked in a Pull-Request and patch 2 other issues here, do a refactor there and then solve the actual issue. This makes reviewing difficult because now the reviewer has to not only review the changes of the actual task but also keep in mind how the other patches and refactors are affecting the system. Instead, you should create tasks on our project-management tool and submit separate Pull-Requests to resolve those issues, no matter how small. Having unrelated changes in a Pull-Request can also yield in falsely passing or failing tests for the actual changes needed for a specific task.
+It's easy to get sidetracked in a Pull-Request and patch 2 other issues here, do a refactor there and then solve the actual issue. This makes reviewing difficult because now the reviewer has to not only review the changes of the actual task but also keep in mind how the other patches and refactors are affecting the system. Instead, you should create tasks on our project-management tool and submit separate Pull-Requests to resolve those issues, no matter how small. Having unrelated changes in a Pull-Request can also yield in falsely passing or failing tests for the actual changes needed for a specific task. Additionally, having more than 1 task in a single PR means *all* the tasks it covers are unmerged until all tasks are implemented properly.
 
 **This is another common reason to reject a Pull-Request and ask to submit multiple smaller Pull-Requests that are easier to review and revert.**
 
@@ -28,9 +28,11 @@ Creating tasks for issues unrelated to the task you are working on relates to th
 
 ## Do a manual sanity check before requesting a review (UI/UX according to designs)
 
-Before starting to work on a task you should make sure that you have all necessary information to make sure you don't miss any implementation details. This is especially important for UI/UX implementations because it should be implemented exactly as the designs which means you need the latest version available. There's a bit of leeway with backend implementations because you'll have to adapt to the system and code you are working with but the functionality should still be as close as possible to the description in the task.
+Before starting to work on a task you should make sure that you have all necessary information to make sure you don't miss any implementation details. This is especially important for UI/UX implementations because it should be implemented exactly as the designs which means you need the latest version available. There's a bit of leeway with backend implementations because you'll have to adapt to the system and code you are working with but the functionality should still be as close as possible to the description in the task. 
 
 **If you feel like something in the designs doesn't make sense you should contact the designer and/or lead developer to discuss those concerns before starting the implementation.**
+
+After opening your PR it's also encouraged to quickly glance over the diff to check for any obvious issues such as obsolete comments, commented code, etc. Make sure to do a final comparison of your implementation against the design (applies to UI/UX only) to ensure the reviewer will not spot any obvious issues immediately after checking your PR.
 
 ## Make static analysis, formatting and tests pass before requesting a review
 
@@ -52,7 +54,7 @@ Each project has unique needs and those need to be accommodated for with a proje
 
 ## Leave comments about notable changes (You, the author)
 
-Before requesting a review you should make sure to describe all notable changes in details. This is especially important for critical parts of a system so that another developer can come back later and reference the information if there are any issues that arise from them.
+Before requesting a review you should make sure to describe all notable changes in details. This is especially important for critical parts of a system so that another developer can come back later and reference the information if there are any issues that arise from them. Don't forget to include a step-by-step explanation on how to test your change if it requires a specific scenario.
 
 **This information is not for yourself, you already know what you changed. This information should provide as detailed as possible information for the reviewer to make their job as fast and easy as possible.**
 
@@ -64,7 +66,7 @@ When reviewing a Pull-Request and running into issues it can be tempting to just
 
 ## Request detailed documentation before merging
 
-Documentation is what makes or breaks the developer experience. You should request documentation for any changes that will affect developers and/or end-users. There is no change too small to documentation. This also servces
+Documentation is what makes or breaks the developer experience. You should request documentation for any changes that will affect developers and/or end-users. There is no change too small to documentation. This also serves as an important tool to ease the onboarding of new hires.
 
 **Git commits are not valid documentation. They are great for developers but only as long as you know what exactly you are looking for. The average developer and/or user won't even consider looking at the commit history so make sure to document important changes on our official documentation.**
 
