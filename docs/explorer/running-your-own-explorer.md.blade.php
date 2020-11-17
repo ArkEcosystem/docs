@@ -106,7 +106,7 @@ php artisan explorer:cache-multi-signature-addresses
 
 ## Updates
 
-When updating the Explorer there are a few things to keep in mind. All of them should be executed in the specified order to avoid unexpected issues. You shouldn't
+When updating the Explorer there are a few things to keep in mind. All of them should be executed in the specified order to avoid unexpected issues. You shouldn't run any commands besides those when updating to ensure that the update is completed as fast as possible to reduce potential downtime.
 
 ### Restart Horizon
 
