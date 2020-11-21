@@ -121,7 +121,7 @@ configuration.getPlugins
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
-| result | string | app.json file content. | Yes |
+| result | object | App.json object. | Yes |
 
 ### Request
 
@@ -140,7 +140,9 @@ configuration.getPlugins
 {
     "id": "unique-request-id",
     "jsonrpc": "2.0",
-    "result:" "{...}"
+    "result:" "{
+        app.json object
+    }"
 }
 ```
 
