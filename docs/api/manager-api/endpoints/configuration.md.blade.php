@@ -144,12 +144,12 @@ configuration.getPlugins
 }
 ```
 
-## Update core plugins configuration
+## Set core plugins configuration
 
 ### Method
 
 ```bash
-configuration.updatePlugins
+configuration.setPlugins
 ```
 
 ### Parameters
@@ -159,8 +159,7 @@ configuration.updatePlugins
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
-| params | object | The parameters of the request. | Yes |
-| params.content | string | Stringified app.json file configuration. | Yes |
+| params | object | App.json object. | Yes |
 
 ### Result
 
@@ -178,7 +177,7 @@ configuration.updatePlugins
 	"jsonrpc": "2.0",
 	"method": "configuration.updatePlugins",
 	"params": {
-	    content: "{app.json file content}"
+        app.json object
 	}
 }
 ```
