@@ -27,7 +27,7 @@ configuration.getEnv
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
-| result | string | .env file content. | Yes |
+| result | object | Object containing .env variables. | Yes |
 
 ### Request
 
@@ -46,11 +46,24 @@ configuration.getEnv
 {
     "id": "unique-request-id",
     "jsonrpc": "2.0",
-    "result": "CORE_LOG_LEVEL=info\nCORE_LOG_LEVEL_FILE=info\n\nCORE_DB_HOST=localhost\nCORE_DB_PORT=5432\n\nCORE_P2P_HOST=0.0.0.0\nCORE_P2P_PORT=4000\n\nCORE_WEBHOOKS_HOST=0.0.0.0\nCORE_WEBHOOKS_PORT=4004\n\nCORE_MONITOR_HOST=0.0.0.0\nCORE_MONITOR_PORT=4005\n\nCORE_API_HOST=0.0.0.0\nCORE_API_PORT=4003\n"
+    "result": {
+        "CORE_LOG_LEVEL": "info",
+        "CORE_LOG_LEVEL_FILE": "info",
+        "CORE_DB_HOST": "localhost",
+        "CORE_DB_PORT": 5432,
+        "CORE_P2P_HOST": "0.0.0.0",
+        "CORE_P2P_PORT": 4000,
+        "CORE_WEBHOOKS_HOST": "0.0.0.0",
+        "CORE_WEBHOOKS_PORT": 4004,
+        "CORE_MONITOR_HOST": "0.0.0.0",
+        "CORE_MONITOR_PORT": 4005,
+        "CORE_API_HOST": "0.0.0.0",
+        "CORE_API_PORT": 4003
+    }
 }
 ```
 
-## Update core .env configuration
+## Set core .env configuration
 
 ### Method
 
@@ -65,7 +78,7 @@ configuration.setEnv
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
-| params | object | .env object. | Yes |
+| params | object | Object containing .env variables. | Yes |
 
 ### Result
 
