@@ -50,7 +50,7 @@ info.coreVersion
     "jsonrpc": "2.0",
     "result": {
         "currentVersion": "3.0.0-next.8",
-        "latestVersion": "2.7.7"
+        "latestVersion": "3.0.0-next.8"
     }
 }
 ```
