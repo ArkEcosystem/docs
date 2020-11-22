@@ -165,4 +165,4 @@ bash deploy-prod.sh
 
 This will pull and run a new Explorer container `blue_explorer_1` which will follow similar deployment process as the initial deployment one. After successful deployment, the script will remove your old Explorer container `green_explorer_1` and notify you it is now safe to remove your previouse source folder `~/explorer-green`. During the update process you should't experience any Explorer downtime as the reverse proxy should handle the proper distribution of the traffic.
 
-_NOTE: From that point on you should perform updates the same way, just preserving the local source folder naming. So for example your next update woult assume you clone the source into `~/explorer-green` folder.
+_NOTE: From that point on you should perform updates the same way, just preserving the local source folder naming. So for example your next update would assume you clone the source into `~/explorer-green` folder.
