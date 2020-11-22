@@ -150,7 +150,7 @@ You should be now able to access your Explorer instance at https://explorer.your
 
 ### Zero Downtime Updates
 
-_NOTE: In order to have flowless updates all consequent updates require clonning the source in a new location following the naming convention `explorer-blue` or `explorer-green`.
+_NOTE: In order to have flowless update process, all consequent updates require clonning the source in a new location following the naming convention `explorer-blue` or `explorer-green`.
 
 >Assuming we have cloned the source into `explorer-green` during our initial deploy, our first update would expect to be clonned into `explorer-blue`. We'll also copy all our ENV settings from initial deployment folder instead of adding them from scratch:
 
@@ -159,10 +159,22 @@ cd ~
 git clone https://github.com/ArkEcosystem/explorer.ark.io.git explorer-blue
 cd ~/explorer-blue
 cp -f ~/explorer-green/.env ~/explorer-blue/.env
-cp -f ~/explorer-green/docker/production/prod.env ~/explorer-green/docker/production/prod.env
+cp -f ~/explorer-green/docker/production/prod.env ~/explorer-blue/docker/production/prod.env
 bash deploy-prod.sh
 ```
 
 This will pull and run a new Explorer container `blue_explorer_1` which will follow similar deployment process as the initial deployment one. After successful deployment, the script will remove your old Explorer container `green_explorer_1` and notify you it is now safe to remove your previouse source folder `~/explorer-green`. During the update process you should't experience any Explorer downtime as the reverse proxy should handle the proper distribution of the traffic.
 
-_NOTE: From that point on you should perform updates the same way, just preserving the local source folder naming. So for example your next update would assume you clone the source into `~/explorer-green` folder.
+_NOTE: From that point on you should perform updates the same way, just preserving the local source folder naming. So for example your next update would assume you clone the source into `~/explorer-green` folder. Example:
+
+```bash
+cd ~
+rm -rf ~/explorer-green
+git clone https://github.com/ArkEcosystem/explorer.ark.io.git explorer-green
+cd ~/explorer-green
+cp -f ~/explorer-blue/.env ~/explorer-green/.env
+cp -f ~/explorer-blue/docker/production/prod.env ~/explorer-green/docker/production/prod.env
+bash deploy-prod.sh
+```
+
+
