@@ -27,7 +27,7 @@ configuration.getEnv
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
-| result | string | .env file content. | Yes |
+| result | object | Object containing .env variables. | Yes |
 
 ### Request
 
@@ -46,16 +46,29 @@ configuration.getEnv
 {
     "id": "unique-request-id",
     "jsonrpc": "2.0",
-    "result": "CORE_LOG_LEVEL=info\nCORE_LOG_LEVEL_FILE=info\n\nCORE_DB_HOST=localhost\nCORE_DB_PORT=5432\n\nCORE_P2P_HOST=0.0.0.0\nCORE_P2P_PORT=4000\n\nCORE_WEBHOOKS_HOST=0.0.0.0\nCORE_WEBHOOKS_PORT=4004\n\nCORE_MONITOR_HOST=0.0.0.0\nCORE_MONITOR_PORT=4005\n\nCORE_API_HOST=0.0.0.0\nCORE_API_PORT=4003\n"
+    "result": {
+        "CORE_LOG_LEVEL": "info",
+        "CORE_LOG_LEVEL_FILE": "info",
+        "CORE_DB_HOST": "localhost",
+        "CORE_DB_PORT": 5432,
+        "CORE_P2P_HOST": "0.0.0.0",
+        "CORE_P2P_PORT": 4000,
+        "CORE_WEBHOOKS_HOST": "0.0.0.0",
+        "CORE_WEBHOOKS_PORT": 4004,
+        "CORE_MONITOR_HOST": "0.0.0.0",
+        "CORE_MONITOR_PORT": 4005,
+        "CORE_API_HOST": "0.0.0.0",
+        "CORE_API_PORT": 4003
+    }
 }
 ```
 
-## Update core .env configuration
+## Set core .env configuration
 
 ### Method
 
 ```bash
-configuration.updateEnv
+configuration.setEnv
 ```
 
 ### Parameters
@@ -65,8 +78,7 @@ configuration.updateEnv
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
-| params | object | The parameters of the request. | Yes |
-| params.content | string | .env file configuration content. | Yes |
+| params | object | Object containing .env variables. | Yes |
 
 ### Result
 
@@ -83,7 +95,19 @@ configuration.updateEnv
     "id": "unique-request-id",
 	"jsonrpc": "2.0",
 	"method": "configuration.updateEnv",
-	"params": { "content": "CORE_LOG_LEVEL=info\nCORE_LOG_LEVEL_FILE=info\n\nCORE_DB_HOST=localhost\nCORE_DB_PORT=5432\n\nCORE_P2P_HOST=0.0.0.0\nCORE_P2P_PORT=4000\n\nCORE_WEBHOOKS_HOST=0.0.0.0\nCORE_WEBHOOKS_PORT=4004\n\nCORE_MONITOR_HOST=0.0.0.0\nCORE_MONITOR_PORT=4005\n\nCORE_API_HOST=0.0.0.0\nCORE_API_PORT=4003\n"
+	"params": {
+        "CORE_LOG_LEVEL": "info",
+        "CORE_LOG_LEVEL_FILE": "info",
+        "CORE_DB_HOST": "localhost",
+        "CORE_DB_PORT": 5432,
+        "CORE_P2P_HOST": "0.0.0.0",
+        "CORE_P2P_PORT": 4000,
+        "CORE_WEBHOOKS_HOST": "0.0.0.0",
+        "CORE_WEBHOOKS_PORT": 4004,
+        "CORE_MONITOR_HOST": "0.0.0.0",
+        "CORE_MONITOR_PORT": 4005,
+        "CORE_API_HOST": "0.0.0.0",
+        "CORE_API_PORT": 4003
     }
 }
 ```
@@ -121,7 +145,7 @@ configuration.getPlugins
 | :--- | :---: | :--- | :---: |
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
-| result | string | app.json file content. | Yes |
+| result | object | App.json object. | Yes |
 
 ### Request
 
@@ -140,16 +164,18 @@ configuration.getPlugins
 {
     "id": "unique-request-id",
     "jsonrpc": "2.0",
-    "result:" "{...}"
+    "result:" "{
+        app.json object
+    }"
 }
 ```
 
-## Update core plugins configuration
+## Set core plugins configuration
 
 ### Method
 
 ```bash
-configuration.updatePlugins
+configuration.setPlugins
 ```
 
 ### Parameters
@@ -159,8 +185,7 @@ configuration.updatePlugins
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
-| params | object | The parameters of the request. | Yes |
-| params.content | string | Stringified app.json file configuration. | Yes |
+| params | object | App.json object. | Yes |
 
 ### Result
 
@@ -178,7 +203,7 @@ configuration.updatePlugins
 	"jsonrpc": "2.0",
 	"method": "configuration.updatePlugins",
 	"params": {
-	    content: "{app.json file content}"
+        app.json object
 	}
 }
 ```

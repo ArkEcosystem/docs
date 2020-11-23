@@ -50,8 +50,54 @@ info.coreVersion
     "jsonrpc": "2.0",
     "result": {
         "currentVersion": "3.0.0-next.8",
-        "latestVersion": "2.7.7"
+        "latestVersion": "3.0.0-next.8"
     }
+}
+```
+
+## Update core
+
+### Method
+
+```bash
+info.coreUpdate
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "info.coreUpdate",
+	"params": {}
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {}
 }
 ```
 
