@@ -218,6 +218,85 @@ info.blockchainHeight
 }
 ```
 
+## Get system resources
+
+### Method
+
+```bash
+info.resources
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+| result.cpu | object | CPU information. | Yes |
+| result.cpu.total | number | Total CPU resources (%). | Yes |
+| result.cpu.used | number | Used CPU resources (%). | Yes |
+| result.cpu.available | number | Available CPU resources (%). | Yes |
+| result.ram | object | RAM information. | Yes |
+| result.ram.total | number | Total memory (KB). | Yes |
+| result.ram.used | number | Used memory (KB). | Yes |
+| result.ram.available | number | Available memory (KB). | Yes |
+| result.disk | object | Disk information. | Yes |
+| result.disk.filesystem | string | Filesystem identification. | Yes |
+| result.disk.total | number | Total disk space (KB). | Yes |
+| result.disk.used | number | Used disk space (KB). | Yes |
+| result.disk.available | number | Available disk space (KB). | Yes |
+| result.disk.mountpoint | string | Mounpoint. | Yes |
+
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "info.resources",
+	"params": {}
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {
+        "cpu": {
+            "total": 100,
+            "used": 12.37319548903266,
+            "available": 87.62680451096733
+        },
+        "ram": {
+            "total": 16777216,
+            "used": 16711196,
+            "available": 66020
+        },
+        "disk": {
+            "filesystem": "/dev/disk1s2",
+            "total": 488245288,
+            "used": 334654912,
+            "available": 153590376,
+            "mountpoint": "/System/Volumes/Data"
+        }
+    }
+}
+```
+
 ## Get database size
 
 ### Method
