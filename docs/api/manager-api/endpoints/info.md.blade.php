@@ -218,12 +218,12 @@ info.blockchainHeight
 }
 ```
 
-## Get disk space
+## Get database size
 
 ### Method
 
 ```bash
-info.diskSpace
+info.databaseSize
 ```
 
 ### Parameters
