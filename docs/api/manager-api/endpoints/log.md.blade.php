@@ -20,12 +20,13 @@ log.search
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
-| params.name | string | PM2 process name. (ark-core) | No |
-| params.useErrorLog | boolean | Use error log instead out log. (false) | No |
-| params.dateFrom | number | Date from as unix timestamp. | No |
-| params.dateTo | number | Date to as unix timestamp. | No |
-| params.logLevel | string | Log level. | No |
-| params.contains | string | Search term. | No |
+| params.dateFrom | number | Date from as unix timestamp (s). | No |
+| params.dateTo | number | Date to as unix timestamp (s). | No |
+| params.process | string | Process name. | No |
+| params.level | string | Log level. | No |
+| params.searchTerm | string | Search term. | No |
+| params.limit | string | Max number of results. | No |
+| params.offset | string | Offset results. | No |
 
 ### Result
 
@@ -34,8 +35,12 @@ log.search
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | result | array | Result. | Yes |
-| result.timestamp | number | Unix timestamp. | Yes |
+| result.id | string | Log id. | Yes |
+| result.process | string | Process name. | Yes |
+| result.level | string | Log level. | Yes |
 | result.content | string | Log content. | Yes |
+| result.timestamp | number | Unix timestamp (s). | Yes |
+
 
 ### Request
 
@@ -45,12 +50,13 @@ log.search
 	"jsonrpc": "2.0",
 	"method": "log.log",
 	"params": {
-	    "name": "ark-core",
-	    "useErrorLog": false,
 	    "dateFrom": 1605657600,
 	    "dateTo": 1705657600,
-	    "logLevel": "info",
-	    "contains": "search term"
+	    "level": "info",
+	    "process": "core",
+	    "searchTerm": "search term",
+	    "limit": 10,
+	    "offset": 0,
     }
 }
 ```
@@ -61,18 +67,26 @@ log.search
 {
     "id": "unique-request-id",
     "jsonrpc": "2.0",
-    "result": [
-        {
-            "timestamp": 1605705110,
-            "level": "INFO",
-            "content": "Connecting to database: ark_testnet"
-        },
-        {
-            "timestamp": 1605705110,
-            "level": "DEBUG",
-            "content": "Connection established."
-        }
-    ]
+    "result": {
+        total: 2000,
+        limit: 10,
+        offset: 0
+        data: [
+            {
+                "id": 1,
+                "process": "core",
+                "level": "info",
+                "content": "Connecting to database: ark_testnet",
+                "timestamp": 1605705110,
+            },
+            {
+                "id": 2,
+                "level": "debug",
+                "content": "Connection established.",
+                "timestamp": 1605705110,
+            }
+        ]
+    }
 }
 ```
 
