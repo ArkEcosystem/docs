@@ -20,8 +20,8 @@ log.search
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
-| params.dateFrom | number | Date from as unix timestamp. | No |
-| params.dateTo | number | Date to as unix timestamp. | No |
+| params.dateFrom | number | Date from as unix timestamp (s). | No |
+| params.dateTo | number | Date to as unix timestamp (s). | No |
 | params.process | string | Process name. | No |
 | params.level | string | Log level. | No |
 | params.searchTerm | string | Search term. | No |
@@ -39,7 +39,7 @@ log.search
 | result.process | string | Process name. | Yes |
 | result.level | string | Log level. | Yes |
 | result.content | string | Log content. | Yes |
-| result.timestamp | number | Unix timestamp. | Yes |
+| result.timestamp | number | Unix timestamp (s). | Yes |
 
 
 ### Request
