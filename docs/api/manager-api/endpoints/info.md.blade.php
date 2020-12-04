@@ -363,6 +363,8 @@ info.nextForgingSlot
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
+| params.token | string | Token name. | No |
+
 
 ### Result
 
@@ -413,6 +415,7 @@ info.lastForgedBlock
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
+| params.token | string | Token name. | No |
 
 ### Result
 
@@ -484,6 +487,7 @@ info.currentDelegate
 | jsonrpc | string | The protocol version. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
+| params.token | string | Token name. | No |
 
 ### Result
 
