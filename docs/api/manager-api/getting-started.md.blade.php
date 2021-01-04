@@ -77,7 +77,7 @@ Alternatively, instead of using basic authentication, token authentication can b
 
 Include Authorization header into request with content: Bearer <secret_token>.
 
-### Environment variables
+### Network related environment variables
 
 It is recommended to make configuration changes to these options by working with your `.env` file and the corresponding variables:
 
@@ -95,11 +95,67 @@ It is recommended to make configuration changes to these options by working with
 
 ## Requirements
 
-Manager API obtains some of the required data from running either a `core` **or** `relay` & `forger` process.  
+Manager API obtains some of the required data from running either a `core` **or** `relay` & `forger` process.
 <x-alert type="info">
 Be aware that the HTTP server is running on a node instance and that all processes are run with `ark [process_name]:start` option.
 Using this method, the process is run as a PM2 process, which is necessary because PM2 IPC is used for getting some data required by manager API. Read more about starting processes in our [Core CLI Documentation](/docs/core/command-line-interface-cli/getting-started).
 </x-alert>
+
+## Store events and logs
+
+When package is used on `core` **or** `relay` & `forger` processes it can provide additional functionality for storing logs and events in local sqlite database.
+Stored data can be queried from dedicated JsonRPC calls. Additionally logs can be achieved and downloaded using customized filtering.
+This functionality is enabled only when package is added into `app.json` settings file in desired process plugins.
+
+```
+"core": {
+    "plugins": [
+        {
+            "package": "@arkecosystem/core-logger-pino"
+        },
+        {
+            "package": "@arkecosystem/core-manager",
+        },
+        {
+            "package": "@arkecosystem/core-state"
+        },
+        ...
+    ]
+},
+```
+
+<x-alert type="warning">
+@arkecosystem/core-manager package should be included right after @arkecosystem/core-logger-pino package for optimal performance.
+</x-alert>
+
+### Options
+
+Core manager offers variety of options from filtering stored event types, enabling and disabling logs and event storing to defining length of logs history in days.
+Options can be set via ENV variables or under package options in `app.json` file.
+
+<x-alert type="warning">
+Don't use event watching (`CORE_WATCHER_ENABLED` flag) in production or mainnet network. This functionality is added only for debugging purposes.
+</x-alert>
+
+
+### Watcher related environment variables
+
+It is recommended to make configuration changes to these options by working with your `.env` file and the corresponding variables:
+
+| Variable | Description | Type | Default |
+| :--- | :--- | :---: | :---: |
+| CORE\_WATCH\_LOGS\_DISABLED | Disable storing logs. | boolean | `false` |
+| CORE\_WATCHER\_ENABLED | Enables or disables the event watcher | boolean | `false` |
+| CORE\_WATCH\_BLOCKS\_DISABLED | Disable storing block related events. | boolean | `false` |
+| CORE\_WATCH\_ERRORS\_DISABLED | Disable storing error related events. | boolean | `false` |
+| CORE\_WATCH\_QUERIES\_DISABLED | Disable storing query related events. | boolean | `false` |
+| CORE\_WATCH\_QUEUES\_DISABLED | Disable storing queue related events. | boolean | `false` |
+| CORE\_WATCH\_ROUNDS\_DISABLED | Disable storing rounds related events. | boolean | `false` |
+| CORE\_WATCH\_SCHEDULES\_DISABLED | Disable storing schedule related events. | boolean | `false` |
+| CORE\_WATCH\_TRANSACTIONS\_DISABLED | Disable storing transaction related events. | boolean | `false` |
+| CORE\_WATCH\_WALLETS\_DISABLED | Disable storing wallet related events. | boolean | `false` |
+| CORE\_WATCH\_WEBHOOKS\_DISABLED | Disable storing webhooks related events. | boolean | `false` |
+
 ## Final checks
 
 After making changes to the manager API configuration, you will need to restart your manager process for the changes to take effect.
