@@ -4,7 +4,7 @@ title: Log
 
 # Log
 
-## Search PM2 process log
+## Search process log
 
 ### Method
 
@@ -90,7 +90,63 @@ log.search
 }
 ```
 
-## Get PM2 archived logs
+## Generate log archive
+
+### Method
+
+```bash
+log.download
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+| params.dateFrom | number | Date from as unix timestamp (s). | Yes |
+| params.dateTo | number | Date to as unix timestamp (s). | Yes |
+| params.levels | string[] | Log levels. | Yes |
+| params.processes | string[] | Process names. | No |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | string | Generated file name. | Yes |
+
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+	"jsonrpc": "2.0",
+	"method": "log.log",
+	"params": {
+	    "dateFrom": 1605657600,
+	    "dateTo": 1705657600,
+	    "levels": ["info", "debug"],
+	    "processes": ["core"]
+    }
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": "2020-12-14_17-38-00.log.gz"
+}
+```
+
+## Get archived logs
 
 ### Method
 
@@ -137,24 +193,14 @@ log.archived
     "jsonrpc": "2.0",
     "result": [
         {
-            "name": "ark-core-error.log",
+            "name": "2020-12-14_17-38-00.log.gz",
             "size": 2,
-            "downloadLink": "/log/archived/ark-core-error.log"
+            "downloadLink": "/log/archived/2020-12-14_17-38-00.log.gz"
         },
         {
-            "name": "ark-core-out.log",
+            "name": "2020-12-15_12-38-12.log.gz",
             "size": 2766,
-            "downloadLink": "/log/archived/ark-core-out.log"
-        },
-        {
-            "name": "ark-forger-error.log",
-            "size": 2,
-            "downloadLink": "/log/archived/ark-forger-error.log"
-        },
-        {
-            "name": "ark-forger-out.log",
-            "size": 1124,
-            "downloadLink": "/log/archived/ark-forger-out.log"
+            "downloadLink": "/log/archived/2020-12-15_12-38-12.log.gz"
         }
     ]
 }
