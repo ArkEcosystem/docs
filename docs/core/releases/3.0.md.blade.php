@@ -57,6 +57,7 @@ After restarting, your node will first execute migrations to get the database re
 - `SocketCluster` has been replaced with `@hapi/nes`
 - `oclif` has been replaced with a custom CLI for greater control and extensibility of its behaviours
 - All `POST /search` endpoints exposed through the API have been deprecated in favour of dot-notation query parameters
+- Log file name convention is changed from <token>-<process>-current.log to <token>-<network>-current.log.
 
 ### Reporting Problems
 
