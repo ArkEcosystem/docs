@@ -27,6 +27,7 @@ log.search
 | params.searchTerm | string | Search term. | No |
 | params.limit | string | Max number of results. | No |
 | params.offset | string | Offset results. | No |
+| params.order | string | Order results (DESC). | No |
 
 ### Result
 
@@ -57,6 +58,7 @@ log.search
 	    "searchTerm": "search term",
 	    "limit": 10,
 	    "offset": 0,
+	    "order": "ASC",
     }
 }
 ```
