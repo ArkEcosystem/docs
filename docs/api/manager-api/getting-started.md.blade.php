@@ -83,6 +83,7 @@ It is recommended to make configuration changes to these options by working with
 
 | Variable | Description | Type | Default |
 | :--- | :--- | :---: | :---: |
+| CORE\_MONITOR\_PUBLIC\_IP | Determines core managers public IP. | string | `undefined` |
 | CORE\_MONITOR\_DISABLED | Enables or disables the manager API plugin | boolean | `false` |
 | CORE\_MONITOR\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
 | CORE\_MONITOR\_PORT | The API port on which the plugin will listen | integer | `4005` |
