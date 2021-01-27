@@ -38,6 +38,18 @@ await profile.wallets().importByMnemonic("this is a top secret passphrase", "ARK
 await profile.wallets().importByAddress("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "ARK", "devnet");
 ```
 
+### Create a new wallet from an address, coin implementation, network and ledger account index
+
+```typescript
+await profile.wallets().importByAddressWithLedgerIndex("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "ARK", "devnet", 0);
+```
+
+### Create a new wallet from an address, coin implementation, network and BIP38 password
+
+```typescript
+await profile.wallets().importByMnemonicWithEncryption("this is a top secret passphrase", "ARK", "devnet", "password");
+```
+
 ### Find the wallet by the given ID
 
 ```typescript
@@ -208,24 +220,6 @@ await wallet.transaction().signHtlcClaim(input, options);
 
 ```typescript
 await wallet.transaction().signHtlcRefund(input, options);
-```
-
-### Create a new entity registration transaction
-
-```typescript
-await wallet.transaction().signEntityRegistration(input, options);
-```
-
-### Create a new entity resignation transaction
-
-```typescript
-await wallet.transaction().signEntityResignation(input, options);
-```
-
-### Create a new entity update transaction
-
-```typescript
-await wallet.transaction().signEntityUpdate(input, options);
 ```
 
 ##  Messages
