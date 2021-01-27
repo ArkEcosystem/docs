@@ -17,19 +17,19 @@ profile.plugins().all();
 ### Register a new plugin for the given data
 
 ```typescript
-profile.plugins().push({ id: 123, name: "@hello/world" });
+profile.plugins().push({ id: "@hello/world", name: "@hello/world" });
 ```
 
 ### Find the plugin for the given ID
 
 ```typescript
-profile.plugins().findById(123);
+profile.plugins().findById("@hello/world");
 ```
 
 ### Forget the plugin for the given ID
 
 ```typescript
-profile.plugins().forget(123);
+profile.plugins().forget("@hello/world");
 ```
 
 ### Forget all plugins (Use with caution!)
@@ -53,7 +53,7 @@ profile.plugins().blacklist().add(123);
 ### Remove a plugin from the blacklist
 
 ```typescript
-profile.plugins().blacklist().delete(123);
+profile.plugins().blacklist().delete("@hello/world");
 ```
 
 ## Registry
@@ -71,5 +71,5 @@ profile.plugins().registry().all();
 ### Get aa specific plugin from the MarketSquare API
 
 ```typescript
-profile.plugins().registry().findById(123);
+profile.plugins().registry().findById("@hello/world");
 ```
