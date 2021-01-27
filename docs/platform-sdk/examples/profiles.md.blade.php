@@ -258,14 +258,8 @@ await wallet.ledger().getPublicKey(path);
 // Sign a transaction with ledger
 await wallet.ledger().signTransaction(path, payload);
 
-// Sign a transaction with ledger using schnorr
-await wallet.ledger().signTransactionWithSchnorr(path, payload);
-
 // Sign a message with ledger
 await wallet.ledger().signMessage(path, payload);
-
-// Sign a message with ledger using schnorr
-await wallet.ledger().signMessageWithSchnorr(path, payload);
 
 // Get an explorer link for a block
 await wallet.link().block(id);

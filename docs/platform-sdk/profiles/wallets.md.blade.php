@@ -256,22 +256,10 @@ await wallet.ledger().getPublicKey(path);
 await wallet.ledger().signTransaction(path, payload);
 ```
 
-### Sign a transaction with ledger using schnorr
-
-```typescript
-await wallet.ledger().signTransactionWithSchnorr(path, payload);
-```
-
 ### Sign a message with ledger
 
 ```typescript
 await wallet.ledger().signMessage(path, payload);
-```
-
-### Sign a message with ledger using schnorr
-
-```typescript
-await wallet.ledger().signMessageWithSchnorr(path, payload);
 ```
 
 ## Links
