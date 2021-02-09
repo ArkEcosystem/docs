@@ -96,35 +96,39 @@ This variable determines where the log files are stored.
 
 This variable determines how many transactions can be in the transaction pool at any given time.
 
-## CORE_MONITOR_DISABLED
+## CORE_MANAGER_ARCHIVE_FORMAT
+
+This variable determines which archive format is used for storing logs.
+
+## CORE_MANAGER_DISABLED
 
 This variable determines if the Manager API is disabled.
 
-## CORE_MONITOR_HOST
+## CORE_MANAGER_HOST
 
 This variable determines the host at which the Manager API will be listening for traffic.
 
-## CORE_MONITOR_PORT
+## CORE_MANAGER_PORT
 
 This variable determines the port at which the Manager API will be listening for traffic.
 
-## CORE_MONITOR_SSL
+## CORE_MANAGER_SSL
 
 This variable determines if SSL (HTTPS) is enabled for the Manager API.
 
-## CORE_MONITOR_SSL_CERT
+## CORE_MANAGER_SSL_CERT
 
 This variable determines where the SSL Certification is located.
 
-## CORE_MONITOR_SSL_HOST
+## CORE_MANAGER_SSL_HOST
 
 This variable determines the host at which the HTTPS Manager API will be listening for traffic.
 
-## CORE_MONITOR_SSL_KEY
+## CORE_MANAGER_SSL_KEY
 
 This variable determines where the SSL Key is located.
 
-## CORE_MONITOR_SSL_PORT
+## CORE_MANAGER_SSL_PORT
 
 This variable determines the port at which the HTTPS Manager API will be listening for traffic.
 
