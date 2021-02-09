@@ -92,6 +92,7 @@ It is recommended to make configuration changes to these options by working with
 | CORE\_MANAGER\_SSL\_PORT | The host to expose the HTTPS API on | port | `8445` |
 | CORE\_MANAGER\_SSL\_KEY | Determines where SSL key is located. | port | `8445` |
 | CORE\_MANAGER\_SSL\_CERT | Determines where SSL certificate is located. | port | `8445` |
+| CORE\_MANAGER\_ARCHIVE\_FORMAT | Determines which format is used for storing downloaded logs (`zip` or `gz`). | string | `zip` |
 
 
 ## Requirements
