@@ -83,15 +83,16 @@ It is recommended to make configuration changes to these options by working with
 
 | Variable | Description | Type | Default |
 | :--- | :--- | :---: | :---: |
-| CORE\_MONITOR\_PUBLIC\_IP | Determines core managers public IP. | string | `undefined` |
-| CORE\_MONITOR\_DISABLED | Enables or disables the manager API plugin | boolean | `false` |
-| CORE\_MONITOR\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
-| CORE\_MONITOR\_PORT | The API port on which the plugin will listen | integer | `4005` |
-| CORE\_MONITOR\_SSL | Enables or disables the manager API plugin using SSL. | boolean | `false` |
-| CORE\_MONITOR\_SSL\_HOST | The host to expose the HTTPS API on | string | `"0.0.0.0"` |
-| CORE\_MONITOR\_SSL\_PORT | The host to expose the HTTPS API on | port | `8445` |
-| CORE\_MONITOR\_SSL\_KEY | Determines where SSL key is located. | port | `8445` |
-| CORE\_MONITOR\_SSL\_CERT | Determines where SSL certificate is located. | port | `8445` |
+| CORE\_MANAGER\_PUBLIC\_IP | Determines core managers public IP. | string | `undefined` |
+| CORE\_MANAGER\_DISABLED | Enables or disables the manager API plugin | boolean | `false` |
+| CORE\_MANAGER\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
+| CORE\_MANAGER\_PORT | The API port on which the plugin will listen | integer | `4005` |
+| CORE\_MANAGER\_SSL | Enables or disables the manager API plugin using SSL. | boolean | `false` |
+| CORE\_MANAGER\_SSL\_HOST | The host to expose the HTTPS API on | string | `"0.0.0.0"` |
+| CORE\_MANAGER\_SSL\_PORT | The host to expose the HTTPS API on | port | `8445` |
+| CORE\_MANAGER\_SSL\_KEY | Determines where SSL key is located. | port | `8445` |
+| CORE\_MANAGER\_SSL\_CERT | Determines where SSL certificate is located. | port | `8445` |
+| CORE\_MANAGER\_ARCHIVE\_FORMAT | Determines which format is used for storing downloaded logs (`zip` or `gz`). | string | `zip` |
 
 
 ## Requirements
