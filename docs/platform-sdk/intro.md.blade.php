@@ -13,6 +13,7 @@ The **Coin** section will introduce you to Coins. Coin are the most important pa
         ['path' => '/docs/platform-sdk/coins/ada', 'name' => 'ADA'],
         ['path' => '/docs/platform-sdk/coins/ark', 'name' => 'ARK'],
         ['path' => '/docs/platform-sdk/coins/atom', 'name' => 'ATOM'],
+        ['path' => '/docs/platform-sdk/coins/avax', 'name' => 'AVAX'],
         ['path' => '/docs/platform-sdk/coins/btc', 'name' => 'BTC'],
         ['path' => '/docs/platform-sdk/coins/eos', 'name' => 'EOS'],
         ['path' => '/docs/platform-sdk/coins/eth', 'name' => 'ETH'],

@@ -21,6 +21,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk/coins/ada" name="ADA" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/ark" name="ARK" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/atom" name="ATOM" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/avax" name="AVAX" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/btc" name="BTC" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eos" name="EOS" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eth" name="ETH" />
