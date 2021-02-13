@@ -69,8 +69,8 @@
         "ipfs": true,
         "multiPayment": true,
         "delegateResignation": true,
-        "htlcLock": true,
-        "htlcClaim": true,
-        "htlcRefund": true
+        "htlcLock": false,
+        "htlcClaim": false,
+        "htlcRefund": false
     }
 }
