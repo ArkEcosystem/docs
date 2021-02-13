@@ -1,8 +1,8 @@
 {
     "Client": {
         "transaction": false,
-        "transactions": false,
-        "wallet": false,
+        "transactions": true,
+        "wallet": true,
         "wallets": false,
         "delegate": false,
         "delegates": false,
@@ -11,7 +11,7 @@
         "configuration": false,
         "fees": false,
         "syncing": false,
-        "broadcast": false
+        "broadcast": true
     },
     "Fee": {
         "all": false
@@ -20,7 +20,7 @@
         "address": {
             "mnemonic": true,
             "multiSignature": false,
-            "publicKey": true,
+            "publicKey": false,
             "privateKey": false,
             "wif": false
         },
@@ -54,8 +54,8 @@
         "wallet": false
     },
     "Message": {
-        "sign": false,
-        "verify": false
+        "sign": true,
+        "verify": true
     },
     "Peer": {
         "search": false

@@ -18,40 +18,40 @@
     },
     "Identity": {
         "address": {
-            "mnemonic": false,
-            "multiSignature": false,
+            "mnemonic": true,
+            "multiSignature": true,
             "publicKey": false,
             "privateKey": false,
             "wif": false
         },
         "publicKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "multiSignature": false,
             "wif": false
         },
         "privateKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "wif": false
         },
         "wif": {
             "mnemonic": false
         },
         "keyPair": {
-            "mnemonic": false,
+            "mnemonic": true,
             "privateKey": false,
             "wif": false
         }
     },
     "Ledger": {
-        "getVersion": false,
-        "getPublicKey": false,
-        "signTransaction": false,
+        "getVersion": true,
+        "getPublicKey": true,
+        "signTransaction": true,
         "signMessage": false
     },
     "Link": {
-        "block": true,
+        "block": false,
         "transaction": true,
-        "wallet": true
+        "wallet": false
     },
     "Message": {
         "sign": false,
