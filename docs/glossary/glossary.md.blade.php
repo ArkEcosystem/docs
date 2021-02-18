@@ -516,7 +516,7 @@ A service that crawls Blockchain data looking for tasks to perform. Component of
 **More:** [Blockchain](glossary#blockchain), [ACES](glossary#aces)
 
 ### Encryption Password
-Alphanumeric password set by the user to encrypt and secure a passphrase, mnemonic, seed, or other type of private key. Does not unlock Blockchain data directly, instead exposes the key.  
+Password set by the user to encrypt and secure a passphrase, mnemonic, seed, or other type of private key. Does not unlock Blockchain data directly, instead exposes the key.  
 **More:** [Private Key](glossary#private-key), [Blockchain](glossary#blockchain), [Passphrase](glossary#passphrase), [Mnemonic](glossary#mnemonic), [Key](glossary#key)
 
 ### Entity Declaration Transaction Type
@@ -609,7 +609,7 @@ Physical electronic device with the role of securing cryptocurrency offline in c
 **More:** [Cryptocurrency](glossary#cryptocurrency), [Attack Vector](glossary#attack-vector), [Cold Storage](glossary#cold-storage)
 
 ### Hash
-As a verb, refers to performing a function on input data of any length to produce an output of equal length. As a noun, refers to the resulting data output of the function.  
+As a verb, refers to performing a function on input data of any length to produce an output of fixed length. As a noun, refers to the resulting data output of the function.  
 
 ### Hash Collision
 Situation that occurs when two pieces of unique input data result in the same hashed output value.  
@@ -905,7 +905,7 @@ Describes either a network that requires access to view its data, or a permissio
 **More:** [Permissioned Blockchain](glossary#permissioned-blockchain), [Network](glossary#network)
 
 ### Private Key
-Sensitive half of a key pair used to descrypt data encrypted by the public key. Usually hashed to derive a mnemonic, as is the case in networks using BIP-39.   
+Sensitive half of a key pair used to decrypt data encrypted by the public key and sign messages. Usually hashed to derive a mnemonic, as is the case in networks using BIP-39.   
 **More:** [Public Key](glossary#public-key), [Key Pair](glossary#key-pair), [Mnemonic](glossary#mnemonic), [Network](glossary#network), [Hash](glossary#hash)
 
 ### Proof-of-Concept
@@ -948,7 +948,7 @@ A Blockchain where anyone can participate in consensus or execute transactions w
 
 ### Public Key
 Public half of a key pair, an alphanumeric string used to encrypt data in public key cryptography.   
-**More:** [Cryptography](glossary#cryptography), [Public Key](glossary#public-key), [Key Pair](glossary#key-pair)
+**More:** [Cryptography](glossary#cryptography), [Private Key](glossary#private-key), [Key Pair](glossary#key-pair)
 
 ### Public Network
 Live implementation of a Blockchain network, featuring real transactions that carry real-world value.   
@@ -1231,7 +1231,7 @@ Sequence of alphanumeric characters associated with a location on a Blockchain t
 **More:** [Blockchain](glossary#blockchain), [Token](glossary#token), [Coin](glossary#coin)
 
 ### Wallet Import Format
-Schema used to standardize wallet address data for importing into a wallet application.   
+Standardized schema for wallet data used for imports into a wallet application.   
 **More:** [Wallet Address](glossary#wallet-address), [Wallet](glossary#wallet)
 
 ### Watch-Only Address
