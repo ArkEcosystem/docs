@@ -4,7 +4,7 @@ title: Wallets
 
 # Wallets
 
-Wallets containing, or previously having contained ARK, are identified by wallet addresses strings. Such an funded addresses's public key, if one exists, may not be public and thus be unknown to the network. In that case, it is referred to as a `cold wallet`.
+Digital wallets containing, or previously having contained ARK, are identified by wallet addresses strings. A funded addresses public key, if one exists, may not be public and thus be unknown to the network. In that case, it is referred to as a `cold wallet`.
 
 ## Endpoints
 
