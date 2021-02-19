@@ -4,7 +4,9 @@ title: Wallets
 
 # Wallets
 
-Wallets are addresses containing, or previously having contained ARK. A wallet's public key may be unknown to the network, in that case, it is referred to as a `cold wallet`.
+A Wallet resource is reachable using an associated Address or PublicKey.
+
+> Note that a PublicKey might not yet be associated with a Wallet if a particular Address has never sent funds.
 
 ## Endpoints
 
