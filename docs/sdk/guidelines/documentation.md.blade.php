@@ -28,11 +28,11 @@ Note that this document should also include a section on how to start further de
 
 #### API Documentation
 
-The API documentation should only document the available functions in the SDK, the parameters they take and their return type. It should be accopmanied by a guiding text on what the function does, but should not become a code example; save those for the actual example document.
+The API documentation should only document the available functions in the SDK, the parameters they take and their return type. It should be accompanied by a guiding text on what the function does, but should not become a code example; save those for the actual example document.
 
 #### Examples
 
-This file is meant to show code examples on how to use the SDK. These examples should contain often-used usecases depending on the SDK type. For the Client SDK, this would for example show:
+This file is meant to show code examples on how to use the SDK. These examples should contain often-used use cases depending on the SDK type. For the Client SDK, this would for example show:
 
 - How to fetch a list of blocks
 - How to fetch all active delegates

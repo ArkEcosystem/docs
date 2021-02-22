@@ -75,7 +75,7 @@ All of the settings that your plugin provides should come with a default value s
 In the above example you've probably noticed the `alias: "logger"` line. This serves as an alias to allow us quick access to the plugin via `container.resolvePlugin("logger")` instead of having to type the exact name of the logger we are using, e.g. `container.resolvePlugin("@arkecosystem/core-logger-pino")`.
 
 <x-alert type="danger">
-Aliases should be used with caution if you are using a lot of plugins as you might overwrite something that you did not intend to overwrite which can cause unwanted behaviours.
+Aliases should be used with caution if you are using a lot of plugins as you might overwrite something that you did not intend to overwrite which can cause unwanted behaviors.
 </x-alert>
 
 #### extends:

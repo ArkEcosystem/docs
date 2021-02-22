@@ -514,7 +514,7 @@ Get all transactions for the given wallet.
 
 `*Transactions, *http.Response, error`
 
-### `Receivedtransactions()`
+### `ReceivedTransactions()`
 
 ```go
 func (s *WalletsService) ReceivedTransactions(ctx context.Context, id string, query *Pagination) (*Transactions, *http.Response, error)
@@ -580,7 +580,7 @@ Get all votes by the given wallet.
 func (s *WalletsService) Top(ctx context.Context, query *Pagination) (*Wallets, *http.Response, error)
 ```
 
-Get all wallego sorted by balance in descending order.
+Get all wallets sorted by balance in descending order.
 
 #### Parameters
 
@@ -599,7 +599,7 @@ Get all wallego sorted by balance in descending order.
 func (s *WalletsService) Search(ctx context.Context, query *Pagination, body *WalletsSearchRequest) (*Wallets, *http.Response, error)
 ```
 
-Filter all wallego by the given parameters.
+Filter all wallets by the given parameters.
 
 #### Parameters
 

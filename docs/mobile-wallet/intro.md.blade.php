@@ -5,7 +5,7 @@ title: Introduction
 # Introduction
 
 ## What is it?
-The ARK Mobile Wallet is an application which allows you to manage ARK transactions at your fingertips. Create or Import your wallet, send ARK tokens and vote for your favourite delegate in a user-friendly interface.
+The ARK Mobile Wallet is an application which allows you to manage ARK transactions at your fingertips. Create or Import your wallet, send ARK tokens and vote for your favorite delegate in a user-friendly interface.
 
 ## Getting Started
 To get started with the ARK Mobile Wallet, read the selection of guides presented below:

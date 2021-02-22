@@ -462,7 +462,7 @@ ark env:set --key=KEY --value=VALUE
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 | --key | the key of the value that should be updated | :white_checkmark: |
-| --value | the new value of the key that shuld be updated | :white_checkmark: |
+| --value | the new value of the key that should be updated | :white_checkmark: |
 
 #### Examples
 

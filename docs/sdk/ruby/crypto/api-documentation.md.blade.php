@@ -204,7 +204,7 @@ Derive the public from the given passphrase.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | passphrase | Yes | Psassphrase |
+| string | passphrase | Yes | Passphrase |
 
 #### Return Value
 

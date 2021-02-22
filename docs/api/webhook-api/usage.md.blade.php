@@ -49,7 +49,7 @@ server.post("/blocks", jsonParser, (req, res) => {
   // the datetime of when the webhook was sent
   console.log(req.body.created);
 
-  // the data the webhook transfered, e.g. a block struct
+  // the data the webhook transferred, e.g. a block struct
   console.log(req.body.data);
 
   // the type of event that was sent, e.g. block.forged

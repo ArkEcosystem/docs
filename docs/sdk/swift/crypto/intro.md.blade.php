@@ -35,7 +35,7 @@ Afterward, install it by running `pod install`.
    pod install
    ```
 
-   Installing the dependency \(BitcointKit\) of this SDK will require a good bit of time. So after running `pod install` it might take up to 10 minutes to install the BitcoinKit dependency. This is due to the crypto dependencies it relies on, like secp256k, that are compiled from scratch during the install. Don't be alarmed when it looks like the installation got stuck. It's just the underlying dependencies taking their time.
+   Installing the dependency \(BitcoinKit\) of this SDK will require a good bit of time. So after running `pod install` it might take up to 10 minutes to install the BitcoinKit dependency. This is due to the crypto dependencies it relies on, like secp256k, that are compiled from scratch during the install. Don't be alarmed when it looks like the installation got stuck. It's just the underlying dependencies taking their time.
 
    You will also need to install [Swiftlint](https://github.com/realm/SwiftLint) as an additional step, as that is used to lint our code. The easiest way to install this is by using Homebrew: `brew install swiftlint`.
 

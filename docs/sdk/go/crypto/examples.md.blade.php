@@ -56,7 +56,7 @@ transaction := crypto.DeserializeTransaction(serialized)
 
 ## Message
 
-The crypto SDK not only supporgo transactions but can also work with other arbitrary data \(expressed as strings\).
+The crypto SDK not only supports transactions but can also work with other arbitrary data \(expressed as strings\).
 
 ### Sign
 
@@ -81,7 +81,7 @@ ok, err := message.Verify()
 
 ## Identities
 
-> The identities class allows for the creation and inspection of keypairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
+> The identities class allows for the creation and inspection of keyPairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
 ### Derive the Address from a Passphrase
 
@@ -120,7 +120,7 @@ fmt.Println(crypto.ValidateAddress("validAddress"))
 
 ## Private Key
 
-> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimize access to these secrego
+> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimize access to these secrets
 
 ### Derive the Private Key from a Passphrase
 
@@ -146,7 +146,7 @@ This function has not been implemented in this library.
 
 ## Public Key
 
-> Public Keys may be freely shared, and are included in transaction objecgo to validate the authenticity.
+> Public Keys may be freely shared, and are included in transaction objects to validate the authenticity.
 
 ### Derive the Public Key from a Passphrase
 

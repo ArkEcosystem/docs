@@ -5,7 +5,7 @@ title: Laravel & PHP
 # Laravel & PHP
 
 <x-alert type="info">
-**These guidelines are based on the [Laravel & PHP](https://spatie.be/guidelines/laravel-php) Guidelines by [Spatie](https://spatie.be/) as they provide a solid foundation for modern development.** Our guidelines contain slight modifications that are applicable to how we organise and develop projects in our day-to-day business operations.
+**These guidelines are based on the [Laravel & PHP](https://spatie.be/guidelines/laravel-php) Guidelines by [Spatie](https://spatie.be/) as they provide a solid foundation for modern development.** Our guidelines contain slight modifications that are applicable to how we organize and develop projects in our day-to-day business operations.
 </x-alert>
 
 ## Formatting
@@ -18,7 +18,7 @@ Use the `final` keyword for all classes. This ensures that new developers know w
 
 Name classes in a way that makes it easy to figure out what they are doing before opening them in an editor, avoid highly technical naming. This ensures that searching for something is easier by using familiar terminology that can be guessed instead of having to know it beforehand. An example would be a controller that is named `ListPostsByUserController` instead of `UserPostsController`.
 
-Both generally imply the same behaviours but the first is more clear by stating that it will list the posts of a given user and makes it possible to filter by `Lists` in your editor to find all controllers that list something instead of having to dig through folders that are full of controllers with generic names that are highly technical.
+Both generally imply the same behaviors but the first is more clear by stating that it will list the posts of a given user and makes it possible to filter by `Lists` in your editor to find all controllers that list something instead of having to dig through folders that are full of controllers with generic names that are highly technical.
 
 ## Comments
 
@@ -48,7 +48,7 @@ You can listen to https://www.laravelpodcast.com/episodes/5fc5650b for some more
 
 Always use [Pest](https://pestphp.com/) for testing of PHP projects. It offers an an expressive API, comparable to [Jest](https://jestjs.io/), and massively reduces the amount of boilerplate that is needed to maintain our test suites. Pest is a relatively new tool that is gaining traction fast, which means you might encounter bugs, so submit a pull request with a fix if you do.
 
-Following the spirit of Pest by keeping things as simple and as minimal as possible you should aim for the same with your tests. Keep them simple and to the point. Break larger tests down into smaller tests that each test specific behaviours instead of writing monolithic 100 line tests that are difficult to bisect and alter.
+Following the spirit of Pest by keeping things as simple and as minimal as possible you should aim for the same with your tests. Keep them simple and to the point. Break larger tests down into smaller tests that each test specific behaviors instead of writing monolithic 100 line tests that are difficult to bisect and alter.
 
 ## Static Analysis
 

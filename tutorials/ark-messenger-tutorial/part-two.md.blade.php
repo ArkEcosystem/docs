@@ -94,7 +94,7 @@ if (!message) {
 await super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
 ```
 
-At _**applyToSender**_ and _**revertForSender**_ we perform the default apply and revert actions. The methods _**applyToRecipien**t_ and _**revertForRecipient**_ are not utilized because none of the recipient’s attributes are mutated by processing the _**Message Transaction**_.
+At _**applyToSender**_ and _**revertForSender**_ we perform the default apply and revert actions. The methods _**applyToRecipient**_ and _**revertForRecipient**_ are not utilized because none of the recipient’s attributes are mutated by processing the _**Message Transaction**_.
 
 Apart from that, we let the base _**TransactionHandler**…_ “handle” the rest
 

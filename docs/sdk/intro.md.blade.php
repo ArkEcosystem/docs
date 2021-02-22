@@ -21,7 +21,7 @@ If your application doesn't involve sending transactions, you can most likely bu
 Usage guides are included for each supported language, and examples of how to use these libraries can be found in the **Examples** section of each specific library.
 
 ## Supported Languages & Frameworks
-Below you can find the Installtion, Crypto and Client documentation for the language of your choice.
+Below you can find the Installation, Crypto and Client documentation for the language of your choice.
 <!-- The styling of the below links are a WIP. Not happy with it, might turn it into a table.  -->
 ### Typescript
 <x-link-collection

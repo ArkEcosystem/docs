@@ -26,7 +26,7 @@ To learn more about how nonces work go to the following link: [Understanding Tra
 ```java
 Transaction actual = new TransferBuilder()
                 .recipient("validAddress")
-                .amount(10^8) // amount of arktoshis we want to send
+                .amount(10^8) // amount of arktoshi we want to send
                 .nonce("1")
                 .vendorField("This is a transaction from Java")
                 .sign("this is a top secret passphrase")
@@ -104,7 +104,7 @@ System.out.println(message.verify());
 
 ## Identities
 
-> The identities class allows for the creation and inspection of keypairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
+> The identities class allows for the creation and inspection of keyPairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
 ### Derive the Address from a Passphrase
 

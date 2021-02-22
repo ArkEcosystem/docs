@@ -4,7 +4,7 @@ title: How to Navigate the Mobile Wallet Interface?
 
 # How to Navigate the Mobile Wallet Interface?
 
-The Mobile wallet was built from the groundup to provide a simple but efficient user-inteface for anyone to use regardless of technical background. 
+The Mobile wallet was built from the ground up to provide a simple but efficient user-interface for anyone to use regardless of technical background. 
 
 You can hit the triple bar in the top left corner, doing so will give you numerous options for you to select.
 

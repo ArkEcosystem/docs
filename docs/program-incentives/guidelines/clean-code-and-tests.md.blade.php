@@ -24,7 +24,7 @@ To achieve intelligible, flexible, maintainable and testable applications, you s
 
 The [SOLID](https://en.wikipedia.org/wiki/SOLID) pattern comes from the realm of object-oriented programming but applies the same to [functional programming](https://softwareengineering.stackexchange.com/a/171534) as it is just a concept of how to design & build applications.
 
-Here is a quick TLDR to sum SOLID application design up:
+Here is a quick TL;DR to sum SOLID application design up:
 
 1. Each Entity should have a single responsibility.
 2. Each Entity should be able to be extended, not modified.

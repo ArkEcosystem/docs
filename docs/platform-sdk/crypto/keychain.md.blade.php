@@ -4,7 +4,7 @@ title: Keychain
 
 # Keychain
 
-The `Keychain` class provides methods to extract the numerical value out of any currency representation by normalising the input and removing any locale specific rules like symbols and use of commas.
+The `Keychain` class provides methods to extract the numerical value out of any currency representation by normalizing the input and removing any locale specific rules like symbols and use of commas.
 
 ### Importing the Keychain class
 

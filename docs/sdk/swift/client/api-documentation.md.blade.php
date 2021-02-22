@@ -248,7 +248,7 @@ List All Peers
 public func status(ip: String, completionHandler: @escaping ([String: Any]?)
 ```
 
-Retrive a Peer
+Retrieve a Peer
 
 #### Parameters
 

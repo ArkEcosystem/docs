@@ -48,7 +48,7 @@ Set a fee
 ### `set()`
 
 ```php
-public static function set(AbstractNetwork $netswork)
+public static function set(AbstractNetwork $network)
 ```
 
 Set what network you want to use in the crypto library

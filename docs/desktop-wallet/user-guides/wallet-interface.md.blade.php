@@ -64,7 +64,7 @@ The Desktop Wallet has a dedicated section, showing news and other relevant upda
 
 ## Changing the Application's Settings
 
-There's a bunch of options for how you may customize the look, behaviour, and feel of the application.
+There's a bunch of options for how you may customize the look, behavior, and feel of the application.
 
 ### Network Options
 

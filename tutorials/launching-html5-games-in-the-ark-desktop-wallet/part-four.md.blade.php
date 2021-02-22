@@ -1,6 +1,6 @@
 ---
 title: Implementing Game Logic into your Plugin
-excerpt: The most important part of a successful game is solid game logic. Read on as we describe the fundemental rules of Connect 4 and how we integrate them into the logic of our game.
+excerpt: The most important part of a successful game is solid game logic. Read on as we describe the fundamental rules of Connect 4 and how we integrate them into the logic of our game.
 number: 4
 ---
 

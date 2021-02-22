@@ -7,7 +7,7 @@ title: Explaining How To Set Up Docker Development Environment On Unix Based Ope
 
 ## Introduction
 
-Docker is the de facto industry standard for packaging applications into a container. By doing so, all dependencies, such as the language runtimes, operating system, and libraries are combined with the product.
+Docker is the de facto industry standard for packaging applications into a container. By doing so, all dependencies, such as the language run-times, operating system, and libraries are combined with the product.
 
 <x-alert type="info">
 This guide is for setting up the development environment with Docker. If you are looking for ARK Core Production ready Docker images, they are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core), but are not meant to be used for development purposes.

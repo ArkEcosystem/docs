@@ -49,7 +49,7 @@ Core now uses three different ports for p2p: for **devnet** they are **4002**, *
 
 <x-alert type="danger">
 **WARNING:** The commands below will remove and reset your configuration files in `~/.config/ark-core/devnet`. 
-**Please backup any configuation files that you may need later such as your `delegate.json`, `plugin.js` & `.env` files.**
+**Please backup any configuration files that you may need later such as your `delegate.json`, `plugin.js` & `.env` files.**
 </x-alert>
 First, make sure that in your current directory you have the **database migration script** (where you created the `v3-migrations.sql` file). 
 

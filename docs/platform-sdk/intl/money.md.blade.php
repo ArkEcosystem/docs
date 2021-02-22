@@ -111,7 +111,7 @@ Money.make(5000, "EUR").getCurrency();
 Money.make(5000, "EUR").format();
 ```
 
-### Return the amount in its human represenation
+### Return the amount in its human-readable representation
 
 ```typescript
 Money.make(5000, "EUR").toUnit();

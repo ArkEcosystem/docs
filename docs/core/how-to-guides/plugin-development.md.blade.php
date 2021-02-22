@@ -8,13 +8,13 @@ simple overview of proper structure; e.g. have a plugin.ts file that only regist
 
 ## Introduction
 
-Plugins are a way off adding functionality to Core or altering existing behaviours. They can be anything from adding a new API endpoint, error trackers to new transaction types to expand on the capabilities of your blockchain.
+Plugins are a way off adding functionality to Core or altering existing behaviors. They can be anything from adding a new API endpoint, error trackers to new transaction types to expand on the capabilities of your blockchain.
 
 This guide will walk you through the process of understanding how plugins are build, discovered and distributed for use by end-users and developers.
 
 ## Discovery
 
-When Core starts it will look into youe `app.js` configuration for a key called `plugins`. This key contains a list of plugins with their package name and options that should be used to configure and run it. Let's have a look at the default `app.js` that ships with Core to understand what is happening.
+When Core starts it will look at the `app.js` configuration for a key called `plugins`. This key contains a list of plugins with their package name and options that should be used to configure and run it. Let's have a look at the default `app.js` that ships with Core to understand what is happening.
 
 ```typescript
 module.exports = {
@@ -101,7 +101,7 @@ A service provider always contains 3 methods: `register`, `boot` and `dispose`. 
 
 If you've ever gone through the source code of Core you will notice a recurring pattern of the same method names and naming conventions. If you work with classes that can `get` and `set` values you will generally find methods named like `get`, `set`, `has`, `forget` and `flush`. Those method names are tried to be kept more closely to human language and use less technical terms; for example you would ask someone to forget about an appointment, not delete an appointment.
 
-When naming classes and methods you should always encapsulate the provided functionality in a short and easy to remember name and be consistent with it across your project. Having methods named `has`, `exists` or `contains` across a project results in degraded developer experience as the cognitive load is increased by having to remember those different method names even though they all perform the same tasks. **JavaScript standard libraries already have incosistent naming so we shouldn't add to that by using different or complex names across our project.**
+When naming classes and methods you should always encapsulate the provided functionality in a short and easy to remember name and be consistent with it across your project. Having methods named `has`, `exists` or `contains` across a project results in degraded developer experience as the cognitive load is increased by having to remember those different method names even though they all perform the same tasks. **JavaScript standard libraries already have inconsistent naming so we shouldn't add to that by using different or complex names across our project.**
 
 ## Structure
 
@@ -125,7 +125,7 @@ service-provider.ts
 
 1. The `index.ts` file is responsible for exporting the `ServiceProvider` and whatever else things need to be exported like interfaces.
 2. The `service-provider.ts` file exports the `ServiceProvider` that is used by Core to register and expose the plugin.
-3. The `server/index.js` file exports a function that will start a server. It will be imported by the `sevice-provider.ts` file and create some container bindings in preparation of starting the server.
+3. The `server/index.js` file exports a function that will start a server. It will be imported by the `service-provider.ts` file and create some container bindings in preparation of starting the server.
 4. The `server/blocks/index.ts` file is responsible for registering the module, in this case `block` with the hapi.js server.
 5. The `server/blocks/controller.ts` file exports a class that contains methods that will be used as request handlers by hapi.js. **We use a controller to make use of dependency injection which will grant us easy access to all container bindings.**
 6. The `server/blocks/methods.ts` file exports [server methods](https://hapi.dev/api/?v=18.4.0#server.methods) which can be used by handlers exposed through the controller. Those methods come with built-in caching provided by hapi.js.
@@ -135,7 +135,7 @@ service-provider.ts
 
 // TBD: add links to plugin development series on medium once ready
 
-> If you are working on a monolithic plugin which behaviour can't be broken down into smaller entities that compose the full functionality than something like [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design) might be the better choice for an easier to maintain codebase.
+> If you are working on a monolithic plugin which behavior can't be broken down into smaller entities that compose the full functionality than something like [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design) might be the better choice for an easier to maintain codebase.
 
 ## Generators
 

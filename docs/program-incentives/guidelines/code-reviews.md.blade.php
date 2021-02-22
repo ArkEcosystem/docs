@@ -72,6 +72,6 @@ Documentation is what makes or breaks the developer experience. You should reque
 
 ## Request regression tests if the issue has been previously resolved
 
-[Regression testing](https://en.wikipedia.org/wiki/Regression_testing) is one of the most powerful tools a developer has at hand to ensure bugs don't return after they have been fixed. If you patch a security vulnerability or a bug that affects critical functionality of the system you are working you need to provide a test for the new behaviour and a regression test for the previous behaviour to ensure it can't happen anymore.
+[Regression testing](https://en.wikipedia.org/wiki/Regression_testing) is one of the most powerful tools a developer has at hand to ensure bugs don't return after they have been fixed. If you patch a security vulnerability or a bug that affects critical functionality of the system you are working you need to provide a test for the new behavior and a regression test for the previous behavior to ensure it can't happen anymore.
 
 **This is essential to avoid patching the same issues over and over again. A good regression test will start failing as soon as you are reintroducing the previous issue.**

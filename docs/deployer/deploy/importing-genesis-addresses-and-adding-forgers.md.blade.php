@@ -65,7 +65,7 @@ bridgechain config:forger
 bridgechain forger:log
 ```
 
-Thisshould produce a result similar to `[DATE TIME] DEBUG: Loaded 1 active delegate: DELEGATE_NAME (PUBLIC_KEY)`. In some rare cases it may load a delegate with name `undefined` with a public key that matches your actual delegate address public key. This is OK. 18. Now that the forging delegate node is operational, you need to assign vote weight to it in order to insert this delegate node into the forging delegates list. Simply put, other standard addresses with tokens inside them must execute a `vote transaction` and choose your delegate.
+This should produce a result similar to `[DATE TIME] DEBUG: Loaded 1 active delegate: DELEGATE_NAME (PUBLIC_KEY)`. In some rare cases it may load a delegate with name `undefined` with a public key that matches your actual delegate address public key. This is OK. 18. Now that the forging delegate node is operational, you need to assign vote weight to it in order to insert this delegate node into the forging delegates list. Simply put, other standard addresses with tokens inside them must execute a `vote transaction` and choose your delegate.
 
 ### How to vote with the ARK Desktop Wallet
 

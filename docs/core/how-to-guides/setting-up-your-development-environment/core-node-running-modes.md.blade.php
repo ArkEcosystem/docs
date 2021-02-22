@@ -45,7 +45,7 @@ Command, `yarn full:testnet`, is where the magic happens. Let us do a quick walk
 2. As seen in the previous step, the `./bin/run` file is called with the `core:run` command. That command looks like this:
 
 <x-alert type="success">
-Take a look at the following pieces of code to get a better understand of what commands are executed under the hood and what flags can be used to manipulate behaviour and pass in data.
+Take a look at the following pieces of code to get a better understand of what commands are executed under the hood and what flags can be used to manipulate behavior and pass in data.
 
 1. [core:run](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/core/run.ts)
 2. [BaseCommand](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/command.ts#L20-L61)
@@ -139,7 +139,7 @@ A good introduction about how to use the debugger is the [guide to debugging of 
 
 ## Testing
 
-Every package that is developed should provide tests to guarantee it gives the expected behaviour.
+Every package that is developed should provide tests to guarantee it gives the expected behavior.
 
 Our tool of choice for tests is [Jest](https://facebook.github.io/jest/) by Facebook which provides us with the ability to add custom matchers, snapshot testing and parallelizes our test runs.
 

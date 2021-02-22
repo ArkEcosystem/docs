@@ -28,7 +28,7 @@ The transfer transaction enables a user to broadcast a transaction to the networ
 - Once forged, check the balances of the sender and recipient and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly. 
 - Search for the Block ID and ensure all details are correct
-- Repeat this process several times with and without utlizing the vendorField.    
+- Repeat this process several times with and without utilizing the vendorField.    
 
 ## Multipayment Transaction
 This type is designed to reduce the payload on the blockchain by enabling multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. ARK Core (devnet) will allow allow up to 128 payments to be combined within a single transaction. 
@@ -38,7 +38,7 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 - Once forged, check the balances of the sender and recipients and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly. 
 - Search for the Block ID and ensure all details are correct.
-- Repeat this process several times with and without utlizing the vendorField.  
+- Repeat this process several times with and without utilizing the vendorField.  
 - Devnet has a limit of 128 recipients for a multipayment. Advanced users can attempt to exceed this amount in a multipayment transaction using tools outside of the Desktop Wallet. 
  
 ## Delegate Registration 
@@ -96,8 +96,8 @@ This transaction type utilizes a special data field similar to the vendor field 
 
 This transaction type enables delegates to block potential voters from voting for them if they choose to withdraw their status as delegates. A non-reversible transaction can be sent to the network to indicate that the delegate should no longer be included in any future forging rounds.
 
-- Before sending a Delegate Resistration transaction, check the balances of the sender via the explorer or API
-- Using the desktop wallet, send a Delegate Resistration transaction.
+- Before sending a Delegate Registration transaction, check the balances of the sender via the explorer or API
+- Using the desktop wallet, send a Delegate Registration transaction.
 - Once forged, check the balances of the sender and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly. 
 - Search for the Block ID and ensure all details are correct.
@@ -163,11 +163,11 @@ We then need to provide an action, and we will `register` this entity:
 
 We then need to provide a name to this registration which we'll call `businessname`
 
-`11 1 0 1 register businiessname`
+`11 1 0 1 register businessname`
 
 Lastly, we can add an IPFS hash to our registration:
 
-`11 1 0 1 register businiessname QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`
+`11 1 0 1 register businessname QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`
 
 Using the above command in `core-tx-tester`, we have registered a `business` called `businessname` with a subtype of `0`. 
 

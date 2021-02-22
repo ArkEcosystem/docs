@@ -8,7 +8,7 @@ Core itself is composed of multiple plugins that once stitched together provide 
 
 ## Publishment
 
-The first step to make your plugin available to the world after completing development is to publish it to the npm regsitry. We recommend to use `yarn` for this, check the [official step-by-step guide](https://yarnpkg.com/lang/en/docs/publishing-a-package/) by the yarn team.
+The first step to make your plugin available to the world after completing development is to publish it to the npm registry. We recommend to use `yarn` for this, check the [official step-by-step guide](https://yarnpkg.com/lang/en/docs/publishing-a-package/) by the yarn team.
 
 ## Integration
 

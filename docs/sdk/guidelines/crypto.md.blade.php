@@ -24,8 +24,8 @@ Following these guidelines is required to provide a streamlined experience acros
 * **verify** Verify the transaction.
 * **secondVerify** Verify the transaction using a second public key.
 * **parseSignatures** Parse the signature, second signature, and multi signatures.
-* **serialize** Serialise the object via AIP11.
-* **deserialize** Deserialise the given hex string via AIP11.
+* **serialize** Serialize the object via AIP11.
+* **deserialize** Deserialize the given hex string via AIP11.
 * **fromJson** Map the JSON to a new transaction object.
 * **toBytes** Turn the transaction into its v1 byte representation.
 * **toArray** Turn the transaction into a standardized array.
@@ -89,8 +89,8 @@ Following these guidelines is required to provide a streamlined experience acros
 
 * If you need to use the `ARK` name, keep these 2 use-cases in mind. The first one is `ARK` which is used in financial contexts like `10 ARK`. The second is `ARK` which used for everything else that is not talking about `ARK`, the financial unit.
 * If you work with functions that require a `secret` or `passphrase` name the variables `passphrase` and `secondPassphrase`.
-* If you work with `serialisation` use the American English `serialization` variant with `z` to name methods and variables.
-* If you work with `deserialisation` use the American English `deserialization` variant with `z` to name methods and variables.
+* If you work with `serialization` use the American English `serialization` variant with `z` to name methods and variables.
+* If you work with `deserialization` use the American English `deserialization` variant with `z` to name methods and variables.
 
 ## File & Directory Structure
 
