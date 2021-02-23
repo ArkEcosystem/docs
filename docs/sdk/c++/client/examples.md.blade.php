@@ -173,7 +173,7 @@ std::string transactions = connection.api.transactions.search(body);
 ### List Transaction Types
 
 ```cpp
-std::stringtransactionTypes = connection.api.transactions.types();
+std::string transactionTypes = connection.api.transactions.types();
 ```
 
 ## Votes

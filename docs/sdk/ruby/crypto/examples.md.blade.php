@@ -26,7 +26,7 @@ The crypto SDK can sign a transaction using your private key or passphrase \(fro
 
 ```ruby
 transaction = ARKEcosystem::Crypto::Transactions::Builder::Transfer.new()
-  .set_recipient_id('validAddres')
+  .set_recipient_id('validAddress')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')
   .sign('This is a top secret passphrase')
@@ -94,7 +94,7 @@ print message.class
 
 ## Identities
 
-> The identities class allows for the creation and inspection of keypairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
+> The identities class allows for the creation and inspection of keyPairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
 ### Derive the Address from a Passphrase
 

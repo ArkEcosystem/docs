@@ -1,6 +1,6 @@
 ---
 title: How to Import an ARK Wallet Address into your Application
-excerpt: This article will guide you through the fundementals of ARK address validation and the basics of how to import a wallet address. This is a must read before continuing with our other tutorials!
+excerpt: This article will guide you through the fundamentals of ARK address validation and the basics of how to import a wallet address. This is a must read before continuing with our other tutorials!
 number: 1
 ---
 
@@ -78,6 +78,6 @@ We can now test our creation by clicking the triangle in the menu bar. Try enter
 
 ## Next Steps
 
-That’s it for part 1 of this tutorial series. In our next session, we’ll explore Construct a little more and learn how to connect to a peer to obtain its network version and use that rather than hardcoding the value so our game can be compatible with all bridgechains, and we’ll start our Core plugin for the main game logic.
+That’s it for part 1 of this tutorial series. In our next session, we’ll explore Construct a little more and learn how to connect to a peer to obtain its network version and use that rather than hard-coding the value so our game can be compatible with all bridgechains, and we’ll start our Core plugin for the main game logic.
 
 If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Slack](https://ark.io/slack) so do not hesitate to reach out to us!

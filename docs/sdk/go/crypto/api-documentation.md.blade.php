@@ -487,10 +487,10 @@ Builds a transaction for a multi signature registration.
 
 ## crypto.serializer
 
-### `SerialiseTransaction()`
+### `SerializeTransaction()`
 
 ```go
-func SerialiseTransaction(transaction *Transaction) []byte
+func SerializeTransaction(transaction *Transaction) []byte
 ```
 
 Handle the serialization of "transaction" data.

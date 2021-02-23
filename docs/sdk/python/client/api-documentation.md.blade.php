@@ -279,7 +279,7 @@ Retrieve a Peer
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | ip | Yes | IP addresss |
+| str | ip | Yes | IP address |
 
 #### Return Value
 

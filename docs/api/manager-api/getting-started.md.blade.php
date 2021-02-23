@@ -53,7 +53,7 @@ It is recommended to make configuration changes for defining user access and IP 
 ```
 
 The `whitelist` property is an `Array` consisting of IP addresses that you allow to make connections to the manager API.
-By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitely add the IP addresses that you will use to this list \(recommended approach\).
+By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list \(recommended approach\).
 It is also possible to use wildcards to indicate a range of IPs \(e.g. `"12.34.56.*"`\) or even to allow everyone \(e.g. `"*"`\) \(not recommended\).
 
 ### Token authentication
@@ -105,7 +105,7 @@ Using this method, the process is run as a PM2 process, which is necessary becau
 
 ## Store events and logs
 
-When package is used on `core` **or** `relay` & `forger` processes it can provide additional functionality for storing logs and events in local sqlite database.
+When package is used on `core` **or** `relay` & `forger` processes it can provide additional functionality for storing logs and events in a local sqlite database.
 Stored data can be queried from dedicated JsonRPC calls. Additionally logs can be achieved and downloaded using customized filtering.
 This functionality is enabled only when package is added into `app.json` settings file in desired process plugins.
 

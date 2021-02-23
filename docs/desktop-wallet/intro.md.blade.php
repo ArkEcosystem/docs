@@ -21,11 +21,11 @@ To get started with the ARK Desktop Wallet, follow the documentation below for g
 />
 
 ## Transactions
-The ARK Deskop Wallet enables you to send a wide variety of transactions on the ARK Public Network and other ARK Core based Blockchains. Follow the guides below for information on each transaction. 
+The ARK Desktop Wallet enables you to send a wide variety of transactions on the ARK Public Network and other ARK Core based Blockchains. Follow the guides below for information on each transaction. 
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/how-to-send', 'name' => 'Send ARK Transfer'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-vote-unvote', 'name' => 'Vote or Unote a Delegate'],
+        ['path' => '/docs/desktop-wallet/user-guides/how-to-vote-unvote', 'name' => 'Vote or Unvote a Delegate'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate', 'name' => 'Register or Resign a Delegate'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-sign-and-verify', 'name' => 'Sign & Verify Messages'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-register-second-passphrase', 'name' => 'Register a Second Passphrase'],
@@ -34,7 +34,7 @@ The ARK Deskop Wallet enables you to send a wide variety of transactions on the 
 />
 
 ## Developer Guides
-The ARK Desktop Wallet offers a wide range of customization which empowers developers to create Plugins to enchance the experience within the Wallet from Games, Utilities and Theme's. Follow the guides below to get started with development within the ARK Desktop Wallet.
+The ARK Desktop Wallet offers a wide range of customization which empowers developers to create Plugins to enhance the experience within the Wallet from Games, Utilities and Theme's. Follow the guides below to get started with development within the ARK Desktop Wallet.
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/developer-guides/how-to-build-from-source', 'name' => 'Build the Wallet from Source'],

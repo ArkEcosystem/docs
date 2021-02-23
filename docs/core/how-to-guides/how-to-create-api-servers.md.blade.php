@@ -235,7 +235,7 @@ Go [here](/docs/core/how-to-guides/how-to-write-core-dapps/setting-up-your-first
 
 ### **Step 3.2: Start Your dApp**
 
-Your implemented dApp application leaves and works from the ARK Core blockhain node as an independent Core module.
+Your implemented dApp application leaves and works from the ARK Core blockchain node as an independent Core module.
 
 Now **Go And Start You Local Testnet** Blockchain with the new module enabled by following [this guide](/docs/core/how-to-guides/how-to-write-core-dapps/setting-up-your-first-module#step-4-running-your-dapp)!
 

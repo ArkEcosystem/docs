@@ -405,7 +405,7 @@ Filter all blocks by the given parameters.
 ### `Bridgechains()`
 
 ```java
-public Bridgechians(Client client)
+public Bridgechains(Client client)
 ```
 
 Bridgechains class constructor.
@@ -502,7 +502,7 @@ Get a business by wallet address.
 | :--- | :--- | :--- | :--- |
 | String | id | Yes | Business identifier |
 
-### `showBridgechians()`
+### `showBridgechains()`
 
 ```java
 public LinkedTreeMap<String, Object> showBridgechains(String id)
@@ -818,7 +818,7 @@ Rounds class constructor.
 | :--- | :--- | :--- | :--- |
 | Client | client | Yes | Client |
 
-### `delegater()`
+### `delegates()`
 
 ```java
 public LinkedTreeMap<String, Object> delegates(int id)

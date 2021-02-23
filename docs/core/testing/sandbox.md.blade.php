@@ -18,7 +18,7 @@ import { Sandbox } from "@arkecosystem/core-test-framework";
 const sandbox: Sandbox = new Sandbox();
 ```
 
-Now that you've created the Sandbox, you can access the application through the `sandbox.app` property. This is a barebones application without any bindings or plugins.
+Now that you've created the Sandbox, you can access the application through the `sandbox.app` property. This is a bare-bones application without any bindings or plugins.
 
 ### Core Configuration
 

@@ -49,7 +49,7 @@ When prompted to confirm, type `Y` and press `Enter` to finish.
 
 ## Granting New User Sudo Privileges
 
-Now that a new user is added, we need to give them sudo priveleges so the new user can execute administrative functions.
+Now that a new user is added, we need to give them sudo privileges so the new user can execute administrative functions.
 
 ```bash
 usermod -a -G sudo bridgechain
@@ -57,7 +57,7 @@ usermod -a -G sudo bridgechain
 
 The username is `bridgechain` in our example.
 
-Now, our server is configured and ready to accept the bridgechain installation script, aside from any security precautions you should take with your new server such as _disabling root access,_ _SSH using keypairs,_ _custom SSH port_, _port knocking_, _fail2ban_, or _DDoS protection_.
+Now, our server is configured and ready to accept the bridgechain installation script, aside from any security precautions you should take with your new server such as _disabling root access,_ _SSH using keyPairs,_ _custom SSH port_, _port knocking_, _fail2ban_, or _DDoS protection_.
 
 ## Securing the Servers
 

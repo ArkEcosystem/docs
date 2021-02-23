@@ -53,7 +53,7 @@
 <x-general.sidebar-link path="/docs/core/transactions/understanding-transaction-nonce" name="Understanding Transaction Nonce" />
 <x-general.sidebar-link path="/docs/core/transactions/cryptography" name="Cryptography Overview" />
 <x-general.sidebar-link
-    path="/docs/core/transactions/transacion-types"
+    path="/docs/core/transactions/transaction-types"
     name="Transaction Types"
     :children="[
         ['path' => '/docs/core/transactions/transaction-types/intro', 'name' => 'Introduction'],

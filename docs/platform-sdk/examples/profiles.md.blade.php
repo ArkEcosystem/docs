@@ -527,7 +527,7 @@ await activeWallet.transaction().broadcast(transactionId);
 
 #### Check what signatures a Multi-Signature Transaction or Registration is awaiting
 
-> If both of the below examples are true the transaction is ready to be broacasted.
+> If both of the below examples are true the transaction is ready to be broadcasted.
 
 ```typescript
 // Needs the signature of the currently active wallet.

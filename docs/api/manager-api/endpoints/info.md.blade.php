@@ -255,7 +255,7 @@ info.resources
 | result.disk.total | number | Total disk space (KB). | Yes |
 | result.disk.used | number | Used disk space (KB). | Yes |
 | result.disk.available | number | Available disk space (KB). | Yes |
-| result.disk.mountpoint | string | Mounpoint. | Yes |
+| result.disk.mountpoint | string | Mountpoint. | Yes |
 
 
 ### Request

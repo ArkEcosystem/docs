@@ -6,7 +6,7 @@ title: Introduction
 
 ## Coins
 
-The **Coin** section will introduce you to Coins. Coin are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardises user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
+The **Coin** section will introduce you to Coins. Coin are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardizes user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 <x-link-collection
     :links="[
@@ -28,7 +28,7 @@ The **Coin** section will introduce you to Coins. Coin are the most important pa
 
 ## Markets
 
-The **Markets** section will introduce you to Cryptocurrency Data Services. These packages are responsible for providing a standardises way of retrieving historical pricing data for all kinds of currencies to allow for a rich user experience with detailed information and charts.
+The **Markets** section will introduce you to Cryptocurrency Data Services. These packages are responsible for providing a standardizes way of retrieving historical pricing data for all kinds of currencies to allow for a rich user experience with detailed information and charts.
 
 <x-link-collection
     :links="[
@@ -73,7 +73,7 @@ The **Cryptography** section will introduce you to do encryption, hashing and id
 
 ## Internationalization
 
-The **Internationalization** section will introduce you to locale-based functionality. The Internationalization package is responsible for providing a standardises way of handling numbers, dates, times and money so that all of this data can be normalised and displayed in a format that is familiar to the user geolocation.
+The **Internationalization** section will introduce you to locale-based functionality. The Internationalization package is responsible for providing a standardizes way of handling numbers, dates, times and money so that all of this data can be normalized and displayed in a format that is familiar to the user geolocation.
 
 <x-link-collection
     :links="[
@@ -104,7 +104,7 @@ The **Profiles** section will introduce you to the core of our Desktop & Mobile 
 />
 
 <x-alert type="warning">
-The Profiles package is tailored to our specific needs for our products like the Desktop and Mobile wallets. It should only be used as inspiration for your implementation. **Pull Requests that alter its behaviour from what it is intended to be for our products will be declined and closed.**
+The Profiles package is tailored to our specific needs for our products like the Desktop and Mobile wallets. It should only be used as inspiration for your implementation. **Pull Requests that alter its behavior from what it is intended to be for our products will be declined and closed.**
 </x-alert>
 
 ## Utility

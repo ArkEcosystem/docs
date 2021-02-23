@@ -10,7 +10,7 @@ By default the ARK Explorer will work with new transaction types by treating the
 
 > [src/enums.ts](https://github.com/ArkEcosystem/explorer/blob/master/src/enums.ts)
 
-The first thing you'll want to adjust, are the `enum` options that are currently available. It's a good practise to not rely on magic numbers when checking transaction types, so instead it's advised to add your new transaction type in here so you can use it throughout the Explorer by referring to the enum value. It's preferred if you add a new type for your custom transactions, and not add it to the existing `core` and `magistrate` enums.
+The first thing you'll want to adjust, are the `enum` options that are currently available. It's a good practice to not rely on magic numbers when checking transaction types, so instead it's advised to add your new transaction type in here so you can use it throughout the Explorer by referring to the enum value. It's preferred if you add a new type for your custom transactions, and not add it to the existing `core` and `magistrate` enums.
 
 ### Transaction Selection Dropdown
 
@@ -52,9 +52,9 @@ In short, you will want to look into this component when your new transaction ty
 
 > [src/components/tables/\*.vue](/docs/core/transactions/transaction-types/vote-and-unvote-transaction)
 
-The Explorer consists mostly of tables that show information fetches from the blockchain. These tables have specific columsn that fit a general transaction, but if you require different columns to show properties of your new transaction type \(e.g. `businesses` or `timelock`\), you will want to add a new table component in this directory to properly show it. The simplest way would be to take a look at how the other tables are constructed here, and create your own version with the columns you need.
+The Explorer consists mostly of tables that show information fetches from the blockchain. These tables have specific column that fit a general transaction, but if you require different columns to show properties of your new transaction type \(e.g. `businesses` or `timelock`\), you will want to add a new table component in this directory to properly show it. The simplest way would be to take a look at how the other tables are constructed here, and create your own version with the columns you need.
 
-Please note thate there are desktop and mobile versions of the tables, where the desktop one is a traditional table with rows, while the mobile version consists of larger "rows" \(more like blocks\) with the transaction data.
+Please note that there are desktop and mobile versions of the tables, where the desktop one is a traditional table with rows, while the mobile version consists of larger "rows" \(more like blocks\) with the transaction data.
 
 After you have added a new table, you will have to include it on a page in order to have it show up on the Explorer. You can find existing pages in `src/pages/*` where you can add your new table to an existing page or create a new page if needed.
 
@@ -68,7 +68,7 @@ This file handles showing the details of a transaction after you clicked on one.
 
 > [src/components/utils/TransactionAmount.vue](https://github.com/ArkEcosystem/explorer/blob/master/src/components/utils/TransactionAmount.vue)
 
-This component is used whenever we have a transaction `amount` to show in the Explorer. Normally speaking this is simply the `amount` property of the transaction that you show, but you can overwrite this behaviour depending on the type of transaction. To give an example: a multipayment has an amount of `0`, as the actual amounts are stored in the asset. For this type, the `TransactionAmount` will therefore loop over the transactions inside the multipayment, sum the amounts, and show that instead of `0`.
+This component is used whenever we have a transaction `amount` to show in the Explorer. Normally speaking this is simply the `amount` property of the transaction that you show, but you can overwrite this behavior depending on the type of transaction. To give an example: a multipayment has an amount of `0`, as the actual amounts are stored in the asset. For this type, the `TransactionAmount` will therefore loop over the transactions inside the multipayment, sum the amounts, and show that instead of `0`.
 
 In addition the transaction amounts get a color based on whether they are incoming \(green\), outgoing \(red\) or if they are neither \(gray\). You can adjust the checks for this to cater to special cases that your transaction type might have.
 

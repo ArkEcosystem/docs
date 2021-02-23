@@ -239,7 +239,7 @@ Starting ark-relay... done
 ```
 
 <x-alert type="info">
-All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/command-line-interface-cli/getting-started) documenation or by running the `ark help`command.
+All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/command-line-interface-cli/getting-started) documentation or by running the `ark help`command.
 </x-alert>
 
 
@@ -359,8 +359,8 @@ ark forger:log
 If you set it up successfully, after your node is fully synced, you should see an output similar to this, but with your own delegate name and your delegate’s public key:
 
 ```bash
-2|ark-forg | [2019-03-20 12:12:36][DEBUG]: Loaded 1 delegate: undefined (02297e602dcb3e6ee81205e9e0a7754d50cf3791b06b01fb6e9dde17059b1fb1ba)
-2|ark-forg | [2019-03-20 12:12:36][INFO]: Forger Manager started with 1 forger
+2|ark-forger | [2019-03-20 12:12:36][DEBUG]: Loaded 1 delegate: undefined (02297e602dcb3e6ee81205e9e0a7754d50cf3791b06b01fb6e9dde17059b1fb1ba)
+2|ark-forger | [2019-03-20 12:12:36][INFO]: Forger Manager started with 1 forger
 ```
 
 This is it — you have now successfully set up a Relay and Forger!

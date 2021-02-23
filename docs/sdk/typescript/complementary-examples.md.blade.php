@@ -420,7 +420,7 @@ Managers.configManager.setHeight(4006000);
                 value: Math.floor(Date.now() / 1000),
             },
         })
-        .amoun(1 * 1e8)
+        .amount(1 * 1e8)
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction

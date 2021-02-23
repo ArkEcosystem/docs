@@ -6,7 +6,7 @@ title: How To Setup A Node With Docker?
 
 ## Introduction
 
-Docker is the de facto industry standard for packaging applications into a container. By doing so, all dependencies, such as the language runtimes, operating system, and libraries are combined with the product.
+Docker is the de facto industry standard for packaging applications into a container. By doing so, all dependencies, such as the language run-times, operating system, and libraries are combined with the product.
 
 ### Prerequisites
 

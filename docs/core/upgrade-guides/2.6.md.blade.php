@@ -119,7 +119,7 @@ ark update --no-restart
 pm2 delete all
 ```
 
-Aferwards you will have to start your core processes again. This can be done by running `ark core:start` \(for the combined core process\), or by running `ark relay:start` if you only run a relay.
+Afterwards, you will have to start your core processes again. This can be done by running `ark core:start` \(for the combined core process\), or by running `ark relay:start` if you only run a relay.
 
 <x-alert type="info">
 After restarting, your node will first execute migrations to get the database ready for v2.6. Please be aware that this can take upward of 30 minutes to complete depending on your server specs.

@@ -1279,7 +1279,7 @@ Create a new message instance.
 | :--- | :--- | :--- | :--- |
 | string | publicKey | Yes | Public Key |
 | string | signature | Yes | Signature |
-| string | message | Yes | Lessage |
+| string | message | Yes | Message |
 
 #### Return Value
 

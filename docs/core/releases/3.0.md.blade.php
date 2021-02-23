@@ -44,7 +44,7 @@ ark update
 pm2 delete all
 ```
 
-Aferwards you will have to start your core processes again. This can be done by running `ark core:start` \(for the combined core process\), or by running `ark relay:start` if you only run a relay.
+Afterwards, you will have to start your core processes again. This can be done by running `ark core:start` \(for the combined core process\), or by running `ark relay:start` if you only run a relay.
 
 <x-alert type="info">
 After restarting, your node will first execute migrations to get the database ready for v3.0. Please be aware that this can take upward of 30 minutes to complete depending on your server specs.
@@ -55,7 +55,7 @@ After restarting, your node will first execute migrations to get the database re
 - 2.0 plugins are incompatible with 3.0 plugins due to the vast amount of architectural changes of internals
 - The `/v2` path segment in API URLs has been deprecated in 2.0 and removed in 3.0
 - `SocketCluster` has been replaced with `@hapi/nes`
-- `oclif` has been replaced with a custom CLI for greater control and extensibility of its behaviours
+- `oclif` has been replaced with a custom CLI for greater control and extensibility of its behaviors
 - All `POST /search` endpoints exposed through the API have been deprecated in favour of dot-notation query parameters
 - Log file name convention is changed from <token>-<process>-current.log to <token>-<network>-current.log.
 

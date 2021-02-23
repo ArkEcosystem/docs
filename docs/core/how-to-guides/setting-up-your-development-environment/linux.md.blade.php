@@ -119,7 +119,7 @@ will generate the following docker files inside our `core/docker` folder \(see f
 │   │   └── restore.sh
 │   ├── mainnet
 │   │   └── docker-compose.yml
-│   ├── testnet #this is the folder where we will start our PostgreSQL testned DB
+│   ├── testnet #this is the folder where we will start our PostgreSQL testnet DB
 │   │   ├── Dockerfile
 │   │   ├── docker-compose.yml
 │   │   ├── entrypoint.sh

@@ -90,7 +90,7 @@ IO.puts Message.verify(message.message, message.signature, message.publicKey)
 
 ## Identities
 
-> The identities class allows for the creation and inspection of keypairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
+> The identities class allows for the creation and inspection of keyPairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
 ### Derive the Address from a Passphrase
 

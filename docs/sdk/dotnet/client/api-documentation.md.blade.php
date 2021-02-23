@@ -510,7 +510,7 @@ List All Peers
 public Response<Peer> Show(string ip)
 ```
 
-Retrive a Peer
+Retrieve a Peer
 
 #### Parameters
 
@@ -528,7 +528,7 @@ Retrive a Peer
 public async Task<Response<Peer>> ShowAsync(string ip)
 ```
 
-Retrive a Peer
+Retrieve a Peer
 
 #### Parameters
 

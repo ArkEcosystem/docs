@@ -31,7 +31,7 @@
 <x-general.sidebar-link path="/docs/deployer/deploy/deploy-introduction" name="Deploy Introduction" />
 <x-general.sidebar-link path="/docs/deployer/deploy/transferring-and-executing-script" name="Transferring and Executing Installation Script" />
 <x-general.sidebar-link path="/docs/deployer/deploy/running-and-managing-core-processes" name="Running and Managing Core Processes" />
-<x-general.sidebar-link path="/docs/deployer/deploy/commiting-core-changes-to-github-repo" name="Committing Core Changes to GitHub Repo" />
+<x-general.sidebar-link path="/docs/deployer/deploy/committing-core-changes-to-github-repo" name="Committing Core Changes to GitHub Repo" />
 <x-general.sidebar-link path="/docs/deployer/deploy/adding-network-peers" name="Adding Network Peers" />
 <x-general.sidebar-link path="/docs/deployer/deploy/adding-bridgechain-to-ark-desktop-wallet" name="Adding Bridgechain to ARK Desktop Wallet" />
 <x-general.sidebar-link path="/docs/deployer/deploy/importing-genesis-addresses-and-adding-forgers" name="Importing Genesis Addresses and Adding Forgers" />

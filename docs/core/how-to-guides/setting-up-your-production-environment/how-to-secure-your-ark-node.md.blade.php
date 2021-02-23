@@ -418,7 +418,7 @@ Apr 17 04:23:37 node1 knockd: nodeip: closeSSH: OPEN SESAME
 Apr 17 04:23:37 node1 knockd: closeSSH: running command: ufw delete allow 55555/tcp
 ```
 
-### SSH Connection Using Your Keypair
+### SSH Connection Using Your KeyPair
 
 <x-alert type="danger">
 If you do not copy the correct key to your server, in the right location, you will be unable to authenticate.
@@ -567,7 +567,7 @@ Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
 sudo service nginx start
 ```
 
-If everything started fine, you should be able to access your ARK node API's behind SSL. Giving you the bonus of Cloudflare DDOS protection.
+If everything started fine, you should be able to access your ARK node APIs behind SSL. Giving you the bonus of Cloudflare DDOS protection.
 
 Otherwise, if you get any errors run the following command to troubleshoot nginx.
 

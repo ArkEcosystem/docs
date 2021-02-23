@@ -109,7 +109,7 @@ This program awards community developers with ARK for contributing to project de
 
 
 ### ARK Ecosystem
-The collection of products, people, businesses, and soveriegn Blockchains that are all utilizing ARK technology.  
+The collection of products, people, businesses, and sovereign Blockchains that are all utilizing ARK technology.  
 **More:** [Blockchain](glossary#blockchain)
 
 ### ARK Ecosystem SCIC
@@ -222,7 +222,7 @@ See Byzantine Fault Tolerance.
 **More:** [Byzantine Fault Tolerance](glossary#byzantine-fault-tolerance)
 
 ### Bloat
-A slowdown in performance on a Blockchain due to too many different operations occuring at once.  
+A slowdown in performance on a Blockchain due to too many different operations occurring at once.  
 **More:** [Blockchain](glossary#blockchain)
 
 ### Block Explorer
@@ -366,11 +366,11 @@ General term describing any type of token or coin.
 **More:** [Token](glossary#token), [Coin](glossary#coin)
 
 ### Cryptoconomy
-Informal term referring to all economic activity occuring within the entire Blockchain community and industry.  
+Informal term referring to all economic activity occurring within the entire Blockchain community and industry.  
 **More:** [Blockchain](glossary#blockchain)
 
 ### Cryptocurrency
-General term describing any coin and certain tokens. Usually refers to a cryptoasset with a primary use case of peer-to-peer value transfer, but can posess other properties as well.  
+General term describing any coin and certain tokens. Usually refers to a cryptoasset with a primary use case of peer-to-peer value transfer, but can posses other properties as well.  
 **More:** [Peer-to-Peer](glossary#peer-to-peer), [Cryptoasset](glossary#cryptoasset), [Use Case](glossary#use-case), [Token](glossary#token), [Coin](glossary#coin)
 
 ### Cryptography
@@ -450,7 +450,7 @@ A server responsible for running an instance of ARK Core where a Delegate has be
 **More:** [Delegate Registration](glossary#delegate-registration), [ARK Core](glossary#ark-core), [Delegate](glossary#delegate)
 
 ### Delegated Proof-of-Stake
-Consensus mechanism where Delegates voted in by coin holders are reponsible for maintaining the ledger, adding blocks, and generating new coins.  
+Consensus mechanism where Delegates voted in by coin holders are responsible for maintaining the ledger, adding blocks, and generating new coins.  
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Delegate](glossary#delegate), [Ledger](glossary#ledger), [Coin](glossary#coin), [Vote](glossary#vote)
 
 ### Delegatee
@@ -575,7 +575,7 @@ Open source tool allowing developers to create ARK Smart Transactions authored i
 **More:** [ARK Smart Transactions](glossary#ark-smart-transactions), [Open Source](glossary#open-source)
 
 ### Genesis Address
-In stakable cryptoassets, refers to the initial address where any initial supply is stored, before being distributed to other addresses.  
+In stakeable cryptoassets, refers to the initial address where any initial supply is stored, before being distributed to other addresses.  
 **More:** [Initial Supply](glossary#initial-supply), [Cryptoasset](glossary#cryptoasset), [Address](glossary#address)
 
 ### Genesis Block
@@ -583,7 +583,7 @@ The very first block in a Blockchain.
 **More:** [Blockchain](glossary#blockchain)
 
 ### Genesis Delegate
-In ARK DPoS, refers to the intitial virtual Delegates which simulate consensus within the Genesis Node, before Active Delegates take over.  
+In ARK DPoS, refers to the initial virtual Delegates which simulate consensus within the Genesis Node, before Active Delegates take over.  
 **More:** [Active Delegate](glossary#active-delegate), [Genesis Node](glossary#genesis-node), [Consensus](glossary#consensus), [Delegate](glossary#delegate), [DPoS](glossary#dpos)
 
 ### Genesis Node
@@ -710,7 +710,7 @@ Informal term for market capitalization.
 **More:** [Market Capitalization](glossary#market-capitalization)
 
 ### Market Capitalization
-Total value of all coins or tokens in curculation for a specific cryptoasset, usually denoted in USD.  
+Total value of all coins or tokens in circulation for a specific cryptoasset, usually denoted in USD.  
 **More:** [Cryptoasset](glossary#cryptoasset), [Token](glossary#token), [Coin](glossary#coin) 
 
 ### MarketSquare
@@ -825,7 +825,7 @@ See cold storage.
 **More:** [Cold Storage](glossary#cold-storage)
 
 ### On-Chain
-Activity occuring as a part of the Blockchain, represented by transactions on the network and updates to the ledger.   
+Activity occurring as a part of the Blockchain, represented by transactions on the network and updates to the ledger.   
 **More:** [Transaction](glossary#transaction), [Blockchain](glossary#blockchain), [Network](glossary#network), [Ledger](glossary#ledger)
 
 ### Open Source
@@ -836,7 +836,7 @@ An intermediary between off-chain and on-chain data.
 **More:** [Off-Chain](glossary#off-chain), [On-Chain](glossary#on-chain)
 
 ### Oracle Problem
-Conflict in security, authenticity, and trustbetween third-party oracles and the trustless execution of a Blockchain network.   
+Conflict in security, authenticity, and trust between third-party oracles and the trustless execution of a Blockchain network.   
 **More:** [Blockchain](glossary#blockchain), [Network](glossary#network), [Oracle](glossary#oracle)
 
 ## P
@@ -960,7 +960,7 @@ Live implementation of a Blockchain network, featuring real transactions that ca
 A graphical method to store URLs, mnemonics, addresses, or other strings as a type of two-dimensional barcode. Readable by cameras that interpret and act on the data.   
 **More:** [Mnemonic](glossary#mnemonic), [Address](glossary#address)
 
-### Quorom
+### Quorum
 Desired network state in a consensus mechanism where the necessary number of nodes are in agreement on the state of the Blockchain and ledger.   
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Blockchain](glossary#blockchain), [Network](glossary#network), [Ledger](glossary#ledger), [Node](glossary#node)
 
@@ -975,7 +975,7 @@ Method, usually represented as a mnemonic, that restores balances and access to 
 **More:** [Blockchain](glossary#blockchain), [Mnemonic](glossary#mnemonic), [Wallet](glossary#wallet)
 
 ### Registered Delegate Address
-A wallet address that has executed a specail transaction to register a Delegate name   
+A wallet address that has executed a special transaction to register a Delegate name   
 **More:** [Wallet Address](glossary#wallet-address), [Transaction](glossary#transaction), [Delegate](glossary#delegate)
 
 ### Relay Node
@@ -999,7 +999,7 @@ Event that takes place when confirmed transactions and blocks return to the memp
 **More:** [Transaction](glossary#transaction), [Mempool](glossary#mempool), [Ledger](glossary#ledger)
 
 ### Round
-One complete runthrough in Delegated Proof-of-Stake where each Delegate has had a turn to generate a new block. The total length of time is determined by DelegateCount*BlockTime.   
+One complete run-through in Delegated Proof-of-Stake where each Delegate has had a turn to generate a new block. The total length of time is determined by DelegateCount*BlockTime.   
 **More:** [Delegated Proof-of-Stake](glossary#delegated-proof-of-stake), [Delegate](glossary#delegate)
 
 ## S
@@ -1015,7 +1015,7 @@ See Software Development Kit.
 Additional mnemonic used for increasing the security of a wallet address in ARK-based networks. Adds an additional twelve words to the existing twelve word mnemonic for an address.   
 **More:** [Wallet Address](glossary#wallet-address), [Mnemonic](glossary#mnemonic), [Address](glossary#address), [Network](glossary#network)
 
-### Second Singature Registration
+### Second Signature Registration
 Transaction type that allows for a second passphrase to be added to the existing passphrase of a wallet address.   
 **More:** [Second Passphrase](glossary#second-passphrase), [Wallet Address](glossary#wallet-address), [Transaction](glossary#transaction), [Passphrase](glossary#passphrase)
 
@@ -1094,7 +1094,7 @@ BFT-based PoS protocol that improves finality for PoS consensus mechanisms.
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Finality](glossary#finality), [Protocol](glossary#protocol), [BFT](glossary#bft), [PoS](glossary#pos)
 
 ### Test Network
-A single-node implentation of Blockchain technology that simulates the consensus mechanism of a live multi-node network.   
+A single-node implementation of Blockchain technology that simulates the consensus mechanism of a live multi-node network.   
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Blockchain](glossary#blockchain), [Network](glossary#network), [Node](glossary#node)
 
 ### Testnet
@@ -1130,7 +1130,7 @@ When launching a coin or token, refers to the act of creating a Genesis Block an
 **More:** [Initial Supply](glossary#initial-supply), [Genesis Block](glossary#genesis-block), [Token](glossary#token), [Coin](glossary#coin)
 
 ### Tokenization
-Representing owership of an asset through tokens or coins on a Blockchain.   
+Representing ownership of an asset through tokens or coins on a Blockchain.   
 **More:** [Blockchain](glossary#blockchain), [Token](glossary#token), [Coin](glossary#coin)
 
 ### Tokenomics

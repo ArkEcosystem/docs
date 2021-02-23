@@ -60,7 +60,7 @@ After successful build you should see: `Creating ark-explorer ... done`
 
 ### Make sure Explorer is UP 
 
-> Initial container startup would take about 2-3 minutes untill all dependencies install and setup is done. You can monitor logs by executing:
+> Initial container startup would take about 2-3 minutes until all dependencies install and setup is done. You can monitor logs by executing:
 
 ```bash
 docker logs --tail 50 -f ark-explorer
@@ -90,7 +90,7 @@ bash purge_all.sh
 
 * Blue/Green Deployment approach 
 
-  - Reverse proxy server [Traefik](https://hub.docker.com/_/traefik) with native Let's Encrypt SSL supporti including automated certificate requests and renewal.
+  - Reverse proxy server [Traefik](https://hub.docker.com/_/traefik) with native Let's Encrypt SSL supports including automated certificate requests and renewal.
   - Explorer easily deployed and updated with no downtime.
 
 > Before continuing with this guide: You will need access to the database of a Core instance. The credentials can be specified in the `.env` file under `EXPLORER_DB_*`.
@@ -99,7 +99,7 @@ bash purge_all.sh
 
 _NOTE: We need Explorer source locally as it gets mounted in the container as a volume!
 
-The next step is similar to deployment scenarios above. The only difference is that we should stick to specific local folders naming convention in order to have flowless deployment and further updates. 
+The next step is similar to deployment scenarios above. The only difference is that we should stick to specific local folders naming convention in order to have flawless deployment and further updates. 
  
 >Clone source for initial deployment - a local folder `explorer-green` is used:
 
@@ -144,15 +144,15 @@ bash deploy-prod.sh
 
 That will pull and run two containers:
   - `traefik_traefik_1` - the reverse proxy forwarding HTTP/HTTPS requests to the domain you added as `A` DNS record (also `docker/production/prod.env` file `DOMAIN` variable) to the internal Explorer container. 
-  - `green_explorer_1` - the internal Explorer container which upon startup will trigger the reverse proxy to make an SSL certificate request to Let's Encrypt and install it after receiving it. Explorer setup will start inside the container in parallel which may take up to 2-3 mintues, so be patient and wait for the script to finish.
+  - `green_explorer_1` - the internal Explorer container which upon startup will trigger the reverse proxy to make an SSL certificate request to Let's Encrypt and install it after receiving it. Explorer setup will start inside the container in parallel which may take up to 2-3 minutes, so be patient and wait for the script to finish.
 
-You should be now able to access your Explorer instance at https://explorer.your-domain.com (HTTP gets redrected to HTTPS).
+You should be now able to access your Explorer instance at https://explorer.your-domain.com (HTTP gets redirected to HTTPS).
 
 ### Zero Downtime Updates
 
-_NOTE: In order to have flowless update process, all consequent updates require clonning the source in a new location following the naming convention `explorer-blue` or `explorer-green`.
+_NOTE: In order to have a flawless update process, all consequent updates require cloning the source in a new location following the naming convention `explorer-blue` or `explorer-green`.
 
->Assuming we have cloned the source into `explorer-green` during our initial deploy, our first update would expect to be clonned into `explorer-blue`. We'll also copy all our ENV settings from initial deployment folder instead of adding them from scratch:
+>Assuming we have cloned the source into `explorer-green` during our initial deploy, our first update would expect to be cloned into `explorer-blue`. We'll also copy all our ENV settings from initial deployment folder instead of adding them from scratch:
 
 ```bash
 cd ~
@@ -163,7 +163,7 @@ cp -f ~/explorer-green/docker/production/prod.env ~/explorer-blue/docker/product
 bash deploy-prod.sh
 ```
 
-This will pull and run a new Explorer container `blue_explorer_1` which will follow similar deployment process as the initial deployment one. After successful deployment, the script will remove your old Explorer container `green_explorer_1` and notify you it is now safe to remove your previouse source folder `~/explorer-green`. During the update process you should't experience any Explorer downtime as the reverse proxy should handle the proper distribution of the traffic.
+This will pull and run a new Explorer container `blue_explorer_1` which will follow similar deployment process as the initial deployment one. After successful deployment, the script will remove your old Explorer container `green_explorer_1` and notify you it is now safe to remove your previous source folder `~/explorer-green`. During the update process you shouldn't experience any Explorer downtime as the reverse proxy should handle the proper distribution of the traffic.
 
 _NOTE: From that point on you should perform updates the same way, just preserving the local source folder naming. So for example your next update would assume you clone the source into `~/explorer-green` folder. Example:
 

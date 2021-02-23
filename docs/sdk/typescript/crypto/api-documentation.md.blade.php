@@ -2233,7 +2233,7 @@ Verify transaction.
 public serialize(options?: ISerializeOptions)
 ```
 
-Serialize Transction object.
+Serialize Transaction object.
 
 #### Parameters
 

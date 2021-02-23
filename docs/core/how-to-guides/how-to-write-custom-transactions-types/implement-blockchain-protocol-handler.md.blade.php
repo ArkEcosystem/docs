@@ -6,7 +6,7 @@ title: Implement Blockchain Protocol Handlers
 
 The previous two classes [Builder](/docs/core/how-to-guides/how-to-write-custom-transactions-types/implement-transaction-builder) and [Transaction](/docs/core/how-to-guides/how-to-write-custom-transactions-types/implementing-transaction-structure), introduced a new transaction type, implemented the **serde** process, and created signed transaction payload. **Handler class is connected with the blockchain protocol, following its strict mechanics such as consensus rules, transaction and block processing.**
 
-By inheriting default [TransactionHandler](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/handlers/BusinessRegistrationTransactionHandler.ts#L8) behaviour we enforce existing GTI engine rules and provide options to implement additional transaction apply logic.
+By inheriting default [TransactionHandler](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/handlers/BusinessRegistrationTransactionHandler.ts#L8) behavior we enforce existing GTI engine rules and provide options to implement additional transaction apply logic.
 
 
 ```typescript

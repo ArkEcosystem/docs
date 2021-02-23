@@ -19,7 +19,7 @@ Ensure you have correctly mapped all participants in your network. You should be
 
 During the migrations, third-party providers and exchanges should ensure they stop accepting transactions, as there is a gap where the blockchain is possibly rolled back a few hundred blocks. Once the migration is completed, these services must ensure they are not on a forked network; it is best to wait a few hours to a day until everyone is sure a network consensus has been reached.
 
-All node operators must cooperate in the migration. \(Technicall[http://0.0.0.0:8080y](http://0.0.0.0:8080y) only &gt; 50% of the delegates need to migrate. However, you should avoid a community split\). We recommend having a dedicated slack channel, monitored by your team during the entire migration process, so that you may provide assistance.
+All node operators must cooperate in the migration. \(Technically [http://0.0.0.0:8080y](http://0.0.0.0:8080) only &gt; 50% of the delegates need to migrate. However, you should avoid a community split\). We recommend having a dedicated slack channel, monitored by your team during the entire migration process, so that you may provide assistance.
 
 Together with your node operators, it would be best if you decided on a cutoff block `height`, after this height, `v1` will no longer be supported in your BridgeChain, and services relying on `v1` nodes may break and should be considered unreliable.
 
@@ -42,13 +42,13 @@ Create a new directory in `packages/core/lib/config` for your BridgeChain config
 
 ```bash
 cd packages/core/lib/config
-mdkir MyNet
+mkdir MyNet
 ```
 
 The following files are required to make `v2` compatible with your custom network.
 
-* **genesisBlock.json:** defines the very first block of your network, and from it your `networkhash` is derived, as it is the header of the first block.
-* **peers.json:** used by the node to find other exising nodes. The file resembles something like this:
+* **genesisBlock.json:** defines the very first block of your network, and from it your `networkHash` is derived, as it is the header of the first block.
+* **peers.json:** used by the node to find other existing nodes. The file resembles something like this:
 
 ```javascript
 {
@@ -198,7 +198,7 @@ We will continue this guide using the name `MyNet`, as that means we cover all o
 
 These shortcut commands will use your custom configurations.
 
-We will also need to edit our snapshot commands, which we will use later on to jumpstart our `v2` network. Go to `core/packages/core-snapshot-cli` and open `package.json`. Once again we are interested in the scripts section.
+We will also need to edit our snapshot commands, which we will use later on to jump-start our `v2` network. Go to `core/packages/core-snapshot-cli` and open `package.json`. Once again we are interested in the scripts section.
 
 ```javascript
 "scripts": {
@@ -295,7 +295,7 @@ Your blockchain will now be up to the cutoff point. Restart the nodes, either us
 
 ## Considerations
 
-The upgrading process is a vulnerable stage in your blockchains lifecycle. Ensure the following:
+The upgrading process is a vulnerable stage in your blockchain's lifecycle. Ensure the following:
 
 * `genesisBlock.json` must be exactly the same as the `v1` genesis block. Have each node operator verify this themselves.
 * Snapshots should not be shared during the upgrade process. If you do this, use this command instead to decrease the risk of a malicious participant corrupting the chain:

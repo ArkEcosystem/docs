@@ -8,7 +8,7 @@ Now that we've covered the basics, let's dig deeper into the parameters you need
 
 ## Number of Forgers
 
-Is the number of special nodes that are responsible for the creation of blocks. Where Bitcoin has miners that are responsible for adding transactions and creating new coins, ARK has _forging delegates_ instead, with its public network utilizing 51 of them. If you declare a larger _number of forgers_, your network will become more decentralized. However, a larger number of forgers also comes with longer block propogation and confirmation times. You will need to strike your own balance for decentralization and performance based on your needs. We also recommend using a prime number to avoid the rare case of a multi-way deadlock between forks \(ARK is discussing increasing its public network's forger count to 53\). Lastly, we recommend keeping the number of forgers under 200 unless you are an advanced user. Some recommended pairs might be something like:
+Is the number of special nodes that are responsible for the creation of blocks. Where Bitcoin has miners that are responsible for adding transactions and creating new coins, ARK has _forging delegates_ instead, with its public network utilizing 51 of them. If you declare a larger _number of forgers_, your network will become more decentralized. However, a larger number of forgers also comes with longer block propagation and confirmation times. You will need to strike your own balance for decentralization and performance based on your needs. We also recommend using a prime number to avoid the rare case of a multi-way deadlock between forks \(ARK is discussing increasing its public network's forger count to 53\). Lastly, we recommend keeping the number of forgers under 200 unless you are an advanced user. Some recommended pairs might be something like:
 
 * 21 forgers @ 5 seconds.
 * 53 forgers @ 8 seconds.
@@ -43,4 +43,4 @@ Is the block number at which you want to start rewarding forgers. With this vari
 
 ## VendorField Length
 
-Is the maximum around of characters permitted in the vendorField with each transaction. The vendorField can be used to send a custom message to the receipient of a transaction. It is recommended to set the vendorField length between **64 to 255** unless a specific use case requires an increased length.
+Is the maximum around of characters permitted in the vendorField with each transaction. The vendorField can be used to send a custom message to the recipient of a transaction. It is recommended to set the vendorField length between **64 to 255** unless a specific use case requires an increased length.

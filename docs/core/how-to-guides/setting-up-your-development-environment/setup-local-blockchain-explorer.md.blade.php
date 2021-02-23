@@ -12,7 +12,7 @@ This short guide will help you setup a local blockchain explorer. This will enab
 Blockchain Explorer communicates with the local Core node via the [Public REST API interface](/docs/api/), so make sure it is enabled \(default value is **enabled**\).
 </x-alert>
 
-For **production** deployment and customisation options head over here:
+For **production** deployment and customization options head over here:
 
 <livewire:page-reference path="/docs/explorer/running-your-own-explorer" />
 

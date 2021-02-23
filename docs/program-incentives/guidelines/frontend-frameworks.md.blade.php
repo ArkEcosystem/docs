@@ -26,7 +26,7 @@ When you are making use of a `.css` file in which you define classes, there are 
 - We use `kebab-case` for our css classes (although this might be overruled when developing a React application and using component-based styling).
 Make your css selectors specific and not too global. This means that if you need a class that should only be used in a certain setting, the name of the class should be specific enough to make that clear, but you should also make the css selectors as specific as possible. For example, if a heading is only needed for articles, you should call it `article .article-heading`, assuming you have an `article` parent element. This way there will be less chance of interfering with 3rd party extensions and accidental clashes in our own codebase.
 - Use Tailwind classes inside the css file as much as possible. There's an `@apply` directive for a reason. Only diverge to raw css when there is no equivalent in Tailwind.
-- Split up the classes in the file by their use. If you have a few styles that are focused on tables, keep them grouped together so it's easier to find them. If you see that your css file becomes too large, consider splitting them up into seperate files where you can make logical groupings (e.g. a `_table.css` and `_general.css` file).
+- Split up the classes in the file by their use. If you have a few styles that are focused on tables, keep them grouped together so it's easier to find them. If you see that your css file becomes too large, consider splitting them up into separate files where you can make logical groupings (e.g. a `_table.css` and `_general.css` file).
 
 ### Dark Mode
 
@@ -58,7 +58,7 @@ When using Laravel, you write views in Blade files. The rules for this are prett
 &commat;endcomponent
 ```
 
-By utilizing this approach, you keep the page layout itself simple, structured and easy to extend. It also allows to build new pages with ease by already having isoloted components to work with. With Laravel it's quick to create a new component, as you will only have to create a file inside the `views/components` directory and you can immediately use it in your views with the `x-component-name` notation.
+By utilizing this approach, you keep the page layout itself simple, structured and easy to extend. It also allows to build new pages with ease by already having isolated components to work with. With Laravel it's quick to create a new component, as you will only have to create a file inside the `views/components` directory and you can immediately use it in your views with the `x-component-name` notation.
 
 Keep components organized by grouping them together based on their use. In the example above you'll notice that the components are all prepended with `x-home`, indicating that these components are homepage-specific. Once you run into components that are being reused in multiple locations, we generally have a `general` folder to put them in, or have them live in the root of the `components` folder.
 
@@ -76,7 +76,7 @@ We have plenty of icons that are used, and we prefer to make use of SVGs on webp
 
 ## Alpine.js
 
-We make use of [Alpine.js](https://github.com/alpinejs/alpine) in addition to Livewire / Laravel to handle behaviour that we cannot produce otherwise, like dropdowns. When making use of alpine, keep it simple. Generally you only need one or two states to keep track of in `x-data` to get the desired frontend behaviour. If you seem to need more than that, please rethink if you really need alpine for everything you are trying to do or if (part of) it can be delegated to a Livewire component instead. In the rare case where you do need more than a few properties and methods, consider moving it to a separate `.js` file and referencing that in `x-data`.
+We make use of [Alpine.js](https://github.com/alpinejs/alpine) in addition to Livewire / Laravel to handle behavior that we cannot produce otherwise, like dropdowns. When making use of alpine, keep it simple. Generally you only need one or two states to keep track of in `x-data` to get the desired frontend behavior. If you seem to need more than that, please rethink if you really need alpine for everything you are trying to do or if (part of) it can be delegated to a Livewire component instead. In the rare case where you do need more than a few properties and methods, consider moving it to a separate `.js` file and referencing that in `x-data`.
 
 ## React
 

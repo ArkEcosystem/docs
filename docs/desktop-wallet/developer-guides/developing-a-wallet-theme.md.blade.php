@@ -82,7 +82,7 @@ _P.S. you can also change the light.css filename to something else, but in that 
 
 The last part of the configuration is the most fun part — playing with colors and actually changing what we want.
 
-Now we open _light.css_ under _src/styles/light.css_ \(click on the file and the edit icon to bring it into editor mode\). At first, this might seem overwhelming, but these are just color codes in hex or rgba format for different elements inside the desktop wallet. This is pretty self-explanatory on its own but don’t worry, in order for us to see what gets changed we’ll be using the Desktop Wallet for this part as well. First, let's not forget that we need to change the class name that we changed in index.js \(which is the first line in this CSS file\).
+Now we open _light.css_ under _src/styles/light.css_ \(click on the file and the edit icon to bring it into editor mode\). At first, this might seem overwhelming, but these are just color codes in hex or RGBA format for different elements inside the desktop wallet. This is pretty self-explanatory on its own but don’t worry, in order for us to see what gets changed we’ll be using the Desktop Wallet for this part as well. First, let's not forget that we need to change the class name that we changed in index.js \(which is the first line in this CSS file\).
 
 As you can see we edited `.theme-plugin-light-mode` to what we defined in _index.js,_ so we changed it to reflect those changes. In our case, it becomes `.theme-plugin-pinky-mode` so the index.js file knows what class to read \(if we don’t change it here changes won’t come into effect once we publish the plugin\). After this is done, let's fire up the ARK Desktop Wallet.
 
@@ -90,11 +90,11 @@ Once you start the ARK Desktop Wallet click on the _**Toggle Developers Tools**_
 
 This will open a menu on the right. Now click on the _**Elements**_ tab. Under elements, click to expand the _**body**_ and click on the _**div**_ element. Now under _**Styles**_ on the right, enter in the search _**.theme-light**_ \(you will need to have the default theme currently enabled in order to see this. If you have dark mode enabled, please switch to default by disabling the dark theme under settings\). This will bring up all of the elements of our theme that we can change and see changes right in the wallet \(you can click normally on elements in the wallet on the right so you can get all of the colors right and see where they are changing\).
 
-Now we can start playing by clicking on the elements on the right \(eg. click on the square color of `--theme-page` property\) to bring up the color editor \(hex or rgba\) and your changes will be reflected instantly once you change color.
+Now we can start playing by clicking on the elements on the right \(eg. click on the square color of `--theme-page` property\) to bring up the color editor \(hex or RGBA\) and your changes will be reflected instantly once you change color.
 
 You can now change this for all of the elements and see it live on the left eg changing the`--theme-feature` property, as you can see, changes the background of the wallet.
 
-Now you only need to copy those rgba or hex colors back to the _light.css file_ that we have opened on GitHub \(keeping the same property names, you must not rename any of the attributes apart from the hex or rgba values\). You can select the whole section inside the wallet and copy over to _light.css_ or just adapt the hex/rgba colors one by one. Once you are done, don’t forget to commit your changes to GitHub and when you are happy with your final product move onto step 3 below.
+Now you only need to copy those RGBA or hex colors back to the _light.css file_ that we have opened on GitHub \(keeping the same property names, you must not rename any of the attributes apart from the hex or RGBA values\). You can select the whole section inside the wallet and copy over to _light.css_ or just adapt the hex/RGBA colors one by one. Once you are done, don’t forget to commit your changes to GitHub and when you are happy with your final product move onto step 3 below.
 
 ### STEP 3: Publish the finished theme plugin on NPM <
 

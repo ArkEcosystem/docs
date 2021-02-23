@@ -36,7 +36,7 @@ Registering your service provider is as simple as adding `export * from "./servi
 
 ### Booting a Service Provider
 
-When booting a service provider, you should establish all connections like with the database and start HTTP servers. Everything you initialise at this point of the lifecycle should later on be disposed of.
+When booting a service provider, you should establish all connections like with the database and start HTTP servers. Everything you initialize at this point of the lifecycle should later on be disposed of.
 
 ### Disposing a Service Provider
 

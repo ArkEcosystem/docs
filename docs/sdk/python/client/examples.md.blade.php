@@ -280,7 +280,7 @@ print(unconfirmed_transactions)
 ```python
 unconfirmed_transaction = client.transactions.get_unconfirmed("validTransactionId")
 
-print(uncofirmed_transaction)
+print(unconfirmed_transaction)
 
 >>> <class 'dict'> # Need to update
 ```

@@ -205,7 +205,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -270,7 +270,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -332,7 +332,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -392,7 +392,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -462,7 +462,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -533,7 +533,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -598,7 +598,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -683,7 +683,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -745,7 +745,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -810,7 +810,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);
@@ -880,7 +880,7 @@ uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
-    // parse the Json Wallet Response to retreive the nonce
+    // parse the Json Wallet Response to retrieve the nonce
     const size_t capacity = JSON_OBJECT_SIZE(0) + JSON_OBJECT_SIZE(1) + JSON_OBJECT_SIZE(6) + 160;
     DynamicJsonDocument doc(capacity);
     deserializeJson(doc, walletResponse);

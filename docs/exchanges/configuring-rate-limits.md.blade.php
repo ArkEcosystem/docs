@@ -42,7 +42,7 @@ Cache timeouts can be disabled, which is especially useful on resource-strained 
 
 ## Further Reference <a id="further-reference"></a>
 
-ARK Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This ratelimiter can be configured by setting/altering [core-api](https://github.com/ARKEcosystem/core/tree/develop/packages/core-api/src/defaults.js#L48-L56).
+ARK Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This rate-limiter can be configured by setting/altering [core-api](https://github.com/ARKEcosystem/core/tree/develop/packages/core-api/src/defaults.js#L48-L56).
 
 ```javascript
 rateLimit: {

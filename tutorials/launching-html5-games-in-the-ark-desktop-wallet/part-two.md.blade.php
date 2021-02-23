@@ -192,7 +192,7 @@ Now if we send a transaction to that address, our Construct 3 app automatically 
 
 ![Our app receives the transaction as soon as it is forged!](https://miro.medium.com/max/487/0*Zbk6e7OsdmgE8fmH)
 
-Congratulations on reaching the end of the tutorial! It might not seem like much, but we’ve achieved a lot! We’ve set up our barebones Core plugin, made a WebSocket server and now we know how to generate new addresses, send and receive transactions between our app and the network and dynamically validate addresses based on the network of the peer.
+Congratulations on reaching the end of the tutorial! It might not seem like much, but we’ve achieved a lot! We’ve set up our bare-bones Core plugin, made a WebSocket server and now we know how to generate new addresses, send and receive transactions between our app and the network and dynamically validate addresses based on the network of the peer.
 
 ## Next Steps
 

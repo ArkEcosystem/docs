@@ -41,4 +41,4 @@ or
 pm2 logs
 ```
 
-You will see the syncronization process occur and the relay should eventually catch up and start receiving new blocks. 9. Repeat this procedure for each peer.
+You will see the synchronization process occur and the relay should eventually catch up and start receiving new blocks. 9. Repeat this procedure for each peer.

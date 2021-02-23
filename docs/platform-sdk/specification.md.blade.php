@@ -109,6 +109,6 @@ export const manifest = {
 };
 ```
 
-In the case of ARK it would be unsafe to call `IdentityService.keyPair({ privateKey: "..." })` because it would lead to an exception due to a lack of support for this specific way of retrieving a key-pair. Knowing that there is a lack of support for this feature before we even try to call the method will allow us to safe-guard our application against any unexpected behaviours for a certain coin.
+In the case of ARK it would be unsafe to call `IdentityService.keyPair({ privateKey: "..." })` because it would lead to an exception due to a lack of support for this specific way of retrieving a key-pair. Knowing that there is a lack of support for this feature before we even try to call the method will allow us to safe-guard our application against any unexpected behaviors for a certain coin.
 
 An example of how the manifest would be commonly used is to check if a certain coin supports the `TransactionService.vote` method. Trying to call this for example for `ETH` would lead to an exception because voting is not yet supported for this coin.
