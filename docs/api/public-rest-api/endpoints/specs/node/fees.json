@@ -1,13 +1,12 @@
 {
     "title": "Retrieve the Fee Statistics",
-    "description": "Used to access a Node's fee statistics.",
+    "description": "Used to access a Node’s fee statistics. By default, this endpoint returns calculations based on the 20 most-recent transactions for each type. Also note while using the `days` query that statistics may not be available for all transaction-types over a given period of time.",
     "method": "GET",
     "path": "node/fees",
     "parameters": {
         "days": {
             "type": "query",
-            "description": "The number of days which will be regarded.",
-            "example": 7,
+            "description": "The number of days [1-30] to search.",
             "rules": ["nullable", "integer"]
         }
     }
