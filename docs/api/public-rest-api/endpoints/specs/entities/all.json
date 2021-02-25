@@ -48,7 +48,7 @@
         },
         "isResigned": {
             "type": "query",
-            "description": "The flag to indicate that resigned entites should be retrieved.",
+            "description": "The flag to indicate that resigned entities should be retrieved.",
             "rules": [
                 "nullable",
                 "boolean"
