@@ -78,7 +78,7 @@
         },
         "numberOfTransactions": {
             "type": "body",
-            "description": "Ranage for number of transactions contained in the block.",
+            "description": "Range for number of transactions contained in the block.",
             "rules": ["nullable", "integer"]
         },
         "numberOfTransactions.from": {
