@@ -19,7 +19,7 @@ Ensure you have correctly mapped all participants in your network. You should be
 
 During the migrations, third-party providers and exchanges should ensure they stop accepting transactions, as there is a gap where the blockchain is possibly rolled back a few hundred blocks. Once the migration is completed, these services must ensure they are not on a forked network; it is best to wait a few hours to a day until everyone is sure a network consensus has been reached.
 
-All node operators must cooperate in the migration. \(Technically [http://0.0.0.0:8080y](http://0.0.0.0:8080) only &gt; 50% of the delegates need to migrate. However, you should avoid a community split\). We recommend having a dedicated slack channel, monitored by your team during the entire migration process, so that you may provide assistance.
+All node operators must cooperate in the migration. \(Technically [http://0.0.0.0:8080y](http://0.0.0.0:8080) only &gt; 50% of the delegates need to migrate. However, you should avoid a community split\). We recommend having a dedicated [Discord](https://discord.ark.io) channel, monitored by your team during the entire migration process, so that you may provide assistance.
 
 Together with your node operators, it would be best if you decided on a cutoff block `height`, after this height, `v1` will no longer be supported in your BridgeChain, and services relying on `v1` nodes may break and should be considered unreliable.
 

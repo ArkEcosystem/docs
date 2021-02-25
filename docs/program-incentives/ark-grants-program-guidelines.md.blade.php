@@ -86,7 +86,7 @@ Please include the following information in your application where applicable. T
 
 * Name
 * Email Address
-* Slack and/or Discord Handle
+* [Discord](https://discord.ark.io) Handle
 * Github Username / Profile Link
 * Brief Bio \(2-3 paragraphs\) & Portfolio Links if available
 

@@ -27,7 +27,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 * **Do** send pull requests that add new features that were previously discussed.
 * **Don't** send pull requests that add new features without any previous discussion about the usefulness, implementation or implications of adding it.
 * **Do** send pull requests that improve code readability.
-* **Don't** send pull requests that improve code readability to your liking. _Follow the standards that are specified in the project. Should you have questions, refer to our existing codebases, or contact us on_ [_slack_](https://ark.io/slack)_._
+* **Don't** send pull requests that improve code readability to your liking. _Follow the standards that are specified in the project. Should you have questions, refer to our existing codebases, or contact us on_ [_Discord_](https://discord.ark.io)_._
 * **Do** send pull requests that improve stability.
 * **Don't** send pull requests that improve stability by replacing dependencies. Without discussion, this can lead to breaking changes.
 * **Do** send pull requests that improve test coverage.

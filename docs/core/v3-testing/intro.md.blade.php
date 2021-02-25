@@ -18,7 +18,7 @@ It is important to understand that ARK Core v3.0 is a massive improvement over e
 > *For a full list of current changes and upgrades, take a look at the* **[Core V3 Changelog](https://github.com/ArkEcosystem/core/blob/develop/CHANGELOG.md).** *Even more may come as a result of this testing phase.*
 
 ## Join the Testing!
-Help from our community during this test phase is critical to ensure a smooth transition from 2.7 to 3.0 on the ARK Public Network. If you would like to help out with testing then please join the ARK's [Slack](https://ark.io/slack) and join the #devnet channel. Within this channel you will find all the assistance required to get started with Core V3 on the ARK Development Network. 
+Help from our community during this test phase is critical to ensure a smooth transition from 2.7 to 3.0 on the ARK Public Network. If you would like to help out with testing then please join us on [Discord](https://discord.ark.io) in the #devnet channel. Within this channel you will find all the assistance required to get started with Core V3 on the ARK Development Network. 
 
 As you test different aspects of Core V3, you are encouraged to use your own initiative and come up with interesting and unique ways to test Core 3.0. 
 

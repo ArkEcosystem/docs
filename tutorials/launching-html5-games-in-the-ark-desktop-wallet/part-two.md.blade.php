@@ -198,7 +198,7 @@ Congratulations on reaching the end of the tutorial! It might not seem like much
 
 That’s it for Part 2 of this tutorial series. In our next session, we will make the game work with a betting system and create a lobby to start games and see existing ones!
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Slack](https://ark.io/slack) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 
 ## Missed the previous part?
 <livewire:page-reference path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one" />
