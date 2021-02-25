@@ -48,7 +48,7 @@ Some ARK holders want to be more directly involved and participate in the networ
 
 <livewire:page-reference path="/docs/core/getting-started/installation" />
 
-You can also join our [Community Slack](https://ark.io/slack) to ask questions and find out more from our large community of contributors and active delegates. 
+You can also join us on [Discord](https://discord.ark.io) to ask questions and find out more from our large community of contributors and active delegates. 
 
 ## Contact Us
 

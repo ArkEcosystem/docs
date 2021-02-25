@@ -146,7 +146,7 @@ The ARK GitHub Bot will also be tied into our new upcoming website. Which will v
 
 ## Want to chat with other developers and brainstorm on new exciting ideas or share your thoughts?
 
-1. [Join ARK Slack](https://ark.io/slack)
+1. Join us on [Discord](https://discord.ark.io)
 
 Submitting PR (Pull-Request) is a tacit agreement of the ongoing terms. The decision of the monetary reward is the sole responsibility of the ARK team, and no appeals will be taken. We reserve the right to change any rules and rewards on monthly basis, changes will be updated on the first or second of the month on this page, so you will always know what to expect for the current month.*
 

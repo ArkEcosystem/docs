@@ -186,7 +186,9 @@ Once the installation of dependencies and ARK Core is finished you will need to 
    testnet
 ```
 
-> If you are tinkering and want to play with ARK for the first time, select `devnet` and request dARK coins in our [public Slack](https://ark.io/slack/).
+<x-alert type="info">
+Experimenting with `Devnet`? Create an Address using the [ARK Desktop Wallet](https://ark.io/download#desktop-wallet), then head over to [Discord](https://discord.ark.io) and visit the **`#community_bots`** channel. Use the **`!faucet`** command to receive DARK tokens.
+</x-alert>
 
 After you have made your selection, you will need to confirm by pressing `y` and confirm again with `enter`
 

@@ -292,4 +292,4 @@ Alternatives to this approach are:
 
 In our next and final tutorial, we will be deploying a bridgechain and launching the client application. In addition, we will be highlighting all of the examples pertaining to how developers can work with the ARK Core. With future updates and improvements, ARK Core will continue to be one of the simplest and most flexible ways to build blockchain solutions.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Slack](https://ark.io/slack) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
