@@ -20,7 +20,7 @@ On the APN, **100%** of the **block reward** goes to the **validator**.
 
 ## Voting on the ARK Public Network
 
-The APN uses a system of **voting** rather than **staking**. In order to vote for a Validator and delegate your influence to them, you do not need to *stake* your coins. This allows ARK holders to have more freedom and access to their coins while still allowing them to participate in the governance of the network. 
+The APN uses **voting** as a form of **staking**. In order to vote for a Validator and delegate your influence to them, you do not need to *lock* your coins. This allows ARK holders to have more freedom and access to their coins while still allowing them to participate in the governance of the network. 
 
 To learn how to vote, read our guide on [How to Vote or Unvote a Delegate](https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote). 
 
