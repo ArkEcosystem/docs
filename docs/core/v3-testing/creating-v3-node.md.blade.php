@@ -33,11 +33,7 @@ usermod -aG sudo ark
 ```
 
 ```
-su ark
-```
-
-```
-cd ~
+su - ark
 ```
 
 ```
