@@ -33,7 +33,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -77,7 +77,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -114,7 +114,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -151,7 +151,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -192,7 +192,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -233,7 +233,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -279,7 +279,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -316,7 +316,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -355,7 +355,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -397,7 +397,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -444,7 +444,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
@@ -488,7 +488,7 @@ set_network(Devnet)
 # Configure our API client
 client = ArkClient('https://dexplorer.ark.io/api')
 
-# Step 1: Retrieve the nonce of the sender wallet
+# Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 

@@ -6,7 +6,7 @@ title: Understanding Transaction Nonce
 
 ## Introduction
 
-In ARK, every transaction has a nonce. The nonce is the number of transactions sent from a given address. Each time you send a transaction, the nonce value increases by **1**. There are rules about what transactions are considered valid transactions, and the nonce is used to enforce some of these rules.
+In ARK, every transaction has a sequential nonce. The nonce is the number of transactions sent from a given address. Each time you send a transaction, the nonce value increases by **1**. There are rules about what transactions are considered valid transactions, and the nonce is used to enforce some of these rules.
 
 **Specifically:**
 
@@ -15,7 +15,7 @@ In ARK, every transaction has a nonce. The nonce is the number of transactions s
 
 ## How To Get Nonce Value For An Address?
 
-A nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilizing the Public API, more specifically the [wallet endpoint](/docs/api/public-rest-api/endpoints/wallets#retrieve-a-wallet). The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
+A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilizing the Public API, more specifically the [wallet endpoint](/docs/api/public-rest-api/endpoints/wallets#retrieve-a-wallet). The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
 
 ```javascript
 {
@@ -50,7 +50,7 @@ You have to keep track locally of the next nonce value in case you intend to sen
 
 For example, we have a wallet with nonce 123 and want to send 3 transactions to be forged in the next block. These transactions will require nonce values 124, 125 and 126 respectively, and you will have to set the values, before creating transactions.
 
-After the block is forged, the API will report the nonce of the wallet to be 126.
+After the block is forged, the API will report the _current_ nonce of the wallet to be 126.
 
 ## **Why does it matter?**
 

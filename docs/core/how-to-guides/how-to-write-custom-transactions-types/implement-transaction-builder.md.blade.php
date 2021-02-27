@@ -4,7 +4,7 @@ title: Implement Transaction Builder
 
 # Implement Transaction Builder
 
-Builder class handles versioning, serde process, milestones, dynamic-fee logic and _all cryptography related items_ \(sign, multisign, second-sign, sign with and without WIF, nonce logic\). The following code-snippet shows the actual [implementation of the **Builder**](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/builders/BusinessRegistrationBuilder.ts#L4) class for the BusinessRegistration Transaction.
+Builder class handles versioning, serde process, milestones, dynamic-fee logic and _all cryptography related items_ \(sign, multisign, second-sign, sign with and without WIF, sequential [nonce](/docs/core/transactions/understanding-transaction-nonce) logic\). The following code-snippet shows the actual [implementation of the **Builder**](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/builders/BusinessRegistrationBuilder.ts#L4) class for the BusinessRegistration Transaction.
 
 <x-alert type="success">
 Builder is something you will reuse in your **client applications** for creating new transaction payloads.

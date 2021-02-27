@@ -495,13 +495,13 @@ Sets the typeGroup of transaction.
 public TBuilder nonce(long nonce)
 ```
 
-Sets the nonce of transaction. To see how nonces work, check this guide [Understanding Transaction Nonce](/docs/core/transactions/understanding-transaction-nonce).
+Sets the nonce of transaction. To see how sequential nonces work, check this guide [Understanding Transaction Nonce](/docs/core/transactions/understanding-transaction-nonce).
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| long | nonce | Yes | Nonce of transaction |
+| long | nonce | Yes | Sequential Nonce of transaction |
 
 ### `network()`
 
