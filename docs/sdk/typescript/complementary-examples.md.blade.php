@@ -39,7 +39,7 @@ The process of getting your transaction verified and persisted on the ARK Blockc
 
 1. Install the Client SDK and configure it to use a node of your choosing to broadcast your transactions to. Always make sure that you have a fallback node that you can use for broadcasting in case your primary node goes offline or acts strange otherwise.
 2. Install the Crypto SDK and configure it to match the configuration of the network. This is the most important part as misconfiguration can lead to a myriad of issues as Core will reject your transactions.
-3. Retrieve the nonce of the sender wallet and increase it by 1. You can read about what the nonce is and why it is important [here](/docs/core/transactions/understanding-transaction-nonce).
+3. Retrieve the nonce of the sender wallet and increase it by 1. You can read about what a sequential nonce is and why it is important [here](/docs/core/transactions/understanding-transaction-nonce).
 4. Create an instance of the builder for the type of transaction you want to create. This is the step where we actually create a transaction and sign it so that the ARK Blockchain can later on verify it and decide if it will be accepted, forged and finally. You can read the relevant [API documentation](/docs/sdk/typescript/crypto/api-documentation) if you want more detailed information about the design and usage.
 5. Turn the newly created transaction into JSON and broadcast it to the network through the Client SDK. You can read the relevant [API documentation](/docs/sdk/typescript/client/api-documentation) if you want more detailed information about the design and usage.
 6. Process the API response and verify that your transaction was accepted. If the network rejects your transaction you'll receive the reason as to why that is the case in the response which might mean that you need to create a new transaction and broadcast it.
@@ -78,7 +78,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -117,7 +117,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -150,7 +150,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -183,7 +183,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -220,7 +220,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -257,7 +257,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -301,7 +301,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -334,7 +334,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -369,7 +369,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -405,7 +405,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -445,7 +445,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 
@@ -485,7 +485,7 @@ Managers.configManager.setFromPreset("devnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
-    // Step 1: Retrieve the nonce of the sender wallet
+    // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
     const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
 

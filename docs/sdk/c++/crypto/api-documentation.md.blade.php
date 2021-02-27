@@ -960,7 +960,7 @@ Build a Transfer Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1017,7 +1017,7 @@ Build a Second Signature Registration Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1070,7 +1070,7 @@ Build a Delegate Registration Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1124,7 +1124,7 @@ Build a Vote Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1179,7 +1179,7 @@ Build an Ipfs Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1234,7 +1234,7 @@ Build a MultiPayment Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1295,7 +1295,7 @@ Build an Htlc Lock Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1353,7 +1353,7 @@ Build an Htlc Claim Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |
@@ -1407,7 +1407,7 @@ Build an Htlc Claim Transaction
 | uint8\_t | network | No | Network version |
 | uint16\_t | typeGroup | No | Transaction Type-Group |
 | uint16\_t | type | No | Transaction Type |
-| uint64\_t | nonce | Yes | Transaction nonce |
+| uint64\_t | nonce | Yes | Transaction \(Sequential\) Nonce |
 | const uint8\_t\* | senderPublicKey | No | Sender PublicKey |
 | uint64\_t | fee | No | Transaction fee |
 |  |  |  |  |

@@ -65,7 +65,7 @@ public class Transfer {
         configurations.put("content-type","application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -129,7 +129,7 @@ public class SecondSignature {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -182,7 +182,7 @@ public class DelegateRegistration {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -239,7 +239,7 @@ public class Vote {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -301,7 +301,7 @@ public class Vote {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -362,7 +362,7 @@ public class Ipfs {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -419,7 +419,7 @@ public class MultiPayment {
         configurations.put("content-type","application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -476,7 +476,7 @@ public class DelegateResignation {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -536,7 +536,7 @@ public class HtlcLock {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -597,7 +597,7 @@ public class HtlcClaim {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")
@@ -659,7 +659,7 @@ public class HtlcRefund {
         configurations.put("content-type", "application/json");
         Connection connection = new Connection(configurations);
 
-        // Retrieve the nonce
+        // Retrieve the sequential nonce
         long nonce = Long.parseLong(((LinkedTreeMap<String, Object>) connection.api()
                 .wallets
                 .show("YOUR_SENDER_WALLET_ADDRESS")

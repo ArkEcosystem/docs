@@ -429,7 +429,7 @@ Set the nonce of the transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | nonce | Yes | Nonce of the transaction |
+| int | nonce | Yes | Sequential Nonce of the transaction |
 
 #### Return Value
 

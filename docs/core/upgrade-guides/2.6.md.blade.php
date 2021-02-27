@@ -17,7 +17,7 @@ So what’s new? Well, quite a lot actually… In the most exciting feature-pack
 ### New Features:
 
 * \*\*\*\* **Generic Transaction Interface \(GTI\)** — Developers can use the GTI to create custom transaction types tailored to their exact needs using custom logic. An alternative to smart contracts, the GTI on ARK Core gives developers an incredibly simple way to build their own applications using ARK’s blockchain technology — simple, clean and very effective.
-* \*\*\*\* **Nonces for Transactions** — We’ve added nonces for transactions, which means adding a sequential number to transactions to make them unique. This helps mitigate the risk of replay attacks and makes the blockchain even more secure.
+* \*\*\*\* **Sequential Nonces for Transactions** - We’ve added a sequential [nonce](/docs/core/transactions/understanding-transaction-nonce) for transactions, which means adding a sequential number to transactions to make them unique. This helps mitigate the risk of replay attacks and makes the blockchain even more secure.
 
 ### **New Transaction Types:**
 
