@@ -1986,7 +1986,7 @@ Set Transfer expiration.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| number | expiration | Yes | When the transaction should expire |
+| number | expiration | Yes | The block-height or time when the transaction should expire |
 
 #### Return Value
 
