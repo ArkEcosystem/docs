@@ -230,7 +230,7 @@ See ARK Explorer.
 **More:** [ARK Explorer](glossary#ark-explorer)
 
 ### Block Height
-Integer used to determine the specific order of a block in a Blockchain. If a chain contains 10 blocks, the oldest block has a height of 0 and the newest block has a height of 9.  
+Integer used to determine the specific order of a block in a Blockchain. If a chain contains 10 blocks, the oldest block has a height of 1 and the newest block has a height of 10.  
 **More:** [Blockchain](glossary#blockchain)
 
 ### Block ID
