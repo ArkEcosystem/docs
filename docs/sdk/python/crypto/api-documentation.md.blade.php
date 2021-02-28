@@ -477,7 +477,7 @@ Set the Public Key of the transaction.
 def set_expiration(self, expiration):
 ```
 
-Set the expiration of the transaction.
+Set the block-height or time when the transaction should expire.
 
 #### Parameters
 
@@ -773,7 +773,7 @@ Create a new HtlcLock transaction instance
 | str | recipient\_id | Yes | Transaction recipient |
 | str | secret\_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
 | int | expiration\_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
-| int | expiration\_value | Yes | Transaction expiration value. In seconds or height depending on expiration\_type |
+| int | expiration\_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
 | int | fee | No | Transaction fee |
 
 #### Return Value
