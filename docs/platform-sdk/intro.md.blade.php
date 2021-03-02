@@ -62,6 +62,7 @@ The **Cryptography** section will introduce you to do encryption, hashing and id
         ['path' => '/docs/platform-sdk/crypto', 'name' => 'Introduction'],
         ['path' => '/docs/platform-sdk/crypto/aes', 'name' => 'AES'],
         ['path' => '/docs/platform-sdk/crypto/argon2', 'name' => 'argon2'],
+        ['path' => '/docs/platform-sdk/crypto/base64', 'name' => 'Base64'],
         ['path' => '/docs/platform-sdk/crypto/bcrypt', 'name' => 'bcrypt'],
         ['path' => '/docs/platform-sdk/crypto/bip38', 'name' => 'BIP38'],
         ['path' => '/docs/platform-sdk/crypto/bip39', 'name' => 'BIP39'],
