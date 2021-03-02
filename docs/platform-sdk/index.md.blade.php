@@ -58,6 +58,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/bip44" name="BIP44" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/hash" name="Hash" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/keychain" name="Keychain" />
+<x-general.sidebar-link path="/docs/platform-sdk/crypto/pbkdf2" name="PBKDF2" />
 
 ## Internationalization
 

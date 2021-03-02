@@ -28,6 +28,7 @@ yarn add @arkecosystem/platform-sdk-crypto
         ['path' => '/docs/platform-sdk/crypto/bip44', 'name' => 'BIP44'],
         ['path' => '/docs/platform-sdk/crypto/hash', 'name' => 'Hash'],
         ['path' => '/docs/platform-sdk/crypto/keychain', 'name' => 'Keychain'],
+        ['path' => '/docs/platform-sdk/crypto/pbkdf2', 'name' => 'PBKDF2'],
     ]"
 />
 
