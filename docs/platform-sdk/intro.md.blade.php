@@ -68,6 +68,7 @@ The **Cryptography** section will introduce you to do encryption, hashing and id
         ['path' => '/docs/platform-sdk/crypto/bip44', 'name' => 'BIP44'],
         ['path' => '/docs/platform-sdk/crypto/hash', 'name' => 'Hash'],
         ['path' => '/docs/platform-sdk/crypto/keychain', 'name' => 'Keychain'],
+        ['path' => '/docs/platform-sdk/crypto/pbkdf2', 'name' => 'PBKDF2'],
     ]"
 />
 
