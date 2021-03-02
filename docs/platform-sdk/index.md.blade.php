@@ -52,6 +52,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk/crypto" name="Introduction" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/aes" name="AES" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/argon2" name="argon2" />
+<x-general.sidebar-link path="/docs/platform-sdk/crypto/base64" name="Base64" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/bcrypt" name="bcrypt" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/bip38" name="BIP38" />
 <x-general.sidebar-link path="/docs/platform-sdk/crypto/bip39" name="BIP39" />
