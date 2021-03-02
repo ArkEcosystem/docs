@@ -4,7 +4,7 @@ title: BIP39
 
 # BIP39
 
-The `BIP39` class provides methods to extract the numerical value out of any currency representation by normalizing the input and removing any locale specific rules like symbols and use of commas.
+The `BIP39` class provides methods to generate, extract, normalize, and validate mnemonic recovery phrases.
 
 ### Importing the BIP39 class
 
@@ -28,6 +28,12 @@ BIP39.validate('scout mushroom doctor prepare identify obvious soccer stage sudd
 
 ```typescript
 BIP39.toSeed('scout mushroom doctor prepare identify obvious soccer stage sudden already brass december million wish flower');
+```
+
+### Turn a mnemonic into entropy
+
+```typescript
+BIP39.toEntropy('scout mushroom doctor prepare identify obvious soccer stage sudden already brass december million wish flower');
 ```
 
 ### Normalize a passphrase
