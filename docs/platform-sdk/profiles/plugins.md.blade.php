@@ -14,19 +14,49 @@ These methods are accessible through `profile.plugins()` which exposes a `Plugin
 profile.plugins().all();
 ```
 
-### Register a new plugin for the given data
+### Get the first listed plugin
 
 ```typescript
-profile.plugins().push({ id: "@hello/world", name: "@hello/world" });
+profile.plugins().first();
 ```
 
-### Find the plugin for the given ID
+### Get the last listed plugin
+
+```typescript
+profile.plugins().last();
+```
+
+### Get all data keys
+
+```typescript
+profile.plugins().keys();
+```
+
+### Get all data values
+
+```typescript
+profile.plugins().values();
+```
+
+### Register a new plugin
+
+```typescript
+profile.plugins().push(stubPlugin);
+```
+
+### Restore previously created data
+
+```typescript
+profile.plugins().fill({ ["@hello/world"]: stubPlugin });
+```
+
+### Find the plugin for a given Id
 
 ```typescript
 profile.plugins().findById("@hello/world");
 ```
 
-### Forget the plugin for the given ID
+### Forget a plugin using its Id
 
 ```typescript
 profile.plugins().forget("@hello/world");
@@ -38,22 +68,10 @@ profile.plugins().forget("@hello/world");
 profile.plugins().flush();
 ```
 
-## Blacklist
-
-<x-alert type="info">
-These methods are accessible through `profile.plugins().blacklist()` which exposes a `Set<number>` instance. The `Set` instance is a native [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) as opposed to a `DataRepository`.
-</x-alert>
-
-### Add a plugin to the blacklist
+### Get the count of stored plugins
 
 ```typescript
-profile.plugins().blacklist().add(123);
-```
-
-### Remove a plugin from the blacklist
-
-```typescript
-profile.plugins().blacklist().delete("@hello/world");
+profile.plugins().count();
 ```
 
 ## Registry
@@ -62,14 +80,20 @@ profile.plugins().blacklist().delete("@hello/world");
 These methods are accessible through `profile.plugins().registry()` which exposes a `PluginRegistry` instance.
 </x-alert>
 
-### Get a list of plugins from the MarketSquare API
+### Get a list of registered plugins
 
 ```typescript
 profile.plugins().registry().all();
 ```
 
-### Get aa specific plugin from the MarketSquare API
+### Get the size of a specific registry plugin
 
 ```typescript
-profile.plugins().registry().findById("@hello/world");
+profile.plugins().registry().size(registryPlugin);
+```
+
+### Get the download count of a specific registry plugin
+
+```typescript
+profile.plugins().registry().downloads(registryPlugin);
 ```
