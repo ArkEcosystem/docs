@@ -8,10 +8,22 @@ title: Contacts
 These methods are accessible through `profile.contacts()` which exposes a `ContactRepository` instance.
 </x-alert>
 
-### Get a list of all contacts with key and value
+### Get a list of all contacts
 
 ```typescript
 profile.contacts().all();
+```
+
+### Get the first stored contact
+
+```typescript
+profile.contacts().first();
+```
+
+### Get the last stored contact
+
+```typescript
+profile.contacts().last();
 ```
 
 ### Get a list of all wallet keys
@@ -36,10 +48,40 @@ profile.contacts().create({
 });
 ```
 
+### Fill the contacts with the given contacts object
+
+```typescript
+profile.contacts().fill(contacts);
+```
+
 ### Find the contact for the given ID
 
 ```typescript
 profile.contacts().findById("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
+```
+
+### Update a contact using its Id and provided information
+
+```typescript
+profile.contacts().update(newContact.id(), { name: "Jane Doe" });
+```
+
+### Forget the contact for the given ID
+
+```typescript
+profile.contacts().forget("uuid");
+```
+
+### Forget all contacts (Use with caution!)
+
+```typescript
+profile.contacts().flush();
+```
+
+### Get the count of stored contacts
+
+```typescript
+profile.contacts().count();
 ```
 
 ### Find the contact for the given address
@@ -60,14 +102,8 @@ profile.contacts().findByCoin("ARK");
 profile.contacts().findByNetwork("devnet");
 ```
 
-### Forget the contact for the given ID
+### Get the contacts data as an Object
 
 ```typescript
-profile.contacts().forget("uuid");
-```
-
-### Forget all contacts (Use with caution!)
-
-```typescript
-profile.contacts().flush();
+profile.contacts().toObject();
 ```
