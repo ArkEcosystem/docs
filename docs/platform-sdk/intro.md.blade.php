@@ -20,6 +20,7 @@ The **Coin** section will introduce you to Coins. Coin are the most important pa
         ['path' => '/docs/platform-sdk/coins/eth', 'name' => 'ETH'],
         ['path' => '/docs/platform-sdk/coins/lsk', 'name' => 'LSK'],
         ['path' => '/docs/platform-sdk/coins/neo', 'name' => 'NEO'],
+        ['path' => '/docs/platform-sdk/coins/sol', 'name' => 'SOL'],
         ['path' => '/docs/platform-sdk/coins/trx', 'name' => 'TRX'],
         ['path' => '/docs/platform-sdk/coins/xlm', 'name' => 'XLM'],
         ['path' => '/docs/platform-sdk/coins/xrp', 'name' => 'XRP'],
