@@ -24,6 +24,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk/coins/avax" name="AVAX" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/btc" name="BTC" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/dot" name="DOT" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/egld" name="EGLD" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eos" name="EOS" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eth" name="ETH" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/lsk" name="LSK" />
