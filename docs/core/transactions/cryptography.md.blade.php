@@ -92,7 +92,7 @@ The DEC representation is the "base 10" interpretation of our PrivateKey and giv
 
 ### WIF \(PrivateKey\)
 
-WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for ARK Mainnet & Devnet Network.
+WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for ARK Mainnet & Devnet Network\). The compression byte indicates that ARK uses compressed PublicKeys.
 
 ![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
 
