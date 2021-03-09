@@ -17,11 +17,11 @@ const thirdPage = await profile.transactionAggregate().transactions();
 ### List transactions for a wallet
 
 ```typescript
-const response = await wallet.transactionAggregate().transactions({ limit: 15 });
+const response = await wallet.transactions({ limit: 15 });
 
 if (response.hasMore()) {
     // This will automatically advanced to the next page of every wallet with a limit of 15.
-	await wallet.transactionAggregate().transactions({ limit: 15 });
+	const nextPage = await wallet.transactions({ limit: 15 });
 }
 ```
 
@@ -43,7 +43,7 @@ const transactionId = await wallet.transaction().signTransfer({
 await wallet.transaction().broadcast(transactionId);
 
 // 3. Periodically check if the transaction has been confirmed
-await wallet.transactions().confirm(transactionId);
+await wallet.transaction().transaction(transactionId).hasBeenConfirmed();
 ```
 
 ### Sign and broadcast a transaction with multi-signature with 2 participants
@@ -93,17 +93,25 @@ You should always ensure to call `wallet.syncIdentity()` before trying to sign t
 // This is the initial transaction without any signatures.
 const transactionId = await wallet.transaction().signMultiSignature({
 	nonce: "2",
-	from: wallet1Address,
+	from: "AH3Ca9QE9u9jKKTdUaLjAQqcqK4ZmSkVqp,
 	sign: {
 		multiSignature: {
-			publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
+			publicKeys:[
+				"0205d9bbe71c343ac9a6a83a4344fd404c3534fc7349827097d0835d160bc2b896",
+				"03df0a1eb42d99b5de395cead145ba1ec2ea837be308c7ce3a4e8018b7efc7fdb8",
+				"03860d76b1df09659ac282cea3da5bd84fc45729f348a4a8e5f802186be72dc17f"
+			],
 			min: 3,
 		}
 	},
 	data: {
-		publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
+		publicKeys:[
+			"0205d9bbe71c343ac9a6a83a4344fd404c3534fc7349827097d0835d160bc2b896",
+			"03df0a1eb42d99b5de395cead145ba1ec2ea837be308c7ce3a4e8018b7efc7fdb8",
+			"03860d76b1df09659ac282cea3da5bd84fc45729f348a4a8e5f802186be72dc17f"
+		],
 		min: 3,
-		senderPublicKey: wallet1PublicKey,
+		senderPublicKey: "0205d9bbe71c343ac9a6a83a4344fd404c3534fc7349827097d0835d160bc2b896",
 	},
 });
 
