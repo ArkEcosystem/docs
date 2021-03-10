@@ -49,9 +49,9 @@
         "signMessage": false
     },
     "Link": {
-        "block": false,
-        "transaction": false,
-        "wallet": false
+        "block": true,
+        "transaction": true,
+        "wallet": true
     },
     "Message": {
         "sign": false,
@@ -61,7 +61,7 @@
         "search": false
     },
     "Transaction": {
-        "transfer": false,
+        "transfer": true,
         "secondSignature": false,
         "delegateRegistration": false,
         "vote": false,
