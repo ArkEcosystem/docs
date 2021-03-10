@@ -61,7 +61,7 @@
         "search": false
     },
     "Transaction": {
-        "transfer": false,
+        "transfer": true,
         "secondSignature": false,
         "delegateRegistration": false,
         "vote": false,

@@ -21,7 +21,7 @@
             "mnemonic": true,
             "multiSignature": false,
             "publicKey": false,
-            "privateKey": false,
+            "privateKey": true,
             "wif": false
         },
         "publicKey": {
@@ -49,9 +49,9 @@
         "signMessage": false
     },
     "Link": {
-        "block": false,
-        "transaction": false,
-        "wallet": false
+        "block": true,
+        "transaction": true,
+        "wallet": true
     },
     "Message": {
         "sign": true,
@@ -61,10 +61,10 @@
         "search": false
     },
     "Transaction": {
-        "transfer": false,
+        "transfer": true,
         "secondSignature": false,
         "delegateRegistration": false,
-        "vote": false,
+        "vote": true,
         "multiSignature": false,
         "ipfs": false,
         "multiPayment": false,

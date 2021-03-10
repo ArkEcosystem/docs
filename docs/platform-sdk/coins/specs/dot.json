@@ -49,19 +49,19 @@
         "signMessage": false
     },
     "Link": {
-        "block": false,
+        "block": true,
         "transaction": true,
-        "wallet": false
+        "wallet": true
     },
     "Message": {
-        "sign": false,
-        "verify": false
+        "sign": true,
+        "verify": true
     },
     "Peer": {
         "search": false
     },
     "Transaction": {
-        "transfer": false,
+        "transfer": true,
         "secondSignature": false,
         "delegateRegistration": false,
         "vote": false,
