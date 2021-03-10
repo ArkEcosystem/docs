@@ -14,6 +14,24 @@ These methods are accessible through `profile.wallets()` which exposes a `Wallet
 profile.wallets().all();
 ```
 
+### Get the first listed wallet
+
+```typescript
+profile.wallets().first();
+```
+
+### Get the last listed wallet
+
+```typescript
+profile.wallets().last();
+```
+
+### Get a list of all wallets grouped by coin
+
+```typescript
+profile.wallets().allByCoin();
+```
+
 ### Get a list of all wallet keys
 
 ```typescript
@@ -41,13 +59,25 @@ await profile.wallets().importByAddress("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "A
 ### Create a new wallet from an address, coin implementation, network and ledger account index
 
 ```typescript
-await profile.wallets().importByAddressWithLedgerIndex("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "ARK", "devnet", 0);
+await profile.wallets().importByAddressWithLedgerPath("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "ARK", "devnet", "0");
 ```
 
 ### Create a new wallet from an address, coin implementation, network and BIP38 password
 
 ```typescript
 await profile.wallets().importByMnemonicWithEncryption("this is a top secret passphrase", "ARK", "devnet", "password");
+```
+
+### Generate a new wallet from a coin implementation and network
+
+```typescript
+await profile.wallets().generate("ARK", "ark.devnet");
+```
+
+### Restore a wallet using its wallet data
+
+```typescript
+profile.wallets().restore(wallet);
 ```
 
 ### Find the wallet by the given ID
@@ -71,10 +101,34 @@ profile.wallets().findByPublicKey("034151a3ec46b5670a682b0a63394f863587d1bc97483
 ### Find all wallets that use the given coin
 
 ```typescript
-profile.wallets().findByCoin("ARK");
+profile.wallets().findByCoin("DARK");
 ```
 
-### Forget the wallet for the given ID
+### Find all wallets that use the given coin and network
+
+```typescript
+profile.wallets().findByCoinWithNetwork("DARK", "ark.devnet");
+```
+
+### Find all wallets that use the given alias
+
+```typescript
+profile.wallets().findByAlias("Alias");
+```
+
+### Update a wallet using a given wallet Id and data
+
+```typescript
+profile.wallets().update(newWallet.id(), { alias: "My New Wallet" });
+```
+
+### Check that a wallet contains the provided data
+
+```typescript
+profile.wallets().has(wallet.id());
+```
+
+### Forget a wallet for a given Id
 
 ```typescript
 profile.wallets().forget("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
@@ -86,30 +140,76 @@ profile.wallets().forget("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 profile.wallets().flush();
 ```
 
+### Get the count of stored wallets
+
+```typescript
+profile.wallets().count();
+```
+
+### Return all stored wallets as a single object
+
+```typescript
+profile.wallets().toObject();
+```
+
 ## API Calls
+
+<x-alert type="info">
+The following methods are accessible through `profile.wallets()` and provide a means of interacting with the underlying coin.
+</x-alert>
+
+### API Options
+
+```typescript
+// ClientPagination
+cursor?: string | number;
+limit?: number;
+orderBy?: string;
+
+// ClientTransactionsInput
+address?: string;
+addresses?: string[];
+senderId?: string;
+recipientId?: string;
+walletId?: string;
+senderPublicKey?: string;
+recipientPublicKey?: string;
+entityType?: number;
+entitySubType?: number;
+entityAction?: string;
+asset?: Record<string, any>;
+type?: number;
+typeGroup?: number;
+
+// ClientWalletsInput
+address?: string;
+addresses?: string[];
+publicKey?: string;
+username?: string;
+```
 
 ### List all transactions that a wallet has sent or received
 
 ```typescript
-await wallet.transactions();
+await wallet.transactions({ limit: 15 });
 ```
 
 ### List all transactions that a wallet has sent
 
 ```typescript
-await wallet.sentTransactions();
+await wallet.sentTransactions({ limit: 100 });
 ```
 
 ### List all transactions that a wallet received
 
 ```typescript
-await wallet.receivedTransactions();
+await wallet.receivedTransactions({ });
 ```
 
 ### Get information about a wallet from the network
 
 ```typescript
-await wallet.wallet("username");
+await wallet.wallet("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 ```
 
 ### Get a list of wallets from the network that match the given criteria
@@ -121,7 +221,7 @@ await wallet.wallets({ ... });
 ### Get information about a delegate from the network
 
 ```typescript
-await wallet.delegate("username");
+await wallet.delegate("genesis_1");
 ```
 
 ### Get a list of delegates from the network that match the given criteria
@@ -133,13 +233,13 @@ await wallet.delegates({ ... });
 ### List all votes that a wallet casted
 
 ```typescript
-await wallet.votes();
+await wallet.votes("034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");
 ```
 
 ### List all voters that a wallet has
 
 ```typescript
-await wallet.voters();
+await wallet.voters("genesis_1");
 ```
 
 ### Check if the peer is syncing
@@ -222,7 +322,21 @@ await wallet.transaction().signHtlcClaim(input, options);
 await wallet.transaction().signHtlcRefund(input, options);
 ```
 
-##  Messages
+## Messages
+
+### Message options
+
+```typescript
+// MessageInput
+message: string;
+mnemonic: string;
+
+// SignedMessage
+message: string;
+signatory: string;
+signature: string;
+mnemonic?: string;
+```
 
 ### Sign a new message
 
@@ -253,13 +367,13 @@ await wallet.ledger().getPublicKey(path);
 ### Sign a transaction with ledger
 
 ```typescript
-await wallet.ledger().signTransaction(path, payload);
+await wallet.ledger().signTransaction(path, serializedTx);
 ```
 
 ### Sign a message with ledger
 
 ```typescript
-await wallet.ledger().signMessage(path, payload);
+await wallet.ledger().signMessage(path, asciiMessage);
 ```
 
 ## Links
