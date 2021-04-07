@@ -520,8 +520,8 @@ Password set by the user to encrypt and secure a passphrase, mnemonic, seed, or 
 **More:** [Private Key](glossary#private-key), [Blockchain](glossary#blockchain), [Passphrase](glossary#passphrase), [Mnemonic](glossary#mnemonic), [Key](glossary#key)
 
 ### Entity Declaration Transaction Type
-Transaction type as of ARK Core v2.7 that allows people or organizations to register data on the ARK Public Network via IPFS. Critical component of MarketSquare.  
-**More:** [ARK Public Network](glossary#ark-public-network), [MarketSquare](glossary#marketsquare), [Transaction](glossary#transaction), [ARK Core](glossary#ark-core), [IPFS](glossary#ipfs)
+Transaction type as of ARK Core v2.7 that allows people or organizations to register data on the ARK Public Network via IPFS.  
+**More:** [ARK Public Network](glossary#ark-public-network), [Transaction](glossary#transaction), [ARK Core](glossary#ark-core), [IPFS](glossary#ipfs)
 
 ## F
 ---
@@ -698,8 +698,8 @@ Method of multisignature where out of N wallet addresses, M must sign a transact
 **More:** [Transaction Pool](glossary#transaction-pool), [Multisignature](glossary#multisignature), [Wallet Address](glossary#wallet-address), [Transaction](glossary#transaction), [Protocol](glossary#protocol)
 
 ### Magistrate 2.0
-Module of ARK Core that handles the Entity Declaration Transaction Type. Critical component of MarketSquare.  
-**More:** [Entity Declaration Transaction Type](glossary#entity-declaration-transaction-type), [MarketSquare](glossary#marketsquare), [ARK Core](glossary#ark-core), [Module](glossary#module)
+Module of ARK Core that handles the Entity Declaration Transaction Type.  
+**More:** [Entity Declaration Transaction Type](glossary#entity-declaration-transaction-type), [ARK Core](glossary#ark-core), [Module](glossary#module)
 
 ### Mainnet
 Informal term for Public Network.  
