@@ -66,12 +66,16 @@ The **Cryptography** section will introduce you to do encryption, hashing and id
         ['path' => '/docs/platform-sdk/crypto/argon2', 'name' => 'argon2'],
         ['path' => '/docs/platform-sdk/crypto/base64', 'name' => 'Base64'],
         ['path' => '/docs/platform-sdk/crypto/bcrypt', 'name' => 'bcrypt'],
+        ['path' => '/docs/platform-sdk/crypto/bip32', 'name' => 'BIP32'],
         ['path' => '/docs/platform-sdk/crypto/bip38', 'name' => 'BIP38'],
         ['path' => '/docs/platform-sdk/crypto/bip39', 'name' => 'BIP39'],
         ['path' => '/docs/platform-sdk/crypto/bip44', 'name' => 'BIP44'],
         ['path' => '/docs/platform-sdk/crypto/hash', 'name' => 'Hash'],
+        ['path' => '/docs/platform-sdk/crypto/hdkey', 'name' => 'HDKey'],
         ['path' => '/docs/platform-sdk/crypto/keychain', 'name' => 'Keychain'],
         ['path' => '/docs/platform-sdk/crypto/pbkdf2', 'name' => 'PBKDF2'],
+        ['path' => '/docs/platform-sdk/crypto/uuid', 'name' => 'UUID'],
+        ['path' => '/docs/platform-sdk/crypto/wif', 'name' => 'WIF'],
     ]"
 />
 
