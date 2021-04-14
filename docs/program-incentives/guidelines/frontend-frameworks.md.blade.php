@@ -38,13 +38,18 @@ Make use of [RustyWind](https://github.com/avencera/rustywind) to ensure that us
 
 ## HTML / Blade
 
-When using Laravel, you write views in Blade files. The rules for this are pretty simple: think in components. If you are working on a page, think about logical ways to split that page into components and create different blade files for each of them to be included in the main page layout. For example, a homepage could look like this:
+When using Laravel, you write views in Blade files. The rules for this are pretty simple: think in components. If you are working on a page, think about logical ways to split that page into components and create different blade files for each of them to be included in the main page layout. Keep pages tidy, long lines make it hard to read so splitting up attributes across multiple lines can help with readability.
+
+For example, a homepage could look like this:
 
 ```Blade
 &commat;component('layouts.app')
 
     &commat;section('content')
-        &lt;x-home.documentation :title="trans('pages.home.documentation')" :documentations="$documentations" /&gt;
+        &lt;x-home.documentation
+            :title="trans('pages.home.documentation')"
+            :documentations="$documentations"
+        /&gt;
 
         &lt;x-horizontal-divider /&gt;
 
@@ -52,7 +57,10 @@ When using Laravel, you write views in Blade files. The rules for this are prett
 
         &lt;x-horizontal-divider /&gt;
 
-        &lt;x-home.tutorials :tutorials="$tutorials" :featured="$featured" /&gt;
+        &lt;x-home.tutorials
+            :tutorials="$tutorials"
+            :featured="$featured"
+        /&gt;
     &commat;endsection
 
 &commat;endcomponent
