@@ -91,3 +91,7 @@
 
 <x-general.sidebar-link path="/docs/platform-sdk/utility/news" name="News" />
 <x-general.sidebar-link path="/docs/platform-sdk/utility/support" name="Support" />
+
+## Guides
+
+<x-general.sidebar-link path="/docs/platform-sdk/guides/testing" name="Testing" />
