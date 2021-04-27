@@ -6,7 +6,7 @@ title: Introduction
 
 ## Coins
 
-The **Coin** section will introduce you to Coins. Coin are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardizes user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
+The **Coin** section will introduce you to Coins. Coins are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardized user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 <x-link-collection
     :links="[
@@ -30,7 +30,7 @@ The **Coin** section will introduce you to Coins. Coin are the most important pa
 
 ## Markets
 
-The **Markets** section will introduce you to Cryptocurrency Data Services. These packages are responsible for providing a standardizes way of retrieving historical pricing data for all kinds of currencies to allow for a rich user experience with detailed information and charts.
+The **Markets** section will introduce you to Cryptocurrency Data Services. These packages are responsible for providing a standardized way of retrieving historical pricing data for all kinds of currencies to allow for a rich user experience with detailed information and charts.
 
 <x-link-collection
     :links="[
@@ -43,7 +43,7 @@ The **Markets** section will introduce you to Cryptocurrency Data Services. Thes
 
 ## HTTP Clients
 
-The **HTTP Clients** section will introduce you to HTTP communication. The Platform SDK itself is agnostic as to what HTTP Client you want to use as long as it adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification). This will make it easier to get the SDK working in different environments, like Electron, because you can use packages that were built specifically for your environment.
+The **HTTP Clients** section will introduce you to HTTP communication. The Platform SDK itself is agnostic as to what HTTP client you want to use as long as it adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification). This will make it easier to get the SDK working in different environments, like Electron, because you can use packages that were built specifically for your environment.
 
 <x-link-collection
     :links="[
@@ -57,7 +57,7 @@ The **HTTP Clients** section will introduce you to HTTP communication. The Platf
 
 ## Cryptography
 
-The **Cryptography** section will introduce you to do encryption, hashing and identity computation. Cryptography is at the core of everything we do daily at ARK. The cryptography packages are responsible for providing secure encryption of data, hashing of passwords and providing interfaces to interacting with common [BIP](https://github.com/bitcoin/bips) functionality like mnemonic generation.
+The **Cryptography** section will introduce you to encryption, hashing and identity computation. Cryptography is at the core of everything we do daily at ARK. The cryptography packages are responsible for providing secure encryption of data, hashing of passwords and providing interfaces to interact with common [BIP](https://github.com/bitcoin/bips) functionality like mnemonic generation.
 
 <x-link-collection
     :links="[
@@ -81,7 +81,7 @@ The **Cryptography** section will introduce you to do encryption, hashing and id
 
 ## Internationalization
 
-The **Internationalization** section will introduce you to locale-based functionality. The Internationalization package is responsible for providing a standardizes way of handling numbers, dates, times and money so that all of this data can be normalized and displayed in a format that is familiar to the user geolocation.
+The **Internationalization** section will introduce you to locale-based functionality. The Internationalization package is responsible for providing a standardized way of handling numbers, dates, time and money so that all of this data can be normalized and displayed in a format that is familiar to the user geolocation.
 
 <x-link-collection
     :links="[
