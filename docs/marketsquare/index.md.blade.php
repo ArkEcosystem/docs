@@ -3,15 +3,18 @@
 
 <x-general.sidebar-link path="/docs/marketsquare/intro" name="Welcome to MarketSquare" />
 
+## Overview
+
+<x-general.sidebar-link path="/docs/marketsquare/overview/home-page" name="The Home Page" />
+<x-general.sidebar-link path="/docs/marketsquare/overview/marketsquare-hubs" name="MarketSquare Hubs" />
+
 ## Getting Started
 
-<x-general.sidebar-link path="/docs/marketsquare/getting-started/home-page" name="The Home Page" />
-<x-general.sidebar-link path="/docs/marketsquare/getting-started/marketsquare-hubs" name="MarketSquare Hubs" />
+<x-general.sidebar-link path="/docs/marketsquare/getting-started/account-sign-up" name="Account Sign Up" />
 <x-general.sidebar-link path="/docs/marketsquare/getting-started/what-next" name="What Can I Do Next?" />
 
 ## Profiles
 
-<x-general.sidebar-link path="/docs/marketsquare/profiles/creating-profiles" name="Profile Creation" />
 <x-general.sidebar-link path="/docs/marketsquare/profiles/updating-profile" name="Updating My Profile" />
 <x-general.sidebar-link path="/docs/marketsquare/profiles/settings" name="Settings & Security" />
 <x-general.sidebar-link path="/docs/marketsquare/profiles/reporting-profiles" name="Reporting Profiles" />
