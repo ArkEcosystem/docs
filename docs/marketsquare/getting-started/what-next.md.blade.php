@@ -6,11 +6,17 @@ title: What's Next?
 
 ---
 
-<ins>_**I created a Profile\, now what?**_</ins>
+<ins>_**I created an Account\, now what?**_</ins>
 
 ---
 
-After [creating a Profile](/docs/marketsquare/profiles/creating-profiles) on MarketSquare, you can explore the growing list of Projects & Hubs, keep up with the latest news and announcements, add your own Projects, and interact with others in the blockchain community! In addition to creating your profile, make sure to customize [your profile](/docs/marketsquare/profiles/updating-profile) or update [your settings](/docs/marketsquare/profiles/settings) to secure your account as well!
+After [creating an Account](/docs/marketsquare/getting-started/account-sign-up) on MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/updating-profile), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
+
+## Customize Your Profile!
+
+[Customizing your Profile](/docs/marketsquare/profiles/updating-profile) on MarketSquare is easy. Change your username, upload a personal avatar, and share more about yourself with a personal bio or website, social media and repository links.
+
+![](/storage/docs/docs/marketsquare/assets/profiles/profiles-overview.png)
 
 ## Discover Great Projects!
 
@@ -36,7 +42,7 @@ The greatest resource behind any project is their team members. Team members can
 
 ## Connect with Hubs!
 
-At MarketSquare, [Hubs](/docs/marketsquare/getting-started/marketsquare-hubs) are your gateway to entire ecosystems. They will be the focal point of entire networks where you can check out featured projects, educational videos, news, and more!
+At MarketSquare, [Hubs](/docs/marketsquare/overview/marketsquare-hubs) are your gateway to entire ecosystems. They will be the focal point of entire networks where you can check out featured projects, educational videos, news, and more!
 
 Get started by visiting the ARK & Hive Hubs! Don't forget to follow them so you can stay up to date and receive [announcements](/docs/marketsquare/notifications/hub-announcements)!
 

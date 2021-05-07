@@ -1,25 +1,10 @@
 ---
-title: Profile Creation
+title: Account Sign Up
 ---
 
-# Creating a Profile on MarketSquare
+# Creating a MarketSquare Account
 
 MarketSquare makes it easy to discover, use, and collaborate on blockchain-powered projects as well as forge new relationships with other people in the blockchain technology space. If you have a Network Validation Node, Business, Blockchain or Plugin that you want to list, or if you want to leave reviews, signing up is a breeze and only requires a valid email address.
-
----
-
-Here are a few of the basic items that can be added to a MarketSquare Profile.
-
-- Username
-- Personal Avatar
-- Website Link
-- Bio section with markdown support
-- Social Media Links (Twitter, LinkedIn, YouTube, Medium, Facebook, etc.)
-- Git Repository Links (Github, GitLab, Bitbucket, etc.)
-
----
-
-In addition to the features above, a profile page will display all associated projects and will feature reviews and ratings from that can be filtered by date or by popularity.
 
 <x-alert type="info">
 Creating a MarketSquare account gives the ability to engage with the MarketSquare platform, bring more attention to a projects, and offer opportunities to collaborate with like-minded individuals.

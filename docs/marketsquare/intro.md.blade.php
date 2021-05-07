@@ -14,12 +14,22 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ---
 
+### Overview
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/marketsquare/overview/home-page', 'name' => 'The MarketSquare Home Page'],
+        ['path' => '/docs/marketsquare/overview/marketsquare-hubs', 'name' => 'MarketSquare Hubs'],
+    ]"
+/>
+
+---
+
 ### Getting Started
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/marketsquare/getting-started/home-page', 'name' => 'The Home Page'],
-        ['path' => '/docs/marketsquare/getting-started/marketsquare-hubs', 'name' => 'MarketSquare Hubs'],
+        ['path' => '/docs/marketsquare/getting-started/account-sign-up', 'name' => 'Account Sign Up'],
         ['path' => '/docs/marketsquare/getting-started/what-next', 'name' => 'What Can I Do Next?'],
     ]"
 />
@@ -30,7 +40,6 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/marketsquare/profiles/creating-profiles', 'name' => 'Profile Creation'],
         ['path' => '/docs/marketsquare/profiles/updating-profile', 'name' => 'Updating My Profile'],
         ['path' => '/docs/marketsquare/profiles/settings', 'name' => 'Settings & Security'],
         ['path' => '/docs/marketsquare/profiles/reporting-profiles', 'name' => 'Reporting Profiles'],
