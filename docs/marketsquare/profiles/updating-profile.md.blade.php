@@ -4,7 +4,7 @@ title: Updating My Profile
 
 # Updating My Profile on MarketSquare
 
-Avatar looking a bit dated? Bio could use a touchup? No worries, updating a profile is a snap. In these next sections, we'll take a look at how to update a Profile on MarketSquare.
+Want to add or change your personal Avatar? Create a fresh Bio or add website links? No worries, updating your Profile is a snap. In these next sections, we'll take a look at the ways you can customize your MarketSquare Profile.
 
 ## Getting Started
 
