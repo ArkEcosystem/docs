@@ -6,7 +6,7 @@ title: Handling Notifications
 
 Now that we’ve learned about updating our Profile, creating Projects, managing Teams, and working with Reviews, it’s time to take a quick look at handling Notifications on MarketSquare.
 
-Notifications are typically received whenever we receive a comment on one of our project reviews, or whenever one of our projects receives a review. We will also receive a notification when a [Hub](/docs/marketsquare/getting-started/marketsquare-hubs) we are [following](/docs/marketsquare/notifications/hub-announcements) makes an announcement.
+Notifications are typically received whenever we receive a comment on one of our project reviews, or whenever one of our projects receives a review. We will also receive a notification when a [Hub](/docs/marketsquare/overview/marketsquare-hubs) we are [following](/docs/marketsquare/notifications/hub-announcements) makes an announcement.
 
 ## Getting Started
 
