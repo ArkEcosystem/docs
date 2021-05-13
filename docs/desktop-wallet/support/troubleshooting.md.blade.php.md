@@ -335,7 +335,7 @@ Sometimes, a **user** or **developer** may require **additional** information wh
 
 ---
 
-The easiest and most common way is to use the built-in **Dev Tools**, which ****will show additional **console** and **network** information.
+The easiest and most common way is to use the built-in **Dev Tools**, which **will** show additional **console** and **network** information.
 
 ![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/storage/docs/docs/desktop-wallet/assets/troubleshooting-dev-tools.jpeg)
 
