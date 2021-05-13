@@ -151,7 +151,7 @@ Users having **Signing** issues will typically receive the following **error mes
 - b) using the correct <u>**recovery passphrase**</u>
 
 <x-alert type="info">
-Users should also check that they are not using the <u>**Mnemonic Passphrase**</u> *as* the <u>**Encyption Password**</u>, or <u>**Encryption Password**</u> *as* the <u>**Mnemonic Passphrase**</u>.
+Users should also check that they are not using the <u>**Mnemonic Passphrase**</u> *as* the <u>**Encryption Password**</u>, or <u>**Encryption Password**</u> *as* the <u>**Mnemonic Passphrase**</u>.
 </x-alert>
 
 ---
