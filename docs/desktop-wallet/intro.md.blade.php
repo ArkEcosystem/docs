@@ -43,3 +43,10 @@ The ARK Desktop Wallet offers a wide range of customization which empowers devel
         ['path' => '/docs/desktop-wallet/user-guides/security', 'name' => 'Security'],
     ]"
 />
+
+## Support
+<x-link-collection
+    :links="[
+        ['path' => '/docs/desktop-wallet/support/troubleshooting', 'name' => 'Troubleshooting'],
+    ]"
+/>
