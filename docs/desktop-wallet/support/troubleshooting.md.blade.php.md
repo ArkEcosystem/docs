@@ -143,7 +143,7 @@ Users having **Signing** issues will typically receive the following **error mes
 - **"Failed to sign the transaction"**
 - **"Transaction could not be created"**
 
-## Resolving Signing Issues
+### Resolving Signing Issues
 
 **Signing** issues are resolved by checking that you are either:
 
