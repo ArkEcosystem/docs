@@ -317,7 +317,7 @@ Advice on troubleshooting a **network connection** can be found <u>[here](#resol
 
 Most **Ledger** **connectivity** and **transaction** issues will be resolved by following the advice above.
 
-In rare cases, a users profile may have become corrupted.
+In rare cases, a user's profile may have become corrupted.
 
 A user is then advised to **restore** the ARK Desktop Wallet to its **default settings**, then **re-import** wallets and watch-addresses.
 
