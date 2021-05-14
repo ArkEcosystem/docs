@@ -322,7 +322,7 @@ In rare cases, a user's profile may have become corrupted.
 A user is then advised to **restore** the ARK Desktop Wallet to its **default settings**, then **re-import** wallets and watch-addresses.
 
 <x-alert type="danger">
-This will **erase a users** **profile data**, make sure <u>**all**</u> **mnemonic recovery phrases** and **watch-addresses** are **written down** and **saved properly**. Funds **will** be **lost** if your data is **not** backed up. <u>**This action cannot be undone**</u>.
+This will **erase a user's** **profile data**, make sure <u>**all**</u> **mnemonic recovery phrases** and **watch-addresses** are **written down** and **saved properly**. Funds **will** be **lost** if your data is **not** backed up. <u>**This action cannot be undone**</u>.
 </x-alert>
 
 <x-alert type="info">
