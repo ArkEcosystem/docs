@@ -23,3 +23,6 @@
 <x-general.sidebar-link path="/docs/desktop-wallet/developer-guides/developing-your-first-plugin" name="Develop a Plugin" />
 <x-general.sidebar-link path="/docs/desktop-wallet/developer-guides/developing-a-wallet-theme" name="Develop a Theme Plugin" />
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/security" name="Security" />
+
+## Support
+<x-general.sidebar-link path="/docs/desktop-wallet/support/troubleshooting" name="Troubleshooting" />
