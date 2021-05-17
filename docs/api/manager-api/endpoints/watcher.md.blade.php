@@ -23,6 +23,7 @@ watcher.getEvents
 | params.query | object | Query. | Yes |
 | params.query.$limit | number | Data limit. | No |
 | params.query.$offset | number | Data offset. | No |
+| params.query.$order | object | Data offset. | No |
 | params.query.event | string | Event name. | No |
 | params.query.data | object | Query nested event data. | No |
 
@@ -37,6 +38,10 @@ watcher.getEvents
 | result.limit | number | Data limit. | Yes |
 | result.offset | number | Data offset. | Yes |
 | result.data | array | Query response data. | Yes |
+| result.data.id | number | Query response data id. | Yes |
+| result.data.event | string | Query response data event name. | Yes |
+| result.data.data | object | Query response data event data. | Yes |
+| result.data.timestamp | string | Query response data timestamp (YYYY-MM-DD hh:mm:ss). | Yes |
 
 ### Request
 
@@ -45,7 +50,15 @@ watcher.getEvents
     "id": "unique-request-id",
 	"jsonrpc": "2.0",
 	"method": "watcher.getEvents",
-	"params": { "query": { "$limit": 100, "$offset": 0, "data": { "value": { "username": "genesis_9" } } } }
+	"params": {
+	    "query": {
+	        "$limit": 100,
+	        "$offset": 0,
+	        "$order": { "id": "DESC" },
+	        "event": { "$like": "database%" },
+	        "data": { "query": { "$eq": "COMMIT" } }
+	    }
+	}
 }
 ```
 
@@ -56,10 +69,19 @@ watcher.getEvents
     "id": "unique-request-id",
     "jsonrpc": "2.0",
     "result": {
-        "total": 0,
+        "total": 1,
         "limit": 100,
         "offset": 0,
-        "data": []
+        "data": [
+            {
+                "id": 4251,
+                "event": "database.query.log",
+                "data": {
+                    "query": "COMMIT"
+                },
+                "timestamp": "2021-05-17 14:20:08"
+            }
+        ]
     }
 }
 ```
