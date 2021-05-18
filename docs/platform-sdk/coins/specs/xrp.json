@@ -27,18 +27,18 @@
             "validate": false
         },
         "publicKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "multiSignature": false,
             "wif": false,
             "secret": true
         },
         "privateKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "wif": false,
             "secret": true
         },
         "wif": {
-            "mnemonic": false,
+            "mnemonic": true,
             "secret": true
         },
         "keyPair": {
