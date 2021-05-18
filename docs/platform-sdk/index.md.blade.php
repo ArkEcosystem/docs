@@ -35,6 +35,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk/coins/trx" name="TRX" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/xlm" name="XLM" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/xrp" name="XRP" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/zil" name="ZIL" />
 
 ## Markets
 
