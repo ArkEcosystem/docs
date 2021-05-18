@@ -34,7 +34,8 @@
         },
         "privateKey": {
             "mnemonic": true,
-            "wif": true
+            "wif": true,
+            "secret": false
         },
         "wif": {
             "mnemonic": true
