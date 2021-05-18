@@ -44,7 +44,8 @@
         "keyPair": {
             "mnemonic": false,
             "privateKey": true,
-            "wif": false
+            "wif": false,
+            "secret": false
         }
     },
     "Ledger": {
