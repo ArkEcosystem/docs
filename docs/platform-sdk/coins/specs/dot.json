@@ -23,6 +23,7 @@
             "publicKey": false,
             "privateKey": false,
             "wif": false,
+            "secret": false,
             "validate": false
         },
         "publicKey": {
