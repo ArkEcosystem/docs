@@ -78,5 +78,11 @@
         "dynamicFees": true,
         "memo": true,
         "utxo": false
+    },
+    "Derivation": {
+        "bip39": true,
+        "bip44": true,
+        "bip49": false,
+        "bip84": false
     }
 }
