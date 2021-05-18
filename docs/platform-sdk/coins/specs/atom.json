@@ -1,8 +1,8 @@
 {
     "Client": {
-        "transaction": false,
-        "transactions": false,
-        "wallet": false,
+        "transaction": true,
+        "transactions": true,
+        "wallet": true,
         "wallets": false,
         "delegate": false,
         "delegates": false,
