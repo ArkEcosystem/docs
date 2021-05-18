@@ -38,7 +38,8 @@
             "secret": true
         },
         "wif": {
-            "mnemonic": false
+            "mnemonic": false,
+            "secret": true
         },
         "keyPair": {
             "mnemonic": true,
