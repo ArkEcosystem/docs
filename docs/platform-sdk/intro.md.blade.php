@@ -21,6 +21,7 @@ The **Coin** section will introduce you to Coins. Coins are the most important p
         ['path' => '/docs/platform-sdk/coins/eth', 'name' => 'ETH'],
         ['path' => '/docs/platform-sdk/coins/lsk', 'name' => 'LSK'],
         ['path' => '/docs/platform-sdk/coins/luna', 'name' => 'LUNA'],
+        ['path' => '/docs/platform-sdk/coins/nano', 'name' => 'NANO'],
         ['path' => '/docs/platform-sdk/coins/neo', 'name' => 'NEO'],
         ['path' => '/docs/platform-sdk/coins/sol', 'name' => 'SOL'],
         ['path' => '/docs/platform-sdk/coins/trx', 'name' => 'TRX'],
