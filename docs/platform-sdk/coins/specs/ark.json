@@ -29,7 +29,8 @@
         "publicKey": {
             "mnemonic": true,
             "multiSignature": true,
-            "wif": true
+            "wif": true,
+            "secret": false
         },
         "privateKey": {
             "mnemonic": true,
