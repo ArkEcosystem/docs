@@ -22,7 +22,8 @@
             "multiSignature": false,
             "publicKey": false,
             "privateKey": false,
-            "wif": false
+            "wif": false,
+            "validate": false
         },
         "publicKey": {
             "mnemonic": false,
