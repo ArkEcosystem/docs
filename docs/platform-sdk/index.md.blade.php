@@ -28,6 +28,7 @@
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eos" name="EOS" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eth" name="ETH" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/lsk" name="LSK" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/luna" name="LUNA" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/neo" name="NEO" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/sol" name="SOL" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/trx" name="TRX" />
