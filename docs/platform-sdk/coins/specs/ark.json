@@ -73,5 +73,10 @@
         "htlcLock": false,
         "htlcClaim": false,
         "htlcRefund": false
+    },
+    "Miscellaneous": {
+        "dynamicFees": true,
+        "memo": true,
+        "utxo": false
     }
 }
