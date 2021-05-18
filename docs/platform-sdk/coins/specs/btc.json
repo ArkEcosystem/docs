@@ -90,5 +90,8 @@
         "bip49": true,
         "bip84": true,
         "secret": false
+    },
+    "Internal": {
+        "fastDelegateSync": false
     }
 }
