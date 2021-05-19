@@ -22,24 +22,30 @@
             "multiSignature": false,
             "publicKey": false,
             "privateKey": false,
-            "wif": false
+            "wif": false,
+            "secret": false,
+            "validate": false
         },
         "publicKey": {
             "mnemonic": false,
             "multiSignature": false,
-            "wif": false
+            "wif": false,
+            "secret": false
         },
         "privateKey": {
             "mnemonic": false,
-            "wif": false
+            "wif": false,
+            "secret": false
         },
         "wif": {
-            "mnemonic": false
+            "mnemonic": false,
+            "secret": false
         },
         "keyPair": {
             "mnemonic": false,
             "privateKey": false,
-            "wif": false
+            "wif": false,
+            "secret": false
         }
     },
     "Ledger": {
@@ -54,8 +60,8 @@
         "wallet": true
     },
     "Message": {
-        "sign": false,
-        "verify": false
+        "sign": true,
+        "verify": true
     },
     "Peer": {
         "search": false
@@ -72,5 +78,20 @@
         "htlcLock": false,
         "htlcClaim": false,
         "htlcRefund": false
+    },
+    "Miscellaneous": {
+        "dynamicFees": false,
+        "memo": false,
+        "utxo": false
+    },
+    "Derivation": {
+        "bip39": true,
+        "bip44": true,
+        "bip49": false,
+        "bip84": false,
+        "secret": false
+    },
+    "Internal": {
+        "fastDelegateSync": false
     }
 }

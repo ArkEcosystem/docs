@@ -2,7 +2,7 @@
     "Client": {
         "transaction": false,
         "transactions": false,
-        "wallet": true,
+        "wallet": false,
         "wallets": false,
         "delegate": false,
         "delegates": false,
@@ -18,7 +18,7 @@
     },
     "Identity": {
         "address": {
-            "mnemonic": false,
+            "mnemonic": true,
             "multiSignature": false,
             "publicKey": false,
             "privateKey": false,
@@ -33,7 +33,7 @@
             "secret": false
         },
         "privateKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "wif": false,
             "secret": false
         },
@@ -42,8 +42,8 @@
             "secret": false
         },
         "keyPair": {
-            "mnemonic": false,
-            "privateKey": false,
+            "mnemonic": true,
+            "privateKey": true,
             "wif": false,
             "secret": false
         }
@@ -60,8 +60,8 @@
         "wallet": true
     },
     "Message": {
-        "sign": true,
-        "verify": true
+        "sign": false,
+        "verify": false
     },
     "Peer": {
         "search": false
@@ -86,7 +86,7 @@
     },
     "Derivation": {
         "bip39": true,
-        "bip44": true,
+        "bip44": false,
         "bip49": false,
         "bip84": false,
         "secret": false

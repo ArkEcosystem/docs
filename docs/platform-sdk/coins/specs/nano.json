@@ -2,7 +2,7 @@
     "Client": {
         "transaction": false,
         "transactions": false,
-        "wallet": true,
+        "wallet": false,
         "wallets": false,
         "delegate": false,
         "delegates": false,
@@ -11,17 +11,17 @@
         "configuration": false,
         "fees": false,
         "syncing": false,
-        "broadcast": true
+        "broadcast": false
     },
     "Fee": {
         "all": false
     },
     "Identity": {
         "address": {
-            "mnemonic": false,
+            "mnemonic": true,
             "multiSignature": false,
-            "publicKey": false,
-            "privateKey": false,
+            "publicKey": true,
+            "privateKey": true,
             "wif": false,
             "secret": false,
             "validate": false
@@ -33,7 +33,7 @@
             "secret": false
         },
         "privateKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "wif": false,
             "secret": false
         },
@@ -42,7 +42,7 @@
             "secret": false
         },
         "keyPair": {
-            "mnemonic": false,
+            "mnemonic": true,
             "privateKey": false,
             "wif": false,
             "secret": false
@@ -67,7 +67,7 @@
         "search": false
     },
     "Transaction": {
-        "transfer": true,
+        "transfer": false,
         "secondSignature": false,
         "delegateRegistration": false,
         "vote": false,

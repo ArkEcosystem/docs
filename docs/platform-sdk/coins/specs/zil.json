@@ -1,6 +1,6 @@
 {
     "Client": {
-        "transaction": false,
+        "transaction": true,
         "transactions": false,
         "wallet": true,
         "wallets": false,
@@ -18,7 +18,7 @@
     },
     "Identity": {
         "address": {
-            "mnemonic": false,
+            "mnemonic": true,
             "multiSignature": false,
             "publicKey": false,
             "privateKey": false,
@@ -33,7 +33,7 @@
             "secret": false
         },
         "privateKey": {
-            "mnemonic": false,
+            "mnemonic": true,
             "wif": false,
             "secret": false
         },
@@ -42,7 +42,7 @@
             "secret": false
         },
         "keyPair": {
-            "mnemonic": false,
+            "mnemonic": true,
             "privateKey": false,
             "wif": false,
             "secret": false

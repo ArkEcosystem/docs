@@ -28,11 +28,14 @@
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eos" name="EOS" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/eth" name="ETH" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/lsk" name="LSK" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/luna" name="LUNA" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/nano" name="NANO" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/neo" name="NEO" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/sol" name="SOL" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/trx" name="TRX" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/xlm" name="XLM" />
 <x-general.sidebar-link path="/docs/platform-sdk/coins/xrp" name="XRP" />
+<x-general.sidebar-link path="/docs/platform-sdk/coins/zil" name="ZIL" />
 
 ## Markets
 
