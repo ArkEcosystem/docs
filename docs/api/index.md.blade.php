@@ -20,6 +20,7 @@
         ['path' => '/docs/api/public-rest-api/endpoints/wallets', 'name' => 'Wallets'],
     ]"
 />
+<x-general.sidebar-link path="/docs/api/public-rest-api/modify-response" name="Modify response" />
 <x-general.sidebar-link path="/docs/api/public-rest-api/troubleshooting" name="Troubleshooting" />
 
 ## Webhook API
