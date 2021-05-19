@@ -18,7 +18,7 @@ yarn add @arkecosystem/platform-sdk-xrp
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/ada.json" />
+<livewire:coin-spec spec="platform-sdk/coins/specs/xrp.json" />
 
 ## Security
 
