@@ -326,6 +326,8 @@ Party that wishes to manipulate, attack, or otherwise harm a Blockchain network.
 
 See Byzantine Fault Tolerance.
 
+![](youtube:2c_Z2EMHPnY)
+
 **More:** [Byzantine Fault Tolerance](glossary#byzantine-fault-tolerance)
 
 ### Bloat
@@ -362,17 +364,23 @@ The process of a newly generated and valid block being distributed to all other 
 
 Payment of a cryptoasset from the network to the miner or validator that creates a new block and adds it to the Blockchain. Usually generated as new coins that are added to circulation.
 
+![](youtube:PNwcBv8lHDU)
+
 **More:** [Cryptoasset](glossary#cryptoasset), [Blockchain](glossary#blockchain), [Validator](glossary#validator), [Network](glossary#network), [Coin](glossary#coin)
 
 ### Block Size
 
 How large each block of the Blockchain is, usually denoted in megabytes.
 
+![](youtube:I-rGq0ya7dw)
+
 **More:** [Blockchain](glossary#blockchain)
 
 ### Block Time
 
 How long each block takes to be added to the Blockchain. The block time of Bitcoin aims to be 10 minutes, and for the ARK Public Network 8 seconds.
+
+![](youtube:3FJqvBY0L2k)
 
 **More:** [ARK Public Network](glossary#ark-public-network), [Block Time](glossary#block-time), [Blockchain](glossary#blockchain), [Coin](glossary#coin)
 
@@ -430,6 +438,8 @@ Describes a single point of failure or control of a system or service. Can refer
 
 A go-between between two parties or systems that also acts as a single point of failure or control over the activities between the two parties or systems.
 
+![](youtube:I2pYXxrz5xs)
+
 ### Chain Analysis
 
 Act of monitoring activity on the ledger to determine the nature of said activity, and in some cases, who is participating in the activity.
@@ -440,11 +450,15 @@ Act of monitoring activity on the ledger to determine the nature of said activit
 
 Total amount of coins or tokens currently existing on the network. Does not include future supply which may be generated nor any supply held in genesis address or other pre-circulation fund.
 
+![](youtube:nWXQJvApziQ)
+
 **More:** [Genesis Address](glossary#genesis-address), [Network](glossary#network), [Token](glossary#token), [Coin](glossary#coin)
 
 ### Closed Source
 
 Codebase not exposed to the public for general use.
+
+![](youtube:a---WvVl3Uk)
 
 **More:** [Codebase](glossary#codebase)
 
@@ -452,11 +466,15 @@ Codebase not exposed to the public for general use.
 
 Collection of modules, applications, and libraries that combine to fulfill specific application requirements.
 
+![](youtube:E_bRXJ-rHxw)
+
 **More:** [Module](glossary#module)
 
 ### Coin
 
 A cryptoasset that acts as the native currency to a Blockchain. Often provides the incentive to node operators for running the public network, and/or enables governance functions.
+
+![](youtube:83nGlTFmuoo)
 
 **More:** [Public Network](glossary#public-network), [Node Operator](glossary#node-operator), [Cryptoasset](glossary#cryptoasset), [Blockchain](glossary#blockchain)
 
@@ -464,11 +482,15 @@ A cryptoasset that acts as the native currency to a Blockchain. Often provides t
 
 Length of time since coins in an address has moved to another address. In some cases, the age of all coins in an address resets even if only a portion of coins moved to a new address.
 
+![](youtube:2srbaz9NqUs)
+
 **More:** [Address](glossary#address), [Coin](glossary#coin)
 
 ### Cold Storage
 
 Method by which cryptoassets are protected from certain attack vectors by residing offline. Includes both electronic and non-electronic methods.
+
+![](youtube:8hZ14Bg1--k)
 
 **More:** [Attack Vector](glossary#attack-vector), [Cryptoasset](glossary#cryptoasset)
 
@@ -528,6 +550,8 @@ Module that can extend the ARK Core to fulfill a specific use case.
 
 Describes activity that takes place between two independent Blockchains.
 
+![](youtube:Fb5QWYLsh7Y)
+
 **More:** [Blockchain](glossary#blockchain)
 
 ### Crypto
@@ -539,6 +563,8 @@ See cryptoasset.
 ### Cryptoasset
 
 General term describing any type of token or coin.
+
+![](youtube:amfse9j47Mw)
 
 **More:** [Token](glossary#token), [Coin](glossary#coin)
 
@@ -557,6 +583,8 @@ General term describing any coin and certain tokens. Usually refers to a cryptoa
 ### Cryptography
 
 Field in which readable information is converted into unintelligible information and vice versa.
+
+![](youtube:t3RtQkhXDOA)
 
 ### Cryptosphere
 
@@ -602,6 +630,8 @@ Component of ARK Core that stores and serves transaction data within a node.
 
 The removal of central authority and single points of failure to produce a system that cannot fail due to the failure of any one component or minority set of components.
 
+![](youtube:KBMOhIy-MCA)
+
 ### Decentralized
 
 See decentralization.
@@ -617,6 +647,8 @@ A collective of people and/or entities that operate as a single organization, bu
 ### Decentralized Exchange
 
 An exchange that is decentralized, where a user interface is provided for trading cryptoassets that interacts either directly with discrete Blockchains, or with a protocol that does such.
+
+![](youtube:R2e4JE_RFAI)
 
 **More:** [Decentralized](glossary#decentralized), [Cryptoasset](glossary#cryptoasset), [Blockchain](glossary#blockchain), [Protocol](glossary#protocol)
 
@@ -635,6 +667,8 @@ Decentralized Finance.
 ### Deflation
 
 A reduction in circulating supply of a cryptoasset, either by burning or having coins or tokens lost forever.
+
+![](youtube:xyHJr7Vpx7A)
 
 **More:** [Circulating Supply](glossary#circulating-supply), [Cryptoasset](glossary#cryptoasset), [Token](glossary#token), [Burn](glossary#burn), [Coin](glossary#coin)
 
@@ -671,6 +705,8 @@ A server responsible for running an instance of ARK Core where a Delegate has be
 ### Delegated Proof-of-Stake
 
 Consensus mechanism where Delegates voted in by coin holders are responsible for maintaining the ledger, adding blocks, and generating new coins.
+
+![](youtube:l9WhWH9auuo)
 
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Delegate](glossary#delegate), [Ledger](glossary#ledger), [Coin](glossary#coin), [Vote](glossary#vote)
 
@@ -782,6 +818,8 @@ Password set by the user to encrypt and secure a passphrase, mnemonic, seed, or 
 
 Web service that periodically awards cryptocurrency to visitors either for free or in exchange for a small task such as viewing an ad or visiting a website.
 
+![](youtube:70dCSuRTS4Q)
+
 **More:** [Cryptocurrency](glossary#cryptocurrency)
 
 ### Fee
@@ -793,6 +831,8 @@ Small charge in exchange for executing a transaction to the Blockchain network. 
 ### Finality
 
 Property of a Blockchain network that determines how well the consensus mechanism can render new blocks immutable.
+
+![](youtube:f8bECSF9DT4)
 
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Blockchain](glossary#blockchain), [Network](glossary#network)
 
@@ -896,11 +936,15 @@ Competition among computer science teams to create deployed projects within a se
 
 A chain split resulting in two resulting Blockchains, where their ledgers are identical only up to a certain point. Can either be a contentious fork or a protocol upgrade replacing old node code.
 
+![](youtube:l9WhWH9auuo)
+
 **More:** [Contentious Fork](glossary#contentious-fork), [Blockchain](glossary#blockchain), [Protocol](glossary#protocol), [Ledger](glossary#ledger), [Node](glossary#node)
 
 ### Hardware Wallet
 
 Physical electronic device with the role of securing cryptocurrency offline in cold storage. Helps to prevent certain attack vectors.
+
+![](youtube:y52bUEGnfWc)
 
 **More:** [Cryptocurrency](glossary#cryptocurrency), [Attack Vector](glossary#attack-vector), [Cold Storage](glossary#cold-storage)
 
@@ -917,6 +961,8 @@ Situation that occurs when two pieces of unique input data result in the same ha
 ### Hashed Time Locked Contract
 
 Set of transaction types that permit a designated party to lock funds, and a second party to claim the funds. A refund function is available after a set time limit.
+
+![](youtube:N6ZLkEvZ3Jk)
 
 **More:** [Transaction](glossary#transaction)
 
@@ -936,9 +982,19 @@ Wallet with access to the Internet, where private keys are stored online and not
 
 ---
 
+### Immutability
+
+Immutability--in the context of Blockchain technology--refers to the inability of information on a blockchain to be changed.
+
+![](youtube:dxh5wmD_nqA)
+
+**More:** [Blockchain](glossary#blockchain) [Finality](glossary#finality)
+
 ### Inflation
 
 Rate of increase (expressed as a percentage of total supply) of a cryptoasset.
+
+![](youtube:EAO8fhv_G6U)
 
 **More:** [Total Supply](glossary#total-supply), [Cryptoasset](glossary#cryptoasset)
 
@@ -1032,6 +1088,14 @@ See light client.
 
 **More:** [Light Client](glossary#light-client)
 
+### Liquidity
+
+The ability of a coin to be converted into another asset without a change in market price.
+
+![](youtube:vt9pUVWWtXs)
+
+**More:** [DeFi](glossary#defi), [Decentralized Finance](glossary#decentralized-finance)
+
 ## M
 
 ---
@@ -1052,6 +1116,8 @@ Informal term for Public Network.
 
 Informal term for market capitalization.
 
+![](youtube:MdoAnj8E-_8)
+
 **More:** [Market Capitalization](glossary#market-capitalization)
 
 ### Market Capitalization
@@ -1065,6 +1131,14 @@ Total value of all coins or tokens in circulation for a specific cryptoasset, us
 The new home for the decentralized Web and product of ARK.io.
 
 **More:** [Decentralized](glossary#decentralized), [ARK.io](glossary#ark.io)
+
+### Masternode
+
+A governing hub in some Blockchain networks that requires collateral in order to operate and incetivizes node operators to secure the Blockchain.
+
+![](youtube:GF13js43rGc)
+
+**More:** [Node](glossary#node), [Delegated Proof-of-Stake](glossary#delegated-proof-of-stake), [Proof-of-Stake](glossary#proof-of-stake)
 
 ### Max Supply
 
@@ -1093,6 +1167,8 @@ Small transactions enabled by a cryptoasset. Can range from fractions of a cent 
 ### Mnemonic
 
 Multi-word phrase that unlocks access to a wallet address. Usually 12, 13, or 24 words separated by space characters, and should be secured and never shared.
+
+![](youtube:yDjofHcEjtk)
 
 **More:** [Wallet Address](glossary#wallet-address)
 
@@ -1204,6 +1280,8 @@ Wallet that does not transfer custody of a cryptoasset to another party for safe
 
 Type of indivisible cryptoasset representing a unique coin or token that exists nowhere else on the network.
 
+![](youtube:BBy8aKtiaqo)
+
 **More:** [Cryptoasset](glossary#cryptoasset), [Network](glossary#network), [Token](glossary#token), [Coin](glossary#coin)
 
 ### NPM
@@ -1237,6 +1315,8 @@ Activity occurring as a part of the Blockchain, represented by transactions on t
 ### Open Source
 
 Code that is publicly available and usable via special licenses.
+
+![](youtube:CbLQqGDSgXk)
 
 ### Oracle
 
@@ -1362,11 +1442,15 @@ A live implementation of technology created to showcase its capabilities.
 
 Consensus mechanism where all coin holders enter a lottery to add new blocks and receive new coins, weighted by the holdings within each address. Consumes far less electricity than PoW.
 
+![](youtube:oENl5fFd_aU)
+
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Address](glossary#address), [Coin](glossary#coin), [PoW](glossary#pow)
 
 ### Proof-of-Work
 
 Consensus mechanism where miners race to solve complex mathematical problems, adding new blocks and generating new coins. Miners consume large quantities of electricity to do this.
+
+![](youtube:Xhp3Zvszxf8)
 
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Coin](glossary#coin)
 
