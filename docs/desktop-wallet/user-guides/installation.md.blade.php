@@ -1,3 +1,8 @@
+
+---
+title: Installation
+---
+
 # Installation
 
 To download the application, you can visit the link below and select the appropriate release for your computer's platform. The ARK Desktop Wallet is available for Windows, Mac, and Linux.
