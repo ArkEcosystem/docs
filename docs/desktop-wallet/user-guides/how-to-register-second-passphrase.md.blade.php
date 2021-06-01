@@ -16,4 +16,8 @@ Security is critical. By issuing a second signature transaction, you tell networ
 
 ![Prove that you have saved your second Passphrase, select your desired transaction fee, enter your security details and click Next](/storage/docs/docs/desktop-wallet/assets/secondsignatureverification.png)
 
+<x-alert type="info">
+For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+</x-alert>
+
 ![Verify the second signature transaction details and Submit, Cancel or Save it by clicking either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitsecondsignature.png)

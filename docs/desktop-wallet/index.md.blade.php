@@ -17,6 +17,7 @@
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/how-to-sign-and-verify" name="Sign & Verify Messages" />
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/how-to-register-second-passphrase" name="Register a Second Passphrase" />
 <x-general.sidebar-link path="/docs/desktop-wallet/user-guides/how-to-store-ipfs-hash" name="Store an IPFS Hash" />
+<x-general.sidebar-link path="/docs/desktop-wallet/user-guides/transaction-fees" name="Transaction Fees" />
 
 ## Developer Guides
 <x-general.sidebar-link path="/docs/desktop-wallet/developer-guides/how-to-build-from-source" name="Build the Wallet from Source" />

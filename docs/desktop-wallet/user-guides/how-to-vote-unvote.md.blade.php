@@ -20,6 +20,10 @@ The more ARK you hold, the more voting weight you possess. If you split your ARK
 
 Each transaction in the ARK network costs a certain amount of ARK. With the implementation of dynamic fees, this cost will become adjustable. You can choose how much you want to spend for each specific transaction, even for voting and for un-voting.
 
+<x-alert type="info">
+For more information about staking, please visit: [ARK Rewards (Staking)](/docs/desktop-wallet/introduction-to-ark-rewards)
+</x-alert>
+
 ## Whom to Vote For?
 
 Visit [ARK Delegates](https://arkdelegates.live), our community-run delegate resource, for more information on delegate proposals. From the current list of delegates, vote according to your preferences.
@@ -33,6 +37,10 @@ You can also see the list of currently active delegates on our [delegate monitor
 ![Choose the delegate you wish to vote for, review their statistics and click Vote](/storage/docs/docs/desktop-wallet/assets/delegatestats.png)
 
 ![Fill in the required vote transaction fields and click Next](/storage/docs/docs/desktop-wallet/assets/vote.png)
+
+<x-alert type="info">
+For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+</x-alert>
 
 ![Submit, discard or save the vote transaction by pressing either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitvote.png)
 

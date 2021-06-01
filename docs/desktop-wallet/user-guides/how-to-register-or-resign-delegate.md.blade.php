@@ -14,6 +14,10 @@ Registering as a delegate is a simple transaction. It provides network nodes wit
 
 ![Enter your desired Username, Transaction fee and security details; then click Next](/storage/docs/docs/desktop-wallet/assets/delegateregistration.png)
 
+<x-alert type="info">
+For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+</x-alert>
+
 ![Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitdelegateregistration.png)
 
 ##  **Resign your Delegate**
