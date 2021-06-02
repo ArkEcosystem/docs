@@ -22,132 +22,114 @@ Each coin follows a strict implementation contract which can be incomplete for c
 
 ### Example
 
-Let's take the `platform-sdk-ark` network manifest as an example. It contains some information like the name and ticker but the important part is the `featureFlags` key. This key contains all services and their methods with a boolean value to indicate if a method is safe to call.
+Let's take the `platform-sdk-ark` network manifest as an example. It contains some information like the name and ticker, but the important part is the `featureFlags` object. This object contains all supported services and methods.
 
 ```typescript
-// https://github.com/ArkEcosystem/platform-sdk/blob/d42c34a148f19d1453ef3acac1e8b949386339c2/packages/platform-sdk-ark/src/networks/ark/mainnet.ts
-
 import { Coins } from "@arkecosystem/platform-sdk";
+
+import { transactions, importMethods, featureFlags } from "../shared";
 
 const network: Coins.NetworkManifest = {
 	id: "ark.mainnet",
 	type: "live",
 	name: "Mainnet",
 	coin: "ARK",
-	explorer: "https://explorer.ark.io/",
 	currency: {
 		ticker: "ARK",
 		symbol: "Ѧ",
+		decimals: 8,
 	},
-	fees: {
-		type: "dynamic",
-		ticker: "ARK",
-	},
-	crypto: {
+	constants: {
 		slip44: 111,
-		signingMethods: {
-			mnemonic: true,
-			wif: true,
+	},
+	hosts: [
+		{
+			type: "full",
+			host: "https://wallets.ark.io/api",
 		},
-		expirationType: "height",
-	},
-	networking: {
-		hosts: ["https://wallets.ark.io"],
-		hostsMultiSignature: ["https://musig1.ark.io"],
-	},
+		{
+			type: "musig",
+			host: "https://musig1.ark.io",
+		},
+		{
+			type: "explorer",
+			host: "https://explorer.ark.io",
+		},
+	],
 	governance: {
-		voting: {
-			enabled: true,
-			delegateCount: 51,
-			maximumPerWallet: 1,
-			maximumPerTransaction: 1,
-		},
+		delegateCount: 51,
+		votesPerWallet: 1,
+		votesPerTransaction: 1,
 	},
-	featureFlags: {
-		Client: {
-			transaction: true,
-			transactions: true,
-			wallet: true,
-			wallets: true,
-			delegate: true,
-			delegates: true,
-			votes: true,
-			voters: true,
-			configuration: true,
-			fees: true,
-			syncing: true,
-			broadcast: true,
-		},
-		Fee: {
-			all: true,
-		},
-		Identity: {
-			address: {
-				mnemonic: true,
-				multiSignature: true,
-				publicKey: true,
-				privateKey: true,
-				wif: true,
-			},
-			publicKey: {
-				mnemonic: true,
-				multiSignature: true,
-				wif: true,
-			},
-			privateKey: {
-				mnemonic: true,
-				wif: true,
-			},
-			wif: {
-				mnemonic: true,
-			},
-			keyPair: {
-				mnemonic: true,
-				privateKey: false,
-				wif: true,
-			},
-		},
-		Ledger: {
-			getVersion: true,
-			getPublicKey: true,
-			signTransaction: true,
-			signMessage: true,
-		},
-		Link: {
-			block: true,
-			transaction: true,
-			wallet: true,
-		},
-		Message: {
-			sign: true,
-			verify: true,
-		},
-		Peer: {
-			search: true,
-		},
-		Transaction: {
-			transfer: { default: true, ledgerS: true, ledgerX: true },
-			secondSignature: { default: true, ledgerS: true, ledgerX: true },
-			delegateRegistration: { default: true, ledgerS: true, ledgerX: true },
-			vote: { default: true, ledgerS: true, ledgerX: true },
-			multiSignature: { default: true, ledgerS: true, ledgerX: true },
-			ipfs: { default: true, ledgerS: true, ledgerX: true },
-			multiPayment: { default: true, ledgerS: true, ledgerX: true },
-			delegateResignation: { default: true, ledgerS: true, ledgerX: true },
-		},
-		Miscellaneous: {
-			dynamicFees: true,
-			memo: true,
-		},
-		Derivation: {
-			bip39: true,
-			bip44: true,
-		},
-		Internal: {
-			fastDelegateSync: true,
-		},
+	transactions,
+	importMethods,
+	featureFlags,
+	knownWallets: "https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
+	meta: {
+		fastDelegateSync: true,
 	},
-	transactionTypes: [
+};
+
+export default network;
+```
+
+> [platform-sdk-ark/src/networks/ark/mainnet.ts](https://github.com/ArkEcosystem/platform-sdk/blob/05c46197d498f9972df7a321bbbf567e3eb90114/packages/platform-sdk-ark/src/networks/ark/mainnet.ts) | [Platform SDK v8.3.4](https://github.com/ArkEcosystem/platform-sdk/tree/05c46197d498f9972df7a321bbbf567e3eb90114)
+
+---
+
+```typescript
+import { Coins } from "@arkecosystem/platform-sdk";
+
+import { transactions, importMethods, featureFlags } from "../shared";
+
+const network: Coins.NetworkManifest = {
+	id: "ark.mainnet",
+	type: "live",
+	name: "Mainnet",
+	coin: "ARK",
+	currency: {
+		ticker: "ARK",
+		symbol: "Ѧ",
+		decimals: 8,
+	},
+	constants: {
+		slip44: 111,
+	},
+	hosts: [
+		{
+			type: "full",
+			host: "https://wallets.ark.io/api",
+		},
+		{
+			type: "musig",
+			host: "https://musig1.ark.io",
+		},
+		{
+			type: "explorer",
+			host: "https://explorer.ark.io",
+		},
+	],
+	governance: {
+		delegateCount: 51,
+		votesPerWallet: 1,
+		votesPerTransaction: 1,
+	},
+	transactions,
+	importMethods,
+	featureFlags,
+	knownWallets: "https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
+	meta: {
+		fastDelegateSync: true,
+	},
+};
+
+export default network;
+
+import { Coins } from "@arkecosystem/platform-sdk";
+
+export const transactions: Coins.NetworkManifestTransactions = {
+	expirationType: "height",
+	types: [
 		"delegate-registration",
 		"delegate-resignation",
 		"htlc-claim",
@@ -160,13 +142,95 @@ const network: Coins.NetworkManifest = {
 		"transfer",
 		"vote",
 	],
-	knownWallets: "https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
+	fees: {
+		type: "dynamic",
+		ticker: "ARK",
+	},
+	memo: true,
 };
 
-export default network;
+export const importMethods: Coins.NetworkManifestImportMethods = {
+	address: {
+		default: false,
+		permissions: ["read"],
+	},
+	bip39: {
+		default: true,
+		permissions: ["read", "write"],
+	},
+	publicKey: {
+		default: false,
+		permissions: ["read"],
+	},
+};
 
-
+export const featureFlags: Coins.NetworkManifestFeatureFlags = {
+	Client: [
+		"transaction",
+		"transactions",
+		"wallet",
+		"wallets",
+		"delegate",
+		"delegates",
+		"votes",
+		"voters",
+		"configuration",
+		"fees",
+		"syncing",
+		"broadcast",
+	],
+	Fee: ["all"],
+	Identity: [
+		"address.mnemonic.bip39",
+		"address.multiSignature",
+		"address.privateKey",
+		"address.publicKey",
+		"address.validate",
+		"address.wif",
+		"keyPair.mnemonic.bip39",
+		"keyPair.privateKey",
+		"keyPair.wif",
+		"privateKey.mnemonic.bip39",
+		"privateKey.wif",
+		"publicKey.mnemonic.bip39",
+		"publicKey.multiSignature",
+		"publicKey.wif",
+		"wif.mnemonic.bip39",
+	],
+	Ledger: ["getVersion", "getPublicKey", "signTransaction", "signMessage"],
+	Link: ["block", "transaction", "wallet"],
+	Message: ["sign", "verify"],
+	Transaction: [
+		"delegateRegistration",
+		"delegateResignation",
+		"ipfs.ledgerS",
+		"ipfs.ledgerX",
+		"ipfs.musig",
+		"ipfs",
+		"multiPayment.ledgerS",
+		"multiPayment.ledgerX",
+		"multiPayment.musig",
+		"multiPayment",
+		"multiSignature.ledgerS",
+		"multiSignature.ledgerX",
+		"multiSignature.musig",
+		"multiSignature",
+		"secondSignature",
+		"transfer.ledgerS",
+		"transfer.ledgerX",
+		"transfer.musig",
+		"transfer",
+		"vote.ledgerS",
+		"vote.ledgerX",
+		"vote.musig",
+		"vote",
+	],
+};
 ```
+
+> [platform-sdk-ark/src/networks/shared.ts](https://github.com/ArkEcosystem/platform-sdk/blob/05c46197d498f9972df7a321bbbf567e3eb90114/packages/platform-sdk-ark/src/networks/shared.ts) | [Platform SDK v8.3.4](https://github.com/ArkEcosystem/platform-sdk/tree/05c46197d498f9972df7a321bbbf567e3eb90114)
+
+---
 
 In the case of ARK it would be unsafe to call `IdentityService.keyPair({ privateKey: "..." })` because it would lead to an exception due to a lack of support for this specific way of retrieving a key-pair. Knowing that there is a lack of support for this feature before we even try to call the method will allow us to safe-guard our application against any unexpected behaviors for a certain coin.
 
