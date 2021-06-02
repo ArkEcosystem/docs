@@ -56,12 +56,6 @@ On the wallet detail page, which is accessed by clicking on the wallet's name or
 
 ![](/storage/docs/docs/desktop-wallet/assets/mainwallet.png)
 
-## News and Important Updates
-
-The Desktop Wallet has a dedicated section, showing news and other relevant updates in the ARK Ecosystem. Often, you will receive new blog posts in this section, which can be accessed via clicking the newspaper icon in the wallet's navigation bar.
-
-![](/storage/docs/docs/desktop-wallet/assets/news.png)
-
 ## Changing the Application's Settings
 
 There's a bunch of options for how you may customize the look, behavior, and feel of the application.
