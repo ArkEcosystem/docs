@@ -14,7 +14,7 @@
         "broadcast": true
     },
     "Fee": {
-        "all": true
+        "all": false
     },
     "Identity": {
         "address": {
