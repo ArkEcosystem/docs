@@ -21,7 +21,7 @@ To get started with the ARK Desktop Wallet, follow the documentation below for g
 />
 
 ## Transactions
-The ARK Desktop Wallet enables you to send a wide variety of transactions on the ARK Public Network and other ARK Core based Blockchains. Follow the guides below for information on each transaction. 
+The ARK Desktop Wallet enables you to send a wide variety of transactions on the ARK Public Network and other ARK Core based Blockchains. Follow the guides below for information on each transaction.
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/how-to-send', 'name' => 'Send ARK Transfer'],
@@ -30,6 +30,7 @@ The ARK Desktop Wallet enables you to send a wide variety of transactions on the
         ['path' => '/docs/desktop-wallet/user-guides/how-to-sign-and-verify', 'name' => 'Sign & Verify Messages'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-register-second-passphrase', 'name' => 'Register a Second Passphrase'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-store-ipfs-hash', 'name' => 'Store an IPFS Hash'],
+        ['path' => '/docs/desktop-wallet/user-guides/transaction-fees', 'name' => 'Transactions Fees'],
     ]"
 />
 

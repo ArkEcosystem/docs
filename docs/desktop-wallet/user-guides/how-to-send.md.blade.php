@@ -10,6 +10,10 @@ You can quickly send a transfer by clicking on the _**Send**_ button in the head
 
 ![](/storage/docs/docs/desktop-wallet/assets/transfer.png)
 
+<x-alert type="info">
+For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+</x-alert>
+
 Upon clicking _**Next**_, you will have to review the transfer transaction's details and decide whether to submit it, then discard or save it by clicking _**Send**_, _**Back**_ or _**Save**_.
 
 ![](/storage/docs/docs/desktop-wallet/assets/submittransfer.png)
