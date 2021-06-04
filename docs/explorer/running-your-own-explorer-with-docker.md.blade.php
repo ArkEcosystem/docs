@@ -97,8 +97,9 @@ bash purge_all.sh
 
 ### Prepare Environment 
 
-_NOTE: We need Explorer source locally as it gets mounted in the container as a volume!
-
+<x-alert type="info">
+We need Explorer source locally as it gets mounted in the container as a volume!
+</x-alert>
 The next step is similar to deployment scenarios above. The only difference is that we should stick to specific local folders naming convention in order to have flawless deployment and further updates. 
  
 >Clone source for initial deployment - a local folder `explorer-green` is used:
@@ -114,7 +115,7 @@ cp .env.prod .env
 
 ```ini
 APP_NAME="Your Explorer Title"
-APP_URL=http://your-domain.com
+APP_URL=https://your-domain.com
 
 EXPLORER_NETWORK=production
 EXPLORER_DB_HOST=YOUR_CORE_DATABASE_IP_ADDRESS
@@ -126,6 +127,9 @@ EXPLORER_DB_PASSWORD=YOUR_CORE_DATABASE_PASSWORD
 ```
 >*Create a DNS `A` record that points to your Explorer instance Public IP address (example: `explorer.your-domain.com`)*
 
+<x-alert type="warning">
+IMPORTANT: Cloudflare users - to ensure successful SSL certificate request procedure, please disable host protection/proxy during initial deployment. Once the Explorer instance is up, can be turned back ON. 
+</x-alert>
 
 >Open the `docker/production/prod.env` file and edit the following variables:
 
@@ -150,8 +154,9 @@ You should be now able to access your Explorer instance at https://explorer.your
 
 ### Zero Downtime Updates
 
-_NOTE: In order to have a flawless update process, all consequent updates require cloning the source in a new location following the naming convention `explorer-blue` or `explorer-green`.
-
+<x-alert type="info">
+In order to have a flawless update process, all consequent updates require cloning the source in a new location following the naming convention `explorer-blue` or `explorer-green`.
+</x-alert>
 >Assuming we have cloned the source into `explorer-green` during our initial deploy, our first update would expect to be cloned into `explorer-blue`. We'll also copy all our ENV settings from initial deployment folder instead of adding them from scratch:
 
 ```bash
@@ -165,7 +170,10 @@ bash deploy-prod.sh
 
 This will pull and run a new Explorer container `blue_explorer_1` which will follow similar deployment process as the initial deployment one. After successful deployment, the script will remove your old Explorer container `green_explorer_1` and notify you it is now safe to remove your previous source folder `~/explorer-green`. During the update process you shouldn't experience any Explorer downtime as the reverse proxy should handle the proper distribution of the traffic.
 
-_NOTE: From that point on you should perform updates the same way, just preserving the local source folder naming. So for example your next update would assume you clone the source into `~/explorer-green` folder. Example:
+<x-alert type="info">
+From that point on you should perform updates the same way, just preserving the local source folder naming. 
+</x-alert>
+So for instance your next update would assume you clone the source into `~/explorer-green` folder. Example:
 
 ```bash
 cd ~
@@ -176,5 +184,6 @@ cp -f ~/explorer-blue/.env ~/explorer-green/.env
 cp -f ~/explorer-blue/docker/production/prod.env ~/explorer-green/docker/production/prod.env
 bash deploy-prod.sh
 ```
+
 
 
