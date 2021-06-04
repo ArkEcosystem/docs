@@ -40,7 +40,7 @@ With feedback from our partners and the information they find to be the most val
 
 Communities aren’t formed overnight, but with a strong offering of resources and content from MarketSquare, we hope to make that task easier.
 
-Users can follow their favorite hubs to receive updates and stay informed. By hitting the follow button on a project’s specific hub, users will get all the latest [notifications](/docs/marketsquare/notifications/notifications) regarding Hub activity.
+Users can follow their favorite hubs to receive updates and stay informed. By hitting the follow button on a project’s specific hub, users will get all the latest [announcements](/docs/marketsquare/notifications/hub-announcements) regarding Hub activity.
 
 **Find more at:**
 <livewire:embed-link url="https://ark.io/blog/marketsquare-hubs-your-gateway-to-entire-ecosystems" caption="MarketSquare Hubs: Your Gateway to Entire Ecosystems" />
