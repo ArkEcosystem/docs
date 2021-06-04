@@ -173,6 +173,7 @@ This will pull and run a new Explorer container `blue_explorer_1` which will fol
 <x-alert type="info">
 From that point on you should perform updates the same way, just preserving the local source folder naming. 
 </x-alert>
+
 So for instance your next update would assume you clone the source into `~/explorer-green` folder. Example:
 
 ```bash
