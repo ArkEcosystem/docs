@@ -128,26 +128,26 @@
 
 ## Upgrade Guides
 
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-0" name="2.0" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-1" name="2.1" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-2" name="2.2" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-3" name="2.3" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-4" name="2.4" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-5" name="2.5" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/2-6" name="2.6" />
-<x-general.sidebar-link path="/docs/core/upgrade-guides/3-0" name="3.0" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.0" name="2.0" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.1" name="2.1" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.2" name="2.2" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.3" name="2.3" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.4" name="2.4" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.5" name="2.5" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/2.6" name="2.6" />
+<x-general.sidebar-link path="/docs/core/upgrade-guides/3.0" name="3.0" />
 
 ## Release Guides
 
 <x-general.sidebar-link path="/docs/core/releases/intro" name="Introduction" />
-<x-general.sidebar-link path="/docs/core/releases/2-0" name="2.0" />
-<x-general.sidebar-link path="/docs/core/releases/2-1" name="2.1" />
-<x-general.sidebar-link path="/docs/core/releases/2-2" name="2.2" />
-<x-general.sidebar-link path="/docs/core/releases/2-3" name="2.3" />
-<x-general.sidebar-link path="/docs/core/releases/2-4" name="2.4" />
-<x-general.sidebar-link path="/docs/core/releases/2-5" name="2.5" />
-<x-general.sidebar-link path="/docs/core/releases/2-6" name="2.6" />
-<x-general.sidebar-link path="/docs/core/releases/3-0" name="3.0" />
+<x-general.sidebar-link path="/docs/core/releases/2.0" name="2.0" />
+<x-general.sidebar-link path="/docs/core/releases/2.1" name="2.1" />
+<x-general.sidebar-link path="/docs/core/releases/2.2" name="2.2" />
+<x-general.sidebar-link path="/docs/core/releases/2.3" name="2.3" />
+<x-general.sidebar-link path="/docs/core/releases/2.4" name="2.4" />
+<x-general.sidebar-link path="/docs/core/releases/2.5" name="2.5" />
+<x-general.sidebar-link path="/docs/core/releases/2.6" name="2.6" />
+<x-general.sidebar-link path="/docs/core/releases/3.0" name="3.0" />
 
 ## V3 Testing
 
