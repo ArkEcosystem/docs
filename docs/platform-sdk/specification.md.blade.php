@@ -25,11 +25,11 @@ Each coin follows a strict implementation contract which can be incomplete for c
 Let's take the `platform-sdk-ark` network manifest as an example. It contains some information like the name and ticker, but the important part is the `featureFlags` object. This object contains all supported services and methods.
 
 ```typescript
-import { Coins } from "@arkecosystem/platform-sdk";
+import { Networks } from "@arkecosystem/platform-sdk";
 
-import { transactions, importMethods, featureFlags } from "../shared";
+import { explorer, transactions, importMethods, featureFlags } from "../shared";
 
-const network: Coins.NetworkManifest = {
+const network: Networks.NetworkManifest = {
 	id: "ark.mainnet",
 	type: "live",
 	name: "Mainnet",
@@ -64,6 +64,7 @@ const network: Coins.NetworkManifest = {
 	transactions,
 	importMethods,
 	featureFlags,
+	explorer,
 	knownWallets: "https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
 	meta: {
 		fastDelegateSync: true,
@@ -73,61 +74,14 @@ const network: Coins.NetworkManifest = {
 export default network;
 ```
 
-> [platform-sdk-ark/src/networks/ark/mainnet.ts](https://github.com/ArkEcosystem/platform-sdk/blob/05c46197d498f9972df7a321bbbf567e3eb90114/packages/platform-sdk-ark/src/networks/ark/mainnet.ts) | [Platform SDK v8.3.4](https://github.com/ArkEcosystem/platform-sdk/tree/05c46197d498f9972df7a321bbbf567e3eb90114)
+> [platform-sdk-ark/src/networks/ark/mainnet.ts](https://github.com/ArkEcosystem/platform-sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/platform-sdk-ark/src/networks/ark/mainnet.ts) | [Platform SDK v9.0.4](https://github.com/ArkEcosystem/platform-sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
 
 ---
 
 ```typescript
-import { Coins } from "@arkecosystem/platform-sdk";
+import { Networks } from "@arkecosystem/platform-sdk";
 
-import { transactions, importMethods, featureFlags } from "../shared";
-
-const network: Coins.NetworkManifest = {
-	id: "ark.mainnet",
-	type: "live",
-	name: "Mainnet",
-	coin: "ARK",
-	currency: {
-		ticker: "ARK",
-		symbol: "Ѧ",
-		decimals: 8,
-	},
-	constants: {
-		slip44: 111,
-	},
-	hosts: [
-		{
-			type: "full",
-			host: "https://wallets.ark.io/api",
-		},
-		{
-			type: "musig",
-			host: "https://musig1.ark.io",
-		},
-		{
-			type: "explorer",
-			host: "https://explorer.ark.io",
-		},
-	],
-	governance: {
-		delegateCount: 51,
-		votesPerWallet: 1,
-		votesPerTransaction: 1,
-	},
-	transactions,
-	importMethods,
-	featureFlags,
-	knownWallets: "https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
-	meta: {
-		fastDelegateSync: true,
-	},
-};
-
-export default network;
-
-import { Coins } from "@arkecosystem/platform-sdk";
-
-export const transactions: Coins.NetworkManifestTransactions = {
+export const transactions: Networks.NetworkManifestTransactions = {
 	expirationType: "height",
 	types: [
 		"delegate-registration",
@@ -149,7 +103,7 @@ export const transactions: Coins.NetworkManifestTransactions = {
 	memo: true,
 };
 
-export const importMethods: Coins.NetworkManifestImportMethods = {
+export const importMethods: Networks.NetworkManifestImportMethods = {
 	address: {
 		default: false,
 		permissions: ["read"],
@@ -164,7 +118,7 @@ export const importMethods: Coins.NetworkManifestImportMethods = {
 	},
 };
 
-export const featureFlags: Coins.NetworkManifestFeatureFlags = {
+export const featureFlags: Networks.NetworkManifestFeatureFlags = {
 	Client: [
 		"transaction",
 		"transactions",
@@ -226,12 +180,125 @@ export const featureFlags: Coins.NetworkManifestFeatureFlags = {
 		"vote",
 	],
 };
+
+export const explorer: Networks.NetworkManifestExplorer = {
+	block: "block/{0}",
+	transaction: "transaction/{0}",
+	wallet: "wallets/{0}",
+};
 ```
 
-> [platform-sdk-ark/src/networks/shared.ts](https://github.com/ArkEcosystem/platform-sdk/blob/05c46197d498f9972df7a321bbbf567e3eb90114/packages/platform-sdk-ark/src/networks/shared.ts) | [Platform SDK v8.3.4](https://github.com/ArkEcosystem/platform-sdk/tree/05c46197d498f9972df7a321bbbf567e3eb90114)
+> [platform-sdk-ark/src/networks/shared.ts](https://github.com/ArkEcosystem/platform-sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/platform-sdk-ark/src/networks/shared.ts) | [Platform SDK v9.0.4](https://github.com/ArkEcosystem/platform-sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
 
 ---
 
-In the case of ARK it would be unsafe to call `IdentityService.keyPair({ privateKey: "..." })` because it would lead to an exception due to a lack of support for this specific way of retrieving a key-pair. Knowing that there is a lack of support for this feature before we even try to call the method will allow us to safe-guard our application against any unexpected behaviors for a certain coin.
+### Checking for Supported Feature Flags
 
-An example of how the manifest would be commonly used is to check if a certain coin supports the `TransactionService.vote` method. Trying to call this for example for `ETH` would lead to an exception because voting is not yet supported for this coin.
+In the case of ARK it would be unsafe to call `HDWallet.fromMnemonic(identity.mnemonic, { bip84: { account: 0 } })` because it would lead to an exception due to a lack of support for this specific way of retrieving a key-pair. Knowing that there is a lack of support for this feature before we even try to call the method will allow us to safe-guard our application against any unexpected behaviors for a certain coin.
+
+A given coin's network may be checked for supported features using the following pattern as an example:
+
+```typescript
+network.allows(FeatureFlag.IdentityAddressMnemonicBip84);
+```
+
+---
+
+### Available Feature Flags
+
+Below is a list of all currently-available feature flags.
+
+```typescript
+export enum FeatureFlag {
+	ClientBroadcast = "Client.broadcast",
+	ClientDelegate = "Client.delegate",
+	ClientDelegates = "Client.delegates",
+	ClientTransaction = "Client.transaction",
+	ClientTransactions = "Client.transactions",
+	ClientVoters = "Client.voters",
+	ClientVotes = "Client.votes",
+	ClientWallet = "Client.wallet",
+	ClientWallets = "Client.wallets",
+	FeeAll = "Fee.all",
+	IdentityAddressMnemonicBip39 = "Identity.address.mnemonic.bip39",
+	IdentityAddressMnemonicBip44 = "Identity.address.mnemonic.bip44",
+	IdentityAddressMnemonicBip49 = "Identity.address.mnemonic.bip49",
+	IdentityAddressMnemonicBip84 = "Identity.address.mnemonic.bip84",
+	IdentityAddressMultiSignature = "Identity.address.multiSignature",
+	IdentityAddressPrivateKey = "Identity.address.privateKey",
+	IdentityAddressPublicKey = "Identity.address.publicKey",
+	IdentityAddressSecret = "Identity.address.secret",
+	IdentityAddressValidate = "Identity.address.validate",
+	IdentityAddressWif = "Identity.address.wif",
+	IdentityKeyPairMnemonicBip39 = "Identity.keyPair.mnemonic.bip39",
+	IdentityKeyPairMnemonicBip44 = "Identity.keyPair.mnemonic.bip44",
+	IdentityKeyPairMnemonicBip49 = "Identity.keyPair.mnemonic.bip49",
+	IdentityKeyPairMnemonicBip84 = "Identity.keyPair.mnemonic.bip84",
+	IdentityKeyPairPrivateKey = "Identity.keyPair.privateKey",
+	IdentityKeyPairSecret = "Identity.keyPair.secret",
+	IdentityKeyPairWif = "Identity.keyPair.wif",
+	IdentityPrivateKeyMnemonicBip39 = "Identity.privateKey.mnemonic.bip39",
+	IdentityPrivateKeyMnemonicBip44 = "Identity.privateKey.mnemonic.bip44",
+	IdentityPrivateKeyMnemonicBip49 = "Identity.privateKey.mnemonic.bip49",
+	IdentityPrivateKeyMnemonicBip84 = "Identity.privateKey.mnemonic.bip84",
+	IdentityPrivateKeySecret = "Identity.privateKey.secret",
+	IdentityPrivateKeyWif = "Identity.privateKey.wif",
+	IdentityPublicKeyMnemonicBip39 = "Identity.publicKey.mnemonic.bip39",
+	IdentityPublicKeyMnemonicBip44 = "Identity.publicKey.mnemonic.bip44",
+	IdentityPublicKeyMnemonicBip49 = "Identity.publicKey.mnemonic.bip49",
+	IdentityPublicKeyMnemonicBip84 = "Identity.publicKey.mnemonic.bip84",
+	IdentityPublicKeyMultiSignature = "Identity.publicKey.multiSignature",
+	IdentityPublicKeySecret = "Identity.publicKey.secret",
+	IdentityPublicKeyWif = "Identity.publicKey.wif",
+	IdentityWifMnemonicBip39 = "Identity.wif.mnemonic.bip39",
+	IdentityWifMnemonicBip44 = "Identity.wif.mnemonic.bip44",
+	IdentityWifMnemonicBip49 = "Identity.wif.mnemonic.bip49",
+	IdentityWifMnemonicBip84 = "Identity.wif.mnemonic.bip84",
+	IdentityWifSecret = "Identity.wif.secret",
+	LedgerGetPublicKey = "Ledger.getPublicKey",
+	LedgerGetVersion = "Ledger.getVersion",
+	LedgerSignMessage = "Ledger.signMessage",
+	LedgerSignTransaction = "Ledger.signTransaction",
+	LinkBlock = "Link.block",
+	LinkTransaction = "Link.transaction",
+	LinkWallet = "Link.wallet",
+	MessageSign = "Message.sign",
+	MessageVerify = "Message.verify",
+	PeerSearch = "Peer.search",
+	TransactionDelegateRegistration = "Transaction.delegateRegistration",
+	TransactionDelegateRegistrationLedgerS = "Transaction.delegateRegistration.ledgerS",
+	TransactionDelegateRegistrationLedgerX = "Transaction.delegateRegistration.ledgerX",
+	TransactionDelegateResignation = "Transaction.delegateResignation",
+	TransactionDelegateResignationLedgerS = "Transaction.delegateResignation.ledgerS",
+	TransactionDelegateResignationLedgerX = "Transaction.delegateResignation.ledgerX",
+	TransactionHtlcClaim = "Transaction.htlcClaim",
+	TransactionHtlcClaimLedgerS = "Transaction.htlcClaim.ledgerS",
+	TransactionHtlcClaimLedgerX = "Transaction.htlcClaim.ledgerX",
+	TransactionHtlcLock = "Transaction.htlcLock",
+	TransactionHtlcLockLedgerS = "Transaction.htlcLock.ledgerS",
+	TransactionHtlcLockLedgerX = "Transaction.htlcLock.ledgerX",
+	TransactionHtlcRefund = "Transaction.htlcRefund",
+	TransactionHtlcRefundLedgerS = "Transaction.htlcRefund.ledgerS",
+	TransactionHtlcRefundLedgerX = "Transaction.htlcRefund.ledgerX",
+	TransactionIpfs = "Transaction.ipfs",
+	TransactionIpfsLedgerS = "Transaction.ipfs.ledgerS",
+	TransactionIpfsLedgerX = "Transaction.ipfs.ledgerX",
+	TransactionMultiPayment = "Transaction.multiPayment",
+	TransactionMultiPaymentLedgerS = "Transaction.multiPayment.ledgerS",
+	TransactionMultiPaymentLedgerX = "Transaction.multiPayment.ledgerX",
+	TransactionMultiSignature = "Transaction.multiSignature",
+	TransactionMultiSignatureLedgerS = "Transaction.multiSignature.ledgerS",
+	TransactionMultiSignatureLedgerX = "Transaction.multiSignature.ledgerX",
+	TransactionSecondSignature = "Transaction.secondSignature",
+	TransactionSecondSignatureLedgerS = "Transaction.secondSignature.ledgerS",
+	TransactionSecondSignatureLedgerX = "Transaction.secondSignature.ledgerX",
+	TransactionTransfer = "Transaction.transfer",
+	TransactionTransferLedgerS = "Transaction.transfer.ledgerS",
+	TransactionTransferLedgerX = "Transaction.transfer.ledgerX",
+	TransactionVote = "Transaction.vote",
+	TransactionVoteLedgerS = "Transaction.vote.ledgerS",
+	TransactionVoteLedgerX = "Transaction.vote.ledgerX",
+}
+```
+
+> [platform-sdk-ark/src/enums.ts](https://github.com/ArkEcosystem/platform-sdk/blob/6eeb6d9cac724fc73e059680b50f41215974e045/packages/platform-sdk/src/enums.ts) | [Platform SDK v9.0.4](https://github.com/ArkEcosystem/platform-sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
