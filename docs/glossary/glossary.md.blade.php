@@ -408,9 +408,11 @@ Deprecated term for an ARK-based chain.
 
 **More:** [ARK-Based Chain](glossary#ark-based-chain)
 
-### Burn
+### Burn (Burning)
 
 Removing tokens or coins from the circulating supply by either sending them to a provably unusable address or removing them as part of the consensus mechanism.
+
+![](youtube:V4m2CQvVaYQ)
 
 **More:** [Consensus Mechanism](glossary#consensus-mechanism), [Circulating Supply](glossary#circulating-supply), [Address](glossary#address), [Token](glossary#token), [Coin](glossary#coin)
 
@@ -774,6 +776,8 @@ See Distributed Ledger Technology.
 
 Attack vector where a bad actor causes a reorg allowing the same coins or tokens to be spent twice.
 
+![](youtube:-yFxzQj1LH0)
+
 **More:** [Attack Vector](glossary#attack-vector), [Bad Actor](glossary#bad-actor), [Reorg](glossary#reorg), [Token](glossary#token), [Coin](glossary#coin)
 
 ### DPoS
@@ -825,6 +829,8 @@ Web service that periodically awards cryptocurrency to visitors either for free 
 ### Fee
 
 Small charge in exchange for executing a transaction to the Blockchain network. Usually collected by node operators, but can be split between various parties based on tokenomics.
+
+![](youtube:sKXgKNq0JkQ)
 
 **More:** [Node Operator](glossary#node-operator), [Transaction](glossary#transaction), [Blockchain](glossary#blockchain), [Tokenomics](glossary#tokenomics), [Network](glossary#network)
 
@@ -880,6 +886,8 @@ See codebase.
 
 A property of sound money referring to how interchangeable each unit or coin of a currency is.
 
+![](youtube:7_wgBAAwv48)
+
 **More:** [Coin](glossary#coin)
 
 ## G
@@ -901,6 +909,8 @@ In stakeable cryptoassets, refers to the initial address where any initial suppl
 ### Genesis Block
 
 The very first block in a Blockchain.
+
+![](youtube:8L9kZLN03Eg)
 
 **More:** [Blockchain](glossary#blockchain)
 
@@ -975,6 +985,8 @@ Digital wallet that automatically generates a hierarchical tree-like structure o
 ### Hot Wallet
 
 Wallet with access to the Internet, where private keys are stored online and not in cold storage.
+
+![](youtube:uB6WbOvP9i0)
 
 **More:** [Cold Storage](glossary#cold-storage), [Private Key](glossary#private-key), [Wallet](glossary#wallet)
 
@@ -1187,6 +1199,8 @@ See mnemonic.
 ### Mobile Wallet
 
 Application for mobile devices that allows users to interface with Blockchains, execute transactions, and check balances.
+
+![](youtube:8vMvWj-kVWM)
 
 **More:** [Transaction](glossary#transaction), [Blockchain](glossary#blockchain)
 
