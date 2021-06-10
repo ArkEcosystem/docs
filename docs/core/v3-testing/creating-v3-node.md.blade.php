@@ -28,6 +28,7 @@ For those who are familiar with Linux and ARK, running these commands will insta
 sudo adduser ark
 sudo usermod -aG sudo ark
 sudo su - ark
+cd ~
 ```
 
 ```
