@@ -110,8 +110,8 @@ When prompted, use the password given to you by your hosting provider. Some prov
 Executing this guide as the root user should be avoided. Instead, create a new dedicated user to manage ARK related software. On your server, type the following into the command line and press enter. `username` is the name you want to log in with with. We’ll illustrate it as **`sudo adduser ark`** to create a user by the name of ‘ark’, but you can chose something else, if preferred.
 
 ```
-`sudo adduser <username>` //in our example we'll create user by the name of 'ark' so we'll replace <username> with ark and run:
-`sudo adduser ark`
+sudo adduser <username> //in our example we'll create user by the name of 'ark' so we'll replace <username> with ark and run:
+sudo adduser ark
 ```
 
 You will need to enter a user password and confirm it by entering the same password again. After that, you will be prompted to enter in the user’s full name and some other information. Feel free to leave them all blank, as they are optional, by pressing ‘enter’. When prompted to confirm, type ‘Y’ and press ‘enter’ to finish.
