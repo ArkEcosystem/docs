@@ -2,7 +2,8 @@
 title: How To Setup a Server Running ARK Core?
 ---
 
-# How To Setup a Server Running ARK Core?
+# How To Setup a Server Running ARK Core? (APN | Mainnet)
+
 Setting up the new ARK Core has never been easier! If you want to have your own instance up and running, this guide will help you set one up in a few minutes with some basic Linux knowledge.
 
 **This guide is structured in a few sections:**
@@ -31,9 +32,9 @@ To start with the ARK Core install process, we recommend that you start with a c
 For those who are familiar with Linux and ARK, running these commands will install and initialize ARK Core. Login to your newly created server and run these commands in sequence. There is more detailed information in the section following the commands:
 
 ```bash
-adduser ark
-usermod -aG sudo ark
-su ark
+sudo adduser ark
+sudo usermod -aG sudo ark
+sudo su - ark
 cd ~
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ark relay:start
@@ -106,11 +107,11 @@ When prompted, use the password given to you by your hosting provider. Some prov
 
 ### Create a user
 
-Executing this guide as the root user should be avoided. Instead, create a new dedicated user to manage ARK related software. On your server, type the following into the command line and press enter. `username` is the name you want to log in with with. We’ll illustrate it as **`adduser ark`** to create a user by the name of ‘ark’, but you can chose something else, if preferred.
+Executing this guide as the root user should be avoided. Instead, create a new dedicated user to manage ARK related software. On your server, type the following into the command line and press enter. `username` is the name you want to log in with with. We’ll illustrate it as **`sudo adduser ark`** to create a user by the name of ‘ark’, but you can chose something else, if preferred.
 
 ```
-adduser <username> //in our example we'll create user by the name of 'ark' so we'll replace <username> with ark and run:
-adduser ark
+`sudo adduser <username>` //in our example we'll create user by the name of 'ark' so we'll replace <username> with ark and run:
+`sudo adduser ark`
 ```
 
 You will need to enter a user password and confirm it by entering the same password again. After that, you will be prompted to enter in the user’s full name and some other information. Feel free to leave them all blank, as they are optional, by pressing ‘enter’. When prompted to confirm, type ‘Y’ and press ‘enter’ to finish.

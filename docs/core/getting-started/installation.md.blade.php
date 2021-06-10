@@ -2,15 +2,15 @@
 title: Installation
 ---
 
-# Installation
+# Installation (APN | Mainnet)
 
 Since Version 2.2.0 we distribute the ARK Core as an npm package, which has to be globally installed, which provides a built-in CLI.
 
 ## Prerequisites
 
-The following sections will guide you through an automated ARK Core installation on a new server. Alternatively, a manual installation option is available, take a look at [install.sh](https://raw.githubusercontent.com/ARKEcosystem/core/develop/install.sh) to see what dependencies need to be installed and configured.
+The following sections will guide you through an automated ARK Core installation on a new server. Alternatively, a manual installation option is available, take a look at [install.sh](https://github.com/ArkEcosystem/core/blob/master/install.sh) to see what dependencies need to be installed and configured.
 
-**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the** [**process manager**](https://github.com/ARKEcosystem/core/blob/master/packages/core/src/process-manager.ts) **to see how it works under the hood.**
+**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the** [process manager](https://github.com/ARKEcosystem/core/blob/master/packages/core/src/process-manager.ts) **to see how it works under the hood.**
 
 ## Existing Installation
 
@@ -29,11 +29,11 @@ Once this command has finished you should stop all your existing core processes 
 If you are planning to setup a new server you can execute the following steps.
 
 ```bash
-adduser ark
-usermod -aG sudo ark
-su ark
+sudo adduser ark
+sudo usermod -aG sudo ark
+sudo su - ark
 cd ~
-bash <(curl -s https://raw.githubusercontent.com/ARKEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
 
 Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.

@@ -43,7 +43,7 @@ sudo adduser ark
 sudo usermod -aG sudo ark
 
 #login as ark user
-sudo su ark
+sudo su - ark
 ```
 
 ### Step 2: Install Git Source Control System
