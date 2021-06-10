@@ -2,7 +2,7 @@
 title: Relay node installation instructions (Bare Metal or VM)
 ---
 
-# BareMetal or VM Install
+# BareMetal or VM Install (APN | Mainnet)
 
 ## Installation Using the Official `Installation Script`
 
@@ -21,8 +21,9 @@ sudo apt-get update && sudo apt-get upgrade
 It is best to create a specific ARK-related user, which can later own the required databases as well.
 
 ```bash
-sudo adduser username
-sudo usermod -aG sudo username
+# replace 'your_username' with the username of your choosing
+sudo adduser your_username
+sudo usermod -aG sudo your_username
 ```
 
 ### 3. Switch to the New User
@@ -30,7 +31,8 @@ sudo usermod -aG sudo username
 Switch to the new user account and go to the base directory.
 
 ```bash
-sudo su - username
+# replace 'your_username' with your chosen username
+sudo su - your_username
 cd ~
 ```
 
@@ -39,7 +41,7 @@ cd ~
 We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command.
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ARKEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
 
 You will be asked to input your current users password for sudo privileges. Write or paste it and press enter to start installation process.

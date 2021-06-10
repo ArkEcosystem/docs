@@ -2,7 +2,7 @@
 title: Core V3 Server Setup
 ---
 
-# Core V3 Server Setup (devnet)
+# Core V3 Server Setup (ADN | Devnet)
 
 <x-alert type="danger">
 This guide is ONLY for users who are creating a new server for Core V3 installation. If your server was previously operational on devnet with Core 2.7, then please follow this upgrade guide
@@ -25,19 +25,14 @@ To start with the ARK Core install process, we recommend that you start with a c
 For those who are familiar with Linux and ARK, running these commands will install and initialize ARK Core. Login to your newly created server and run these commands in sequence:
 
 ```
-adduser ark
+sudo adduser ark
+sudo usermod -aG sudo ark
+sudo su - ark
+cd ~
 ```
 
 ```
-usermod -aG sudo ark
-```
-
-```
-su - ark
-```
-
-```
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install-next.sh)
 ```
 (When prompted, select the **devnet** network)
 <x-alert type="warning">

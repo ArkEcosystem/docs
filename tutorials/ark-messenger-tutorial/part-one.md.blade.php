@@ -43,7 +43,7 @@ sudo adduser ark
 sudo usermod -aG sudo ark
 
 #login as ark user
-sudo su ark
+sudo su - ark
 ```
 
 ### Step 2: Install Git Source Control System
@@ -175,6 +175,7 @@ sudo usermod -aG sudo ark
 
 #login as ark user
 sudo su - ark
+cd ~
 ```
 
 After creating and logging under `ark` user, you can execute the following script to install development tools and dependencies from [Technology Stack](https://blog.ark.io/technology-stack). If your default user isn't `ark`, you should copy and modify the script source below \(database section\).
