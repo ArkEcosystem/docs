@@ -27,7 +27,7 @@ In addition to the above, all projects approved and funded by ARK.io are require
 * All projects will be open source.
 * The source code for the project will be owned by ARK.io and will be made available under a relevant open source license determined on a case by case basis. 
 * Projects will be managed in a repository hosted by ARK.io to ensure long term availability of project source code. 
-* Projects should be developed in TypeScript whenever possible and must follow ARK.io coding standards as outlined in the [Technologies](ark-grants-program-guidelines#technologies) section of this document. 
+* Projects should be developed in TypeScript whenever possible and must follow ARK.io coding standards as outlined in the [Technologies](#technologies) section of this document. 
 
 If you are uncomfortable providing any of these items or agreeing to the guidelines as outlined in this document, we will be unable to approve your application and/or fund your project. 
 
@@ -70,13 +70,13 @@ Payment for projects can be made in BTC and/or ARK and payment preference will b
 
 ### Submission Process
 
-Applications should be completed using the [**ARK Grants Application Template** ](ark-grants-program-guidelines#ark-grants-application-template)below. Please fill out all information as requested, to include your personal contact information for coordination of your application. Project reviews may take up to 14 days for initial review of your application. During this time, the ARK.io team will reach out to you with any questions or comments on your application. 
+Applications should be completed using the [ARK Grants Application Template](#ark-grants-application-template) below. Please fill out all information as requested, to include your personal contact information for coordination of your application. Project reviews may take up to 14 days for initial review of your application. During this time, the ARK.io team will reach out to you with any questions or comments on your application. 
 
 Once the project review is completed, we will notify you with an official decision about your project, including any feedback we may have. If your project is approved, we will provide instructions on how to proceed at that time. 
 
 Thank you for your interest in the ARK Grants program and we look forward to reading your proposals!
 
- **Please submit the completed application to** [**Grants@ARK.io**](mailto:Grants@ARK.io) **with the title "**_**ARK Grants Application**_**".**
+ **Please submit the completed application to** [Grants@ARK.io](mailto:Grants@ARK.io) **with the title "**_**ARK Grants Application**_**".**
 
 ## ARK Grants Application Template
 
@@ -119,5 +119,4 @@ For your final two milestones, please include one milestone for ‘Documentation
 
 Please provide any closing remarks and/or considerations for your project. This is an opportunity to give any additional details that may be relevant to the approval of your project and to sell us on why we should approve your application.
 
-**Please submit the completed application to** [**Grants@ARK.io**](mailto:Grants@ARK.io) **with the title "**_**ARK Grants Application**_**".**
-
+**Please submit the completed application to** [Grants@ARK.io](mailto:Grants@ARK.io) **with the title "**_**ARK Grants Application**_**".**
