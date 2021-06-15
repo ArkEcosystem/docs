@@ -76,7 +76,7 @@ Once the project review is completed, we will notify you with an official decisi
 
 Thank you for your interest in the ARK Grants program and we look forward to reading your proposals!
 
- **Please submit the completed application to** [Grants@ARK.io](mailto:Grants@ARK.io) **with the title "**_**ARK Grants Application**_**".**
+ **Please submit the completed application to [Grants@ARK.io](mailto:Grants@ARK.io) with the title "_ARK Grants Application_".**
 
 ## ARK Grants Application Template
 
