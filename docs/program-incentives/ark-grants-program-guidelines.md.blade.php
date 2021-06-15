@@ -119,4 +119,4 @@ For your final two milestones, please include one milestone for ‘Documentation
 
 Please provide any closing remarks and/or considerations for your project. This is an opportunity to give any additional details that may be relevant to the approval of your project and to sell us on why we should approve your application.
 
-**Please submit the completed application to** [Grants@ARK.io](mailto:Grants@ARK.io) **with the title "**_**ARK Grants Application**_**".**
+**Please submit the completed application to [Grants@ARK.io](mailto:Grants@ARK.io) with the title "_ARK Grants Application_".**
