@@ -8,9 +8,21 @@ MarketSquare allows users to list Projects such as Businesses, Network Validator
 
 Whether you're a developer offering freelance services, a small team with a groundbreaking new dApp, or a multi-billion-dollar ecosystem searching for your next hire, MarketSquare is a platform for everything Blockchain.
 
+## Getting Verified
+
+Before you jump in and add your project you'll need to verify your project. Click on the '**Add Project**' button at the top of the MarketSquare Homepage to get started.
+
+![](/storage/docs/docs/marketsquare/assets/projects/projects-add.png)
+
+---
+
+You'll then be presented with the Project Verification page. Fill out the form in its entirety and we will review the information and get back to you.
+
+![](/storage/docs/docs/marketsquare/assets/projects/projects-verification.png)
+
 ## Getting Started
 
-To get started adding a Project on MarketSquare, click the '**Add Project**' button at the top of the MarketSquare Homepage.
+Once you've been verified, you are ready to add your project! Click the '**Add Project**’ button at the top of the MarketSquare Homepage.
 
 ![](/storage/docs/docs/marketsquare/assets/projects/projects-add.png)
 
