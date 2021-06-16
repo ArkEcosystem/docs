@@ -44,6 +44,10 @@ ark relay:start
 pm2 logs
 ```
 
+<x-alert type="info">
+Installing **Devnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. Proceed to the '[Additional Devnet Steps](#additional-devnet-steps)' section for further instructions.
+</x-alert>
+
 ## Installation using the Install Script (Step-by-Step)
 
 If you are planning to setup a new server you can execute the following steps.
@@ -146,6 +150,10 @@ Once the installation of dependencies and ARK Core is finished you will need to 
     testnet
 ```
 
+<x-alert type="info">
+Installing **Devnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. After the following steps are completed, proceed to the '[Additional Devnet Steps](#additional-devnet-steps)' section for further instructions.
+</x-alert>
+
 After you have made your selection, you will need to confirm by pressing `y` and confirm again with `enter`
 
 ```bash
@@ -179,6 +187,15 @@ Enter the database name: ark_network
 ```
 
 This will create a PostgreSQL role and database to be used for storing blockchain data.
+
+### Additional Devnet Steps
+
+When installing **Devnet** via the `install.sh` script, you'll also need to enter the following commands into your terminal to ensure the latest `@next` version is used:
+
+```bash
+ark config:cli --channel=next
+rm -rf ~/.config/ark-core/ && ark config:publish --network=devnet --reset
+```
 
 ### Success
 
