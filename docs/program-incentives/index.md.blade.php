@@ -1,8 +1,4 @@
----
-title: Introduction
----
-
-# Introduction
+## Introduction
 
 <x-general.sidebar-link path="/docs/program-incentives/intro" name="Introduction" />
 
