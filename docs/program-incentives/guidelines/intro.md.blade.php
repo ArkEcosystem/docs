@@ -14,4 +14,3 @@ Please read the following documentation to follow the best practices when contri
         ['path' => '/docs/program-incentives/guidelines/going-live', 'name' => 'Going Live!'],
     ]"
 />
-

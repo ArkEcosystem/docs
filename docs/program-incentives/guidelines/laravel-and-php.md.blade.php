@@ -42,7 +42,7 @@ You should always avoid the usage of the `down` method in migrations which can b
 
 The `down` methods also make it more difficult to follow the order in which things are applied and what exactly is happening because a single `add_post_id_to_images` migration technically could also be `drop_post_id_to_images` at the same time because it has an `up` and `down` method which add and drop the same column depending on how it is used. Using separate migrations for those tasks makes it more clear what is happening and the `down` method is dead code until you actually need it, which should rarely be the case.
 
-You can listen to https://www.laravelpodcast.com/episodes/5fc5650b for some more info on why the `down` method is a bad idea and shouldn't be used in production applications.
+You can listen to [https://www.laravelpodcast.com/episodes/5fc5650b](https://www.laravelpodcast.com/episodes/5fc5650b) for some more info on why the `down` method is a bad idea and shouldn't be used in production applications.
 
 ## Testing
 

@@ -10,7 +10,7 @@ title: Version Control
 
 These guidelines outline what things should be kept in mind while developing new projects and how to structure the branches to guarantee a streamlined workflow.
 
-### Applications & Packages \(Deployable / Non-Deployable\)
+### Applications & Packages (Deployable / Non-Deployable)
 
 #### Master
 
@@ -26,7 +26,7 @@ The `develop` branch should be looked at as the `beta` branch. It is periodicall
 
 These guidelines are based on [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) and should be followed as closely as possible, or your pull-request is subject to rejection.
 
-#### TL;DR:
+#### TL;DR
 
 Messages must be matched by the following regex:
 
@@ -34,7 +34,7 @@ Messages must be matched by the following regex:
 
 Appears under "Features" header, `crypto` subheader:
 
-Appears under "Bug Fixes" header, `crypto` subheader, with a link to issue \#28:
+Appears under "Bug Fixes" header, `crypto` subheader, with a link to issue #28:
 
 Appears under "Performance Improvements" header, and under "Breaking Changes" with the breaking change explanation:
 
@@ -61,11 +61,12 @@ Other prefixes are up to your discretion. Suggested prefixes are `docs`, `chore`
 The scope could be anything specifying the place of the commit change. For example `core`, `profile`, `crypto`, `database` etc...
 
 ### Subject
+
 The subject contains a succinct description of the change:
 
 * use the imperative, present tense: "change" not "changed" nor "changes"
 * don't capitalize the first letter
-* no dot \(.\) at the end
+* no dot (.) at the end
 
 ### Body
 
