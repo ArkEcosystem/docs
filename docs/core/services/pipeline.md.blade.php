@@ -1,5 +1,5 @@
 ---
-title: Pipeline
+title: Services - Pipeline
 ---
 
 # Pipeline
@@ -29,17 +29,7 @@ import { app, Container, Services } from "@arkecosystem/core-kernel";
 When you have the need for a new pipeline, you'll need to resolve it through the application in order to ensure that it has all of the required dependencies for it to function injected into it.
 
 ```typescript
-import { Services } from "@arkecosystem/core-kernel";
-
-class MyClass {
-	public doSomething(): void {
-		(new Services.Pipeline.Pipeline())
-			.pipe(...)
-			.pipe(...)
-			.pipe(...)
-			.process(...);
-	}
-}
+const pipeline: Pipeline = app.get<PipelineFactory>(Container.Identifiers.PipelineFactory)();
 ```
 
 ## **Stage Functions**
@@ -53,7 +43,7 @@ const removeDash = async (payload: string) => payload.replace("_", "");
 const removeUnderscore = async (payload: string) => payload.replace("-", " ");
 
 console.log(
-	await (new Services.Pipeline.Pipeline())
+	await pipeline
 		.pipe(removeDash)
 		.pipe(removeUnderscore)
 		.process("_Hello-World")
@@ -86,7 +76,7 @@ class RemoveUnderscore implements Stage {
 }
 
 console.log(
-	await (new Services.Pipeline.Pipeline())
+	await pipeline
 		.pipe(app.resolve(RemoveDash))
 		.pipe(app.resolve(RemoveUnderscore))
 		.process("_Hello-World")
@@ -111,7 +101,7 @@ class RemoveUnderscore implements Stage {
 }
 
 console.log(
-	await (new Services.Pipeline.Pipeline())
+	await pipeline
 		.pipe(new RemoveDash())
 		.pipe(new RemoveUnderscore())
 		.process("_Hello-World")

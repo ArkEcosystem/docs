@@ -1,5 +1,5 @@
 ---
-title: Mixins
+title: Services - Mixins
 ---
 
 # Mixins

@@ -91,6 +91,6 @@ API_HOST=0.0.0.0
 API_PORT=4003
 ```
 
-Those are just a few of the possible environment variables, check the [Environment Variables](/docs/core/configuration/environment-variables) to get a full list of available environment variables and make sure to check out [dotenv](https://github.com/ArkEcosystem/utils/blob/master/src/dot-env.ts) and [sindresorhus/env-paths](https://github.com/sindresorhus/env-paths) to get a better understanding of what is happening under the hood.
+Those are just a few of the possible environment variables, check the [Environment Variables](/docs/core/getting-started/environment-variables) to get a full list of available environment variables and make sure to check out [dotenv](https://github.com/ArkEcosystem/utils/blob/master/src/dot-env.ts) and [sindresorhus/env-paths](https://github.com/sindresorhus/env-paths) to get a better understanding of what is happening under the hood.
 
 > Your changes to the `.env` file should not be committed to your git repository, since each server could require a different environment configuration.

@@ -1,5 +1,5 @@
 ---
-title: Delegate Resignation Transaction Specification
+title: Transaction Types - Delegate Resignation
 ---
 
 # Delegate Resignation
@@ -34,7 +34,7 @@ This transaction acts as a “kill command” for delegates who wish to resign o
 
 ### Serialized Payload
 
-```
+```shell
 ff02170100000007000200000000000000037a12518205254e6ebf25290d9786fd9821c43bb7319c9fc2499c8d472809dfaf00f902950000000000ad7a61a76433260ef9dc687311ab6c657f6c733dbf1a80c3514da823d43226235a70a94fa1a0b8cb2f4b3d0be5011945bfbe8c8fc5b5ca0e07f6c2a37e3cf11b
 ```
 
@@ -53,5 +53,3 @@ ff02170100000007000200000000000000037a12518205254e6ebf25290d9786fd9821c43bb7319c
 | **VendorField Length:** | **\[58\]** | **1** | `0x00` |
 | **Amount:** | **\[..\]** | **0** | Not Serialized |
 | **Signature:** | **\[59\]** | **64** | `0xad7a61a76433260ef9dc687311ab6c657f6c733dbf1a80c3514da823d43226235a70a94fa1a0b8cb2f4b3d0be5011945bfbe8c8fc5b5ca0e07f6c2a37e3cf11b` |
-
-##

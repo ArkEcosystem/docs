@@ -1,5 +1,5 @@
 ---
-title: Events
+title: Services - Events
 ---
 
 # Events
@@ -10,26 +10,25 @@ The event dispatcher implementation that ships with Core supports both synchrono
 
 ## Prerequisites
 
-Before we start, we need to establish what a few recurring variables and imports in this document refer to when they are used.
+Before we start, we need to inject the EventDispatcher service into our class so we can use events.
 
 ```typescript
-import { app } from "@arkecosystem/core-kernel";
+@Container.inject(Container.Identifiers.EventDispatcherService)
+private readonly events!: Contracts.Kernel.EventDispatcher;
 ```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
 
 ## Registering Events & Listeners
 
 ### Register a listener with the dispatcher
 
 ```typescript
-app.events.listen("firstEvent", ({ name, data }) => console.log(name, data.message));
+this.events.listen("firstEvent", ({ name, data }) => console.log(name, data.message));
 ```
 
 ### Register many listeners with the dispatcher
 
 ```typescript
-app.events.listenMany([
+this.events.listenMany([
     ["firstEvent", listenerFunction],
     ["secondEvent", listenerFunction]
 ]);
@@ -38,21 +37,21 @@ app.events.listenMany([
 ### Register a one-time listener with the dispatcher
 
 ```typescript
-app.events.listenOnce("firstEvent", () => console.log("Hello World"));
+this.events.listenOnce("firstEvent", () => console.log("Hello World"));
 ```
 
 ### Remove a listener from the dispatcher
 
 ```typescript
-app.events.forget("firstEvent", listenerFunction);
+this.events.forget("firstEvent", listenerFunction);
 ```
 
 ### Remove many listeners from the dispatcher
 
 ```typescript
-app.events.forgetMany(["firstEvent", "secondEvent"]);
+this.events.forgetMany(["firstEvent", "secondEvent"]);
 
-app.events.forgetMany([
+this.events.forgetMany([
     ["firstEvent", listenerFunction],
     ["secondEvent", listenerFunction]
 ]);
@@ -61,19 +60,19 @@ app.events.forgetMany([
 ### Remove all listeners from the dispatcher
 
 ```typescript
-app.events.flush();
+this.events.flush();
 ```
 
 ### Get all of the listeners for a given event name
 
 ```typescript
-app.events.getListeners("firstEvent");
+this.events.getListeners("firstEvent");
 ```
 
 ### Determine if a given event has listeners
 
 ```typescript
-app.events.hasListeners("firstEvent");
+this.events.hasListeners("firstEvent");
 ```
 
 ## Dispatching Events
@@ -81,25 +80,25 @@ app.events.hasListeners("firstEvent");
 ### Fire an event and call the listeners in asynchronous order
 
 ```typescript
-await app.events.dispatch("firstEvent", "Hello World");
+await this.events.dispatch("firstEvent", "Hello World");
 ```
 
 ### Fire an event and call the listeners in sequential order
 
 ```typescript
-await app.events.dispatchSeq("firstEvent", "Hello World");
+await this.events.dispatchSeq("firstEvent", "Hello World");
 ```
 
 ### Fire an event and call the listeners in synchronous order
 
 ```typescript
-app.events.dispatchSync("firstEvent", "Hello World");
+this.events.dispatchSync("firstEvent", "Hello World");
 ```
 
 ### Fire many events and call the listeners in asynchronous order
 
 ```typescript
-await app.events.dispatchMany([
+await this.events.dispatchMany([
     ["firstEvent", "Hello World"],
     ["secondEvent", "Hello World"]
 ]);
@@ -108,7 +107,7 @@ await app.events.dispatchMany([
 ### Fire many events and call the listeners in sequential order
 
 ```typescript
-await app.events.dispatchManySeq([
+await this.events.dispatchManySeq([
     ["firstEvent", "Hello World"],
     ["secondEvent", "Hello World"]
 ]);
@@ -117,7 +116,7 @@ await app.events.dispatchManySeq([
 ### Fire many events and call the listeners in synchronous order
 
 ```typescript
-app.events.dispatchManySync([[
+this.events.dispatchManySync([[
     ["firstEvent", "Hello World"],
     ["secondEvent", "Hello World"]
 ]]);

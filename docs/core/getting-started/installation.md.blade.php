@@ -1,81 +1,189 @@
 ---
-title: Installation
+title: Getting Started - Installation
 ---
 
-# Installation (APN | Mainnet)
+# Installation
 
-Since Version 2.2.0 we distribute the ARK Core as an npm package, which has to be globally installed, which provides a built-in CLI.
+Since Version 2.2.0, ARK Core is distributed as an npm package that must be installed globally and provides a built-in CLI.
 
-## Prerequisites
+## Requirements
 
-The following sections will guide you through an automated ARK Core installation on a new server. Alternatively, a manual installation option is available, take a look at [install.sh](https://github.com/ArkEcosystem/core/blob/master/install.sh) to see what dependencies need to be installed and configured.
+| Supported OS | Release Version(s) |
+| :----------: | :----------------: |
+| **Ubuntu**   | 18.x / 20.x        |
 
-**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the** [process manager](https://github.com/ARKEcosystem/core/blob/master/packages/core/src/process-manager.ts) **to see how it works under the hood.**
+| Relay Specification | Minimum | Recommended   |
+| :-----------------: | :-----: | :-----------: |
+| **CPUs**            | 1       | 2             |
+| **RAM**             | 2GB     | 4GB           |
+| **HDD**             | 80GB    | 100GB - 120GB |
 
-## Existing Installation
+| Forger Specification | Minimum            | Recommended              |
+| :------------------: | :----------------: | :----------------------: |
+| **CPUs**             | 2<br>(_dedicated_) | 4<br>(_dedicated_)       |
+| **RAM**              | 8GB                | 16GB                     |
+| **HDD**              | 80GB<br>(_SSD_)    | 100GB - 120GB<br>(_SSD_) |
 
-If you are already operating a server that runs Core 2.1.0 or newer you can simply execute the following command.
+## Installation using the Install Script (Quickstart)
 
-```bash
-yarn global add @arkecosystem/core
-```
+This is a quick summary of the commands required to setup and configure an ARK Core node.
 
-This command may take a while since all packages and dependencies need to be installed.
+This will create a new user account with the correct privileges, install and configure ARK Core, then start a relay instance and log the output.
 
-Once this command has finished you should stop all your existing core processes with `pm2 delete all` and start new ones with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
-
-## Fresh Installation
-
-If you are planning to setup a new server you can execute the following steps.
+For detailed step-by-step instructions, please see the section below ([Installation using the Install Script (Step-by-Step)](#installation-using-the-install-script-step-by-step)).
 
 ```bash
 sudo adduser ark
-sudo usermod -aG sudo ark
+sudo usermod -a -G sudo ark
 sudo su - ark
-cd ~
+
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+
+ark relay:start
+
+pm2 logs
+```
+
+## Installation using the Install Script (Step-by-Step)
+
+If you are planning to setup a new server you can execute the following steps.
+
+### 1: Create a New Account
+
+Create a new dedicated user account to manage ARK-related software.
+
+We’ll illustrate this command as **`sudo adduser ark`** to create a user by the name of **‘ark’**, but you can chose something else, if preferred.
+
+On your server, type the following into the command line:
+
+```bash
+sudo adduser ark
+```
+
+You'll be asked to create and confirm a new user password, and be prompted to enter the user’s full name and some other information. (_Feel free to leave them blank by pressing ‘enter’, they are all optional fields._)
+
+When prompted to confirm, type ‘Y’ and press ‘enter’ to finish.
+
+```bash
+Adding user 'ark' ...
+Adding new group 'ark' (1000) ...
+Adding new user 'ark' (1000) with group 'ark' ...
+Creating home directory '/home/ark' ...
+Copying files from '/etc/skel' ...
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+Changing the user information for ark
+Enter the new value, or press ENTER for the default
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
+Is the information correct? [Y/n] Y
+```
+
+---
+
+### 2: Grant Sudo Privileges
+
+Next, we need to make sure that our user account has all of the necessary privileges to run ARK Core properly. This will give our user account `sudo` privileges.
+
+Type or copy-paste the following command into your terminal:
+
+```bash
+sudo usermod -a -G sudo ark
+```
+
+<x-alert type="info">
+In this example we use **'ark'** for the name of the new user account, but you should use whatever username was set in previous steps above.
+</x-alert>
+
+---
+
+### 3: Login as the New User
+
+We now should switch to the user account created above, this will also land us in the user's base directory (`~/`).
+
+Type or copy-paste the following command into your terminal:
+
+```bash
+sudo su - ark
+```
+
+---
+
+### 4: Run the Installation Script
+
+Here, we will use the `install.sh` script. This installs ARK Core and all of its dependencies onto your server, then publishes the configuration files for it.
+
+Run the install script by copying and pasting this one line command into your terminal:
+
+```bash
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
 
-Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
-
-> You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
-
-## Configuration
-
-Before you can start using ARK Core you will need to publish the configuration of the network you wish to operate on.
+You will be asked to input your user password to grant sudo privileges:
 
 ```bash
-ark config:publish
+[sudo] password for ark: <input your password for user you created>
 ```
 
-This will bring up an interactive UI which will ask a few questions to help you with the setup process. Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
+<x-alert type="warning">
+The install process might take a while, don’t interrupt it, wait for it to finish.
+</x-alert>
 
-## Troubleshooting
+#### 4.1: Select the Core network
 
-Most of the issues you will encounter are related to `pm2` not properly responding so the first thing you can try is to kill your pm2 daemon and refresh it.
+Once the installation of dependencies and ARK Core is finished you will need to select which network you wish to operate on. This can be achieved by pressing the `up` or `down` arrow keys and confirming your selection by pressing `enter`.
+
+`Mainnet` is the public network, `Devnet` is the development network for testing, and `Testnet` is network used for private testing.
 
 ```bash
-pm2 kill && pm2 cleardump && pm2 reset
+? What network do you want to operate on? › - Use arrow-keys. Return to submit.
+❯   devnet
+    mainnet
+    testnet
 ```
 
-If this doesn't help, read the known issues below and see if any of those solve your issues.
-
-### Command Not Found
-
-If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.
+After you have made your selection, you will need to confirm by pressing `y` and confirm again with `enter`
 
 ```bash
-echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc
+? Can you confirm? › (y/N)
 ```
 
-If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
+At this point, ARK Core has been successfully installed with its configuration options properly published.
 
-### Process Fails to Start After Update
+<x-alert type="info">
+**Tinkering with 'Devnet'?** Create an Address using the [ARK Desktop Wallet](https://ark.io/download#desktop-wallet), then head over to [Discord](https://discord.ark.io) and visit the **`#community_bots`** channel. (_Use the **`!faucet`** command to receive DARK tokens_)
+</x-alert>
 
-If the processes fail to start or restart after an update it is most likely an issue with pm2. Running `pm2 update` should usually resolve the issue.
+### 4.2: Configuring the Core Database
 
-If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a delegate.
+The last step of the required ARK Core configuration is to setup the database parameters.
 
-### Process Has Entered an Unknown State
+You will be presented with a prompt:
 
-If you are receiving a message to the effect of `The "..." process has entered an unknown state.` your pm2 instance is not responding properly. This is usually resolved by a simple `pm2 update`, if that doesn't help try `pm2 kill` to destroy the pm2 daemon so it gets restarted the next time an application tries to access it.
+```bash
+Would you like to configure the database? [y/N]:
+```
+
+Press `y` and confirm with `enter`.
+
+You can input any custom database credentials that you want to use, or you can use the one provided below, by replacing "ark\_network" with the network you plan to operate on \(eg. ark\_mainnet, ark\_devnet, ark\_testnet\):
+
+```bash
+Enter the database username: ark
+Enter the database password: password
+Enter the database name: ark_network
+```
+
+This will create a PostgreSQL role and database to be used for storing blockchain data.
+
+### Success
+
+That’s it, your installation is all set! 🎉
+
+<x-alert type="success">
+**Hint:** start a relay instance and log its output by entering the following command into your terminal: **`ark relay:start && pm2 logs`**
+</x-alert>

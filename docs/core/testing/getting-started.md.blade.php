@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Testing - Getting Started
 ---
 
 # Getting Started
@@ -8,7 +8,7 @@ ARK Core is built with testing in mind to ensure that breaking changes or bugs a
 
 ## E2E
 
-The E2E tests are the most high level tests we have. They work with a real network powered by Docker Swarm and replicate how certain actions could affect a network and ensure that they won't cause any harm. If something has the potential to stall the network or slow it down then we can write an E2E test and see how it will react.
+The E2E tests are the most high level tests we have. They work with a real network powered by Docker Compose and replicate how certain actions could affect a network and ensure that they won't cause any harm. If something has the potential to stall the network or slow it down then we can write an E2E test and see how it will react.
 
 ## Functional
 

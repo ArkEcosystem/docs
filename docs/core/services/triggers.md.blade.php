@@ -1,5 +1,5 @@
 ---
-title: Actions
+title: Services - Triggers
 ---
 
 # Triggers

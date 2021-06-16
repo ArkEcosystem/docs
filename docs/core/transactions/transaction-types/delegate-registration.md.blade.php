@@ -1,5 +1,5 @@
 ---
-title: Delegate Registration Transaction Specifications
+title: Transaction Types - Delegate Registration
 ---
 
 # Delegate Registration
@@ -37,7 +37,7 @@ A user or organization can register their address to become a delegate and secur
 
 ### Serialized Payload
 
-```
+```shell
 ff0217010000000200020000000000000002a574b8995542631976691a7f73b59e4700cd84badb831331ab18ae2113a184ba00f902950000000000143032613537346238393935353432363331393736f2cf8acf6ccb71fa0e848ca185a93e6ff44e0dd266b08c4bc0dfc7984499acd759f6067ace6bb00eae404eafa6af3548f5d35f8727f4ddeba69b6d925c604338
 ```
 
@@ -57,5 +57,3 @@ ff0217010000000200020000000000000002a574b8995542631976691a7f73b59e4700cd84badb83
 | **Username Length:** | **\[59\]** | **1** | `0x14` |
 | **Username:** | **\[60\]** | **20** | `0x3032613537346238393935353432363331393736` |
 | **Signature:** | **\[80\]** | **64** | `0xf2cf8acf6ccb71fa0e848ca185a93e6ff44e0dd266b08c4bc0dfc7984499acd759f6067ace6bb00eae404eafa6af3548f5d35f8727f4ddeba69b6d925c604338` |
-
-##

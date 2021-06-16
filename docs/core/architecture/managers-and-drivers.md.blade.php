@@ -1,5 +1,5 @@
 ---
-title: Managers and Drivers
+title: Architecture - Managers and Drivers
 ---
 
 # Managers and Drivers
@@ -8,7 +8,7 @@ ARK Core makes use of a variant of the Builder pattern, known as the Manager pat
 
 > Throughout this article we will reference the Builder pattern as Manager pattern as ARK Core internally uses the wording `Manager` for all the classes that manage the state of drivers.
 
-### Manager
+## Manager
 
 In simple terms a Manager is a class that _manages_ the state of the drivers for a specific feature. Think for example about a caching feature that needs to scale up as more data is stored. You might ship a default `ArrayDriver` driver which stores data in-memory and is sufficient for a few thousand sets of data but becomes slow over time.
 
@@ -16,7 +16,7 @@ What the Manager pattern allows you to do is to simply create a new driver, for 
 
 **This is extremely useful for extending or altering how ARK Core behaves and what it is capable of doing, all done through the use of managers and drivers with a common public API.**
 
-### Driver
+## Driver
 
 A driver is an extension to how a Manager exposes and manages a feature. We could for example ship a `ConsoleLogger` but as our project grows we need file logging so we implement a `WinstonLogger`, but a few months later our project grew so much that we need remote log storage so we implement a `LogstashLogger`.
 
@@ -44,7 +44,7 @@ export class LogManager extends Support.Manager<Contracts.Logger> {
 ```
 
 1. We create a new class which ideally should be named as `FeatureManager`, in this case the feature is `Log` which is responsible for all logging functionality so we name the class `LogManager`.
-2. We extend the `Support.Manager` class an inherit all of its methods and let it know that is responsible for managing logger drivers by type hinting `Contracts.Logger`. You can take a look at [Support.Manager](managers-and-drivers) on GitHub to learn more about it.
+2. We extend the `Support.Manager` class an inherit all of its methods and let it know that is responsible for managing logger drivers by type hinting `Contracts.Logger`.
 3. We create a `createConsoleDriver` method which will be responsible for instantiating our console-specific driver implementation.
 4. We create a `getDefaultDriver` method which in our case returns `console` as the desired default driver.
 
@@ -99,7 +99,7 @@ export class ConsoleLogger implements Contracts.Logger {
 ```
 
 1. We create a new class which ideally should be named as `ImplementationType`, in this case the implementation is `Console` and the type is `Logger`, which refers to the overall `Log` feature.
-2. We implement the `Contracts.Logger` contract which defines what methods a logger needs to implement and expose. You can take a look at [Contracts.Logger](managers-and-drivers) on GitHub to learn more about it.
+2. We implement the `Contracts.Logger` contract which defines what methods a logger needs to implement and expose.
 3. We create a `make` method which is called by the `LogManager` to do all of the setup that is needed to get the driver up and running.
 4. We implement all of the method that are specified in `Contracts.Logger` to satisfy the contract and avoid issues with how it behaves.
 

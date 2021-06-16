@@ -1,5 +1,5 @@
 ---
-title: Schedule
+title: Services - Schedule
 ---
 
 # Schedule
@@ -232,7 +232,7 @@ const blockJob: Services.Schedule.BlockJob = app
     .block()
 ```
 
-### Schedule the job to run every block.
+### Schedule the job to run every block
 
 ```typescript
 blockJob
@@ -240,7 +240,7 @@ blockJob
     .execute(() => console.log("Hello World"))
 ```
 
-### Schedule the job to run every five blocks.
+### Schedule the job to run every five blocks
 
 ```typescript
 blockJob
@@ -248,7 +248,7 @@ blockJob
     .execute(() => console.log("Hello World"))
 ```
 
-### Schedule the job to run every ten blocks.
+### Schedule the job to run every ten blocks
 
 ```typescript
 blockJob
@@ -256,7 +256,7 @@ blockJob
     .execute(() => console.log("Hello World"))
 ```
 
-### Schedule the job to run every fifteen blocks.
+### Schedule the job to run every fifteen blocks
 
 ```typescript
 blockJob
@@ -264,7 +264,7 @@ blockJob
     .execute(() => console.log("Hello World"))
 ```
 
-### Schedule the job to run every thirty blocks.
+### Schedule the job to run every thirty blocks
 
 ```typescript
 blockJob
@@ -272,7 +272,7 @@ blockJob
     .execute(() => console.log("Hello World"))
 ```
 
-### Schedule the job to run every round.
+### Schedule the job to run every round
 
 ```typescript
 blockJob

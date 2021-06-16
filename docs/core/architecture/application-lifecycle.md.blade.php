@@ -1,5 +1,5 @@
 ---
-title: Application Lifecycle
+title: Architecture - Application Lifecycle
 ---
 
 # Application Lifecycle
@@ -39,8 +39,6 @@ The foundation of Core consists of a handful of services that are necessary to p
 <x-alert type="info">
 If there are any errors during the bootstrap process of the foundation the process will be terminated.
 </x-alert>
-
-
 
 ## Application
 

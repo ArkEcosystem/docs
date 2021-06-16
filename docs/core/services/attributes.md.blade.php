@@ -1,5 +1,5 @@
 ---
-title: Attributes
+title: Services - Attributes
 ---
 
 # Attributes
@@ -45,7 +45,7 @@ In this article we will refer to an index or indices when we talk about attribut
 ### Creating an instance
 
 ```typescript
-app.resolve(Services.Attributes.AttributeService);
+app.resolve(Services.Attributes.AttributeSet);
 ```
 
 ### Get all known attributes

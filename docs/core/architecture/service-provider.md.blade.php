@@ -1,5 +1,5 @@
 ---
-title: Service Provider
+title: Architecture - Service Provider
 ---
 
 # Service Provider
