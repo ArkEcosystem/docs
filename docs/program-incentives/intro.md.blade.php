@@ -4,7 +4,7 @@ title: Introduction
 
 # Introduction
 
-## ARK Grants
+## ARK Grants Program
 
 ARK Grants is a developer incentive program backed by a dedicated 1 million ARK fund. This program enables developers to get funding for building ARK-powered Proofs-of-Concept, applications, and plugins. Applying is a simple process, and projects are made open source to benefit the developer community.
 
@@ -12,13 +12,13 @@ ARK Grants is a developer incentive program backed by a dedicated 1 million ARK 
 
 ## Development Bounty Program
 
-Developers may earn ARK bounties for discovering bugs in the ARK codebase. Bounties are handled on a case-by-case basis based on the nature and complexity of the discovery. Contributors to the 'Development Bounty Program' do their part to make the ARK codebase secure and robust. Click below to learn more.
+Developers may earn bounties for discovering bugs, developing new features and resolving issues in the ARK codebase. Contributors to the ‘Development Bounty Program’ do their part to make the ARK codebase fresh, updated, secure, and robust. Click below to learn more.
 
 <livewire:page-reference path="/docs/program-incentives/development-bounty-program" />
 
 ## Security Vulnerability Program
 
-Developers, auditors, and bug hunters may earn ARK bounties for discovering and reporting security vulnerabilities in the ARK codebase. Reported vulnerabilities are handled on a case-by-case basis based on the nature and severity of the discovery. Contributors to the 'Security Vulnerability' program do their part to make the ARK codebase secure and robust, and joining the program is simple.
+Developers, auditors, and bug hunters may earn bounties for discovering and reporting security vulnerabilities in the Core Framework codebase. Reported vulnerabilities are handled on a case-by-case basis based on the nature and severity of the discovery. Contributors to the ‘Security Vulnerability Program’ do their part to make the Core Framework codebase secure and robust, and joining the program is simple.
 
 <livewire:page-reference path="/docs/program-incentives/security-vulnerability-program" />
 
