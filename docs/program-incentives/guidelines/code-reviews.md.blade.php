@@ -28,7 +28,7 @@ Creating tasks for issues unrelated to the task you are working on relates to th
 
 ## Do a manual sanity check before requesting a review (UI/UX according to designs)
 
-Before starting to work on a task you should make sure that you have all necessary information to make sure you don't miss any implementation details. This is especially important for UI/UX implementations because it should be implemented exactly as the designs which means you need the latest version available. There's a bit of leeway with backend implementations because you'll have to adapt to the system and code you are working with but the functionality should still be as close as possible to the description in the task. 
+Before starting to work on a task you should make sure that you have all necessary information to make sure you don't miss any implementation details. This is especially important for UI/UX implementations because it should be implemented exactly as the designs which means you need the latest version available. There's a bit of leeway with backend implementations because you'll have to adapt to the system and code you are working with but the functionality should still be as close as possible to the description in the task.
 
 **If you feel like something in the designs doesn't make sense you should contact the designer and/or lead developer to discuss those concerns before starting the implementation.**
 

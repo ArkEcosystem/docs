@@ -6,7 +6,7 @@ title: Clean Code & Tests
 
 While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the ARK Ecosystem and increases the likelihood your pull request will be accepted.
 
-## Clean Code 
+## Clean Code
 
 Clean Code is as important as separation of concerns and testability when building an application.
 
@@ -18,7 +18,7 @@ The core characteristics of a clean code are the following. You should aim to me
 2. Clean code should be focused. Every class function or module should only be concerned about a single responsibility. \*\*The result will be clean, testable code with minimal to no duplication. \*\*
 3. Clean code should be taken care of by all developers. Keep it simple to make the next developer's life easier. **Making use of modern development patterns and paying attention to things like formatting or variable naming will help you to achieve this goal.**
 
-## SOLID Code 
+## SOLID Code
 
 To achieve intelligible, flexible, maintainable and testable applications, you should strive for a clear **Separation of Concerns** in every part of your application.
 
@@ -32,7 +32,7 @@ Here is a quick TL;DR to sum SOLID application design up:
 4. Each Entity should follow a contract and always return the same output, no matter the implementation.
 5. Each Entity should be as loosely coupled as possible.
 
-### Defaults for Classes 
+### Defaults for Classes
 
 Try to keep the **O** of **SOLID** in your mind: code should be open for extension, but closed for modification. That's why you should use `private` as the default visibility modifier.
 
@@ -44,7 +44,7 @@ Especially in the context of open source, you're encouraged to think twice about
 2. Don't use docblocks for methods that can be fully type hinted. If you find yourself to really need a description you should probably go back and refactor the piece of code you want to comment to reduce the complexity and need for a comment.
 3. Only add a description when it provides more context than the method signature itself. Use full sentences for descriptions, including a period at the end.
 
-## Test Suites 
+## Test Suites
 
 Writing a test suite for your application is fundamental for the maintainability of your application for future developers.
 
@@ -55,4 +55,3 @@ Try to keep your naming conventions consistent and readable because keep in mind
 You should aim for high coverage of business-critical parts of your application and for at least sufficient enough coverage of utilities and smaller working parts to be confident that your test suite catches any bugs caused by future changes.
 
 _If you are working on a JavaScript project we recommend you to use_ [_jest_](https://facebook.github.io/jest/) _and follow the `it('should ...')` naming convention._
-

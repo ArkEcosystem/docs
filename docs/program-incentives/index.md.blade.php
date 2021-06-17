@@ -5,7 +5,8 @@
 ## Programs
 
 <x-general.sidebar-link path="/docs/program-incentives/ark-grants-program-guidelines" name="ARK Grants" />
-<x-general.sidebar-link path="/docs/program-incentives/bounty" name="Development and Security" />
+<x-general.sidebar-link path="/docs/program-incentives/development-bounty-program" name="Development Bounty" />
+<x-general.sidebar-link path="/docs/program-incentives/security-vulnerability-program" name="Security Vulnerability" />
 
 ## Guidelines
 

@@ -4,11 +4,11 @@ title: Contributing
 
 # Contributing
 
-## Introduction 
+## Introduction
 
 While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the ARK Ecosystem and increases the likelihood your pull request will be accepted.
 
-## Minimum Requirements 
+## Minimum Requirements
 
 **All additions and pull requests need to meet at least the following conditions:**
 
@@ -16,7 +16,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 2. Everything you added, modified or removed is covered by tests and has sufficient coverage.
 3. All your code is following the code style guidelines specified in the project.
 
-## Dos and Don'ts 
+## Dos and Don'ts
 
 * **Do** commit features, refactors and additions to a branch instead of `master` and `develop` directly and send a PR from your branch.
 * **Don't** commit console.logs, debugging or related functions to your branch. They are only of value during local development and differ for each developer.
@@ -33,7 +33,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 * **Do** send pull requests that improve test coverage.
 * **Don't** send pull requests that improve test coverage by refactoring major internal parts. If your branch contains significant changes, ensure that all tests pass before submitting your pull request, even tests not directly related to your package.
 
-## Issues & Pull Requests 
+## Issues & Pull Requests
 
 When you think your contribution is ready and you would like to submit a pull-request, remember first to open an issue and then send a pull request that mentions the issue by making use of [closing-issues-using-keywords](https://help.github.com/articles/closing-issues-using-keywords/).
 
@@ -41,9 +41,8 @@ When your pull request gets merged the issue will be automatically closed, and a
 
 > If your PR fixes a bug or resolves a feature request, be sure to reference the issue with a keyword. Read more about keywords at the [official GitHub docs](https://help.github.com/en/articles/closing-issues-using-keywords).
 
-## Things We DO NOT Accept as Additions to Any Applications or Packages 
+## Things We DO NOT Accept as Additions to Any Applications or Packages
 
 The ARK Team distances itself from anything that is related to payouts by delegates or voter calculations.
 
 If the feature you would like to add contains anything that adds functionality to calculate or process payouts to voters in this way, consider creating an extension using plugins or our SDKs to implement it yourself.
-

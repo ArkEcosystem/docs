@@ -2,7 +2,7 @@
 title: Going Live!
 ---
 
-# Going Live!
+# Going Live
 
 Before going live with a new project or releasing a new version of an existing project it is important to ensure that all new features work as expected and old functionality is preserved unless it was intentionally removed or modified.
 
@@ -10,7 +10,7 @@ To make sure that everything is working as intended you should follow these chec
 
 **If you discover that something important is missing from the checklists send a PR to add it.**
 
-## Checklist for Core 
+## Checklist for Core
 
 * Run tests and make sure CircleCI is passing
 * Sync from 0 on mainnet
@@ -21,7 +21,7 @@ To make sure that everything is working as intended you should follow these chec
 * Test `core-json-rpc` to ensure it works for exchanges
 * Run benchmarks on `master` and `develop` to see if there are crypto performance regressions
 
-### Transactions 
+### Transactions
 
 * Send a transfer transaction
   * 1 Passphrase
@@ -38,30 +38,30 @@ To make sure that everything is working as intended you should follow these chec
 * Send a second signature registration transaction
   * 1 Passphrase
 
-## Checklist for Desktop Wallet 
+## Checklist for Desktop Wallet
 
 * Run tests and make sure CircleCI is passing
 * Switching profile
 * Sign & Verify a message
 * Creating a new wallet
 * Connect & Disconnect a ledger
-* Setup the wallet from 0 **\(delete the database / cache\)**
+* Setup the wallet from 0 **(delete the database / cache)**
 * Browse news
 * Switch networks
 * Connect to custom peers and networks outside of ARK
 * Test screenshot protection
 * Create, browse, edit and remove contacts
 
-### Wallets 
+### Wallets
 
 * Browse wallets
 * Create a new wallet
 * Import a wallet
-* Import a wallet **\(with address only\)**
-* Import a wallet **\(with passphrase only\)**
+* Import a wallet **(with address only)**
+* Import a wallet **(with passphrase only)**
 * Protect with a password
 
-### Transactions 
+### Transactions
 
 * Browse transactions
 * Send transactions with dynamic fees
@@ -83,4 +83,3 @@ To make sure that everything is working as intended you should follow these chec
   * 2 Passphrases
 * Send a second signature registration transaction
   * 1 Passphrase
-
