@@ -16,9 +16,9 @@ Core Server can be run in the following general modes:
 
 If you want to start a node which consists of a `relay` and `forger` process you can use any of the following commands \(inside `packages/core`\).
 
-* `yarn start:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
-* `yarn start:devnet` =&gt; `packages/core/bin/config/networks/devnet`
-* `yarn start:testnet` =&gt; `packages/core/bin/config/networks/testnet`
+* `yarn core:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
+* `yarn core:devnet` =&gt; `packages/core/bin/config/networks/devnet`
+* `yarn core:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 
 ### How To Start a Relay?
 
@@ -28,7 +28,7 @@ If you want to start a `relay` you can use any of the following commands \(insid
 * `yarn relay:devnet` =&gt; `packages/core/bin/config/networks/devnet`
 * `yarn relay:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 
-### How To Star a Forger?
+### How To Start a Forger?
 
 If you want to start a `forger`, you can use any of the following commands \(inside `packages/core`\).
 
@@ -38,20 +38,20 @@ If you want to start a `forger`, you can use any of the following commands \(ins
 
 ## Core Boot Process
 
-Command, `yarn full:testnet`, is where the magic happens. Let us do a quick walkthrough of what happens when this command is run:
+Command, `yarn core:testnet`, is where the magic happens. Let us do a quick walkthrough of what happens when this command is run:
 
-1. The `full:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark core:run --networkStart`
+1. The `core:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark core:run --networkStart`
 
 2. As seen in the previous step, the `./bin/run` file is called with the `core:run` command. That command looks like this:
 
 <x-alert type="success">
 Take a look at the following pieces of code to get a better understand of what commands are executed under the hood and what flags can be used to manipulate behavior and pass in data.
 
-1. [core:run](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/core/run.ts)
-2. [BaseCommand](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/command.ts#L20-L61)
+1. [core:run](https://github.com/ArkEcosystem/core/blob/137608fffb5da584da0ff9399fde146a3ecc5c8e/packages/core/src/commands/core-run.ts)
+2. [Command](https://github.com/ArkEcosystem/core/blob/49e89a8f8a0380d1de856b7671aad8a590b5fd61/packages/core-cli/src/commands/command.ts)
 </x-alert>
 
-3. Based on the command config and the options passed by the `full:testnet` command as seen in the links above, we can see that the network sets the `config` directory to `bin/config/testnet` and the `networkStart` option to `true`, which starts our testnet from scratch with a new genesis block.
+3. Based on the command config and the options passed by the `core:testnet` command as seen in the links above, we can see that the network sets the `config` directory to `bin/config/testnet` and the `networkStart` option to `true`, which starts our testnet from scratch with a new genesis block.
 
 ```typescript
 import { app } from "@arkecosystem/core-container";
@@ -127,7 +127,7 @@ A full walkthrough of the node setUp process will be accessible in the Guidebook
 
 It is possible to run a variation of these commands that enables the [Node debugger](https://nodejs.org/api/debugger.html):
 
-* `yarn debug:start`
+* `yarn debug:core`
 * `yarn debug:relay`
 * `yarn debug:forger`
 
