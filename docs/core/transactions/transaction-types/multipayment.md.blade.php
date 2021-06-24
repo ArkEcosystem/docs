@@ -4,7 +4,7 @@ title: Transaction Types - MultiPayment
 
 # MultiPayment Transaction
 
-This type is designed to reduce the payload on the blockchain by enabling multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Initially and depending on testing, the ARK Core will allow 400-500 payments to be combined within a single transaction. Eventually, the number of payments per transaction will be able to scale as needed.
+This type is designed to reduce the payload on the blockchain by enabling multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Initially and depending on testing, the ARK Core will allow at least 64 payments to be combined within a single transaction for APN/Mainnet. Eventually, the number of payments per transaction will be able to scale as needed.
 
 | References |  |
 | :--- | :--- |
