@@ -6,11 +6,11 @@ title: Development Setup - Spinning up your first Testnet
 
 ## Step 1: Start Docker Testnet Database
 
-You already generated docker files during the[development environment setup](/docs/core/getting-started/development-setup/linux-macos#step-7-setting-up-the-development-database) \(if not please run the following commands as specified [here](/docs/core/getting-started/development-setup/linux-macos#step-71-database-setup-using-docker)\).
+You already generated docker files during the [development environment setup](/docs/core/getting-started/development-setup/linux-macos#step-7-setting-up-the-development-database) \(if not please run the following commands as specified [here](/docs/core/getting-started/development-setup/linux-macos#step-71-database-setup-using-docker)\).
 
 ```bash
 cd core/docker/development/testnet #testnet docker folder
-docker-compose up postgres #start postgres testnet container
+docker-compose up -d postgres #start postgres testnet container
 ```
 
 ## Step 2: Testnet Network Boot
@@ -54,7 +54,9 @@ Let's try to retrieve the latest block and supply by calling  the [GET api/block
 
 **Request:**
 
-`curl` [http://127.0.0.1:4003/api/blockchain](http://127.0.0.1:4003/api/blockchain)
+```curl
+curl http://127.0.0.1:4003/api/blockchain
+```
 
 We should get the following **response**:
 
