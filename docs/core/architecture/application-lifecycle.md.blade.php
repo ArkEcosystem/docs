@@ -24,7 +24,7 @@ The foundation of Core consists of a handful of services that are necessary to p
                                         -> LoadServiceProviders
 ```
 
-1. We register an error handler which will help us to output better errors then what node.js provides out of the box.
+1. We register an error handler which will help us to output better errors than what node.js provides out of the box.
 2. We register the configuration service that will hold all of the configuration that is used across the application.
 3. We register all of the base configuration like the token and network name.
 4. We register a namespace that will be used for paths and environment variables to avoid naming collisions.
