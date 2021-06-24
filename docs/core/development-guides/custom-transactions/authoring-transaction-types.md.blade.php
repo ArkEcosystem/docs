@@ -60,7 +60,7 @@ Each newly implemented transaction type becomes a full member of a _core_ node a
 
 ### **Seamless Integration With ARK Core API And SDKs:**
 
-We provide [different programming language implementations](/docs/api/) of our **API**, all accompanied by full cryptography protocol implementation**.** _Simply install the **SDK** of your choice and start interacting with the blockchain_. For more information about our SDKs \(**REST** API and crypto\) refer to our [SDK Documentation](/docs/sdk/).
+We provide [implementations](/docs/sdk/) of our [API](/docs/api/) for many programming languages, all accompanied by full cryptography protocol implementation. _Simply install the **SDK** of your choice and start interacting with the blockchain_. For more information about our SDKs \(**REST** API and crypto\) refer to our [SDK Documentation](/docs/sdk/).
 
 Use the Builder class to create transaction payloads and send it to the core nodes.
 
