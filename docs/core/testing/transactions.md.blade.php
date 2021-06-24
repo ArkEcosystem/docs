@@ -9,7 +9,7 @@ Transactions are an integral component of the ARK Core Framework and requires th
 - **Transactions are sent successfully**
 - **The correct detail of each transaction is reported within the Explorer.**
 - **Balances are updated correctly in the Explorer.**
-- **Alternatively, you can check the API to check that details of the transactions are correct. You can find an example of a Send transaction [here](https://dexplorer.ark.io/api/transactions/ce72b48016d3fa1c68f21dfd33a7396f852546c4cb34f99d1ccb240fa1a35b2a)**
+- **Alternatively, you can check the API to check that details of the transactions are correct. You can find an example of a Send transaction [here](https://dexplorer.ark.io/transactions/19f2686523685e876e6db74a0518612d0cd526b8db506aaa753df92c7cfa2570)**
 
 ## Prerequisites
 
