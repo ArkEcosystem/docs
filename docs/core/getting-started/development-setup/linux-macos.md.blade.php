@@ -45,7 +45,7 @@ As ARK Core is written exclusively in [Node.js](https://nodejs.org/), the server
 
 ```bash
 sudo wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-(echo "deb https://deb.nodesource.com/node_11.x $(lsb_release -s -c) main" | sudo tee /etc/apt/sources.list.d/nodesource.list)
+(echo "deb https://deb.nodesource.com/node_14.x $(lsb_release -s -c) main" | sudo tee /etc/apt/sources.list.d/nodesource.list)
 sudo apt-get update
 sudo apt-get install nodejs -y
 ```
@@ -130,11 +130,11 @@ will generate the following docker files inside our `core/docker` folder \(see f
 To start the PostgreSQL docker container we must go into the corresponding folder and run the `docker-compose` command. For testnet we need to run the following:
 
 ```bash
-cd core/docker/development/testnet
-docker-compose up postgres #postgres is the name of the PostgreSQL container
+cd docker/development/testnet
+docker-compose up -d postgres #postgres is the name of the PostgreSQL container
 ```
 
-The `docker-compose up postgres` will start PostgresSQL container and expose it to our core via standard PostgreSQL port 5432.
+The `docker-compose up -d postgres` will start PostgresSQL container and expose it to our core via standard PostgreSQL port 5432.
 
 ### Step 7.2 Installing Postgres Database System-Wide
 

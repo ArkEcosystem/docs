@@ -6,8 +6,6 @@ title: CLI Guide - Development Commands
 
 With the release of Core 3.0 we've introduced a new pluggable CLI. It enables developers to implement their own commands or replace existing ones with their own implementations. In this guide we'll run you through the steps that are needed to get your plugin that provides your commands up developed and published on NPM.
 
-To get you up and running faster we provide Skeleton that you can find over at [https://github.com/ArkEcosystem/core-cli-skeleton](https://github.com/ArkEcosystem/core-cli-skeleton). Feel free to submit pull requests for any improvements or bug fixes.
-
 ## Prerequisites
 
 This guide assumes that you're already familiar with how to setup Core for development so we'll skip that part, if you're not familiar with it you should read our guide before going any further. You'll also need to be familiar with the basics of [TypeScript](https://www.typescriptlang.org/) and how to build projects with it.

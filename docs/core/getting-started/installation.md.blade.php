@@ -14,8 +14,8 @@ Since Version 2.2.0, ARK Core is distributed as an npm package that must be inst
 
 | Relay Specification | Minimum | Recommended   |
 | :-----------------: | :-----: | :-----------: |
-| **CPUs**            | 1       | 2             |
-| **RAM**             | 2GB     | 4GB           |
+| **CPUs**            | 2       | 4             |
+| **RAM**             | 4GB     | 8GB           |
 | **HDD**             | 80GB    | 100GB - 120GB |
 
 | Forger Specification | Minimum            | Recommended              |

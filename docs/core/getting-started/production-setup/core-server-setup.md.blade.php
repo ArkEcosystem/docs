@@ -27,8 +27,8 @@ To start with the ARK Core install process, we recommend that you start with a c
 
 | Relay Specification | Minimum | Recommended   |
 | :-----------------: | :-----: | :-----------: |
-| **CPUs**            | 1       | 2             |
-| **RAM**             | 2GB     | 4GB           |
+| **CPUs**            | 2       | 4             |
+| **RAM**             | 4GB     | 8GB           |
 | **HDD**             | 80GB    | 100GB - 120GB |
 
 | Forger Specification | Minimum            | Recommended              |
@@ -45,12 +45,13 @@ For those who want more detailed instructions with each of the above steps, plea
 
 With each provider, the setup process for creating a new virtual server is going to be different. You can choose one of the listed providers below, or use another VPS provider of your own choosing. You will need to follow the providers instructions to create the server instance.
 
-* [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet)
-* [Linode](https://www.linode.com/docs/getting-started/#provision-your-linode)
 * [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
-* [Vultr](https://www.vultr.com/)
+* [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet)
+* [Google Cloud](https://cloud.google.com/free/)
+* [Linode](https://www.linode.com/docs/getting-started/#provision-your-linode)
 * [Microsoft Azure](https://docs.microsoft.com/azure/virtual-machines/linux/overview)
-* [OVH](https://support.ovhcloud.com/hc/en-us/articles/115001520890-Getting-Started-with-Servers)
+* [OVH](https://docs.ovh.com/us/en/vps/getting-started-vps/)
+* [Vultr](https://www.vultr.com/)
 
 ### Connect to Your Server
 
@@ -204,9 +205,15 @@ This will create a PostgreSQL role and database to be used for storing blockchai
 _NOTE: if you are going to operate on Devnet, before you start relay you will need to run this command to switch NPM channels to latest release \(do not run this on Mainnet\):_
 
 ```bash
+# only run these on Devnet, before starting the relay process with 'ark relay:start'
+# !!! DO NOT RUN THESE ON MAINNET !!!
 ark config:cli --channel=next
-//only run this on Devnet, before you start the relay process with
-ark relay:start // DON'T RUN THIS ON MAINNET
+rm -rf ~/.config/ark-core/ && ark config:publish --network=devnet --reset
+```
+
+```bash
+ark config:cli --channel=next
+
 ```
 
 To start the ARK relay process, and with it the synchronization process with the ARK blockchain, we need to start the relay process with our integrated CLI:
@@ -264,7 +271,7 @@ This will bring up an interactive menu where you have two options of setting up 
 Chose the preferred method using the `up` and `down` arrow keys, confirm it with the `enter` key, and configure according to the screen instructions. Note that when writing a BIP39 passphrase \(12 words\) make sure you either paste it from the file or write it as it was shown when you generated it — all lower case, words separated by space, no space at the end.
 
 ```bash
-? What method would you like to use to store your passphrase? › - Use arrow-keys. Return to submit.
+? Please select how you wish to store your delegate passphrase? › - Use arrow-keys. Return to submit.
 ❯   Encrypted BIP38 (Recommended)
     Plain BIP39
 ```

@@ -30,17 +30,17 @@ After upgrading you should check whether your application still works as expecte
 
 ### Prerequisites
 
-Check what node version you have currently installed by running `node -v` . **If this shows a version below 12, you will have to update this before proceeding with the installation**.
+Check what node version you have currently installed by running `node -v` . **If this shows a version below 14, you will have to update this before proceeding with the installation**.
 
 To do this, run the following commands:
 
 ```bash
-sudo sed -i s/node_10/node_12/ /etc/apt/sources.list.d/nodesource.list
-sudo sed -i s/node_11/node_12/ /etc/apt/sources.list.d/nodesource.list
+sudo sed -i s/node_11/node_14/ /etc/apt/sources.list.d/nodesource.list
+sudo sed -i s/node_12/node_14/ /etc/apt/sources.list.d/nodesource.list
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-When this is finished, you should see version 12 installed when you run `node -v` again!
+When this is finished, you should see version 14 installed when you run `node -v` again!
 
 ### Step 1. Database Migration Script
 

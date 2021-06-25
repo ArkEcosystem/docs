@@ -72,8 +72,8 @@ The peer configuration is responsible for providing the information that is nece
 Sometimes it can be beneficial or even necessary to have different configuration values per environment you are working with. An example would be where you are testing a new feature to improve database query or caching performance, in those cases you don't want to be bound to the settings of the production network but run with your own values and modifications.
 
 ```ini
-LOG_LEVEL=emergency
-LOG_LEVEL_FILE=emergency
+LOG_LEVEL=debug
+LOG_LEVEL_FILE=debug
 
 DB_HOST=localhost
 DB_PORT=5432
@@ -90,6 +90,10 @@ WEBHOOKS_PORT=4004
 API_HOST=0.0.0.0
 API_PORT=4003
 ```
+
+<x-alert type="warning">
+Your changes to the .env file should not be committed to your git repository, since each server could require a different environment configuration.
+</x-alert>
 
 Those are just a few of the possible environment variables, check the [Environment Variables](/docs/core/getting-started/environment-variables) to get a full list of available environment variables and make sure to check out [dotenv](https://github.com/ArkEcosystem/utils/blob/master/src/dot-env.ts) and [sindresorhus/env-paths](https://github.com/sindresorhus/env-paths) to get a better understanding of what is happening under the hood.
 
