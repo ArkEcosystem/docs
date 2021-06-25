@@ -16,11 +16,11 @@ The **passphrase** is the master password \(key\) for your ARK tokens. Every ARK
 Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. **We CANNOT recover any lost passphrases.**
 </x-alert>
 
-A passphrase is a "key to the castle." It is used to directly calculate the [PrivateKey](/docs/core/transactions/cryptography-overview#privatekey) of an ARK account and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
+A passphrase is a "key to the castle." It is used to directly calculate the [PrivateKey](#privatekey) of an ARK account and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
 
-We can technically use any word, phrase, or string as a passphrase which will result in a valid ARK [Address](/docs/core/transactions/cryptography-overview#address-wallet) or Wallet; however, it is heavily discouraged as the security of an address relies on the randomness of its Passphrase. Humans are bad at creating randomness, and entering sequences of random letters and numbers isn't easy to do accurately.
+We can technically use any word, phrase, or string as a passphrase which will result in a valid ARK [Address](#address--wallet) or Wallet; however, it is heavily discouraged as the security of an address relies on the randomness of its Passphrase. Humans are bad at creating randomness, and entering sequences of random letters and numbers isn't easy to do accurately.
 
-To promote usability while also maintaining security, ARK passphrases are implemented using the [BIP39 Protocol](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). Simply, it's a mnemonic sentence constructed via randomly chosen words from a large [wordlist](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md). From here, that sentence or "Passphrase" is piped through a series of hashing, curve, and encoding algorithms to derive a [PrivateKey](/docs/core/transactions/cryptography-overview#privatekey) / [WIF](/docs/core/transactions/cryptography-overview#wif-privatekey), a [PublicKey](/docs/core/transactions/cryptography-overview#publickey), and subsequently [Addresses](/docs/core/transactions/cryptography-overview#address-wallet) / Wallets and [Signatures](/docs/core/transactions/cryptography-overview#signature).
+To promote usability while also maintaining security, ARK passphrases are implemented using the [BIP39 Protocol](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). Simply, it's a mnemonic sentence constructed via randomly chosen words from a large [wordlist](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md). From here, that sentence or "Passphrase" is piped through a series of hashing, curve, and encoding algorithms to derive a [PrivateKey](#privatekey) / [WIF](#wif-privatekey), a [PublicKey](#publickey), and subsequently [Addresses](#address--wallet) / Wallets and [Signatures](#signature).
 
 ![Cryptography overview](/storage/docs/docs/core/assets/overview_nologo.svg)
 
@@ -59,7 +59,7 @@ const fixture = {
 
 ## PrivateKey
 
-A PrivateKey is a 256-bit integer represented by a 32-byte Hex-encoded string of 64 characters obtained via [SHA256 hashing](https://en.bitcoinwiki.org/wiki/SHA-256) of a [Passphrase](/docs/core/getting-stared/development-setup/introduction).
+A PrivateKey is a 256-bit integer represented by a 32-byte Hex-encoded string of 64 characters obtained via [SHA256 hashing](https://en.bitcoin.it/wiki/SHA-256) of a [Passphrase](#passphrase).
 
 ![PrivateKey Generation Steps](/storage/docs/docs/core/assets/private_key_nologo.svg)
 
@@ -91,7 +91,7 @@ WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepen
 
 ![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
 
-It's essentially a more useable/human-readable [PrivateKey](cryptography#privatekey) and should be treated with the same diligence with regards to storage and security.
+It's essentially a more useable/human-readable [PrivateKey](#privatekey) and should be treated with the same diligence with regards to storage and security.
 
 ## PublicKey
 
@@ -103,7 +103,7 @@ ARK also uses "Point Compression" to obtain compressed PublicKeys that are 33-by
 
 ## Address / Wallet
 
-An ARK address is shareable much like an e-mail address. It is the destination to which ARK tokens can be sent, and is obtained from a [PublicKey](cryptography#publickey) via a combination of RIPEMD160 hashing and Base58Check encoding prefixed by a single network byte.
+An ARK address is shareable much like an e-mail address. It is the destination to which ARK tokens can be sent, and is obtained from a [PublicKey](#publickey) via a combination of RIPEMD160 hashing and Base58Check encoding prefixed by a single network byte.
 
 Since an address is derived from a PublicKey, that means it is also mathematically tied to a PrivateKey and Passphrase.
 
@@ -245,7 +245,7 @@ The following is a full prefix-byte table for custom Address construction and is
 
 ## Signature
 
-A Signature is essentially proof that a message or transaction was "signed" by a particular [PrivateKey](cryptography#privatekey) / [Passphrase](cryptography#introduction).
+A Signature is essentially proof that a message or transaction was "signed" by a particular [PrivateKey](#privatekey) / [Passphrase](#passphrase).
 
 Remember that this same PrivateKey also has a matching PublicKey. That means a Signature is computationally linked to its corresponding PublicKey using ECDSA and SECP256K1 standards.
 
@@ -257,7 +257,7 @@ ARK Signatures use DER Encoding.
 
 ### ECDSA
 
-[ECDSA](https://en.bitcoinwiki.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) is a ["Digital Signature Algorithm"](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) variant based on and ["Modular Arithmetic"](https://en.wikipedia.org/wiki/Modular_arithmetic).
+[ECDSA](https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm) is a ["Digital Signature Algorithm"](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) variant based on and ["Modular Arithmetic"](https://en.wikipedia.org/wiki/Modular_arithmetic).
 
 It is a standard to sign and verify transactions/messages and Signatures using [Elliptical Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
@@ -267,7 +267,7 @@ It is a standard to sign and verify transactions/messages and Signatures using [
 
 ### **SECP256K1**
 
-[SECP256K1](https://en.bitcoinwiki.org/wiki/Secp256k1) defines the set of ECDSA parameters used to produce output "deterministically", meaning the same input will always result in the same output. Additionally, no two inputs will ever produce the same output; It is also hard to reverse. This is known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography) and is the basis for Curve Cryptography.
+[SECP256K1](https://en.bitcoin.it/wiki/Secp256k1) defines the set of ECDSA parameters used to produce output "deterministically", meaning the same input will always result in the same output. Additionally, no two inputs will ever produce the same output; It is also hard to reverse. This is known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography) and is the basis for Curve Cryptography.
 
 | Curve Parameters |
 | :---: |
@@ -333,7 +333,7 @@ DER Encoded Signature:
 
 [Base58Check](https://en.bitcoin.it/wiki/Base58Check_encoding) encoding is used to produce human readable/typeable text from a hash.
 
-It is used to encode a [PrivateKey](cryptography#privatekey) and is also the final step to encoding an [ARK address](cryptography#address-wallet).
+It is used to encode a [PrivateKey](#privatekey) and is also the final step to encoding an [ARK address](#address--wallet).
 
 ## Hashing
 
