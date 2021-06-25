@@ -4,7 +4,7 @@ title: Plugins Guide - Developing Plugins
 
 # Plugin Development
 
-simple overview of proper structure; e.g. have a plugin.ts file that only registers / deregisters the plugin and calls for example startServer that will handle the rest. So you end up with a server.ts file, folder structure for api endpoints, things like that.
+Simple overview of proper structure; e.g. have a plugin.ts file that only registers / deregisters the plugin and calls for example startServer that will handle the rest. So you end up with a server.ts file, folder structure for api endpoints, things like that.
 
 ## Introduction
 
@@ -14,7 +14,7 @@ This guide will walk you through the process of understanding how plugins are bu
 
 ## Discovery
 
-When Core starts it will look at the `app.js` configuration for a key called `plugins`. This key contains a list of plugins with their package name and options that should be used to configure and run it. Let's have a look at the default `app.js` that ships with Core to understand what is happening.
+When Core starts it will look at the `app.json` configuration for a key called `plugins`. This key contains a list of plugins with their package name and options that should be used to configure and run it. Let's have a look at the default `app.js` that ships with Core to understand what is happening.
 
 ```typescript
 module.exports = {
@@ -89,13 +89,13 @@ Internally the discovery and integration into Core of any plugin consists of fiv
 4. The plugins `register` method is executed to prepare for the booting process.
 5. The plugins `boot` method is executed and the plugin becomes active.
 
-As you have probably figured out by now, the whole lifecycle of a plugin revolves around [service providers](https://github.com/ArkEcosystem/gitbooks-core/tree/22a1206caace1f8bd949491b5dda4c25798b349b/architecture/service-provider/README.md) about which we've talked in earlier documents when looking at the architecture of Core.
+As you have probably figured out by now, the whole lifecycle of a plugin revolves around [service providers](/docs/core/architecture/service-provider) about which we've talked in earlier documents when looking at the architecture of Core.
 
 ## Service Providers
 
-[Service providers](https://github.com/ArkEcosystem/gitbooks-core/tree/22a1206caace1f8bd949491b5dda4c25798b349b/architecture/service-provider/README.md) are the building blocks that are responsible for composing Core. The sole responsibility of a service provider is to create bindings in the service container and manage inform Core about what should happen with your plugin at certain points of the application lifecycle.
+[Service providers](/docs/core/architecture/service-provider) are the building blocks that are responsible for composing Core. The sole responsibility of a service provider is to create bindings in the service container and manage inform Core about what should happen with your plugin at certain points of the application lifecycle.
 
-A service provider always contains 3 methods: `register`, `boot` and `dispose`. To learn more about the structure and purpose of service providers, check out [their documentation](https://github.com/ArkEcosystem/gitbooks-core/tree/22a1206caace1f8bd949491b5dda4c25798b349b/architecture/service-provider/README.md).
+A service provider always contains 3 methods: `register`, `boot` and `dispose`. To learn more about the structure and purpose of service providers, check out [their documentation](/docs/core/architecture/service-provider).
 
 ## Naming Conventions
 
