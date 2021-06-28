@@ -15,7 +15,7 @@ For the rest of this tutorial series, we’re going to focus on building the bac
 While this all may seem daunting at first, we will be making this as simple as possible. All of these tasks will be broken down into manageable sections over the next few tutorials. In this following section, we will look at how to send and receive transactions within the game.
 
 <x-alert type="info">
-**WAIT:** Before we go any further, check the ARK Core Documentation to understand how to [create your first Core module](/docs/core/how-to-guides/how-to-write-core-dapps/intro). Follow the guide and use the starter module template project. It will be the base for the rest of the tutorial.
+**WAIT:** Before we go any further, check the ARK Core Documentation to understand how to [create your first Core module](/docs/core/development-guides/dapps/authoring-core-dapps). Follow the guide and use the starter module template project. It will be the base for the rest of the tutorial.
 </x-alert>
 
 Now that you’re set up with your skeleton module, let’s list our objectives for what we want our Core plugin to do by the end of this tutorial. We’re going to:

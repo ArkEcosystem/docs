@@ -19,7 +19,7 @@ Now you’re ready to build your application on top of your blockchain. Visit [d
 
 
 * [Core Introduction](/docs/core/)
-* [Plugins](/docs/core/how-to-guides/plugin-development)
+* [Plugins](/docs/core/development-guides/plugins/developing-plugins)
 * [SDKs](/docs/sdk/)
 * [API](/docs/api/)
 

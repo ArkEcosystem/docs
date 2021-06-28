@@ -1,6 +1,6 @@
 ---
 title: Develop & Test a Custom Transaction
-excerpt: Developing custom transactions may appear to be daunting on the face of things. Though, by following this guide we will walk you through how you can easily develop & test a custom transaction within your local environment. 
+excerpt: Developing custom transactions may appear to be daunting on the face of things. Though, by following this guide we will walk you through how you can easily develop & test a custom transaction within your local environment.
 number: 2
 ---
 
@@ -23,7 +23,7 @@ ARK Messenger implements a custom _**Message Transaction**_. This is a transacti
 These were considerations made prior to developing the custom transaction. In addition to outlining your technical specifications, you may want to familiarize yourself with how custom transactions work on ARK. The article listed below will give you a solid base in understanding how smart/custom transactions work on the ARK Core Blockchain Framework.
 
 [Understand And Write Custom Transactions TypesThe GTI engine was initially designed to assist our developers to make implementations of new transaction types easier
-Core Developer Documentation](/docs/core/how-to-guides/how-to-write-custom-transactions-types/intro)
+Core Developer Documentation](/docs/core/development-guides/custom-transactions/authoring-transaction-types)
 
 ## Creating a Custom Transaction
 

@@ -95,7 +95,7 @@ This will fire up two separate containers. One for Core itself and another one f
 #### Custom Settings
 
 <x-alert type="info">
-If you prefer to use custom DB Name, DB User and DB Password simply adjust variables **POSTGRES\_PASSWORD, POSTGRES\_USER, POSTGRES\_DB** \(file=docker-compose.yml\) and **CORE\_DB\_PASSWORD, CORE\_DB\_USERNAME** and **CORE\_DB\_DATABASE** \(**file=$NETWORK.env**\) correspondingly. For a full list of Core variables go [here](/docs/core/getting-started/configuration/environment-variables).
+If you prefer to use custom DB Name, DB User and DB Password simply adjust variables **POSTGRES\_PASSWORD, POSTGRES\_USER, POSTGRES\_DB** \(file=docker-compose.yml\) and **CORE\_DB\_PASSWORD, CORE\_DB\_USERNAME** and **CORE\_DB\_DATABASE** \(**file=$NETWORK.env**\) correspondingly. For a full list of Core variables go [here](/docs/core/getting-started/environment-variables).
 
 You can also change default log levels by adjusting variables **CORE\_LOG\_LEVEL** and **CORE\_LOG\_LEVEL\_FILE** \(**file=$NETWORK.env**\). Note that _DEBUG_ level will probably add some CPU overhead during network sync.
 </x-alert>
