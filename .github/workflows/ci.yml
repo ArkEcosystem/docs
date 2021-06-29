@@ -15,10 +15,8 @@ jobs:
               with:
                   ref: ${{ github.head_ref }}
                   token: ${{ secrets.GH_TOKEN }}
-            - name: TypoCheck
-              uses: typoci/spellcheck-action@master
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+            - name: Spellcheck
+              uses: rojopolis/spellcheck-github-actions@0.14.0
             - uses: stefanzweifel/git-auto-commit-action@v4
               with:
                   commit_message: "style: resolve style guide violations"
