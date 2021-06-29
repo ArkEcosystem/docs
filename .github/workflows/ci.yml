@@ -1,0 +1,24 @@
+name: CI
+
+on:
+    pull_request:
+        types: [ready_for_review, synchronize, opened]
+
+jobs:
+    spellcheck:
+        runs-on: ubuntu-latest
+        concurrency:
+            group: ${{ github.head_ref }}-spellcheck
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+                  token: ${{ secrets.GH_TOKEN }}
+            - name: TypoCheck
+              uses: typoci/spellcheck-action@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+            - uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  commit_message: "style: resolve style guide violations"
