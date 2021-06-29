@@ -122,7 +122,7 @@ Is the information correct? [Y/n] Y
 Next, we need to make sure that our user has all of the necessary privileges for it to run ARK Core properly. Type the command below into your command line and press ‘enter’. In this example, `ark` is the name of the new account you created, but it can be a different user name depending on what you chose in previous step. This will give our user `sudo` privileges.
 
 ```bash
-usermod -a -G sudo ark
+sudo usermod -a -G sudo ark
 ```
 
 ### Installing ARK Core
@@ -139,9 +139,11 @@ sudo su - ark
 
 ### Running ARK Core installation script
 
-Installing ARK Core is a straightforward process. We will use the ARKinstaller script that will install all of the necessary dependencies and ARK Core onto your server, and publish configuration files for it. To install, run this command \(copy and paste it, this is a one line command\):
+Installing ARK Core is a straightforward process. We will use the ARK installer script that will install all of the necessary dependencies and ARK Core onto your server, and publish configuration files for it. To install, run this command \(copy and paste it, this is a one line command\):
 
 ```bash
+sudo apt-get install curl
+
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
 
@@ -213,7 +215,6 @@ rm -rf ~/.config/ark-core/ && ark config:publish --network=devnet --reset
 
 ```bash
 ark config:cli --channel=next
-
 ```
 
 To start the ARK relay process, and with it the synchronization process with the ARK blockchain, we need to start the relay process with our integrated CLI:
@@ -360,6 +361,11 @@ Snapshot functionality is a built-in feature of the Core that you can easily use
 
 This function should be done at least once per month if you need to recover due to some failure down the road \(database corruption, database integrity failure, …\) or to quickly set up on additional servers.
 
+<x-alert type="warning">
+All snapshot input data that represent block height are rounded down to the beginning of the round that contains given height.
+</x-alert>
+
+
 Making use of this feature makes most sense once your node is fully synced \(up to latest height\). To make latest snapshot run this command:
 
 ```bash
@@ -369,18 +375,23 @@ ark snapshot:dump
 This will start up the snapshot process. Don’t interrupt it, as it might take a while, depending on the size of the blockchain. You’ll see a message, something along these lines, as time goes on:
 
 ```bash
-[2019-03-20 12:57:40][INFO]: Snapshots: Database connected
-[2019-03-20 12:57:40][INFO]: Starting to export table blocks to folder 1-7739750, codec: lite, append:false, skipCompression: false
-[2019-03-20 13:01:55][INFO]: Snapshot: blocks done. ==> Total rows processed: 7739750, duration: 255150 ms
-[2019-03-20 13:01:55][INFO]: Starting to export table transactions to folder 1-7739750, codec: lite, append:false, skipCompression: false
+[2021-06-29 08:11:28.398] INFO : Connecting to database: ark_mainnet
+[2021-06-29 08:11:28.469] DEBUG: Connection established.
+[2021-06-29 08:11:28.473] INFO : Running DUMP for network: mainnet
+[2021-06-29 08:11:28.474] INFO : Start counting blocks, rounds and transactions
+[2021-06-29 08:11:28.525] INFO : Start running dump for 153 blocks, 153 rounds and 153 transactions
 ```
 
 After it’s done, you’ll see this message informing you that the process to create the snapshot was shut down and you can now continue:
 
 ```bash
-[2019-03-20 13:03:18][INFO]: Snapshot: transactions done. ==> Total rows processed: 2089576, duration: 82323 ms
-[2019-03-20 13:03:18][DEBUG]: Closing snapshots-cli database connection
-[2019-03-20 13:03:18][INFO]: Core is trying to gracefully shut down to avoid data corruption
+⠸ Blocks: 100.00 % Transactions: 100.00 % Rounds: 100.00 %
+[2021-06-29 08:11:29.688] INFO : Snapshot is saved on location: .../ark-core/mainnet/snapshots/1-153/
+[2021-06-29 08:11:29.689] DEBUG: Disposing @arkecosystem/core-snapshots...
+[2021-06-29 08:11:29.689] DEBUG: Disposing @arkecosystem/core-database...
+[2021-06-29 08:11:29.689] DEBUG: Disconnecting from database
+[2021-06-29 08:11:29.690] DEBUG: Disconnected from database
+[2021-06-29 08:11:29.691] DEBUG: Disposing @arkecosystem/core-logger-pino...
 ```
 
 This is it! You just made a backup of the blockchain.
@@ -391,33 +402,18 @@ You can see a list of all completed snapshots in this filepath \(_replace_ _**&l
 ls /home/ark/.local/share/ark-core/<network>/snapshots
 example:
 ls /home/ark/.local/share/ark-core/mainnet/snapshots
-//In our example it made backup of blockchain 1-7739750 which means
-from height 1 to height 7739750
+//In our example it made backup of blockchain 1-153 which means
+from height 1 to height 153
 ```
 
-_Useful tip: next time you want to make a snapshot, you can just append data to one of the previously made snapshots to save time. Lets use our snapshot we made in the previous step \(directory filename 1-7739750\) and append the difference of current height to it to have an up-to-date snapshot ready. We’ll run the command, replacing the filename with yours, which can be obtained by running the command from previous paragraph_ ``**`ls /home/ark/.local/share/ark-core/<network>/snapshots`** _to list files. Let’s run this to append data to previous backup:_
+_Useful tip: next time you want to make a snapshot, you can start dump from height following latest stored snapshot. Lets use our snapshot we made in the previous step \(directory filename 1-153\) and increase height by 1, to prepare following snapshot. We’ll run the command, replacing the filename with yours, which can be obtained by running the command from previous paragraph_ ``**`ls /home/ark/.local/share/ark-core/<network>/snapshots`** _to list files. Let’s run this to create new snapshot:_
 
 ```bash
-ark snapshot:dump --blocks=1-7739750
-//replace 1-7739750 with your own folder from previously created snapshot.
+ark snapshot:dump --start=154
+//replace 1-153 with your own folder from previously created snapshot.
 ```
 
-You should get message like this if you ran it correctly:
-
-```bash
-[2019-03-20 13:16:45][INFO]: Snapshots: Database connected
-[2019-03-20 13:16:45][INFO]: Copying snapshot from 1-7739750 to a new file 1-7739894 for appending of data
-[2019-03-20 13:16:52][INFO]: Starting to export table blocks to folder 1-7739894, codec: lite, append:true, skipCompression: false
-[2019-03-20 13:16:52][INFO]: Snapshot: blocks done. ==> Total rows processed: 144, duration: 18 ms
-[2019-03-20 13:16:52][INFO]: Starting to export table transactions to folder 1-7739894, codec: lite, append:true, skipCompression: false
-[2019-03-20 13:16:52][INFO]: Snapshot: transactions done. ==> Total rows processed: 248, duration: 43 ms
-[2019-03-20 13:16:52][DEBUG]: Closing snapshots-cli database connection
-[2019-03-20 13:16:52][INFO]: Core is trying to gracefully shut down to avoid data corruption
-```
-
-We do recommend that you also take full \(complete, unappended\) snaps regularly as well as appending in case a snapshot gets corrupted after appending.
-
-We now have a new and up-to-date snapshot!
+We do recommend that you also take full \(complete\) snaps regularly.
 
 ## 4. Restoring from Snapshot
 
@@ -434,21 +430,27 @@ After that we’ll run the restore command:
 ```bash
 ark snapshot:restore --blocks=<folder name>
 //replace <folder name> with your previously made latest snapshot
-in our case lets use 1-7739894 so we'd run this command to restore:
-ark snapshot:restore --blocks=1-7739894
+in our case lets use 1-153 so we'd run this command to restore:
+ark snapshot:restore --blocks=1-153
 ```
 
 You will see a message similar to this. It will take some time, so leave it running:
 
 ```bash
-[2019-03-20 13:22:09][INFO]: Snapshots: Database connected
-[2019-03-20 13:22:09][INFO]: Starting to import table blocks from /home/ark/.local/share/ark-core/mainnet/snapshots/1-7739894/blocks.lite, codec: lite, skipCompression: false
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: 0s | 1/7739894 | Duration: 0s(node:4996) ExperimentalWarning: Readable[Symbol.asyncIterator] is an experimental feature. This feature could change at any time
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: 0s | 1/7739894 | Duration: 34s[2019-03-20 13:23:51][INFO]: Import from folder 1-7739894 completed. Last block in database: 7,739,947
-[2019-03-20 13:23:51][INFO]: Rolling back chain to last finished round with last block height 7,739,913
-[2019-03-20 13:23:51][DEBUG]: Closing snapshots-cli database connection
-[2019-03-20 13:23:51][INFO]: Core is trying to gracefully shut down to avoid data corruption
+[2021-06-29 08:26:19.515] INFO : Connecting to database: ark_testnet
+[2021-06-29 08:26:19.576] DEBUG: Connection established.
+[2021-06-29 08:26:19.582] INFO : Running RESTORE for network: testnet
+⠸ Blocks: 100.00 % Transactions: 100.00 % Rounds: 100.00 %
+[2021-06-29 08:26:21.026] INFO : Successfully restore  153 blocks, 153 transactions, 153 rounds
+[2021-06-29 08:26:21.027] DEBUG: Disposing @arkecosystem/core-snapshots...
+[2021-06-29 08:26:21.027] DEBUG: Disposing @arkecosystem/core-database...
+[2021-06-29 08:26:21.028] DEBUG: Disconnecting from database
+[2021-06-29 08:26:21.029] DEBUG: Disconnected from database
+[2021-06-29 08:26:21.030] DEBUG: Disposing @arkecosystem/core-logger-pino...
+
 ```
+
+Restore command does not automatically clear the database. Use snapshot:rollback or snapshot:truncate command, to rollback or clear the database.
 
 After it is completed, we need to start the relay process again for it to resync \(if applicable\) back to current height:
 
@@ -473,10 +475,9 @@ After that, we’ll make use of Snapshot command _**rollback**_ — for this cas
 ```bash
 ark snapshot:rollback --height=<height>
 
-//where we replace <height> with a height we want to rollback to and
 start to sync from the network. In our case lets say current
 blockchain height is 7,740,000 and if we want to go back 2,000 blocks
-we'll input 7739000 in <height> so we'll run. We'd run:
+we'll input 7738000 in <height> so we'll run. We'd run:
 
 ark snapshot:rollback --height=7738000
 ```
@@ -484,12 +485,16 @@ ark snapshot:rollback --height=7738000
 You’ll see a message similar to this:
 
 ```bash
-ark snapshot:rollback --height=7738000[2019-03-20 13:49:18][INFO]: Snapshots: Database connected
-[2019-03-20 13:49:18][INFO]: Starting the process of blockchain rollback to block height of 7,738,000
-[2019-03-20 13:49:18][INFO]: 1259 transactions from rollbacked blocks safely exported to file rollbackTransactionBackup.7738001.7740137.json
-[2019-03-20 13:49:18][INFO]: Rolling back chain to last finished round 151,725 with last block height 7,737,975
-[2019-03-20 13:49:18][DEBUG]: Closing snapshots-cli database connection
-[2019-03-20 13:49:18][INFO]: Core is trying to gracefully shut down to avoid data corruption
+[2021-06-29 08:41:03.467] INFO : Connecting to database: ark_testnet
+[2021-06-29 08:41:03.571] DEBUG: Connection established.
+[2021-06-29 08:41:03.575] INFO : Running ROLLBACK
+[2021-06-29 08:41:03.666] INFO : Last block height is: 7,740,000
+[2021-06-29 08:41:03.715] INFO : Rolling back chain to last finished round 151,725 with last block height 7,737,975
+[2021-06-29 08:41:03.716] DEBUG: Disposing @arkecosystem/core-snapshots...
+[2021-06-29 08:41:03.716] DEBUG: Disposing @arkecosystem/core-database...
+[2021-06-29 08:41:03.717] DEBUG: Disconnecting from database
+[2021-06-29 08:41:03.718] DEBUG: Disconnected from database
+[2021-06-29 08:41:03.718] DEBUG: Disposing @arkecosystem/core-logger-pino...
 ```
 
 After it is finished, we need to start the relay process again for it to resync from the previously rolled back state and sync back up to the current height by running:
@@ -514,13 +519,16 @@ ark snapshot:rollback --number=2000
 You’ll see a message similar to this:
 
 ```bash
-ark snapshot:rollback --number=2000
-[2019-03-20 13:49:18][INFO]: Snapshots: Database connected
-[2019-03-20 13:49:18][INFO]: Starting the process of blockchain rollback to block height of 7,738,000
-[2019-03-20 13:49:18][INFO]: 1259 transactions from rollbacked blocks safely exported to file rollbackTransactionBackup.7738001.7740137.json
-[2019-03-20 13:49:18][INFO]: Rolling back chain to last finished round 151,725 with last block height 7,737,975
-[2019-03-20 13:49:18][DEBUG]: Closing snapshots-cli database connection
-[2019-03-20 13:49:18][INFO]: Core is trying to gracefully shut down to avoid data corruption
+[2021-06-29 08:41:03.467] INFO : Connecting to database: ark_testnet
+[2021-06-29 08:41:03.571] DEBUG: Connection established.
+[2021-06-29 08:41:03.575] INFO : Running ROLLBACK
+[2021-06-29 08:41:03.666] INFO : Last block height is: 7,740,000
+[2021-06-29 08:41:03.715] INFO : Rolling back chain to last finished round 151,725 with last block height 7,737,975
+[2021-06-29 08:41:03.716] DEBUG: Disposing @arkecosystem/core-snapshots...
+[2021-06-29 08:41:03.716] DEBUG: Disposing @arkecosystem/core-database...
+[2021-06-29 08:41:03.717] DEBUG: Disconnecting from database
+[2021-06-29 08:41:03.718] DEBUG: Disconnected from database
+[2021-06-29 08:41:03.718] DEBUG: Disposing @arkecosystem/core-logger-pino...
 ```
 
 After it is finished, we need to start the relay process again for it to resync from the previously rolled back state and sync back up to the current height by running:
