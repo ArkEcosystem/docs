@@ -14,6 +14,7 @@ ARK `v3.0` is a major update and **not backward compatible with `v2.7.x`**.
 * `oclif` has been replaced with a custom CLI for greater control and extensibility of its behaviors
 * All `POST /search` endpoints exposed through the API have been deprecated in favour of dot-notation query parameters
 * Log file name convention is changed from `{token}-{process}-current.log` to `{token}-{network}-{process}-current.log`.
+* New snapshot package and snapshot file format is not compatible with previous version.
 
 ## Upgrade Guide
 
