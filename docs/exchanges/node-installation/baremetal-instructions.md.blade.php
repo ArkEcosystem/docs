@@ -89,7 +89,7 @@ Starting ark-relay... done
 ```
 
 <x-alert type="info">
-All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/command-line-interface-cli/getting-started) documentation or by executing the `ark help`command.
+All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/development-guides/command-line-interface/getting-started) documentation or by executing the `ark help`command.
 </x-alert>
 
 ### 8. Checking to See if Everything Is Working
@@ -128,7 +128,7 @@ Now that the relay node has been configured, you should head over to the JSON-RP
 
 <livewire:page-reference path="/docs/exchanges/json-rpc/getting-started" />
 
- or look at relevant [Public API endpoints](/docs/api/ related to blockchain functionality to manage your wallets and transactions.
+ or look at relevant [Public API endpoints](/docs/api) related to blockchain functionality to manage your wallets and transactions.
 
 
 

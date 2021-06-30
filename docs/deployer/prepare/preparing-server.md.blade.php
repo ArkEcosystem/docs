@@ -59,4 +59,4 @@ Now, our server is configured and ready to accept the bridgechain installation s
 
 ## Securing the Servers
 
-The documentation for securing an ARK Public Network or Devnet node also applies for launching a bridgechain. This is important  because the genesis node must be protected as much as possible from attack if live delegates aren't available yet. [Review security precautions here.](/docs/core/how-to-guides/setting-up-your-production-environment/how-to-secure-your-ark-node) Moreover, it is strongly advised to destroy genesis delegate passphrases on the genesis node when your network attains proper stability after live delegates step in.
+The documentation for securing an ARK Public Network or Devnet node also applies for launching a bridgechain. This is important  because the genesis node must be protected as much as possible from attack if live delegates aren't available yet. [Review security precautions here.](/docs/core/getting-started/production-setup/core-node-security) Moreover, it is strongly advised to destroy genesis delegate passphrases on the genesis node when your network attains proper stability after live delegates step in.

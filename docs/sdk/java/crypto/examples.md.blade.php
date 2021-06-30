@@ -19,7 +19,7 @@ A transaction is an object specifying the transfer of funds from the sender's wa
 
 The crypto SDK can sign a transaction using your private key or passphrase \(from which the private key is generated\). Ensure you are familiar with [digital signatures](https://en.wikipedia.org/wiki/Digital_signature) before using the crypto SDKs.
 
-To learn more about how sequential nonces work go to the following link: [Understanding Transaction Nonce](/docs/core/transactions/understanding-transaction-nonce)
+To learn more about how sequential nonces work go to the following link: [Understanding Transaction Nonce](/docs/core/transactions/understanding-the-nonce)
 
 #### Transfer
 
