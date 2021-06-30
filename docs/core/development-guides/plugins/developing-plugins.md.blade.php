@@ -4,7 +4,7 @@ title: Plugins Guide - Developing Plugins
 
 # Plugin Development
 
-Simple overview of proper structure; e.g. have a plugin.ts file that only registers / deregisters the plugin and calls for example startServer that will handle the rest. So you end up with a server.ts file, folder structure for api endpoints, things like that.
+Simple overview of proper structure; e.g. have a app.json file that only registers the plugin and calls for example startServer that will handle the rest. So you end up with a server.ts file, folder structure for api endpoints, things like that.
 
 ## Introduction
 
@@ -16,53 +16,58 @@ This guide will walk you through the process of understanding how plugins are bu
 
 When Core starts it will look at the `app.json` configuration for a key called `plugins`. This key contains a list of plugins with their package name and options that should be used to configure and run it. Let's have a look at the default `app.js` that ships with Core to understand what is happening.
 
-```typescript
-module.exports = {
-    plugins: [
-        {
-            package: "@arkecosystem/core-transactions",
-        },
-        {
-            package: "@arkecosystem/core-state",
-        },
-        {
-            package: "@arkecosystem/core-database",
-        },
-        {
-            package: "@arkecosystem/core-database-postgres",
-            options: {
-                connection: {
-                    host: process.env.CORE_DB_HOST,
-                    port: process.env.CORE_DB_PORT,
-                    database: process.env.CORE_DB_DATABASE,
-                    user: process.env.CORE_DB_USERNAME,
-                    password: process.env.CORE_DB_PASSWORD,
-                },
+```json
+{
+    "core": {
+        "plugins": [
+            {
+                "package": "@arkecosystem/core-logger-pino"
             },
-        },
-        {
-            package: "@arkecosystem/core-transaction-pool",
-        },
-        {
-            package: "@arkecosystem/core-p2p",
-        },
-        {
-            package: "@arkecosystem/core-blockchain",
-        },
-        {
-            package: "@arkecosystem/core-api",
-        },
-        {
-            package: "@arkecosystem/core-webhooks",
-        },
-        {
-            package: "@arkecosystem/core-forger",
-        },
-        {
-            package: "@arkecosystem/core-snapshots",
-        },
-    ],
-};
+            {
+                "package": "@arkecosystem/core-state"
+            },
+            {
+                "package": "@arkecosystem/core-database"
+                "options": {
+                    "connection": {
+                        "host": "127.0.0.1",
+                        "port": 5432,
+                        "database": "ark_testnet",
+                        "user": "ark",
+                        "password": "password",
+                    },
+                }
+            },
+            {
+                "package": "@arkecosystem/core-transactions"
+            },
+            {
+                "package": "@arkecosystem/core-magistrate-transactions"
+            },
+            {
+                "package": "@arkecosystem/core-transaction-pool"
+            },
+            {
+                "package": "@arkecosystem/core-p2p"
+            },
+            {
+                "package": "@arkecosystem/core-blockchain"
+            },
+            {
+                "package": "@arkecosystem/core-api"
+            },
+            {
+                "package": "@arkecosystem/core-magistrate-api"
+            },
+            {
+                "package": "@arkecosystem/core-webhooks"
+            },
+            {
+                "package": "@arkecosystem/core-forger"
+            }
+        ]
+    }
+}
 ```
 
 Based on this configuration the plugins will be registered and booted in the following order from top to bottom.
