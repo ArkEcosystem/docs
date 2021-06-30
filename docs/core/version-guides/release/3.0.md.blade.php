@@ -1,5 +1,5 @@
 ---
-title: Release - v3.0
+title: Releases - v3.0
 ---
 
 # v3.0 Release Guide
