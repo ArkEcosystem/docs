@@ -64,7 +64,6 @@ Note in particular that private keys and passphrases are not included on this mo
 * **address** _the wallet's address, derived from public key_
 * **publicKey** _the wallet's public key, derived from private key_
 * **secondPublicKey** _if the wallet has enabled a second key, that second key is stored here_
-* **vote** _the delegate username of this wallet's vote recipient_
 
 ## Delegate
 
@@ -73,9 +72,19 @@ Though delegates are treated as their own data type in the ARK Public API, in th
 They share all fields in common with the Wallet data structure, with a few extra fields:
 
 * **username** _the delegate username of this wallet_
-* **voteBalance** _the sum of balances of all wallets voting for the delegate_
-* **producedBlocks** _the total number of blocks produced by the delegate_
-* **missedBlocks** _the total number of blocks missed by the delegate_
+* **address** _the delegate address of this wallet_
+* **publicKey** _the delegate public key of this wallet_
+* **votes** _the sum of balances of all wallets voting for the delegate_
+* **isResigned** _the resignation status of this delegate_
+* **blocks**:
+  * **produced** _the total number of blocks produced by the delegate_
+  * **last** _the last block produced by the delegate_
+* **production**:
+  * **approval** _the vote share for this delegate_
+* **forged**:
+  * **fess** _the forged fees for this delegate_
+  * **rewards** _the forged rewards for this delegate_
+  * **total** _the forged fees and rewards for this delegate_
 
 ## Peer
 
@@ -85,6 +94,4 @@ Peers are nodes in the ARK network that work together to relay transactions and 
 * **port** _the port on which the peer has enabled its P2P connection_
 * **version** _the network version this peer is operating on_
 * **height** _the total height of the blockchain as reported by the peer_
-* **status** _the operational status of the peer_
-* **os** _the operating system running on the peer_
 * **latency** _the average delay between contacting the peer and receiving a response_
