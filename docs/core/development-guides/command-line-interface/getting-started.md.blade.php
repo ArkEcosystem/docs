@@ -495,7 +495,7 @@ ark forger:log
 | Name | Description | Required |
 | :--- | :--- | :---: |
 | --error | only show error output | :x: |
-| --lines | number of lines to outputt | :x: |
+| --lines | number of lines to output | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
