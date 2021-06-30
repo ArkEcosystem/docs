@@ -99,7 +99,7 @@ All that is left is to publish our game for others to find and play it! This wil
 
 Congratulations, your game is now available in the ARK Desktop Wallet! We hope that you have found this series helpful. This is a great way for developers to add blockchain functionality to their games, earn additional revenue, and introduce their game to a new audience!
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 
 **Check out previous posts in this series for reference here:**
 

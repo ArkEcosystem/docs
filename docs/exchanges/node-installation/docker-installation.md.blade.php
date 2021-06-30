@@ -171,7 +171,7 @@ docker logs --tail 50 core-mainnet -f
 
 ## Update
 
-### Docker Live Updates Are Now Possible With [CLI](/docs/core/command-line-interface-cli/getting-started)
+### Docker Live Updates Are Now Possible With [CLI](/docs/core/development-guides/command-line-interface/getting-started)
 
 * As a preliminary step, installation of development tools is necessary \(only needed once, when doing initial update\):
 

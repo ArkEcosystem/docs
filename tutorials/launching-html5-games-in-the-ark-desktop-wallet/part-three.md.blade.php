@@ -275,4 +275,4 @@ Give it a try — run our Construct project, start some new games and send some 
 
 Congratulations on reaching the end of the third tutorial! Today we’ve learned how to parse the blockchain to create a lobby and match wagers, with the data automatically updating in the client without manually refreshing. In the next tutorial, we will play with the smartbridge field — also known as the vendor field — to implement turn-based game logic to make our game playable.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!

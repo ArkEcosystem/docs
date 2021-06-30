@@ -100,7 +100,7 @@ It is recommended to make configuration changes to these options by working with
 Manager API obtains some of the required data from running either a `core` **or** `relay` & `forger` process.
 <x-alert type="info">
 Be aware that the HTTP server is running on a node instance and that all processes are run with `ark [process_name]:start` option.
-Using this method, the process is run as a PM2 process, which is necessary because PM2 IPC is used for getting some data required by manager API. Read more about starting processes in our [Core CLI Documentation](/docs/core/command-line-interface-cli/getting-started).
+Using this method, the process is run as a PM2 process, which is necessary because PM2 IPC is used for getting some data required by manager API. Read more about starting processes in our [Core CLI Documentation](/docs/core/development-guides/command-line-interface/getting-started).
 </x-alert>
 
 ## Store events and logs

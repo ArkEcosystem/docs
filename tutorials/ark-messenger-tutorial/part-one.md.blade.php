@@ -28,9 +28,9 @@ Messages sent to the channel are encrypted and decrypted using the channel’s p
 Now that we have a foundation of what the ARK Messenger is, we are ready to start building. Let us review how to set up a development environment.
 
 ## **Setting up a development environment**
-The documentation within [Core](/docs/core/how-to-guides/setting-up-your-development-environment/intro) is an ideal way for developers to go through the processes for setting up a development environment. We recommend Linux \(_\*.deb based_\) operating system as the default environment. We officially recommend and support **Ubuntu** operating system.
+The documentation within [Core](/docs/core/getting-started/development-setup/introduction) is an ideal way for developers to go through the processes for setting up a development environment. We recommend Linux \(_\*.deb based_\) operating system as the default environment. We officially recommend and support **Ubuntu** operating system.
 
-You can also set up your development environment using a Docker on [macOS/Linux Docker](/docs/core/how-to-guides/setting-up-your-development-environment/docker) or a [Docker on Windows](/docs/core/how-to-guides/setting-up-your-development-environment/windows).
+You can also set up your development environment using a Docker on [macOS/Linux Docker](/docs/core/getting-started/development-setup/docker-linux-macos) or a [Docker on Windows](/docs/core/getting-started/development-setup/docker-windows).
 
 ### Step 1: User setup
 
@@ -178,7 +178,7 @@ sudo su - ark
 cd ~
 ```
 
-After creating and logging under `ark` user, you can execute the following script to install development tools and dependencies from [Technology Stack](https://blog.ark.io/technology-stack). If your default user isn't `ark`, you should copy and modify the script source below \(database section\).
+After creating and logging under `ark` user, you can execute the following script to install development tools and dependencies from [Technology Stack](/docs/core/overview/technology-stack). If your default user isn't `ark`, you should copy and modify the script source below \(database section\).
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/learn-ark/bash-helper-scripts/master/dev-setup.sh)
@@ -206,4 +206,4 @@ But most importantly, a bridgechain allows you to run a network with your own cu
 
 Our next tutorial will cover the development of a custom transaction, testing that transaction on our bridgechain, and developing the client which will serve as the front-end application.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/how-to-guides/setting-up-your-development-environment/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
