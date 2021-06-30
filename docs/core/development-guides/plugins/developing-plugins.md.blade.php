@@ -138,16 +138,23 @@ service-provider.ts
 8. The `server/blocks/schema.ts` file exports [joi](https://github.com/hapijs/joi) schemas that are used to validate the data of incoming requests, think query parameters and form parameters that need to be present in a specific format.
 9. The `server/blocks/transformer.ts` file exports a single function that is responsible for transforming the data, in this case a `block`, into an easy to work with format. It's easier to work with something like a unix timestamp instead of having to work with a genesis timestamp and having to calculate offsets on the client side.
 
+<!--
 // TBD: add links to plugin development series on medium once ready
+-->
 
 > If you are working on a monolithic plugin which behavior can't be broken down into smaller entities that compose the full functionality than something like [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design) might be the better choice for an easier to maintain codebase.
 
+
+<!--
 ## Generators
 
 // TBD: add yeoman generator instructions once it is implemented
+-->
 
 ## Distribution
 
 There are several ways of distributing Core plugins but the recommended way is to publish your plugin to the [npm registry](https://www.npmjs.com/) through the [npm](https://docs.npmjs.com/cli/publish) or [yarn](https://yarnpkg.com/lang/en/docs/publishing-a-package/) command line interfaces that are available for macOS, linux and windows.
 
+<!--
 // TBD: add on-chain instructions once it is implemented
+-->
