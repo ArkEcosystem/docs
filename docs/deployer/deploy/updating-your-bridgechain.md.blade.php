@@ -8,7 +8,7 @@ Now that your bridgechain is deployed, you may want to update it to the most rec
 
 ## Notes
 
-After updating, you should check whether your application still works as expected and no plugins are broken. Plugins will likely have to be updated to accommodate the latest Core changes. Consult the [releases](/docs/core/releases/intro) page for an overview of each breaking change on ARK Core.
+After updating, you should check whether your application still works as expected and no plugins are broken. Plugins will likely have to be updated to accommodate the latest Core changes. Consult the [releases](/docs/core#version-guides) page for an overview of each breaking change on ARK Core.
 
 ## Executing Update Script
 

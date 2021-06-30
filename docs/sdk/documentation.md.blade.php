@@ -14,7 +14,7 @@ Using ARK SDKs, developers can employ the programming language of their choice t
 If you need to learn more about Cryptography in general, how initial key and address generation works, what is a public or private key, head over to the page link below:
 </x-alert>
 
-<livewire:embed-link url="/docs/core/transactions/cryptography" caption="TODO" />
+<livewire:embed-link url="/docs/core/transactions/cryptography-overview" caption="TODO" />
 
 If your application doesn't involve sending transactions, you can most likely build your application using the Client SDK alone. Otherwise, applications looking to leverage the full spectrum of ARK APIs should make use of both Client and Cryptography SDKs.
 
