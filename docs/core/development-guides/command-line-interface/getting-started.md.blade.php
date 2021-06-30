@@ -6,14 +6,14 @@ title: CLI Guide - Getting Started
 
 ## Available Commands
 
-### autocomplete
+### help
 
-You might be used to tab completion, which the ARK CLI does support. Using this command does not configure autocompletion, but does show you instructions.
+You might be used to tab completion, which the ARK CLI does support. Using this command ARK CLI but does show you instructions.
 
 #### Usage
 
 ```bash
-ark autocomplete
+ark help
 ```
 
 ### config:cli
@@ -41,10 +41,10 @@ ark config:cli
 ark config:cli --token="mine"
 ```
 
-#### Switch to the Beta Channel
+#### Switch to the Next Channel
 
 ```bash
-ark config:cli --channel="beta"
+ark config:cli --channel="next"
 ```
 
 ### config:database
@@ -187,20 +187,11 @@ ark config:publish
 ark config:publish
 ```
 
-### config:reset
-
-Reset the configuration
-
-#### Usage
-
-```bash
-ark config:reset
-```
-
 #### Flags
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
+| --reset | overwrite existing configuration | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -209,7 +200,7 @@ ark config:reset
 #### Reset the Configuration for the Mainnet Network
 
 ```bash
-ark config:reset --network=mainnet
+ark config:publish --network=mainnet --reset
 ```
 
 ### core:log
@@ -227,6 +218,7 @@ ark core:log
 | Name | Description | Required |
 | :--- | :--- | :---: |
 | --error | only show error output | :x: |
+| --lines | number of lines to output | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -336,6 +328,22 @@ or use the following command, which supports the same set of flags.:
 ```bash
 ark core:run
 ```
+
+### core:status
+
+Display core status
+
+#### Usage
+
+```bash
+ark core:status
+```
+
+#### Flags
+
+| Name | Description | Required |
+| :--- | :--- | :---: |
+| --token | the name of the token that should be used | :x: |
 
 ### core:stop
 
@@ -487,6 +495,7 @@ ark forger:log
 | Name | Description | Required |
 | :--- | :--- | :---: |
 | --error | only show error output | :x: |
+| --lines | number of lines to output | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -568,6 +577,22 @@ ark forger:start --bip38="..." --password="..."
 ark forger:start --no-daemon
 ```
 
+### forger:status
+
+Display forger status
+
+#### Usage
+
+```bash
+ark forger:status
+```
+
+#### Flags
+
+| Name | Description | Required |
+| :--- | :--- | :---: |
+| --token | the name of the token that should be used | :x: |
+
 ### forger:stop
 
 Stop the forger
@@ -638,6 +663,7 @@ ark relay:log
 | Name | Description | Required |
 | :--- | :--- | :---: |
 | --error | only show error output | :x: |
+| --lines | number of lines to output | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -745,6 +771,22 @@ ark relay:start --launchMode=seed
 ark relay:start --no-daemon
 ```
 
+### relay:status
+
+Display relay status
+
+#### Usage
+
+```bash
+ark relay:status
+```
+
+#### Flags
+
+| Name | Description | Required |
+| :--- | :--- | :---: |
+| --token | the name of the token that should be used | :x: |
+
 ### relay:stop
 
 Stop the relay
@@ -809,11 +851,10 @@ ark snapshot:dump
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --blocks | blocks to append to, correlates to folder name | :x: |
 | --start | \[default: -1\] start network height to export | :x: |
 | --end | \[default: -1\] end network height to export | :x: |
 | --skipCompression | skip gzip compression | :x: |
-| --trace | dumps generated queries and settings to console | :x: |
+| --codec | codec name | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -831,13 +872,9 @@ ark snapshot:restore
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --verifySignatures | signature verification | :x: |
-| --skipRestartRound | skip revert to current round | :x: |
-| --blocks | blocks to append to, correlates to folder name | :x: |
-| --start | \[default: -1\] start network height to export | :x: |
-| --end | \[default: -1\] end network height to export | :x: |
-| --skipCompression | skip gzip compression | :x: |
-| --trace | dumps generated queries and settings to console | :x: |
+| --verify | signature verification | :x: |
+| --truncate | truncate database before rollback | :x: |
+| --blocks | blocks to append to, correlates to folder name | |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -861,7 +898,6 @@ Either `height` or `number` has to be provided.
 | :--- | :--- | :---: |
 | --height | block network height number to roll back to | :ballot\_box\_with\_check: |
 | --number | number of blocks to roll back | :ballot\_box\_with\_check: |
-| --trace | dumps generated queries and settings to console | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -882,7 +918,7 @@ ark snapshot:truncate
 
 ### snapshot:verify
 
-Create a new snapshot
+Verify snapshot
 
 #### Usage
 
@@ -894,12 +930,7 @@ ark snapshot:verify
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --verifySignatures | signature verification | :x: |
-| --blocks | blocks to append to, correlates to folder name | :x: |
-| --start | \[default: -1\] start network height to export | :x: |
-| --end | \[default: -1\] end network height to export | :x: |
-| --skipCompression | skip gzip compression | :x: |
-| --trace | dumps generated queries and settings to console | :x: |
+| --blocks | snapshot folder name | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 

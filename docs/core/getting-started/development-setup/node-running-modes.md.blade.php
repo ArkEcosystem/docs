@@ -51,73 +51,83 @@ Take a look at the following pieces of code to get a better understand of what c
 2. [Command](https://github.com/ArkEcosystem/core/blob/49e89a8f8a0380d1de856b7671aad8a590b5fd61/packages/core-cli/src/commands/command.ts)
 </x-alert>
 
-3. Based on the command config and the options passed by the `core:testnet` command as seen in the links above, we can see that the network sets the `config` directory to `bin/config/testnet` and the `networkStart` option to `true`, which starts our testnet from scratch with a new genesis block.
+3. Take a look on the command config and the options passed by the `core:run` command as seen in the links above.
 
 ```typescript
-import { app } from "@arkecosystem/core-container";
-import { CommandFlags } from "../../types";
-import { BaseCommand } from "../command";
+import { Commands, Container, Contracts, Utils } from "@arkecosystem/core-cli";
+import { Networks } from "@arkecosystem/crypto";
+import Joi from "joi";
 
-export class RunCommand extends BaseCommand {
-    public static description: string = "Run the core (without pm2)";
+import { buildBIP38 } from "../internal/crypto";
 
-    public static flags: CommandFlags = {
-        ...BaseCommand.flagsNetwork,
-        ...BaseCommand.flagsBehaviour,
-        ...BaseCommand.flagsForger,
-    };
+@Container.injectable()
+export class Command extends Commands.Command {
+    public signature: string = "core:run";
 
-    public async run(): Promise<void> {
-        const { flags } = await this.parseWithNetwork(RunCommand);
+    public description: string = "Run the Core process in foreground. Exiting the process will stop it from running.";
 
-        await this.buildApplication(app, flags, {
-            options: {
-                "@arkecosystem/core-p2p": this.buildPeerOptions(flags),
+    public configure(): void {
+        this.definition
+            .setFlag("token", "The name of the token.", Joi.string().default("ark"))
+            .setFlag("network", "The name of the network.", Joi.string().valid(...Object.keys(Networks)))
+            .setFlag("env", "", Joi.string().default("production"))
+            .setFlag("networkStart", "Indicate that this is the first start of seeds.", Joi.boolean())
+            .setFlag("disableDiscovery", "Permanently disable all peer discovery.", Joi.boolean())
+            .setFlag("skipDiscovery", "Skip the initial peer discovery.", Joi.boolean())
+            .setFlag("ignoreMinimumNetworkReach", "Ignore the minimum network reach on start.", Joi.boolean())
+            .setFlag("launchMode", "The mode the relay will be launched in (seed only at the moment).", Joi.string())
+            .setFlag("bip38", "", Joi.string())
+            .setFlag("bip39", "A delegate plain text passphrase. Referred to as BIP39.", Joi.string())
+            .setFlag("password", "A custom password that encrypts the BIP39. Referred to as BIP38.", Joi.string());
+    }
+
+    public async execute(): Promise<void> {
+        const flags: Contracts.AnyObject = { ...this.getFlags() };
+        flags.processType = "core";
+
+        await Utils.buildApplication({
+            flags,
+            plugins: {
+                "@arkecosystem/core-p2p": Utils.buildPeerFlags(flags),
                 "@arkecosystem/core-blockchain": {
                     networkStart: flags.networkStart,
                 },
-                "@arkecosystem/core-forger": await this.buildBIP38(flags),
+                "@arkecosystem/core-forger": await buildBIP38(flags, this.app.getCorePath("config")),
             },
         });
+
+        return new Promise(() => {});
     }
 }
 ```
 
-4. We are going to take a brief look at the `setup` method, found in the `core-container` package:
+4. We are going to take a brief look at the `bootstrap` method, found in the `core-kernel` package:
 
 ```typescript
-public async setUp(version: string, variables: any, options: any = {}) {
-    // Register any exit signal handling
-    this.registerExitHandler(["SIGINT", "exit"]);
+public async bootstrap(options: { flags: JsonObject; plugins?: JsonObject }): Promise<void> {
+    this.bind<KeyValuePair>(Identifiers.ConfigFlags).toConstantValue(options.flags);
+    this.bind<KeyValuePair>(Identifiers.ConfigPlugins).toConstantValue(options.plugins || {});
 
-    // Set options and variables
-    this.options = options;
-    this.variables = variables;
+    await this.registerEventDispatcher();
 
-    this.setVersion(version);
+    await this.bootstrapWith("app");
+}
 
-    // Register the environment variables
-    const environment = new Environment(variables);
-    environment.setUp();
+private async bootstrapWith(type: string): Promise<void> {
+    const bootstrappers: Array<Constructor<Bootstrapper>> = Object.values(Bootstrappers[type]);
+    const events: Contracts.Kernel.EventDispatcher = this.get(Identifiers.EventDispatcherService);
 
-    // Mainly used for testing environments!
-    if (options.skipPlugins) {
-        this.isReady = true;
-        return;
+    for (const bootstrapper of bootstrappers) {
+        events.dispatch(KernelEvent.Bootstrapping, { bootstrapper: bootstrapper.name });
+
+        await this.resolve<Bootstrapper>(bootstrapper).bootstrap();
+
+        events.dispatch(KernelEvent.Bootstrapped, { bootstrapper: bootstrapper.name });
     }
-
-    // Setup the configuration
-    this.config = await configManager.setUp(variables);
-
-    // Setup the plugins
-    this.plugins = new PluginRegistrar(this, options);
-    await this.plugins.setUp();
-
-    this.isReady = true;
 }
 ```
 
-5. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key of the second argument to `container.setUp`. You can find the enabled plugins in the `plugins.js` file located in the `core` package at `bin/config/testnet`.
+5. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key. You can find the enabled plugins in the `plugins.json` file located in the `core` package at `bin/config/testnet`.
 
 This last step is where the meat-and-potatoes of ARK Core is loaded. During this step, the Postgres database is set up, all ARK-specific tables and fields are migrated, the genesis block is created, 51 forging delegates are created and set up to forge blocks — all the blockchain goodness you would expect from of a fully-formed testnet.
 

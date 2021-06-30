@@ -112,6 +112,10 @@ This variable determines the host at which the Manager API will be listening for
 
 This variable determines the port at which the Manager API will be listening for traffic.
 
+## CORE_MANAGER_PUBLIC_IP
+
+This variable determines the public ip of host.
+
 ## CORE_MANAGER_SSL
 
 This variable determines if SSL (HTTPS) is enabled for the Manager API.
@@ -150,19 +154,37 @@ This variable determines how many errors a peer can cause before it is disconnec
 
 This variable determines how many peers from the same subnet are allowed to connect.
 
+## CORE_P2P_MIN_NETWORK_REACH
+
+This variable determines minimum number of peers that should be connected.
+
 ## CORE_P2P_PORT
 
 This variable determines the port at which the P2P API will be listening for traffic.
 
 ## CORE_P2P_RATE_LIMIT
 
-This variable determines how many per requests per second can be sent by a peer.
+This variable determines how many requests per second can be sent by a peer.
+
+## CORE_P2P_RATE_LIMIT_POST_TRANSACTIONS
+
+This variable determines how many transaction requests per second can be sent by a peer.
 
 ## CORE_PATH_DATA
 
 > This variable is exposed by core and cannot be manually configured.
 
 This variable exposes the path at which core stores application data.
+
+## CORE_RESET_DATABASE
+
+This variable determines if database should be truncated at boot.
+
+## CORE_TOKEN
+
+> This variable is exposed by core and cannot be manually configured.
+
+This variable determines the name of the token.
 
 ## CORE_TRANSACTION_POOL_DISABLED
 
