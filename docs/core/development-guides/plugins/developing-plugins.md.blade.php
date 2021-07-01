@@ -4,11 +4,11 @@ title: Plugins Guide - Developing Plugins
 
 # Plugin Development
 
-Simple overview of proper structure; e.g. have a app.json file that only registers the plugin and calls for example startServer that will handle the rest. So you end up with a server.ts file, folder structure for api endpoints, things like that.
+A simple overview of a proper structure would have an `app.json` file that only registers the plugin and calls--for example--`startServer` to handle the rest. The result being things like a `server.ts` file or folder structure for API endpoints.
 
 ## Introduction
 
-Plugins are a way off adding functionality to Core or altering existing behaviors. They can be anything from adding a new API endpoint, error trackers to new transaction types to expand on the capabilities of your blockchain.
+Plugins are a way of adding functionality to Core or altering existing behaviors. They can be anything from adding a new API endpoint, error trackers to new transaction types to expand on the capabilities of your blockchain.
 
 This guide will walk you through the process of understanding how plugins are build, discovered and distributed for use by end-users and developers.
 

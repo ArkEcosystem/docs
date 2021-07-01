@@ -11,7 +11,7 @@ Everything we use inside ARK core is built with modules. To learn more about mod
 </x-alert>
 
 <x-alert type="info">
-GitHub learning repository has [a template project available](https://github.com/learn-ark/dapp-core-module-template/tree/develop). You can create a new module by creating [a new GitHub repository](https://github.com/new) and selecting the correct template: **learn-ark/dapp-core-module-template.**
+GitHub learning repository has a template project available [here](https://github.com/learn-ark/dapp-core-module-template/tree/develop). You can create a new module by creating a [new GitHub repository](https://github.com/new) and selecting the correct template: **learn-ark/dapp-core-module-template**.
 </x-alert>
 
 ## Package properties
@@ -57,7 +57,7 @@ export class ServiceProvider extends Providers.ServiceProvider {
 
 ### Registration
 
-Module needs to be registered in order to be picked up by the `core` engine. Looking at the source code above each core module must have **register** method implemented. This methods are called from the application container.
+Module needs to be registered in order to be picked up by the `core` engine. Looking at the source code above each core module must have the **`register`** method implemented. This method is called from the application container.
 
 ```typescript
 public async register(): Promise<void> {
