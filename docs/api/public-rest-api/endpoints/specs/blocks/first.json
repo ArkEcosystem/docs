@@ -1,0 +1,13 @@
+{
+    "title": "Retrieve first block",
+    "description": "Retrieve first block.",
+    "method": "GET",
+    "path": "blocks/first",
+    "parameters": {
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        }
+    }
+}

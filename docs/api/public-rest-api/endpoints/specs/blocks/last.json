@@ -1,0 +1,13 @@
+{
+    "title": "Retrieve last block",
+    "description": "Retrieve last block.",
+    "method": "GET",
+    "path": "blocks/last",
+    "parameters": {
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        }
+    }
+}
