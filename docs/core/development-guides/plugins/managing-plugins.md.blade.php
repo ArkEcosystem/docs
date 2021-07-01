@@ -26,7 +26,7 @@ Give it a second to download and install the plugin, once finished you can conti
 
 ### Configuration
 
-Now that the plugin is downloaded and installed we can go ahead and register it in our `~/.config/ark-core/{NETWORK}/plugins.js` file. Open the file in your editor of choice, append the following contents and save the changes.
+Now that the plugin is downloaded and installed, we can go ahead and register it in our `~/.config/ark-core/{NETWORK}/app.json` file. Open the file in your editor of choice, append the following contents and save the changes.
 
 ```javascript
 {
