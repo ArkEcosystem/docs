@@ -19,5 +19,3 @@ All state changes to the blockchain are in the form of blocks; they contain a se
 <livewire:endpoint spec="api/public-rest-api/endpoints/specs/blocks/show.json" />
 
 <livewire:endpoint spec="api/public-rest-api/endpoints/specs/blocks/transactions.json" />
-
-<livewire:endpoint spec="api/public-rest-api/endpoints/specs/blocks/search.json" />
