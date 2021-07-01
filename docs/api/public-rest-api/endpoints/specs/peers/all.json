@@ -16,24 +16,14 @@
             "example": 100,
             "rules": ["nullable", "integer"]
         },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
         "orderBy": {
             "type": "query",
             "description": "The column by which the resources will be sorted.",
-            "rules": ["nullable", "string"]
-        },
-        "port": {
-            "type": "query",
-            "description": "The port by which the resources will be filtered.",
-            "rules": ["nullable", "integer"]
-        },
-        "status": {
-            "type": "query",
-            "description": "The status by which the resources will be filtered.",
-            "rules": ["nullable", "string"]
-        },
-        "os": {
-            "type": "query",
-            "description": "The operating system by which the resources will be filtered.",
             "rules": ["nullable", "string"]
         },
         "version": {
