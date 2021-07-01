@@ -1,0 +1,6 @@
+{
+    "title": "Get Transaction Schemas",
+    "description": "Get transaction schemas.",
+    "method": "GET",
+    "path": "transactions/schemas"
+}
