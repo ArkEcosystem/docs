@@ -2,21 +2,21 @@
     "title": "List All Blocks of a Delegate",
     "description": "The `delegate` resource allows you to obtain blocks from a specific Delegate. This is the equivalent of [searching for blocks](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/api/public/v2/blocks.html#search-all-blocks) using the `generatorPublicKey`.",
     "method": "GET",
-    "path": "delegates/{username|address|publicKey}/blocks",
+    "path": "delegates/{delegateUsername|delegateAddress|delegatePublicKey}/blocks",
     "parameters": {
-        "address": {
+        "delegateAddress": {
             "type": "path",
             "description": "The address of the delegate to be retrieved.",
             "example": 1,
             "rules": ["nullable", "string"]
         },
-        "publicKey": {
+        "delegatePublicKey": {
             "type": "path",
             "description": "The public key of the delegate to be retrieved.",
             "example": 1,
             "rules": ["nullable", "string"]
         },
-        "username": {
+        "delegateUsername": {
             "type": "path",
             "description": "The username of the delegate to be retrieved.",
             "example": 1,
@@ -33,6 +33,21 @@
             "description": "The number of resources per page.",
             "example": 100,
             "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column and order by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
         }
     }
 }
