@@ -33,12 +33,12 @@
         },
         "id": {
             "type": "query",
-            "description": "The identifiers of the blocks to be retrieved.",
+            "description": "The identifier of the block to be retrieved.",
             "rules": ["nullable", "string"]
         },
         "height": {
             "type": "query",
-            "description": "The heights of the blocks to be retrieved.",
+            "description": "The height of the block to be retrieved.",
             "rules": ["nullable", "integer"]
         },
         "height.from": {
@@ -53,7 +53,7 @@
         },
         "timestamp": {
             "type": "query",
-            "description": "The timestamps of the blocks to be retrieved.",
+            "description": "The timestamp of the block to be retrieved.",
             "rules": ["nullable", "integer"]
         },
         "timestamp.from": {
