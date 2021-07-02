@@ -1,0 +1,35 @@
+{
+    "title": "List Open HTLC Lock transactions",
+    "description": "The paginated API is used to query for multiple HTLC Locs transactions. You can apply _filters_ through the query parameter to search for specific transactions.",
+    "method": "POST",
+    "path": "locks/unlocked",
+    "parameters": {
+        "ids": {
+            "type": "body",
+            "description": "The ids of locks that will be returned.",
+            "rules": ["nullable", "array"]
+        },
+        "page": {
+            "type": "query",
+            "description": "The number of the page that will be returned.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "limit": {
+            "type": "query",
+            "description": "The number of resources per page.",
+            "example": 100,
+            "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        }
+    }
+}
