@@ -39,37 +39,37 @@
         "balance": {
             "type": "query",
             "description": "The balance of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "balance.from": {
             "type": "query",
             "description": "The minimum balance of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "balance.to": {
             "type": "query",
             "description": "The maximum balance of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "nonce": {
             "type": "query",
             "description": "The nonce of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "nonce.from": {
             "type": "query",
             "description": "The minimum nonce of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "nonce.to": {
             "type": "query",
             "description": "The maximum nonce of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "attributes": {
             "type": "query",
             "description": "The attributes of the wallet to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "object"]
         }
     }
 }

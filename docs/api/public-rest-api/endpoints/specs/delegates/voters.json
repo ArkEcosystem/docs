@@ -57,37 +57,37 @@
             "type": "path",
             "description": "The balance of the voter to be retrieved.",
             "example": 1,
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "balance.from": {
             "type": "path",
             "description": "The minimum balance of the voter to be retrieved.",
             "example": 1,
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "balance.to": {
             "type": "path",
             "description": "The maximum balance of the voter to be retrieved.",
             "example": 1,
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "nonce": {
             "type": "path",
             "description": "The nonce of the voter to be retrieved.",
             "example": 1,
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "nonce.from": {
             "type": "path",
             "description": "The minimum nonce of the voter to be retrieved.",
             "example": 1,
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "nonce.to": {
             "type": "path",
             "description": "The maximum nonce of the voter to be retrieved.",
             "example": 1,
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         }
     }
 }

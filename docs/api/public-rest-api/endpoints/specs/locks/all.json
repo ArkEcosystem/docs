@@ -44,27 +44,27 @@
         "isExpired": {
             "type": "query",
             "description": "The expired status of transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "boolean"]
         },
         "expirationType": {
             "type": "query",
             "description": "The expiration type of transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "expirationValue": {
             "type": "query",
             "description": "The expiration value of transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "expirationValue.from": {
             "type": "query",
             "description": "The minimum expiration value of transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "expirationValue.to": {
             "type": "query",
             "description": "The maximum expiration value of transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "secretHash": {
             "type": "query",
@@ -89,32 +89,32 @@
         "timestamp.epoch": {
             "type": "query",
             "description": "The epoch timestamp of the transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "timestamp.epoch.from": {
             "type": "query",
             "description": "The minimum epoch timestamp of the transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "timestamp.epoch.to": {
             "type": "query",
             "description": "The maximum epoch timestamp of the transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "timestamp.unix": {
             "type": "query",
             "description": "The unix timestamp of the transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "timestamp.unix.from": {
             "type": "query",
             "description": "The minimum unix timestamp of the transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "timestamp.unix.to": {
             "type": "query",
             "description": "The maximum unix timestamp of the transaction to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "timestamp.human": {
             "type": "query",

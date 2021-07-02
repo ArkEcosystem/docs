@@ -44,37 +44,37 @@
         "votes": {
             "type": "query",
             "description": "The votes of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "votes.from ": {
             "type": "query",
             "description": "The minimum votes of the delegates to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "votes.to ": {
             "type": "query",
             "description": "The maximum votes of the delegates to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "isResigned": {
             "type": "query",
             "description": "The resignation status of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "boolean"]
         },
         "blocks.produced": {
             "type": "query",
             "description": "The number of produced blocks of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.produced.from": {
             "type": "query",
             "description": "The minimum number of produced blocks of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.produced.to": {
             "type": "query",
             "description": "The minimum number of produced blocks of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.id": {
             "type": "query",
@@ -84,37 +84,37 @@
         "blocks.last.height": {
             "type": "query",
             "description": "The last produced block height of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.epoch": {
             "type": "query",
             "description": "The last produced block epoch timestamp of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.epoch.from": {
             "type": "query",
             "description": "The minimum last produced block epoch timestamp of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.epoch.to": {
             "type": "query",
             "description": "The maximum last produced block epoch timestamp of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.unix": {
             "type": "query",
             "description": "The last produced block unix timestamp of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.unix.from": {
             "type": "query",
             "description": "The minimum last produced unix epoch timestamp of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.unix.to": {
             "type": "query",
             "description": "The maximum last produced unix epoch timestamp of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "blocks.last.timestamp.human": {
             "type": "query",
@@ -124,62 +124,62 @@
         "production.approval": {
             "type": "query",
             "description": "The production approval rate of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "production.approval.from": {
             "type": "query",
             "description": "The minimum production approval rate of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "production.approval.to": {
             "type": "query",
             "description": "The maximum production approval rate of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.fess": {
             "type": "query",
             "description": "The forged fees of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.fess.from": {
             "type": "query",
             "description": "The minimum forged fees of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.fess.to": {
             "type": "query",
             "description": "The maximum forged fees of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.rewards": {
             "type": "query",
             "description": "The forged rewards of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.rewards.from": {
             "type": "query",
             "description": "The minimum forged rewards of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.rewards.to": {
             "type": "query",
             "description": "The maximum forged rewards of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.total": {
             "type": "query",
             "description": "The forged fees and rewards of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.total.from": {
             "type": "query",
             "description": "The minimum forged fees and rewards of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         },
         "forged.total.to": {
             "type": "query",
             "description": "The maximum forged fees and rewards of the delegate to be retrieved.",
-            "rules": ["nullable", "string"]
+            "rules": ["nullable", "integer"]
         }
     }
 }
