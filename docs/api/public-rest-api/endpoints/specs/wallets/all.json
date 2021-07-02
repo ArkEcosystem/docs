@@ -15,6 +15,61 @@
             "description": "The number of resources per page.",
             "example": 100,
             "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        },
+        "address": {
+            "type": "query",
+            "description": "The address of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "publicKey": {
+            "type": "query",
+            "description": "The public key of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "balance": {
+            "type": "query",
+            "description": "The balance of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "balance.from": {
+            "type": "query",
+            "description": "The minimum balance of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "balance.to": {
+            "type": "query",
+            "description": "The maximum balance of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "nonce": {
+            "type": "query",
+            "description": "The nonce of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "nonce.from": {
+            "type": "query",
+            "description": "The minimum nonce of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "nonce.to": {
+            "type": "query",
+            "description": "The maximum nonce of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "attributes": {
+            "type": "query",
+            "description": "The attributes of the wallet to be retrieved.",
+            "rules": ["nullable", "string"]
         }
     }
 }

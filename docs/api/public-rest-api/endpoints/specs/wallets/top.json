@@ -1,6 +1,6 @@
 {
     "title": "List All Top Wallets",
-    "description": "Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the ARK ICO.",
+    "description": "Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the ARK ICO. Query parameters are equal to the /wallets endpoint",
     "method": "GET",
     "path": "wallets/top",
     "parameters": {
@@ -15,6 +15,16 @@
             "description": "The number of resources per page.",
             "example": 100,
             "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
         }
     }
 }
