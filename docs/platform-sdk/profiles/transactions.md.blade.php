@@ -148,7 +148,7 @@ await activeWallet.transaction().broadcast(transactionId);
 ### Check what signatures a Multi-Signature Transaction or Registration is awaiting
 
 <x-alert type="warning">
-If both of the below examples are true the transaction is ready to be broadcasted.
+If both of the below examples are true the transaction is ready to be broadcast.
 </x-alert>
 
 ```typescript

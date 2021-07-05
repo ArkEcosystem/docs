@@ -28,7 +28,7 @@ The explorer is also compatible with [Netlify](https://www.netlify.com). In orde
 2. choose the `master` branch
 3. set `yarn build:mainnet` or \(`devnet`, depending on what you need\) as build command
 4. set `dist` as publish directory
-5. deploy, and your explorer will become visible on your netfily url
+5. deploy, and your explorer will become visible on your netlify url
 
 ### 3. Run Explorer As An Express Server
 

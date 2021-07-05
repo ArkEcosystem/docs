@@ -51,7 +51,7 @@ _We can build_ anything that is done by smart contracts, without the hassle of a
 All of the above-listed examples are transactions in the real world and can be implemented with our core GTI engine. Meaning, as a developer, you can add the new business logic to a blockchain by introducing additional custom transaction types tailored to the application. So, the next thing you need to implement is an awesome front end to support your business. Your new application becomes a light-client by default, leveraging the power of the blockchain platform in the background.
 
 <x-alert type="success">
-By using **The Core GTI Engine y**ou will be able to follow a streamlined process of creating and securing your new custom transaction type that can be **deployed to any ARK based bridgechain** and managed inside a separate core module \(plugin\).
+By using **The Core GTI Engine you** will be able to follow a streamlined process of creating and securing your new custom transaction type that can be **deployed to any ARK based bridgechain** and managed inside a separate core module \(plugin\).
 </x-alert>
 
 ## How To Access New Transaction Types via Our Public Interfaces

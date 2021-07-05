@@ -180,7 +180,7 @@ await wallet.delegate("username");
 // Get a list of delegates from the network that match the given criteria
 await wallet.delegates({ ... });
 
-// List all votes that a wallet casted
+// List all votes that a wallet cast
 await wallet.votes();
 
 // List all voters that a wallet has
@@ -527,7 +527,7 @@ await activeWallet.transaction().broadcast(transactionId);
 
 #### Check what signatures a Multi-Signature Transaction or Registration is awaiting
 
-> If both of the below examples are true the transaction is ready to be broadcasted.
+> If both of the below examples are true the transaction is ready to be broadcast.
 
 ```typescript
 // Needs the signature of the currently active wallet.

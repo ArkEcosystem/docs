@@ -208,7 +208,7 @@ When the bridgechain is running \(locally\), we can verify that the custom trans
 
 If our custom transaction is present in the list of available transaction types, we can try and post an actual transaction to the blockchain to see if it processes correctly. This can be done in many ways, but the preferred way is utilizing simple scripts.
 
-The test is complete when the transaction is broadcasted and processed by the network. We have now successfully implemented our custom _**Message Transaction**_! The next step is to develop the chat client that the user will interact with.
+The test is complete when the transaction is broadcast and processed by the network. We have now successfully implemented our custom _**Message Transaction**_! The next step is to develop the chat client that the user will interact with.
 
 ## Using the custom transaction in the client
 

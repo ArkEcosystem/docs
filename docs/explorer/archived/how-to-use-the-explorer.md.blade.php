@@ -22,7 +22,7 @@ This is a list of the most recent transactions to have been broadcast over the n
 * **Amount:** This will indicate the amount of ARK that was sent from the Sender to the Recipient.
 * **Sender:** This field shows the ARK address which signed the transaction; i.e., who is sending the transaction.
 * **Recipient:** Here we see the ARK address to which the sender \(above\) sent this transaction to; i.e., who is receiving the transaction.
-* **Timestamp:** This indicates the exact time at which the transaction was broadcasted and accepted by the network.
+* **Timestamp:** This indicates the exact time at which the transaction was broadcast and accepted by the network.
 * **Fee:** This indicates the fee paid to send the transaction. 
 * **SmartBridge:** This field indicates the ARK SmartBridge that was used in the transaction. SmartBridges are part of the innovations driving the ARK Ecosystem: it allows for different blockchains to interact with each other. Think of each blockchain as an island with no outside communication. If you work on Ethereum Island and your business partner only works on Bitcoin Island, you can't trade or work together. ARK SmartBridges are like an airstrip, cargo barge, cellphone towers, and internet all rolled into one. You can do business with any of the other islands from any island instantaneously and friction free. 
 
