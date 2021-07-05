@@ -16,20 +16,150 @@
             "example": 100,
             "rules": ["nullable", "integer"]
         },
-        "type": {
+        "offset": {
             "type": "query",
-            "description": "The transaction type to be retrieved.",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        },
+        "address": {
+            "type": "query",
+            "description": "The sender or recipient address of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "senderId": {
+            "type": "query",
+            "description": "The sender address of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "senderPublicKey": {
+            "type": "query",
+            "description": "The sender public key of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "recipientId": {
+            "type": "query",
+            "description": "The recipient address of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "id": {
+            "type": "query",
+            "description": "The id of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "version": {
+            "type": "query",
+            "description": "The version of transaction to be retrieved.",
             "rules": ["nullable", "integer"]
         },
         "blockId": {
             "type": "query",
-            "description": "The block id to be retrieved.",
+            "description": "The block id of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "sequence": {
+            "type": "query",
+            "description": "The sequence of transaction to be retrieved.",
             "rules": ["nullable", "integer"]
         },
-        "id": {
+        "sequence.from": {
             "type": "query",
-            "description": "The transaction id to be retrieved.",
+            "description": "The minimum sequence of transaction to be retrieved.",
             "rules": ["nullable", "integer"]
+        },
+        "sequence.to": {
+            "type": "query",
+            "description": "The maximum sequence of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp": {
+            "type": "query",
+            "description": "The timestamp of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp.from": {
+            "type": "query",
+            "description": "The minimum timestamp of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp.to": {
+            "type": "query",
+            "description": "The maximum timestamp of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "nonce": {
+            "type": "query",
+            "description": "The nonce of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "nonce.from": {
+            "type": "query",
+            "description": "The minimum nonce of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "nonce.to": {
+            "type": "query",
+            "description": "The maximum nonce of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "type": {
+            "type": "query",
+            "description": "The type of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "typeGroup": {
+            "type": "query",
+            "description": "The typeGroup of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "vendorField": {
+            "type": "query",
+            "description": "The vendorField of transaction to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "amount": {
+            "type": "query",
+            "description": "The amount of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "amount.from": {
+            "type": "query",
+            "description": "The minimum amount of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "amount.to": {
+            "type": "query",
+            "description": "The maximum amount of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "fee": {
+            "type": "query",
+            "description": "The fee of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "fee.from": {
+            "type": "query",
+            "description": "The minimum fee of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "fee.to": {
+            "type": "query",
+            "description": "The maximum fee of transaction to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "asset": {
+            "type": "query",
+            "description": "The asset of transaction to be retrieved.",
+            "rules": ["nullable", "object"]
         }
     }
 }

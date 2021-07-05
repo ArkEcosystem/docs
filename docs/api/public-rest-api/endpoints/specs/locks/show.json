@@ -1,0 +1,13 @@
+{
+    "title": "Retrieve a HTLC transaction",
+    "description": "Specific HTLC transactions can be obtained by its `lockId`.",
+    "method": "GET",
+    "path": "locks/{id}",
+    "parameters": {
+        "id": {
+            "type": "path",
+            "description": "The lockId of the HTLC to be retrieved.",
+            "rules": ["required", "string"]
+        }
+    }
+}

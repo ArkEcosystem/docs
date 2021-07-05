@@ -17,6 +17,7 @@
         ['path' => '/docs/api/public-rest-api/endpoints/peers', 'name' => 'Peers'],
         ['path' => '/docs/api/public-rest-api/endpoints/transactions', 'name' => 'Transactions'],
         ['path' => '/docs/api/public-rest-api/endpoints/votes', 'name' => 'Votes'],
+        ['path' => '/docs/api/public-rest-api/endpoints/locks', 'name' => 'Locks'],
         ['path' => '/docs/api/public-rest-api/endpoints/wallets', 'name' => 'Wallets'],
     ]"
 />

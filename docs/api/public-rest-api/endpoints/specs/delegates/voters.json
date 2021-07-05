@@ -2,21 +2,21 @@
     "title": "List All Voters of a Delegate",
     "description": "Obtaining the voters of a Delegate is trivial as well. This endpoint returns **active** voters. To acquire historical voters, it is better to query the database directly.",
     "method": "GET",
-    "path": "delegates/{username|address|publicKey}/voters",
+    "path": "delegates/{delegateUsername|delegateAddress|delegatePublicKey}/voters",
     "parameters": {
-        "address": {
+        "delegateAddress": {
             "type": "path",
             "description": "The address of the delegate to be retrieved.",
             "example": 1,
             "rules": ["nullable", "string"]
         },
-        "publicKey": {
+        "delegatePublicKey": {
             "type": "path",
             "description": "The public key of the delegate to be retrieved.",
             "example": 1,
             "rules": ["nullable", "string"]
         },
-        "username": {
+        "delegateUsername": {
             "type": "path",
             "description": "The username of the delegate to be retrieved.",
             "example": 1,
@@ -31,7 +31,62 @@
         "limit": {
             "type": "query",
             "description": "The number of resources per page.",
-            "example": 100,
+            "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column and order by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        },
+        "address": {
+            "type": "path",
+            "description": "The address of the voter to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "publicKey": {
+            "type": "path",
+            "description": "The public key of the voter to be retrieved.",
+            "rules": ["nullable", "string"]
+        },
+        "balance": {
+            "type": "path",
+            "description": "The balance of the voter to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "balance.from": {
+            "type": "path",
+            "description": "The minimum balance of the voter to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "balance.to": {
+            "type": "path",
+            "description": "The maximum balance of the voter to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "nonce": {
+            "type": "path",
+            "description": "The nonce of the voter to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "nonce.from": {
+            "type": "path",
+            "description": "The minimum nonce of the voter to be retrieved.",
+            "example": 1,
+            "rules": ["nullable", "integer"]
+        },
+        "nonce.to": {
+            "type": "path",
+            "description": "The maximum nonce of the voter to be retrieved.",
+            "example": 1,
             "rules": ["nullable", "integer"]
         }
     }

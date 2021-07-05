@@ -20,6 +20,6 @@ A Wallet resource is reachable using an associated Address or PublicKey.
 
 <livewire:endpoint spec="api/public-rest-api/endpoints/specs/wallets/transactions/received.json" />
 
-<livewire:endpoint spec="api/public-rest-api/endpoints/specs/wallets/search.json" />
-
 <livewire:endpoint spec="api/public-rest-api/endpoints/specs/wallets/votes.json" />
+
+<livewire:endpoint spec="api/public-rest-api/endpoints/specs/wallets/locks.json" />

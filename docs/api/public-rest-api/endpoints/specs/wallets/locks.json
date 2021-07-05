@@ -1,9 +1,14 @@
 {
-    "title": "List All Votes",
-    "description": "All voting transactions may be obtained through this API. This is the equivalent of `transactions/search` with the body parameter `type: 3`.",
+    "title": "List All Lock Transactions of a Wallet",
+    "description": "All lock transactions belonging to a wallet can be obtained using this API. Equivalent to `/locks` with parameter `senderPublicKey`.",
     "method": "GET",
-    "path": "votes",
+    "path": "wallets/{walletId}/locks",
     "parameters": {
+        "walletId": {
+            "type": "path",
+            "description": "The identifier of the wallet to be retrieved.",
+            "rules": ["required", "string"]
+        },
         "page": {
             "type": "query",
             "description": "The number of the page that will be returned.",
@@ -20,11 +25,6 @@
             "type": "query",
             "description": "The number of resources to be skipped.",
             "rules": ["nullable", "integer"]
-        },
-        "transform": {
-            "type": "query",
-            "description": "The structure of response to be retrieved.",
-            "rules": ["nullable", "boolean"]
         },
         "orderBy": {
             "type": "query",

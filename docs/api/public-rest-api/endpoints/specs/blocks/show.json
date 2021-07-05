@@ -13,6 +13,11 @@
             "type": "path",
             "description": "The height of the block to be retrieved.",
             "rules": ["nullable", "integer"]
+        },
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
         }
     }
 }

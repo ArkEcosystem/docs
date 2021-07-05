@@ -1,6 +1,6 @@
 {
     "title": "List All Votes of a Wallet",
-    "description": "Returns all votes made by the wallet. Often users create a new wallet instead of recasting their vote, as the former was historically cheaper.",
+    "description": "Returns all votes made by the wallet. Often users create a new wallet instead of recasting their vote, as the former was historically cheaper. Equivalent to `/transactions` with parameter `senderId` and vote `type` set.",
     "method": "GET",
     "path": "wallets/{id}/votes",
     "parameters": {
@@ -20,6 +20,21 @@
             "description": "The number of resources per page.",
             "example": 100,
             "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
         }
     }
 }

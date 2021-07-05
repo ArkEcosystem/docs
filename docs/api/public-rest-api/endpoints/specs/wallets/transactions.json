@@ -1,10 +1,10 @@
 {
     "title": "List All Transactions of a Wallet",
-    "description": "All transactions belonging to a wallet can be obtained using this API. Equivalent to `transactions/search` with parameters `senderId` and `recipientId`.",
+    "description": "All transactions belonging to a wallet can be obtained using this API. Equivalent to `/transactions` with parameter `address`.",
     "method": "GET",
-    "path": "wallets/{id}/transactions",
+    "path": "wallets/{walletId}/transactions",
     "parameters": {
-        "id": {
+        "walletId": {
             "type": "path",
             "description": "The identifier of the wallet to be retrieved.",
             "rules": ["required", "string"]
@@ -20,6 +20,21 @@
             "description": "The number of resources per page.",
             "example": 100,
             "rules": ["nullable", "integer"]
+        },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
         }
     }
 }

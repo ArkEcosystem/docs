@@ -1,9 +1,14 @@
 {
-    "title": "List All Votes",
-    "description": "All voting transactions may be obtained through this API. This is the equivalent of `transactions/search` with the body parameter `type: 3`.",
-    "method": "GET",
-    "path": "votes",
+    "title": "List Open HTLC Lock transactions",
+    "description": "The paginated API is used to query for multiple HTLC Lock transactions. You can apply 'filters' through the query parameter to search for specific transactions.",
+    "method": "POST",
+    "path": "locks/unlocked",
     "parameters": {
+        "ids": {
+            "type": "body",
+            "description": "The ids of locks that will be returned.",
+            "rules": ["nullable", "array"]
+        },
         "page": {
             "type": "query",
             "description": "The number of the page that will be returned.",
@@ -20,11 +25,6 @@
             "type": "query",
             "description": "The number of resources to be skipped.",
             "rules": ["nullable", "integer"]
-        },
-        "transform": {
-            "type": "query",
-            "description": "The structure of response to be retrieved.",
-            "rules": ["nullable", "boolean"]
         },
         "orderBy": {
             "type": "query",

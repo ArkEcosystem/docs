@@ -16,6 +16,21 @@
             "example": 100,
             "rules": ["nullable", "integer"]
         },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "transform": {
+            "type": "query",
+            "description": "The structure of response to be retrieved.",
+            "rules": ["nullable", "boolean"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column and order by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        },
         "id": {
             "type": "query",
             "description": "The identifier of the block to be retrieved.",
@@ -24,6 +39,31 @@
         "height": {
             "type": "query",
             "description": "The height of the block to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "height.from": {
+            "type": "query",
+            "description": "The height from which blocks will be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "height.to": {
+            "type": "query",
+            "description": "The height to which blocks will be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp": {
+            "type": "query",
+            "description": "The timestamp of the block to be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp.from": {
+            "type": "query",
+            "description": "The timestamp from which blocks will be retrieved.",
+            "rules": ["nullable", "integer"]
+        },
+        "timestamp.to": {
+            "type": "query",
+            "description": "The timestamp to which blocks will be retrieved.",
             "rules": ["nullable", "integer"]
         }
     }
