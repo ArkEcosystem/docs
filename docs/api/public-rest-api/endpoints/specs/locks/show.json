@@ -1,6 +1,6 @@
 {
     "title": "Retrieve a HTLC transaction",
-    "description": "Specific HTLC transactions can be obtained either by their `lockId`.",
+    "description": "Specific HTLC transactions can be obtained by its `lockId`.",
     "method": "GET",
     "path": "locks/{id}",
     "parameters": {

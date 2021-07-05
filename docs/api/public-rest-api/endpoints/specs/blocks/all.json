@@ -43,12 +43,12 @@
         },
         "height.from": {
             "type": "query",
-            "description": "The height from by which blocks will be retrieved.",
+            "description": "The height from which blocks will be retrieved.",
             "rules": ["nullable", "integer"]
         },
         "height.to": {
             "type": "query",
-            "description": "The height to by which blocks will be retrieved.",
+            "description": "The height to which blocks will be retrieved.",
             "rules": ["nullable", "integer"]
         },
         "timestamp": {
@@ -58,12 +58,12 @@
         },
         "timestamp.from": {
             "type": "query",
-            "description": "The timestamp from by which blocks will be retrieved.",
+            "description": "The timestamp from which blocks will be retrieved.",
             "rules": ["nullable", "integer"]
         },
         "timestamp.to": {
             "type": "query",
-            "description": "The timestamp to by which blocks will be retrieved.",
+            "description": "The timestamp to which blocks will be retrieved.",
             "rules": ["nullable", "integer"]
         }
     }
