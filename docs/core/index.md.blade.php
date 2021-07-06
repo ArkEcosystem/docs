@@ -26,7 +26,6 @@ title: Introduction
         ['path' => '/docs/core/getting-started/development-setup/docker-windows', 'name' => 'Docker on Windows'],
         ['path' => '/docs/core/getting-started/development-setup/spinning-up-first-testnet', 'name' => 'Spinning up your 1st Testnet'],
         ['path' => '/docs/core/getting-started/development-setup/node-running-modes', 'name' => 'Node Running Modes'],
-        ['path' => '/docs/core/getting-started/development-setup/using-the-core-tester-cli', 'name' => 'Using the Core Tester CLI'],
         ['path' => '/docs/core/getting-started/development-setup/local-block-explorer-setup', 'name' => 'Local Block Explorer Setup'],
     ]"
 />
