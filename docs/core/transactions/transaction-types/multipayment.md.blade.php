@@ -10,7 +10,7 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 | :--- | :--- |
 | ARK Improvement Proposals | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md) |
 | API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions) |
-| AJV Schema | [Base](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/transactions/types/schemas.ts#L16) \| [MultiPayment Transaction](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/transactions/types/schemas.ts#L208) |
+| AJV Schema | [Base](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L17-L45) \| [MultiPayment Transaction](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/transactions/types/schemas.ts#L208) |
 
 ## Transaction Structure
 

@@ -18,7 +18,7 @@ The purpose of this transaction is to lock funds of the sender and made them pos
 | :--- | :--- |
 | ARK Improvement Proposals | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md) |
 | API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions) |
-| AJV Schema | [Base](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/transactions/types/schemas.ts#L16) \| [HTLC Schemas](https://github.com/ArkEcosystem/core/blob/develop/packages/crypto/src/transactions/types/schemas.ts#L243-L318) |
+| AJV Schema | [Base](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L17-L45) \| [HTLC Schemas](https://github.com/ArkEcosystem/core/blob/develop/packages/crypto/src/transactions/types/schemas.ts#L243-L318) |
 
 ### Transaction Structure
 
