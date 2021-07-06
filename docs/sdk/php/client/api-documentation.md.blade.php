@@ -508,7 +508,7 @@ Get all transactions for the given wallet.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Wallet identifier |
-| array | query | No | Quey parameters |
+| array | query | No | Query parameters |
 
 #### Return Value
 
@@ -527,7 +527,7 @@ Get all transactions received by the given wallet.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Wallet identifier |
-| array | query | No | Quey parameters |
+| array | query | No | Query parameters |
 
 #### Return Value
 
@@ -546,7 +546,7 @@ Get all transactions sent by the given wallet.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Wallet identifier |
-| array | query | No | Quey parameters |
+| array | query | No | Query parameters |
 
 #### Return Value
 
@@ -565,7 +565,7 @@ Get all votes by the given wallet.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Wallet identifier |
-| array | query | No | Quey parameters |
+| array | query | No | Query parameters |
 
 #### Return Value
 

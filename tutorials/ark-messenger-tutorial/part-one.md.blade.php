@@ -21,7 +21,7 @@ If you would like to review the code for both components, they are listed below 
 
 The ARK Messenger application works with channels. A channel can consist of any number of participants. When a user creates a new channel, a new channel ID and password is generated. The password can then be shared with other users so that they can join the channel and send messages.
 
-Messages sent to the channel are encrypted and decrypted using the channel’s password as the seed. All sensitive data is handled by the user’s local client and no unencrypted data is ever broadcasted. ARK Messenger runs on its own bridgechain with a customized network and node configuration. It also makes use of a custom transaction built with the _Generic Transaction Interface \(GTI\)_ to handle the processing of the chat messages.
+Messages sent to the channel are encrypted and decrypted using the channel’s password as the seed. All sensitive data is handled by the user’s local client and no unencrypted data is ever broadcast. ARK Messenger runs on its own bridgechain with a customized network and node configuration. It also makes use of a custom transaction built with the _Generic Transaction Interface \(GTI\)_ to handle the processing of the chat messages.
 
 > _**Try out ARK Messenger at**_ [_**https://ARKmessenger.io**_](https://arkmessenger.io/)
 

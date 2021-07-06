@@ -92,7 +92,7 @@ transactions.broadcast
 | id | string | The identifier of the request. | Yes |
 | method | string | The method name. | Yes |
 | params | object | The parameters of the request. | Yes |
-| params.transactions | array | The list of transactions to be broadcasted. | Yes |
+| params.transactions | array | The list of transactions to be broadcast. | Yes |
 
 ### Response
 

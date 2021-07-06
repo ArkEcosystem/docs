@@ -192,7 +192,7 @@ This variable determines if the transaction pool should be disabled.
 
 ## CORE_TRANSACTION_POOL_MAX_PER_REQUEST
 
-This variable determines how many transactions can be broadcasted in a single request.
+This variable determines how many transactions can be broadcast in a single request.
 
 ## CORE_TRANSACTION_POOL_MAX_PER_SENDER
 

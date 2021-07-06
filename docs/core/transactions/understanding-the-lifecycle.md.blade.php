@@ -94,7 +94,7 @@ The `Block.create` method uses the following algorithm to create a new block:
 4. Sign the SHA256 hash with the delegate's private key.
 5. Create a block ID using the hashed block data.
 6. Cast the data into a Block model using the new transaction and block ID.
-7. Return the casted Block object.
+7. Return the cast Block object.
 
 Here, the cryptographic functions used by ARK to generate hashes are identical to those used by Bitcoin. These functions are battle-tested by years of use and analysis in Bitcoin. Resources to learn more about the block creation process can be found in [Bitcoin educational materials](https://github.com/bitcoinbook/bitcoinbook) as well as relevant ARK documentation on serialization.
 

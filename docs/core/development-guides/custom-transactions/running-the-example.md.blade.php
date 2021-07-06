@@ -96,4 +96,4 @@ You should receive a response similar to this:
 }
 ```
 
-This means that transactions was accepted into the pool and broadcasted to the rest of the network. If you want to create more transaction payloads, just [use the BusinessTransactionBuilder to create and sign the payload data](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/__tests__/unit/test.test.ts).
+This means that transactions was accepted into the pool and broadcast to the rest of the network. If you want to create more transaction payloads, just [use the BusinessTransactionBuilder to create and sign the payload data](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/__tests__/unit/test.test.ts).

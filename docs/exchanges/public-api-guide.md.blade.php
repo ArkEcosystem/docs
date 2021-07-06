@@ -304,11 +304,11 @@ If your request is successful, you will receive a response with the following `d
 Let us look at the returned `data` object in more depth. It is composed of four arrays, each holding zero or more transaction IDs:
 
 1. `accept` - a list of all accepted transactions
-2. `broadcast` - a list of all transactions broadcasted to the network
+2. `broadcast` - a list of all transactions broadcast to the network
 3. `excess` - if the node's transaction pool is full, this lists all excess transactions
 4. `invalid` - a list of all transactions deemed invalid by the node
 
-Our sample code above submitted one transaction, which the node accepted and broadcasted and thus the `accept` and `broadcast` arrays contain precisely one item each: the ID of the transaction we submitted.
+Our sample code above submitted one transaction, which the node accepted and broadcast and thus the `accept` and `broadcast` arrays contain precisely one item each: the ID of the transaction we submitted.
 
 If we had submitted any invalid transactions, the `invalid` list would have contained their IDs, and the `errors` key would have been populated with one error per invalid transaction.
 
