@@ -91,7 +91,7 @@ WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepen
 
 ![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
 
-It's essentially a more useable/human-readable [PrivateKey](#privatekey) and should be treated with the same diligence with regards to storage and security.
+It's essentially a more usable/human-readable [PrivateKey](#privatekey) and should be treated with the same diligence with regards to storage and security.
 
 ## PublicKey
 

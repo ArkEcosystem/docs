@@ -230,7 +230,7 @@ await wallet.delegate("genesis_1");
 await wallet.delegates({ ... });
 ```
 
-### List all votes that a wallet casted
+### List all votes that a wallet cast
 
 ```typescript
 await wallet.votes("034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");
