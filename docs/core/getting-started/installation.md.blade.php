@@ -197,6 +197,13 @@ ark config:cli --channel=next
 rm -rf ~/.config/ark-core/ && ark config:publish --network=devnet --reset
 ```
 
+After running command above you might need to update database setting in .env file if custom data were entered during installation process.
+You can use following command to achieve that:
+
+```bash
+ark config:database
+```
+
 ### Success
 
 That’s it, your installation is all set! 🎉
