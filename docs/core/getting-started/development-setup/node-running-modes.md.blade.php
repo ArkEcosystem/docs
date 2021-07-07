@@ -127,7 +127,7 @@ private async bootstrapWith(type: string): Promise<void> {
 }
 ```
 
-5. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key. You can find the enabled plugins in the `plugins.json` file located in the `core` package at `bin/config/testnet`.
+5. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key. You can find the enabled plugins in the `app.json` file located in the `core` package at `bin/config/testnet`.
 
 This last step is where the meat-and-potatoes of ARK Core is loaded. During this step, the Postgres database is set up, all ARK-specific tables and fields are migrated, the genesis block is created, 51 forging delegates are created and set up to forge blocks — all the blockchain goodness you would expect from of a fully-formed testnet.
 
