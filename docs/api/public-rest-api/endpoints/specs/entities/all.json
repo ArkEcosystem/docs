@@ -22,6 +22,16 @@
                 "integer"
             ]
         },
+        "offset": {
+            "type": "query",
+            "description": "The number of resources to be skipped.",
+            "rules": ["nullable", "integer"]
+        },
+        "orderBy": {
+            "type": "query",
+            "description": "The column by which the resources will be sorted.",
+            "rules": ["nullable", "string"]
+        },
         "id": {
             "type": "query",
             "description": "The entity id to be retrieved.",
