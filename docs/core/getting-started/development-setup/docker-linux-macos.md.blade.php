@@ -91,10 +91,28 @@ cd docker/development/$NETWORK      # (NETWORK = testnet || devnet)
 docker-compose up -d
 ```
 
+_Check if yarn setup is complete:_
+
+```bash
+docker logs ark-$NETWORK-core -f
+```
+
 _You can now enter your ark-core container and use NodeJS in a Docker container \(Linux environment\)._
 
 ```bash
 docker exec -it ark-$NETWORK-core bash
+```
+
+_Start core using following commands:_
+
+```bash
+cd packages/core
+
+yarn full:testnet
+
+// or
+
+yarn relay:devnet
 ```
 
 _Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge\_all.sh** script._

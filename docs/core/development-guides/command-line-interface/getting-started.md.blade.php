@@ -96,6 +96,7 @@ ark config:forger
 | --bip39 | the plain text bip39 passphrase | :x: |
 | --password | the password for the encrypted bip38 | :x: |
 | --method | the configuration method to use \(bip38 or bip39\) | :x: |
+| --skipValidation | skip bip39 mnemonic validation | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -129,8 +130,10 @@ ark config:forger:bip38
 | :--- | :--- | :---: |
 | --bip39 | the plain text bip39 passphrase | :white\_check\_mark: |
 | --password | the password for the encrypted bip38 | :white\_check\_mark: |
+| --skipValidation | skip bip39 mnemonic validation | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
+
 
 #### Examples
 
@@ -153,6 +156,7 @@ ark config:forger:bip39
 | Name | Description | Required |
 | :--- | :--- | :---: |
 | --bip39 | the plain text bip39 passphrase | :white\_check\_mark: |
+| --skipValidation | skip bip39 mnemonic validation | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 

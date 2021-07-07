@@ -20,6 +20,8 @@ ARKMessenger
 Arkoar
 ARKWallet
 asciiMessage
+AssetSubType
+AssetType
 authtoken
 autocomplete
 autocrlf
@@ -249,6 +251,7 @@ innerHTML
 instVars
 Interchain
 ipaddress
+ipfsData
 IPostTransactionResponse
 isLive
 isNaN
@@ -430,6 +433,7 @@ signSecondSignature
 signTransaction
 signTransfer
 signVote
+skipValidation
 SmartBridge
 softwareengineering
 Solana
