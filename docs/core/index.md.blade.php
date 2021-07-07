@@ -80,6 +80,7 @@ title: Introduction
         ['path' => '/docs/core/transactions/transaction-types/multipayment', 'name' => 'Multipayment'],
         ['path' => '/docs/core/transactions/transaction-types/delegate-resignation', 'name' => 'Delegate Resignation'],
         ['path' => '/docs/core/transactions/transaction-types/htlc', 'name' => 'HTLC'],
+        ['path' => '/docs/core/transactions/transaction-types/entity', 'name' => 'Entity'],
     ]"
 />
 
