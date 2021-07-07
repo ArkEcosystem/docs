@@ -20,16 +20,11 @@ The webhooks API comes by default with an installation of core. In case you don'
 
 ## Configuration
 
-The webhooks API requires the following configuration in your `plugins.js` file. Make sure to have this configuration listed after `@arkecosystem/core-blockchain`.
+The webhooks API requires the following configuration in your `app.json` file. Make sure to have this configuration listed after `@arkecosystem/core-blockchain`.
 
 ```javascript
-'@arkecosystem/core-webhooks': {
-  enabled: process.env.CORE_WEBHOOKS_ENABLED,
-  server: {
-    host: process.env.CORE_WEBHOOKS_HOST || '0.0.0.0',
-    port: process.env.CORE_WEBHOOKS_PORT || 4004,
-    whitelist: ['127.0.0.1', '::ffff:127.0.0.1', '192.168.*']
-  }
+{
+    "package": "@arkecosystem/core-webhooks"
 },
 ```
 
@@ -41,7 +36,16 @@ It is recommended to make configuration changes to these options by working with
 | CORE\_WEBHOOKS\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
 | CORE\_WEBHOOKS\_PORT | The API port on which the plugin will listen | integer | `4004` |
 
-The `whitelist` property can be changed directly in the `plugins.js` file and is an `Array` consisting of IP addresses that you allow to make connections to the webhook API. By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list \(recommended approach\). It is also possible to use wildcards to indicate a range of IPs \(e.g. `"12.34.56.*"`\) or even to allow everyone \(e.g. `"*"`\) \(not recommended\).
+The `whitelist` property can be changed directly in the `app.json` file and is an `Array` consisting of IP addresses that you allow to make connections to the webhook API. By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list \(recommended approach\). It is also possible to use wildcards to indicate a range of IPs \(e.g. `"12.34.56.*"`\) or even to allow everyone \(e.g. `"*"`\) \(not recommended\).
+
+```javascript
+{
+    "package": "@arkecosystem/core-webhooks",
+    "options": {
+        "whitelist": ["127.0.0.1", "::ffff:127.0.0.1"]
+    }
+},
+```
 
 **Remember that there is no further authentication on the webhooks API itself, meaning that everyone that can access it can add, edit and delete your webhooks.**
 
