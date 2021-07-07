@@ -338,6 +338,8 @@ parallelizes
 params
 passwd
 patriksimek
+Payvo
+PayvoHQ
 PBKDF
 perf
 permissioned
