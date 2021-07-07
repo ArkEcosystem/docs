@@ -8,7 +8,7 @@ This is the foundation of the Platform SDK. This package contains all of the con
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk" />
 
 ## Installation
 

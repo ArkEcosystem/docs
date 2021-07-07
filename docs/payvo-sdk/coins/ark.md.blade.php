@@ -8,7 +8,7 @@ This is a ARK Driver for the Platform SDK. The implementation makes use of [ARK]
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-ark" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-ark" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-ark
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/ark.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/ark.json" />
 
 ## Security
 

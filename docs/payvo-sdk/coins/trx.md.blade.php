@@ -8,7 +8,7 @@ This is a Tron Driver for the Platform SDK. The implementation makes use of [Tro
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-trx" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-trx" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-tron
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/trx.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/trx.json" />
 
 ## Security
 

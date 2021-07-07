@@ -8,7 +8,7 @@ This is a Zilliqa Driver for the Platform SDK. The implementation makes use of [
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-zil" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-zil" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-zil
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/zil.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/zil.json" />
 
 ## Security
 

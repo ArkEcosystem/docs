@@ -8,7 +8,7 @@ This is a Stellar Driver for the Platform SDK. The implementation makes use of [
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-xlm" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-xlm" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-xlm
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/xlm.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/xlm.json" />
 
 ## Security
 

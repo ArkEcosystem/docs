@@ -8,7 +8,7 @@ This is an HTTP Client for the Platform SDK. The implementation makes use of [go
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-http-got" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-http-got" />
 
 ## Installation
 

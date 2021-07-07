@@ -8,7 +8,7 @@ This is a Terra Driver for the Platform SDK. The implementation makes use of [Te
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-luna" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-luna" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-luna
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/luna.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/luna.json" />
 
 ## Security
 

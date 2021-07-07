@@ -8,7 +8,7 @@ This is an Polkadot Driver for the Platform SDK. The implementation makes use of
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-dot" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-dot" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-dot
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/dot.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/dot.json" />
 
 ## Security
 

@@ -8,7 +8,7 @@ This is an Avalanche Driver for the Platform SDK. The implementation makes use o
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-avax" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-avax" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-avax
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/avax.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/avax.json" />
 
 ## Security
 

@@ -8,7 +8,7 @@ This is a Blockfolio Integration for the Platform SDK. The implementation adhere
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-news" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-news" />
 
 ## Installation
 

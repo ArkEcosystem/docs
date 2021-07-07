@@ -4,7 +4,7 @@ title: Cryptoasset Integrations
 
 # Cryptoasset Integrations
 
-The [ARK Desktop Wallet](https://ark.io/wallet) uses the [ARK Platform-SDK](/docs/payvo-sdk) to allow the integration of multiple assets within the wallet. This document will outline the current list of supported assets as well as planned additions to our wallet.
+The [ARK Desktop Wallet](https://ark.io/wallet) uses the [Payvo SDK](/docs/payvo-sdk) to allow the integration of multiple assets within the wallet. This document will outline the current list of supported assets as well as planned additions to our wallet.
 
 ## Supported Cryptoassets
 
@@ -15,7 +15,7 @@ The ARK Desktop Wallet currently supports the following cryptoassets:
 
 ## Planned Integrations
 
-The following cryptoassets are already in the initial stages of integration within the [ARK Platform-SDK](/docs/payvo-sdk) and will be added to the [ARK Desktop Wallet](https://ark.io/wallet) upon completion.
+The following cryptoassets are already in the initial stages of integration within the [Payvo SDK](/docs/payvo-sdk) and will be added to the [ARK Desktop Wallet](https://ark.io/wallet) upon completion.
 
 _*(Assets are listed in alphabetical order)*_
 
@@ -50,4 +50,4 @@ The ARK.io Team does not charge a listing fee and will not ask for Coins, Tokens
 
 ## Contact Us
 
-For more information or to inquire about contributing to the [ARK Platform-SDK](/docs/payvo-sdk), please feel free to [Contact Us](https://ark.dev/contact).
+For more information or to inquire about contributing to the [Payvo SDK](/docs/payvo-sdk), please feel free to [Contact Us](https://ark.dev/contact).

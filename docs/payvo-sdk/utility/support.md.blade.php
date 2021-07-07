@@ -8,7 +8,7 @@ This is a Collection of Helpers for the Platform SDK. The implementation adheres
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-support" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-support" />
 
 ## Installation
 

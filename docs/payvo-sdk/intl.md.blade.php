@@ -8,7 +8,7 @@ This is an Internationalization package for the Platform SDK. The implementation
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-intl" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-intl" />
 
 ## Installation
 

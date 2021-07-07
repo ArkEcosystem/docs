@@ -10,9 +10,9 @@ Each coin follows a strict implementation contract. All of these contracts can b
 
 <x-link-collection
     :links="[
-        ['path' => 'https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk/src/contracts/coins', 'name' => 'Coins'],
-        ['path' => 'https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk/src/contracts/price-trackers', 'name' => 'Markets'],
-        ['path' => 'https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk/src/dto', 'name' => 'DTO'],
+        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/sdk/src/contracts/coins', 'name' => 'Coins'],
+        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/sdk/src/contracts/price-trackers', 'name' => 'Markets'],
+        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/sdk/src/dto', 'name' => 'DTO'],
     ]"
 />
 
@@ -22,7 +22,7 @@ Each coin follows a strict implementation contract which can be incomplete for c
 
 ### Example
 
-Let's take the `platform-sdk-ark` network manifest as an example. It contains some information like the name and ticker, but the important part is the `featureFlags` object. This object contains all supported services and methods.
+Let's take the `sdk-ark` network manifest as an example. It contains some information like the name and ticker, but the important part is the `featureFlags` object. This object contains all supported services and methods.
 
 ```typescript
 import { Networks } from "@payvo/sdk";
@@ -74,7 +74,7 @@ const network: Networks.NetworkManifest = {
 export default network;
 ```
 
-> [platform-sdk-ark/src/networks/ark/mainnet.ts](https://github.com/ArkEcosystem/platform-sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/platform-sdk-ark/src/networks/ark/mainnet.ts) | [Platform SDK v9.0.4](https://github.com/ArkEcosystem/platform-sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
+> [sdk-ark/src/networks/ark/mainnet.ts](https://github.com/PayvoHQ/sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/sdk-ark/src/networks/ark/mainnet.ts) | [Platform SDK v9.0.4](https://github.com/PayvoHQ/sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
 
 ---
 
@@ -188,7 +188,7 @@ export const explorer: Networks.NetworkManifestExplorer = {
 };
 ```
 
-> [platform-sdk-ark/src/networks/shared.ts](https://github.com/ArkEcosystem/platform-sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/platform-sdk-ark/src/networks/shared.ts) | [Platform SDK v9.0.4](https://github.com/ArkEcosystem/platform-sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
+> [sdk-ark/src/networks/shared.ts](https://github.com/PayvoHQ/sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/sdk-ark/src/networks/shared.ts) | [Platform SDK v9.0.4](https://github.com/PayvoHQ/sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
 
 ---
 
@@ -301,4 +301,4 @@ export enum FeatureFlag {
 }
 ```
 
-> [platform-sdk-ark/src/enums.ts](https://github.com/ArkEcosystem/platform-sdk/blob/6eeb6d9cac724fc73e059680b50f41215974e045/packages/platform-sdk/src/enums.ts) | [Platform SDK v9.0.4](https://github.com/ArkEcosystem/platform-sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
+> [sdk-ark/src/enums.ts](https://github.com/PayvoHQ/sdk/blob/6eeb6d9cac724fc73e059680b50f41215974e045/packages/sdk/src/enums.ts) | [Platform SDK v9.0.4](https://github.com/PayvoHQ/sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)

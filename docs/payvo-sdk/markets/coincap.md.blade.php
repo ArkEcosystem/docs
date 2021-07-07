@@ -8,7 +8,7 @@ This is a CoinCap Client for the Platform SDK. The implementation makes use of [
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-coincap" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-coincap" />
 
 ## Installation
 

@@ -8,7 +8,7 @@ This is an Elrond Driver for the Platform SDK. The implementation makes use of [
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-egld" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-egld" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-egld
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/egld.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/egld.json" />
 
 ## Security
 

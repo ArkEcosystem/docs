@@ -14,7 +14,7 @@ We recommend to use [Jest](https://jestjs.io/) for testing but any other framewo
 
 ## Example
 
-We will use the [Portfolio](https://github.com/ArkEcosystem/platform-sdk/blob/master/packages/platform-sdk-profiles/src/drivers/memory/profiles/portfolio.test.ts) class as an example as it exposes a few underlying components of the Platform SDK.
+We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk-profiles/src/drivers/memory/profiles/portfolio.test.ts) class as an example as it exposes a few underlying components of the Platform SDK.
 
 ### Mocking Network Requests
 

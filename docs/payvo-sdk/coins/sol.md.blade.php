@@ -8,7 +8,7 @@ This is a Solana Driver for the Platform SDK. The implementation makes use of [S
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-sol" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-sol" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-sol
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/sol.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/sol.json" />
 
 ## Security
 

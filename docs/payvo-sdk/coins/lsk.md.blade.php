@@ -8,7 +8,7 @@ This is a Lisk Driver for the Platform SDK. The implementation makes use of [Lis
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-lsk" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-lsk" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-lsk
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/lsk.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/lsk.json" />
 
 ## Security
 

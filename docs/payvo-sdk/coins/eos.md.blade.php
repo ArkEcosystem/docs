@@ -8,7 +8,7 @@ This is a EOS Driver for the Platform SDK. The implementation makes use of [EOS]
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/platform-sdk/tree/master/packages/platform-sdk-eos" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-eos" />
 
 ## Installation
 
@@ -18,7 +18,7 @@ yarn add @payvo/sdk-eos
 
 ## Specification
 
-<livewire:coin-spec spec="platform-sdk/coins/specs/eos.json" />
+<livewire:coin-spec spec="payvo-sdk/coins/specs/eos.json" />
 
 ## Security
 
