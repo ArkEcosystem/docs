@@ -39,7 +39,7 @@ The most basic plugin consist of 3 files which are responsible for getting your 
 
 This file contains all of the configuration defaults for your plugin. If you are planning to expose environment variables to configure your plugin we recommend that you use a unique prefix like `VENDOR_` for your plugins to avoid collisions with other plugins. For example if your plugin is is `@vendor/something` then you should prefix your environment variables with `VENDOR_SOMETHING_` to ensure they are unique.
 
-```jsx
+```typescript
 export const defaults = {
     server: {
         http: {
@@ -64,7 +64,7 @@ export const defaults = {
 
 This file contains the service provider which is the heart of your plugin. It is responsible for preparing, starting and stopping your plugin.
 
-```jsx
+```typescript
 import { Providers } from "@arkecosystem/core-kernel";
 
 import Handlers from "./handlers";
