@@ -4,7 +4,7 @@ title: AVAX
 
 # Avalanche
 
-This is an Avalanche Driver for the Platform SDK. The implementation makes use of [Ava Labs](https://www.avalabs.org/) and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/platform-sdk/sdk) package.**
+This is an Avalanche Driver for the Platform SDK. The implementation makes use of [Ava Labs](https://www.avalabs.org/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
 
 ## Repository
 

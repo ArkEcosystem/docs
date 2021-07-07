@@ -20,13 +20,13 @@ yarn add @payvo/sdk
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/platform-sdk/sdk/coins', 'name' => 'Coins'],
-        ['path' => '/docs/platform-sdk/sdk/contracts', 'name' => 'Contracts'],
-        ['path' => '/docs/platform-sdk/sdk/data', 'name' => 'Data'],
-        ['path' => '/docs/platform-sdk/sdk/dto', 'name' => 'DTO'],
-        ['path' => '/docs/platform-sdk/sdk/exceptions', 'name' => 'Exceptions'],
-        ['path' => '/docs/platform-sdk/sdk/helpers', 'name' => 'Helpers'],
-        ['path' => '/docs/platform-sdk/sdk/http', 'name' => 'HTTP'],
+        ['path' => '/docs/payvo-sdk/sdk/coins', 'name' => 'Coins'],
+        ['path' => '/docs/payvo-sdk/sdk/contracts', 'name' => 'Contracts'],
+        ['path' => '/docs/payvo-sdk/sdk/data', 'name' => 'Data'],
+        ['path' => '/docs/payvo-sdk/sdk/dto', 'name' => 'DTO'],
+        ['path' => '/docs/payvo-sdk/sdk/exceptions', 'name' => 'Exceptions'],
+        ['path' => '/docs/payvo-sdk/sdk/helpers', 'name' => 'Helpers'],
+        ['path' => '/docs/payvo-sdk/sdk/http', 'name' => 'HTTP'],
     ]"
 />
 

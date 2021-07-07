@@ -4,7 +4,7 @@ title: Support
 
 # Support
 
-This is a Collection of Helpers for the Platform SDK. The implementation adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification).
+This is a Collection of Helpers for the Platform SDK. The implementation adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
 
 ## Repository
 
