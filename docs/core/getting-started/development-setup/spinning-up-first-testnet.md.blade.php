@@ -29,16 +29,18 @@ yarn full:testnet #run the testnet blockchain on your local computer
 After executing the `yarn full:testnet` command you should see something like this in your command prompt:
 
 ```bash
-yarn run v1.17.3
+yarn run v1.22.10
 $ cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark core:run --networkStart --env=test
-$ ./bin/run core:run --networkStart --env=test
-[2019-10-02 10:53:08.534] DEBUG: ark-core 2.5.0-next.10
-[2019-10-02 10:53:08.546] DEBUG: Data Directory: /Users/ark/Library/Application Support/ark-core/testnet
-[2019-10-02 10:53:08.546] DEBUG: Config Directory: ./bin/config/testnet
-[2019-10-02 10:53:08.547] DEBUG: Cache Directory: /Users/ark/Library/Caches/ark-core/testnet
-[2019-10-02 10:53:08.547] DEBUG: Log Directory: /Users/ark/Library/Logs/ark-core/testnet
-[2019-10-02 10:53:08.548] DEBUG: Temp Directory: /var/folders/t1/44pfsqf54tg2xnl6rwn8bp7h0000gn/T/ark-core/testnet
-[2019-10-02 10:53:08.934] INFO : Starting Database Manager
+$ node ./bin/run core:run --networkStart --env=test
+The jemalloc library was not found on your system. It is recommended to install it for better memory management. Falling back to the system default...
+[2021-07-07 13:42:17.512] INFO : Connecting to database: ark_testnet
+[2021-07-07 13:42:18.109] INFO : P2P Server started at http://127.0.0.1:4000
+[2021-07-07 13:42:18.110] INFO : Starting Blockchain Manager
+[2021-07-07 13:42:18.115] INFO : Verifying database integrity
+[2021-07-07 13:42:18.149] INFO : Verified database integrity
+[2021-07-07 13:42:18.159] INFO : Last block in database: 892
+[2021-07-07 13:42:18.160] INFO : State Generation - Step 1 of 26: Block Rewards
+[2021-07-07 13:42:18.169] INFO : State Generation - Step 2 of 26: Fees & Nonces
 ...
 ```
 
