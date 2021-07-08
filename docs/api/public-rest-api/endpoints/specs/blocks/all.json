@@ -1,6 +1,6 @@
 {
     "title": "List All Blocks",
-    "description": "The Public API may be used to query for blocks. This dataset contains millions of blocks; thus for analytical purposes, we recommend you use the [Elasticsearch](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/elasticsearch/getting-started/README.md) plugin or query the database directly.",
+    "description": "The Public API may be used to query for blocks. This dataset contains millions of blocks; thus for analytical purposes, we recommend you query the database directly.",
     "method": "GET",
     "path": "blocks",
     "parameters": {
