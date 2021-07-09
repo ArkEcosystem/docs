@@ -1,5 +1,5 @@
 ---
-title: Password Reset
+title: Account Recovery
 ---
 
 # Resetting a MarketSquare Account's Password

@@ -13,7 +13,7 @@
 
 <x-general.sidebar-link path="/docs/marketsquare/accounts/signing-up" name="Signing Up" />
 <x-general.sidebar-link path="/docs/marketsquare/accounts/signing-in" name="Signing In" />
-<x-general.sidebar-link path="/docs/marketsquare/accounts/recovery" name="Account Recovery" />
+<x-general.sidebar-link path="/docs/marketsquare/accounts/password-reset" name="Account Recovery" />
 
 ## Profiles
 

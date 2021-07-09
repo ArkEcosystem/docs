@@ -32,7 +32,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     :links="[
         ['path' => '/docs/marketsquare/accounts/signing-up', 'name' => 'Signing Up'],
         ['path' => '/docs/marketsquare/accounts/signing-in', 'name' => 'Signing In'],
-        ['path' => '/docs/marketsquare/accounts/recovery', 'name' => 'Account Recovery'],
+        ['path' => '/docs/marketsquare/accounts/password-reset', 'name' => 'Account Recovery'],
     ]"
 />
 
