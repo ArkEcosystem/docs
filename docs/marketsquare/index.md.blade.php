@@ -7,7 +7,7 @@
 
 <x-general.sidebar-link path="/docs/marketsquare/overview/home-page" name="The Home Page" />
 <x-general.sidebar-link path="/docs/marketsquare/overview/marketsquare-hubs" name="MarketSquare Hubs" />
-<x-general.sidebar-link path="/docs/marketsquare/getting-started/what-can-i-do" name="What Can I Do?" />
+<x-general.sidebar-link path="/docs/marketsquare/overview/what-can-i-do" name="What Can I Do?" />
 
 ## Accounts
 
