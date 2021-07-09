@@ -20,17 +20,19 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     :links="[
         ['path' => '/docs/marketsquare/overview/home-page', 'name' => 'The MarketSquare Home Page'],
         ['path' => '/docs/marketsquare/overview/marketsquare-hubs', 'name' => 'MarketSquare Hubs'],
+        ['path' => '/docs/marketsquare/overview/what-can-i-do', 'name' => 'What Can I Do?'],
     ]"
 />
 
 ---
 
-### Getting Started
+### Accounts
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/marketsquare/getting-started/account-sign-up', 'name' => 'Account Sign Up'],
-        ['path' => '/docs/marketsquare/getting-started/what-next', 'name' => 'What Can I Do Next?'],
+        ['path' => '/docs/marketsquare/accounts/signing-up', 'name' => 'Signing Up'],
+        ['path' => '/docs/marketsquare/accounts/signing-in', 'name' => 'Signing In'],
+        ['path' => '/docs/marketsquare/accounts/recovery', 'name' => 'Account Recovery'],
     ]"
 />
 
