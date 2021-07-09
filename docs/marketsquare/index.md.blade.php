@@ -7,11 +7,13 @@
 
 <x-general.sidebar-link path="/docs/marketsquare/overview/home-page" name="The Home Page" />
 <x-general.sidebar-link path="/docs/marketsquare/overview/marketsquare-hubs" name="MarketSquare Hubs" />
+<x-general.sidebar-link path="/docs/marketsquare/getting-started/what-can-i-do" name="What Can I Do?" />
 
-## Getting Started
+## Accounts
 
-<x-general.sidebar-link path="/docs/marketsquare/getting-started/account-sign-up" name="Account Sign Up" />
-<x-general.sidebar-link path="/docs/marketsquare/getting-started/what-next" name="What Can I Do Next?" />
+<x-general.sidebar-link path="/docs/marketsquare/accounts/signing-up" name="Signing Up" />
+<x-general.sidebar-link path="/docs/marketsquare/accounts/signing-in" name="Signing In" />
+<x-general.sidebar-link path="/docs/marketsquare/accounts/recovery" name="Account Recovery" />
 
 ## Profiles
 
