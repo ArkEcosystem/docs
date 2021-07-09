@@ -1,19 +1,13 @@
 ---
-title: What's Next?
+title: What Can I Do??
 ---
 
 <!-- REMOVE THIS PAGE AFTER THE FOLLOWING IS UPDATED -->
 <!-- https://github.com/ArkEcosystem/marketsquare.io/blob/a60927326e69f296dc9e780f828d6faf35a52cc1/resources/lang/en/partials.php#L59 -->
 
-# What Can I Do Next?
+# What Can I Do?
 
----
-
-<ins>_**I created an Account\, now what?**_</ins>
-
----
-
-After [creating an Account](/docs/marketsquare/getting-started/account-sign-up) on MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/updating-profile), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
+After [Signing Up](/docs/marketsquare/accounts/signing-up) for MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/updating-profile), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
 
 ## Customize Your Profile!
 

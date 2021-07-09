@@ -2,13 +2,13 @@
 title: Account Recovery
 ---
 
-# Resetting a MarketSquare Account's Password
+# Account Recovery: Password Reset
 
 An account with a lost or forgotten password can be recovered by using your email address to reset the password.
 
 ## Getting Started
 
-To get started, click the 'Sign In' button at the top right of the MarketSquare Homepage.
+To get started, click the **'Sign In'** button at the top right of the MarketSquare Homepage.
 
 ## The MarketSquare Sign In Page
 
