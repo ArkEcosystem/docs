@@ -1,16 +1,12 @@
 ---
-title: What's Next?
+title: What Can I Do?
 ---
 
-# What Can I Do Next?
-
----
-
-<ins>_**I created an Account\, now what?**_</ins>
+# What Can I Do?
 
 ---
 
-After [creating an Account](/docs/marketsquare/getting-started/account-sign-up) on MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/updating-profile), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
+After [creating an Account](/docs/marketsquare/getting-started/accounts/signing-up) on MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/updating-profile), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
 
 ## Customize Your Profile!
 
