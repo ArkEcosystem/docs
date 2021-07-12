@@ -1,4 +1,6 @@
-## Introduction <!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD041 -->
+## Introduction
+<!-- markdownlint-enable MD041 -->
 
 <x-general.sidebar-link path="/docs/mobile-wallet/intro" name="Introduction" />
 

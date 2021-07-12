@@ -1,4 +1,6 @@
-<x-general.sidebar-link path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet" name="Introduction" /> <!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD041 -->
+<x-general.sidebar-link path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet" name="Introduction" />
+<!-- markdownlint-enable MD041 -->
 <x-general.sidebar-link path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one" name="Part One" />
 <x-general.sidebar-link path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-two" name="Part Two" />
 <x-general.sidebar-link path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-three" name="Part Three" />
