@@ -327,10 +327,10 @@ profile.notifications().values();
 
 // Create a new notification for the given data
 profile.notifications().push({
-	icon: "warning",
-	name: "Ledger Update Available",
-	body: "...",
-	action: "Read Changelog",
+    icon: "warning",
+    name: "Ledger Update Available",
+    body: "...",
+    action: "Read Changelog",
 });
 
 // Forget the notification for the given ID
@@ -413,7 +413,7 @@ const response = await wallet.transactionAggregate().transactions({ limit: 15 })
 
 if (response.hasMore()) {
     // This will automatically advanced to the next page of every wallet with a limit of 15.
-	await wallet.transactionAggregate().transactions({ limit: 15 });
+    await wallet.transactionAggregate().transactions({ limit: 15 });
 }
 ```
 
@@ -422,11 +422,11 @@ if (response.hasMore()) {
 ```typescript
 // 1. Sign and store the ID
 const transactionId = await wallet.transaction().signTransfer({
-	sign: {
-		mnemonic: "this is a top secret passphrase",
+    sign: {
+        mnemonic: "this is a top secret passphrase",
     },
     data: {
-		amount: "1",
+        amount: "1",
         to: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
     },
 });
@@ -480,19 +480,19 @@ await wallet.transaction().broadcast(transactionId);
 ```typescript
 // This is the initial transaction without any signatures.
 const transactionId = await wallet.transaction().signMultiSignature({
-	nonce: "2",
-	from: wallet1Address,
-	sign: {
-		multiSignature: {
-			publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
-			min: 3,
-		}
-	},
-	data: {
-		publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
-		min: 3,
-		senderPublicKey: wallet1PublicKey,
-	},
+    nonce: "2",
+    from: wallet1Address,
+    sign: {
+        multiSignature: {
+            publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
+            min: 3,
+        }
+    },
+    data: {
+        publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
+        min: 3,
+        senderPublicKey: wallet1PublicKey,
+    },
 });
 
 await activeWallet.transaction().broadcast(transactionId);

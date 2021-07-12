@@ -8,7 +8,7 @@ A server is pretty much just a computer with a hard drive, CPU, some memory and 
 
 Choosing the right hardware for your network setup is an integral part of the process of deploying your bridgechain. Depending on your use-case, various options are available:
 
-* **Virtual Private Server \(VPS\)**
+* **Virtual Private Server (VPS)**
 * **Dedicated Server**
 * **Local Hardware**
 
@@ -28,16 +28,16 @@ Local hardware is effectively using equipment in your own home. There are multip
 
 Below are the server requirements for nodes on your network:
 
-**Genesis Node & Forging Peer Nodes**
+**Genesis Node & Forging Peer Nodes**:
 
 * Ubuntu 16.x / 18.x
 * 2 CPU
 * 8GB RAM
-* 20+ GB SSD \(HDD\)
+* 20+ GB SSD (HDD)
 
-**Relay Nodes**
+**Relay Nodes**:
 
 * Ubuntu 16.x / 18.x
 * 1 CPU
 * 2-4GB RAM
-* 20+ GB SSD \(HDD\)
+* 20+ GB SSD (HDD)

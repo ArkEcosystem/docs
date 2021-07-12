@@ -4,7 +4,7 @@ title: Upgrade Guides - Core v2.3 to v2.4
 
 # v2.4
 
-Upgrading from `v2.3` to `v2.4` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility \(BC\) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.3` to `v2.4` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 > Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 
@@ -22,13 +22,15 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 
 1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-database-postgres` entry.
-3. Add this package addition line before it \(see below\):
+3. Add this package addition line before it (see below):
 
 ```javascript
 "@arkecosystem/core-state": {}, // Add this line before it
 ```
 
+<!-- markdownlint-disable MD029 -->
 4. Save the changes. Your configuration file should look like this:
+<!-- markdownlint-enable MD029 -->
 
 ```javascript
     module.exports = {
@@ -50,13 +52,15 @@ It's especially important to register this plugin as this is what the Desktop an
 
 1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-blockchain` entry.
-3. Add this package addition line after it \(see below\):
+3. Add this package addition line after it (see below):
 
 ```javascript
 "@arkecosystem/core-wallet-api": {}, // Add this line after it
 ```
 
+<!-- markdownlint-disable MD029 -->
 4. Save the changes. Your configuration file should look like this:
+<!-- markdownlint-enable MD029 -->
 
 ```javascript
     module.exports = {
@@ -69,7 +73,9 @@ It's especially important to register this plugin as this is what the Desktop an
     }
 ```
 
+<!-- markdownlint-disable MD029 -->
 5. If you are using default firewall don't forget to open port `4040` to make `core-wallet-api` accessible to wallets.
+<!-- markdownlint-enable MD029 -->
 
 ```shell
 sudo ufw allow 4040/tcp
@@ -109,8 +115,10 @@ sudo ufw allow 4040/tcp
     }
 ```
 
+<!-- markdownlint-disable MD029 -->
 3. If you have a `whitelist` property in the `core-p2p` entry, make sure to remove this too. Starting with v2.4 this property will filter out any peers that don't match the whitelist.
 4. Save the changes.
+<!-- markdownlint-enable MD029 -->
 
 ### Step 4. Update `core-forger` Configuration
 
@@ -146,7 +154,9 @@ sudo ufw allow 4040/tcp
     }
 ```
 
+<!-- markdownlint-disable MD029 -->
 3. Save the changes.
+<!-- markdownlint-enable MD029 -->
 
 ### Step 5. Update `core-json-rpc` to `core-exchange-json-rpc`
 

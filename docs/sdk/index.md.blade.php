@@ -1,4 +1,4 @@
-<x-general.sidebar-link path="/docs/sdk/intro" name="Introduction" />
+<x-general.sidebar-link path="/docs/sdk/intro" name="Introduction" /> <!-- markdownlint-disable MD041 -->
 
 ## Guidelines
 

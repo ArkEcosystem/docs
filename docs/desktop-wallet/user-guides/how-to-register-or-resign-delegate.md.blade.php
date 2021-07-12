@@ -20,13 +20,13 @@ For more information about fees, please visit: [Transaction Fees](/docs/desktop-
 
 ![Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitdelegateregistration.png)
 
-##  **Resign your Delegate**
+## **Resign your Delegate**
 
 Delegate Resignation is a new transaction type being offered in ARK Core v2.6 that gives delegates the ability to resign and exclude themselves from the delegate rankings.
 
 1. **Open the ARK Desktop Wallet and select the vertical ellipsis icon next to the right of the send button.**
-2. **Select the dropdown menu under Registration and select “Resign Delegate”**
-3. **Enter your wallet’s passphrase \(or password if you are using encrypted option\) and confirm the transaction.**
-4. **Refresh your wallet and you will see that after the next round of forging, your delegate will be marked resigned and no longer counted in the Active Delegate Rankings \(Top 51\).**
+2. **Select the dropdown menu under Registration and select "Resign Delegate"**
+3. **Enter your wallet’s passphrase (or password if you are using encrypted option) and confirm the transaction.**
+4. **Refresh your wallet and you will see that after the next round of forging, your delegate will be marked resigned and no longer counted in the Active Delegate Rankings (Top 51).**
 
 <x-embed.youtube id="3rbqSq2YgpQ" />

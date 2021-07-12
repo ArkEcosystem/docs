@@ -12,7 +12,7 @@ ARK `v2.5` is a minor update and backward compatible with `v2.5.X`. This update 
 
 ## Migrating from v2.4 to v2.5
 
-Upgrading from `v2.4` to `v2.5` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility \(BC\) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.4` to `v2.5` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 WARNING!
 

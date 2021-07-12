@@ -18,7 +18,7 @@ Create a new resource instance.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Object\] | client | Yes | Client |
+| [Object] | client | Yes | Client |
 
 #### Return Value
 
@@ -38,7 +38,7 @@ Create a new connection instance.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | config | Yes | Configuration |
+| [Hash] | config | Yes | Configuration |
 | Client | client | No | Client |
 
 #### Return Value
@@ -155,8 +155,8 @@ Connect to the given connection.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[ArkEcosystem::Client::Connection\] | connection | Yes | Connection instance |
-| \[String\] | name | No | Connection name |
+| [ArkEcosystem::Client::Connection] | connection | Yes | Connection instance |
+| [String] | name | No | Connection name |
 
 #### Return Value
 
@@ -174,7 +174,7 @@ Disconnect from the given connection.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | name | Yes | Connection name |
+| [String] | name | Yes | Connection name |
 
 #### Return Value
 
@@ -192,7 +192,7 @@ Get a connection instance.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | name | Yes | Connection name |
+| [String] | name | Yes | Connection name |
 
 #### Return Value
 
@@ -212,7 +212,7 @@ Get all blocks.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | No | Query parameters |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -230,7 +230,7 @@ Get a block by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Block ID |
+| [String] | id | Yes | Block ID |
 
 #### Return Value
 
@@ -248,8 +248,8 @@ Get all transactions by the given block.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Block ID |
-| \[Hash\] | parameters | No | Query parameters |
+| [String] | id | Yes | Block ID |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -267,7 +267,7 @@ Filter all blocks by the given parameters.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Search parameters |
+| [Hash] | parameters | Yes | Search parameters |
 
 #### Return Value
 
@@ -287,7 +287,7 @@ Get all accounts.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | No | Query parameters |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -305,7 +305,7 @@ Get a delegate by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | No | Delegate identifier |
+| [String] | id | No | Delegate identifier |
 
 #### Return Value
 
@@ -323,8 +323,8 @@ Get all blocks for the given delegate.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | No | Delegate identifier |
-| \[Hash\] | parameters | No | Query parameters |
+| [String] | id | No | Delegate identifier |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -342,8 +342,8 @@ Get all voters for the given delegate.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | No | Delegate identifier |
-| \[Hash\] | parameters | No | Query parameters |
+| [String] | id | No | Delegate identifier |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -413,7 +413,7 @@ Get all peers.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | No | Query parameters |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -431,7 +431,7 @@ Get a peer by the given IP address.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | ip\_addr | Yes | IP address |
+| [String] | ip_addr | Yes | IP address |
 
 #### Return Value
 
@@ -451,7 +451,7 @@ Create a new transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Transaction to broadcast |
+| [Hash] | parameters | Yes | Transaction to broadcast |
 
 #### Return Value
 
@@ -469,7 +469,7 @@ Get a transaction by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Transaction ID |
+| [String] | id | Yes | Transaction ID |
 
 #### Return Value
 
@@ -487,7 +487,7 @@ Get all transactions.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Query parameters |
+| [Hash] | parameters | Yes | Query parameters |
 
 #### Return Value
 
@@ -505,7 +505,7 @@ Get all unconfirmed transactions.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Query parameters |
+| [Hash] | parameters | Yes | Query parameters |
 
 #### Return Value
 
@@ -523,7 +523,7 @@ Get an unconfirmed transaction by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Transaction ID |
+| [String] | id | Yes | Transaction ID |
 
 #### Return Value
 
@@ -541,7 +541,7 @@ Filter all transactions by the given parameters.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Query parameters |
+| [Hash] | parameters | Yes | Query parameters |
 
 #### Return Value
 
@@ -573,7 +573,7 @@ Get all votes.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Query parameters |
+| [Hash] | parameters | Yes | Query parameters |
 
 #### Return Value
 
@@ -591,7 +591,7 @@ Get a vote by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Vote ID |
+| [String] | id | Yes | Vote ID |
 
 #### Return Value
 
@@ -611,7 +611,7 @@ Get all wallets.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | Yes | Query parameters |
+| [Hash] | parameters | Yes | Query parameters |
 
 #### Return Value
 
@@ -629,7 +629,7 @@ Get a wallet by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Wallet identifier |
+| [String] | id | Yes | Wallet identifier |
 
 #### Return Value
 
@@ -647,8 +647,8 @@ Get all transactions for the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Wallet identifier |
-| \[Hash\] | parameters | No | Query parameters |
+| [String] | id | Yes | Wallet identifier |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -666,8 +666,8 @@ Get all transactions received by the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Wallet identifier |
-| \[Hash\] | parameters | No | Query parameters |
+| [String] | id | Yes | Wallet identifier |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -685,8 +685,8 @@ Get all transactions sent by the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Wallet identifier |
-| \[Hash\] | parameters | No | Query parameters |
+| [String] | id | Yes | Wallet identifier |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -704,7 +704,7 @@ Get all votes by the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | id | Yes | Wallet identifier |
+| [String] | id | Yes | Wallet identifier |
 
 #### Return Value
 
@@ -722,7 +722,7 @@ Get all wallets sorted by balance in descending order.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | No | Query parameters |
+| [Hash] | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -740,7 +740,7 @@ Filter all wallets by the given parameters.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | parameters | No | Search parameters |
+| [Hash] | parameters | No | Search parameters |
 
 #### Return Value
 
@@ -760,7 +760,7 @@ Create a new resource instance.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[Hash\] | config | Yes | Configuration |
+| [Hash] | config | Yes | Configuration |
 
 #### Return Value
 
@@ -778,8 +778,8 @@ Create and send a HTTP "GET" request.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | url | Yes | Endpoint |
-| \[Hash\] | query | No | Query parameters |
+| [String] | url | Yes | Endpoint |
+| [Hash] | query | No | Query parameters |
 
 #### Return Value
 
@@ -797,8 +797,8 @@ Create and send a HTTP "POST" request.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | url | Yes | Endpoint |
-| \[Hash\] | payload | No | Query parameters |
+| [String] | url | Yes | Endpoint |
+| [Hash] | payload | No | Query parameters |
 
 #### Return Value
 
@@ -816,8 +816,8 @@ Create and send a HTTP "PUT" request.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | url | Yes | Endpoint |
-| \[Hash\] | payload | No | Query parameters |
+| [String] | url | Yes | Endpoint |
+| [Hash] | payload | No | Query parameters |
 
 #### Return Value
 
@@ -835,8 +835,8 @@ Create and send a HTTP "DELETE" request.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | url | Yes | Endpoint |
-| \[Hash\] | query | No | Query parameters |
+| [String] | url | Yes | Endpoint |
+| [Hash] | query | No | Query parameters |
 
 #### Return Value
 
@@ -856,7 +856,7 @@ Create a new resource instance.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| \[String\] | response | Yes | Response |
+| [String] | response | Yes | Response |
 
 #### Return Value
 

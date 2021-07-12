@@ -8,7 +8,7 @@ number: 3
 
 Welcome to the third tutorial in our series of launching an HTML5 game in the ARK Desktop Wallet! This series is aimed at developers of all skill levels. The goal of this series is to be able to convert an HTML5 game to work as a fully functioning plugin within the ARK Desktop Wallet.
 
-In the earlier parts \([**Part One** ](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one)and [**Part Two**\)](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-two), we set up a basic game client using [**Construct 3**](https://editor.construct.net/) which communicates with our own ARK Core plugin to validate addresses and send and receive transactions on the blockchain.
+In the earlier parts **([Part One](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one) and [Part Two](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-two))**, we set up a basic game client using **[Construct 3](https://editor.construct.net)** which communicates with our own ARK Core plugin to validate addresses and send and receive transactions on the blockchain.
 
 Now it’s time to make the game work with betting and create a lobby to start games and see existing ones! Let’s not get ahead of ourselves though, the actual game logic comes in the next part of this series as we’re still laying the foundations to interact with the network and the blockchain. The good news though, is that the code we’ve written in these earlier parts can be reused in future projects, so you’ll have a solid base to interact between your future game clients and ARK Core without redoing all of the work over and over again.
 
@@ -23,7 +23,7 @@ So, let’s not waste any more time — open up **manager.ts** in your favorite 
 
 ## **Keeping track of all generated game addresses for persistence**
 
-In our [**last tutorial**](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-two), we already managed to generate a new ARK address to receive transactions. You might have noticed, that generated addresses were only kept in memory and would be lost whenever Core restarts, with no way to recover the generated passphrase to later transfer the wagers that were sent to the address. To fix this, we’re going to make this data persist by storing our list of game addresses and passphrases as a single object on disk.
+In our **[last tutorial](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-two)**, we already managed to generate a new ARK address to receive transactions. You might have noticed, that generated addresses were only kept in memory and would be lost whenever Core restarts, with no way to recover the generated passphrase to later transfer the wagers that were sent to the address. To fix this, we’re going to make this data persist by storing our list of game addresses and passphrases as a single object on disk.
 
 There are various possibilities. For example, you might want to use a database, whether PostgreSQL, MySQL, SQLite3 or others, but we are going to keep things simple and use an already made library called [FluiDB](https://www.npmjs.com/package/fluidb). We can just create a new FluiDB object to hold our game addresses and it will automatically and transparently load and save the data to disk for persistence without worrying about writing messy SQL queries or inventing our own data structure.
 
@@ -104,7 +104,7 @@ emitter.on(ApplicationEvents.TransactionApplied, transaction => {
 First, in the top line, change transaction to async transaction so our function is asynchronous. Then, see the `for (const websocket of server.clients)`line? Immediately before that line, add this to regenerate the state of any game address that receives a new transaction as soon as it is written to the blockchain database:
 
 ```typescript
-while (!(await app.resolvePlugin(“database”).transactionsBusinessRepository.findById(transaction.id))) {
+while (!(await app.resolvePlugin("database").transactionsBusinessRepository.findById(transaction.id))) {
     await delay(100);
 }
 
@@ -154,7 +154,6 @@ private async generateState(address: string) {
     this.gameStates[address] = { players, wager };
 }
 ```
-
 
 That was a lot of work in a short amount of time, so let us break down what we just did. We are passing a generated game address into this function, and we convert the associated passphrase to a public key which we need to search for all incoming and outgoing transactions from the wallet address. We retrieve the amount, recipient wallet, sender wallet, timestamp and smartbridge message of each transaction, and sort them in chronological order. Then we iterate through the transactions from oldest to newest, to find the first incoming transaction worth at least 1 ARK; the amount becomes the wager, and the player’s address is allocated as player 1. If no matching address is found, the game is not valid, so we abort. Otherwise, we re-iterate through the transactions to find another player who has matched the wager. This address becomes player 2. We then add the player addresses and wagers to our **gameStates** object.
 
@@ -208,15 +207,15 @@ Our final step is to tie it all together in Construct 3 and be able to filter ga
 
 Hop over to the Layout Editor for _Layout 1_ and add 3 new _iframe_ objects. Call them NewIframe, ExistingIframe and OurIframe. The first frame will list the new games that are awaiting an opponent, the second will list all games with matched wagers, and the third will list the games that our address is involved in. For each added _iframe_ object, set the ID to match the name and erase the default URL values.
 
-Head to our _Event Sheet 1_ and right-click a blank area of our event sheet and choose _Add global variable_. Call it “JSON” which should be a String. Repeat this but call our next global variable “ValidatedAddress”. Do it one more time, but call our new variable “Symbol”.
+Head to our _Event Sheet 1_ and right-click a blank area of our event sheet and choose _Add global variable_. Call it "JSON" which should be a String. Repeat this but call our next global variable "ValidatedAddress". Do it one more time, but call our new variable "Symbol".
 
 ![The global variables should look like this at the top of the event sheet](https://miro.medium.com/max/705/0*abA--Qm-XcAQITkC)
 
-Now, add another sub-event within the _Websocket_ -&gt; _On Text Message_ event to parse the lobby data. Choose _JSON_ and then _Has Key_. Enter “games” then press Done. Click _Add action_ for our newly created sub-event and drill down to _System &gt; Set value_. We want to set our JSON object to the value of _JSON.get\(“Games”\)_. Click Done.
+Now, add another sub-event within the _Websocket_ -&gt; _On Text Message_ event to parse the lobby data. Choose _JSON_ and then _Has Key_. Enter "games" then press Done. Click _Add action_ for our newly created sub-event and drill down to _System &gt; Set value_. We want to set our JSON object to the value of _JSON.get("Games")_. Click Done.
 
-We’ll add another sub-event for _Websocket_ -&gt; _On Text Message_ too, to save the network token symbol. Again, choose _JSON &gt; Has Key_. Enter “symbol”, choose Done, click _Add Action_ and choose _System &gt; Set value_. Set _Symbol_ to the value of _JSON.get\(“Symbol”\)_.
+We’ll add another sub-event for _Websocket_ -&gt; _On Text Message_ too, to save the network token symbol. Again, choose _JSON &gt; Has Key_. Enter "symbol", choose Done, click _Add Action_ and choose _System &gt; Set value_. Set _Symbol_ to the value of _JSON.get("Symbol")_.
 
-Next we’re going to create a function to parse our lobby data. Right-click a blank area and choose _Add function_. Call it ParseLobby. Go back to our sub-event for “games” and choose _Add action_, then _Functions &gt; ParseLobby_. Then find our earlier event where we set our text to _“Address is valid!”_ and add another action to it. Choose _System &gt; Set value_ and set the _ValidatedAddress_ variable to the value of _TextInput.Text_. Now choose _Add action_, then _Functions &gt; ParseLobby._
+Next we’re going to create a function to parse our lobby data. Right-click a blank area and choose _Add function_. Call it ParseLobby. Go back to our sub-event for "games" and choose _Add action_, then _Functions &gt; ParseLobby_. Then find our earlier event where we set our text to _"Address is valid!"_ and add another action to it. Choose _System &gt; Set value_ and set the _ValidatedAddress_ variable to the value of _TextInput.Text_. Now choose _Add action_, then _Functions &gt; ParseLobby._
 
 ![Our modified events](https://miro.medium.com/max/706/0*TXvptldK-KOg5A3F)
 

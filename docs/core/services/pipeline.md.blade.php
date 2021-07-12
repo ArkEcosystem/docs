@@ -4,7 +4,7 @@ title: Services - Pipeline
 
 # Pipeline
 
-Pipelines are an implementation of the pipeline pattern. It allows you to easily compose sequential stages by chaining stages. The implementation consists of 2 parts, the Pipeline and Stage\(s\).
+Pipelines are an implementation of the pipeline pattern. It allows you to easily compose sequential stages by chaining stages. The implementation consists of 2 parts, the Pipeline and Stage(s).
 
 In this article we'll look into what they do, how to use them, what ups and downs there are and what the recommended way to use them is to get the most out of your pipeline and stages for your use-cases.
 
@@ -43,10 +43,10 @@ const removeDash = async (payload: string) => payload.replace("_", "");
 const removeUnderscore = async (payload: string) => payload.replace("-", " ");
 
 console.log(
-	await pipeline
-		.pipe(removeDash)
-		.pipe(removeUnderscore)
-		.process("_Hello-World")
+    await pipeline
+        .pipe(removeDash)
+        .pipe(removeUnderscore)
+        .process("_Hello-World")
 ); // Hello World
 ```
 
@@ -63,23 +63,23 @@ import { Container } from "@arkecosystem/core-kernel";
 
 @Container.injectable()
 class RemoveDash implements Stage {
-	async process(payload: string) {
-		return payload.replace("_", "");
-	}
+    async process(payload: string) {
+        return payload.replace("_", "");
+    }
 }
 
 @Container.injectable()
 class RemoveUnderscore implements Stage {
-	async process(payload: string) {
-		return payload.replace("-", " ");
-	}
+    async process(payload: string) {
+        return payload.replace("-", " ");
+    }
 }
 
 console.log(
-	await pipeline
-		.pipe(app.resolve(RemoveDash))
-		.pipe(app.resolve(RemoveUnderscore))
-		.process("_Hello-World")
+    await pipeline
+        .pipe(app.resolve(RemoveDash))
+        .pipe(app.resolve(RemoveUnderscore))
+        .process("_Hello-World")
 ); // Hello World
 ```
 
@@ -89,21 +89,21 @@ If your stage handler is fairly simple and doesn't need access to any applicatio
 
 ```typescript
 class RemoveDash implements Stage {
-	async process(payload: string) {
-		return payload.replace("_", "");
-	}
+    async process(payload: string) {
+        return payload.replace("_", "");
+    }
 }
 
 class RemoveUnderscore implements Stage {
-	async process(payload: string) {
-		return payload.replace("-", " ");
-	}
+    async process(payload: string) {
+        return payload.replace("-", " ");
+    }
 }
 
 console.log(
-	await pipeline
-		.pipe(new RemoveDash())
-		.pipe(new RemoveUnderscore())
-		.process("_Hello-World")
+    await pipeline
+        .pipe(new RemoveDash())
+        .pipe(new RemoveUnderscore())
+        .process("_Hello-World")
 ); // Hello World
 ```

@@ -10,7 +10,7 @@ Before we get started we need to make sure that all of the required dependencies
 
 Open your project and execute the following commands to install both SDKs. Make sure that those complete without any errors. If you encounter any errors, please open an issue with as much information as you can provide so that our developers can have a look and get to the bottom of the issue.
 
-```
+```bash
 pip install arkecosystem-crypto
 pip install arkecosystem-client
 ```

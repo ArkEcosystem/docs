@@ -27,5 +27,5 @@ We provide module templates, that enable you to skip the boilerplate code genera
 <livewire:embed-link url="https://github.com/learn-ark/dapp-core-module-http-server-template" caption="dApp Starter Template Project With HTTP Server Implementation" />
 
 <x-alert type="info">
-Every template is based on the [dApp Starter Core Module Template](https://github.com/learn-ark/dapp-core-module-template/tree/develop) with additional implementation. Use the templates as a functional skeleton project and continue adding and implementing your own logic \(API, additional database, voting, loyalty, defi...\).
+Every template is based on the [dApp Starter Core Module Template](https://github.com/learn-ark/dapp-core-module-template/tree/develop) with additional implementation. Use the templates as a functional skeleton project and continue adding and implementing your own logic (API, additional database, voting, loyalty, defi...).
 </x-alert>

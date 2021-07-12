@@ -58,7 +58,7 @@ docker-compose -f docker-compose-build.yml up -d
 
 After successful build you should see: `Creating ark-explorer ... done`
 
-### Make sure Explorer is UP 
+### Make sure Explorer is UP
 
 > Initial container startup would take about 2-3 minutes until all dependencies install and setup is done. You can monitor logs by executing:
 
@@ -68,7 +68,7 @@ docker logs --tail 50 -f ark-explorer
 
 A successful startup would produce similar log entries:
 
-```
+```bash
 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 INFO success: redis entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
@@ -78,7 +78,7 @@ INFO success: short-schedule entered RUNNING state, process has stayed up for > 
 
 ### Accessing Explorer
 
-After successful container startup Explorer should be accessible at http://localhost:8898 or http://YOUR_HOST_IP:8898
+After successful container startup Explorer should be accessible at [http://localhost:8898](http://localhost:8898) or [http://YOUR_HOST_IP:8898](http://YOUR_HOST_IP:8898)
 
 ### Start from scratch
 
@@ -88,20 +88,19 @@ bash purge_all.sh
 
 ## Production Deployment and Zero Downtime Updates
 
-* Blue/Green Deployment approach 
-
-  - Reverse proxy server [Traefik](https://hub.docker.com/_/traefik) with native Let's Encrypt SSL supports including automated certificate requests and renewal.
-  - Explorer easily deployed and updated with no downtime.
+* Blue/Green Deployment approach
+  * Reverse proxy server [Traefik](https://hub.docker.com/_/traefik) with native Let's Encrypt SSL supports including automated certificate requests and renewal.
+  * Explorer easily deployed and updated with no downtime.
 
 > Before continuing with this guide: You will need access to the database of a Core instance. The credentials can be specified in the `.env` file under `EXPLORER_DB_*`.
 
-### Prepare Environment 
+### Prepare Environment
 
 <x-alert type="info">
 We need Explorer source locally as it gets mounted in the container as a volume!
 </x-alert>
-The next step is similar to deployment scenarios above. The only difference is that we should stick to specific local folders naming convention in order to have flawless deployment and further updates. 
- 
+The next step is similar to deployment scenarios above. The only difference is that we should stick to specific local folders naming convention in order to have flawless deployment and further updates.
+
 >Clone source for initial deployment - a local folder `explorer-green` is used:
 
 ```bash
@@ -111,7 +110,7 @@ cd ~/explorer-green
 cp .env.prod .env
 ```
 
->Open the `.env` file and edit the following variables: 
+>Open the `.env` file and edit the following variables:
 
 ```ini
 APP_NAME="Your Explorer Title"
@@ -125,10 +124,11 @@ EXPLORER_DB_USERNAME=YOUR_CORE_DATABASE_USERNAME
 EXPLORER_DB_PASSWORD=YOUR_CORE_DATABASE_PASSWORD
 
 ```
->*Create a DNS `A` record that points to your Explorer instance Public IP address (example: `explorer.your-domain.com`)*
+
+> *Create a DNS `A` record that points to your Explorer instance Public IP address (example: `explorer.your-domain.com`)*
 
 <x-alert type="warning">
-IMPORTANT: Cloudflare users - to ensure successful SSL certificate request procedure, please disable host protection/proxy during initial deployment. Once the Explorer instance is up, can be turned back ON. 
+IMPORTANT: Cloudflare users - to ensure successful SSL certificate request procedure, please disable host protection/proxy during initial deployment. Once the Explorer instance is up, can be turned back ON.
 </x-alert>
 
 >Open the `docker/production/prod.env` file and edit the following variables:
@@ -138,7 +138,7 @@ ACME_EMAIL=postmaster@your-domain.com
 DOMAIN=explorer.your-domain.com
 
 ```
- 
+
 ### Initial deploy
 
 ```bash
@@ -147,10 +147,11 @@ bash deploy-prod.sh
 ```
 
 That will pull and run two containers:
-  - `traefik_traefik_1` - the reverse proxy forwarding HTTP/HTTPS requests to the domain you added as `A` DNS record (also `docker/production/prod.env` file `DOMAIN` variable) to the internal Explorer container. 
-  - `green_explorer_1` - the internal Explorer container which upon startup will trigger the reverse proxy to make an SSL certificate request to Let's Encrypt and install it after receiving it. Explorer setup will start inside the container in parallel which may take up to 2-3 minutes, so be patient and wait for the script to finish.
 
-You should be now able to access your Explorer instance at https://explorer.your-domain.com (HTTP gets redirected to HTTPS).
+* `traefik_traefik_1` - the reverse proxy forwarding HTTP/HTTPS requests to the domain you added as `A` DNS record (also `docker/production/prod.env` file `DOMAIN` variable) to the internal Explorer container.
+* `green_explorer_1` - the internal Explorer container which upon startup will trigger the reverse proxy to make an SSL certificate request to Let's Encrypt and install it after receiving it. Explorer setup will start inside the container in parallel which may take up to 2-3 minutes, so be patient and wait for the script to finish.
+
+You should be now able to access your Explorer instance at [https://explorer.your-domain.com](https://explorer.your-domain.com) (HTTP gets redirected to HTTPS).
 
 ### Zero Downtime Updates
 
@@ -171,7 +172,7 @@ bash deploy-prod.sh
 This will pull and run a new Explorer container `blue_explorer_1` which will follow similar deployment process as the initial deployment one. After successful deployment, the script will remove your old Explorer container `green_explorer_1` and notify you it is now safe to remove your previous source folder `~/explorer-green`. During the update process you shouldn't experience any Explorer downtime as the reverse proxy should handle the proper distribution of the traffic.
 
 <x-alert type="info">
-From that point on you should perform updates the same way, just preserving the local source folder naming. 
+From that point on you should perform updates the same way, just preserving the local source folder naming.
 </x-alert>
 
 So for instance your next update would assume you clone the source into `~/explorer-green` folder. Example:
@@ -185,6 +186,3 @@ cp -f ~/explorer-blue/.env ~/explorer-green/.env
 cp -f ~/explorer-blue/docker/production/prod.env ~/explorer-green/docker/production/prod.env
 bash deploy-prod.sh
 ```
-
-
-

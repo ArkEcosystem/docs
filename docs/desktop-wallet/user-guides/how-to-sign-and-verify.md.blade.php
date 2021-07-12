@@ -8,7 +8,7 @@ The wallet allows you to create and sign a message that other users will be able
 
 Message signing and verifying is all done under the **Sign** tab of the wallet detail page.
 
-#### Signing a Message
+## Signing a Message
 
 With a signed message, others can verify that a given message and signature combination originate from you.
 
@@ -16,7 +16,7 @@ With a signed message, others can verify that a given message and signature comb
 
 ![Your signed message will appear under the Sign tab of the wallet detail page](/storage/docs/docs/desktop-wallet/assets/signedmessages.png)
 
-#### Verifying a Message
+## Verifying a Message
 
 To verify a message that was signed by a different wallet, you need the wallet's public key, the original message, and the resulting signature.
 

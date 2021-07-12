@@ -108,7 +108,7 @@ Derive the address from the given private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| EccPrivateKey | private\_key | Yes | Private key |
+| EccPrivateKey | private_key | Yes | Private key |
 | AbstractNetwork | network | No | Version of the network |
 
 #### Return Value
@@ -733,7 +733,7 @@ Create a new deserializer instance
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | Reader | serialized | Yes | Reader |
-| int | asset\_offset | Yes | Offset |
+| int | asset_offset | Yes | Offset |
 | Transaction | transaction | Yes | Transaction |
 
 #### Return Value

@@ -95,9 +95,9 @@ This will fire up two separate containers. One for Core itself and another one f
 #### Custom Settings
 
 <x-alert type="info">
-If you prefer to use custom DB Name, DB User and DB Password simply adjust variables **POSTGRES\_PASSWORD, POSTGRES\_USER, POSTGRES\_DB** \(file=docker-compose.yml\) and **CORE\_DB\_PASSWORD, CORE\_DB\_USERNAME** and **CORE\_DB\_DATABASE** \(**file=$NETWORK.env**\) correspondingly. For a full list of Core variables go [here](/docs/core/getting-started/environment-variables).
+If you prefer to use custom DB Name, DB User and DB Password simply adjust variables **POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB** (file=docker-compose.yml) and **CORE_DB_PASSWORD, CORE_DB_USERNAME** and **CORE_DB_DATABASE** (**file=$NETWORK.env**) correspondingly. For a full list of Core variables go [here](/docs/core/getting-started/environment-variables).
 
-You can also change default log levels by adjusting variables **CORE\_LOG\_LEVEL** and **CORE\_LOG\_LEVEL\_FILE** \(**file=$NETWORK.env**\). Note that _DEBUG_ level will probably add some CPU overhead during network sync.
+You can also change default log levels by adjusting variables **CORE_LOG_LEVEL** and **CORE_LOG_LEVEL_FILE** (**file=$NETWORK.env**). Note that _DEBUG_ level will probably add some CPU overhead during network sync.
 </x-alert>
 
 **In case you want to use a remote PostgreSQL server simply adjust variable `CORE_DB_HOST` in your `$NETWORK.env` and run only Core container:**
@@ -179,7 +179,7 @@ This will build your ARK Core Docker image and run two separate containers. One 
 
 #### Option 1: Docker Live Updates Are Now Possible With CLI
 
-As a preliminary step, installation of development tools is necessary \(only needed once, when doing initial update\):
+As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 
 ```bash
 docker exec -it core-$NETWORK sudo apk add make gcc g++ git python
@@ -221,7 +221,7 @@ For instance, you could use this command from the root core folder:
 yarn docker ark
 ```
 
-This command creates a new directory \(`docker`\) that contains 1 folder per network.
+This command creates a new directory (`docker`) that contains 1 folder per network.
 
 ### Containerize the Persistent Store
 
@@ -269,13 +269,13 @@ cd ~/core/docker/development/$NETWORK      # (NETWORK = testnet || devnet)
 docker-compose up -d
 ```
 
-_Enter your ark-core container and use NodeJS in a Docker container \(Linux environment\) with the following command:_
+_Enter your ark-core container and use NodeJS in a Docker container (Linux environment) with the following command:_
 
 ```bash
 docker exec -it ark-$NETWORK-core bash
 ```
 
-_Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge\_all.sh** script._
+_Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
 <x-alert type="danger">
 **Development files/presets are not Production ready**. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).

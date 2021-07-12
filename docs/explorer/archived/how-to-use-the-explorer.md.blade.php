@@ -4,7 +4,7 @@ title: How To Use the Explorer
 
 # How To Use the Explorer?
 
-## What Is a Block Explorer? 
+## What Is a Block Explorer?
 
 If a blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus: the guide to every aspect of that highway as you travel through it. Most people, when using the block explorer, are only doing so to confirm a transaction they have sent or are receiving, this, however, taps into a tiny fraction of the power contained within the explorer. Block explorers can give anyone access to all the information contained within that blockchain. You can search every block that was ever created, see every transaction an address has conducted as well as a snapshot of the status of that network. Most blockchains have a block explorer, and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users of any level.
 
@@ -12,41 +12,41 @@ If a blockchain is a highway of transactional records, from the very first to th
 
 When you first arrive at [explorer.ark.io](https://explorer.ark.io/), you will find some immediately available information.
 
-## Latest Transactions 
+## Latest Transactions
 
 ![](/storage/docs/docs/explorer/assets/latesttransactionoverview.dcd9454b.png)
 
 This is a list of the most recent transactions to have been broadcast over the network. Inside each transaction details page, you will be able to view the following information:
 
-* **ID:** This will show the unique identification \(ID\) hash for this transaction. If you click on this ID, you will be able to see how many confirmations it has received and what block it has been included in. By being incorporated into a block, it proves the network has accepted the transaction as valid, and it will forever be written into the ARK blockchain.
+* **ID:** This will show the unique identification (ID) hash for this transaction. If you click on this ID, you will be able to see how many confirmations it has received and what block it has been included in. By being incorporated into a block, it proves the network has accepted the transaction as valid, and it will forever be written into the ARK blockchain.
 * **Amount:** This will indicate the amount of ARK that was sent from the Sender to the Recipient.
 * **Sender:** This field shows the ARK address which signed the transaction; i.e., who is sending the transaction.
-* **Recipient:** Here we see the ARK address to which the sender \(above\) sent this transaction to; i.e., who is receiving the transaction.
+* **Recipient:** Here we see the ARK address to which the sender (above) sent this transaction to; i.e., who is receiving the transaction.
 * **Timestamp:** This indicates the exact time at which the transaction was broadcast and accepted by the network.
-* **Fee:** This indicates the fee paid to send the transaction. 
-* **SmartBridge:** This field indicates the ARK SmartBridge that was used in the transaction. SmartBridges are part of the innovations driving the ARK Ecosystem: it allows for different blockchains to interact with each other. Think of each blockchain as an island with no outside communication. If you work on Ethereum Island and your business partner only works on Bitcoin Island, you can't trade or work together. ARK SmartBridges are like an airstrip, cargo barge, cellphone towers, and internet all rolled into one. You can do business with any of the other islands from any island instantaneously and friction free. 
+* **Fee:** This indicates the fee paid to send the transaction.
+* **SmartBridge:** This field indicates the ARK SmartBridge that was used in the transaction. SmartBridges are part of the innovations driving the ARK Ecosystem: it allows for different blockchains to interact with each other. Think of each blockchain as an island with no outside communication. If you work on Ethereum Island and your business partner only works on Bitcoin Island, you can't trade or work together. ARK SmartBridges are like an airstrip, cargo barge, cellphone towers, and internet all rolled into one. You can do business with any of the other islands from any island instantaneously and friction free.
 
-### Latest Blocks 
+### Latest Blocks
 
 ![](/storage/docs/docs/explorer/assets/latestblockoverview.40aa526b.png)
 
 This is a list of the most recent blocks to have been broadcast over the network. Inside each block details page, you will be able to view the following information:
 
-* **ID:** This will the show unique identification \(ID\) hash for the forged block. 
-* **Height:** This section will show how far from the first \(genesis\) block the blockchain has progressed. For example, if you are looking at a block with a height of 1000, this will indicate that the block is the 999th since the first \(genesis\) block.
+* **ID:** This will the show unique identification (ID) hash for the forged block.
+* **Height:** This section will show how far from the first (genesis) block the blockchain has progressed. For example, if you are looking at a block with a height of 1000, this will indicate that the block is the 999th since the first (genesis) block.
 * **Timestamp:** This indicates the date and time at which block was forged and committed onto the ARK blockchain.
 * **Transactions:** Here you will see how many transactions were included in the block.
-* **Generated By:** Refers to which delegate forged the specific block. 
+* **Generated By:** Refers to which delegate forged the specific block.
 * **Amount:** Indicates the sum of ARK for all transactions in the block.
 * **Fee:** Shows the total fees associated with all the block's transactions.
 
 ![NETWORK INFORMATION Overview](data:image/png;base64,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)
 
-### Network Information 
+### Network Information
 
 Across the top of the page, you will also see a list of details about the current state of the network you are viewing:
 
-* **Height:** This is a live view of how many blocks have been created since the first \(genesis\) block.
+* **Height:** This is a live view of how many blocks have been created since the first (genesis) block.
 * **ARK/Currency:** This indicates the current price of ARK in your chosen currency. This will often be automatically set to the national currency of wherever you are connecting to the internet from. For mobile users, in the upper right-hand corner, you can change this setting by clicking on the currency icon.
 * **Supply:** This area shows the total supply of ARK in existence. In ARK's case, this number goes up over time by a set number of coins every year.
 * **Network:** This indicates whether you are viewing the Mainnet, Testnet or Devnet. Mainnet is where transactions are conducted and settled in real time. In contrast, the test and dev networks are used by developers to test functionality before introducing features or other applications onto the mainnet. For most users, the Mainnet is most relevant.
@@ -75,10 +75,10 @@ If you click on a delegate's username, you will be taken to the delegate's walle
 
 * **Balance:** Total amount of ARK in the delegate's wallet.
 * **Transactions:** Green arrows indicate the number of transactions into the delegate's wallet, while red arrows indicate transactions OUT of the delegate's wallet.
-* **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online, they are not forging \(verifying\) new blocks. Thus this can be an essential aspect for ARK community members to consider when voting.
+* **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online, they are not forging (verifying) new blocks. Thus this can be an essential aspect for ARK community members to consider when voting.
 * **Rank/Status:** This shows what the delegate's ranking is regarding vote weight. For example, seeing the number 6 means the delegate has the sixth highest number of votes of all the delegates in the network.
 * **Approval:** This field will show the percentage of the total votes they control. If this shows 5%, then it means that 5% of all ARK in the network is pledged to that delegate.
-* **Forged:** Indicates the total amount of ARK they have been rewarded through forging \(verifying\) blocks.
+* **Forged:** Indicates the total amount of ARK they have been rewarded through forging (verifying) blocks.
 * **Blocks:** Shows the total number of blocks this delegate has forged on the network.
 * **Votes:** Whom this wallet has cast their delegate vote towards.
 * **Voters:** How many total voters have pledged to the delegate.
@@ -87,10 +87,10 @@ If you click on a delegate's username, you will be taken to the delegate's walle
 
 The last three menu option are as follows:
 
-## Search Bar 
+## Search Bar
 
 Here you can input any ARK address, transaction ID or block ID and find detailed information about them. Most users will use this to check the status of a transaction they have sent or are expecting. If you were to send someone a transaction of 5 ARK, a transaction ID would be generated, and you could forward that information to the recipient as both a validation of payment and a digital receipt.
 
-## Day/Night Mode 
+## Day/Night Mode
 
 This is merely an aesthetic choice depending on the user and how they prefer the interface to look. When browsing the [Devnet block explorer](https://dexplorer.ark.io/), the Night theme is enabled by default.

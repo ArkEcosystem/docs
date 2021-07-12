@@ -144,7 +144,6 @@ service-provider.ts
 
 > If you are working on a monolithic plugin which behavior can't be broken down into smaller entities that compose the full functionality than something like [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design) might be the better choice for an easier to maintain codebase.
 
-
 <!--
 ## Generators
 

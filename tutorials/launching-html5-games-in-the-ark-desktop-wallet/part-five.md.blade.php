@@ -6,13 +6,14 @@ number: 5
 
 # Determining how Prizes Work
 
-We have now arrived at the penultimate part of our series exploring how to launch HTML5 games in the Desktop Wallet using an ARK Core plugin and [**Construct 3**](https://editor.construct.net/). If you’ve been following all the previous parts of this series, you will have successfully built a fully working blockchain game from scratch using smartbridge messages to make moves with an integrated lobby to make bets and match wagers.
+We have now arrived at the penultimate part of our series exploring how to launch HTML5 games in the Desktop Wallet using an ARK Core plugin and **[Construct 3](https://editor.construct.net/)**. If you’ve been following all the previous parts of this series, you will have successfully built a fully working blockchain game from scratch using smartbridge messages to make moves with an integrated lobby to make bets and match wagers.
 
 While our game is fully functional, we haven’t yet implemented any prize logic aside from the initial wager matching. That is to say, winners, don’t get paid a prize and bets are not refunded in the case of a tie. However, that will be the subject of today’s tutorial.
 
 <x-alert type=info>
-If this is your first time joining us, make sure to check out [**Part One**](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one) **of our tutorial series.**
+If this is your first time joining us, make sure to check out **[Part One](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one)** of our tutorial series.
 </x-alert>
+
 This tutorial is entirely based on the ARK Core plugin, so we will not be making any changes to our Construct 3 project at all this time. To get started, open up **manager.ts** in your text editor of choice!
 
 ## Implementing Prize Logic
@@ -30,14 +31,14 @@ import { Identities, Transactions } from "@arkecosystem/crypto";
 
 // Now, we’ll examine the relevant part of our existing generateState function to see what happens when a game is won or tied:
 
-if (outcome !== “ongoing”) {
+if (outcome !== "ongoing") {
     break;
 }
 ```
 
-Let’s remember that in the event of a tie, the outcome variable value will be “tie” and if someone has won, the value of the outcome variable will be either 1 or 2, depending on if the winner was player 1 or player 2. Otherwise, the value will be “ongoing”.
+Let’s remember that in the event of a tie, the outcome variable value will be "tie" and if someone has won, the value of the outcome variable will be either 1 or 2, depending on if the winner was player 1 or player 2. Otherwise, the value will be "ongoing".
 
-From this code snippet, we can see at the moment, if the value of the outcome variable is not “ongoing” \(i.e. the game was won or tied\) then our loop ends, but nothing else happens. Let’s go ahead and revise this code now to include logic to pay our players. Since the code only ever executes if the game has been won or tied, we should check if it was in fact tied. If so, we return the wager to both players. If not, it means a player has won the game so should receive the whole prize, which is the sum of both wagers:
+From this code snippet, we can see at the moment, if the value of the outcome variable is not "ongoing" (i.e. the game was won or tied) then our loop ends, but nothing else happens. Let’s go ahead and revise this code now to include logic to pay our players. Since the code only ever executes if the game has been won or tied, we should check if it was in fact tied. If so, we return the wager to both players. If not, it means a player has won the game so should receive the whole prize, which is the sum of both wagers:
 
 ```typescript
 if (outcome !== "ongoing") {
@@ -50,9 +51,9 @@ if (outcome !== "ongoing") {
 }
 ```
 
-Of course, we must still write our pay function. In the event of a tie, the players' object \(which contains the addresses of both players\) is sent to our function. When a game is won outright, just the address of the winner is sent to our function as a string. This means that our pay function will know which scenario is happening by checking if the data passed to it is an object of addresses \(tie\) or a single address string \(win\).
+Of course, we must still write our pay function. In the event of a tie, the players' object (which contains the addresses of both players) is sent to our function. When a game is won outright, just the address of the winner is sent to our function as a string. This means that our pay function will know which scenario is happening by checking if the data passed to it is an object of addresses (tie) or a single address string (win).
 
-ARK Core 2.6 introduced a wide variety of useful features that we can take advantage of here. The first is _sequential nonces_. Simply put, each transaction from a sending wallet must have a nonce value that is unique and strictly one greater than the nonce value of the most recent transaction sent from the wallet. We can use this to check the nonce value of our game wallet — if the value is zero, it means we’ve not paid anybody yet, so we should do so. If the nonce value is not 0, we’ve already paid out for this game. This prevents a case where players are paid multiple times \(e.g. when you restart your plugin and the game state is regenerated\).
+ARK Core 2.6 introduced a wide variety of useful features that we can take advantage of here. The first is _sequential nonces_. Simply put, each transaction from a sending wallet must have a nonce value that is unique and strictly one greater than the nonce value of the most recent transaction sent from the wallet. We can use this to check the nonce value of our game wallet — if the value is zero, it means we’ve not paid anybody yet, so we should do so. If the nonce value is not 0, we’ve already paid out for this game. This prevents a case where players are paid multiple times (e.g. when you restart your plugin and the game state is regenerated).
 
 The second feature is _multipayments_. This means, in the event of a tie, we can pay both players in a single transaction. This helps to limit network congestion and since there is only one transaction, it means there is only one nonce.
 

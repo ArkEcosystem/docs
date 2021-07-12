@@ -1,4 +1,4 @@
-## Glossary
+## Glossary  <!-- markdownlint-disable MD041 -->
 
 <x-general.sidebar-link path="#2" name="2" />
 <x-general.sidebar-link path="#a" name="A" />

@@ -1,5 +1,4 @@
-
-## Introduction
+## Introduction <!-- markdownlint-disable MD041 -->
 
 <x-general.sidebar-link path="/docs/nodem/intro" name="Coming Soon" />
 

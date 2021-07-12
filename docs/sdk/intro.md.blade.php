@@ -6,9 +6,9 @@ title: Introduction
 
 Using ARK SDKs, developers can employ the programming language of their choice to build applications utilizing the ARK blockchain. **The ARK SDKs are split into two packages for each language: Client and Cryptography.**
 
-[**Client SDKs**](/docs/sdk/guidelines/client) help developers fetch information from the ARK blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
+**[Client SDKs](/docs/sdk/guidelines/client)** help developers fetch information from the ARK blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
 
-[**Cryptography SDKs**](/docs/sdk/guidelines/crypto), by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
+**[Cryptography SDKs](/docs/sdk/guidelines/crypto)**, by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
 
 <x-alert type="info">
 If you need to learn more about Cryptography in general, how initial key and address generation works, what is a public or private key, head over to the page link below:
@@ -21,9 +21,12 @@ If your application doesn't involve sending transactions, you can most likely bu
 Usage guides are included for each supported language, and examples of how to use these libraries can be found in the **Examples** section of each specific library.
 
 ## Supported Languages & Frameworks
+
 Below you can find the Installation, Crypto and Client documentation for the language of your choice.
 <!-- The styling of the below links are a WIP. Not happy with it, might turn it into a table.  -->
+
 ### Typescript
+
 <x-link-collection
     :links="[
         ['path' => '/docs/sdk/typescript/installation', 'name' => 'Installation'],
@@ -35,6 +38,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 ----
 
 ### PHP
+
 <x-link-collection
     :links="[
         ['path' => '/docs/sdk/php/installation', 'name' => 'Installation'],
@@ -46,6 +50,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 ----
 
 ### Python
+
 <x-link-collection
     :links="[
         ['path' => '/docs/sdk/python/installation', 'name' => 'Installation'],
@@ -57,6 +62,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 ----
 
 ### Java
+
 <x-link-collection
     :links="[
         ['path' => '/docs/sdk/java/installation', 'name' => 'Installation'],
@@ -68,6 +74,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 ----
 
 ### GO
+
 <x-link-collection
     :links="[
         ['path' => '/docs/sdk/go/installation', 'name' => 'Installation'],
@@ -79,6 +86,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 ----
 
 ### C++
+
 <x-link-collection
     :links="[
         ['path' => '/docs/sdk/c++/installation', 'name' => 'Installation'],
@@ -86,6 +94,3 @@ Below you can find the Installation, Crypto and Client documentation for the lan
         ['path' => '/docs/sdk/c++/client/api-documentation', 'name' => 'Client'],
     ]"
 />
-
-
-

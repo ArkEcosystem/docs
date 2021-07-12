@@ -6,13 +6,13 @@ title: WIF
 
 The `WIF` class provides methods to make working with the `Bitcoin Wallet Import Format` easier and consistent across all Platform SDK products.
 
-### Importing the WIF class
+## Importing the WIF class
 
 ```typescript
 import { WIF } from "@payvo/sdk-crypto";
 ```
 
-### Encode a private key
+## Encode a private key
 
 ```typescript
 WIF.encode({
@@ -22,7 +22,7 @@ WIF.encode({
 });
 ```
 
-### Decode an encoded WIF
+## Decode an encoded WIF
 
 ```typescript
 WIF.decode('KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU73sVHnoWn');

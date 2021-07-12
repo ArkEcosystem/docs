@@ -12,7 +12,7 @@ The transfer transaction enables a user to broadcast a transaction to the networ
 | API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions) |
 | AJV Schema | [Base](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L17-L45) \| [Transfer](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L64-L74) |
 
-## Schnorr \(v2 Transaction Default\)
+## Schnorr (v2 Transaction Default)
 
 ### Schnorr Transaction Structure
 
@@ -41,21 +41,21 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0100000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x00` |
-| **Amount:** | **\[59\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[67\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[71\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[92\]** | **64** | `0x686282d4dd4603a082c90f78450eac0da05597c5ac054aa013f2fb224488e92a1e1b56237bf5ed6ec1319ab83a6e00ebf637ca90d846e4cb5d0e3502f6165de` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0100000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x00` |
+| **Amount:** | **[59]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[67]** | **4** | `0x00000000` |
+| **RecipientId:** | **[71]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[92]** | **64** | `0x686282d4dd4603a082c90f78450eac0da05597c5ac054aa013f2fb224488e92a1e1b56237bf5ed6ec1319ab83a6e00ebf637ca90d846e4cb5d0e3502f6165de` |
 
 ### Schnorr Transaction Structure with Second Signature
 
@@ -85,22 +85,22 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0100000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x00` |
-| **Amount:** | **\[59\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[67\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[71\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[92\]** | **64** | `0xe686282d4dd4603a082c90f78450eac0da05597c5ac054aa013f2fb224488e92a1e1b56237bf5ed6ec1319ab83a6e00ebf637ca90d846e4cb5d0e3502f6165de` |
-| **Second Signature:** | **\[156\]** | **64** | `0x492a92d0b740da1b652f83ced82cda75ac9aad19a1d3a693165d7b775e083b2a9d4598d645ebd26fbf63526d9a610f77469217e4a76743060d438b7bbaa96ba3` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0100000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x00` |
+| **Amount:** | **[59]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[67]** | **4** | `0x00000000` |
+| **RecipientId:** | **[71]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[92]** | **64** | `0xe686282d4dd4603a082c90f78450eac0da05597c5ac054aa013f2fb224488e92a1e1b56237bf5ed6ec1319ab83a6e00ebf637ca90d846e4cb5d0e3502f6165de` |
+| **Second Signature:** | **[156]** | **64** | `0x492a92d0b740da1b652f83ced82cda75ac9aad19a1d3a693165d7b775e083b2a9d4598d645ebd26fbf63526d9a610f77469217e4a76743060d438b7bbaa96ba3` |
 
 ### Schnorr Transaction Structure with VendorField
 
@@ -131,22 +131,22 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0200000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x0b` |
-| **VendorField:** | **\[59\]** | **19** | `0x48656c6c6f20576f726c64` |
-| **Amount:** | **\[78\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[86\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[90\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[111\]** | **64** | `0x2f325a0f08f02e764ff181f7f4539c84eb9a4ca610c67fbc909f9221aa5fd20f4230b6f64284fb0d46309fe9d32ac051d47f6fbd3df51e411ddefb83021620bc` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0200000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x0b` |
+| **VendorField:** | **[59]** | **19** | `0x48656c6c6f20576f726c64` |
+| **Amount:** | **[78]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[86]** | **4** | `0x00000000` |
+| **RecipientId:** | **[90]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[111]** | **64** | `0x2f325a0f08f02e764ff181f7f4539c84eb9a4ca610c67fbc909f9221aa5fd20f4230b6f64284fb0d46309fe9d32ac051d47f6fbd3df51e411ddefb83021620bc` |
 
 ### Schnorr Transaction Structure with Second Signature and VendorField
 
@@ -178,23 +178,23 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0200000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x0b` |
-| **VendorField:** | **\[59\]** | **19** | `0x48656c6c6f20576f726c64` |
-| **Amount:** | **\[78\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[86\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[90\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[111\]** | **64** | `0x2f325a0f08f02e764ff181f7f4539c84eb9a4ca610c67fbc909f9221aa5fd20f4230b6f64284fb0d46309fe9d32ac051d47f6fbd3df51e411ddefb83021620bc` |
-| **Signature:** | **\[175\]** | **64** | `0x85414319fd7d5f738a81f514a63efa2a881e08d885cb6317ab83d70cb80ce0f0f2e11945c2eaa1327237c2c7fb40d5a3c8a78529c7b8791fd9865e4ee69ac53711` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0200000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x0b` |
+| **VendorField:** | **[59]** | **19** | `0x48656c6c6f20576f726c64` |
+| **Amount:** | **[78]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[86]** | **4** | `0x00000000` |
+| **RecipientId:** | **[90]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[111]** | **64** | `0x2f325a0f08f02e764ff181f7f4539c84eb9a4ca610c67fbc909f9221aa5fd20f4230b6f64284fb0d46309fe9d32ac051d47f6fbd3df51e411ddefb83021620bc` |
+| **Signature:** | **[175]** | **64** | `0x85414319fd7d5f738a81f514a63efa2a881e08d885cb6317ab83d70cb80ce0f0f2e11945c2eaa1327237c2c7fb40d5a3c8a78529c7b8791fd9865e4ee69ac53711` |
 
 ## Ecdsa
 
@@ -225,21 +225,21 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0000000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x00` |
-| **Amount:** | **\[59\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[67\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[71\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[92\]** | **70** | `0x304402200570f30cc7436fc9ff63e1531773b1624db31d0869858811a8c4a8aa4edc787e02200a9949bbbff31022af031e2c612068b495024629d40cd6c6c7b34f2004dde5a1` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0000000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x00` |
+| **Amount:** | **[59]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[67]** | **4** | `0x00000000` |
+| **RecipientId:** | **[71]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[92]** | **70** | `0x304402200570f30cc7436fc9ff63e1531773b1624db31d0869858811a8c4a8aa4edc787e02200a9949bbbff31022af031e2c612068b495024629d40cd6c6c7b34f2004dde5a1` |
 
 ### Ecdsa Transaction Structure with Second Signature
 
@@ -269,22 +269,22 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0000000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x00` |
-| **Amount:** | **\[59\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[67\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[71\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[92\]** | **70** | `0x304402200570f30cc7436fc9ff63e1531773b1624db31d0869858811a8c4a8aa4edc787e02200a9949bbbff31022af031e2c612068b495024629d40cd6c6c7b34f2004dde5a1` |
-| **Second Signature:** | **\[162\]** | **70** | `0x304402204c0a6545fcae59afdcb4b68f50387cff513e90a58d1227c7f77ab12312470d2f02203adf470d33e46f1aff5a0ddb42e126055dc9449f85bb4a8d9f7bb1627394b69e` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0000000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x00` |
+| **Amount:** | **[59]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[67]** | **4** | `0x00000000` |
+| **RecipientId:** | **[71]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[92]** | **70** | `0x304402200570f30cc7436fc9ff63e1531773b1624db31d0869858811a8c4a8aa4edc787e02200a9949bbbff31022af031e2c612068b495024629d40cd6c6c7b34f2004dde5a1` |
+| **Second Signature:** | **[162]** | **70** | `0x304402204c0a6545fcae59afdcb4b68f50387cff513e90a58d1227c7f77ab12312470d2f02203adf470d33e46f1aff5a0ddb42e126055dc9449f85bb4a8d9f7bb1627394b69e` |
 
 ### Ecdsa Transaction Structure With VendorField
 
@@ -315,22 +315,22 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0200000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x0b` |
-| **VendorField:** | **\[59\]** | **19** | `0x48656c6c6f20576f726c64` |
-| **Amount:** | **\[78\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[86\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[90\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[111\]** | **70** | `0x304402201ad3dd5a5e05ca81973c32473d244932b0f10b47f3db9539b414f5d35c8c97ef02206193066ce28b590bbeca94505e72194b86a45cde83045a50942e8ca9af90c128` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0200000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x0b` |
+| **VendorField:** | **[59]** | **19** | `0x48656c6c6f20576f726c64` |
+| **Amount:** | **[78]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[86]** | **4** | `0x00000000` |
+| **RecipientId:** | **[90]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[111]** | **70** | `0x304402201ad3dd5a5e05ca81973c32473d244932b0f10b47f3db9539b414f5d35c8c97ef02206193066ce28b590bbeca94505e72194b86a45cde83045a50942e8ca9af90c128` |
 
 ### Ecdsa Transaction Structure With Second Signature and VendorField
 
@@ -362,20 +362,20 @@ ff02170100000000000000000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 #### Deserialized Hex Payload
 
-| Key | Pos. | Size _\(bytes\)_ | Value  _\(hex\)_ |
+| Key | Pos. | Size _(bytes)_ | Value  _(hex)_ |
 | :--- | :---: | :---: | :--- |
-| **Header:** | **\[0\]** | **1** | `0xff` |
-| **Version:** | **\[1\]** | **1** | `0x02` |
-| **Network:** | **\[2\]** | **1** | `0x17` |
-| **Typegroup:** | **\[3\]** | **4** | `0x01000000` |
-| **Type:** | **\[7\]** | **2** | `0x0000` |
-| **Nonce:** | **\[9\]** | **8** | `0x0200000000000000` |
-| **SenderPublicKey:** | **\[17\]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:** | **\[50\]** | **8** | `0x8096980000000000` |
-| **VendorField Length:** | **\[58\]** | **1** | `0x0b` |
-| **VendorField:** | **\[59\]** | **19** | `0x48656c6c6f20576f726c64` |
-| **Amount:** | **\[78\]** | **8** | `0x0100000000000000` |
-| **Expiration:** | **\[86\]** | **4** | `0x00000000` |
-| **RecipientId:** | **\[90\]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
-| **Signature:** | **\[111\]** | **70** | `0x304402201ad3dd5a5e05ca81973c32473d244932b0f10b47f3db9539b414f5d35c8c97ef02206193066ce28b590bbeca94505e72194b86a45cde83045a50942e8ca9af90c128` |
-| **Second Signature:** | **\[181\]** | **70** | `0x304402206ac723312f100d2712326ea33f929184b64d5da0fcb7f7f4cb594726b2488bd8022046995d2d3fcfcf681f6f95126897858ad367626dc46c4d56afcac7268f16e3df` |
+| **Header:** | **[0]** | **1** | `0xff` |
+| **Version:** | **[1]** | **1** | `0x02` |
+| **Network:** | **[2]** | **1** | `0x17` |
+| **Typegroup:** | **[3]** | **4** | `0x01000000` |
+| **Type:** | **[7]** | **2** | `0x0000` |
+| **Nonce:** | **[9]** | **8** | `0x0200000000000000` |
+| **SenderPublicKey:** | **[17]** | **33** | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:** | **[50]** | **8** | `0x8096980000000000` |
+| **VendorField Length:** | **[58]** | **1** | `0x0b` |
+| **VendorField:** | **[59]** | **19** | `0x48656c6c6f20576f726c64` |
+| **Amount:** | **[78]** | **8** | `0x0100000000000000` |
+| **Expiration:** | **[86]** | **4** | `0x00000000` |
+| **RecipientId:** | **[90]** | **21** | `0x170995750207ecaf0ccf251c1265b92ad84f553662` |
+| **Signature:** | **[111]** | **70** | `0x304402201ad3dd5a5e05ca81973c32473d244932b0f10b47f3db9539b414f5d35c8c97ef02206193066ce28b590bbeca94505e72194b86a45cde83045a50942e8ca9af90c128` |
+| **Second Signature:** | **[181]** | **70** | `0x304402206ac723312f100d2712326ea33f929184b64d5da0fcb7f7f4cb594726b2488bd8022046995d2d3fcfcf681f6f95126897858ad367626dc46c4d56afcac7268f16e3df` |

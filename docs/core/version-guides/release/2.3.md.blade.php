@@ -12,7 +12,7 @@ ARK `v2.3` is a minor update but not backward compatible with `v2.2.X`. This upd
 
 ## Migrating from v2.2 to v2.3
 
-Upgrading from `v2.2` to `v2.3` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility \(BC\) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.2` to `v2.3` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 WARNING!
 
@@ -30,12 +30,12 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 
 #### Step 1. Adjusting Configuration
 
-Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logger-pino`. We advise you to switch to the new package, to do so open the `~/.config/ark-core/<network>/plugins.js` file \(e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`\), locate the `@arkecosystem/core-logger-winston` plugin and replace it like shown below.
+Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logger-pino`. We advise you to switch to the new package, to do so open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-logger-winston` plugin and replace it like shown below.
 
 1. Open the file `~/.config/ark-core/mainnet/plugins.js`
-2. Locate the `logger-winston` package. The logger package can be found at the start of the `plugins.js` file \(line 3 starting with `"@arkecosystem/core-logger-winston": {...`\).
-3. Remove the section related to the `core-logger-winston` \(remove the following code\):
-4. Add the new logger configuration to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line \(see below\):
+2. Locate the `logger-winston` package. The logger package can be found at the start of the `plugins.js` file (line 3 starting with `"@arkecosystem/core-logger-winston": {...`).
+3. Remove the section related to the `core-logger-winston` (remove the following code):
+4. Add the new logger configuration to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
 5. Save the changes. Your configuration file should look like this:
 
 #### Step 2. Running the Update Command via the `ark` CLI
@@ -72,9 +72,9 @@ This major change is the transition to full SHA256 block IDs, encoded as a hex s
 
 #### 4. Smartbridge Size Increased
 
-The Smartbridge \(Vendorfield\) can now hold a total of 255 bytes of data, compared to the previous 64 bytes this is a four fold increase. This increase will allow applications to store more data on the blockchain and widen the use-case landscape.
+The Smartbridge (Vendorfield) can now hold a total of 255 bytes of data, compared to the previous 64 bytes this is a four fold increase. This increase will allow applications to store more data on the blockchain and widen the use-case landscape.
 
-### \[DEVNET ONLY\] The `next` release channel
+### [DEVNET ONLY] The `next` release channel
 
 To continue testing on the developer branch, you must switch your `ark cli` to the `next` release channel. This is for experienced users and developer projects that want to test the new features ahead of the official release on our mainnet. Use this for testing of developer releases, devnet only.
 

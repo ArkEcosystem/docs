@@ -44,11 +44,13 @@ paket add ARKEcosystem.Client --version 0.2.1
 2. Clone forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/dotnet-client
-   ```
+git clone https://github.com/<githubusername>/dotnet-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd dotnet-client
-   ```
+cd dotnet-client
+```

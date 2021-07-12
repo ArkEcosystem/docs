@@ -1,4 +1,4 @@
-## Introduction
+## Introduction <!-- markdownlint-disable MD041 -->
 
 <x-general.sidebar-link path="/docs/payvo-sdk" name="Introduction" />
 <x-general.sidebar-link path="/docs/payvo-sdk/architecture" name="Architecture" />

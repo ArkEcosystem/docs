@@ -20,7 +20,7 @@ This paragraph is from the introduction section of [https://semver.org/](https:/
 
 Good software needs to be correctly versioned to avoid any breaking changes for your users. This is mission critical if you provide software that can cost people large amounts of money by introducing a breaking change and not tagging a new major release.
 
-_Let's take a look at what Semantic Versioning recommends to do for versioning your software to make breaking changes clear_
+_Let's take a look at what Semantic Versioning recommends to do for versioning your software to make breaking changes clear_.
 
 * MAJOR version when you make incompatible API changes
 * MINOR version when you add functionality in a backward-compatible manner

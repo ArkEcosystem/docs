@@ -26,7 +26,7 @@ export class BusinessRegistrationTransactionHandler extends Handlers.Transaction
 ```
 
 <x-alert type="info">
-_Apply logic consists of basic **validation and verification protocol** rules, for example, i.\) check if there are enough funds in the wallet, ii.\) check for duplicate transactions, iii.\) if the received transaction is on the correct network \(correct bridgechain\), and many, many more._
+_Apply logic consists of basic **validation and verification protocol** rules, for example, i.) check if there are enough funds in the wallet, ii.) check for duplicate transactions, iii.) if the received transaction is on the correct network (correct bridgechain), and many, many more._
 </x-alert>
 
 We need to implement the following handler methods:
@@ -49,7 +49,7 @@ We will explain GTI **TransactionHandler** and the role it plays in our blockcha
 
 ## STEP 1: Define Custom Transaction Dependencies
 
-We must define the Transaction Type registration order if our custom transaction \(e.g.BusinessRegistrationTransaction \) depends on other transactions \(e.g. MultiSignature \)— in short, the MultiSignature transaction must be registered before ours. We define transaction dependencies by using the **dependencies\(\)** method call, where we return an array of dependent classes.
+We must define the Transaction Type registration order if our custom transaction (e.g.BusinessRegistrationTransaction ) depends on other transactions (e.g. MultiSignature )— in short, the MultiSignature transaction must be registered before ours. We define transaction dependencies by using the **dependencies()** method call, where we return an array of dependent classes.
 
 ```typescript
 export class BusinessRegistrationTransactionHandler extends Handlers.TransactionHandler {
@@ -68,13 +68,13 @@ export class BusinessRegistrationTransactionHandler extends Handlers.Transaction
 
 ## STEP 2: Adding Attributes To Global State
 
-Usually, we want to **add custom properties to our global state \(the walletManager class**\). These properties need to be quickly accessible \(memoization\) and searchable \(indexed\). We defined custom transaction fields and structure in here:
+Usually, we want to **add custom properties to our global state (the walletManager class**). These properties need to be quickly accessible (memoization) and searchable (indexed). We defined custom transaction fields and structure in here:
 
 <livewire:page-reference path="/docs/core/development-guides/custom-transactions/defining-the-structure" />
 
-Usually, we want to **add custom properties to our global state \(the walletManager class**\). These properties need to be quickly accessible \(memoization\) and searchable \(indexed\) and are computed during the bootstrap process.
+Usually, we want to **add custom properties to our global state (the walletManager class**). These properties need to be quickly accessible (memoization) and searchable (indexed) and are computed during the bootstrap process.
 
-We will accomplish this with the **walletAttributes**\(\) method, where we define the keys for our wallet attributes. Keys can be set during runtime by calling **wallet.setAttribute\(key, value\)** method. **Make sure the keys you use are unique.**
+We will accomplish this with the **`walletAttributes()`** method, where we define the keys for our wallet attributes. Keys can be set during runtime by calling **wallet.setAttribute(key, value)** method. **Make sure the keys you use are unique.**
 
 ```typescript
 export class BusinessRegistrationTransactionHandler extends Handlers.TransactionHandler {
@@ -92,7 +92,7 @@ export class BusinessRegistrationTransactionHandler extends Handlers.Transaction
 
 Bootstrap process is run each time a core node is started. The process evaluates all of the transactions in the local database and applies them to the corresponding wallets. All of the amounts, votes, and other custom properties are calculated and applied to the global state — walletManager.
 
-The source-code below shows implementing our `bootstrap` method to set our custom `business` attribute from existing custom transactions in database. When we are done with custom wallet attribute value changes, a index call is recommended on the **walletManager.index\(wallet\)**.
+The source-code below shows implementing our `bootstrap` method to set our custom `business` attribute from existing custom transactions in database. When we are done with custom wallet attribute value changes, a index call is recommended on the **walletManager.index(wallet)**.
 
 Also note that we use `this.transactionHistoryService` from the injected transaction history service to read forged business registration transactions from database.
 
@@ -177,7 +177,7 @@ export class BusinessRegistrationTransactionHandler extends Handlers.Transaction
 
 ## STEP 5: Implementing Transaction-Pool Validation
 
-The Transaction Pool serves as a temporary layer where valid and verified transactions are stored locally until it is their turn to be included in the newly forged \(created\) blocks. Each new custom transaction type needs to be verified and accepted by the same strict limitation rules that are enforced for our core transactions. We need to implement `throwIfCannotEnterPool` method \(see source-code snippet below\) to follow the rules and execution structure. The method is called from the core GTI Engine.
+The Transaction Pool serves as a temporary layer where valid and verified transactions are stored locally until it is their turn to be included in the newly forged (created) blocks. Each new custom transaction type needs to be verified and accepted by the same strict limitation rules that are enforced for our core transactions. We need to implement `throwIfCannotEnterPool` method (see source-code snippet below) to follow the rules and execution structure. The method is called from the core GTI Engine.
 
 Note that we use `this.poolQuery` from the injected transaction pool query service.
 

@@ -6,7 +6,7 @@ title: Upgrade Guides - Core v1.0 to v2.0
 
 > This is an archived guide. `v2.0.X` has been deprecated.
 
-Initially, you might have created your BridgeChain using [ARK Node](https://github.com/ARKEcosystem/ark-node), the official v1 implementation. Now that [ARK Core](https://github.com/arkecosystem/core) \(v2\) has reached a stable, production-ready release, you will want to upgrade your network.
+Initially, you might have created your BridgeChain using [ARK Node](https://github.com/ARKEcosystem/ark-node), the official v1 implementation. Now that [ARK Core](https://github.com/arkecosystem/core) (v2) has reached a stable, production-ready release, you will want to upgrade your network.
 
 Depending on the size of your BridgeChain network, upgrading to `ARK Core` may need more or less preparation. Upgrading is a breaking change, and all `v1` nodes will become incompatible with your new network. You should ensure that your users are aware of the upgrade, and node operators have time to adequately prepare for the migration, as they will need to update their tools and code bases.
 
@@ -19,7 +19,7 @@ Ensure you have correctly mapped all participants in your network. You should be
 
 During the migrations, third-party providers and exchanges should ensure they stop accepting transactions, as there is a gap where the blockchain is possibly rolled back a few hundred blocks. Once the migration is completed, these services must ensure they are not on a forked network; it is best to wait a few hours to a day until everyone is sure a network consensus has been reached.
 
-All node operators must cooperate in the migration. \(Technically [http://0.0.0.0:8080y](http://0.0.0.0:8080) only &gt; 50% of the delegates need to migrate. However, you should avoid a community split\). We recommend having a dedicated [Discord](https://discord.ark.io) channel, monitored by your team during the entire migration process, so that you may provide assistance.
+All node operators must cooperate in the migration. (Technically [http://0.0.0.0:8080y](http://0.0.0.0:8080) only &gt; 50% of the delegates need to migrate. However, you should avoid a community split). We recommend having a dedicated [Discord](https://discord.ark.io) channel, monitored by your team during the entire migration process, so that you may provide assistance.
 
 Together with your node operators, it would be best if you decided on a cutoff block `height`, after this height, `v1` will no longer be supported in your BridgeChain, and services relying on `v1` nodes may break and should be considered unreliable.
 
@@ -267,7 +267,7 @@ All node operators, delegates and third-party services should do the same and cr
 
 > Once you proceed with the following steps, `v1` nodes will not be able to join your network, nor will you be able to downgrade the network.
 
-Ensure that during this phase, all delegates and node operators are communicating with you. First, we need to collect all peers running `v2` nodes, and create an updated `peers.json`. Remove all `v1` nodes from your peers list, and add the `v2` nodes. \(Only add reliable nodes, for example, the ones curated by your team\).
+Ensure that during this phase, all delegates and node operators are communicating with you. First, we need to collect all peers running `v2` nodes, and create an updated `peers.json`. Remove all `v1` nodes from your peers list, and add the `v2` nodes. (Only add reliable nodes, for example, the ones curated by your team).
 
 Once we are passed the cutoff block, all node operators should create a snapshot of their blockchain:
 

@@ -32,11 +32,11 @@ It is recommended to make configuration changes to these options by working with
 
 | Variable | Description | Type | Default |
 | :--- | :--- | :---: | :---: |
-| CORE\_WEBHOOKS\_ENABLED | Enables or disabled the webhook API plugin | boolean | `false` |
-| CORE\_WEBHOOKS\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
-| CORE\_WEBHOOKS\_PORT | The API port on which the plugin will listen | integer | `4004` |
+| CORE_WEBHOOKS_ENABLED | Enables or disabled the webhook API plugin | boolean | `false` |
+| CORE_WEBHOOKS_HOST | The host to expose the API on | string | `"0.0.0.0"` |
+| CORE_WEBHOOKS_PORT | The API port on which the plugin will listen | integer | `4004` |
 
-The `whitelist` property can be changed directly in the `app.json` file and is an `Array` consisting of IP addresses that you allow to make connections to the webhook API. By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list \(recommended approach\). It is also possible to use wildcards to indicate a range of IPs \(e.g. `"12.34.56.*"`\) or even to allow everyone \(e.g. `"*"`\) \(not recommended\).
+The `whitelist` property can be changed directly in the `app.json` file and is an `Array` consisting of IP addresses that you allow to make connections to the webhook API. By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list (recommended approach). It is also possible to use wildcards to indicate a range of IPs (e.g. `"12.34.56.*"`) or even to allow everyone (e.g. `"*"`) (not recommended).
 
 ```javascript
 {

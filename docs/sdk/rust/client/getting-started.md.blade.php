@@ -33,23 +33,29 @@ You can now run `cargo build`, and Cargo will fetch the new dependencies and all
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/rust-client
-   ```
+git clone https://github.com/<githubusername>/rust-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd rust-client
-   ```
+cd rust-client
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Install the dependencies.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cargo build
-   ```
+cargo build
+```
 
+<!-- markdownlint-disable MD029 -->
 5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cargo test
-   ```
+cargo test
+```

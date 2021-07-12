@@ -37,23 +37,29 @@ composer require arkecosystem/crypto
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/php-crypto
-   ```
+git clone https://github.com/<githubusername>/php-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd php-crypto
-   ```
+cd php-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Install the dependencies with composer.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   composer install
-   ```
+composer install
+```
 
+<!-- markdownlint-disable MD029 -->
 5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   phpunit
-   ```
+phpunit
+```

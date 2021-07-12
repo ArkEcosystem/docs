@@ -12,9 +12,9 @@ It is an Electron-based JavaScript app developed with Vue.js & Tailwind CSS usin
 
 The ARK Desktop Wallet's source code can be found at the following link: [https://github.com/ArkEcosystem/desktop-wallet](https://github.com/ArkEcosystem/desktop-wallet)
 
-### Requirements
+## Requirements
 
-#### Ubuntu
+### Ubuntu
 
 Ubuntu requires additional libraries for kernel device management and hardware wallet support.
 
@@ -27,18 +27,18 @@ These may be installed using `apt-get`:
 sudo apt-get install libudev-dev libusb-1.0-0-dev
 ```
 
-#### Windows
+### Windows
 
 Windows additionally requires `Python 2.7` and `Visual Studio 2017`.
 
 They may be downloaded and installed via the links provided below:
 
 - Python 2.7
-  - [https://www.python.org/downloads/release/python-2718](https://www.python.org/downloads/release/python-2718/)
+  - [https://www.python.org/downloads/release/python-2718](https://www.python.org/downloads/release/python-2718/)
 - Visual Studio 2017
-  - [https://visualstudio.microsoft.com/vs/older-downloads](https://visualstudio.microsoft.com/vs/older-downloads/)
+  - [https://visualstudio.microsoft.com/vs/older-downloads](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-#### Node 12
+### Node 12
 
 Node.js v12 is the supported runtime for the ARK Desktop Wallet.
 
@@ -51,7 +51,7 @@ npm install -g n
 sudo n 12
 ```
 
-> https://nodejs.org
+> [https://nodejs.org](https://nodejs.org)
 
 #### Yarn
 
@@ -61,9 +61,9 @@ The Yarn dependency manager is also required and may be installed globally using
 npm install -g yarn
 ```
 
-> https://yarnpkg.com
+> [https://yarnpkg.com](https://yarnpkg.com)
 
-### Commands
+## Commands
 
 Below is a list of useful `yarn` commands for building, testing and packaging the ARK Desktop Wallet.
 

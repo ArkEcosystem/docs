@@ -22,45 +22,45 @@ On OSx you can also install Python through `HomeBrew`, which would also install 
 
 **On Windows :**
 
-* Download [`get-pip.py`](https://bootstrap.pypa.io/get-pip.py)
-* Open your terminal \(`powershell`, `cmd`, ...\) and navigate to the folder containing `get-pip.py`
+* Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
+* Open your terminal (`powershell`, `cmd`, ...) and navigate to the folder containing `get-pip.py`
 * Run the following command : `python get-pip.py`
 * Pip is now installed
 
 **On Unix :**
 
-_Debian / Ubuntu_
+_Debian / Ubuntu_:
 
 ```bash
 sudo apt install python3-pip
 ```
 
-_CentOS / Rhel_
+_CentOS / Rhel_:
 
 ```bash
 sudo yum install epel-release
 sudo yum install python-pip
 ```
 
-_Fedora_
+_Fedora_:
 
 ```bash
 sudo dnf install python3
 ```
 
-_Arch Linux_
+_Arch Linux_:
 
 ```bash
 sudo pacman -S python-pip
 ```
 
-_openSUSE_
+_openSUSE_:
 
 ```bash
 sudo zypper install python3-pip
 ```
 
-**On OSx :**
+**On macOS**:
 
 Download `get-pip.py` and then run it
 
@@ -69,7 +69,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 ```
 
-_With Brew_
+_With Brew_:
 
 ```bash
 brew install python3

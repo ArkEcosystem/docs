@@ -29,10 +29,10 @@ git submodule add -f https://github.com/your-username/your-core-plugin-repo-name
 
 We need to make some changes to the project first. Make sure to modify the default names for the files:
 
-* [package.json](https://github.com/learn-ark/dapp-core-module-template/blob/develop/package.json) \(model name, dependencies and other npm fields\)
-* [src/defaults.ts](https://github.com/learn-ark/dapp-core-module-template/blob/develop/src/defaults.ts) \(settings\)
-* [src/index.ts](https://github.com/learn-ark/dapp-core-module-template/blob/develop/src/index.ts) \(exports\)
-* [src/service-provider.ts](https://github.com/learn-ark/dapp-core-module-template/blob/develop/src/service-provider.ts) \(registration logic\)
+* [package.json](https://github.com/learn-ark/dapp-core-module-template/blob/develop/package.json) (model name, dependencies and other npm fields)
+* [src/defaults.ts](https://github.com/learn-ark/dapp-core-module-template/blob/develop/src/defaults.ts) (settings)
+* [src/index.ts](https://github.com/learn-ark/dapp-core-module-template/blob/develop/src/index.ts) (exports)
+* [src/service-provider.ts](https://github.com/learn-ark/dapp-core-module-template/blob/develop/src/service-provider.ts) (registration logic)
 
 The name of our module is **@vendorname/your-dapp-name**. Make sure to change the name in your **package.json** accordingly. It is recommended to scope your packages with a prefix like `@your-vendor/` to distinguish it from other **npm** packages. Check [https://docs.npmjs.com/misc/scope](https://docs.npmjs.com/misc/scope) for more information.
 
@@ -121,7 +121,7 @@ Start local blockchain with Testnet running on your developer computer. Follow s
 
 If you already have compiled and running core, just go to `core/packages/core` and run the `yarn full:testnet` command.
 
-**After the local Testnet starts, the log should show that dApp Module was loaded and run**. Console output should look like this \(if you haven't changed the source code from the template\):
+**After the local Testnet starts, the log should show that dApp Module was loaded and run**. Console output should look like this (if you haven't changed the source code from the template):
 
 ```bash
 [2020-10-22 11:13:27.161] INFO : Loading dApp
@@ -141,4 +141,4 @@ Feel free to look at other Core packages that expose important Core Platform bui
 * database
 * api
 * logger
-* **well...actually any core-module :\)**
+* **well...actually any core-module :)**

@@ -12,7 +12,7 @@ ARK `v2.4` is a minor update but not backward compatible with `v2.3.X`. This upd
 
 ## Migrating from v2.3 to v2.4
 
-Upgrading from `v2.3` to `v2.4` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility \(BC\) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.3` to `v2.4` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 WARNING
 
@@ -30,7 +30,7 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 
 1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-database-postgres` entry.
-3. Add this package addition line before it \(see below\):
+3. Add this package addition line before it (see below):
 4. Save the changes. Your configuration file should look like this:
 
 #### Step 2. Add `core-wallet-api` Package
@@ -41,7 +41,7 @@ It's especially important to register this plugin as this is what the Desktop an
 
 1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-blockchain` entry.
-3. Add this package addition line after it \(see below\):
+3. Add this package addition line after it (see below):
 4. Save the changes. Your configuration file should look like this:
 5. If you are using default firewall don't forget to open port `4040` to make `core-wallet-api` accessible to wallets.
 

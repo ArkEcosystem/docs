@@ -18,7 +18,7 @@ This guide is for setting up the development environment with Docker. If you are
 
 Let's clone our `core` repository and run the initial `yarn setup` command. We will also checkout the latest `develop` branch.
 
-`yarn setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages \(including transpiling typescript\). For mode information look into core's `package.json` file in the root folder.
+`yarn setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages (including transpiling typescript). For mode information look into core's `package.json` file in the root folder.
 
 ```bash
 git clone https://github.com/arkecosystem/core
@@ -32,13 +32,13 @@ yarn setup  #run Lerna to clean, bootstrap and build the core packages
 
 ARK Core includes several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
 
-For instance, you could use this command \(to be run from `core` root folder\):
+For instance, you could use this command (to be run from `core` root folder):
 
 ```bash
 yarn docker ark
 ```
 
-This command creates a new directory \(`docker`\) that contains 1 folder per network. You can read more about generating of Docker configurations [here](/docs/core/getting-started/development-setup/linux-macos#step-71-database-setup-using-docker).
+This command creates a new directory (`docker`) that contains 1 folder per network. You can read more about generating of Docker configurations [here](/docs/core/getting-started/development-setup/linux-macos#step-71-database-setup-using-docker).
 
 <x-alert type="info">
 Once your basic docker configurations are generated, you can select one of the two available **approaches** on how to best utilize the most fitting docker development setup.
@@ -97,7 +97,7 @@ _Check if yarn setup is complete:_
 docker logs ark-$NETWORK-core -f
 ```
 
-_You can now enter your ark-core container and use NodeJS in a Docker container \(Linux environment\)._
+_You can now enter your ark-core container and use NodeJS in a Docker container (Linux environment)._
 
 ```bash
 docker exec -it ark-$NETWORK-core bash
@@ -115,7 +115,7 @@ yarn full:testnet
 yarn relay:devnet
 ```
 
-_Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge\_all.sh** script._
+_Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
 <x-alert type="danger">
 Development files/presets are not Production ready. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).

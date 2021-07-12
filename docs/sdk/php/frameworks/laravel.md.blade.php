@@ -20,25 +20,25 @@ php artisan vendor:publish --provider="ARKEcosystem\ARK\ARKServiceProvider"
 
 This will create a `config/ark.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
 
-#### Default Connection Name
+### Default Connection Name
 
 This option `default` is where you may specify which of the connections below you wish to use as your default connection for all work. Of course, you may use many connections at once using the manager class. The default value for this setting is `main`.
 
-#### ARK Connections
+### ARK Connections
 
 This option `connections` is where each of the connections is set up for your application. Example configuration has been included, but you may add as many connections as you would like.
 
 ## Usage
 
-#### ARKManager
+### ARKManager
 
 This is the class of most interest. It is bound to the ioc container as `ark` and can be accessed using the `Facades\ARK` facade. This class implements the ManagerInterface by extending AbstractManager. The interface and abstract class are both part of [Graham Campbell's](https://github.com/GrahamCampbell) [Laravel Manager](https://github.com/GrahamCampbell/Laravel-Manager) package, so you may want to go and check out the docs for how to use the manager class over at that repository. Note that the connection class returned will always be an instance of `ARK\ARK`.
 
-#### Facades\ARK
+### Facades\ARK
 
 This facade will dynamically pass static method calls to the `ark` object in the ioc container which by default is the `ARKManager` class.
 
-#### ARKServiceProvider
+### ARKServiceProvider
 
 _This class contains no public methods of interest, it should be added to the providers array in `config/app.php` as it sets up ioc bindings._
 

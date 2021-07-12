@@ -1412,7 +1412,7 @@ See Proof-of-Concept.
 
 **More:** [Proof-of-Concept](glossary#proof-of-concept)
 
-### Point. Click. Blockchain.
+### Point. Click. Blockchain. <!-- markdownlint-disable-next-line MD026 -->
 
 Prior slogan for ARK.io, since replaced by 'The Simplest Way to Blockchain.'
 

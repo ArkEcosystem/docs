@@ -31,7 +31,7 @@ You will need to enter a user password and confirm it by entering the same passw
 
 You will see:
 
-```
+```bash
 passwd: password updated successfully
 Changing the user information for bridgechain
 Enter the new value, or press ENTER for the default

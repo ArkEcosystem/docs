@@ -8,4 +8,4 @@ Peers on the network are servers that will run your bridgechain nodes and will a
 
 This is an optional step and you can add peers later when you decide to run your network on Mainnet.
 
-By clicking on the `Add Server` button you can start adding your peer IPs. You can name them so they are more easily distinguishable \(names are not saved into configuration file, but just displayed here in the interface\). **Be sure to include your genesis node IP in the list.**
+By clicking on the `Add Server` button you can start adding your peer IPs. You can name them so they are more easily distinguishable (names are not saved into configuration file, but just displayed here in the interface). **Be sure to include your genesis node IP in the list.**

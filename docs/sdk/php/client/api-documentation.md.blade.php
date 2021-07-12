@@ -317,7 +317,7 @@ Create a new transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| array | transactions | Yes | Transaction\(s\) to broadcast |
+| array | transactions | Yes | Transaction(s) to broadcast |
 
 #### Return Value
 

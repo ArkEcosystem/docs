@@ -36,9 +36,9 @@ snapshots.list
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "snapshots.list",
-	"params": { }
+    "jsonrpc": "2.0",
+    "method": "snapshots.list",
+    "params": { }
 }
 ```
 
@@ -103,9 +103,9 @@ An empty result means that snapshot creation process has started successfully. I
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "snapshots.create",
-	"params": { "codec": "json", "skipCompression": true, "start": 1, "end": 200 }
+    "jsonrpc": "2.0",
+    "method": "snapshots.create",
+    "params": { "codec": "json", "skipCompression": true, "start": 1, "end": 200 }
 }
 ```
 
@@ -154,9 +154,9 @@ Empty result means that snapshot restore process is started successfully. It doe
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "snapshots.restore",
-	"params": { "blocks": "1-9793", "truncate": true, "verify": true }
+    "jsonrpc": "2.0",
+    "method": "snapshots.restore",
+    "params": { "blocks": "1-9793", "truncate": true, "verify": true }
 }
 ```
 
@@ -201,9 +201,9 @@ snapshots.delete
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "snapshots.delete",
-	"params": { "name": "1-9742" }
+    "jsonrpc": "2.0",
+    "method": "snapshots.delete",
+    "params": { "name": "1-9742" }
 }
 ```
 

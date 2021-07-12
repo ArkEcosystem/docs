@@ -8,7 +8,7 @@ number: 2
 
 Welcome to the second tutorial in our series of launching an HTML5 game in the ARK Desktop Wallet! This series is aimed at developers of all skill levels. The goal of this series is to be able to convert an HTML5 game to work as a fully functioning plugin within the ARK Desktop Wallet. The first set of tutorials will explain how to interact with the ARK blockchain in a standalone HTML5 environment before finally jumping over into the ARK Desktop Wallet.
 
-We left off [**last time** ](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one)with a self-contained [Construct 3](https://editor.construct.net/) app that lets us make sure a supplied address is valid on the ARK Public Network. Now it’s time to evolve this to work with any ARK-powered network of our choice and start building the back-end of our game.
+We left off **[last time](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one)** with a self-contained [Construct 3](https://editor.construct.net/) app that lets us make sure a supplied address is valid on the ARK Public Network. Now it’s time to evolve this to work with any ARK-powered network of our choice and start building the back-end of our game.
 
 For the rest of this tutorial series, we’re going to focus on building the back-end of our game and using Connect 4, a turn-based blockchain game as our ongoing example and template. We will let a player host a game by deciding their wager, and once a challenger matches it, the game will begin. We’ll use a standard 7 x 6 board and each player will take their turn to pick a column and insert their disc from 1 to 7. If a player lines up 4 discs either vertically, horizontally or diagonally, they’ll win the prize; if the game ends in a tie, both players receive their entry fee back. For simplicity, we will utilize ARK’s Smartbridge field to pick our chosen column on the board from 1 to 7. If you would like to take a more advanced approach, you can consider making [custom transactions with GTI](/docs/core/development-guides/custom-transactions/authoring-transaction-types) on your own bridgechain to make this game truly decentralized.
 
@@ -21,7 +21,7 @@ While this all may seem daunting at first, we will be making this as simple as p
 Now that you’re set up with your skeleton module, let’s list our objectives for what we want our Core plugin to do by the end of this tutorial. We’re going to:
 
 1. Set up a WebSocket server so our Construct 3 app and Core plugin can talk to each other;
-2. Send the network version \(which we talked about in the last tutorial\) whenever the app connects to the server, so it knows the address format to validate;
+2. Send the network version (which we talked about in the last tutorial) whenever the app connects to the server, so it knows the address format to validate;
 3. Generate a new ARK address to receive transactions;
 4. Listen for incoming transactions sent to that address.
 
@@ -44,7 +44,7 @@ We use host 0.0.0.0 which means we’ll accept connections to any of the IP addr
 To do this we first import the _ws_ dependency by adding the following line to the top of our file:
 
 ```typescript
-import * as WebSocket from “ws”;
+import * as WebSocket from "ws";
 ```
 
 Now we want to start our WebSocket server when our plugin starts. You might have already spotted the start method in **manager.ts** which is where we’ll start our server:
@@ -87,16 +87,16 @@ server.on("connection", websocket => {
 At this point, you can run yarn set up to build our plugin, restart your Core relay, and check the logs. You should see something like this:
 
 ```bash
-1|ark-relay | [2020–02–17 19:00:00.000] INFO : Connect 4 WebSocket server listening on ws://0.0.0.0:10000
+1|ark-relay | [2020-02-17 19:00:00.000] INFO : Connect 4 WebSocket server listening on ws://0.0.0.0:10000
 ```
 
-We can check that the WebSocket is working by heading over to [http://www.websocket.org/echo.html](http://www.websocket.org/echo.html) and entering _**ws://X.X.X.X:10000**_ \(where X.X.X.X is the IP address of your server running our Core plugin\) and clicking Connect. If you followed the steps above, you should see the network version appear in the Log box:
+We can check that the WebSocket is working by heading over to [http://www.websocket.org/echo.html](http://www.websocket.org/echo.html) and entering _**ws://X.X.X.X:10000**_ (where X.X.X.X is the IP address of your server running our Core plugin) and clicking Connect. If you followed the steps above, you should see the network version appear in the Log box:
 
 ![Our plugin running a WebSocket server on the ARK Development Network](https://miro.medium.com/max/705/0*TtMquq7DWEZMUEUM)
 
 ## **Generating a new ARK address to receive transactions**
 
-We need our plugin to generate a new address to receive wagers and process the Smartbridge messages to update our game state. To do this, our Construct 3 app will send a message **{action: “new”}** to the server which will trigger this action. Our Core plugin needs to listen for this message and act upon it, so we’ll add the following code immediately after the **websocket.send\(networkData\)** line above:
+We need our plugin to generate a new address to receive wagers and process the Smartbridge messages to update our game state. To do this, our Construct 3 app will send a message **{action: "new"}** to the server which will trigger this action. Our Core plugin needs to listen for this message and act upon it, so we’ll add the following code immediately after the **websocket.send(networkData)** line above:
 
 ```typescript
 websocket.on("message", message => {
@@ -136,7 +136,7 @@ import { Identities } from "@arkecosystem/crypto";
 private addresses = {};
 ```
 
-This is quite a lot of code so let’s break it down. We’re listening for any incoming messages over the WebSocket that contain **{action: “new”}** signaling that our Construct 3 app wants to generate a new address for a new game. This calls upon our new **generateAddress** method to internally produce a new wallet passphrase and convert it to an address. It is now stored in the addresses object which keeps track of all addresses created during this session than will be used to listen for incoming transactions.
+This is quite a lot of code so let’s break it down. We’re listening for any incoming messages over the WebSocket that contain **{action: "new"}** signaling that our Construct 3 app wants to generate a new address for a new game. This calls upon our new **generateAddress** method to internally produce a new wallet passphrase and convert it to an address. It is now stored in the addresses object which keeps track of all addresses created during this session than will be used to listen for incoming transactions.
 
 ## **Listen for incoming transactions**
 
@@ -170,13 +170,13 @@ Flip to our _Event Sheet 1_ and add a new event. Drill down to _System_ and then
 
 Add another event, this time listening for the _Websocket_ -&gt; _On Text Message_ event. For the corresponding action, choose _JSON_ -&gt; _Parse_. Enter **WebSocket.MessageText** for the JSON string.
 
-Now we want to add a few sub-events within the _Websocket_ -&gt; _On Text Message_ event to process the WebSocket data we receive. Choose _JSON_ and then _Has Key_. Enter “transaction” then add a new action. This will be fired when we receive a new transaction. For now, to prove it works, we’re just going to display the transaction data in an alert box in the browser. Choose _Browser_ then _Alert_. Enter **JSON.GetAsBeautifiedString\(“transaction”\)**.
+Now we want to add a few sub-events within the _Websocket_ -&gt; _On Text Message_ event to process the WebSocket data we receive. Choose _JSON_ and then _Has Key_. Enter "transaction" then add a new action. This will be fired when we receive a new transaction. For now, to prove it works, we’re just going to display the transaction data in an alert box in the browser. Choose _Browser_ then _Alert_. Enter **JSON.GetAsBeautifiedString("transaction")**.
 
-Add another sub-event and choose _JSON_ and then _Has Key_. Enter “**networkVersion**” this time. This will be used to set the network version so our app validates addresses properly depending on the network of the peer we’re connected to. Our corresponding action should be _System_ -&gt; _Set Value_. Make sure the _Variable_ is **networkVersion** and set the value to **JSON.Get\(“networkVersion”\)**.
+Add another sub-event and choose _JSON_ and then _Has Key_. Enter "**networkVersion**" this time. This will be used to set the network version so our app validates addresses properly depending on the network of the peer we’re connected to. Our corresponding action should be _System_ -&gt; _Set Value_. Make sure the _Variable_ is **networkVersion** and set the value to **JSON.Get("networkVersion")**.
 
-Now we should check for a newly generated address, show it to the user and allow the user to send a transaction via the Desktop Wallet. In order to proceed, we must add another sub-event. It’s _JSON_ -&gt; _Has Key_, again. Enter “address” and add a new _Browser_ action. Choose _Alert_ and enter Click “OK” to send a transaction to **JSON.Get\(“address”\)**. Add another action for this event, this time for _Browser -&gt; Go to URL._ For the URL we enter “**ark:**” & **JSON.Get\(“address”\)** which will automatically open the Desktop Wallet and pre-fill a transaction to be sent to the newly generated address.
+Now we should check for a newly generated address, show it to the user and allow the user to send a transaction via the Desktop Wallet. In order to proceed, we must add another sub-event. It’s _JSON_ -&gt; _Has Key_, again. Enter "address" and add a new _Browser_ action. Choose _Alert_ and enter Click "OK" to send a transaction to **JSON.Get("address")**. Add another action for this event, this time for _Browser -&gt; Go to URL._ For the URL we enter "**ark:**" & **JSON.Get("address")** which will automatically open the Desktop Wallet and pre-fill a transaction to be sent to the newly generated address.
 
-Finally, we’re going to wire up our new _Button_ to trigger this address generation action. Add an event, choosing _Button2_ \(as it’s our second button\) then _On clicked_. We’re going to add an action to send a message over the WebSocket to trigger the address creation process, so choose _WebSocket_ then _Send Text._ The text we’ll send is “**{“”action””: “”new””}**”**.**
+Finally, we’re going to wire up our new _Button_ to trigger this address generation action. Add an event, choosing _Button2_ (as it’s our second button) then _On clicked_. We’re going to add an action to send a message over the WebSocket to trigger the address creation process, so choose _WebSocket_ then _Send Text._ The text we’ll send is "**{""action"": ""new""}**"**.**
 
 Now we’re done! Our event sheet should look similar to the following:
 
@@ -201,4 +201,5 @@ That’s it for Part 2 of this tutorial series. In our next session, we will mak
 If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 
 ## Missed the previous part?
+
 <livewire:page-reference path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one" />

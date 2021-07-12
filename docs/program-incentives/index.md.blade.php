@@ -1,4 +1,4 @@
-## Introduction
+## Introduction <!-- markdownlint-disable MD041 -->
 
 <x-general.sidebar-link path="/docs/program-incentives/intro" name="Introduction" />
 

@@ -11,7 +11,7 @@ This example dApp enables a new transaction type on the ARK Core blockchain. New
 ## Example Goal
 
 **Storyline:**
-To develop and register  a new business identity on the Core blockchain \(with custom fields like name and website\) we need to implement the supporting business logic in the form of a dApp enabling new transaction type called **BusinessRegistration**.
+To develop and register  a new business identity on the Core blockchain (with custom fields like name and website) we need to implement the supporting business logic in the form of a dApp enabling new transaction type called **BusinessRegistration**.
 
 **TransactionType name**: BusinessRegistration
 
@@ -30,7 +30,7 @@ The same logic was used to build our `core-magistrate` transactions. You can che
 <x-alert type="success">
 One of the **best practices** we encountered was splitting of the custom transaction logic into two separate packages: **crypto** and **transactions**.
 
-This makes it easier to include in light-client application, where only payload generation is needed \(the core-magistrate-crypto part\), and the core protocol validation still remains in the main package \(the core-magistrate-transaction package\) on the core node.
+This makes it easier to include in light-client application, where only payload generation is needed (the core-magistrate-crypto part), and the core protocol validation still remains in the main package (the core-magistrate-transaction package) on the core node.
 </x-alert>
 
 ## STEP 1: Load And Run The Custom Transactions dApp

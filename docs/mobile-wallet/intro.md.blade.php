@@ -5,9 +5,11 @@ title: Introduction
 # Introduction
 
 ## What is it?
+
 The ARK Mobile Wallet is an application which allows you to manage ARK transactions at your fingertips. Create or Import your wallet, send ARK tokens and vote for your favorite delegate in a user-friendly interface.
 
 ## Getting Started
+
 To get started with the ARK Mobile Wallet, read the selection of guides presented below:
 <x-link-collection
     :links="[
@@ -18,5 +20,3 @@ To get started with the ARK Mobile Wallet, read the selection of guides presente
         ['path' => '/docs/mobile-wallet/user-guides/how-to-vote-for-a-delegate', 'name' => 'Vote for a Delegate'],
     ]"
 />
-
-
