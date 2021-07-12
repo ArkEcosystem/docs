@@ -28,16 +28,18 @@ Local hardware is effectively using equipment in your own home. There are multip
 
 Below are the server requirements for nodes on your network:
 
-**Genesis Node & Forging Peer Nodes**
+| Supported OS | Release Version(s) |
+| :----------: | :----------------: |
+| **Ubuntu**   | 18.x / 20.x        |
 
-* Ubuntu 16.x / 18.x
-* 2 CPU
-* 8GB RAM
-* 20+ GB SSD \(HDD\)
+| Relay Specification | Minimum | Recommended   |
+| :-----------------: | :-----: | :-----------: |
+| **CPUs**            | 2       | 4             |
+| **RAM**             | 4GB     | 8GB           |
+| **HDD**             | 80GB    | 100GB - 120GB |
 
-**Relay Nodes**
-
-* Ubuntu 16.x / 18.x
-* 1 CPU
-* 2-4GB RAM
-* 20+ GB SSD \(HDD\)
+| Forger Specification | Minimum            | Recommended              |
+| :------------------: | :----------------: | :----------------------: |
+| **CPUs**             | 2<br>(_dedicated_) | 4<br>(_dedicated_)       |
+| **RAM**              | 8GB                | 16GB                     |
+| **HDD**              | 80GB<br>(_SSD_)    | 100GB - 120GB<br>(_SSD_) |
