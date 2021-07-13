@@ -6,7 +6,8 @@ title: Run a relay node using Docker
 
 ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
-## Prerequisites to be installed:
+## Prerequisites to be installed
+
 <livewire:embed-link url="https://docs.docker.com/install" caption="Docker Community Edition" />
 <livewire:embed-link url="https://docs.docker.com/compose/install" caption="Docker Compose" />
 
@@ -98,7 +99,7 @@ sudo usermod -aG docker ${USER}
 
 ## Install Docker Compose
 
-### Docker Compose Install \(Ubuntu / Debian / CentOS Latest Stable Releases\)
+### Docker Compose Install (Ubuntu / Debian / CentOS Latest Stable Releases)
 
 ```bash
  sudo curl -sL "https://github.com/docker/compose/releases/download/`curl -fsSLI -o /dev/null -w %{url_effective} https://github.com/docker/compose/releases/latest | sed 's#.*tag/##g' && echo`/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose
@@ -163,7 +164,7 @@ docker logs postgres-mainnet
 
 ## Maintenance
 
-### Monitoring Relay Logs:
+### Monitoring Relay Logs
 
 ```bash
 docker logs --tail 50 core-mainnet -f
@@ -173,7 +174,7 @@ docker logs --tail 50 core-mainnet -f
 
 ### Docker Live Updates Are Now Possible With [CLI](/docs/core/development-guides/command-line-interface/getting-started)
 
-* As a preliminary step, installation of development tools is necessary \(only needed once, when doing initial update\):
+* As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 
 ```bash
 docker exec -it core-mainnet sudo apk add make gcc g++ git python
@@ -187,7 +188,7 @@ docker exec -it core-mainnet ark update
 
 > Updates and all changes made to the containers are kept even on container or host restart.
 
-### Update is also possible by destroying and running Core container from scratch, so it downloads the latest image.
+### Update is also possible by destroying and running Core container from scratch, so it downloads the latest image
 
 > Make sure you destroy only Core container in order to keep your database and avoid syncing the blockchain from zero block. The commands example below does it.
 

@@ -8,7 +8,7 @@ A server is pretty much just a computer with a hard drive, CPU, some memory and 
 
 Choosing the right hardware for your network setup is an integral part of the process of deploying your bridgechain. Depending on your use-case, various options are available:
 
-* **Virtual Private Server \(VPS\)**
+* **Virtual Private Server (VPS)**
 * **Dedicated Server**
 * **Local Hardware**
 

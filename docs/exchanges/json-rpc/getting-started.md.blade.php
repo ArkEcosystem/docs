@@ -52,7 +52,7 @@ exchange-json-rpc start
 
 | Flag | Description | Default | Required |
 | :--- | :--- | :--- | :--- |
-| --\[no-\]allowRemote | allow remote connections which are filtered by a whitelist | n/a | No |
+| --[no-]allowRemote | allow remote connections which are filtered by a whitelist | n/a | No |
 | --network= | the name of the network that should be used | mainnet | No |
 | --token= | the name of the token that should be used | ark | No |
 | --host= | the host that should be used to expose the RPC | 0.0.0.0 | No |
@@ -82,7 +82,7 @@ exchange-json-rpc stop
 
 ### `run`
 
-> Run the JSON-RPC without pm2 **\(exits on CTRL+C\)**
+> Run the JSON-RPC without pm2 **(exits on CTRL+C)**
 
 ```bash
 exchange-json-rpc run
@@ -90,7 +90,7 @@ exchange-json-rpc run
 
 | Flag | Description | Default | Required |
 | :--- | :--- | :--- | :--- |
-| --\[no-\]allowRemote | allow remote connections which are filtered by a whitelist | n/a | No |
+| --[no-]allowRemote | allow remote connections which are filtered by a whitelist | n/a | No |
 | --network= | the name of the network that should be used | mainnet | No |
 | --token= | the name of the token that should be used | ark | No |
 | --host= | the host that should be used to expose the RPC | 0.0.0.0 | No |

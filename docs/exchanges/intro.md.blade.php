@@ -18,5 +18,3 @@ Use the sidebar to navigate this section, or follow the links below:
 <livewire:page-reference path="/docs/exchanges/json-rpc/examples" />
 <livewire:page-reference path="/docs/exchanges/json-rpc/endpoints/intro" />
 <livewire:page-reference path="/docs/exchanges/public-api-guide" />
-
-

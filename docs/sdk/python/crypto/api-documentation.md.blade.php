@@ -18,7 +18,7 @@ Get a fee for a given transaction type
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | transaction\_type | Yes | Transaction type for which we wish to get a fee |
+| int | transaction_type | Yes | Transaction type for which we wish to get a fee |
 
 #### Return Value
 
@@ -36,7 +36,7 @@ Set a fee
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | transaction\_type | Yes | Transaction type for which we wish to set a fee |
+| int | transaction_type | Yes | Transaction type for which we wish to set a fee |
 | int | value | Yes | Fee for a given transaction type |
 
 #### Return Value
@@ -57,7 +57,7 @@ Set what network you want to use in the crypto library
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Network | network\_object | Yes | Testnet, Devnet, Mainnet |
+| Network | network_object | Yes | Testnet, Devnet, Mainnet |
 
 #### Return Value
 
@@ -109,8 +109,8 @@ Get an address from a public key
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | public\_key | Yes | Public key |
-| int | network\_version | No | Version of the network |
+| str | public_key | Yes | Public key |
+| int | network_version | No | Version of the network |
 
 #### Return Value
 
@@ -128,8 +128,8 @@ Get an address from private key
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | private\_key | Yes | Private key |
-| int | network\_version | No | Version of the network |
+| str | private_key | Yes | Private key |
+| int | network_version | No | Version of the network |
 
 #### Return Value
 
@@ -148,7 +148,7 @@ Get an address from passphrase
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
-| int | network\_version | No | Version of the network |
+| int | network_version | No | Version of the network |
 
 #### Return Value
 
@@ -167,13 +167,13 @@ Validate a given address
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | str | address | Yes | Address to validate |
-| int | network\_version | No | Version of the network |
+| int | network_version | No | Version of the network |
 
 #### Return Value
 
 `<class 'bool'>`
 
-## crypto.identity.private\_key.PrivateKey
+## crypto.identity.private_key.PrivateKey
 
 ### `sign()`
 
@@ -235,13 +235,13 @@ Create PrivateKey object from a given hex private key
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | private\_key | Yes | Private key |
+| str | private_key | Yes | Private key |
 
 #### Return Value
 
 `<class 'PrivateKey'>`
 
-## crypto.identity.public\_key.PublicKey
+## crypto.identity.public_key.PublicKey
 
 ### `to_hex()`
 
@@ -285,7 +285,7 @@ Create PublicKey object from a given hex private key
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | public\_key | Yes | Public key |
+| str | public_key | Yes | Public key |
 
 #### Return Value
 
@@ -306,7 +306,7 @@ Get wif from passphrase
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
-| int | network\_wif | No | Network WIF |
+| int | network_wif | No | Network WIF |
 
 #### Return Value
 
@@ -465,7 +465,7 @@ Set the Public Key of the transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | public\_key | Yes | Public key of the transaction |
+| str | public_key | Yes | Public key of the transaction |
 
 #### Return Value
 
@@ -483,7 +483,7 @@ Set the block-height or time when the transaction should expire.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int, HTLC\_LOCK\_EXPIRATION\_TYPE | expiration | Yes | Expiration of the transaction |
+| int, HTLC_LOCK_EXPIRATION_TYPE | expiration | Yes | Expiration of the transaction |
 
 #### Return Value
 
@@ -501,13 +501,13 @@ Set the type group of the transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int, TRANSACTION\_TYPE\_GROUP | type\_group | Yes | Type group of the transaction |
+| int, TRANSACTION_TYPE_GROUP | type_group | Yes | Type group of the transaction |
 
 #### Return Value
 
 `<class 'NoneType'>`
 
-## crypto.transactions.builder.delegate\_registration.DelegateRegistration
+## crypto.transactions.builder.delegate_registration.DelegateRegistration
 
 ### `__init__()`
 
@@ -546,7 +546,7 @@ Sign the transaction using the given passphrase
 
 `<class 'NoneType'>`
 
-## crypto.transactions.builder.delegate\_resignation.DelegateResignation
+## crypto.transactions.builder.delegate_resignation.DelegateResignation
 
 ### `__init__()`
 
@@ -610,7 +610,7 @@ Get the type group of the Transaction.
 
 `<class 'int'>`
 
-## crypto.transactions.builder.multi\_payment.MultiPayment
+## crypto.transactions.builder.multi_payment.MultiPayment
 
 ### `__init__()`
 
@@ -655,13 +655,13 @@ Add a payment to the Payments array of a Transaction.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | int | amount | Yes | Transaction amount |
-| string | recipient\_id | Yes | Transaction recipient |
+| string | recipient_id | Yes | Transaction recipient |
 
 #### Return Value
 
 `<class 'NoneType'>`
 
-## crypto.transactions.builder.multi\_signature\_registration.MultiSignatureRegistration
+## crypto.transactions.builder.multi_signature_registration.MultiSignatureRegistration
 
 ### `__init__()`
 
@@ -693,7 +693,7 @@ Set the minimum amount of participants of a Transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | minimum\_participants | Yes | Transaction minimum participants |
+| int | minimum_participants | Yes | Transaction minimum participants |
 
 #### Return Value
 
@@ -711,7 +711,7 @@ Set the public keys of a Transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| list | public\_keys | Yes | Transaction public keys participants |
+| list | public_keys | Yes | Transaction public keys participants |
 
 #### Return Value
 
@@ -729,13 +729,13 @@ Add a participant with his public key to the Transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | public\_key | Yes | Participant public key |
+| str | public_key | Yes | Participant public key |
 
 #### Return Value
 
 `<class 'NoneType'>`
 
-## crypto.transactions.builder.second\_signature\_registration.SecondSignatureRegistration
+## crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration
 
 ### `__init__()`
 
@@ -749,14 +749,14 @@ Create a new SecondSignatureRegistration transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | second\_passphrase | No | Second passphrase |
+| str | second_passphrase | No | Second passphrase |
 | int | fee | No | Transaction fee |
 
 #### Return Value
 
 `<class 'crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration'>`
 
-## crypto.transactions.builder.htlc\_lock.HtlcLock
+## crypto.transactions.builder.htlc_lock.HtlcLock
 
 ### `__init__()`
 
@@ -770,10 +770,10 @@ Create a new HtlcLock transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | recipient\_id | Yes | Transaction recipient |
-| str | secret\_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
-| int | expiration\_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
-| int | expiration\_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
+| str | recipient_id | Yes | Transaction recipient |
+| str | secret_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
+| int | expiration_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
+| int | expiration_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -792,7 +792,7 @@ Get the type group of the Transaction.
 
 `<class 'int'>`
 
-## crypto.transactions.builder.htlc\_claim.HtlcClaim
+## crypto.transactions.builder.htlc_claim.HtlcClaim
 
 ### `__init__()`
 
@@ -806,8 +806,8 @@ Create a new HtlcClaim transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | transaction\_id | Yes | HTLC Lock transaction id |
-| str | unlock\_secret | Yes | Transaction secret hash |
+| str | transaction_id | Yes | HTLC Lock transaction id |
+| str | unlock_secret | Yes | Transaction secret hash |
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -826,7 +826,7 @@ Get the type group of the Transaction.
 
 `<class 'int'>`
 
-## crypto.transactions.builder.htlc\_refund.HtlcRefund
+## crypto.transactions.builder.htlc_refund.HtlcRefund
 
 ### `__init__()`
 
@@ -840,7 +840,7 @@ Create a new HtlcRefund transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | transaction\_id | Yes | HTLC Lock transaction id |
+| str | transaction_id | Yes | HTLC Lock transaction id |
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -936,7 +936,7 @@ Create a new deserializer instance
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ??? | serialized | Yes | Serialized |
-| ??? | asset\_offset | Yes | Offset |
+| ??? | asset_offset | Yes | Offset |
 | ??? | transaction | Yes | Transaction |
 
 #### Return Value
@@ -955,7 +955,7 @@ Handle the deserialization of transaction data
 
 `NotImplementedError`
 
-## crypto.transactions.deserializers.delegate\_registration
+## crypto.transactions.deserializers.delegate_registration
 
 ### `deserialize()`
 
@@ -969,7 +969,7 @@ Handle the deserialization of "delegate registration" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.delegate\_resignation
+## crypto.transactions.deserializers.delegate_resignation
 
 ### `deserialize()`
 
@@ -983,7 +983,7 @@ Handle the deserialization of "delegate resignation" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc\_lock
+## crypto.transactions.deserializers.htlc_lock
 
 ### `deserialize()`
 
@@ -997,7 +997,7 @@ Handle the deserialization of "HTLC Lock" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc\_claim
+## crypto.transactions.deserializers.htlc_claim
 
 ### `deserialize()`
 
@@ -1011,7 +1011,7 @@ Handle the deserialization of "HTLC Claim" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc\_refund
+## crypto.transactions.deserializers.htlc_refund
 
 ### `deserialize()`
 
@@ -1039,7 +1039,7 @@ Handle the deserialization of "IPFS" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.multi\_payment
+## crypto.transactions.deserializers.multi_payment
 
 ### `deserialize()`
 
@@ -1053,7 +1053,7 @@ Handle the deserialization of "multi payments" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.multi\_signature\_registration
+## crypto.transactions.deserializers.multi_signature_registration
 
 ### `deserialize()`
 
@@ -1067,7 +1067,7 @@ Handle the deserialization of "multi signature registration" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.second\_signature\_registration
+## crypto.transactions.deserializers.second_signature_registration
 
 ### `deserialize()`
 
@@ -1124,7 +1124,7 @@ Create a new serializer instance
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | Transaction | transaction | Yes | Transaction |
-| bytes | byte\_data | No | ... |
+| bytes | byte_data | No | ... |
 
 #### Return Value
 
@@ -1142,7 +1142,7 @@ Handle the serialization of transaction data
 
 `NotImplementedError`
 
-## crypto.transactions.serializers.delegate\_registration
+## crypto.transactions.serializers.delegate_registration
 
 ### `serialize`
 
@@ -1156,7 +1156,7 @@ Handle the serialization of "delegate registration" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.delegate\_resignation
+## crypto.transactions.serializers.delegate_resignation
 
 ### `serialize`
 
@@ -1170,7 +1170,7 @@ Handle the serialization of "delegate resignation" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc\_lock
+## crypto.transactions.serializers.htlc_lock
 
 ### `serialize()`
 
@@ -1184,7 +1184,7 @@ Handle the serialization of "HTLC Lock" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc\_claim
+## crypto.transactions.serializers.htlc_claim
 
 ### `serialize()`
 
@@ -1198,7 +1198,7 @@ Handle the serialization of "HTLC Claim" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc\_refund
+## crypto.transactions.serializers.htlc_refund
 
 ### `serialize()`
 
@@ -1226,7 +1226,7 @@ Handle the serialization of "ipfs" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.multi\_payment
+## crypto.transactions.serializers.multi_payment
 
 ### `serialize`
 
@@ -1240,7 +1240,7 @@ Handle the serialization of "multi payment" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.multi\_signature\_registration
+## crypto.transactions.serializers.multi_signature_registration
 
 ### `serialize`
 
@@ -1254,7 +1254,7 @@ Handle the serialization of "multi signature" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.second\_signature\_registration
+## crypto.transactions.serializers.second_signature_registration
 
 ### `serialize`
 
@@ -1340,7 +1340,7 @@ Handle the deserialization of transaction data
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | asset\_offset | Yes | Offset |
+| int | asset_offset | Yes | Offset |
 | transaction.Transaction | transaction | Yes | Transaction |
 
 #### Return Value
@@ -1397,9 +1397,9 @@ Perform AIP11 compliant serialization
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bool | skip\_signature | No | Should we skip the serialization of the signature |
-| bool | skip\_second\_signature | No | Should we skip the serialization of the second signature |
-| bool | skip\_multi\_signature | No | Should we skip the serialization of multiple signatures |
+| bool | skip_signature | No | Should we skip the serialization of the signature |
+| bool | skip_second_signature | No | Should we skip the serialization of the second signature |
+| bool | skip_multi_signature | No | Should we skip the serialization of multiple signatures |
 | bool | raw | No | Raw output |
 
 #### Return Value
@@ -1418,7 +1418,7 @@ Handle the serialization of transaction data
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bytes | bytes\_data | Yes | ... |
+| bytes | bytes_data | Yes | ... |
 
 #### Return Value
 
@@ -1436,10 +1436,10 @@ Handle the serialization of "signatures" data
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bytes | bytes\_data | Yes | ... |
-| bool | skip\_signature | Yes | Should we skip the serialization of the signature |
-| bool | skip\_second\_signature | Yes | Should we skip the serialization of the second signature |
-| bool | skip\_multi\_signature | Yes | Should we skip the serialization of multiple signatures |
+| bytes | bytes_data | Yes | ... |
+| bool | skip_signature | Yes | Should we skip the serialization of the signature |
+| bool | skip_second_signature | Yes | Should we skip the serialization of the second signature |
+| bool | skip_multi_signature | Yes | Should we skip the serialization of multiple signatures |
 
 #### Return Value
 
@@ -1514,9 +1514,9 @@ Convert the transaction to its byte representation
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bool | skip\_signature | Yes | Skip first signature |
-| bool | skip\_second\_signature | Yes | Skip second signature |
-| bool | skip\_multi\_signature | Yes | Skip multi signatures |
+| bool | skip_signature | Yes | Skip first signature |
+| bool | skip_second_signature | Yes | Skip second signature |
+| bool | skip_multi_signature | Yes | Skip multi signatures |
 
 #### Return Value
 
@@ -1535,7 +1535,7 @@ Parse the signature, second signature and multi signatures
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | str | serialized | Yes | Serialized |
-| int | start\_offset | Yes | Offset |
+| int | start_offset | Yes | Offset |
 
 #### Return Value
 
@@ -1553,9 +1553,9 @@ Perform AIP11 compliant serialization
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bool | skip\_signature | Yes | Skip first signature |
-| bool | skip\_second\_signature | Yes | Skip second signature |
-| bool | skip\_multi\_signature | Yes | Skip multi signatures |
+| bool | skip_signature | Yes | Skip first signature |
+| bool | skip_second_signature | Yes | Skip second signature |
+| bool | skip_multi_signature | Yes | Skip multi signatures |
 
 #### Return Value
 
@@ -1615,7 +1615,7 @@ Handle each transaction type differently
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bytes | bytes\_data | Yes | Input the bytes data to which you want to append new bytes |
+| bytes | bytes_data | Yes | Input the bytes data to which you want to append new bytes |
 
 #### Return Value
 
@@ -1633,10 +1633,10 @@ Handle the serialization of "signatures" data
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bytes | bytes\_data | Yes | Input the bytes data to which you want to append new bytes from signature |
-| bool | skip\_signature | Yes | Skip first signature |
-| bool | skip\_second\_signature | Yes | Skip second signature |
-| bool | skip\_multi\_signature | Yes | Skip multi signatures |
+| bytes | bytes_data | Yes | Input the bytes data to which you want to append new bytes from signature |
+| bool | skip_signature | Yes | Skip first signature |
+| bool | skip_second_signature | Yes | Skip second signature |
+| bool | skip_multi_signature | Yes | Skip multi signatures |
 
 #### Return Value
 
@@ -1658,7 +1658,7 @@ Create a new message instance
 | :--- | :--- | :--- | :--- |
 | str | message | Yes | Message |
 | str | signature | Yes | Signature |
-| str | public\_key | Yes | Public key |
+| str | public_key | Yes | Public key |
 
 #### Return Value
 

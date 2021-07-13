@@ -447,7 +447,7 @@ Builds a transaction for a multi signature registration.
 | String | secondPassphrase | No | Second passphrase that will be registered for the wallet |
 | UInt8 | min | Yes | Minimum required signatures |
 | UInt8 | lifetime | Yes | Transaction lifetime |
-| \[String\] | keysgroup | Yes | Transaction keysgroup |
+| [String] | keysgroup | Yes | Transaction keysgroup |
 
 #### Return Value
 

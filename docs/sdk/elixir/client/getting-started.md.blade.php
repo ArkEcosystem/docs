@@ -12,9 +12,9 @@ title: Getting Started
 
 ## Hex and mix
 
-> Hex is the package manager for the Erlang ecosystem, you can find it [here](https://hex.pm/).
+`Hex` is the package manager for the Erlang ecosystem, you can find it [here](https://hex.pm/).
 
-> mix is a build tool that ships with Elixir that provides tasks for creating, compiling, testing your application, managing its dependencies and much more;
+`mix` is a build tool that ships with Elixir that provides tasks for creating, compiling, testing your application, managing its dependencies and much more;
 
 ### Install `mix`
 
@@ -43,23 +43,29 @@ mix deps.get
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/elixir-client
-   ```
+git clone https://github.com/<githubusername>/elixir-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd elixir-client
-   ```
+cd elixir-client
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Install the dependencies.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   mix deps.get
-   ```
+mix deps.get
+```
 
+<!-- markdownlint-disable MD029 -->
 5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   mix test
-   ```
+mix test
+```

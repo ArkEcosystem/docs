@@ -4,7 +4,7 @@ title: Configuring Rate Limits
 
 # Configuring Rate Limits
 
-ARK Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, ARK Core nodes have strict rate limits. Enterprise users \(such as exchanges\) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
+ARK Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, ARK Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
 
 ## Exceeding the Rate Limit <a id="exceeding-the-rate-limit"></a>
 

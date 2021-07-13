@@ -36,19 +36,19 @@ The below procedure simply describes how you or someone else would configure and
 1. Open the **ARK Desktop Wallet**.
 2. Add the bridgechain network in question to the ARK Desktop Wallet. That procedure can be found in the [Adding Bridgechain to ARK Desktop Wallet](https://github.com/ArkEcosystem/gitbooks-deployer/tree/040c67394a003d6fced9936a8be483b18f6c118a/deploy/deploy/adding-bridgechain-to-ark-desktop-wallet.md) portion of this documentation.
 3. Create a new address in the wallet within your network's profile.
-4. Obtain enough tokens to execute a **delegate registration transaction** using the new address. For the ARK Public Network and Basic bridgechains, this is 25 tokens \(but can be dynamic\).
+4. Obtain enough tokens to execute a **delegate registration transaction** using the new address. For the ARK Public Network and Basic bridgechains, this is 25 tokens (but can be dynamic).
 5. Click the `...` in the top right of the wallet interface.
 6. Choose `Register delegate`.
-7. Declare a `delegate name` \(_this is public_\).
+7. Declare a `delegate name` (_this is public_).
 8. Execute the transaction.
-9. Configure a new peer \(relay node\). That procedure can be found in the [Adding Network Peers](https://github.com/ArkEcosystem/gitbooks-deployer/tree/040c67394a003d6fced9936a8be483b18f6c118a/deploy/deploy/adding-network-peers.md) portion of this documentation.
+9. Configure a new peer (relay node). That procedure can be found in the [Adding Network Peers](https://github.com/ArkEcosystem/gitbooks-deployer/tree/040c67394a003d6fced9936a8be483b18f6c118a/deploy/deploy/adding-network-peers.md) portion of this documentation.
 10. Replacing `bridgechain` with your lowercase bridgechain name lets configure forger:
 
 ```bash
 bridgechain config:forger
 ```
 
-1. Select either **BIP38 \(Recommended\)** or **Plain BIP39**. Encrypted BIP38 is recommended for additional security.
+1. Select either **BIP38 (Recommended)** or **Plain BIP39**. Encrypted BIP38 is recommended for additional security.
 2. Enter the 12 word delegate passphrase associated with the recently registered delegate address.
 3. If you chose BIP38, choose a password. This password is required whenever the forger process launches. Confirm with `Y`.
 4. Start the forger process, replacing `bridgechain` with your lowercase chain name:
@@ -57,7 +57,7 @@ bridgechain config:forger
  bridgechain forger:start
 ```
 
-1. Enter your BIP38 password \(if applicable\). Confirm with `Y`.
+1. Enter your BIP38 password (if applicable). Confirm with `Y`.
 2. The success message will say `Starting bridgechain-forger... done`.
 3. Replacing `bridgechain` with your lowercase chain name execute:
 

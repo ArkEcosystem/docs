@@ -94,7 +94,7 @@ cronJob
     .execute(() => console.log("Hello World"))
 ```
 
-### Schedule the job to run daily at a given time \(10:00, 19:30, etc\)
+### Schedule the job to run daily at a given time (10:00, 19:30, etc)
 
 ```typescript
 cronJob

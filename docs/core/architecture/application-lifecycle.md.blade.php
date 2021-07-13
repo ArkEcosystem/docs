@@ -32,7 +32,7 @@ The foundation of Core consists of a handful of services that are necessary to p
 6. We load the environment variables in preparation for loading the application configuration.
 7. We load the application configuration from a previously specified directory.
 8. We load the cryptography configuration that matches the network specified during application launch.
-9. We start a watcher that will reload Core if there are any changes to the configuration. **\(this can be configured to not start\)**
+9. We start a watcher that will reload Core if there are any changes to the configuration. **(this can be configured to not start)**
 10. We register all of the base services like caching, queues and validation.
 11. We load the service providers of all registered plugins, validate their configuration and store them for later use.
 

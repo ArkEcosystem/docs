@@ -4,19 +4,19 @@ title: How to Vote or Unvote in the Desktop Wallet?
 
 # How to Vote or Unvote in the Desktop Wallet?
 
-### General Information
+## General Information
 
 You can use your ARK to vote or un-vote a delegate. Some basic voting info:
 
-#### 1 ARK address can vote for only one delegate at a time
+### 1 ARK address can vote for only one delegate at a time
 
 If you wish to vote for more than one delegate you can create multiple wallets, split your ARK among those wallets and vote for a different delegate with each wallet. For example, if you have 1000 ARK, you can vote for one delegate with all of your ARK in one wallet, or you can divide your ARK into two wallets of 500 ARK each and vote for two different delegates. You can create as many wallets as you want and divide your ARK among them in any proportion you choose.
 
-#### 1 ARK equals a voting weight of 1
+### 1 ARK equals a voting weight of 1
 
 The more ARK you hold, the more voting weight you possess. If you split your ARK into multiple wallets, your voting power divides proportionally among those wallets. For example, if you have 1,000 ARK your voting power is equal to 1,000 ARK. If you split your ARK into two wallets, each will have a voting power of 500 ARK.
 
-#### Each vote or un-vote comes with a fee
+### Each vote or un-vote comes with a fee
 
 Each transaction in the ARK network costs a certain amount of ARK. With the implementation of dynamic fees, this cost will become adjustable. You can choose how much you want to spend for each specific transaction, even for voting and for un-voting.
 

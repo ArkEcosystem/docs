@@ -17,7 +17,7 @@ Open your project and execute the following commands to install both SDKs. Make 
 
 Clone the C++ Client and Crypto repos into your projects external dependencies directory.
 
-```
+```bash
 git clone https://github.com/arkecosystem/cpp-client
 git clone https://github.com/arkecosystem/cpp-crypto
 ```
@@ -26,7 +26,7 @@ git clone https://github.com/arkecosystem/cpp-crypto
 
 ### Project Layout
 
-> ```
+> ```bash
 > project
 > - extern/
 >    - cpp-client/
@@ -38,7 +38,7 @@ git clone https://github.com/arkecosystem/cpp-crypto
 
 ### Cloning
 
-```
+```bash
 git clone https://github.com/arkecosystem/cpp-client extern/cpp-client
 git clone https://github.com/arkecosystem/cpp-crypto extern/cpp-crypto
 ```
@@ -47,7 +47,7 @@ git clone https://github.com/arkecosystem/cpp-crypto extern/cpp-crypto
 
 #### `CMakeLists.txt`
 
-> ```
+> ```bash
 > cmake_minimum_required(VERSION 3.2)
 >
 > project(ark_cpp_example_project)
@@ -75,7 +75,7 @@ git clone https://github.com/arkecosystem/cpp-crypto extern/cpp-crypto
 
 ### Building and Running the Project
 
-```
+```bash
 mkdir build && cd build
 cmake ..
 cmake --build .
@@ -201,7 +201,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -266,7 +266,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -328,7 +328,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -388,7 +388,7 @@ Connection<Api> client("5.196.105.34", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -432,7 +432,7 @@ int main() {
 ```
 
 <x-alert type="info">
-Note the **plus \(1\)** prefix for the public key that is passed to the **.votes\(\)** function. This prefix denotes that this is a transaction to remove a vote from the given delegate.
+Note the **plus (1)** prefix for the public key that is passed to the **.votes()** function. This prefix denotes that this is a transaction to remove a vote from the given delegate.
 </x-alert>
 
 ## Creating and Broadcasting an Unvote Transaction
@@ -458,7 +458,7 @@ Connection<Api> client("5.196.105.34", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -505,7 +505,7 @@ int main() {
 ```
 
 <x-alert type="info">
-Note the **minus \(0\)** prefix for the public key that is passed to the **.votes\(\)** function. This prefix denotes that this is a transaction to add a vote to the given delegate.
+Note the **minus (0)** prefix for the public key that is passed to the **.votes()** function. This prefix denotes that this is a transaction to add a vote to the given delegate.
 </x-alert>
 
 ## Creating and Broadcasting an Ipfs Transaction
@@ -529,7 +529,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -594,7 +594,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -679,7 +679,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -741,7 +741,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -806,7 +806,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 
@@ -876,7 +876,7 @@ Connection<Api> client("167.114.29.52", 4003);
 // it uses the built-in tools from C++ Client & Crypto.
 //
 // Other methods of parsing may be used here.
-uint64_t getWalletNonce(Connection<Api>& client, const char* address) {
+uint64_t getWalletNonce(Connection<Api>& client, const char\* address) {
     // Request the Wallet's Json from the API Connection
     const auto walletResponse = client.api.wallets.get(address);
 

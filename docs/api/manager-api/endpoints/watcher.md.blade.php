@@ -48,17 +48,17 @@ watcher.getEvents
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "watcher.getEvents",
-	"params": {
-	    "query": {
-	        "$limit": 100,
-	        "$offset": 0,
-	        "$order": { "id": "DESC" },
-	        "event": { "$like": "database%" },
-	        "data": { "query": { "$eq": "COMMIT" } }
-	    }
-	}
+    "jsonrpc": "2.0",
+    "method": "watcher.getEvents",
+    "params": {
+        "query": {
+            "$limit": 100,
+            "$offset": 0,
+            "$order": { "id": "DESC" },
+            "event": { "$like": "database%" },
+            "data": { "query": { "$eq": "COMMIT" } }
+        }
+    }
 }
 ```
 

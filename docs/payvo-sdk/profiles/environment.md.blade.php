@@ -4,7 +4,7 @@ title: Environment
 
 # Environment
 
-### Create a new environment
+## Create a new environment
 
 ```typescript
 import { ARK } from "@payvo/sdk-ark";

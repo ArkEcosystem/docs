@@ -8,7 +8,7 @@ title: Wallets
 
 ### Method
 
-```
+```bash
 wallets.info
 ```
 
@@ -69,7 +69,7 @@ wallets.info
 
 ### Method
 
-```
+```bash
 wallets.transactions
 ```
 
@@ -145,7 +145,7 @@ wallets.transactions
 
 ### Method
 
-```
+```bash
 wallets.create
 ```
 
@@ -203,7 +203,7 @@ wallets.create
 
 ### Method
 
-```
+```bash
 wallets.bip38.info
 ```
 
@@ -260,7 +260,7 @@ wallets.bip38.info
 
 ### Method
 
-```
+```bash
 wallets.bip38.create
 ```
 

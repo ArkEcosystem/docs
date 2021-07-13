@@ -71,7 +71,7 @@ Following these guidelines is required to provide a streamlined experience acros
 * **time** Get the time elapsed since network start.
 * **epoch** Get the timestamp of the network start.
 
-## Networks \(Mainnet, Devnet & Testnet\)
+## Networks (Mainnet, Devnet & Testnet)
 
 * **epoch** Get the epoch of the network.
 * **version** Get the version of the network.
@@ -98,7 +98,7 @@ The structure outlined here should be followed as closely as possible. If you wo
 
 You can check [https://github.com/ARKEcosystem/php-crypto](https://github.com/ARKEcosystem/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
 
-```
+```text
 [src | lib | crypto]
 ├── Configuration
 │   ├── Fee

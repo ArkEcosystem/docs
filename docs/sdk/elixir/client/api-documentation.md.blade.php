@@ -18,7 +18,7 @@ Shortcut to `ArkEcosystem.Client.Connection.new/1`
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Keyword.t\(\) | opts | Yes | Query parameters |
+| Keyword.t() | opts | Yes | Query parameters |
 
 #### Return Value
 
@@ -36,9 +36,9 @@ Shortcut to `Tesla.get/4`
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | url | Yes | Endpoint |
-| Keyword.t\(\) | opts | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | url | Yes | Endpoint |
+| Keyword.t() | opts | No | Query parameters |
 
 #### Return Value
 
@@ -56,10 +56,10 @@ Alias for `put/4`
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | url | Yes | Endpoint |
-| any\(\) | body | Yes | ... |
-| Keyword.t\(\) | opts | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | url | Yes | Endpoint |
+| any() | body | Yes | ... |
+| Keyword.t() | opts | No | Query parameters |
 
 #### Return Value
 
@@ -77,10 +77,10 @@ Shortcut to `Tesla.post/4`
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | url | Yes | Endpoint |
-| any\(\) | body | Yes | ... |
-| Keyword.t\(\) | opts | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | url | Yes | Endpoint |
+| any() | body | Yes | ... |
+| Keyword.t() | opts | No | Query parameters |
 
 #### Return Value
 
@@ -98,10 +98,10 @@ Shortcut to `Tesla.put/4`
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | url | Yes | Endpoint |
-| any\(\) | body | Yes | ... |
-| Keyword.t\(\) | opts | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | url | Yes | Endpoint |
+| any() | body | Yes | ... |
+| Keyword.t() | opts | No | Query parameters |
 
 #### Return Value
 
@@ -144,8 +144,8 @@ Get all blocks.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -163,8 +163,8 @@ Get a block by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Block ID |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Block ID |
 
 #### Return Value
 
@@ -182,9 +182,9 @@ Get all transactions by the given block.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Block ID |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Block ID |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -202,8 +202,8 @@ Filter all blocks by the given parameters.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | Yes | Search parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | Yes | Search parameters |
 
 #### Return Value
 
@@ -223,8 +223,8 @@ Get all accounts.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | Yes | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | Yes | Query parameters |
 
 #### Return Value
 
@@ -242,8 +242,8 @@ Get a delegate by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Delegate identifier |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Delegate identifier |
 
 #### Return Value
 
@@ -261,9 +261,9 @@ Get all blocks for the given delegate.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Delegate identifier |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Delegate identifier |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -281,9 +281,9 @@ Get all voters for the given delegate.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Delegate identifier |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Delegate identifier |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -303,7 +303,7 @@ Get the node configuration.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
+| Tesla.Client.t() | client | Yes | Client |
 
 #### Return Value
 
@@ -321,7 +321,7 @@ Get the node status.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
+| Tesla.Client.t() | client | Yes | Client |
 
 #### Return Value
 
@@ -339,7 +339,7 @@ Get the node syncing status.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
+| Tesla.Client.t() | client | Yes | Client |
 
 #### Return Value
 
@@ -359,8 +359,8 @@ Get all peers.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -378,8 +378,8 @@ Get a peer by the given IP address.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | ip | Yes | IP address |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | ip | Yes | IP address |
 
 #### Return Value
 
@@ -399,8 +399,8 @@ Create a new transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -418,8 +418,8 @@ Get a transaction by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Transaction ID |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Transaction ID |
 
 #### Return Value
 
@@ -437,8 +437,8 @@ Get all transactions.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -456,8 +456,8 @@ Get all unconfirmed transactions.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -475,8 +475,8 @@ Get an unconfirmed transaction by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Transaction ID |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Transaction ID |
 
 #### Return Value
 
@@ -494,8 +494,8 @@ Filter all transactions by the given parameters.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Search parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Search parameters |
 
 #### Return Value
 
@@ -513,7 +513,7 @@ Get a list of valid transaction types.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
+| Tesla.Client.t() | client | Yes | Client |
 
 #### Return Value
 
@@ -533,8 +533,8 @@ Get all votes.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -552,8 +552,8 @@ Get a vote by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Vote ID |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Vote ID |
 
 #### Return Value
 
@@ -573,8 +573,8 @@ Get all wallets.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -592,8 +592,8 @@ Get a wallet by the given id.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Wallet identifier |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Wallet identifier |
 
 #### Return Value
 
@@ -611,9 +611,9 @@ Get all transactions for the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Wallet identifier |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Wallet identifier |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -631,9 +631,9 @@ Get all transactions received by the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Wallet identifier |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Wallet identifier |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -651,9 +651,9 @@ Get all transactions sent by the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Wallet identifier |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Wallet identifier |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -671,8 +671,8 @@ Get all votes by the given wallet.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| String.t\(\) | id | Yes | Wallet identifier |
+| Tesla.Client.t() | client | Yes | Client |
+| String.t() | id | Yes | Wallet identifier |
 
 #### Return Value
 
@@ -690,8 +690,8 @@ Get all wallets sorted by balance in descending order.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 
@@ -709,8 +709,8 @@ Filter all wallets by the given parameters.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Tesla.Client.t\(\) | client | Yes | Client |
-| Keyword.t\(\) | parameters | No | Query parameters |
+| Tesla.Client.t() | client | Yes | Client |
+| Keyword.t() | parameters | No | Query parameters |
 
 #### Return Value
 

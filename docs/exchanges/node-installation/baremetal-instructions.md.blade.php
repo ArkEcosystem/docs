@@ -106,7 +106,7 @@ or
 pm2 logs
 ```
 
-If the process has started you will see a lot of messages like this \(with actual data\)
+If the process has started you will see a lot of messages like this (with actual data)
 
 ```bash
 [YYYY-DD-MM hh:mm:ss][DEBUG]: Delegate <delegate name> (<public key>) allowed to forge block <#> 👍
@@ -130,10 +130,8 @@ Now that the relay node has been configured, you should head over to the JSON-RP
 
  or look at relevant [Public API endpoints](/docs/api) related to blockchain functionality to manage your wallets and transactions.
 
-
-
 ## Notes
 
-Please read the documentation pages for all of our [ARK SDK clients and cryptography libraries](/docs/sdk/) \(offered in many programming languages\).
+Please read the documentation pages for all of our [ARK SDK clients and cryptography libraries](/docs/sdk/) (offered in many programming languages).
 
 Also, read the [API documentation.](/docs/api)

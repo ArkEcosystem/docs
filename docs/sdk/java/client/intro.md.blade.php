@@ -28,9 +28,9 @@ Add this to **pom.xml** file:
 
 ```markup
 <dependency>
-  <groupId>org.arkecosystem</groupId>
-  <artifactId>client</artifactId>
-  <version>1.2.9</version>
+   <groupId>org.arkecosystem</groupId>
+   <artifactId>client</artifactId>
+   <version>1.2.9</version>
 </dependency>
 ```
 
@@ -46,25 +46,29 @@ mvn install
 2. Clone forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/java-client
-   ```
+git clone https://github.com/<githubusername>/java-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd java-client
-   ```
+cd java-client
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
-   With Maven
-
-```bash
-   mvn test
-   ```
-
-   With Gradle
+**With Maven**:
 
 ```bash
-   gradle test
-   ```
+mvn test
+```
+
+**With Gradle**:
+
+```bash
+gradle test
+```

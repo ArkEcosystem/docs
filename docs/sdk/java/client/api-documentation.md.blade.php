@@ -4,7 +4,7 @@ title: API Documentation
 
 # API Documentation
 
-## org.arkecosystem.client.http.Client;
+## org.arkecosystem.client.http.Client; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Client()`
 
@@ -21,7 +21,7 @@ Create a new Client class instance.
 | String | host | Yes | Node url |
 | String | version | Yes | Version to use |
 
-### `get()`
+### `get()` (string, map<string, object>)
 
 ```java
 public LinkedTreeMap<String, Object> get(String url, Map<String, Object> params)
@@ -71,7 +71,7 @@ Send a POST request with JSON-encoded parameters.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | String | url | Yes | Endpoint |
-| Map | payload | Yes | Transaction\(s\) to post |
+| Map | payload | Yes | Transaction(s) to post |
 
 #### Return Value
 
@@ -107,7 +107,7 @@ Set client instance.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.Connection;
+## org.arkecosystem.client.Connection; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Connection()`
 
@@ -141,7 +141,7 @@ Instantiate new Api.
 
 `T`
 
-## org.arkecosystem.client.ConnectionManager;
+## org.arkecosystem.client.ConnectionManager; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `ConnectionManager()`
 
@@ -193,7 +193,7 @@ Get a map of connections.
 
 `Map<String, Connection<? extends AbstractAPI>>`
 
-### `connect()`
+### `connect()` (map, string)
 
 ```java
 public <T extends AbstractAPI> Connection<T> connect(Map config, String name)
@@ -212,7 +212,7 @@ Connect to the given connection.
 
 `<T extends AbstractAPI>`
 
-### `connect()`
+### `connect()` map
 
 ```java
 public <T extends AbstractAPI> Connection<T> connect(Map config)
@@ -230,7 +230,7 @@ Connect to the given connection.
 
 `<T extends AbstractAPI>`
 
-### `disconnect()`
+### `disconnect()` string
 
 ```java
 public void disconnect(String name)
@@ -256,7 +256,7 @@ public void disconnect()
 
 Disconnect from given connection.
 
-### `connection()`
+### `connection()` string
 
 ```java
 public <T extends AbstractAPI> Connection<T> connection(String name)
@@ -286,7 +286,7 @@ Get a connection instance.
 
 `Connection`
 
-## org.arkecosystem.client.api.AbstractAPI;
+## org.arkecosystem.client.api.AbstractAPI; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `AbstractAPI()`
 
@@ -302,9 +302,9 @@ Create a new API class instance.
 | :--- | :--- | :--- | :--- |
 | Client | client | Yes | Client |
 
-## org.arkecosystem.client.api.Blockchain;
+## org.arkecosystem.client.api.Blockchain; <!-- markdownlint-disable-next-line MD026 -->
 
-### `Blockchain`\(\)
+### `Blockchain`()
 
 ```java
 public Blockchain(Client client)
@@ -318,7 +318,7 @@ Blockchain class constructor.
 | :--- | :--- | :--- | :--- |
 | Client | client | Yes | Client |
 
-## org.arkecosystem.client.api.Blocks;
+## org.arkecosystem.client.api.Blocks; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Blocks()`
 
@@ -400,7 +400,7 @@ Filter all blocks by the given parameters.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Bridgechains;
+## org.arkecosystem.client.api.Bridgechains; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Bridgechains()`
 
@@ -416,7 +416,7 @@ Bridgechains class constructor.
 | :--- | :--- | :--- | :--- |
 | Client | client | Yes | Client |
 
-### all\(\)
+### all()
 
 ```java
 public LinkedTreeMap<String, Object> all()
@@ -446,7 +446,7 @@ Get a bridgechain by genesis hash.
 
 `LinkedTreeMap<String, Object>`
 
-### search\(\)
+### search()
 
 ```java
 public LinkedTreeMap<String, Object> search(Map<String, Object> parameters)
@@ -460,7 +460,7 @@ Filter all bridgechains by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-## org.arkecosystem.client.api.Businesses
+## org.arkecosystem.client.api.Businesses <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Business()`
 
@@ -530,7 +530,7 @@ Filter all businesses by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-## org.arkecosystem.client.api.Delegates;
+## org.arkecosystem.client.api.Delegates; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Delegates()`
 
@@ -612,7 +612,7 @@ Get all voters for the given delegate.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Locks;
+## org.arkecosystem.client.api.Locks; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Locks()`
 
@@ -640,7 +640,7 @@ Get all locks.
 
 `LinkedTreeMap<String, Object>`
 
-### show\(\)
+### show()
 
 ```java
 public LinkedTreeMap<String, Object> show(String id)
@@ -668,7 +668,7 @@ Filter all locks by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-### `search()`
+### `searchUnlocked()`
 
 ```java
 public LinkedTreeMap<String, Object> searchUnlocked(Map<String, Object> parameters)
@@ -682,7 +682,7 @@ Filter all unlocked locks by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-## org.arkecosystem.client.api.Node;
+## org.arkecosystem.client.api.Node; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Node()`
 
@@ -756,7 +756,7 @@ public LinkedTreeMap<String, Object> debug()
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.peers;
+## org.arkecosystem.client.api.peers; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Peers()`
 
@@ -802,7 +802,7 @@ Get a peer by the given IP address.
 
 `public LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Rounds;
+## org.arkecosystem.client.api.Rounds; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Rounds()`
 
@@ -832,7 +832,7 @@ Returns delegates by given round.
 | :--- | :--- | :--- | :--- |
 | String | id | Yes | Round identifier |
 
-## org.arkecosystem.client.api.Transactions;
+## org.arkecosystem.client.api.Transactions; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Transactions()`
 
@@ -860,7 +860,7 @@ Create a new transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| List | transactions | Yes | Transaction\(s\) to broadcast |
+| List | transactions | Yes | Transaction(s) to broadcast |
 
 #### Return Value
 
@@ -980,7 +980,7 @@ Get a list of transactions fees.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Votes;
+## org.arkecosystem.client.api.Votes; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Votes()`
 
@@ -1026,7 +1026,7 @@ Get a vote by the given id.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Wallets;
+## org.arkecosystem.client.api.Wallets; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Wallets()`
 

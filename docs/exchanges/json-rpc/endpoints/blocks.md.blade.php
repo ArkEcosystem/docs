@@ -8,7 +8,7 @@ title: Blocks
 
 ### Method
 
-```
+```bash
 blocks.info
 ```
 
@@ -89,7 +89,7 @@ blocks.info
 
 ### Method
 
-```
+```bash
 blocks.latest
 ```
 
@@ -165,7 +165,7 @@ blocks.latest
 
 ### Method
 
-```
+```bash
 blocks.transactions
 ```
 

@@ -4,7 +4,7 @@ title: Upgrade Guides - Core v2.1 to v2.2
 
 # v2.2
 
-Upgrading from `v2.1` to `v2.2` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility \(BC\) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.1` to `v2.2` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 > Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 
@@ -18,7 +18,7 @@ After upgrading you should check whether your application still works as expecte
 
 ### Configuration
 
-* Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file \(e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`\), locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
+* Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
 
 ```javascript
 "@arkecosystem/core-graphql": {

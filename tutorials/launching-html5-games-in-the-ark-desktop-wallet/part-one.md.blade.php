@@ -7,6 +7,7 @@ number: 1
 # How to Import an ARK Wallet Address into your Application
 
 ## Importing A Wallet Address Into Your Game
+
 In this first part of this series, we will look at how to import a wallet address by making sure it is valid so players don’t accidentally make a mistake by entering the wrong address and losing out on a potential prize. This will lay the groundwork for the next installments where we will write our game logic in our very own Core plugin.
 
 We will be using the free plan of the [Construct 3 engine](https://editor.construct.net/) — a point and click game development environment — to create our simple HTML5 game, so head over there and start a new project.
@@ -29,7 +30,7 @@ Next, we’ll import our _bs58check.min.js_ file into our Construct 3 project so
 
 Now we need to take a step back from the practical activities and focus on the theoretical side. What makes an address valid, and how can we separate an ARK Public Network address from an address on the ARK Development Network or another bridgechain?
 
-Each address must be exactly 34 characters long and, in the case of the ARK Public Network, each address starts with an A; conversely, addresses on the ARK Development Network start with a D and bridgechains can use their own character. This first character is related to the _**network version**_ — remember this, we’ll be coming back to it in a second. The characters used in an address are known as base58, which is a group of 58 alphanumeric characters that are easily distinguished to minimize the risk of confusion, for example, 0 \(zero\) and O \(uppercase o\) look similar, so they are excluded; also, I \(uppercase i\) and l \(lowercase L\) are omitted from the character set for the same reason. Lastly, the address includes a checksum to make sure the rest of the address has been entered correctly with no typos.
+Each address must be exactly 34 characters long and, in the case of the ARK Public Network, each address starts with an A; conversely, addresses on the ARK Development Network start with a D and bridgechains can use their own character. This first character is related to the _**network version**_ — remember this, we’ll be coming back to it in a second. The characters used in an address are known as base58, which is a group of 58 alphanumeric characters that are easily distinguished to minimize the risk of confusion, for example, 0 (zero) and O (uppercase o) look similar, so they are excluded; also, I (uppercase i) and l (lowercase L) are omitted from the character set for the same reason. Lastly, the address includes a checksum to make sure the rest of the address has been entered correctly with no typos.
 
 So, remember how the first character of an ARK Public Network address is A and the ARK Development Network is D? That is derived from something called the _**network version**_, and each blockchain can have a different network version, which determines the first character of all the wallet addresses on that network. In case you’re curious — and you’ll need this later — the network version for the ARK Public Network is 23, and the network version for the ARK Development Network is 30.
 
@@ -70,7 +71,7 @@ Now we’ll put our function to work! We want it to run whenever our button is c
 
 ![Using our new function](https://miro.medium.com/max/755/0*XwonDwRsIKtj10xW)
 
-Almost done! We just have to tell it what to do if the function passes and if it fails. Click _**Add action**_ for our comparison, double click our _**Text**_ object and choose _**Set text**_. Enter “Address is valid!” and choose OK. Now for the failure case: Click _**Add**…_ next to our new _**Set text**_ action and choose _**Add Else**_. Click _**Add action**_ for our Else case, double click our _**Text**_ object and choose _**Set text**_. Enter “Address is invalid” and choose OK.
+Almost done! We just have to tell it what to do if the function passes and if it fails. Click _**Add action**_ for our comparison, double click our _**Text**_ object and choose _**Set text**_. Enter "Address is valid!" and choose OK. Now for the failure case: Click _**Add**…_ next to our new _**Set text**_ action and choose _**Add Else**_. Click _**Add action**_ for our Else case, double click our _**Text**_ object and choose _**Set text**_. Enter "Address is invalid" and choose OK.
 
 ![Our finished event sheet](https://miro.medium.com/max/1200/0*7K6k3qGZZiyyTqLQ)
 

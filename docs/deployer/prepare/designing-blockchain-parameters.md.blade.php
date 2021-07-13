@@ -4,7 +4,7 @@ title: Designing Blockchain Parameters
 
 # Designing Blockchain Parameters
 
-The first thing is to identify your need for customization for your new network. If you simply want a network with a native token, high scalability, and flexibility to implement decentralized applications, you can choose \(in the ARK Deployer\):
+The first thing is to identify your need for customization for your new network. If you simply want a network with a native token, high scalability, and flexibility to implement decentralized applications, you can choose (in the ARK Deployer):
 
 * **Basic Level** to receive a clone of the ARK Public Network with all of ARK's default blockchain parameters, economic model, and network architecture.
 * **Intermediate Level** to customize the identity of your new chain like the name, ticker, currency symbol, and other identity-related variables. If you have your own plan to implement your own economic model with custom forger count, initial token supply, forging rewards, fee structures, and other such variables.

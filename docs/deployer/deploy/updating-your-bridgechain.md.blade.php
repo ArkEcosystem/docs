@@ -62,10 +62,12 @@ With your genesis node and bridgechain repository now up to date, it's time to u
 1. Change directories to your bridgechain's directory:
 
 ```bash
-   cd ~/core-bridgechain/
-   ```
+cd ~/core-bridgechain/
+```
 
+<!-- markdownlint-disable MD029 -->
 2. Type:
+<!-- markdownlint-enable MD029 -->
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/GITHUB_USERNAME/REPOSITORY/update/CORE_VERSION/upgrade/CORE_VERSION/update.sh)

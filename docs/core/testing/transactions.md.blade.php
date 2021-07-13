@@ -42,7 +42,7 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 - Once forged, check the balances of the sender and recipients and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly.
 - Search for the Block ID and ensure all details are correct.
-- Repeat this process several times with and without utilizing the vendorField.  
+- Repeat this process several times with and without utilizing the vendorField.
 - Devnet has a limit of 128 recipients for a multipayment. Advanced users can attempt to exceed this amount in a multipayment transaction using tools outside of the Desktop Wallet.
 
 ## Delegate Registration
@@ -99,7 +99,7 @@ This transaction type utilizes a special data field similar to the vendor field 
 - Once forged, check the balances of the sender and recipient and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly.
 - Search for the Block ID and ensure all details are correct
-- Attempt to store the same IPFS hash on the blockchain with the same wallet. This should fail.  
+- Attempt to store the same IPFS hash on the blockchain with the same wallet. This should fail.
 
 ## Delegate Resignation Transaction
 
@@ -181,13 +181,13 @@ Using the above command in `core-tx-tester`, we have registered a `business` cal
 
 ### Examples
 
->`11 1 0 3 register name QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`  
-> Registers a 'Business' titled 'name' with a subtype of 3  
->`11 1 1 2 register name1 QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`  
-> Registers a 'Product' titled 'name1' with a subtype of 2  
->`11 1 2 1 register name2 QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`  
-> Registers a 'Plugin' titled 'name2' with a subtype of 1  
->`11 1 3 0 register name3 QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`  
+>`11 1 0 3 register name QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`
+> Registers a 'Business' titled 'name' with a subtype of 3
+>`11 1 1 2 register name1 QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`
+> Registers a 'Product' titled 'name1' with a subtype of 2
+>`11 1 2 1 register name2 QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`
+> Registers a 'Plugin' titled 'name2' with a subtype of 1
+>`11 1 3 0 register name3 QmXrvSZaDr8vjLUB9b7xz26S3kpk3S3bSc8SUyZmNPvmVo`
 > Registers a 'Module' titled 'name3' with a subtype of 0
 
 <x-alert type="warning">

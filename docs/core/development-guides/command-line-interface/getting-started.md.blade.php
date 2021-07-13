@@ -4,6 +4,8 @@ title: CLI Guide - Getting Started
 
 # Getting Started
 
+<!-- markdownlint-disable -->
+
 ## Available Commands
 
 ### help
@@ -95,7 +97,7 @@ ark config:forger
 | :--- | :--- | :---: |
 | --bip39 | the plain text bip39 passphrase | :x: |
 | --password | the password for the encrypted bip38 | :x: |
-| --method | the configuration method to use \(bip38 or bip39\) | :x: |
+| --method | the configuration method to use (bip38 or bip39) | :x: |
 | --skipValidation | skip bip39 mnemonic validation | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
@@ -128,12 +130,11 @@ ark config:forger:bip38
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :white\_check\_mark: |
-| --password | the password for the encrypted bip38 | :white\_check\_mark: |
+| --bip39 | the plain text bip39 passphrase | :white_check_mark: |
+| --password | the password for the encrypted bip38 | :white_check_mark: |
 | --skipValidation | skip bip39 mnemonic validation | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
-
 
 #### Examples
 
@@ -155,7 +156,7 @@ ark config:forger:bip39
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :white\_check\_mark: |
+| --bip39 | the plain text bip39 passphrase | :white_check_mark: |
 | --skipValidation | skip bip39 mnemonic validation | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
@@ -274,10 +275,10 @@ ark core:start
 | --bip39 | the plain text bip39 passphrase | :x: |
 | --bip38 | the encrypted bip38 | :x: |
 | --password | the password for the encrypted bip38 | :x: |
-| --\[no-\]daemon | start the process as a pm2 daemon | :x: |
+| --[no-]daemon | start the process as a pm2 daemon | :x: |
 | --disableDiscovery | permanently disable any peer discovery | :x: |
 | --ignoreMinimumNetworkReach | ignore the minimum network reach on start | :x: |
-| --launchMode | the mode the relay will be launched in \(seed only at the moment\) | :x: |
+| --launchMode | the mode the relay will be launched in (seed only at the moment) | :x: |
 | --networkStart | indicate that this is the first start of seeds | :x: |
 | --skipDiscovery | skip the initial peer discovery | :x: |
 | --network | the name of the network that should be used | :x: |
@@ -557,7 +558,7 @@ ark forger:run
 | --bip39 | the plain text bip39 passphrase | :x: |
 | --bip38 | the encrypted bip38 | :x: |
 | --password | the password for the encrypted bip38 | :x: |
-| --\[no-\]daemon | start the process as a pm2 daemon | :x: |
+| --[no-]daemon | start the process as a pm2 daemon | :x: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -722,10 +723,10 @@ ark relay:run
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --\[no-\]daemon | start the process as a pm2 daemon | :x: |
+| --[no-]daemon | start the process as a pm2 daemon | :x: |
 | --disableDiscovery | permanently disable any peer discovery | :x: |
 | --ignoreMinimumNetworkReach | ignore the minimum network reach on start | :x: |
-| --launchMode=launchMode | the mode the relay will be launched in \(seed only at the moment\) | :x: |
+| --launchMode=launchMode | the mode the relay will be launched in (seed only at the moment) | :x: |
 | --networkStart | indicate that this is the first start of seeds | :x: |
 | --skipDiscovery | skip the initial peer discovery | :x: |
 | --network | the name of the network that should be used | :x: |
@@ -855,8 +856,8 @@ ark snapshot:dump
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --start | \[default: -1\] start network height to export | :x: |
-| --end | \[default: -1\] end network height to export | :x: |
+| --start | [default: -1] start network height to export | :x: |
+| --end | [default: -1] end network height to export | :x: |
 | --skipCompression | skip gzip compression | :x: |
 | --codec | codec name | :x: |
 | --network | the name of the network that should be used | :x: |
@@ -900,8 +901,8 @@ Either `height` or `number` has to be provided.
 
 | Name | Description | Required |
 | :--- | :--- | :---: |
-| --height | block network height number to roll back to | :ballot\_box\_with\_check: |
-| --number | number of blocks to roll back | :ballot\_box\_with\_check: |
+| --height | block network height number to roll back to | :ballot_box_with_check: |
+| --number | number of blocks to roll back | :ballot_box_with_check: |
 | --network | the name of the network that should be used | :x: |
 | --token | the name of the token that should be used | :x: |
 
@@ -985,3 +986,5 @@ Remove a plugin based on its name. If the name contains a scope like `@arkecosys
 ```bash
 ark plugin:remove {package}
 ```
+
+<!-- markdownlint-enable -->

@@ -6,9 +6,9 @@ title: Introduction
 
 Using ARK SDKs, developers can employ the programming language of their choice to build applications utilizing the ARK blockchain. **The ARK SDKs are split into two packages for each language: Client and Cryptography.**
 
-[**Client SDKs**](guidelines/client.md) help developers fetch information from the ARK blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
+**[Client SDKs](guidelines/client.md)** help developers fetch information from the ARK blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
 
-[**Cryptography SDKs**](guidelines/crypto.md), by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
+**[Cryptography SDKs](guidelines/crypto.md)**, by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
 
 <x-alert type="info">
 If you need to learn more about Cryptography in general, how initial key and address generation works, what is a public or private key, head over to the page link below:

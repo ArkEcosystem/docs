@@ -41,10 +41,10 @@ It is recommended to make configuration changes for defining user access and IP 
                 "enabled": true,
                 "secret": "secret",
                 "users": [
-                     {
-                         "username": "username",
-                         "password": "$argon2id$v=19$m=4096,t=3,p=1$NiGA5Cy5vFWTxhBaZMG/3Q$TwEFlzTuIB0fDy+qozEas+GzEiBcLRkm5F+/ClVRCDY"
-                     }
+                    {
+                        "username": "username",
+                        "password": "$argon2id$v=19$m=4096,t=3,p=1$NiGA5Cy5vFWTxhBaZMG/3Q$TwEFlzTuIB0fDy+qozEas+GzEiBcLRkm5F+/ClVRCDY"
+                    }
                 ]
             }
         }
@@ -53,8 +53,8 @@ It is recommended to make configuration changes for defining user access and IP 
 ```
 
 The `whitelist` property is an `Array` consisting of IP addresses that you allow to make connections to the manager API.
-By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list \(recommended approach\).
-It is also possible to use wildcards to indicate a range of IPs \(e.g. `"12.34.56.*"`\) or even to allow everyone \(e.g. `"*"`\) \(not recommended\).
+By default, only local access to the webhook API is allowed. This means that if you want to expose your webhook API to the outside, you'll need to explicitly add the IP addresses that you will use to this list (recommended approach).
+It is also possible to use wildcards to indicate a range of IPs (e.g. `"12.34.56.*"`) or even to allow everyone (e.g. `"*"`) (not recommended).
 
 ### Token authentication
 
@@ -83,17 +83,16 @@ It is recommended to make configuration changes to these options by working with
 
 | Variable | Description | Type | Default |
 | :--- | :--- | :---: | :---: |
-| CORE\_MANAGER\_PUBLIC\_IP | Determines core managers public IP. | string | `undefined` |
-| CORE\_MANAGER\_DISABLED | Enables or disables the manager API plugin | boolean | `false` |
-| CORE\_MANAGER\_HOST | The host to expose the API on | string | `"0.0.0.0"` |
-| CORE\_MANAGER\_PORT | The API port on which the plugin will listen | integer | `4005` |
-| CORE\_MANAGER\_SSL | Enables or disables the manager API plugin using SSL. | boolean | `false` |
-| CORE\_MANAGER\_SSL\_HOST | The host to expose the HTTPS API on | string | `"0.0.0.0"` |
-| CORE\_MANAGER\_SSL\_PORT | The host to expose the HTTPS API on | port | `8445` |
-| CORE\_MANAGER\_SSL\_KEY | Determines where SSL key is located. | port | `8445` |
-| CORE\_MANAGER\_SSL\_CERT | Determines where SSL certificate is located. | port | `8445` |
-| CORE\_MANAGER\_ARCHIVE\_FORMAT | Determines which format is used for storing downloaded logs (`zip` or `gz`). | string | `zip` |
-
+| CORE_MANAGER_PUBLIC_IP | Determines core managers public IP. | string | `undefined` |
+| CORE_MANAGER_DISABLED | Enables or disables the manager API plugin | boolean | `false` |
+| CORE_MANAGER_HOST | The host to expose the API on | string | `"0.0.0.0"` |
+| CORE_MANAGER_PORT | The API port on which the plugin will listen | integer | `4005` |
+| CORE_MANAGER_SSL | Enables or disables the manager API plugin using SSL. | boolean | `false` |
+| CORE_MANAGER_SSL_HOST | The host to expose the HTTPS API on | string | `"0.0.0.0"` |
+| CORE_MANAGER_SSL_PORT | The host to expose the HTTPS API on | port | `8445` |
+| CORE_MANAGER_SSL_KEY | Determines where SSL key is located. | port | `8445` |
+| CORE_MANAGER_SSL_CERT | Determines where SSL certificate is located. | port | `8445` |
+| CORE_MANAGER_ARCHIVE_FORMAT | Determines which format is used for storing downloaded logs (`zip` or `gz`). | string | `zip` |
 
 ## Requirements
 
@@ -109,7 +108,7 @@ When package is used on `core` **or** `relay` & `forger` processes it can provid
 Stored data can be queried from dedicated JsonRPC calls. Additionally logs can be achieved and downloaded using customized filtering.
 This functionality is enabled only when package is added into `app.json` settings file in desired process plugins.
 
-```
+```json
 "core": {
     "plugins": [
         {
@@ -139,30 +138,29 @@ Options can be set via ENV variables or under package options in `app.json` file
 Don't use event watching (`CORE_WATCHER_ENABLED` flag) in production or mainnet network. This functionality is added only for debugging purposes.
 </x-alert>
 
-
 ### Watcher related environment variables
 
 It is recommended to make configuration changes to these options by working with your `.env` file and the corresponding variables:
 
 | Variable | Description | Type | Default |
 | :--- | :--- | :---: | :---: |
-| CORE\_WATCH\_LOGS\_DISABLED | Disable storing logs. | boolean | `false` |
-| CORE\_WATCHER\_ENABLED | Enables or disables the event watcher | boolean | `false` |
-| CORE\_WATCH\_BLOCKS\_DISABLED | Disable storing block related events. | boolean | `false` |
-| CORE\_WATCH\_ERRORS\_DISABLED | Disable storing error related events. | boolean | `false` |
-| CORE\_WATCH\_QUERIES\_DISABLED | Disable storing query related events. | boolean | `false` |
-| CORE\_WATCH\_QUEUES\_DISABLED | Disable storing queue related events. | boolean | `false` |
-| CORE\_WATCH\_ROUNDS\_DISABLED | Disable storing rounds related events. | boolean | `false` |
-| CORE\_WATCH\_SCHEDULES\_DISABLED | Disable storing schedule related events. | boolean | `false` |
-| CORE\_WATCH\_TRANSACTIONS\_DISABLED | Disable storing transaction related events. | boolean | `false` |
-| CORE\_WATCH\_WALLETS\_DISABLED | Disable storing wallet related events. | boolean | `false` |
-| CORE\_WATCH\_WEBHOOKS\_DISABLED | Disable storing webhooks related events. | boolean | `false` |
+| CORE_WATCH_LOGS_DISABLED | Disable storing logs. | boolean | `false` |
+| CORE_WATCHER_ENABLED | Enables or disables the event watcher | boolean | `false` |
+| CORE_WATCH_BLOCKS_DISABLED | Disable storing block related events. | boolean | `false` |
+| CORE_WATCH_ERRORS_DISABLED | Disable storing error related events. | boolean | `false` |
+| CORE_WATCH_QUERIES_DISABLED | Disable storing query related events. | boolean | `false` |
+| CORE_WATCH_QUEUES_DISABLED | Disable storing queue related events. | boolean | `false` |
+| CORE_WATCH_ROUNDS_DISABLED | Disable storing rounds related events. | boolean | `false` |
+| CORE_WATCH_SCHEDULES_DISABLED | Disable storing schedule related events. | boolean | `false` |
+| CORE_WATCH_TRANSACTIONS_DISABLED | Disable storing transaction related events. | boolean | `false` |
+| CORE_WATCH_WALLETS_DISABLED | Disable storing wallet related events. | boolean | `false` |
+| CORE_WATCH_WEBHOOKS_DISABLED | Disable storing webhooks related events. | boolean | `false` |
 
 ## Final checks
 
 After making changes to the manager API configuration, you will need to restart your manager process for the changes to take effect.
 If you want to check whether your manager API is running, you should pay attention to the startup messages in the logs of your relay.
-It will print a line similar to ` INFO : Public JSON-RPC API (HTTP) Server started at http://0.0.0.0:4005` when it has successfully started the manager API.
+It will print a line similar to `INFO : Public JSON-RPC API (HTTP) Server started at http://0.0.0.0:4005` when it has successfully started the manager API.
 
 ## Security
 

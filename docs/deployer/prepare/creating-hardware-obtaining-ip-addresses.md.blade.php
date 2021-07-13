@@ -8,7 +8,7 @@ After choosing the server design that's right for you, it's time to set servers 
 
 With each provider, the setup process for creating dedicated hardware or a new VPS is going to be different. If choosing one of the listed providers, we have created quick links below to get started:
 
-* [**Digital Ocean**](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet) _\(Recommended for VPS ease of use\)_
+* [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet) _(Recommended for VPS ease of use)_
 * [Linode](https://www.linode.com/docs/getting-started/#provision-your-linode)
 * [Amazon Web Services](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
 * [Vultr](https://www.vultr.com/)
@@ -23,20 +23,20 @@ Now that you have chosen your service provider, you can create the required gene
 
 You will be asked for this information by the ARK Deployer.
 
-> **Final Note:** Your three networks \(Mainnet, Devnet, and Testnet\) obviously need servers to function. Your genesis node can handle all _genesis delegates_, as they will all be virtually hosted on the genesis node, forging transactions until you, your organization, or the public launch independent _live delegate nodes_. However, you'll need a certain number of independent peers \(relay nodes\) for each network.
+> **Final Note:** Your three networks (Mainnet, Devnet, and Testnet) obviously need servers to function. Your genesis node can handle all _genesis delegates_, as they will all be virtually hosted on the genesis node, forging transactions until you, your organization, or the public launch independent _live delegate nodes_. However, you'll need a certain number of independent peers (relay nodes) for each network.
 
 If using for example Digital Ocean VPS services, you'll need:
 
 * The genesis node to get **Testnet** running
 
-  \(Total: ~$40/mo\).
+  (Total: ~$40/mo).
 
-* The genesis node \(~$40/mo\) and 5 relay nodes \(~$100/mo\) to get **Devnet** running
+* The genesis node (~$40/mo) and 5 relay nodes (~$100/mo) to get **Devnet** running
 
-  \(Total: ~$140/mo\).
+  (Total: ~$140/mo).
 
-* The genesis node \(~$40/mo\) and 20 relay nodes \(~$400/mo\) to get **Mainnet** running
+* The genesis node (~$40/mo) and 20 relay nodes (~$400/mo) to get **Mainnet** running
 
-  \(Total: ~$440/mo\).
+  (Total: ~$440/mo).
 
 You can technically scale back the number of these initial nodes you launched as your network grows, but you are advised to keep at least some of these nodes up for the foreseeable future. They are used by brand new nodes to acquire the initial state of the network and provide a way to join it using the `peers.json` file which contains a list of the initial seed peers for Devnet and Mainnet. Future delegates who run your network might or might not update that file.

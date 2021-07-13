@@ -26,7 +26,7 @@ yarn add @payvo/sdk-support
 import { Arr } from "@payvo/sdk-support";
 ```
 
-#### Get a random element from the given array.
+#### Get a random element from the given array
 
 ```typescript
 Arr.randomElement(items: any[]);
@@ -46,31 +46,31 @@ import { BigNumber } from "@payvo/sdk-support";
 BigNumber.make(value: NumberLike, decimals?: number): BigNumber;
 ```
 
-#### Set the amount of decimals to the given limit.
+#### Set the amount of decimals to the given limit
 
 ```typescript
 bigNumber.decimalPlaces(decimals?: number): BigNumber;
 ```
 
-#### Add the given value to the existing value.
+#### Add the given value to the existing value
 
 ```typescript
 bigNumber.plus(value: NumberLike): BigNumber;
 ```
 
-#### Subtract the given value from the existing value.
+#### Subtract the given value from the existing value
 
 ```typescript
 bigNumber.minus(value: NumberLike): BigNumber;
 ```
 
-#### Divide the existing value by the given value.
+#### Divide the existing value by the given value
 
 ```typescript
 bigNumber.divide(value: NumberLike): BigNumber;
 ```
 
-#### Multiply the existing value by the given value.
+#### Multiply the existing value by the given value
 
 ```typescript
 bigNumber.times(value: NumberLike): BigNumber;
@@ -176,13 +176,13 @@ import { Censor } from "@payvo/sdk-support";
 const censor = new Censor();
 ```
 
-#### Determine if the value contains bad terms.
+#### Determine if the value contains bad terms
 
 ```typescript
 censor.isBad(value: string): boolean;
 ```
 
-#### Remove all bad terms from the value.
+#### Remove all bad terms from the value
 
 ```typescript
 censor.process(value: string): string;
@@ -196,7 +196,7 @@ censor.process(value: string): string;
 import { Markdown } from "@payvo/sdk-support";
 ```
 
-#### Parse the given content into HTML.
+#### Parse the given content into HTML
 
 ```typescript
 Markdown.parse(content: string): { meta: MarkdownMeta; content: String };
@@ -210,19 +210,19 @@ Markdown.parse(content: string): { meta: MarkdownMeta; content: String };
 import { QRCode } from "@payvo/sdk-support";
 ```
 
-#### Create a new QRCode from a string.
+#### Create a new QRCode from a string
 
 ```typescript
 QRCode.fromString(value: string): QRCode;
 ```
 
-#### Create a new QRCode from an object of keys and values.
+#### Create a new QRCode from an object of keys and values
 
 ```typescript
 QRCode.fromObject(value: object): QRCode;
 ```
 
-#### Get the Base64 Data URL representation of the QRCode.
+#### Get the Base64 Data URL representation of the QRCode
 
 ```typescript
 await qrcode.toDataURL(options: QRCodeToDataURLOptions = {}): Promise<string>;
@@ -244,25 +244,25 @@ import { Validator } from "@payvo/sdk-support";
 const validator = new Validator();
 ```
 
-#### Validate the given data against the schema.
+#### Validate the given data against the schema
 
 ```typescript
 validator.validate(data: object, schema: { validateSync: Function }): void;
 ```
 
-#### Check if the validation passed.
+#### Check if the validation passed
 
 ```typescript
 validator.passes(): boolean;
 ```
 
-#### Check if the validation failed.
+#### Check if the validation failed
 
 ```typescript
 validator.fails(): boolean;
 ```
 
-#### Get a list of all error messages.
+#### Get a list of all error messages
 
 ```typescript
 validator.errors(): string[] | undefined;

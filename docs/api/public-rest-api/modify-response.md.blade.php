@@ -18,7 +18,7 @@ In this chapter we will go trough process step by step and describe how to remov
 }
 ```
 
-**Desired response**
+**Desired response**:
 
 ```json
 {
@@ -29,9 +29,9 @@ In this chapter we will go trough process step by step and describe how to remov
 }
 ```
 
-# Process
+## Process
 
-## Get route
+### Get route
 
 First we need get existing route object that we want to modify. Be aware there can be two `Server` instances accessible via `Identifiers.HTTP` or `Identifiers.HTTPS` symbols. Each `Server` instance expose `getRoute` method which is used for obtaining `ServerRoute`.
 
@@ -39,7 +39,7 @@ First we need get existing route object that we want to modify. Be aware there c
 const route = this.app.get<Server>(Identifiers.HTTP).getRoute("GET", "/api/node/configuration");
 ```
 
-## Keep original handler
+### Keep original handler
 
 Save the reference to existing handler. Use `bind()` function to bind original object which method belongs to, otherwise you will lose `this` reference if one is used inside the handler.
 
@@ -47,7 +47,7 @@ Save the reference to existing handler. Use `bind()` function to bind original o
 const originalHandler = route.settings.handler.bind(route.settings.bind);
 ```
 
-## Create new handler
+### Create new handler
 
 Replace route handler with new wrapper function. New function will call original handler and set desired property to `undefined`. JSON standard defined that undefined properties are not included in stringified response, which will result as removed field in response body. Finally return modified response.
 
@@ -59,22 +59,22 @@ route.settings.handler = async (request: Hapi.Request, h: Hapi.ResponseToolkit) 
     };
 ```
 
-# API
+## API
 
-## Methods
+### Methods
 
-### Server.getRoute(method: `string`, path: `string`) : `ServerRoute` | `undefined`
+#### Server.getRoute(method: `string`, path: `string`) : `ServerRoute` | `undefined`
 
-**Parameters**
+**Parameters**:
 
 method - HTTP method eg. "GET", "POST"
 path -  route path eg. "/api/node/configuration"
 
-**Response**
+**Response**:
 
 Returns `ServerRoute` object or `undefined`.
 
-## Complete code sample
+### Complete code sample
 
 ```ts
 // Import
@@ -94,4 +94,4 @@ if (route) {
 
 ## Additional reading
 
-- [Hapi official documentation](https://hapi.dev/)
+* [Hapi official documentation](https://hapi.dev/)

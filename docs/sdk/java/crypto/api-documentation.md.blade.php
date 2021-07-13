@@ -4,13 +4,7 @@ title: API Documentation
 
 # API Documentation
 
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| int | network | Yes | Network of transaction |
-
-#### Parameters
-
-## org.arkecosystem.crypto.configuration.Fee;
+## org.arkecosystem.crypto.configuration.Fee; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `get()`
 
@@ -49,7 +43,7 @@ Set a fee
 
 `void`
 
-## org.arkecosystem.crypto.configuration.Network;
+## org.arkecosystem.crypto.configuration.Network; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `set()`
 
@@ -81,7 +75,7 @@ Get settings for a selected network, default network is devnet
 
 `INetwork`
 
-## org.arkecosystem.crypto.enums.Fees;
+## org.arkecosystem.crypto.enums.Fees; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `getValue()`
 
@@ -95,7 +89,7 @@ Get the fees value.
 
 `Long`
 
-## org.arkecosystem.crypto.enums.Types;
+## org.arkecosystem.crypto.enums.Types; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `getValue()`
 
@@ -109,9 +103,9 @@ Get the types value.
 
 `int`
 
-## org.arkecosystem.crypto.identities.Address;
+## org.arkecosystem.crypto.identities.Address; <!-- markdownlint-disable-next-line MD026 -->
 
-### `fromPublicKey()`
+### `fromPublicKey()` (string, integer)
 
 ```java
 public static String fromPublicKey(String publicKey, Integer networkVersion)
@@ -130,7 +124,7 @@ Derive the address from the given public key.
 
 `String`
 
-### `fromPublicKey()`
+### `fromPublicKey()` string
 
 ```java
 public static String fromPublicKey(String publicKey)
@@ -148,7 +142,7 @@ Derive the address from the given public key.
 
 `String`
 
-### `fromPrivateKey()`
+### `fromPrivateKey()` (eckey, integer)
 
 ```java
 public static String fromPrivateKey(ECKey privateKey, Integer networkVersion)
@@ -167,7 +161,7 @@ Derive the address from the given private key.
 
 `String`
 
-### `fromPrivateKey()`
+### `fromPrivateKey()` eckey
 
 ```java
 public static String fromPrivateKey(ECKey privateKey)
@@ -185,7 +179,7 @@ Derive the address from the given private key.
 
 `String`
 
-### `fromPassphrase()`
+### `fromPassphrase()` (string, integer)
 
 ```java
 public static String fromPassphrase(String passphrase, Integer networkVersion)
@@ -204,7 +198,7 @@ Derive the address from the given passphrase.
 
 `String`
 
-### `fromPassphrase()`
+### `fromPassphrase()` string
 
 ```java
 public static String fromPassphrase(String passphrase)
@@ -222,7 +216,7 @@ Derive the address from the given passphrase.
 
 `String`
 
-### `validate()`
+### `validate()` (string, integer)
 
 ```java
 public static Boolean validate(String address, Integer networkVersion)
@@ -241,7 +235,7 @@ Validate the given address.
 
 `Boolean`
 
-### `validate()`
+### `validate()` (string)
 
 ```java
 public static Boolean validate(String address)
@@ -259,7 +253,7 @@ Validate the given address.
 
 `Boolean`
 
-## org.arkecosystem.crypto.identities.PrivateKey;
+## org.arkecosystem.crypto.identities.PrivateKey; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `fromPassphrase()`
 
@@ -297,7 +291,7 @@ Create a private key instance from a hex String.
 
 `ECKey`
 
-## org.arkecosystem.crypto.identities.PublicKey;
+## org.arkecosystem.crypto.identities.PublicKey; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `fromPassphrase()`
 
@@ -317,7 +311,7 @@ Derive the public from the given passphrase.
 
 `String`
 
-## org.arkecosystem.crypto.identities.WIF;
+## org.arkecosystem.crypto.identities.WIF; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `fromPassphrase()`
 
@@ -337,7 +331,7 @@ Derive the WIF from the given passphrase.
 
 `String`
 
-## org.arkecosystem.crypto.networks.Devnet;
+## org.arkecosystem.crypto.networks.Devnet; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `version()`
 
@@ -375,7 +369,7 @@ Get the epoch time of the start of the Network.
 
 `String`
 
-## org.arkecosystem.crypto.networks.Mainnet;
+## org.arkecosystem.crypto.networks.Mainnet; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `version()`
 
@@ -413,7 +407,7 @@ Get the epoch time of the start of the Network.
 
 `String`
 
-## org.arkecosystem.crypto.networks.Testnet;
+## org.arkecosystem.crypto.networks.Testnet; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `version()`
 
@@ -451,7 +445,7 @@ Get the epoch time of the start of the Network.
 
 `String`
 
-## org.arkecosystem.crypto.transactions.builder.AbstractTransaction;
+## org.arkecosystem.crypto.transactions.builder.AbstractTransaction; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `AbstractTransaction()`
 
@@ -597,7 +591,7 @@ abstract TBuilder instance();
 
 Get the instance of the builder.
 
-## org.arkecosystem.crypto.transactions.builder.DelegateRegistration;
+## org.arkecosystem.crypto.transactions.builder.DelegateRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `getType()`
 
@@ -639,7 +633,7 @@ public DelegateRegistration instance()
 
 `DelegateRegistration`
 
-## org.arkecosystem.crypto.transactions.builder.DelegateResignation;
+## org.arkecosystem.crypto.transactions.builder.DelegateResignation; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `getType()`
 
@@ -663,7 +657,7 @@ public DelegateResignation instance()
 
 `DelegateResignation`
 
-## org.arkecosystem.crypto.transactions.builder.HtlcClaim
+## org.arkecosystem.crypto.transactions.builder.HtlcClaim; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `getType()`
 
@@ -706,7 +700,7 @@ public HtlcClaim instance()
 
 `HtlcClaim`
 
-## org.arkecosystem.crypto.transactions.builder.HtlcLock
+## org.arkecosystem.crypto.transactions.builder.HtlcLock <!-- markdownlint-disable-next-line MD026 -->
 
 ### `recipientId()`
 
@@ -802,7 +796,7 @@ public HtlcLock instance()
 
 `HtlcLock`
 
-## org.arkecosystem.crypto.transactions.builder.HtlcRefund;
+## org.arkecosystem.crypto.transactions.builder.HtlcRefund; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `htlcRefundAsset()`
 
@@ -844,7 +838,7 @@ public HtlcRefund instance()
 
 `HtlcRefund`
 
-## org.arkecosystem.crypto.transactions.builder.Ipfs;
+## org.arkecosystem.crypto.transactions.builder.Ipfs; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `ipfsAsset()`
 
@@ -886,7 +880,7 @@ public Ipfs instance()
 
 `Ipfs`
 
-## org.arkecosystem.crypto.transactions.builder.MultiPayment;
+## org.arkecosystem.crypto.transactions.builder.MultiPayment; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `addPayment()`
 
@@ -945,9 +939,9 @@ public MultiPayment instance()
 
 `MultiPayment`
 
-## org.arkecosystem.crypto.transactions.builder.MultiSignatureRegistration;
+## org.arkecosystem.crypto.transactions.builder.MultiSignatureRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
-### `min()`
+### `min()` int
 
 ```java
 public MultiSignatureRegistration min(int min)
@@ -965,7 +959,7 @@ Set the minimum required signatures.
 
 `MultiSignatureRegistration`
 
-### `min()`
+### `min()` byte
 
 ```java
 public MultiSignatureRegistration min(byte min)
@@ -983,7 +977,7 @@ Set the minimum required signatures.
 
 `MultiSignatureRegistration`
 
-### `lifetime()`
+### `lifetime()` int
 
 ```java
 public MultiSignatureRegistration lifetime(int lifetime)
@@ -1001,7 +995,7 @@ Set the transaction lifetime.
 
 `MultiSignatureRegistration`
 
-### `lifetime()`
+### `lifetime()` byte
 
 ```java
 public MultiSignatureRegistration lifetime(byte lifetime)
@@ -1059,7 +1053,7 @@ public MultiPayment instance()
 
 `MultiPayment`
 
-## org.arkecosystem.crypto.transactions.builder.SecondSignatureRegistration;
+## org.arkecosystem.crypto.transactions.builder.SecondSignatureRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `signature()`
 
@@ -1101,7 +1095,7 @@ public SecondSignatureRegistration instance()
 
 `SecondSignatureRegistration`
 
-## org.arkecosystem.crypto.transactions.builder.Transfer;
+## org.arkecosystem.crypto.transactions.builder.Transfer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `recipient()`
 
@@ -1121,7 +1115,7 @@ Set the recipient of the transfer.
 
 `Transfer`
 
-### `amount()`
+### `amount()` int
 
 ```java
 public Transfer amount(int amount)
@@ -1139,7 +1133,7 @@ Set the amount to transfer.
 
 `Transfer`
 
-### `amount()`
+### `amount()` long
 
 ```java
 public Transfer amount(long amount)
@@ -1197,7 +1191,7 @@ public Transfer instance()
 
 `Transfer`
 
-## org.arkecosystem.crypto.transactions.builder.Vote;
+## org.arkecosystem.crypto.transactions.builder.Vote; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `votes()`
 
@@ -1257,7 +1251,7 @@ public Vote instance()
 
 `Vote`
 
-## org.arkecosystem.crypto.transactions.deserializers.AbstractDeserializer;
+## org.arkecosystem.crypto.transactions.deserializers.AbstractDeserializer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `AbstractDeserializer()`
 
@@ -1279,7 +1273,7 @@ Create a new deserializer instance
 
 `AbstractDeserializer`
 
-## org.arkecosystem.crypto.transactions.deserializers.DelegateRegistration;
+## org.arkecosystem.crypto.transactions.deserializers.DelegateRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `DelegateRegistration()`
 
@@ -1315,7 +1309,7 @@ Handle the deserialization of "delegate registration" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.DelegateResignation;
+## org.arkecosystem.crypto.transactions.deserializers.DelegateResignation; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `DelegateResignation()`
 
@@ -1351,7 +1345,7 @@ Handle the deserialization of "delegate resignation" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.HtlcClaim;
+## org.arkecosystem.crypto.transactions.deserializers.HtlcClaim; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `HtlcClaim()`
 
@@ -1387,7 +1381,7 @@ Handle the deserialization of "htlc claim" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.HtlcLock;
+## org.arkecosystem.crypto.transactions.deserializers.HtlcLock; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `HtlcLock()`
 
@@ -1423,7 +1417,7 @@ Handle the deserialization of "htlc lock" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.HtlcRefund;
+## org.arkecosystem.crypto.transactions.deserializers.HtlcRefund; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `HtlcRefund()`
 
@@ -1459,7 +1453,7 @@ Handle the deserialization of "htlc refund" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.Ipfs;
+## org.arkecosystem.crypto.transactions.deserializers.Ipfs; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Ipfs()`
 
@@ -1495,7 +1489,7 @@ Handle the deserialization of "Ipfs" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.MultiPayment;
+## org.arkecosystem.crypto.transactions.deserializers.MultiPayment; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `MultiPayment()`
 
@@ -1531,7 +1525,7 @@ Handle the deserialization of "multi payment" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.MultiSignatureRegistration;
+## org.arkecosystem.crypto.transactions.deserializers.MultiSignatureRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `MultiSignatureRegistration()`
 
@@ -1567,7 +1561,7 @@ Handle the deserialization of "multi signature registration" data
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.SecondSignatureRegistration;
+## org.arkecosystem.crypto.transactions.deserializers.SecondSignatureRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `SecondSignatureRegistration()`
 
@@ -1603,7 +1597,7 @@ Handle the deserialization of "second signature" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.Transfer;
+## org.arkecosystem.crypto.transactions.deserializers.Transfer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Transfer()`
 
@@ -1639,7 +1633,7 @@ Handle the deserialization of "transfer" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.deserializers.Vote;
+## org.arkecosystem.crypto.transactions.deserializers.Vote; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Vote()`
 
@@ -1675,7 +1669,7 @@ Handle the deserialization of "vote" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.AbstractSerializer;
+## org.arkecosystem.crypto.transactions.serializers.AbstractSerializer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `AbstractSerializer()`
 
@@ -1692,7 +1686,7 @@ Create a new AbstractSerializer instance.
 | ByteBuffer | buffer | Yes | Buffer |
 | Transaction | transaction | Yes | Transaction |
 
-## org.arkecosystem.crypto.transactions.serializers.DelegateRegistration;
+## org.arkecosystem.crypto.transactions.serializers.DelegateRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `DelegateRegistration()`
 
@@ -1721,7 +1715,7 @@ Handle the serialization of "delegate registration" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.DelegateResignation;
+## org.arkecosystem.crypto.transactions.serializers.DelegateResignation; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `DelegateResignation()`
 
@@ -1750,7 +1744,7 @@ Handle the serialization of "delegate resignation" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.HtlcClaim;
+## org.arkecosystem.crypto.transactions.serializers.HtlcClaim; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `HtlcClaim()`
 
@@ -1779,7 +1773,7 @@ Handle the serialization of "htlc claim" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.HtlcLock;
+## org.arkecosystem.crypto.transactions.serializers.HtlcLock; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `HtlcLock()`
 
@@ -1808,7 +1802,7 @@ Handle the serialization of "htlc lock" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.HtlcRefund;
+## org.arkecosystem.crypto.transactions.serializers.HtlcRefund; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `HtlcRefund()`
 
@@ -1837,7 +1831,7 @@ Handle the serialization of "htlc refund" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.Ipfs;
+## org.arkecosystem.crypto.transactions.serializers.Ipfs; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Ipfs()`
 
@@ -1866,7 +1860,7 @@ Handle the serialization of "ipfs" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.MultiPayment;
+## org.arkecosystem.crypto.transactions.serializers.MultiPayment; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `MultiPayment()`
 
@@ -1895,7 +1889,7 @@ Handle the serialization of "multi payment" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.MultiSignatureRegistration;
+## org.arkecosystem.crypto.transactions.serializers.MultiSignatureRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `MultiSignatureRegistration`
 
@@ -1924,7 +1918,7 @@ Handle the serialization of "multi signature registration" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.SecondSignatureRegistration;
+## org.arkecosystem.crypto.transactions.serializers.SecondSignatureRegistration; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `SecondSignatureRegistration`
 
@@ -1953,7 +1947,7 @@ Handle the serialization of "second signature registration" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.Transfer;
+## org.arkecosystem.crypto.transactions.serializers.Transfer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Transfer`
 
@@ -1982,7 +1976,7 @@ Handle the serialization of "transfer" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.serializers.Vote;
+## org.arkecosystem.crypto.transactions.serializers.Vote; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Vote`
 
@@ -2011,7 +2005,7 @@ Handle the serialization of "vote" data.
 
 `void`
 
-## org.arkecosystem.crypto.transactions.Deserializer;
+## org.arkecosystem.crypto.transactions.Deserializer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `deserialize`
 
@@ -2031,7 +2025,7 @@ Perform AIP11 compliant deserialization.
 
 `Transaction`
 
-## org.arkecosystem.crypto.transactions.Serializer;
+## org.arkecosystem.crypto.transactions.Serializer; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `serialize()`
 
@@ -2051,7 +2045,7 @@ Perform AIP11 compliant serialization.
 
 `byte[]`
 
-## org.arkecosystem.crypto.transactions.Transaction;
+## org.arkecosystem.crypto.transactions.Transaction; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `computeId()`
 
@@ -2204,7 +2198,7 @@ Perform AIP11 compliant deserialization.
 
 `Transaction`
 
-## org.arkecosystem.crypto.utils.Message;
+## org.arkecosystem.crypto.utils.Message; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `Message()`
 
@@ -2317,7 +2311,7 @@ Get the signature from the message.
 
 `String`
 
-## org.arkecosystem.crypto.utils.Slot;
+## org.arkecosystem.crypto.utils.Slot; <!-- markdownlint-disable-next-line MD026 -->
 
 ### `time()`
 
