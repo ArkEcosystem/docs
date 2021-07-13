@@ -1,0 +1,25 @@
+
+name: Lint
+
+on:
+  push:
+    branches:
+      - "master"
+      - "develop"
+  pull_request:
+    types: [ready_for_review, synchronize, opened]
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v2.0.0
+        with:
+          files: "**/*.md.blade.php"
+          ignore_files: README.md
+          config_file: "./.github/configs/.markdownlint.yml"
