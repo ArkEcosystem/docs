@@ -34,9 +34,9 @@ configuration.getEnv
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "configuration.getEnv",
-	"params": { }
+    "jsonrpc": "2.0",
+    "method": "configuration.getEnv",
+    "params": { }
 }
 ```
 
@@ -93,9 +93,9 @@ configuration.setEnv
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "configuration.updateEnv",
-	"params": {
+    "jsonrpc": "2.0",
+    "method": "configuration.updateEnv",
+    "params": {
         "CORE_LOG_LEVEL": "info",
         "CORE_LOG_LEVEL_FILE": "info",
         "CORE_DB_HOST": "localhost",
@@ -152,9 +152,9 @@ configuration.getPlugins
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "configuration.getPlugins",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "configuration.getPlugins",
+    "params": {}
 }
 ```
 
@@ -200,11 +200,11 @@ configuration.setPlugins
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "configuration.updatePlugins",
-	"params": {
+    "jsonrpc": "2.0",
+    "method": "configuration.updatePlugins",
+    "params": {
         app.json object
-	}
+    }
 }
 ```
 
@@ -217,4 +217,3 @@ configuration.setPlugins
     "result": {}
 }
 ```
-

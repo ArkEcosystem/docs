@@ -178,7 +178,7 @@ Would you like to configure the database? [y/N]:
 
 Press `y` and confirm with `enter`.
 
-You can input any custom database credentials that you want to use, or you can use the one provided below, by replacing "ark\_network" with the network you plan to operate on \(eg. ark\_mainnet, ark\_devnet, ark\_testnet\):
+You can input any custom database credentials that you want to use, or you can use the one provided below, by replacing "ark_network" with the network you plan to operate on (eg. ark_mainnet, ark_devnet, ark_testnet):
 
 ```bash
 Enter the database username: ark

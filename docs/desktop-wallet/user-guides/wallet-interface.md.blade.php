@@ -19,7 +19,7 @@ Once you've read through the welcome instructions, you will be presented a page 
 ![](/storage/docs/docs/desktop-wallet/assets/newprofile1.png)
 
 * **Network**
-  * Which network to operate on, either the regular ARK network or the ARK Devnet \(for developers\)
+  * Which network to operate on, either the regular ARK network or the ARK Devnet (for developers)
 
 ![](/storage/docs/docs/desktop-wallet/assets/newprofile2.png)
 
@@ -32,7 +32,6 @@ Once you've read through the welcome instructions, you will be presented a page 
 Upon successfully creating your profile, you will be brought to the dashboard.
 
 ![](/storage/docs/docs/desktop-wallet/assets/dashboard.png)
-
 
 ## Wallet Interface
 
@@ -92,7 +91,7 @@ Resetting the wallet's data should almost never be done. It will permanently del
 
 The choices you made when creating your profile can be changed by a menu that is accessible by clicking on your profile icon in the navigation bar.
 
-From this menu, you can create a new profile or edit your existing profile\(s\).
+From this menu, you can create a new profile or edit your existing profile(s).
 
 There are a few profile settings you can affect in this way, namely:
 

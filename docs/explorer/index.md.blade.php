@@ -1,4 +1,6 @@
+<!-- markdownlint-disable MD041 -->
 ## Introduction
+<!-- markdownlint-enable MD041 -->
 
 <x-general.sidebar-link path="/docs/explorer/intro" name="Introduction" />
 

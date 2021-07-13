@@ -14,11 +14,11 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 
 ## Introduction
 
-This guide will take you through the basic steps of setting up a development environment from scratch on a fresh Linux \(\*.deb based\) box. We officially recommend and support **Ubuntu** operating system.
+This guide will take you through the basic steps of setting up a development environment from scratch on a fresh Linux (\*.deb based) box. We officially recommend and support **Ubuntu** operating system.
 
 ## Step 1: User setup
 
-We will create a new user `ark` and add this user to the `sudoers` group \(allowing root execution if needed\). You can skip this step as a developer and continue to next steps below.
+We will create a new user `ark` and add this user to the `sudoers` group (allowing root execution if needed). You can skip this step as a developer and continue to next steps below.
 
 If you are running on a fresh cloud box, like for example [DigitalOcean](https://cloud.digitalocean.com/), then create a user with the following commands below.
 
@@ -73,7 +73,7 @@ sudo apt-get install build-essential libcairo2-dev pkg-config libtool autoconf a
 
 Let's clone our `core` repository and run the initial `yarn setup` command. We will also checkout the latest `develop` branch.
 
-`yarn setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages \(including transpiling typescript\). For mode information look into core's `package.json` file in the root folder.
+`yarn setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages (including transpiling typescript). For mode information look into core's `package.json` file in the root folder.
 
 ```bash
 git clone https://github.com/arkecosystem/core
@@ -87,12 +87,12 @@ yarn setup  #run Lerna to clean, bootstrap and build the core packages
 ARK Core stores all the blockchain data in a [PostgreSQL](https://www.postgresql.org/) database. You have two options on how to setup your development database.
 
 <x-alert type="info">
-Follow **Step 7.1** if you are working locally on your developer computer and have docker environment in place, otherwise follow **Step 7.2** \(for example if you are running on a cloud based Ubuntu instance or prefer native database install\).
+Follow **Step 7.1** if you are working locally on your developer computer and have docker environment in place, otherwise follow **Step 7.2** (for example if you are running on a cloud based Ubuntu instance or prefer native database install).
 </x-alert>
 
 ### Step 7.1 Database Setup Using Docker
 
-If you are already using `Docker` and  have  `docker-compose` installed, then you can generate docker files from the command line, with the `yarn docker ark` command where \(ark is the name of the `network` for which you want to generate docker files\). For now let's stick with `ark` as the default name of the network.
+If you are already using `Docker` and  have  `docker-compose` installed, then you can generate docker files from the command line, with the `yarn docker ark` command where (ark is the name of the `network` for which you want to generate docker files). For now let's stick with `ark` as the default name of the network.
 
 Executing the command `yarn docker ark` in the root folder of the previously cloned repository, like this:
 
@@ -101,7 +101,7 @@ cd core  #root folder of the cloned repository
 yarn docker ark
 ```
 
-will generate the following docker files inside our `core/docker` folder \(see folder tree below\):
+will generate the following docker files inside our `core/docker` folder (see folder tree below):
 
 ```bash
 #core/docker tree in the cloned repository folder

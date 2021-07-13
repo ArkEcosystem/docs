@@ -18,7 +18,7 @@ Get a fee for a given transaction type
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| TransactionType | transaction\_type | Yes | Transaction type for which we wish to get a fee |
+| TransactionType | transaction_type | Yes | Transaction type for which we wish to get a fee |
 
 #### Return Value
 
@@ -36,7 +36,7 @@ Set a fee
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| TransactionType | transaction\_type | Yes | Transaction type for which we wish to set a fee |
+| TransactionType | transaction_type | Yes | Transaction type for which we wish to set a fee |
 | u64 | value | Yes | Fee for a given transaction type |
 
 #### Return Value
@@ -77,7 +77,7 @@ Get settings for a selected network, default network is mainnet.
 
 ## enums::networks::Network
 
-### `epoch()`
+### `epoch()` str
 
 ```rust
 pub fn epoch(&self)
@@ -101,7 +101,7 @@ Get the version of the Network.
 
 `u8`
 
-### `epoch()`
+### `epoch()` u8
 
 ```rust
 pub fn epoch(&self)
@@ -113,7 +113,7 @@ Get the epoch time of the Network.
 
 `u8`
 
-## enums::transaction\_types::TransactionType
+## enums::transaction_types::TransactionType
 
 ### `fee()`
 
@@ -141,8 +141,8 @@ Derive the address from the given public key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &PublicKey | public\_key | Yes | Public key |
-| Option | network\_version | No | Version of the network |
+| &PublicKey | public_key | Yes | Public key |
+| Option | network_version | No | Version of the network |
 
 #### Return Value
 
@@ -160,8 +160,8 @@ Derive the address from the given private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &PrivateKey | private\_key | Yes | Private key |
-| Option | network\_version | No | Version of the network |
+| &PrivateKey | private_key | Yes | Private key |
+| Option | network_version | No | Version of the network |
 
 #### Return Value
 
@@ -205,7 +205,7 @@ Validate the given address.
 
 `bool`
 
-## identities::private\_key
+## identities::private_key
 
 ### `from_passphrase()`
 
@@ -237,7 +237,7 @@ Create a private key instance from a hex string.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &str | private\_key | Yes | Private key |
+| &str | private_key | Yes | Private key |
 
 #### Return Value
 
@@ -255,14 +255,14 @@ Sign the private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &\[u8\] | bytes | Yes | ... |
+| &[u8] | bytes | Yes | ... |
 | &str | passphrase | Yes | Passphrase |
 
 #### Return Value
 
 `String`
 
-## identities::public\_key
+## identities::public_key
 
 ### `from_passphrase()`
 
@@ -294,7 +294,7 @@ Create a public key instance from a hex string.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &str | public\_key | Yes | Public key |
+| &str | public_key | Yes | Public key |
 
 #### Return Value
 
@@ -312,7 +312,7 @@ Create a public key instance from a private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &private\_key::PrivateKey | private\_key | Yes | Private key |
+| &private_key::PrivateKey | private_key | Yes | Private key |
 
 #### Return Value
 
@@ -359,10 +359,10 @@ Builds a transaction for a transfer.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | &str | passphrase | Yes | Passphrase |
-| &str | second\_passphrase | No | Second passphrase |
-| &str | recipient\_id | Yes | Recipient identifier |
+| &str | second_passphrase | No | Second passphrase |
+| &str | recipient_id | Yes | Recipient identifier |
 | u64 | amount | Yes | Transaction amount |
-| &str | vendor\_field | Yes | Transaction vendorfield |
+| &str | vendor_field | Yes | Transaction vendorfield |
 
 #### Return Value
 
@@ -385,7 +385,7 @@ Builds a transaction for a vote registration.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | &str | passphrase | Yes | Passphrase |
-| Option&lt;&str&gt; | second\_passphrase | No | Second passphrase |
+| Option&lt;&str&gt; | second_passphrase | No | Second passphrase |
 | Vec | votes | Yes | Votes |
 
 #### Return Value
@@ -408,7 +408,7 @@ Builds a transaction for a second signature registration.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | &str | passphrase | Yes | Passphrase |
-| Option&lt;&str&gt; | second\_passphrase | No | Second passphrase |
+| Option&lt;&str&gt; | second_passphrase | No | Second passphrase |
 
 #### Return Value
 
@@ -431,7 +431,7 @@ Builds a transaction for a delegate registration.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | &str | passphrase | Yes | Passphrase |
-| Option&lt;&str&gt; | second\_passphrase | No | Second passphrase |
+| Option&lt;&str&gt; | second_passphrase | No | Second passphrase |
 | &str | username | Yes | Delegate username |
 
 #### Return Value
@@ -457,7 +457,7 @@ Builds a transaction for a multi signature registration.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | &str | passphrase | Yes | Passphrase |
-| Option&lt;&str&gt; | second\_passphrase | No | Second passphrase |
+| Option&lt;&str&gt; | second_passphrase | No | Second passphrase |
 | u8 | min | Yes | Minimum required signatures |
 | u8 | lifetime | Yes | Transaction lifetime |
 | Vec | keysgroup | Yes | Transaction keysgroup |
@@ -582,7 +582,7 @@ Verify the transaction with a second public key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | sender\_public\_key | Yes | Second public key |
+| string | sender_public_key | Yes | Second public key |
 
 #### Return Value
 
@@ -600,8 +600,8 @@ Convert the transaction to its byte representation.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bool | skip\_signature | Yes | Skip first signature |
-| bool | skip\_second\_signature | Yes | Skip second signature |
+| bool | skip_signature | Yes | Skip first signature |
+| bool | skip_second_signature | Yes | Skip second signature |
 
 #### Return Value
 
@@ -645,7 +645,7 @@ Instantiate new Message.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &str | public\_key | Yes | Public key |
+| &str | public_key | Yes | Public key |
 | &str | signature | Yes | Signature |
 | &str | message | Yes | Message |
 

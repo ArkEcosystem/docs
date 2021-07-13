@@ -6,7 +6,7 @@ title: How to Add a Contact?
 
 The application provides you a neat interface to add addresses to your contact list. This feature enables you to aggregate all of the addresses which you may transact with or be interested in.
 
-### Adding a Contact
+## Adding a Contact
 
 ![You can access the contact creation menu by first clicking on the contact icon in the wallet's navigation bar which will expose your contact list.](/storage/docs/docs/desktop-wallet/assets/contacts.png)
 

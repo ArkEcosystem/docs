@@ -14,7 +14,7 @@ Core Server can be run in the following general modes:
 
 ### How To Start a Node?
 
-If you want to start a node which consists of a `relay` and `forger` process you can use any of the following commands \(inside `packages/core`\).
+If you want to start a node which consists of a `relay` and `forger` process you can use any of the following commands (inside `packages/core`).
 
 * `yarn core:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
 * `yarn core:devnet` =&gt; `packages/core/bin/config/networks/devnet`
@@ -22,7 +22,7 @@ If you want to start a node which consists of a `relay` and `forger` process you
 
 ### How To Start a Relay?
 
-If you want to start a `relay` you can use any of the following commands \(inside `packages/core`\).
+If you want to start a `relay` you can use any of the following commands (inside `packages/core`).
 
 * `yarn relay:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
 * `yarn relay:devnet` =&gt; `packages/core/bin/config/networks/devnet`
@@ -30,7 +30,7 @@ If you want to start a `relay` you can use any of the following commands \(insid
 
 ### How To Start a Forger?
 
-If you want to start a `forger`, you can use any of the following commands \(inside `packages/core`\).
+If you want to start a `forger`, you can use any of the following commands (inside `packages/core`).
 
 * `yarn forger:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
 * `yarn forger:devnet` =&gt; `packages/core/bin/config/networks/devnet`
@@ -101,7 +101,9 @@ export class Command extends Commands.Command {
 }
 ```
 
+<!-- markdownlint-disable MD029 -->
 4. We are going to take a brief look at the `bootstrap` method, found in the `core-kernel` package:
+<!-- markdownlint-enable MD029 -->
 
 ```typescript
 public async bootstrap(options: { flags: JsonObject; plugins?: JsonObject }): Promise<void> {
@@ -127,7 +129,9 @@ private async bootstrapWith(type: string): Promise<void> {
 }
 ```
 
+<!-- markdownlint-disable MD029 -->
 5. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key. You can find the enabled plugins in the `app.json` file located in the `core` package at `bin/config/testnet`.
+<!-- markdownlint-enable MD029 -->
 
 This last step is where the meat-and-potatoes of ARK Core is loaded. During this step, the Postgres database is set up, all ARK-specific tables and fields are migrated, the genesis block is created, 51 forging delegates are created and set up to forge blocks — all the blockchain goodness you would expect from of a fully-formed testnet.
 
@@ -151,6 +155,6 @@ Our tool of choice for tests is [Jest](https://facebook.github.io/jest/) by Face
 
 All packages have a `yarn test` command which you should run before sending a PR or pushing to GitHub to make sure all tests are passing. You could use `yarn test:watch` to listen to changes on the files and run the tests automatically.
 
-Additionally, we provide a variant \(`yarn test:debug`\) that enables the [Node debugger](https://nodejs.org/api/debugger.html).
+Additionally, we provide a variant (`yarn test:debug`) that enables the [Node debugger](https://nodejs.org/api/debugger.html).
 
 With theory covered let's start our first local Testnet as shown below.

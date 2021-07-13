@@ -4,7 +4,7 @@ title: Static Fees
 
 # Static Fees
 
-Every transaction type on your new network can have its own set of independent fees. Core supports static and dynamic fees \(dynamic being optional\). While we can set initial fees, every forger on the network can also configure them on their own or run the default ones you'll setup in this step. While you can set fees as low as 0.00000001 per transaction type, fees represent a way to ward off potential transaction spam on the network and reward forgers for verifying and including new transactions in blocks.
+Every transaction type on your new network can have its own set of independent fees. Core supports static and dynamic fees (dynamic being optional). While we can set initial fees, every forger on the network can also configure them on their own or run the default ones you'll setup in this step. While you can set fees as low as 0.00000001 per transaction type, fees represent a way to ward off potential transaction spam on the network and reward forgers for verifying and including new transactions in blocks.
 
 **Even if you enable dynamic fees, you should treat these static fees as a kind of "max reasonable fee" per tx type.**
 
@@ -40,7 +40,7 @@ Is a fee that new delegates need to pay in order to register their unique name o
 
 ## Multi-Signature Fee
 
-Is a special transaction type where more than one address is needed in order to sign a transaction. This can be N out of M signatures required for successfully signing and broadcasting a transaction on the network, where N is a number of minimum required signatures and M is the number of all signatures that are associated with multisignature \(e.g. 3 of 5 would mean you need at least 3 signatures out of 5 that are associated with that multisignature address\). This transaction type will become available with implementation of [AIP 18](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-18.md).
+Is a special transaction type where more than one address is needed in order to sign a transaction. This can be N out of M signatures required for successfully signing and broadcasting a transaction on the network, where N is a number of minimum required signatures and M is the number of all signatures that are associated with multisignature (e.g. 3 of 5 would mean you need at least 3 signatures out of 5 that are associated with that multisignature address). This transaction type will become available with implementation of [AIP 18](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-18.md).
 
 ## IPFS Fee
 

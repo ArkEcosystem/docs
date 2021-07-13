@@ -60,7 +60,7 @@ cd d:\
 git clone https://github.com/ArkEcosystem/core-docker
 ```
 
-### Step 4.2: \[Optional\] Adjust ARK Core PATH
+### Step 4.2: [Optional] Adjust ARK Core PATH
 
 <x-alert type="info">
 If you cloned ARK Core to any other PATH different than**`D:\core`** you'll have to edit `docker-compose.yml` to match the path:

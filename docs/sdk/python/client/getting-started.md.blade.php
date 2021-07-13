@@ -19,52 +19,52 @@ On OSx you can also install Python through `HomeBrew`, which would also install 
 
 ## pip
 
->  pip is the standard package manager for Python. It allows you to install and manage additional packages that are not
+> pip is the standard package manager for Python. It allows you to install and manage additional packages that are not
 > part of the Python standard library.
 
 ### Install `pip`
 
-**On Windows :**
+#### On Windows
 
-* Download [`get-pip.py`](https://bootstrap.pypa.io/get-pip.py)
+* Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 * Open your terminal (`powershell`, `cmd`, ...) and navigate to the folder containing `get-pip.py`
 * Run the following command : `python get-pip.py`
 * Pip is now installed
 
-**On Unix :**
+#### On Unix
 
-*Debian / Ubuntu*
+*Debian / Ubuntu*:
 
 ```bash
 sudo apt install python3-pip
 ```
 
-*CentOS / Rhel*
+*CentOS / Rhel*:
 
 ```bash
 sudo yum install epel-release
 sudo yum install python-pip
 ```
 
-*Fedora*
+*Fedora*:
 
 ```bash
 sudo dnf install python3
 ```
 
-*Arch Linux*
+*Arch Linux*:
 
 ```bash
 sudo pacman -S python-pip
 ```
 
-*openSUSE*
+*openSUSE*:
 
 ```bash
 sudo zypper install python3-pip
 ```
 
-**On OSx :**
+**On macOS**:
 
 Download `get-pip.py` and then run it
 
@@ -73,7 +73,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 ```
 
-*With Brew*
+*With Brew*:
 
 ```bash
 brew install python3
@@ -81,7 +81,6 @@ brew install python3
 
 > You can verify that`pip` was installed properly by running the following command in your terminal : `pip -V` which
 > should returns the version of the installed `pip` program.
-
 
 ### Install package with `pip`
 
@@ -96,50 +95,61 @@ pip install arkecosystem-client
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/python-client
-   ```
+git clone https://github.com/<githubusername>/python-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd python-client
-   ```
+cd python-client
+```
 
+<!-- markdownlint-disable MD029 -->
 4. The next step would be to create something like a [virtual environment](https://virtualenv.pypa.io/en/latest/) to ensure no name clashes occur.
+<!-- markdownlint-enable MD029 -->
 
+<!-- markdownlint-disable MD029 -->
 5. Create and enter the virtual environment
+<!-- markdownlint-enable MD029 -->
+
 ```bash
-    # With virtualenv (on Unix and OSx)
-    mkdir my-amazing-ark-project
-    cd my-amazing-ark-project
-    virtualenv virtualEnvName
-    source venv/bin/activate
+   # With virtualenv (on Unix and OSx)
+   mkdir my-amazing-ark-project
+   cd my-amazing-ark-project
+   virtualenv virtualEnvName
+   source venv/bin/activate
 
-    # With virtualenv (on Windows)
-    mkdir my-amazing-ark-project
-    cd my-amazing-ark-project
-    virtualenv virtualEnvName
-    .\venv\Scripts\activate.bat
-    ```
+   # With virtualenv (on Windows)
+   mkdir my-amazing-ark-project
+   cd my-amazing-ark-project
+   virtualenv virtualEnvName
+   .\venv\Scripts\activate.bat
+```
 
+<!-- markdownlint-disable MD029 -->
 6. Once inside the virtualenv, you can proceed to install the dependencies. These are listed inside the setup.py file.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
    pip install \
-           requests \
-           backoff \
-           flake8 \
-           flake8-import-order \
-           flake8-print \
-           flake8-quotes \
-           pytest \
-           pytest-responses \
-           pytest-mock \
-           pytest-cov
-   ```
+      requests \
+      backoff \
+      flake8 \
+      flake8-import-order \
+      flake8-print \
+      flake8-quotes \
+      pytest \
+      pytest-responses \
+      pytest-mock \
+      pytest-cov
+```
 
+<!-- markdownlint-disable MD029 -->
 7. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   pytest
-   ```
+pytest
+```

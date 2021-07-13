@@ -12,7 +12,7 @@ During this guide, we will configure network and SSH parameters, which if improp
 
 ## Security Through Obscurity
 
-By outlining how to secure a node we're breaking a fundamental property of network security. We are telling people how we are defending our network. This breaks the security through obscurity \([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)\) rule. If all nodes were secured in the same way, a single exploit might compromise the entire network. It is therefore vital that you consider other sources as well to secure your node.
+By outlining how to secure a node we're breaking a fundamental property of network security. We are telling people how we are defending our network. This breaks the security through obscurity ([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)) rule. If all nodes were secured in the same way, a single exploit might compromise the entire network. It is therefore vital that you consider other sources as well to secure your node.
 
 ### Making Sure Our Server Is Updated
 
@@ -43,7 +43,7 @@ Edit your `sshd_config` by running the following command.
 sudo nano /etc/ssh/sshd_config
 ```
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```bash
 # What ports, IPs and protocols we listen for
@@ -54,7 +54,7 @@ Change the `22` to a port of your choosing between `49152` and `65535`. This is 
 
 From now on port 22 is not usable for SSH connections.
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```bash
 # What ports, IPs and protocols we listen for
@@ -65,7 +65,7 @@ Port 55555
 
 In the previous section, we had you create a new account for security purposes. You should never log in as root to your server after it has been set up. Our first security measure is going to be to disable root access altogether.
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```bash
 # Authentication:
@@ -76,7 +76,7 @@ StrictModes yes
 
 Change `LoginGraceTime` to `60` and set `PermitRootLogin` to `no`
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```bash
 # Authentication:
@@ -89,7 +89,7 @@ StrictModes yes
 
 Set `X11Forwarding` to `no`.
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```bash
 X11Forwarding yes
@@ -100,7 +100,7 @@ TCPKeepAlive yes
 #UseLogin no
 ```
 
-`/file: etc/ssh/sshd\_config`
+`/file: etc/ssh/sshd_config`
 
 ```bash
 X11Forwarding no
@@ -110,14 +110,14 @@ X11Forwarding no
 
 Scroll down until you see the following line and uncomment `MaxStartups`. Then set MaxStartups to `2`.
 
-`/file: etc/ssh/sshd\_config`
+`/file: etc/ssh/sshd_config`
 
 ```bash
 #MaxStartups 10:30:60
 #Banner /etc/issue.net
 ```
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```bash
 MaxStartups 2
@@ -164,7 +164,7 @@ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
 ### **Configuration**
 
-Find all the references that specify port = SSH \(typically in the SSH header section\) and change the port to the new one you selected in the SSH security section above.
+Find all the references that specify port = SSH (typically in the SSH header section) and change the port to the new one you selected in the SSH security section above.
 
 ```bash
 sudo nano /etc/fail2ban/jail.local
@@ -237,7 +237,7 @@ sudo ufw default deny incoming
 
 Depending which network this node is for will determine what port you open here. For mainnet use `4001`, devnet use `4002`, and testnet use `4000` and public API which is by default located on port `4003`.
 
-We don't want to open any more ports than required to operate securely so we will open P2P port depending on the network \(in our example for mainnet\) and public API port.
+We don't want to open any more ports than required to operate securely so we will open P2P port depending on the network (in our example for mainnet) and public API port.
 
 ```bash
 sudo ufw allow 4001/tcp
@@ -469,7 +469,7 @@ sudo nano /etc/ssh/sshd_config
 
 This file should look familiar to you as we edited it earlier in this process. This time we're going to disable password authentication. Set `PasswordAuthentication` to `no` and make sure that `PubkeyAuthentication` is set to `yes` and `ChallengeResponseAuthentication` is set to `no`.
 
-`file: /etc/ssh/sshd\_config`
+`file: /etc/ssh/sshd_config`
 
 ```shell
 PasswordAuthentication no

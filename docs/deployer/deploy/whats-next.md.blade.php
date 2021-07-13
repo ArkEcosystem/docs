@@ -17,7 +17,6 @@ Congratulations! You have now achieved the following:
 
 Now you’re ready to build your application on top of your blockchain. Visit [docs.ark.io](https://docs.ark.io) for further information on plugins, webhooks, custom transaction types, and more.
 
-
 * [Core Introduction](/docs/core/)
 * [Plugins](/docs/core/development-guides/plugins/developing-plugins)
 * [SDKs](/docs/sdk/)

@@ -18,7 +18,7 @@ Blocks are the core unit of any given blockchain. In ARK, blocks contain a group
 
 * **id**
 * **version** _the version of ARK active on the network when the block was forged_
-* **height** _the total number of blocks since genesis \(block 1\)_
+* **height** _the total number of blocks since genesis (block 1)_
 * **previous** _the ID of the previous block in the chain_
 * **forged**:
   * **reward** _total reward for mining block_

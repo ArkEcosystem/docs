@@ -104,7 +104,7 @@ A mnemonic recovery passphrase should be all <u>**lower-case**</u> letters with 
 
 ---
 
-### My Recovery Phrase Was Entered as Recorded!
+### My Recovery Phrase Was Entered as Recorded! <!-- markdownlint-disable-next-line MD026 -->
 
 If the mnemonic passphrase was entered **exactly** as recorded, compare each word to the official list found here:<br>[BIP-39 Wordlist: https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt)
 
@@ -118,7 +118,7 @@ Tip: Enter your ARK Address at [explorer.ark.io](http://explorer.ark.io) to chec
 
 ---
 
-### My Recovery Phrase is Gone!
+### My Recovery Phrase is Gone! <!-- markdownlint-disable-next-line MD026 -->
 
 In most cases, the above advice will help a user successfully recover their wallet.
 
@@ -156,7 +156,7 @@ Users should also check that they are not using the <u>**Mnemonic Passphrase**</
 
 ---
 
-### My Encryption Password is Wrong!
+### My Encryption Password is Wrong! <!-- markdownlint-disable-next-line MD026 -->
 
 If only the **encryption password** is wrong.. **FUNDS SAFU!**
 
@@ -168,7 +168,7 @@ An encryption password **must** contain at least:<br>- 8 characters in total<br>
 
 ---
 
-### My Recovery Phrase <u>Seems</u> Correct!
+### My Recovery Phrase <u>Seems</u> Correct! <!-- markdownlint-disable-next-line MD026 -->
 
 If your **mnemonic passphrase** appears to be correct, check that it was **entered** correctly.
 
@@ -247,9 +247,7 @@ A user should also check that their <b>Ledger firmware</b> is <b>up-to-date</b>.
 <details><summary><u><b>5) is the ARK App installed and opened?</b></u></summary>
 In order to use the ARK Desktop Wallet with a <b>Ledger</b> device, the <b>ARK App</b> must be <b>installed</b> and <b>opened</b> on the device.
 
-For guidance on <b>installing</b> the <b>ARK App</b>, refer to the following link:
-
-<livewire:embed-link url="https://support.ledger.com/hc/en-us/articles/115005174589-Ark-ARK-" caption="Ark (ARK)" />
+For guidance on <b>installing</b> the <b>ARK App</b>, refer to the following link: [https://support.ledger.com/hc/en-us/articles/115005174589-Ark-ARK-](https://support.ledger.com/hc/en-us/articles/115005174589-Ark-ARK-)
 </details>
 {{--  --}}
 
@@ -313,7 +311,7 @@ Advice on troubleshooting a **network connection** can be found <u>[here](#resol
 
 ---
 
-### My Ledger issue is still not resolved!
+### My Ledger issue is still not resolved! <!-- markdownlint-disable-next-line MD026 -->
 
 Most **Ledger** **connectivity** and **transaction** issues will be resolved by following the advice above.
 

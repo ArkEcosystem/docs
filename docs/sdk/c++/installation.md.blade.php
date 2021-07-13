@@ -66,7 +66,7 @@ cmake --build .
 
 ### Install package for Arduino
 
-Download and install the Arduino IDE \(&gt;=1.8.5\) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
+Download and install the Arduino IDE (&gt;=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
 Using the Arduino IDEs built-in Library Manager, install the ARK-Cpp-Crypto library. Be sure to install the "-arduino" version of Cpp-Crypto.
 
@@ -74,12 +74,12 @@ Using the Arduino IDEs built-in Library Manager, install the ARK-Cpp-Crypto libr
 
 Using the Arduino IDEs built-in Library Manager, also install the following libraries:
 
-**Crypto**
+**Crypto**:
 
-* [`ArduinoJson@6.12.0`](https://github.com/bblanchon/ArduinoJson)
-* [`bcl@0.0.5`](https://github.com/sleepdefic1t/bcl)
-* [`BIP66@0.3.2`](https://github.com/sleepdefic1t/BIP66)
-* [`micro-ecc@1.0.0`](https://github.com/kmackay/micro-ecc)
+* [ArduinoJson@6.12.0](https://github.com/bblanchon/ArduinoJson)
+* [bcl@0.0.5](https://github.com/sleepdefic1t/bcl)
+* [BIP66@0.3.2](https://github.com/sleepdefic1t/BIP66)
+* [micro-ecc@1.0.0](https://github.com/kmackay/micro-ecc)
 
 ### Using With the Arduino IDE
 
@@ -103,13 +103,13 @@ Once installed, add the following line to your `platformio.ini` configuration fi
 
 #### Client
 
-```
+```ini
 lib_deps = Ark-Cpp-Client
 ```
 
-This is an example of a fully configured \`platformio.ini file for the Adafruit ESP32 Feather:
+This is an example of a fully configured `platformio.ini` file for the Adafruit ESP32 Feather:
 
-```
+```ini
 ; PlatformIO Project Configuration File
 ;
 ;   Build options: build flags, source filter
@@ -130,13 +130,13 @@ monitor_speed = 115200
 
 #### Crypto
 
-```
+```ini
 lib_deps = Ark-Cpp-Crypto
 ```
 
-This is an example of a fully configured \`platformio.ini file for the Adafruit ESP32 Feather:
+This is an example of a fully configured `platformio.ini` file for the Adafruit ESP32 Feather:
 
-```
+```ini
 ; PlatformIO Project Configuration File
 ;
 ;   Build options: build flags, source filter

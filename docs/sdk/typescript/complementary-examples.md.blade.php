@@ -33,7 +33,7 @@ npm install @arkecosystem/client
 
 Now that we're setup and ready to go we'll look into some examples for the most common tasks you'll encounter when wanting to interact with the ARK Blockchain.
 
-## Persisting your transaction on the blockchain.
+## Persisting your transaction on the blockchain
 
 The process of getting your transaction verified and persisted on the ARK Blockchain involves a few steps with which our SDKs will help you but lets break them down to get a better idea of what is happening.
 

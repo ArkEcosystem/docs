@@ -19,7 +19,7 @@ For further information on how to install Swift, go on the `Installation` sectio
 
 ## CocoaPods
 
-> [CocoaPods](https://cocoapods.org) is a dependency manager for Swift \(and Objective-C\) Cocoa Projects.
+> [CocoaPods](https://cocoapods.org) is a dependency manager for Swift (and Objective-C) Cocoa Projects.
 
 ### Install CocoaPods
 

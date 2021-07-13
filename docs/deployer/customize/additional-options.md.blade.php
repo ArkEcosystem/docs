@@ -12,4 +12,4 @@ Is where you put the git origin of your repository where Core will reside and wh
 
 ## Specify License
 
-Can specify your own license name that will be put in the license file of the Core repository \(and Explorer if applicable\). It usually follows this format: _Copyright \[year\] \(c\) \[Project Name\] \[email\]_. Push-Button Blockchain is released under MIT standards.
+Can specify your own license name that will be put in the license file of the Core repository (and Explorer if applicable). It usually follows this format: _Copyright [year] (c) [Project Name] [email]_. Push-Button Blockchain is released under MIT standards.

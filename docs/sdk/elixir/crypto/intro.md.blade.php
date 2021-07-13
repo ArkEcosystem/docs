@@ -6,11 +6,11 @@ title: Getting Started
 
 ## Install packages with `mix`
 
-The package can be installed by adding arkecosystem\_crypto to your list of dependencies in mix.exs:
+The package can be installed by adding arkecosystem_crypto to your list of dependencies in mix.exs:
 
 ```elixir
 def deps do
-    {:arkecosystem_crypto, "~> 0.1.1"}
+   {:arkecosystem_crypto, "~> 0.1.1"}
 end
 ```
 
@@ -26,23 +26,29 @@ mix deps.get
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/elixir-crypto
-   ```
+git clone https://github.com/<githubusername>/elixir-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd elixir-crypto
-   ```
+cd elixir-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Install the dependencies.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   mix deps.get
-   ```
+mix deps.get
+```
 
+<!-- markdownlint-disable MD029 -->
 5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   mix test
-   ```
+mix test
+```

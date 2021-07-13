@@ -89,7 +89,7 @@ Derive the address from the given public key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | public\_key | Yes | Public key |
+| string | public_key | Yes | Public key |
 | string | network | No | Version of the network |
 
 #### Return Value
@@ -108,7 +108,7 @@ Derive the address from the given private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | private\_key | Yes | Private key |
+| string | private_key | Yes | Private key |
 | string | network | No | Version of the network |
 
 #### Return Value
@@ -184,7 +184,7 @@ Create a private key instance from a hex string.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | private\_key | Yes | Private key |
+| string | private_key | Yes | Private key |
 
 #### Return Value
 
@@ -222,7 +222,7 @@ Create a public key instance from a hex string.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | public\_key | Yes | Public key |
+| string | public_key | Yes | Public key |
 
 #### Return Value
 
@@ -443,7 +443,7 @@ Verify the transaction with a second public key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | second\_public\_key | Yes | Second public key |
+| string | second\_public_key | Yes | Second public key |
 
 #### Return Value
 
@@ -605,7 +605,7 @@ Set the second passphrase for the transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | second\_passphrase | Yes | Second passphrase |
+| string | second_passphrase | Yes | Second passphrase |
 
 #### Return Value
 
@@ -637,7 +637,7 @@ Set the recipient id of the transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | recipient\_id | Yes | Recipient identifier |
+| string | recipient_id | Yes | Recipient identifier |
 
 #### Return Value
 
@@ -673,7 +673,7 @@ Set the vendorfield of the transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| String | vendor\_field | Yes | Transaction vendorfield |
+| String | vendor_field | Yes | Transaction vendorfield |
 
 #### Return Value
 
@@ -757,7 +757,7 @@ The base deserializer for transactions.
 | :--- | :--- | :--- | :--- |
 | ? | serialized | Yes | Serialized |
 | ? | binary | Yes | ... |
-| ? | asset\_offset | Yes | Offset |
+| ? | asset_offset | Yes | Offset |
 | ? | transaction | Yes | Transaction |
 
 #### Return Value
@@ -1081,7 +1081,7 @@ Handle the deserialization of "type" data
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ? | asset\_offset | Yes | Offset |
+| ? | asset_offset | Yes | Offset |
 | ? | transaction | Yes | Transaction |
 
 #### Return Value
@@ -1218,7 +1218,7 @@ Sign the transaction using the given second passphrase.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ? | second\_passphrase | Yes | Second passphrase |
+| ? | second_passphrase | Yes | Second passphrase |
 
 #### Return Value
 
@@ -1248,7 +1248,7 @@ Verify the transaction with a second public key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| String | second\_public\_key | Yes | Second public key |
+| String | second_public_key | Yes | Second public key |
 
 #### Return Value
 
@@ -1266,8 +1266,8 @@ Convert the transaction to its byte representation.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | skip\_signature | No | Skip first signature |
-| string | skip\_second\_signature | No | Skip second signature |
+| string | skip_signature | No | Skip first signature |
+| string | skip_second_signature | No | Skip second signature |
 
 #### Return Value
 
@@ -1286,7 +1286,7 @@ Parse the signature, second signature, and multi signatures.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ? | serialized | Yes | Serialized |
-| ? | start\_offset | Yes | Offset |
+| ? | start_offset | Yes | Offset |
 
 #### Return Value
 

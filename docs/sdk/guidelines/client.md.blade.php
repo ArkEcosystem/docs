@@ -51,8 +51,8 @@ Following these guidelines is required to provide a streamlined experience acros
 ## Terminology & Phrasing
 
 * If you need to use the `ARK` name, keep these 2 use-cases in mind. The first one is `ARK` which is used in financial contexts like `10 ARK`. The second is `ARK` which used for everything else that is not talking about `ARK`, the financial unit.
-* If you need to namespace something with a numerical value in it, write out the numerical value. An example would be `App\Versions\One` instead of `App\V1`.\_
-* If you work with a language that provides standard interfaces for HTTP messaging, implement them to provide a standardized and compliant interface which allows other developers to inject dependencies. _An example of this would be_ [_PSR-7_](https://www.php-fig.org/psr/psr-7/) _for PHP which allows developers to create HTTP clients that follow a standardized interface which allows switching implementations while knowing it will work._
+* If you need to namespace something with a numerical value in it, write out the numerical value. An example would be `App\Versions\One` instead of `App\V1`._
+* If you work with a language that provides standard interfaces for HTTP messaging, implement them to provide a standardized and compliant interface which allows other developers to inject dependencies. _An example of this would be [PSR-7](https://www.php-fig.org/psr/psr-7/) for PHP which allows developers to create HTTP clients that follow a standardized interface which allows switching implementations while knowing it will work._
 
 ## Implementation
 

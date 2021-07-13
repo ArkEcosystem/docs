@@ -62,7 +62,7 @@ Set a fee
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| byte | transactionType | Yes | Transaction\_type for which we wish to set a fee |
+| byte | transactionType | Yes | Transaction_type for which we wish to set a fee |
 | FlexToshi | value | Yes | Fee for a given transaction type |
 
 ## crypto.address
@@ -121,7 +121,7 @@ Validate the given address.
 
 `(bool, error)`
 
-## crypto.private\_key
+## crypto.private_key
 
 ### `PrivateKeyFromPassphrase()`
 
@@ -268,7 +268,7 @@ Verify the private key.
 
 `bool, error`
 
-## crypto.public\_key
+## crypto.public_key
 
 ### `PublicKeyFromPassphrase()`
 

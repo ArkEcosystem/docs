@@ -42,9 +42,9 @@ Once installed, you can edit the `pom.xml` file of the project and add the follo
 
 ```xml
 <dependency>
-  <groupId>org.arkecosystem</groupId>
-  <artifactId>crypto</artifactId>
-  <version>0.1.2</version>
+   <groupId>org.arkecosystem</groupId>
+   <artifactId>crypto</artifactId>
+   <version>0.1.2</version>
 </dependency>
 ```
 
@@ -55,23 +55,29 @@ Once installed, you can edit the `pom.xml` file of the project and add the follo
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/java-crypto
-   ```
+git clone https://github.com/<githubusername>/java-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd java-crypto
-   ```
+cd java-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
-    With Maven
-```bash
-   mvn test
-   ```
+**With Maven**:
 
-   With Gradle
 ```bash
-   gradle test
-   ```
+mvn test
+```
+
+**With Gradle**:
+
+```bash
+gradle test
+```

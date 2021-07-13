@@ -40,9 +40,9 @@ process.list
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "process.list",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "process.list",
+    "params": {}
 }
 ```
 
@@ -100,9 +100,9 @@ process.stop
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "process.stop",
-	"params": { "name": "ark-core" }
+    "jsonrpc": "2.0",
+    "method": "process.stop",
+    "params": { "name": "ark-core" }
 }
 ```
 
@@ -151,9 +151,9 @@ process.start
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "process.start",
-	"params": { "name": "core", "args": "--network=testnet --env=test" }
+    "jsonrpc": "2.0",
+    "method": "process.start",
+    "params": { "name": "core", "args": "--network=testnet --env=test" }
 }
 ```
 
@@ -200,9 +200,9 @@ process.restart
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "process.restart",
-	"params": { "name": "ark-core" }
+    "jsonrpc": "2.0",
+    "method": "process.restart",
+    "params": { "name": "ark-core" }
 }
 ```
 

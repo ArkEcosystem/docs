@@ -4,7 +4,7 @@ title: Services - Events
 
 # Events
 
-Events play an essential role in being able to develop reactive plugins that act when state changes occur in Core \(block received, transaction forged, etc\).
+Events play an essential role in being able to develop reactive plugins that act when state changes occur in Core (block received, transaction forged, etc).
 
 The event dispatcher implementation that ships with Core supports both synchronous and asynchronous execution of event listeners. As always, you should think carefully about when to use an event listener as they are a great way of decoupling certain aspects of your application but can end up hogging resources.
 

@@ -28,7 +28,7 @@ _Examples: making ARK out of thin air, spending someone else’s ARK without the
 
 Security vulnerabilities that cause severe problems to the networks for prolonged periods and usually don’t have irreparable implications.
 
-_Examples: stopping the whole network for longer periods of time, bringing majority / all delegates down, get into the blockchain DB invalid data \(transaction, blocks\)._
+_Examples: stopping the whole network for longer periods of time, bringing majority / all delegates down, get into the blockchain DB invalid data (transaction, blocks)._
 
 ### **Moderate Vulnerabilities: $500 - $1,500**
 
@@ -40,7 +40,7 @@ _Examples: slow down block propagation or the network, stop the network for a sh
 
 Security vulnerabilities that usually have no impact on the whole blockchain infrastructure, but can still pose problems for some specific things.
 
-_Examples: things that only affect a subset of nodes \(e.g. hardware failures caused by an attack when the server satisfies the minimum requirements specified, inconveniences caused by a malicious delegate\)._
+_Examples: things that only affect a subset of nodes (e.g. hardware failures caused by an attack when the server satisfies the minimum requirements specified, inconveniences caused by a malicious delegate)._
 
 To report a possible security vulnerability, please include your Name, preferred contact information, a full disclosure report, and a method to reproduce the issue being reported and email the information to [security@ark.io](mailto:security@ark.io) with the title "Security Vulnerability Report".
 

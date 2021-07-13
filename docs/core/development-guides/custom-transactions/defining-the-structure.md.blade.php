@@ -4,7 +4,7 @@ title: Custom Transactions Guide - Defining the Structure
 
 # Defining the Transaction Structure
 
-We need to inherit \(extend\) base `Transaction` class to follow the GTI engine rules. The following steps are a walkthrough of how to develop a new Transaction structure class.
+We need to inherit (extend) base `Transaction` class to follow the GTI engine rules. The following steps are a walkthrough of how to develop a new Transaction structure class.
 
 ## **STEP 1: Define Your New Transaction Structure**
 
@@ -22,7 +22,7 @@ export interface IBusinessData {
 The defined interface makes use of new custom transaction fields stricter and is part of the serde process.
 
 <x-alert type="info">
-Our Public API enables searching of transactions with new custom fields by design \(no API changes needed\)
+Our Public API enables searching of transactions with new custom fields by design (no API changes needed)
 </x-alert>
 
 ## STEP 2: Implementation Of The `serde` process
@@ -31,7 +31,7 @@ Our Public API enables searching of transactions with new custom fields by desig
 The use of the term **serde** throughout this document refers to the processes of **transaction** **serialization** and **deserialization**.
 </x-alert>
 
-We need to implement custom serde methods that will take care of the serde process for our newly introduced transaction fields. Abstract methods **serialize\(\)** and **deserialize\(\)** are defined by the base **Transaction** class, and are automatically called inside our custom class during the serde process.
+We need to implement custom serde methods that will take care of the serde process for our newly introduced transaction fields. Abstract methods **serialize()** and **deserialize()** are defined by the base **Transaction** class, and are automatically called inside our custom class during the serde process.
 
 The code snippet below is an excerpt example showing implementation of **serde** methods for a new **BusinessRegistration** transaction.
 
@@ -77,7 +77,7 @@ export class BusinessRegistrationTransaction extends Transactions.Transaction {
 Each custom transaction is accompanied by enforced schema validation. To achieve this we must extend base `TransactionSchema` and provide rules for the custom field validation. Schema is defined with **AJV** and we can access it by calling the [getSchema()](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/transactions/BusinessRegistrationTransaction.ts#L16)method inside your new transaction class, in our case the `BusinessRegistrationTransaction` class.
 
 <x-alert type="danger">
-When implementing new transaction types, **never allow plain strings** in the **transaction.asset,** but always restrict to something that excludes null bytes \(\u0000\).
+When implementing new transaction types, **never allow plain strings** in the **transaction.asset,** but always restrict to something that excludes null bytes (\u0000).
 </x-alert>
 
 To forbid plain strings in the transaction.assets you can reuse some of already [defined schemas](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/validation/schemas.ts), for example: `{ $ref: "hex" }` or `{ $ref: "alphanumeric" }` or `{ $ref: "publicKey" }`. If no schema fits your requirements refer to the null byte regex `{ type: "string", pattern: "^[^\u0000]+$"}` for the `transaction.asset` fields.
@@ -116,7 +116,7 @@ public static getSchema(): Transactions.schemas.TransactionSchema {
 
 ## **STEP 4: Define TypeGroup and Type**
 
-The [typeGroup + type](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/transactions/BusinessRegistrationTransaction.ts#L7-L13) are used internally by Core to register a transaction. Non-core transactions have to define the typeGroup otherwise Core won’t be able to categorize them. **All transactions \(from the release of core v2.6\) will be signed with typeGroup and type.** By omitting the typeGroup value, core will fall back to typeGroup: 1, which is the default Core group. We define typeGroup + type in our BusinessRegistration class, like this:
+The [typeGroup + type](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/transactions/BusinessRegistrationTransaction.ts#L7-L13) are used internally by Core to register a transaction. Non-core transactions have to define the typeGroup otherwise Core won’t be able to categorize them. **All transactions (from the release of core v2.6) will be signed with typeGroup and type.** By omitting the typeGroup value, core will fall back to typeGroup: 1, which is the default Core group. We define typeGroup + type in our BusinessRegistration class, like this:
 
 ```typescript
 const BUSINESS_REGISTRATION_TYPE = 100;

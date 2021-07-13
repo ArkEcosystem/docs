@@ -466,7 +466,7 @@ Get a peer by the given IP address.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| &str | ip\_address | Yes | IP address |
+| &str | ip_address | Yes | IP address |
 
 #### Return Value
 
@@ -504,7 +504,7 @@ Create a new transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Vec&lt;&str&gt; | transactions | Yes | Transaction\(s\) to broadcast |
+| Vec&lt;&str&gt; | transactions | Yes | Transaction(s) to broadcast |
 
 #### Return Value
 

@@ -8,7 +8,7 @@ This configuration step is where we'll set up the default installation folder fo
 
 ## Bridgechain Path
 
-Is the path and folder name on which your Core will reside. The default path and folder is `$HOME/core-bridgechain`, but you can replace core-bridgechain with name of your project \(be sure to omit spaces\). In ARK's case, this variable would be `$HOME/core-ark`.
+Is the path and folder name on which your Core will reside. The default path and folder is `$HOME/core-bridgechain`, but you can replace core-bridgechain with name of your project (be sure to omit spaces). In ARK's case, this variable would be `$HOME/core-ark`.
 
 ## Database Host
 
@@ -24,7 +24,7 @@ Is the port number for accessing the database. The database is the main location
 
 ## P2P Port
 
-Is the port number for Peer 2 Peer \(P2P\) communications between nodes on your network. This is used for nodes on your network to communicate and share data between each other. The normal range for this number is usually **1024 to 49151**, and you can decide the port. If you are unsure use default port **4002**.
+Is the port number for Peer 2 Peer (P2P) communications between nodes on your network. This is used for nodes on your network to communicate and share data between each other. The normal range for this number is usually **1024 to 49151**, and you can decide the port. If you are unsure use default port **4002**.
 
 ## API Port
 

@@ -15,6 +15,7 @@ This is a Bitcoin Driver for the Platform SDK. The implementation makes use of [
 ```bash
 yarn add @payvo/sdk-btc
 ```
+
 ## Specification
 
 <livewire:coin-spec spec="payvo-sdk/coins/specs/btc.json" />

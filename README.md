@@ -87,7 +87,7 @@ Hello World!
 
 The tutorial intro page has specific properties you can use at the top of the document as explained below (they need to be encapsulated between the listed `---`)
 
-```
+```text
 ---
 title: <text>
 excerpt: <text>
@@ -106,7 +106,7 @@ Please note that the `assets` directory expects to hold 3 images called `feature
 
 Documentation pages have a title property that is used for example used for the navigation at the bottom of the pages.
 
-```
+```text
 ---
 title: <text>
 ---

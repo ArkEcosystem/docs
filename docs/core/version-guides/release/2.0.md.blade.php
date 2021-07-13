@@ -24,7 +24,7 @@ Most noticeable for end users is the addition of dynamic fees enabling delegates
 
 ARK is the first blockchain protocol released that allows you to quickly develop customized modules or plugins, to leverage the power of blockchain. The majority of ARK's processes have been decoupled, modularized and developed as plugins. Only a few lines of code are required to add or remove new plugins to the system. Our goal of developing the ‘WordPress of Blockchains' has been realized. You can now develop your plugins and easily include them into your blockchain.
 
-### Increased TPS \(Transactions per Second\) and TPB \(Transactions per Block\) <a id="increased-tps-transactions-per-second-and-tpb-transactions-per-block"></a>
+### Increased TPS (Transactions per Second) and TPB (Transactions per Block) <a id="increased-tps-transactions-per-second-and-tpb-transactions-per-block"></a>
 
 Transactions that can be included in a single block are increased from 50 to 150. The total increase in TPS is threefold from 6.25 to 18.75. This is not a TPS limit and can be easily raised in the future. Currently, this level of throughput is more than adequate. For BridgeChains, this value is completely customizable.
 
@@ -38,7 +38,7 @@ Webhooks allow applications to provide other applications with real-time informa
 
 ### Improved transaction pool management <a id="improved-transaction-pool-management"></a>
 
-A newly developed transaction pool \(transactions are kept in this pool before inclusion in the blockchain\) is leveraging the power of memory and SQLite, providing superior stability, reliability and a foundation for future optimizations.
+A newly developed transaction pool (transactions are kept in this pool before inclusion in the blockchain) is leveraging the power of memory and SQLite, providing superior stability, reliability and a foundation for future optimizations.
 
 ### Improved Verification Systems <a id="improved-verification-systems"></a>
 
@@ -46,7 +46,7 @@ The legacy code has multiple drawbacks with how blocks and transactions are veri
 
 ### Speedier Rebuilds & Synchronizations <a id="speedier-rebuilds-synchronizations"></a>
 
-Starting your node from block 0 with the new system is much faster. Previously, rebuilding from 0 to the current block height \(~ 6,450,000 blocks\) required around 50 hours. ARK Core v2 can do it in approximately 12 hours \(depends on the server specifications and overall network state\). As a result, synchronizing becomes much faster when stopping and starting the node process, or when rebuilding from a snapshot.
+Starting your node from block 0 with the new system is much faster. Previously, rebuilding from 0 to the current block height (~ 6,450,000 blocks) required around 50 hours. ARK Core v2 can do it in approximately 12 hours (depends on the server specifications and overall network state). As a result, synchronizing becomes much faster when stopping and starting the node process, or when rebuilding from a snapshot.
 
 ### Improved Snapshot CLI <a id="improved-snapshot-cli"></a>
 

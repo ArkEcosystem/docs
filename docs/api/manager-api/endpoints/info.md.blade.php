@@ -36,9 +36,9 @@ info.coreVersion
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.coreVersion",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.coreVersion",
+    "params": {}
 }
 ```
 
@@ -85,9 +85,9 @@ info.coreUpdate
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.coreUpdate",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.coreUpdate",
+    "params": {}
 }
 ```
 
@@ -145,9 +145,9 @@ info.coreStatus
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.coreStatus",
-	"params": { "token": "ark" }
+    "jsonrpc": "2.0",
+    "method": "info.coreStatus",
+    "params": { "token": "ark" }
 }
 ```
 
@@ -192,15 +192,14 @@ info.blockchainHeight
 | result.randomNodeHeight | number | Random node height. | No |
 | result.randomNodeIp | string | Random node ip. | No |
 
-
 ### Request
 
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.blockchainHeight",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.blockchainHeight",
+    "params": {}
 }
 ```
 
@@ -257,15 +256,14 @@ info.resources
 | result.disk.available | number | Available disk space (KB). | Yes |
 | result.disk.mountpoint | string | Mountpoint. | Yes |
 
-
 ### Request
 
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.resources",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.resources",
+    "params": {}
 }
 ```
 
@@ -323,15 +321,14 @@ info.databaseSize
 | result | object | Result. | Yes |
 | result.size | number | Database size (KB). | Yes |
 
-
 ### Request
 
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.databaseSize",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.databaseSize",
+    "params": {}
 }
 ```
 
@@ -365,7 +362,6 @@ info.nextForgingSlot
 | params | object | The parameters of the request. | Yes |
 | params.token | string | Token name. | No |
 
-
 ### Result
 
 | Name | Type | Description | Required |
@@ -375,15 +371,14 @@ info.nextForgingSlot
 | result | object | Result. | Yes |
 | result.remainingTime | number | Remaining time till next slot. (ms). | Yes |
 
-
 ### Request
 
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.nextForgingSlot",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.nextForgingSlot",
+    "params": {}
 }
 ```
 
@@ -430,9 +425,9 @@ info.lastForgedBlock
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.lastForgedBlock",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.lastForgedBlock",
+    "params": {}
 }
 ```
 
@@ -504,9 +499,9 @@ info.currentDelegate
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "info.currentDelegate",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "info.currentDelegate",
+    "params": {}
 }
 ```
 

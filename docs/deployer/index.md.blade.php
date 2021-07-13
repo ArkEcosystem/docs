@@ -1,6 +1,8 @@
+<!-- markdownlint-disable MD041 -->
 ## Introduction
-<x-general.sidebar-link path="/docs/deployer/intro" name="Introduction" />
+<!-- markdownlint-enable MD041 -->
 
+<x-general.sidebar-link path="/docs/deployer/intro" name="Introduction" />
 
 ## Prepare
 
@@ -13,7 +15,6 @@
 <x-general.sidebar-link path="/docs/deployer/prepare/preparing-server" name="Preparing Your Server" />
 <x-general.sidebar-link path="/docs/deployer/prepare/preparing-github" name="Preparing Github" />
 
-
 ## Customize
 
 <x-general.sidebar-link path="/docs/deployer/customize/customize-introduction" name="Customize Introduction" />
@@ -24,7 +25,6 @@
 <x-general.sidebar-link path="/docs/deployer/customize/dynamic-fees" name="Dynamic Fees" />
 <x-general.sidebar-link path="/docs/deployer/customize/configure-bridgechain-installation" name="Configure Bridgechain Installation" />
 <x-general.sidebar-link path="/docs/deployer/customize/explorer" name="Explorer" />
-
 
 ## Deploy
 
@@ -38,4 +38,3 @@
 <x-general.sidebar-link path="/docs/deployer/deploy/updating-your-bridgechain" name="Updating Your Bridgechain" />
 <x-general.sidebar-link path="/docs/deployer/deploy/security-notice" name="Security Notice" />
 <x-general.sidebar-link path="/docs/deployer/deploy/whats-next" name="Whats Next" />
-
