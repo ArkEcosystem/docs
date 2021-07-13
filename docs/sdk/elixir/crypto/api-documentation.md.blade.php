@@ -60,7 +60,7 @@ Get a fee for a given transaction type
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Type.t\(\) | type | Yes | Transaction type for which we wish to get a fee |
+| Type.t() | type | Yes | Transaction type for which we wish to get a fee |
 
 #### Return Value
 
@@ -78,7 +78,7 @@ Set a fee
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Type.t\(\) | type | Yes | Transaction\_type for which we wish to set a fee |
+| Type.t() | type | Yes | Transaction_type for which we wish to set a fee |
 | integer | fee | Yes | Fee for a given transaction type |
 
 #### Return Value
@@ -143,7 +143,7 @@ Derive the address from the given public key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ? | public\_key | Yes | Public key |
+| ? | public_key | Yes | Public key |
 | ? | network | No | Version of the network |
 
 #### Return Value
@@ -162,7 +162,7 @@ Derive the address from the given private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ? | private\_key | Yes | Private key |
+| ? | private_key | Yes | Private key |
 | ? | network | No | Version of the network |
 
 #### Return Value
@@ -239,7 +239,7 @@ Create a private key instance from a hex string.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | private\_key | Yes | Private key |
+| string | private_key | Yes | Private key |
 
 #### Return Value
 
@@ -296,7 +296,7 @@ Create a public key instance from a hex string.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | public\_key | Yes | Public key |
+| string | public_key | Yes | Public key |
 
 #### Return Value
 
@@ -314,7 +314,7 @@ Create a public key instance from a private key.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | private\_key | Yes | Private key |
+| string | private_key | Yes | Private key |
 
 #### Return Value
 
@@ -375,11 +375,11 @@ Builds a transaction for a transfer.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | recipient\_id | Yes | Recipient identifier |
+| string | recipient_id | Yes | Recipient identifier |
 | integer | amount | Yes | Transaction amount |
-| string | vendor\_field | Yes | Transaction vendorfield |
+| string | vendor_field | Yes | Transaction vendorfield |
 | string | passphrase | Yes | Passphrase |
-| string | second\_passphrase | No | Second passphrase |
+| string | second_passphrase | No | Second passphrase |
 
 #### Return Value
 
@@ -399,7 +399,7 @@ Builds a transaction for a vote registration.
 | :--- | :--- | :--- | :--- |
 | Enum.List | votes | Yes | Votes |
 | string | passphrase | Yes | passphrase |
-| string | second\_passphrase | No | second passphrase |
+| string | second_passphrase | No | second passphrase |
 
 #### Return Value
 
@@ -418,7 +418,7 @@ Builds a transaction for a second signature registration.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | passphrase | Yes | Passphrase |
-| string | second\_passphrase | No | Second passphrase |
+| string | second_passphrase | No | Second passphrase |
 
 #### Return Value
 
@@ -438,7 +438,7 @@ Builds a transaction for a delegate registration.
 | :--- | :--- | :--- | :--- |
 | string | username | Yes | Delegate username |
 | string | passphrase | Yes | Passphrase |
-| string | second\_passphrase | No | Second passphrase |
+| string | second_passphrase | No | Second passphrase |
 
 #### Return Value
 
@@ -460,7 +460,7 @@ Builds a transaction for a multi signature registration.
 | integer | lifetime | Yes | Transaction lifetime |
 | ? | keysgroup | Yes | Transaction keysgroup |
 | string | passphrase | Yes | Passphrase |
-| string | second\_passphrase | No | Second passphrase |
+| string | second_passphrase | No | Second passphrase |
 
 #### Return Value
 
@@ -712,7 +712,7 @@ Handle the serialization of "delegate resignation" data.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ? | bytes | Yes | ... |
-| ? | \_transaction | Yes | Transaction |
+| ? | _transaction | Yes | Transaction |
 
 #### Return Value
 
@@ -905,7 +905,7 @@ Perform AIP11 compliant deserialization.
 
 ## ArkEcosystem.Crypto.Transactions.Serializer
 
-### `serialize()`
+### `serialize()` (transaction, object)
 
 ```elixir
 def serialize(transaction, %{underscore: underscore}) when is_map(transaction)
@@ -924,7 +924,7 @@ Perform AIP11 compliant serialization.
 
 `?`
 
-### `serialize()`
+### `serialize()` (transaction)
 
 ```elixir
 def serialize(transaction) when is_map(transaction)
@@ -976,7 +976,7 @@ Sign the transaction using the given passphrase.
 | :--- | :--- | :--- | :--- |
 | ? | transaction | Yes | Transaction |
 | string | passphrase | Yes | Passphrase |
-| string | second\_passphrase | No | Second passphrase |
+| string | second_passphrase | No | Second passphrase |
 
 #### Return Value
 
@@ -1001,7 +1001,7 @@ Sign the transaction using the given passphrase.
 
 `?`
 
-### `second_sign()`
+### `second_sign()` (transaction, nil)
 
 ```elixir
 def second_sign(transaction, nil)
@@ -1020,7 +1020,7 @@ Sign the transaction using the given second passphrase.
 
 `?`
 
-### `second_sign()`
+### `second_sign()` (transaction, second_passphrase)
 
 ```elixir
 def second_sign(transaction, second_passphrase)
@@ -1033,7 +1033,7 @@ Sign the transaction using the given second passphrase.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ? | transaction | Yes | Transaction |
-| string | second\_passphrase | Yes | Second passphrase |
+| string | second_passphrase | Yes | Second passphrase |
 
 #### Return Value
 
@@ -1070,7 +1070,7 @@ Verify the transaction with a second public key.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | transaction | Yes | Transaction |
-| string | second\_public\_key | Yes | Second public key |
+| string | second_public_key | Yes | Second public key |
 
 #### Return Value
 
@@ -1089,8 +1089,8 @@ Convert the transaction to its byte representation.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | transaction | Yes | Transaction |
-| string | skip\_signature | No | Skip first signature |
-| string | skip\_second\_signature | No | Skip second signature |
+| string | skip_signature | No | Skip first signature |
+| string | skip_second_signature | No | Skip second signature |
 
 #### Return Value
 
@@ -1150,7 +1150,7 @@ Perform AIP11 compliant serialization
 
 `?`
 
-### `deserialize()`
+### `deserialize()` (transaction)
 
 ```elixir
 def serialize(transaction) when is_map(transaction)
@@ -1168,7 +1168,7 @@ Perform AIP11 compliant deserialization.
 
 `?`
 
-### `deserialize()`
+### `deserialize()` (serialized)
 
 ```elixir
 def deserialize(serialized) when is_bitstring(serialized)
@@ -1186,7 +1186,7 @@ Perform AIP11 compliant deserialization.
 
 `?`
 
-### `deserialize()`
+### `deserialize()` (object)
 
 ```elixir
 def deserialize(%{serialized: serialized}) when is_bitstring(serialized)
@@ -1218,8 +1218,8 @@ Sign a message using the given passphrase.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| String.t\(\) | message | Yes | Message |
-| String.t\(\) | passphrase | Yes | Passphrase |
+| String.t() | message | Yes | Message |
+| String.t() | passphrase | Yes | Passphrase |
 
 #### Return Value
 
@@ -1237,9 +1237,9 @@ Verify the message contents
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| String.t\(\) | message | Yes | Message |
-| String.t\(\) | signature | Yes | Signature |
-| String.t\(\) | public\_key | Yes | Public key |
+| String.t() | message | Yes | Message |
+| String.t() | signature | Yes | Signature |
+| String.t() | public_key | Yes | Public key |
 
 #### Return Value
 
@@ -1257,9 +1257,9 @@ Convert the message to its params representation
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| String.t\(\) | message | Yes | Message |
-| String.t\(\) | signature | Yes | Signature |
-| String.t\(\) | public\_key | Yes | Public key |
+| String.t() | message | Yes | Message |
+| String.t() | signature | Yes | Signature |
+| String.t() | public_key | Yes | Public key |
 
 #### Return Value
 
@@ -1277,9 +1277,9 @@ Convert the message to its JSON representation
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| String.t\(\) | message | Yes | Message |
-| String.t\(\) | signature | Yes | Signature |
-| String.t\(\) | public\_key | Yes | Public key |
+| String.t() | message | Yes | Message |
+| String.t() | signature | Yes | Signature |
+| String.t() | public_key | Yes | Public key |
 
 #### Return Value
 

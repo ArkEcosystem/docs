@@ -42,23 +42,22 @@ log.search
 | result.content | string | Log content. | Yes |
 | result.timestamp | number | Unix timestamp (s). | Yes |
 
-
 ### Request
 
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "log.log",
-	"params": {
-	    "dateFrom": 1605657600,
-	    "dateTo": 1705657600,
-	    "level": "info",
-	    "process": "core",
-	    "searchTerm": "search term",
-	    "limit": 10,
-	    "offset": 0,
-	    "order": "ASC",
+    "jsonrpc": "2.0",
+    "method": "log.log",
+    "params": {
+        "dateFrom": 1605657600,
+        "dateTo": 1705657600,
+        "level": "info",
+        "process": "core",
+        "searchTerm": "search term",
+        "limit": 10,
+        "offset": 0,
+        "order": "ASC",
     }
 }
 ```
@@ -121,19 +120,18 @@ log.download
 | jsonrpc | string | The protocol version. | Yes |
 | result | string | Generated file name. | Yes |
 
-
 ### Request
 
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "log.log",
-	"params": {
-	    "dateFrom": 1605657600,
-	    "dateTo": 1705657600,
-	    "levels": ["info", "debug"],
-	    "processes": ["core"]
+    "jsonrpc": "2.0",
+    "method": "log.log",
+    "params": {
+        "dateFrom": 1605657600,
+        "dateTo": 1705657600,
+        "levels": ["info", "debug"],
+        "processes": ["core"]
     }
 }
 ```
@@ -181,9 +179,9 @@ log.archived
 ```javascript
 {
     "id": "unique-request-id",
-	"jsonrpc": "2.0",
-	"method": "log.archived",
-	"params": {}
+    "jsonrpc": "2.0",
+    "method": "log.archived",
+    "params": {}
 }
 ```
 
@@ -207,4 +205,3 @@ log.archived
     ]
 }
 ```
-

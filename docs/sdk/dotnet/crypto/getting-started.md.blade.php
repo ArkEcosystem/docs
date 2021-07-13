@@ -55,11 +55,13 @@ paket add ARKEcosystem.Crypto --version 0.2.1
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/dotnet-crypto
-   ```
+git clone https://github.com/<githubusername>/dotnet-crypto
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd dotnet-crypto
-   ```
+cd dotnet-crypto
+```

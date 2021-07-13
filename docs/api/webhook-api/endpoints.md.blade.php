@@ -10,7 +10,7 @@ The webhooks resource returns all enabled and disabled webhooks. There is thus n
 
 ### Endpoint
 
-```
+```bash
 GET /api/webhooks
 ```
 
@@ -59,7 +59,7 @@ It is possible to query for a specific webhook by ID, which has to be saved clie
 
 ### Endpoint
 
-```
+```bash
 GET /api/webhooks/{id}
 ```
 
@@ -99,11 +99,11 @@ The `conditions` lists consists of an `array` of objects, with the following pro
 
 * `key`: the key used on the object that is passed along with the specified event
 * `condition`: a [condition](/docs/api/webhook-api/endpoints#conditions) used to check the value against
-* `value`: \(Optional\) a value used to check the `key` against. This is not needed for the `falsy` and `truthy` conditions. In case of `between` and `not-between`, you'll have to provide an object like this: `"value": { "min": "someValue", "max": "someValue" }`
+* `value`: (Optional) a value used to check the `key` against. This is not needed for the `falsy` and `truthy` conditions. In case of `between` and `not-between`, you'll have to provide an object like this: `"value": { "min": "someValue", "max": "someValue" }`
 
 ### Endpoint
 
-```
+```bash
 POST /api/webhooks
 ```
 
@@ -145,7 +145,7 @@ POST /api/webhooks
 | block.disregarded | Fires when a block is disregarded | Yes |
 | block.forged | Fires when a block is forged | Yes |
 | block.received | Fires when a block is incoming | Yes |
-| block.reverted | Fires when a block is removed from the database \(e.g. on a rollback\) | Yes |
+| block.reverted | Fires when a block is removed from the database (e.g. on a rollback) | Yes |
 | delegate.registered | Fires when a new delegate is registered | Yes |
 | delegate.resigned | Fires when a delegate resigns | Yes |
 | forger.failed | Fires when the forger module fails to start | Yes |
@@ -162,8 +162,8 @@ POST /api/webhooks
 | transaction.pool.rejected | Fires when transactions are rejected and _not_ added to the transaction pool | Yes |
 | transaction.pool.removed | Fires when a transaction is removed from the transaction pool by its ID | Yes |
 | transaction.reverted | Fires when a transaction is removed from the database | No |
-| wallet.saved | Fires when a wallet is updated \(e.g. its balance changed, voted etc\) | Yes |
-| wallet.created.cold | Fires when a wallet that never existed before is saved \(e.g. received its first tx\) | Yes |
+| wallet.saved | Fires when a wallet is updated (e.g. its balance changed, voted etc) | Yes |
+| wallet.created.cold | Fires when a wallet that never existed before is saved (e.g. received its first tx) | Yes |
 
 ### Conditions
 
@@ -188,7 +188,7 @@ Existing webhooks may be updated. _Note that this is the equivalent of deleting 
 
 ### Endpoint
 
-```
+```bash
 PUT /api/webhooks/{id}
 ```
 
@@ -220,7 +220,7 @@ A webhook may be deleted by ID. Delete unused webhooks to save machine resources
 
 ### Endpoint
 
-```
+```bash
 DELETE /api/webhooks/{id}
 ```
 

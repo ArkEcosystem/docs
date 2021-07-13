@@ -272,6 +272,7 @@ macos
 macosx
 mailto
 mamp
+markdownlint
 matchers
 mem
 memberof

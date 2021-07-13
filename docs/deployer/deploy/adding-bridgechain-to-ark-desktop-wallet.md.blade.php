@@ -15,7 +15,7 @@ First, let's get the wallet and add a network.
 3. Now that you're in the wallet with the ARK network, you'll need to add a _new_ network, your network.
 4. Click the `Cloud` icon in the bottom left area, then `Manage Networks`.
 5. Click `Add a new network`.
-6. `Name` the network your bridgechain name. If you like, you can declare which net it is as well \(main, dev, test\).
+6. `Name` the network your bridgechain name. If you like, you can declare which net it is as well (main, dev, test).
 7. `Describe` your network.
 8. Enter `http://GENESIS_NODE_IP:4003` or custom Public API Port.
 9. You will then be taken to a new page showing details about your network that have been called from the genesis node.

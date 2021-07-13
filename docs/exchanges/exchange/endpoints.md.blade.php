@@ -14,7 +14,7 @@ Used to access a Node's configuration and the network it is attached to (identif
 
 ### Endpoint
 
-```
+```bash
 GET /api/node/configuration
 ```
 
@@ -95,7 +95,7 @@ Used to access a Node's configuration for the `@arkecosystem/crypto` package tha
 
 ### Endpoint
 
-```
+```bash
 GET /api/node/configuration/crypto
 ```
 
@@ -326,7 +326,7 @@ Used to access a Node's fee statistics.
 
 ### Endpoint
 
-```
+```bash
 GET /api/node/fees
 ```
 
@@ -388,7 +388,7 @@ The status allows for health checking, showing if the node is in sync with the n
 
 ### Endpoint
 
-```
+```bash
 GET /api/node/status
 ```
 
@@ -416,7 +416,7 @@ The `syncing` resource is very much alike `node/status`, providing information o
 
 ### Endpoint
 
-```
+```bash
 GET /api/node/syncing
 ```
 

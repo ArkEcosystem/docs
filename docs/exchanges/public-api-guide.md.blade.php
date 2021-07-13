@@ -5,13 +5,13 @@ title: Public API quick guide
 # Exchanges API Guide
 
 <x-alert type="info">
-**For exchanges we recommend the usage of** [**JSON-RPC server**](/docs/exchanges/json-rpc/getting-started#installation-via-yarn) with optimized methods for client and crypto functionality.
+For exchanges we recommend the usage of **[JSON-RPC server](/docs/exchanges/json-rpc/getting-started#installation-via-yarn)** with optimized methods for client and crypto functionality.
 
 Best practice is to install a Relay Node and JSON-RPC in a secure environment.
 If really necessary then follow the basic instructions for connection via Public REST API.
 </x-alert>
 
-Connecting to the PUBLIC API is done via the [Crypto and Client SDKs](/docs/sdk/). Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality \(i.e., signing transactions\).
+Connecting to the PUBLIC API is done via the [Crypto and Client SDKs](/docs/sdk/). Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality (i.e., signing transactions).
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
@@ -28,7 +28,7 @@ Put another way, the Crypto SDK structures your data in a format that all ARK no
 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.
 
-> ARK Node \(v1\) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version \(defaults to v2\).
+> ARK Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version (defaults to v2).
 
 ```javascript
 const Client = require("@arkecosystem/client");

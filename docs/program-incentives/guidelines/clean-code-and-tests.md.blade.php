@@ -54,4 +54,4 @@ Try to keep your naming conventions consistent and readable because keep in mind
 
 You should aim for high coverage of business-critical parts of your application and for at least sufficient enough coverage of utilities and smaller working parts to be confident that your test suite catches any bugs caused by future changes.
 
-_If you are working on a JavaScript project we recommend you to use_ [_jest_](https://facebook.github.io/jest/) _and follow the `it('should ...')` naming convention._
+_If you are working on a JavaScript project we recommend you to use_ [jest](https://facebook.github.io/jest/) _and follow the `it('should ...')` naming convention._

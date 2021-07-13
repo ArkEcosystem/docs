@@ -16,13 +16,12 @@ To troubleshoot, ensure you're querying a node that is in sync, and third-party 
 
 ## Why Am I Not Seeing All My Results?
 
-Most API calls accessing a list of resources \(e.g., blocks and transactions\) support pagination. If you're making requests and receiving an incomplete set of results, you're probably only seeing the first page. You'll need to request the remaining pages to get more results.
+Most API calls accessing a list of resources (e.g., blocks and transactions) support pagination. If you're making requests and receiving an incomplete set of results, you're probably only seeing the first page. You'll need to request the remaining pages to get more results.
 
 It's important not to try to guess the format of the pagination URL. Not every API call uses the same structure. Instead, extract the pagination information from the `meta` field, which is sent with every request.
 
 ## My Node Is Running, but API Keeps Returning `CONNECTION REFUSED`?
 
-Note that the Public API is only available after a node has fully synced. This ensures your data on the blockchain is up to date. A full sync may take up to 15h, depending on your hardware configuration and network speed. 
+Note that the Public API is only available after a node has fully synced. This ensures your data on the blockchain is up to date. A full sync may take up to 15h, depending on your hardware configuration and network speed.
 
 If your node is synced and you still get `CONNECTION_REFUSED` error, please check your firewall configuration and if needed whitelist your client.
-

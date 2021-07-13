@@ -4,7 +4,7 @@ title: Upgrade Guides - Core v2.0 to v2.1
 
 # v2.1
 
-Upgrading from `v2.0` to `v2.1` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility \(BC\) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.0` to `v2.1` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 Upgrading, in general, is as simple as updating your installation through the commander or by running `git pull && yarn setup` inside the installation directory. In a big application, however, there may be more things to consider, which are explained in the following.
 
@@ -66,7 +66,7 @@ pm2 --name 'ark-core-relay' start ~/ark-core/packages/core/dist/index.js -- rela
 
 #### Notes
 
-* The `yarn setup` command will upgrade Core and its direct dependencies. Without `yarn setup` the upgrade will fail as Core is written in TypeScript and the files need to be run through the TypeScript Compiler **\(tsc\)**.
+* The `yarn setup` command will upgrade Core and its direct dependencies. Without `yarn setup` the upgrade will fail as Core is written in TypeScript and the files need to be run through the TypeScript Compiler **(tsc)**.
 
 ### Changes
 
@@ -110,7 +110,7 @@ You can read more about those paths at [https://specifications.freedesktop.org/b
 
 ### Conclusion
 
-Once all these changes have been made you will need to restart your relay and forger _\(if you are a delegate\)_ for these changes to take effect.
+Once all these changes have been made you will need to restart your relay and forger _(if you are a delegate)_ for these changes to take effect.
 
 If you've been running your relay and forger manually you need to change `packages/core/bin/ark` to `packages/core/dist/index.js` to ensure that the JavaScript files, created by the TypeScript Compiler, are executed.
 

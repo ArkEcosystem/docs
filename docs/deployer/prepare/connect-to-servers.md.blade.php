@@ -8,17 +8,17 @@ title: Connect to Your Servers
 
 Now that you have initialized the necessary servers, you need to connect to them and prepare them for bridgechain deployment.
 
-**Windows**
+**Windows**:
 
-* Download and launch [**PuTTy**](https://putty.org/).
-* Enter the **Host Name \(or IP Address\)** provided to you by your chosen hosting service.
+* Download and launch **[PuTTy](https://putty.org/)**.
+* Enter the **Host Name (or IP Address)** provided to you by your chosen hosting service.
 * **SSH Port** is usually **22**, but your provider may initialize servers with a different port.
 * In the **Saved Sessions** text box, name your host according to the server name you chose in your hosting provider's dashboard, for your reference.
 * Press the `Save` button on the right.
 * Repeat for each server you have initialized with your provider.
 * You can now start double-clicking names and connect to the servers.
 
-**MacOS, Linux and** [**Windows Subsystem For Linux**](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+**MacOS, Linux and** **[Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)**
 
 * Open a new terminal window and type
 

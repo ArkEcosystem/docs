@@ -4,7 +4,7 @@ title: Getting Started
 
 # Client
 
-### Install package with Gem
+## Install package with Gem
 
 Add this line to your application's Gemfile and then execute the command `bundle` in your terminal
 
@@ -24,23 +24,29 @@ gem install arkecosystem-client
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/ruby-client
-   ```
+git clone https://github.com/<githubusername>/ruby-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd ruby-client
-   ```
+cd ruby-client
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Install your dependencies with `Bundle`.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-    bundle install
-   ```
+bundle install
+```
 
+<!-- markdownlint-disable MD029 -->
 5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   # TODO: see how it's done in ruby, lot of ways it seems.
-   ```
+# TODO: see how it's done in ruby, lot of ways it seems.
+```

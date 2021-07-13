@@ -8,6 +8,8 @@ title: Wallets
 These methods are accessible through `profile.wallets()` which exposes a `WalletRepository` instance.
 </x-alert>
 
+## Wallet Calls
+
 ### Get a list of all wallets with key and value
 
 ```typescript

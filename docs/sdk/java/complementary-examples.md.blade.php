@@ -4,7 +4,7 @@ title: Complementary Examples
 
 # Complementary Examples
 
-## Prerequisites 
+## Prerequisites
 
 Before we get started we need to make sure that all of the required dependencies are installed. These dependencies are the [Crypto SDK](/docs/sdk/java/crypto/api-documentation) and [Client SDK](/docs/sdk/java/client/api-documentation). You can head on over to their documentations to read more about them but for now we are only concerned with installing them to get up and running.
 

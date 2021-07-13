@@ -4,7 +4,7 @@ title: Custom Transactions Guide - Implementing the Builder
 
 # Implement Transaction Builder
 
-Builder class handles versioning, serde process, milestones, dynamic-fee logic and _all cryptography related items_ \(sign, multisign, second-sign, sign with and without WIF, sequential [nonce](/docs/core/transactions/understanding-the-nonce) logic\). The following code-snippet shows the actual [implementation of the Builder](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/builders/BusinessRegistrationBuilder.ts#L4) class for the BusinessRegistration Transaction.
+Builder class handles versioning, serde process, milestones, dynamic-fee logic and _all cryptography related items_ (sign, multisign, second-sign, sign with and without WIF, sequential [nonce](/docs/core/transactions/understanding-the-nonce) logic). The following code-snippet shows the actual [implementation of the Builder](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/builders/BusinessRegistrationBuilder.ts#L4) class for the BusinessRegistration Transaction.
 
 <x-alert type="success">
 Builder is something you will reuse in your **client applications** for creating new transaction payloads.
@@ -50,7 +50,7 @@ export class BusinessRegistrationBuilder extends Transactions.TransactionBuilder
 Now that we have implemented our builder class, we can use it to build new custom transaction payloads. The [code snippet](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/__tests__/test.test.ts#L13-L17) below shows us how to use the TransactionBuilder to create signed and serialized transaction payloads.
 
 <x-alert type="danger">
-When using Transaction Builder on the client side \(your mobile/web app\) make sure to register your TransactionType inside the **@arkecosystem/crypto** package with the following code:
+When using Transaction Builder on the client side (your mobile/web app) make sure to register your TransactionType inside the **@arkecosystem/crypto** package with the following code:
 
 **`Transactions.TransactionRegistry.registerTransactionType(YOUR_TRANSACTION_CLASS);`**
 

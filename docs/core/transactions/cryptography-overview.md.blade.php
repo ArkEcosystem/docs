@@ -11,7 +11,7 @@ This section provides definition of common cryptography terms used through the A
 ## Passphrase
 
 <x-alert type="danger">
-The **passphrase** is the master password \(key\) for your ARK tokens. Every ARK address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
+The **passphrase** is the master password (key) for your ARK tokens. Every ARK address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
 
 Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. **We CANNOT recover any lost passphrases.**
 </x-alert>
@@ -71,13 +71,13 @@ Passphrase:
 "this is a top secret passphrase"
 ```
 
-PrivateKey HEX \(base 16\) / SHA256 of Passphrase:
+PrivateKey HEX (base 16) / SHA256 of Passphrase:
 
 ```shell
 d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712
 ```
 
-PrivateKey DEC\(base 10 encoded\):
+PrivateKey DEC(base 10 encoded):
 
 ```shell
 97932109907804210295451942024598204992707895659209392543371974078748689061650
@@ -85,9 +85,9 @@ PrivateKey DEC\(base 10 encoded\):
 
 The DEC representation is the "base 10" interpretation of our PrivateKey and gives us a little insight into the size of the numbers we're dealing with "under the hood". This large integer is also referred to as a "BigNumber" or UINT256.
 
-### WIF \(PrivateKey\)
+### WIF (PrivateKey)
 
-WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte \(`0xaa` for ARK Mainnet & Devnet Network\). The compression byte indicates that ARK uses compressed PublicKeys.
+WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte (`0xaa` for ARK Mainnet & Devnet Network). The compression byte indicates that ARK uses compressed PublicKeys.
 
 ![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
 
@@ -241,7 +241,7 @@ The following is a full prefix-byte table for custom Address construction and is
 | `144` | `0x90` | `z` or `2` |
 | `145` - `255` | `0x91` - `0xFF` | `2` |
 
-> Adapted from: [https://en.bitcoin.it/wiki/List\_of\_address\_prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes)
+> Adapted from: [https://en.bitcoin.it/wiki/List_of_address_prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes)
 
 ## Signature
 
@@ -276,7 +276,7 @@ It is a standard to sign and verify transactions/messages and Signatures using [
 
 | SECP256K1 Equation |
 | :---: |
-| y2 = x3 + \(0\)x + \(7\) |
+| y2 = x3 + (0)x + (7) |
 | y2 = x3 + 7 |
 
 > Can the reader say what two numbers multiplied together will produce the number 8616460799? I think it unlikely that anyone but myself will ever know.
@@ -291,9 +291,9 @@ An ARK Signature is [DER Encoded](https://en.wikipedia.org/wiki/X.690#DER_encodi
 
 Upon obtaining a Signature from the ECDSA/SECP256K1 algorithm, it will first be in its raw form known as an "r" and "s" value.
 
-![Signature: DER \(X.690 : ASN.1\) Encoding](/storage/docs/docs/core/assets/signature_der_nologo.svg)
+![Signature: DER (X.690 : ASN.1) Encoding](/storage/docs/docs/core/assets/signature_der_nologo.svg)
 
-Signature \(r, s\):
+Signature (r, s):
 
 ```shell
 (0fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e, 5ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8)
@@ -301,11 +301,11 @@ Signature \(r, s\):
 
 In our example, the "r" and "s" values are each 32-bytes in length. Each of the "r" and "s" sequence identifiers are also 1-byte in length. Additionally, the slots for the size of "r" and "s" each occupy 1-byte.
 
-This means that the length of the "r" and "s" values is 64-bytes. The \(r,s\) section identifiers and their sizes occupy a total of 4-bytes.
+This means that the length of the "r" and "s" values is 64-bytes. The (r,s) section identifiers and their sizes occupy a total of 4-bytes.
 
-The total length of our signature is 68-bytes \(`0x44` in hex\).
+The total length of our signature is 68-bytes (`0x44` in hex).
 
-| Identifier | Size \(dec\) | Size \(hex\) |
+| Identifier | Size (dec) | Size (hex) |
 | :--- | :---: | :---: |
 | r sequence | `1` | `0x1` |
 | r size | `1` | `0x1` |
@@ -317,11 +317,11 @@ The total length of our signature is 68-bytes \(`0x44` in hex\).
 
 The very first byte of an encoded signature is the sequence identifier `30`.
 
-To encode the \(r, s\) values, we place `30` as the leading byte, followed by the total signature length \(`0x44` in this example\).
+To encode the (r, s) values, we place `30` as the leading byte, followed by the total signature length (`0x44` in this example).
 
-We then place the sequence identifier for "r" \(`02`\), proceeded by the size of "r" in hex \(`0x20`\), proceeded by the r-value itself \(`0fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e`\).
+We then place the sequence identifier for "r" (`02`), proceeded by the size of "r" in hex (`0x20`), proceeded by the r-value itself (`0fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e`).
 
-Finally, we place the sequence identifier for "s" \(`02`\), proceeded by the size of "s" in hex \(`0x20`\), proceeded by the s-value itself \(`5ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8`\).
+Finally, we place the sequence identifier for "s" (`02`), proceeded by the size of "s" in hex (`0x20`), proceeded by the s-value itself (`5ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8`).
 
 DER Encoded Signature:
 

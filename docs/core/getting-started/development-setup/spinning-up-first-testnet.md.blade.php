@@ -6,7 +6,7 @@ title: Development Setup - Spinning up your first Testnet
 
 ## Step 1: Start Docker Testnet Database
 
-You already generated docker files during the [development environment setup](/docs/core/getting-started/development-setup/linux-macos#step-7-setting-up-the-development-database) \(if not please run the following commands as specified [here](/docs/core/getting-started/development-setup/linux-macos#step-71-database-setup-using-docker)\).
+You already generated docker files during the [development environment setup](/docs/core/getting-started/development-setup/linux-macos#step-7-setting-up-the-development-database) (if not please run the following commands as specified [here](/docs/core/getting-started/development-setup/linux-macos#step-71-database-setup-using-docker)).
 
 ```bash
 cd core/docker/development/testnet #testnet docker folder
@@ -50,7 +50,7 @@ This means that you core node is now running and simulating a blockchain on your
 
 With our testnet up and running, the first thing we need to do is connect to it. All interactions between ARK Nodes and the outside world happen through the Public API, which is a [REST API facilitating different](/docs/api/) actions on the blockchain.
 
-It is possible to interact with a node directly through HTTP without using any programming language at all. By default, the Public API for testnet opens a connection on your local machine at `http://0.0.0.0:4003/api`. We can check out newly forged [blocks](http://0.0.0.0:4003/api/blocks) in our browser with a running testnet. You should see a response showing you all the \(empty\) blocks your testnet forgers have recently created.
+It is possible to interact with a node directly through HTTP without using any programming language at all. By default, the Public API for testnet opens a connection on your local machine at `http://0.0.0.0:4003/api`. We can check out newly forged [blocks](http://0.0.0.0:4003/api/blocks) in our browser with a running testnet. You should see a response showing you all the (empty) blocks your testnet forgers have recently created.
 
 Let's try to retrieve the latest block and supply by calling  the [GET api/blockchain](/docs/api/public-rest-api/endpoints/blockchain/) endpoint with `curl`.  Run the following request from console via `curl` command or via browser.
 
@@ -82,7 +82,7 @@ Your core server is now running and responding to your requests. Look at the [Pu
 4. [Explore more endpoints](/docs/api/)
 
 <x-alert type="info">
-To **create a simple transaction and post it to the local running blockchain** use the **core-tester-cli** package \(link below\). **Core-Tester** provides set of instructions on how to run commands for creating and sending transactions across any ARK Core network from the CLI interface.
+To **create a simple transaction and post it to the local running blockchain** use the **core-tester-cli** package (link below). **Core-Tester** provides set of instructions on how to run commands for creating and sending transactions across any ARK Core network from the CLI interface.
 </x-alert>
 
 <livewire:page-reference path="/docs/core/getting-started/development-setup/using-the-core-tester-cli" />

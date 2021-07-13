@@ -23,7 +23,7 @@ bash <(curl -s https://raw.githubusercontent.com/GITHUB_USERNAME/core/chore/brid
 3. Confirm with `Y`.
 4. You will be prompted to declare database credentials `username`, `password`, and `database name`. These are for internal server use and can be anything, including something like `bridgechain`, `bridgechain` and `bridgechain`.
 5. The process will complete.
-6. To start relay process execute \(replacing `bridgechain` at the start with yours\):
+6. To start relay process execute (replacing `bridgechain` at the start with yours):
 
 ```bash
 bridgechain relay:start

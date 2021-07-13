@@ -8,7 +8,7 @@ title: Transactions
 
 ### Method
 
-```
+```bash
 transaction.info
 ```
 
@@ -80,7 +80,7 @@ transaction.info
 
 ### Method
 
-```
+```bash
 transactions.broadcast
 ```
 
@@ -94,7 +94,7 @@ transactions.broadcast
 | params | object | The parameters of the request. | Yes |
 | params.transactions | array | The list of transactions to be broadcast. | Yes |
 
-### Response
+### Request
 
 ```javascript
 {
@@ -144,7 +144,7 @@ transactions.broadcast
 
 ### Method
 
-```
+```bash
 transactions.create
 ```
 
@@ -167,7 +167,7 @@ Parameter **params.fee** is optional. If the parameter is not set, transaction i
 </x-alert>
 
 <x-alert type="danger">
-Make sure to check the network[ for average fee values](/docs/api/public-rest-api/endpoints/node#retrieve-the-fee-statistics), before signing and sending a transaction. This is to handle edge case of them being higher than the current static ones.
+Make sure to check the network [for average fee values](/docs/api/public-rest-api/endpoints/node#retrieve-the-fee-statistics), before signing and sending a transaction. This is to handle edge case of them being higher than the current static ones.
 </x-alert>
 
 ### Request
@@ -222,7 +222,7 @@ Make sure to check the network[ for average fee values](/docs/api/public-rest-ap
 
 ### Method
 
-```
+```bash
 transactions.list
 ```
 
@@ -246,10 +246,10 @@ Parameter **params.fee** is optional. If the parameter is not set, transaction i
 </x-alert>
 
 <x-alert type="danger">
-Make sure to check the network[ for average fee values](/docs/api/public-rest-api/endpoints/node#retrieve-the-fee-statistics), before signing and sending a transaction. This is to handle edge case of them being higher than the current static ones.
+Make sure to check the network [for average fee values](/docs/api/public-rest-api/endpoints/node#retrieve-the-fee-statistics), before signing and sending a transaction. This is to handle edge case of them being higher than the current static ones.
 </x-alert>
 
-### Response
+### Request
 
 ```javascript
 {

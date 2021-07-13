@@ -4,7 +4,7 @@ title: Releases - v2.1
 
 # v2.1
 
-ARK `v2.1` is a minor update, backward compatible with `v2.0.X`. This update introduces a complete rewrite to [TypeScript](https://www.typescriptlang.org/), which allows for static type-checking along with the latest ECMAScript features. TypeScript is also a much stricter language than JavaScript and lets us spot mistakes that could otherwise go unnoticed. It is more convenient to use and allows for quicker error debugging. For core developers, very little has changed as the syntax is almost the same as JavaScript \(Typescript is a superset of JavaScript\).
+ARK `v2.1` is a minor update, backward compatible with `v2.0.X`. This update introduces a complete rewrite to [TypeScript](https://www.typescriptlang.org/), which allows for static type-checking along with the latest ECMAScript features. TypeScript is also a much stricter language than JavaScript and lets us spot mistakes that could otherwise go unnoticed. It is more convenient to use and allows for quicker error debugging. For core developers, very little has changed as the syntax is almost the same as JavaScript (Typescript is a superset of JavaScript).
 
 TypeScript makes perfect sense for growing projects that need to scale and have a variety of contributing developers. With this update, we lay the foundation for more technical changes.
 
@@ -48,36 +48,36 @@ Note:
 
 | Variable | v2.0.19 | v2.1 | default |
 | :--- | :--- | :--- | :--- |
-| core-logger-winston.transports.console.options.level | ARK\_LOG\_LEVEL | CORE\_LOG\_LEVEL | 'debug' |
-| core-logger-winston.transports.dailyRotate.options.level | ARK\_LOG\_LEVEL | CORE\_LOG\_LEVEL | 'debug' |
-| core-database-postgres.connection.host | ARK\_DB\_HOST | CORE\_DB\_HOST | 'localhost' |
-| core-database-postgres.connection.port | ARK\_DB\_PORT | CORE\_DB\_PORT | 5432 |
-| core-database-postgres.connection.database | ARK\_DB\_DATABASE | CORE\_DB\_DATABASE | ${process.env.CORE\_TOKEN}\_${process.env.CORE\_NETWORK\_NAME} |
-| core-database-postgres.connection.user | ARK\_DB\_USERNAME | CORE\_DB\_USERNAME | 'ark' |
-| core-database-postgres.connection.password | ARK\_DB\_PASSWORD | CORE\_DB\_PASSWORD | 'password' |
-| core-transaction-pool.enabled | ARK\_TRANSACTION\_POOL\_DISABLED | CORE\_TRANSACTION\_POOL\_DISABLED | true |
-| core-transaction-pool. enabled | ARK\_TRANSACTION\_POOL\_MAX\_PER\_SENDER | CORE\_TRANSACTION\_POOL\_MAX\_PER\_SENDER | 300 |
+| core-logger-winston.transports.console.options.level | ARK_LOG_LEVEL | CORE_LOG_LEVEL | 'debug' |
+| core-logger-winston.transports.dailyRotate.options.level | ARK_LOG_LEVEL | CORE_LOG_LEVEL | 'debug' |
+| core-database-postgres.connection.host | ARK_DB_HOST | CORE_DB_HOST | 'localhost' |
+| core-database-postgres.connection.port | ARK_DB_PORT | CORE_DB_PORT | 5432 |
+| core-database-postgres.connection.database | ARK_DB_DATABASE | CORE_DB_DATABASE | ${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME} |
+| core-database-postgres.connection.user | ARK_DB_USERNAME | CORE_DB_USERNAME | 'ark' |
+| core-database-postgres.connection.password | ARK_DB_PASSWORD | CORE_DB_PASSWORD | 'password' |
+| core-transaction-pool.enabled | ARK_TRANSACTION_POOL_DISABLED | CORE_TRANSACTION_POOL_DISABLED | true |
+| core-transaction-pool. enabled | ARK_TRANSACTION_POOL_MAX_PER_SENDER | CORE_TRANSACTION_POOL_MAX_PER_SENDER | 300 |
 | core-transaction-pool.allowedSenders |  |  | \[\] |
-| core-p2p.host | ARK\_P2P\_HOST | CORE\_P2P\_HOST | "0.0.0.0" |
-| core-p2p.port | ARK\_P2P\_PORT | CORE\_P2P\_PORT | 4001 |
+| core-p2p.host | ARK_P2P_HOST | CORE_P2P_HOST | "0.0.0.0" |
+| core-p2p.port | ARK_P2P_PORT | CORE_P2P_PORT | 4001 |
 | core-blockchain.fastRebuild |  |  | false |
-| core-api.enabled | ARK\_API\_DISABLED | CORE\_API\_DISABLED | true |
-| core-api.host | ARK\_API\_HOST | CORE\_API\_HOST | "0.0.0.0" |
-| core-api.port | ARK\_API\_PORT | CORE\_API\_PORT | 4003 |
-| core-api.whitelist |  |  | \['\*'\] |
-| core-webhooks.enabled | ARK\_WEBHOOKS\_ENABLED | CORE\_WEBHOOKS\_ENABLED | false |
-| core-webhooks.server.enabled | ARK\_WEBHOOKS\_API\_ENABLED | CORE\_WEBHOOKS\_API\_ENABLED | false |
-| core-webhooks.server.host | ARK\_WEBHOOKS\_HOST | CORE\_WEBHOOKS\_HOST | '0.0.0.0' |
-| core-webhooks.server.port | ARK\_WEBHOOKS\_PORT | CORE\_WEBHOOKS\_PORT | 4004 |
-| core-webhooks.server.whitelist |  |  | \["127.0.0.1", "::ffff:127.0.0.1"\] |
-| core-graphql.enabled | ARK\_GRAPHQL\_ENABLED | CORE\_GRAPHQL\_ENABLED | false |
-| core-graphql.host | ARK\_GRAPHQL\_HOST | CORE\_GRAPHQL\_HOST | '0.0.0.0' |
-| core-graphql.port | ARK\_GRAPHQL\_PORT | CORE\_GRAPHQL\_PORT | 4005 |
-| core-forger.hosts |  |  | \[`http://127.0.0.1:${process.env.CORE_P2P_PORT|| 4001}`\] |
-| core-json-rpc.enabled | ARK\_JSON\_RPC\_ENABLED | CORE\_JSON\_RPC\_ENABLED | false |
-| core-json-rpc.host | ARK\_JSON\_RPC\_HOST | CORE\_JSON\_RPC\_HOST | '0.0.0.0' |
-| core-json-rpc.port | ARK\_JSON\_RPC\_PORT | CORE\_JSON\_RPC\_PORT | 8080 |
+| core-api.enabled | ARK_API_DISABLED | CORE_API_DISABLED | true |
+| core-api.host | ARK_API_HOST | CORE_API_HOST | "0.0.0.0" |
+| core-api.port | ARK_API_PORT | CORE_API_PORT | 4003 |
+| core-api.whitelist |  |  | ['\*'] |
+| core-webhooks.enabled | ARK_WEBHOOKS_ENABLED | CORE_WEBHOOKS_ENABLED | false |
+| core-webhooks.server.enabled | ARK_WEBHOOKS_API_ENABLED | CORE_WEBHOOKS_API_ENABLED | false |
+| core-webhooks.server.host | ARK_WEBHOOKS_HOST | CORE_WEBHOOKS_HOST | '0.0.0.0' |
+| core-webhooks.server.port | ARK_WEBHOOKS_PORT | CORE_WEBHOOKS_PORT | 4004 |
+| core-webhooks.server.whitelist |  |  | ["127.0.0.1", "::ffff:127.0.0.1"] |
+| core-graphql.enabled | ARK_GRAPHQL_ENABLED | CORE_GRAPHQL_ENABLED | false |
+| core-graphql.host | ARK_GRAPHQL_HOST | CORE_GRAPHQL_HOST | '0.0.0.0' |
+| core-graphql.port | ARK_GRAPHQL_PORT | CORE_GRAPHQL_PORT | 4005 |
+{{-- | core-forger.hosts |  |  | [http://127.0.0.1:${process.env.CORE_P2P_PORT || 4001}] | --}}
+| core-json-rpc.enabled | ARK_JSON_RPC_ENABLED | CORE_JSON_RPC_ENABLED | false |
+| core-json-rpc.host | ARK_JSON_RPC_HOST | CORE_JSON_RPC_HOST | '0.0.0.0' |
+| core-json-rpc.port | ARK_JSON_RPC_PORT | CORE_JSON_RPC_PORT | 8080 |
 | core-json-rpc.allowRemote |  |  | false |
-| core-json-rpc.whitelist |  |  | \["127.0.0.1", "::ffff:127.0.0.1"\] |
-| ~/.ark/.env | ARK\_NETWORK\_NAME | CORE\_NETWORK\_NAME | 'ark' |
-| ~/.ark/.env |  | CORE\_TOKEN | Ѧ |
+| core-json-rpc.whitelist |  |  | ["127.0.0.1", "::ffff:127.0.0.1"] |
+| ~/.ark/.env | ARK_NETWORK_NAME | CORE_NETWORK_NAME | 'ark' |
+| ~/.ark/.env |  | CORE_TOKEN | Ѧ |

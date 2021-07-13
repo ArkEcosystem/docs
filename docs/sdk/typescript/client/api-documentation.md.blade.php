@@ -709,7 +709,7 @@ Create a new transaction.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| object\[\] | payload | Yes | Transaction\(s\) to broadcast |
+| object\[\] | payload | Yes | Transaction(s) to broadcast |
 
 #### Return Value
 

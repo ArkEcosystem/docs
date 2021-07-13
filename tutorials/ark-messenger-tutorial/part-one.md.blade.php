@@ -9,7 +9,7 @@ number: 1
 
 Before we dive in, it would be beneficial to understand how the ARK Messenger works!
 
-The ARK Messenger is comprised of two major components: \(1\) _**the client**_; and \(2\) _**the bridgechain**_.
+The ARK Messenger is comprised of two major components: (1) _**the client**_; and (2) _**the bridgechain**_.
 
 * The _client_ is the front-end application that you interact with as a user. It handles all user input and processes all incoming and outgoing data to the network.
 * The _bridgechain_ is the blockchain component of the application. It acts as a decentralized database
@@ -21,22 +21,23 @@ If you would like to review the code for both components, they are listed below 
 
 The ARK Messenger application works with channels. A channel can consist of any number of participants. When a user creates a new channel, a new channel ID and password is generated. The password can then be shared with other users so that they can join the channel and send messages.
 
-Messages sent to the channel are encrypted and decrypted using the channel’s password as the seed. All sensitive data is handled by the user’s local client and no unencrypted data is ever broadcast. ARK Messenger runs on its own bridgechain with a customized network and node configuration. It also makes use of a custom transaction built with the _Generic Transaction Interface \(GTI\)_ to handle the processing of the chat messages.
+Messages sent to the channel are encrypted and decrypted using the channel’s password as the seed. All sensitive data is handled by the user’s local client and no unencrypted data is ever broadcast. ARK Messenger runs on its own bridgechain with a customized network and node configuration. It also makes use of a custom transaction built with the _Generic Transaction Interface (GTI)_ to handle the processing of the chat messages.
 
-> _**Try out ARK Messenger at**_ [_**https://ARKmessenger.io**_](https://arkmessenger.io/)
+> _**Try out ARK Messenger at**_ [https://ARKmessenger.io](https://arkmessenger.io/)
 
 Now that we have a foundation of what the ARK Messenger is, we are ready to start building. Let us review how to set up a development environment.
 
 ## **Setting up a development environment**
-The documentation within [Core](/docs/core/getting-started/development-setup/introduction) is an ideal way for developers to go through the processes for setting up a development environment. We recommend Linux \(_\*.deb based_\) operating system as the default environment. We officially recommend and support **Ubuntu** operating system.
+
+The documentation within [Core](/docs/core/getting-started/development-setup/introduction) is an ideal way for developers to go through the processes for setting up a development environment. We recommend Linux (_\*.deb based_) operating system as the default environment. We officially recommend and support **Ubuntu** operating system.
 
 You can also set up your development environment using a Docker on [macOS/Linux Docker](/docs/core/getting-started/development-setup/docker-linux-macos) or a [Docker on Windows](/docs/core/getting-started/development-setup/docker-windows).
 
 ### Step 1: User setup
 
-Once you have your environment up and running using the links above, we can create a new user `ark` and add this user to the sudoers group \(allowing root execution if needed\).
+Once you have your environment up and running using the links above, we can create a new user `ark` and add this user to the sudoers group (allowing root execution if needed).
 
-If you are running on a fresh cloud box/vps, like for example[ DigitalOcean](https://cloud.digitalocean.com/), then create a user with the following commands below:
+If you are running on a fresh cloud box/vps, like for example [DigitalOcean](https://cloud.digitalocean.com/), then create a user with the following commands below:
 
 ```bash
 sudo adduser ark
@@ -88,7 +89,7 @@ sudo apt-get install build-essential libcairo2-dev pkg-config libtool autoconf a
 
 Let’s clone our `core` repository and run the initial `yarn setup` command. We will also check out the latest `develop` branch.
 
-`yarn setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages \(including transpiling typescript\). For more information look into Core's `package.json` file in the root folder.
+`yarn setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages (including transpiling typescript). For more information look into Core's `package.json` file in the root folder.
 
 ```bash
 git clone https://github.com/arkecosystem/core
@@ -103,7 +104,7 @@ yarn setup
 
 ARK Core stores all the blockchain data in a [PostgreSQL](https://www.postgresql.org/) database. You have two options on how to set up your development database.
 
-> Follow **Step 7.1** if you are working locally on your developer computer and have docker environment in place, otherwise follow **Step 7.2** \(for example if you are running on a cloud based Ubuntu instance or prefer native database install\).
+> Follow **Step 7.1** if you are working locally on your developer computer and have docker environment in place, otherwise follow **Step 7.2** (for example if you are running on a cloud based Ubuntu instance or prefer native database install).
 
 ### Step 7.1 Database Setup Using Docker
 
@@ -116,7 +117,7 @@ cd core  #root folder of the cloned repository
 yarn docker ark
 ```
 
-will generate the following docker files inside our `core/docker` folder \(see folder tree below\):
+will generate the following docker files inside our `core/docker` folder (see folder tree below):
 
 ```bash
 #core/docker tree in the cloned repository folder

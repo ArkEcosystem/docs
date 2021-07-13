@@ -6,7 +6,7 @@ number: 2
 
 # Develop & Test a Custom Transaction
 
-**Welcome everyone to the second part in our series of tutorials based on the ARK Messenger Proof-of-Concept \(PoC\). During** [**Part One**](/tutorials/ark-messenger-tutorial/part-one)**, we set up a development environment and deployed our own custom bridgechain. This series was created in-part with documentation provided by Delegate** [**Lemii**](https://github.com/Lemii) **as part of his** [**ARK Messenger**](https://arkmessenger.io/) **Proof-of-Concept, funded by the ARK Grants Program.**
+Welcome everyone to the second part in our series of tutorials based on the ARK Messenger Proof-of-Concept (PoC). During **[Part One](/tutorials/ark-messenger-tutorial/part-one)**, we set up a development environment and deployed our own custom bridgechain. This series was created in-part with documentation provided by Delegate **[Lemii](https://github.com/Lemii)** as part of his **[ARK Messenger](https://arkmessenger.io/)** Proof-of-Concept, funded by the **[ARK Grants Program](https://ark.io/grants)**.
 
 One of the main goals for this series is to successfully demonstrate the different ways developers can work with ARK Core. In this part of the series, we will learn to develop and test a custom transaction for our bridgechain. In addition, we will also be developing the _**client,**_ which is the front-end application users will use to interact with the messaging service.
 
@@ -16,9 +16,9 @@ Before we get started with developing and testing our custom transactions, we ne
 
 ARK Messenger implements a custom _**Message Transaction**_. This is a transaction that will hold the encrypted message that is being sent by the user. The transaction should follow these rules:
 
-* Set transfer amount to 0, and apply a low static fee \(currently 0.01\).
-* Be able to store a relatively large amount of message data \(1024 bytes\).
-* Must have a unique type and type group \(101, 1001\).
+* Set transfer amount to 0, and apply a low static fee (currently 0.01).
+* Be able to store a relatively large amount of message data (1024 bytes).
+* Must have a unique type and type group (101, 1001).
 
 These were considerations made prior to developing the custom transaction. In addition to outlining your technical specifications, you may want to familiarize yourself with how custom transactions work on ARK. The article listed below will give you a solid base in understanding how smart/custom transactions work on the ARK Core Blockchain Framework.
 
@@ -37,7 +37,7 @@ In order to create our custom transaction, we will be going over the transaction
 * [Message Transaction Handler File](https://github.com/ArkEcosystem/poc-ark-messenger-core/blob/master/plugins/message-transaction/src/handlers/MessageTransactionHandler.ts)
 * [Message Builder File](https://github.com/ArkEcosystem/poc-ark-messenger-core/blob/master/plugins/message-transaction/src/builders/MessageTransactionBuilder.ts)
 
-### **Message Transaction \(Creating our Custom Transaction\)**
+### **Message Transaction (Creating our Custom Transaction)**
 
 At the very top, we define our custom type and type group:
 
@@ -58,7 +58,7 @@ One difference you will notice, unlike the _Business Registration Transaction_, 
 
 Below the schema, we define our static fee of 0.01. The value we use is 1000000 because the ARK SDK does not work with floating-point numbers and the number of decimal places is 8.
 
-As for the _**serde**_ \(serializer/Deserializer\) functionality; it mostly works the same as the _**Business Registration Transaction**,_ with the exception of two important things:
+As for the _**serde**_ (serializer/Deserializer) functionality; it mostly works the same as the _**Business Registration Transaction**,_ with the exception of two important things:
 
 * The _**writeUint8**_ buffer function is limited to a size, 256 bytes. Since we want to process message data of 1024 bytes maximum, we must use the _**writeUint16**_ variant instead.
 * Because we want to use the _**recipientId**_ in the transaction, we must include it in _**serde**_ process as well:
@@ -96,7 +96,7 @@ await super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
 
 At _**applyToSender**_ and _**revertForSender**_ we perform the default apply and revert actions. The methods _**applyToRecipient**_ and _**revertForRecipient**_ are not utilized because none of the recipient’s attributes are mutated by processing the _**Message Transaction**_.
 
-Apart from that, we let the base _**TransactionHandler**…_ “handle” the rest
+Apart from that, we let the base _**TransactionHandler**…_ "handle" the rest
 
 ### **Message Transaction Builder**
 
@@ -204,7 +204,7 @@ module.exports = {
 
 Now, when we run _**yarn setup**_ to install the bridgechain, it will automatically install the custom transaction as well and include it as a plugin on startup.
 
-When the bridgechain is running \(locally\), we can verify that the custom transaction is integrated correctly by checking the following API endpoint: [http://127.0.0.1:11003/api/transactions/types](http://127.0.0.1:11003/api/transactions/types)
+When the bridgechain is running (locally), we can verify that the custom transaction is integrated correctly by checking the following API endpoint: [http://127.0.0.1:11003/api/transactions/types](http://127.0.0.1:11003/api/transactions/types)
 
 If our custom transaction is present in the list of available transaction types, we can try and post an actual transaction to the blockchain to see if it processes correctly. This can be done in many ways, but the preferred way is utilizing simple scripts.
 

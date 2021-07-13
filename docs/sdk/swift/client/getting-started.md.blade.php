@@ -3,6 +3,7 @@ title: Getting Started
 ---
 
 ## Requirements
+
    > iOS 8.0+ / macOS 10.10+
    Xcode 9.0+
 
@@ -39,22 +40,26 @@ Afterward, install it by running `pod install`.
 2. Clone your forked repository.
 
 ```bash
-   git clone https://github.com/<githubusername>/swift-client
-   ```
+git clone https://github.com/<githubusername>/swift-client
+```
 
+<!-- markdownlint-disable MD029 -->
 3. Next, move into the fresh cloned directory.
+<!-- markdownlint-enable MD029 -->
 
 ```bash
-   cd swift-client/Client
-   ```
+cd swift-client/Client
+```
 
+<!-- markdownlint-disable MD029 -->
 4. Install the dependencies.
+<!-- markdownlint-enable MD029 -->
 
-   For this you will first need to install [Carthage](https://github.com/Carthage/Carthage), which can be done quickly with Homebrew: `brew install carthage`
+For this you will first need to install [Carthage](https://github.com/Carthage/Carthage), which can be done quickly with Homebrew: `brew install carthage`
 
 ```bash
-   carthage update
-   ```
+carthage update
+```
 
 You will also need to install Swiftlint as an additional step, as that is used to lint our code. The easiest way to install this is by using Homebrew: brew install swiftlint.
 

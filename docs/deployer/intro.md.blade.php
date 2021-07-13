@@ -16,7 +16,6 @@ There are three steps in the process: **Prepare**, **Customize**, and **Deploy**
 
 ![Prepare, Customize and Deploy](/storage/docs/docs/deployer/assets/prepareCustomizeDeploy.png)
 
-
 ### **Prepare**
 
 In this stage, you will use the ARK Deployer Hub to follow simple guides and procedures. Topics include:
@@ -25,7 +24,7 @@ In this stage, you will use the ARK Deployer Hub to follow simple guides and pro
 * How to create and connect to servers.
 * How to configure GitHub in preparation for launch.
 
-Virtual private server \(VPS\) providers such as [Digital Ocean](https://digitalocean.com/) make it easy to create secure, affordable nodes without the need for expensive hardware. Anyone with a basic technical background can do it!
+Virtual private server (VPS) providers such as [Digital Ocean](https://digitalocean.com/) make it easy to create secure, affordable nodes without the need for expensive hardware. Anyone with a basic technical background can do it!
 
 <livewire:page-reference path="/docs/deployer/prepare/prepare-introduction" />
 
@@ -37,7 +36,7 @@ In this stage, also known as _the fun part_, you will use ARK Deployer to config
 * **Intermediate.** Additionally customize variables relating to the economic model, like block rewards, fee structure, forging delegate count, and block time.
 * **Advanced.** Customize additional variables like server ports and database paths.
 
-Regardless of the level you choose, you will always have the option to “Use Default” for any individual variable, to speed things up \(with the exception of the first step, naming your blockchain\). Moreover, whichever level you choose will result in a full-featured blockchain.
+Regardless of the level you choose, you will always have the option to "Use Default" for any individual variable, to speed things up (with the exception of the first step, naming your blockchain). Moreover, whichever level you choose will result in a full-featured blockchain.
 
 <livewire:page-reference path="/docs/deployer/customize/customize-introduction" />
 

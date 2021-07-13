@@ -88,4 +88,4 @@ We make use of [Alpine.js](https://github.com/alpinejs/alpine) in addition to Li
 
 ## React
 
-**TBD**
+{{-- **TBD** --}}

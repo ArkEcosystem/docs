@@ -4,7 +4,7 @@ title: Introduction
 
 # Introduction
 
-This is a reference guide for the available Core APIs. APIs expose different resources and data provided by the Core Server \(Node\). Based on the Core Server configuration \(enabled core modules\) we can configure different array of services, such as:
+This is a reference guide for the available Core APIs. APIs expose different resources and data provided by the Core Server (Node). Based on the Core Server configuration (enabled core modules) we can configure different array of services, such as:
 
 1. [Public REST API](/docs/api/public-rest-api/getting-started)
 2. [Webhook API](/docs/api/webhook-api/getting-started)

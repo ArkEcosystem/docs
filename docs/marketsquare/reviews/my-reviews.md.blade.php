@@ -20,7 +20,6 @@ Our Reviews left for other Projects will be shown towards the bottom of the page
 
 We can get a good look at Reviews left for _our_ Projects by clicking the Profile Avatar at the top of the page and selecting ‘**My Projects**’ from the drop-down menu.
 
-
 ![](/storage/docs/docs/marketsquare/assets/projects/projects-my-focus.png)
 
 ---

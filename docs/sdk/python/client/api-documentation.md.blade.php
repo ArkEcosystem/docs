@@ -38,7 +38,7 @@ Retrieve a Block
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | block\_id | Yes | Block ID |
+| int | block_id | Yes | Block ID |
 
 #### Return Value
 
@@ -56,7 +56,7 @@ List All Transactions of a Block
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | block\_id | Yes | Block ID |
+| str | block_id | Yes | Block ID |
 | int | page | No | Pagination |
 | int | limit | No | Query parameters |
 
@@ -118,7 +118,7 @@ Retrieve a Delegate
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| int | delegate\_id | Yes | Delegate identifier |
+| int | delegate_id | Yes | Delegate identifier |
 
 #### Return Value
 
@@ -156,7 +156,7 @@ List All Blocks of a Delegate
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | delegate\_id | Yes | Delegate identifier |
+| str | delegate_id | Yes | Delegate identifier |
 | int | page | No | Pagination |
 | int | limit | No | Result limits |
 
@@ -176,7 +176,7 @@ List All Voters of a Delegate
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | delegate\_id | Yes | Delegate identifier |
+| str | delegate_id | Yes | Delegate identifier |
 | int | page | No | Pagination |
 | int | limit | No | Result limits |
 | any | \*\*kwargs | No | Query parameters |
@@ -259,7 +259,7 @@ List All Peers
 | str | status | No | Peer status |
 | int | port | No | Peer port |
 | str | version | No | Peer version |
-| str | order\_by | No | Order by |
+| str | order_by | No | Order by |
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
@@ -317,7 +317,7 @@ Retrieve a Transaction
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | transaction\_id | Yes | Transaction ID |
+| str | transaction_id | Yes | Transaction ID |
 
 #### Return Value
 
@@ -375,7 +375,7 @@ Get Unconfirmed Transaction
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | transaction\_id | Yes | Transaction ID |
+| str | transaction_id | Yes | Transaction ID |
 
 #### Return Value
 
@@ -419,7 +419,7 @@ List Transaction Types
 def fees(self)
 ```
 
-List Transaction Fees \(Non-Dynamic\)
+List Transaction Fees (Non-Dynamic)
 
 #### Return Value
 
@@ -458,7 +458,7 @@ Retrieve a Vote
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | vote\_id | Yes | Vote IDs |
+| str | vote_id | Yes | Vote IDs |
 
 #### Return Value
 
@@ -497,7 +497,7 @@ Retrieve a Wallet
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | wallet\_id | Yes | Wallet identifier |
+| str | wallet_id | Yes | Wallet identifier |
 
 #### Return Value
 
@@ -515,7 +515,7 @@ List All Transactions of a Wallet
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | wallet\_id | Yes | Wallet identifier |
+| str | wallet_id | Yes | Wallet identifier |
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 | any | \*\*kwargs | No | Query parameters |
@@ -536,7 +536,7 @@ List All Received Transactions of a Wallet
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | wallet\_id | Yes | Wallet identifier |
+| str | wallet_id | Yes | Wallet identifier |
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
@@ -556,7 +556,7 @@ List All Sent Transactions of a Wallet
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | wallet\_id | Yes | Wallet identifier |
+| str | wallet_id | Yes | Wallet identifier |
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
@@ -576,7 +576,7 @@ List All Votes of a Wallet
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | wallet\_id | Yes | Wallet identifier |
+| str | wallet_id | Yes | Wallet identifier |
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 

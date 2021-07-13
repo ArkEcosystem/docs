@@ -322,8 +322,8 @@ Generate BIP32 Wallet from mnemonic.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string | mnemonic | Yes | INSERT\_DESCRIPTION |
-| string | passphrase | No | INSERT\_DESCRIPTION |
+| string | mnemonic | Yes | INSERT_DESCRIPTION |
+| string | passphrase | No | INSERT_DESCRIPTION |
 
 #### Return Value
 
@@ -341,8 +341,8 @@ Generate BIP32 Wallet from KeyPair.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| IKeyPair | keys | Yes | INSERT\_DESCRIPTION |
-| Buffer | chainCode | Yes | INSERT\_DESCRIPTION |
+| IKeyPair | keys | Yes | INSERT_DESCRIPTION |
+| Buffer | chainCode | Yes | INSERT_DESCRIPTION |
 
 #### Return Value
 
@@ -379,7 +379,7 @@ Determine Slip44 for BIP32 Wallet.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | BIP32Interface | root | Yes | BIP32 Wallet to determine Slip44 for |
-| boolean | hardened | Yes | INSERT\_DESCRIPTION |
+| boolean | hardened | Yes | INSERT_DESCRIPTION |
 
 #### Return Value
 
@@ -488,7 +488,7 @@ Get the time diff between now and network start.
 public static getTimeInMsUntilNextSlot()
 ```
 
-Get the time \(in milliseconds\) until the start of the next slot.
+Get the time (in milliseconds) until the start of the next slot.
 
 #### Return Value
 
@@ -587,7 +587,7 @@ Derive the address from the given passphrase.
 public static fromPublicKey(publicKey: string, networkVersion?: number)
 ```
 
-Derive a \(multisig\) address from a multi signature asset.
+Derive a (multisig) address from a multi signature asset.
 
 #### Parameters
 
@@ -1225,7 +1225,7 @@ Create Transaction object from Buffer.
 public static fromBytesUnsafe(buffer: Buffer, id?: string)
 ```
 
-Create Transaction object from Buffer \(unsafe\).
+Create Transaction object from Buffer (unsafe).
 
 NOTE: Only use this internally when it is safe to assume the buffer has already been verified.
 
@@ -2162,7 +2162,7 @@ Initialize new transaction types factory.
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Map | transactionTypes | Yes | INSERT\_DESCRIPTION |
+| Map | transactionTypes | Yes | INSERT_DESCRIPTION |
 
 ### `create()`
 
@@ -2426,7 +2426,7 @@ Create new internal transaction type from existing type.
 public toString()
 ```
 
-Convert transaction type to a `group/type` string representation \(E.g. 1/0\)
+Convert transaction type to a `group/type` string representation (E.g. 1/0)
 
 #### Return Value
 

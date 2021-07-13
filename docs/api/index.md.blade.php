@@ -1,4 +1,6 @@
+<!-- markdownlint-disable MD041 -->
 ## Introduction
+<!-- markdownlint-enable MD041 -->
 
 <x-general.sidebar-link path="/docs/api/intro" name="Introduction" />
 
@@ -31,6 +33,7 @@
 <x-general.sidebar-link path="/docs/api/webhook-api/endpoints" name="Endpoints" />
 
 ## Manager API
+
 <x-general.sidebar-link path="/docs/api/manager-api/getting-started" name="Getting Started" />
 <x-general.sidebar-link
     path="/docs/api/manager-api/endpoints"
