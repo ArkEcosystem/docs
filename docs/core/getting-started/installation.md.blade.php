@@ -178,13 +178,19 @@ Would you like to configure the database? [y/N]:
 
 Press `y` and confirm with `enter`.
 
-You can input any custom database credentials that you want to use, or you can use the one provided below, by replacing "ark_network" with the network you plan to operate on (eg. ark_mainnet, ark_devnet, ark_testnet):
+---
+
+Input the database credentials of your choosing.
 
 ```bash
 Enter the database username: ark
 Enter the database password: password
-Enter the database name: ark_network
+Enter the database name: <network_name> # your chosen network name
 ```
+
+<x-alert type="warning">
+Replace `<network_name>` with the appropriate custom or pre-defined network name (e.g. '**ark_mainnet**', '**ark_devnet**', '**ark_testnet**').
+</x-alert>
 
 This will create a PostgreSQL role and database to be used for storing blockchain data.
 
