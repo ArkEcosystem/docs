@@ -4,7 +4,9 @@ title: API Documentation
 
 # API Documentation
 
-## org.arkecosystem.client.http.Client; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.http.Client;
+<!-- markdownlint-enable MD026 -->
 
 ### `Client()`
 
@@ -107,7 +109,9 @@ Set client instance.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.Connection; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.Connection;
+<!-- markdownlint-enable MD026 -->
 
 ### `Connection()`
 
@@ -141,7 +145,9 @@ Instantiate new Api.
 
 `T`
 
-## org.arkecosystem.client.ConnectionManager; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.ConnectionManager;
+<!-- markdownlint-enable MD026 -->
 
 ### `ConnectionManager()`
 
@@ -286,7 +292,9 @@ Get a connection instance.
 
 `Connection`
 
-## org.arkecosystem.client.api.AbstractAPI; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.AbstractAPI;
+<!-- markdownlint-enable MD026 -->
 
 ### `AbstractAPI()`
 
@@ -302,7 +310,9 @@ Create a new API class instance.
 | :--- | :--- | :--- | :--- |
 | Client | client | Yes | Client |
 
-## org.arkecosystem.client.api.Blockchain; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Blockchain;
+<!-- markdownlint-enable MD026 -->
 
 ### `Blockchain`()
 
@@ -318,7 +328,9 @@ Blockchain class constructor.
 | :--- | :--- | :--- | :--- |
 | Client | client | Yes | Client |
 
-## org.arkecosystem.client.api.Blocks; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Blocks;
+<!-- markdownlint-enable MD026 -->
 
 ### `Blocks()`
 
@@ -400,7 +412,9 @@ Filter all blocks by the given parameters.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Bridgechains; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Bridgechains;
+<!-- markdownlint-enable MD026 -->
 
 ### `Bridgechains()`
 
@@ -460,7 +474,9 @@ Filter all bridgechains by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-## org.arkecosystem.client.api.Businesses <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Businesses
+<!-- markdownlint-enable MD026 -->
 
 ### `Business()`
 
@@ -530,7 +546,9 @@ Filter all businesses by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-## org.arkecosystem.client.api.Delegates; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Delegates;
+<!-- markdownlint-enable MD026 -->
 
 ### `Delegates()`
 
@@ -612,7 +630,9 @@ Get all voters for the given delegate.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Locks; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Locks;
+<!-- markdownlint-enable MD026 -->
 
 ### `Locks()`
 
@@ -682,7 +702,9 @@ Filter all unlocked locks by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Map | parameters | Yes | Query parameters |
 
-## org.arkecosystem.client.api.Node; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Node;
+<!-- markdownlint-enable MD026 -->
 
 ### `Node()`
 
@@ -756,7 +778,9 @@ public LinkedTreeMap<String, Object> debug()
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.peers; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.peers;
+<!-- markdownlint-enable MD026 -->
 
 ### `Peers()`
 
@@ -802,7 +826,9 @@ Get a peer by the given IP address.
 
 `public LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Rounds; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Rounds;
+<!-- markdownlint-enable MD026 -->
 
 ### `Rounds()`
 
@@ -832,7 +858,9 @@ Returns delegates by given round.
 | :--- | :--- | :--- | :--- |
 | String | id | Yes | Round identifier |
 
-## org.arkecosystem.client.api.Transactions; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Transactions;
+<!-- markdownlint-enable MD026 -->
 
 ### `Transactions()`
 
@@ -980,7 +1008,9 @@ Get a list of transactions fees.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Votes; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Votes;
+<!-- markdownlint-enable MD026 -->
 
 ### `Votes()`
 
@@ -1026,7 +1056,9 @@ Get a vote by the given id.
 
 `LinkedTreeMap<String, Object>`
 
-## org.arkecosystem.client.api.Wallets; <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+## org.arkecosystem.client.api.Wallets;
+<!-- markdownlint-enable MD026 -->
 
 ### `Wallets()`
 

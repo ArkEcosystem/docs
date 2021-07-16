@@ -104,7 +104,9 @@ A mnemonic recovery passphrase should be all <u>**lower-case**</u> letters with 
 
 ---
 
-### My Recovery Phrase Was Entered as Recorded! <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+### My Recovery Phrase Was Entered as Recorded!
+<!-- markdownlint-enable MD026 -->
 
 If the mnemonic passphrase was entered **exactly** as recorded, compare each word to the official list found here:<br>[BIP-39 Wordlist: https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt)
 
@@ -118,7 +120,9 @@ Tip: Enter your ARK Address at [explorer.ark.io](http://explorer.ark.io) to chec
 
 ---
 
-### My Recovery Phrase is Gone! <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+### My Recovery Phrase is Gone!
+<!-- markdownlint-enable MD026 -->
 
 In most cases, the above advice will help a user successfully recover their wallet.
 
@@ -156,7 +160,9 @@ Users should also check that they are not using the <u>**Mnemonic Passphrase**</
 
 ---
 
-### My Encryption Password is Wrong! <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+### My Encryption Password is Wrong!
+<!-- markdownlint-enable MD026 -->
 
 If only the **encryption password** is wrong.. **FUNDS SAFU!**
 
@@ -168,7 +174,9 @@ An encryption password **must** contain at least:<br>- 8 characters in total<br>
 
 ---
 
-### My Recovery Phrase <u>Seems</u> Correct! <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+### My Recovery Phrase <u>Seems</u> Correct!
+<!-- markdownlint-enable MD026 -->
 
 If your **mnemonic passphrase** appears to be correct, check that it was **entered** correctly.
 
@@ -311,7 +319,9 @@ Advice on troubleshooting a **network connection** can be found <u>[here](#resol
 
 ---
 
-### My Ledger issue is still not resolved! <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+### My Ledger issue is still not resolved!
+<!-- markdownlint-enable MD026 -->
 
 Most **Ledger** **connectivity** and **transaction** issues will be resolved by following the advice above.
 

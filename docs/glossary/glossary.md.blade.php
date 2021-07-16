@@ -1264,7 +1264,9 @@ Component that extends either an application or Blockchain core software.
 
 See [Proof-of-Concept](#proof-of-concept)
 
-### Point. Click. Blockchain. <!-- markdownlint-disable-next-line MD026 -->
+<!-- markdownlint-disable MD026 -->
+### Point. Click. Blockchain.
+<!-- markdownlint-enable MD026 -->
 
 Prior slogan for ARK.io, since replaced by 'The Simplest Way to Blockchain.'
 
