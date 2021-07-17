@@ -6,12 +6,18 @@ title: Transactions - Understanding the Nonce
 
 ## Introduction
 
-In ARK, every transaction has a sequential nonce. The nonce is the number of transactions sent from a given address. Each time you send a transaction, the nonce value increases by **1**. There are rules about what transactions are considered valid transactions, and the nonce is used to enforce some of these rules.
+ARK transactions use a sequential nonce to protect against [double-spending](https://en.m.wikipedia.org/wiki/Double-spending), long-range attacks, key-leakage as a result of signature reuse, and [side-channel attacks](https://en.m.wikipedia.org/wiki/Side-channel_attack) associated with random nonces.
 
-**Specifically:**
+A sequential nonce effectively counts each outgoing transaction from a given wallet. This means that the first transaction from a wallet must have a nonce of **1**, the second transaction must have a nonce of **2**, and so on.
 
-* **Transactions must be in order.**  You cannot have a transaction with a nonce of **1** forged before one with a nonce of **0**. In the case of ARK, it’s a monotonically increasing number that starts at **1** for the first transaction a wallet **sends**. Each subsequent transaction that wallet sends, will increment the nonce by one.
-* **No skipping!**  You cannot have a transaction with a nonce of **2** forged if you have not already sent transactions with a nonce of **1** and **0**. There can be no gaps between transaction nonces, so every new transaction will have a nonce that is one higher than the last transaction.
+This ensures that the data contained within a particular transaction will always be unique and thus results in a distinct hash that will necessarily produce a unique signature.
+
+**key facts**:
+
+* The 1st transaction from a wallet **must** have a nonce of **1**.
+* The nonce **must** increment sequentially for every subsequent transaction being sent. (_e.g. 2, 3, 4, 5, 6, 7, ..._)
+* A nonce **cannot** be reused.
+* A nonce **cannot** be skipped. (_a transaction with a nonce of **5** originating from a wallet with a nonce of **3** will be rejected._)
 
 ## How To Get Nonce Value For An Address?
 
