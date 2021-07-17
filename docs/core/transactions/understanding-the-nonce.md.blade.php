@@ -57,15 +57,3 @@ You have to keep track locally of the next nonce value in case you intend to sen
 For example, we have a wallet with nonce 123 and want to send 3 transactions to be forged in the next block. These transactions will require nonce values 124, 125 and 126 respectively, and you will have to set the values, before creating transactions.
 
 After the block is forged, the API will report the _current_ nonce of the wallet to be 126.
-
-## **Why does it matter?**
-
-This value prevents double-spending and makes long range attacks much harder, as the nonce will always specify the order of transactions. If a double-spend _does_ occur, it’s typically due to the following process:
-
-* A transaction is sent to one party.
-* They wait for it to register.
-* Something is collected from this first transaction.
-* Another transaction is quickly sent with a high gas price.
-* The second transaction is forged first, therefore invalidating the first transaction.
-
-This is why exchanges wait for you to have a certain number of confirmations before allowing you to trade freshly-deposited funds.
