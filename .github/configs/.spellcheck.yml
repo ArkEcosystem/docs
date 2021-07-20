@@ -1,3 +1,6 @@
+# Run 'spellcheck' locally:
+# - `$ pyspelling -c ./.github/configs/.spellcheck.yml`
+
 matrix:
 - name: Wordlists
   aspell:

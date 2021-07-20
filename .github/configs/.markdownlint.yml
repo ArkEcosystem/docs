@@ -1,4 +1,7 @@
-# https://github.com/DavidAnson/markdownlint/blob/238781506a44826b8825771fd4864f2c8aeddb3a/schema/.markdownlint.yaml
+# Run 'markdownlint' locally:
+# - `$ markdownlint '**/*.md.blade.php' -c ./.github/configs/.markdownlint.yml`
+#
+# cfg src: https://github.com/DavidAnson/markdownlint/blob/238781506a44826b8825771fd4864f2c8aeddb3a/schema/.markdownlint.yaml
 
 ##################################################
 # MD001/heading-increment/header-increment - Heading levels should only increment by one level at a time
