@@ -38,7 +38,7 @@ We will learn the help command first, as it is a very important tool that enable
 This will display the initial help screen and list all the possible available commands.
 
 <x-alert type="info">
-To learn more about a specific command or subcommand we can use the command name combined with the **--help** parameter. For example, to display more information about the `send:transfer` command we can run `$&gt;**./bin/run send:transfer --help`**
+To learn more about a specific command or subcommand we can use the command name combined with the **`--help`** parameter. For example, to display more information about the `send:transfer` command we can run **`./bin/run send:transfer --help`**.
 </x-alert>
 
 This will display more detailed information about the specific command and what parameters are available.
