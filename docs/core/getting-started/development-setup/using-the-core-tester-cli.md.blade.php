@@ -7,7 +7,7 @@ title: Development Setup - Using the Core Tester CLI
 Core-Tester-CLI  is a plugin that was developed to help create, send and debug official supported transaction types and blocks from the CLI. The plugin can be found in the [official Core TX tester repository](https://github.com/ArkEcosystem/core-tx-tester). To send one or more transactions, you simply run the commands and adjust the parameters. By default the Tester-CLI is predefined to work with local Testnet environment (identities, delegates, passwords and a default connection to a localhost Core node running Testnet network).
 
 <x-alert type="info">
-Default options can be changed, by using the correct CLI command parameters (use `--help` command to learn more). The CLI interface can also be used to build and send transactions to public networks, by specifying node ip (**--host**) and port (**--portAPI**) parameters. See the examples under each commands documentation.
+Default options can be changed, by using the correct CLI command parameters (use `--help` command to learn more). The CLI interface can also be used to build and send transactions to public networks, by specifying node ip (**`--host`**) and port (**`--portAPI`**) parameters. See the examples under each commands documentation.
 </x-alert>
 
 In the next sections we will learn more about the basic commands of the Tester-CLI.
@@ -38,7 +38,7 @@ We will learn the help command first, as it is a very important tool that enable
 This will display the initial help screen and list all the possible available commands.
 
 <x-alert type="info">
-To learn more about a specific command or subcommand we can use the command name combined with the **--help** parameter. For example, to display more information about the `send:transfer` command we can run $&gt;**./bin/run send:transfer --help**
+To learn more about a specific command or subcommand we can use the command name combined with the **--help** parameter. For example, to display more information about the `send:transfer` command we can run `$&gt;**./bin/run send:transfer --help`**
 </x-alert>
 
 This will display more detailed information about the specific command and what parameters are available.

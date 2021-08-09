@@ -30,10 +30,10 @@ ark config:cli
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --token | the name of the token that should be used | :x: |
-| --channel | the npm registry channel that should be used | :x: |
+| Name        | Description                                  | Required |
+| :---------- | :------------------------------------------- | :------: |
+| `--token`   | the name of the token that should be used    | :x:      |
+| `--channel` | the npm registry channel that should be used | :x:      |
 
 #### Examples
 
@@ -63,15 +63,15 @@ ark config:database
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --host | the host of the database | :x: |
-| --port | the port of the database | :x: |
-| --database | the name of the database that should be used | :x: |
-| --username | the name of the database user | :x: |
-| --password | the password for the database that should be used | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name         | Description                                       | Required |
+| :----------- | :------------------------------------------------ | :------: |
+| `--host`     | the host of the database                          | :x:      |
+| `--port`     | the port of the database                          | :x:      |
+| `--database` | the name of the database that should be used      | :x:      |
+| `--username` | the name of the database user                     | :x:      |
+| `--password` | the password for the database that should be used | :x:      |
+| `--network`  | the name of the network that should be used       | :x:      |
+| `--token`    | the name of the token that should be used         | :x:      |
 
 #### Examples
 
@@ -93,14 +93,14 @@ ark config:forger
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :x: |
-| --password | the password for the encrypted bip38 | :x: |
-| --method | the configuration method to use (bip38 or bip39) | :x: |
-| --skipValidation | skip bip39 mnemonic validation | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name               | Description                                      | Required |
+| :----------------- | :----------------------------------------------- | :------: |
+| `--bip39`          | the plain text bip39 passphrase                  |    :x:   |
+| `--password`       | the password for the encrypted bip38             |    :x:   |
+| `--method`         | the configuration method to use (bip38 or bip39) |    :x:   |
+| `--skipValidation` | skip bip39 mnemonic validation                   |    :x:   |
+| `--network`        | the name of the network that should be used      |    :x:   |
+| `--token`          | the name of the token that should be used        |    :x:   |
 
 #### Examples
 
@@ -128,13 +128,13 @@ ark config:forger:bip38
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :white_check_mark: |
-| --password | the password for the encrypted bip38 | :white_check_mark: |
-| --skipValidation | skip bip39 mnemonic validation | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name               | Description                                 |      Required      |
+| :----------------- | :------------------------------------------ | :----------------: |
+| `--bip39`          | the plain text bip39 passphrase             | :white_check_mark: |
+| `--password`       | the password for the encrypted bip38        | :white_check_mark: |
+| `--skipValidation` | skip bip39 mnemonic validation              |         :x:        |
+| `--network`        | the name of the network that should be used |         :x:        |
+| `--token`          | the name of the token that should be used   |         :x:        |
 
 #### Examples
 
@@ -154,12 +154,12 @@ ark config:forger:bip39
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :white_check_mark: |
-| --skipValidation | skip bip39 mnemonic validation | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name               | Description                                 |      Required      |
+| :----------------- | :------------------------------------------ | :----------------: |
+| `--bip39`          | the plain text bip39 passphrase             | :white_check_mark: |
+| `--skipValidation` | skip bip39 mnemonic validation              |         :x:        |
+| `--network`        | the name of the network that should be used |         :x:        |
+| `--token`          | the name of the token that should be used   |         :x:        |
 
 #### Examples
 
@@ -179,10 +179,12 @@ ark config:publish
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name               | Description                                 |      Required      |
+| :----------------- | :------------------------------------------ | :----------------: |
+| `--bip39`          | the plain text bip39 passphrase             | :white_check_mark: |
+| `--skipValidation` | skip bip39 mnemonic validation              |         :x:        |
+| `--network`        | the name of the network that should be used |         :x:        |
+| `--token`          | the name of the token that should be used   |         :x:        |
 
 #### Examples
 
@@ -194,11 +196,11 @@ ark config:publish
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --reset | overwrite existing configuration | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--reset`   | overwrite existing configuration            |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -220,12 +222,12 @@ ark core:log
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --error | only show error output | :x: |
-| --lines | number of lines to output | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--error`   | only show error output                      |    :x:   |
+| `--lines`   | number of lines to output                   |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -245,10 +247,10 @@ ark core:restart
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -270,19 +272,19 @@ ark core:start
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :x: |
-| --bip38 | the encrypted bip38 | :x: |
-| --password | the password for the encrypted bip38 | :x: |
-| --[no-]daemon | start the process as a pm2 daemon | :x: |
-| --disableDiscovery | permanently disable any peer discovery | :x: |
-| --ignoreMinimumNetworkReach | ignore the minimum network reach on start | :x: |
-| --launchMode | the mode the relay will be launched in (seed only at the moment) | :x: |
-| --networkStart | indicate that this is the first start of seeds | :x: |
-| --skipDiscovery | skip the initial peer discovery | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name                          | Description                                                      | Required |
+| :---------------------------- | :--------------------------------------------------------------- | :------: |
+| `--bip39`                     | the plain text bip39 passphrase                                  |    :x:   |
+| `--bip38`                     | the encrypted bip38                                              |    :x:   |
+| `--password`                  | the password for the encrypted bip38                             |    :x:   |
+| `--[no-]daemon`               | start the process as a pm2 daemon                                |    :x:   |
+| `--disableDiscovery`          | permanently disable any peer discovery                           |    :x:   |
+| `--ignoreMinimumNetworkReach` | ignore the minimum network reach on start                        |    :x:   |
+| `--launchMode`                | the mode the relay will be launched in (seed only at the moment) |    :x:   |
+| `--networkStart`              | indicate that this is the first start of seeds                   |    :x:   |
+| `--skipDiscovery`             | skip the initial peer discovery                                  |    :x:   |
+| `--network`                   | the name of the network that should be used                      |    :x:   |
+| `--token`                     | the name of the token that should be used                        |    :x:   |
 
 #### Examples
 
@@ -346,9 +348,9 @@ ark core:status
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --token | the name of the token that should be used | :x: |
+| Name      | Description                               | Required |
+| :-------- | :---------------------------------------- | :------: |
+| `--token` | the name of the token that should be used |    :x:   |
 
 ### core:stop
 
@@ -362,11 +364,11 @@ ark core:stop
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --daemon | stop the process or pm2 daemon | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--daemon`  | stop the process or pm2 daemon              |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -394,11 +396,11 @@ ark env:get --key=KEY
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
-| --key | the key of which the value should be retrieved | :white_checkmark: |
+| Name        | Description                                    |      Required     |
+| :---------- | :--------------------------------------------- | :---------------: |
+| `--network` | the name of the network that should be used    |        :x:        |
+| `--token`   | the name of the token that should be used      |        :x:        |
+| `--key`     | the key of which the value should be retrieved | :white_checkmark: |
 
 #### Examples
 
@@ -420,10 +422,10 @@ ark env:list
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -445,10 +447,10 @@ ark env:paths
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -470,12 +472,12 @@ ark env:set --key=KEY --value=VALUE
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
-| --key | the key of the value that should be updated | :white_checkmark: |
-| --value | the new value of the key that should be updated | :white_checkmark: |
+| Name        | Description                                     |      Required     |
+| :---------- | :---------------------------------------------- | :---------------: |
+| `--network` | the name of the network that should be used     |        :x:        |
+| `--token`   | the name of the token that should be used       |        :x:        |
+| `--key`     | the key of the value that should be updated     | :white_checkmark: |
+| `--value`   | the new value of the key that should be updated | :white_checkmark: |
 
 #### Examples
 
@@ -497,12 +499,12 @@ ark forger:log
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --error | only show error output | :x: |
-| --lines | number of lines to output | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--error`   | only show error output                      |    :x:   |
+| `--lines`   | number of lines to output                   |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -522,10 +524,10 @@ ark forger:restart
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -553,14 +555,14 @@ ark forger:run
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --bip39 | the plain text bip39 passphrase | :x: |
-| --bip38 | the encrypted bip38 | :x: |
-| --password | the password for the encrypted bip38 | :x: |
-| --[no-]daemon | start the process as a pm2 daemon | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name            | Description                                 | Required |
+| :-------------- | :------------------------------------------ | :------: |
+| `--bip39`       | the plain text bip39 passphrase             |    :x:   |
+| `--bip38`       | the encrypted bip38                         |    :x:   |
+| `--password`    | the password for the encrypted bip38        |    :x:   |
+| `--[no-]daemon` | start the process as a pm2 daemon           |    :x:   |
+| `--network`     | the name of the network that should be used |    :x:   |
+| `--token`       | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -594,9 +596,9 @@ ark forger:status
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --token | the name of the token that should be used | :x: |
+| Name      | Description                               | Required |
+| :-------- | :---------------------------------------- | :------: |
+| `--token` | the name of the token that should be used |    :x:   |
 
 ### forger:stop
 
@@ -610,11 +612,11 @@ ark forger:stop
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --daemon | stop the process or pm2 daemon | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--daemon`  | stop the process or pm2 daemon              |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -642,10 +644,10 @@ ark forger:status
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Example
 
@@ -665,12 +667,12 @@ ark relay:log
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --error | only show error output | :x: |
-| --lines | number of lines to output | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--error`   | only show error output                      |    :x:   |
+| `--lines`   | number of lines to output                   |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -690,10 +692,10 @@ ark relay:restart
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -721,16 +723,16 @@ ark relay:run
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --[no-]daemon | start the process as a pm2 daemon | :x: |
-| --disableDiscovery | permanently disable any peer discovery | :x: |
-| --ignoreMinimumNetworkReach | ignore the minimum network reach on start | :x: |
-| --launchMode=launchMode | the mode the relay will be launched in (seed only at the moment) | :x: |
-| --networkStart | indicate that this is the first start of seeds | :x: |
-| --skipDiscovery | skip the initial peer discovery | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name                          | Description                                                      | Required |
+| :---------------------------- | :--------------------------------------------------------------- | :------: |
+| `--[no-]daemon`               | start the process as a pm2 daemon                                |    :x:   |
+| `--disableDiscovery`          | permanently disable any peer discovery                           |    :x:   |
+| `--ignoreMinimumNetworkReach` | ignore the minimum network reach on start                        |    :x:   |
+| `--launchMode=launchMode`     | the mode the relay will be launched in (seed only at the moment) |    :x:   |
+| `--networkStart`              | indicate that this is the first start of seeds                   |    :x:   |
+| `--skipDiscovery`             | skip the initial peer discovery                                  |    :x:   |
+| `--network`                   | the name of the network that should be used                      |    :x:   |
+| `--token`                     | the name of the token that should be used                        |    :x:   |
 
 #### Examples
 
@@ -788,9 +790,9 @@ ark relay:status
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --token | the name of the token that should be used | :x: |
+| Name      | Description                               | Required |
+| :-------- | :---------------------------------------- | :------: |
+| `--token` | the name of the token that should be used |    :x:   |
 
 ### relay:stop
 
@@ -804,11 +806,11 @@ ark relay:stop
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --daemon | stop the process or pm2 daemon | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--daemon`  | stop the process or pm2 daemon              |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 #### Examples
 
@@ -854,14 +856,14 @@ ark snapshot:dump
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --start | [default: -1] start network height to export | :x: |
-| --end | [default: -1] end network height to export | :x: |
-| --skipCompression | skip gzip compression | :x: |
-| --codec | codec name | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name                | Description                                  | Required |
+| :------------------ | :------------------------------------------- | :------: |
+| `--start`           | [default: -1] start network height to export |    :x:   |
+| `--end`             | [default: -1] end network height to export   |    :x:   |
+| `--skipCompression` | skip gzip compression                        |    :x:   |
+| `--codec`           | codec name                                   |    :x:   |
+| `--network`         | the name of the network that should be used  |    :x:   |
+| `--token`           | the name of the token that should be used    |    :x:   |
 
 ### snapshot:restore
 
@@ -875,13 +877,13 @@ ark snapshot:restore
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --verify | signature verification | :x: |
-| --truncate | truncate database before rollback | :x: |
-| --blocks | blocks to append to, correlates to folder name | |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name         | Description                                    | Required |
+| :----------- | :--------------------------------------------- | :------: |
+| `--verify`   | signature verification                         |    :x:   |
+| `--truncate` | truncate database before rollback              |    :x:   |
+| `--blocks`   | blocks to append to, correlates to folder name |          |
+| `--network`  | the name of the network that should be used    |    :x:   |
+| `--token`    | the name of the token that should be used      |    :x:   |
 
 ### snapshot:rollback
 
@@ -899,12 +901,12 @@ ark snapshot:rollback
 Either `height` or `number` has to be provided.
 </x-alert>
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --height | block network height number to roll back to | :ballot_box_with_check: |
-| --number | number of blocks to roll back | :ballot_box_with_check: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 |         Required        |
+| :---------- | :------------------------------------------ | :---------------------: |
+| `--height`  | block network height number to roll back to | :ballot_box_with_check: |
+| `--number`  | number of blocks to roll back               | :ballot_box_with_check: |
+| `--network` | the name of the network that should be used |           :x:           |
+| `--token`   | the name of the token that should be used   |           :x:           |
 
 ### snapshot:truncate
 
@@ -916,10 +918,10 @@ Truncate the database
 ark snapshot:truncate
 ```
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 ### snapshot:verify
 
@@ -933,11 +935,11 @@ ark snapshot:verify
 
 #### Flags
 
-| Name | Description | Required |
-| :--- | :--- | :---: |
-| --blocks | snapshot folder name | :x: |
-| --network | the name of the network that should be used | :x: |
-| --token | the name of the token that should be used | :x: |
+| Name        | Description                                 | Required |
+| :---------- | :------------------------------------------ | :------: |
+| `--blocks`  | snapshot folder name                        |    :x:   |
+| `--network` | the name of the network that should be used |    :x:   |
+| `--token`   | the name of the token that should be used   |    :x:   |
 
 ### plugin:install
 
