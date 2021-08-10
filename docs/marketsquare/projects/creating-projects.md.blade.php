@@ -20,6 +20,10 @@ You'll then be presented with the Project Verification page. Fill out the form i
 
 ![](/storage/docs/docs/marketsquare/assets/projects/projects-verification.png)
 
+<x-alert type="warning">
+Please refrain from registering a project on MarketSquare if you are not its owner or authorized representative. If you would like to see your favorite project on MSQ, direct them to the submission form above or have them contact [ray@ark.io](mailto:ray@ark.io).
+</x-alert>
+
 ## Getting Started
 
 Once you've been verified, you are ready to add your project! Click the '**Add Project**’ button at the top of the MarketSquare Homepage.
