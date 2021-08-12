@@ -302,7 +302,7 @@ Method by which bad actors can harm or otherwise adversely affect a Blockchain n
 
 ### Bad Actor
 
-Party that wishes to manipulate, attack, or otherwise harm a Blockchain network.
+Party that wishes to manipulate, attack, or otherwise harm a Blockchain network. [Watch Video](https://youtu.be/tPiHHykOpKg)
 
 **More:** [Blockchain](#blockchain), [Network](#network)
 
@@ -562,7 +562,7 @@ See [Decentralized Autonomous Organization](#decentralized-autonomous-organizati
 
 ### Database
 
-Component of ARK Core that stores and serves transaction data within a node.
+Component of ARK Core that stores and serves transaction data within a node. [Watch Video](https://youtu.be/m31TqHYeMeM)
 
 **More:** [Transaction](#transaction), [ARK Core](#ark-core), [Node](#node)
 
@@ -576,7 +576,7 @@ See [Decentralization](#decentralization)
 
 ### Decentralized Autonomous Organization
 
-A collective of people and/or entities that operate as a single organization, but with no central authority behind it. Usually enabled by a protocol and/or cryptocurrency for governance.
+A collective of people and/or entities that operate as a single organization, but with no central authority behind it. Usually enabled by a protocol and/or cryptocurrency for governance. [Watch Video](https://youtu.be/D6MnWttOBGA)
 
 **More:** [Cryptocurrency](#cryptocurrency), [Protocol](#protocol)
 
@@ -606,7 +606,7 @@ A reduction in circulating supply of a cryptoasset, either by burning or having 
 
 ### Deflationary Token
 
-A token with a fixed total supply, where the supply can only go down due to burning or having coins or tokens lost forever.
+A token with a fixed total supply, where the supply can only go down due to burning or having coins or tokens lost forever. [Watch Video](https://youtu.be/rrJX5ifXo1o)
 
 **More:** [Total Supply](#total-supply), [Token](#token), [Burn](#burn), [Coin](#coin)
 
@@ -902,7 +902,7 @@ Rate of increase (expressed as a percentage of total supply) of a cryptoasset. [
 
 ### Initial Supply
 
-Quantity of a cryptoasset that exists as of the Genesis Block.
+Quantity of a cryptoasset that exists as of the Genesis Block. [Watch Video](https://youtu.be/OaFdQE0dzr4)
 
 **More:** [Genesis Block](#genesis-block), [Cryptoasset](#cryptoasset)
 
@@ -1044,7 +1044,7 @@ Theoretical limit for the total supply of a specific cryptoasset.
 
 ### Mempool
 
-Staging area for unconfirmed transactions in the node software.
+Staging area for unconfirmed transactions in the node software. [Watch Video](https://youtu.be/ajfkblgjy1E)
 
 **More:** [Transaction](#transaction), [Node](#node)
 
@@ -1126,7 +1126,7 @@ See [Non-Fungible Token](#non-fungible-token)
 
 ### Node
 
-A software instance on a Blockchain network responsible for participating in consensus, maintaining the ledger, servicing or relaying transactions, or all of the above.
+A software instance on a Blockchain network responsible for participating in consensus, maintaining the ledger, servicing or relaying transactions, or all of the above. [Watch Video](https://youtu.be/DFrqhwlNQtM)
 
 **More:** [Transaction](#transaction), [Blockchain](#blockchain), [Consensus](#consensus), [Network](#network), [Ledger](#ledger)
 
@@ -1224,7 +1224,7 @@ A server-node participating in a peer-to-peer network.
 
 ### Peer-to-Peer
 
-Protocol that uses replicable nodes with verifiable data rather than centralized servers and data centers.
+Protocol that uses replicable nodes with verifiable data rather than centralized servers and data centers. [Watch Video](https://youtu.be/lkD-fkS3BTs)
 
 **More:** [Centralized](#centralized), [Protocol](#protocol), [Node](#node)
 
