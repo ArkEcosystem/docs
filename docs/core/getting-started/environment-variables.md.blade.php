@@ -142,6 +142,10 @@ This variable determines the port at which the HTTPS Manager API will be listeni
 
 This variable exposes the name of the network that has been configured.
 
+## CORE_NPM_REGISTRY
+
+This variable determines which NPM registry url should be used.
+
 ## CORE_P2P_HOST
 
 This variable determines the host at which the P2P API will be listening for traffic.
