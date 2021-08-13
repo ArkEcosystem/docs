@@ -12,17 +12,23 @@ The first step to make your plugin available to the world after completing devel
 
 ## Integration
 
-Once your plugin is published it will be available to everyone via `yarn global add`. Let's use the official, but optional, package `@arkecosystem/core-vote-report` as an example of how to install and configure a plugin.
+Once your plugin is published it will be available to everyone via `ark plugin:install`. Let's use the official, but optional, package `@arkecosystem/core-vote-report` as an example of how to install and configure a plugin.
 
 ### Installation
 
-First we will need to install the package using `yarn global add`. Since Release `2.2.0` Core is a global package that exposes a CLI, this is why we need to use `yarn global add` instead of `yarn add`, which is meant to be used during development.
+First we will need to install the package using `yarn plugin:install`.
 
-```bash
-yarn global add @arkecosystem/core-vote-report
+From NPM:
+```shell
+ark plugin:install @arkecosystem/core-vote-report --network={NETWORK}
 ```
 
-Give it a second to download and install the plugin, once finished you can continue to the registration and configuration.
+From repository:
+```shell
+ark plugin:install git@github.com:ArkEcosystem/core-vote-report.git --network={NETWORK}
+```
+
+Give it a minute to download and install the plugin with corresponding dependencies, once finished you can continue configuration.
 
 ### Configuration
 
