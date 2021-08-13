@@ -96,7 +96,7 @@ title: Introduction
     :children="[
         ['path' => '/docs/core/development-guides/command-line-interface/getting-started', 'name' => 'Getting Started'],
         ['path' => '/docs/core/development-guides/command-line-interface/core-cli-commands', 'name' => 'Core CLI Commands'],
-        ['path' => '/docs/core/development-guides/command-line-interface/development-commands', 'name' => 'Development Commands'],
+        ['path' => '/docs/core/development-guides/command-line-interface/developing-commands', 'name' => 'Developing Commands'],
     ]"
 />
 <x-general.sidebar-link

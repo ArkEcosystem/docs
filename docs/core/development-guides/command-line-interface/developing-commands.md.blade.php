@@ -1,5 +1,5 @@
 ---
-title: CLI Guide - Development Commands
+title: CLI Guide - Developing Commands
 ---
 
 # Developing Commands
