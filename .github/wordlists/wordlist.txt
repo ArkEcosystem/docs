@@ -502,6 +502,7 @@ validator
 validators
 vec
 venv
+Verdaccio
 Verifier
 virtualized
 vishing
