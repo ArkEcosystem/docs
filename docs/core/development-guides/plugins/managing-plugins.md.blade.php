@@ -18,12 +18,14 @@ Once your plugin is published it will be available to everyone via `ark plugin:i
 
 First we will need to install the package using `yarn plugin:install`.
 
-From NPM:
+**From NPM**:
+
 ```shell
 ark plugin:install @arkecosystem/core-vote-report --network={NETWORK}
 ```
 
-From repository:
+**From repository**:
+
 ```shell
 ark plugin:install git@github.com:ArkEcosystem/core-vote-report.git --network={NETWORK}
 ```
