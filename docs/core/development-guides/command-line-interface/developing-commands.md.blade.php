@@ -1,5 +1,5 @@
 ---
-title: CLI Guide - Development Commands
+title: CLI Guide - Developing Commands
 ---
 
 # Developing Commands
@@ -96,4 +96,38 @@ Now that your command is ready you need to publish it on [npm](http://npmjs.org/
 
 ### Installing from NPM
 
-// TODO
+You can install plugin via CLI command. Replace @vendor/package with your package name and --network with desired network configuration.
+
+```shell
+ark plugin:install @vendor/package --network=testnet
+```
+
+<x-alert type="info">
+Private NPM repository location like (Verdaccio)[https://verdaccio.org/] can be used and set via CORE_NPM_REGISTRY env variable.
+</x-alert>
+
+Plugins are installed on default `data` location inside `/plugins` folder. You can check default location with:
+
+```shell
+ark env:variables
+```
+
+Check if installed plugin is successfully recognized and loaded.
+
+```shell
+ark help --network=testnet
+```
+
+<x-alert type="info">
+To successfully load CLI plugin you need to provide --network flag, since plugins are installed for each network (testnet, devnet, mainnet) separately.
+
+Optionally you can also define custom data path using CORE_PATH_DATA env variable.
+</x-alert>
+
+### Run installed plugin
+
+After successful plugin installation it is time to run plugin.
+
+```shell
+ark relay:share --network=testnet
+```
