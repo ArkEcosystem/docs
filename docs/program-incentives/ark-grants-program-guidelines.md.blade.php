@@ -74,7 +74,7 @@ Once the project review is completed, we will notify you with an official decisi
 
 Thank you for your interest in the ARK Grants program and we look forward to reading your proposals!
 
- **Please submit the completed application to [Grants@ARK.io](mailto:Grants@ARK.io) with the title "_ARK Grants Application_".**
+ **Please submit the completed application to [grants@ark.io](mailto:grants@ark.io) with the title "_ARK Grants Application_".**
 
 ## ARK Grants Application Template
 
@@ -116,4 +116,4 @@ For your final two milestones, please include one milestone for ‘Documentation
 
 Please provide any closing remarks and/or considerations for your project. This is an opportunity to give any additional details that may be relevant to the approval of your project and to sell us on why we should approve your application.
 
-**Please submit the completed application to [Grants@ARK.io](mailto:Grants@ARK.io) with the title "_ARK Grants Application_".**
+**Please submit the completed application to [grants@ark.io](mailto:grants@ark.io) with the title "_ARK Grants Application_".**
