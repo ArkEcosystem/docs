@@ -40,7 +40,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/marketsquare/profiles/updating-profile', 'name' => 'Updating My Profile'],
+        ['path' => '/docs/marketsquare/profiles/updating-profile', 'name' => 'Updating a Profile'],
         ['path' => '/docs/marketsquare/profiles/settings', 'name' => 'Settings & Security'],
         ['path' => '/docs/marketsquare/profiles/reporting-profiles', 'name' => 'Reporting Profiles'],
     ]"

@@ -1,8 +1,8 @@
 ---
-title: Updating My Profile
+title: Updating a Profile
 ---
 
-# Updating My Profile on MarketSquare
+# Updating a Profile
 
 Want to add or change your personal Avatar? Create a fresh Bio or add website links? No worries, updating your Profile is a snap. In these next sections, we'll take a look at the ways you can customize your MarketSquare Profile.
 
@@ -33,6 +33,14 @@ Here, we have the option to update the Display Name, Website URL, or upload an A
 <x-alert type="info">
 For more information about supported Images, please visit: **[Supported Assets: Images](/docs/marketsquare/support/supported-assets#images)**
 </x-alert>
+
+---
+
+Crop your avatar image by dragging and zooming in/out.
+
+When your avatar is just how you'd like it, click the **'Save'** button.
+
+![](/storage/docs/docs/marketsquare/assets/profiles/profiles-settings-user-avatar-crop.png)
 
 ---
 
