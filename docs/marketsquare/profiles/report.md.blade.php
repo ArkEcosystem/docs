@@ -1,8 +1,8 @@
 ---
-title: Reporting Profiles
+title: Reporting a Profile
 ---
 
-# Reporting Profiles on MarketSquare
+# Reporting a Profile
 
 Reporting a Profile on MarketSquare that is in violation of the Terms of Service helps our moderation team and ensures a positive experience for all users.
 

@@ -10,7 +10,7 @@ title: What's Next?
 
 ---
 
-After [creating an Account](/docs/marketsquare/getting-started/account-sign-up) on MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/updating-profile), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
+After [creating an Account](/docs/marketsquare/getting-started/account-sign-up) on MarketSquare, you can [customize your profile](/docs/marketsquare/profiles/update), explore the growing list of Projects & Hubs, keep up with the latest news and announcements, [add your own Projects](/docs/marketsquare/projects/creating-projects), and interact with others in the blockchain community! Make sure to update [your settings](/docs/marketsquare/profiles/settings) to secure your account too!
 
 <!-- markdownlint-disable MD026 -->
 ## Customize Your Profile!
