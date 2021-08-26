@@ -16,7 +16,7 @@ After [creating an Account](/docs/marketsquare/getting-started/account-sign-up) 
 ## Customize Your Profile!
 <!-- markdownlint-enable MD026 -->
 
-[Customizing your Profile](/docs/marketsquare/profiles/updating-profile) on MarketSquare is easy. Change your username, upload a personal avatar, and share more about yourself with a personal bio or website, social media and repository links.
+[Customizing your Profile](/docs/marketsquare/profiles/update) on MarketSquare is easy. Change your username, upload a personal avatar, and share more about yourself with a personal bio or website, social media and repository links.
 
 ![](/storage/docs/docs/marketsquare/assets/profiles/profiles-overview.png)
 
