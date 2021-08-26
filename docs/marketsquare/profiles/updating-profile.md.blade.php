@@ -28,7 +28,7 @@ Here, we have the option to update the Display Name, Website URL, or upload an A
 - Website URL: *linking to your professional site (**must begin with `http://` or `https://`**)
 - Avatar Upload: 🙌 *the face of your MarketSquare profile!* 🙌
 
-![](/storage/docs/docs/marketsquare/assets/profiles/profiles-settings-user-avatar.png)
+![](/storage/docs/docs/marketsquare/assets/profiles/profiles-settings-user-avatar-focus.png)
 
 <x-alert type="info">
 For more information about supported Images, please visit: **[Supported Assets: Images](/docs/marketsquare/support/supported-assets#images)**
