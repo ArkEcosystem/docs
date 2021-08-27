@@ -17,8 +17,15 @@
 ## Profiles
 
 <x-general.sidebar-link path="/docs/marketsquare/profiles/updating-profile" name="Updating My Profile" />
-<x-general.sidebar-link path="/docs/marketsquare/profiles/settings" name="Settings & Security" />
 <x-general.sidebar-link path="/docs/marketsquare/profiles/reporting-profiles" name="Reporting Profiles" />
+<x-general.sidebar-link
+    path="/docs/marketsquare/profiles/settings"
+    name="Settings"
+    :children="[
+        ['path' => '/docs/marketsquare/profiles/settings/profile', 'name' => 'Profile'],
+        ['path' => '/docs/marketsquare/profiles/settings/security', 'name' => 'Security'],
+    ]"
+/>
 
 ## Projects
 
