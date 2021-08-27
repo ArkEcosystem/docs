@@ -12,9 +12,7 @@ title: Welcome to MarketSquare
 
 Learn how to use MarketSquare with helpful guides and step-by-step tutorials. MarketSquare makes it easy to discover, use, and collaborate on Blockchain-powered projects as well as forge new relationships with others in the Blockchain technology space. As the new homepage of the decentralized Web, MarketSquare can be the go-to destination for exploring the world of Blockchain technology.
 
----
-
-### Overview
+## Overview
 
 <x-link-collection
     :links="[
@@ -23,9 +21,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     ]"
 />
 
----
-
-### Getting Started
+## Getting Started
 
 <x-link-collection
     :links="[
@@ -34,21 +30,25 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     ]"
 />
 
----
-
-### Profiles
+## Profiles
 
 <x-link-collection
     :links="[
         ['path' => '/docs/marketsquare/profiles/update', 'name' => 'Updating a Profile'],
-        ['path' => '/docs/marketsquare/profiles/settings', 'name' => 'Settings & Security'],
         ['path' => '/docs/marketsquare/profiles/report', 'name' => 'Reporting a Profile'],
     ]"
 />
 
----
+### Settings
 
-### Projects
+<x-link-collection
+    :links="[
+        ['path' => '/docs/marketsquare/profiles/settings/profile', 'name' => 'Profile Settings'],
+        ['path' => '/docs/marketsquare/profiles/settings/security', 'name' => 'Security Settings'],
+    ]"
+/>
+
+## Projects
 
 <x-link-collection
     :links="[
@@ -59,9 +59,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     ]"
 />
 
----
-
-### Teams
+## Teams
 
 <x-link-collection
     :links="[
@@ -70,9 +68,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     ]"
 />
 
----
-
-### Reviews
+## Reviews
 
 <x-link-collection
     :links="[
@@ -83,9 +79,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     ]"
 />
 
----
-
-### Notifications
+## Notifications
 
 <x-link-collection
     :links="[
@@ -94,9 +88,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
     ]"
 />
 
----
-
-### Support
+## Support
 
 <x-link-collection
     :links="[
