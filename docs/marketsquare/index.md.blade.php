@@ -30,6 +30,7 @@
 ## Projects
 
 <x-general.sidebar-link path="/docs/marketsquare/projects/creating-projects" name="Project Creation" />
+<x-general.sidebar-link path="/docs/marketsquare/projects/claim" name="Claiming a Project" />
 <x-general.sidebar-link path="/docs/marketsquare/projects/updating-projects" name="Updating Projects" />
 <x-general.sidebar-link path="/docs/marketsquare/projects/removing-projects" name="Removing a Project" />
 <x-general.sidebar-link path="/docs/marketsquare/projects/reporting-projects" name="Reporting Projects" />
