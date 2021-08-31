@@ -16,8 +16,8 @@
 
 ## Profiles
 
-<x-general.sidebar-link path="/docs/marketsquare/profiles/updating-profile" name="Updating My Profile" />
-<x-general.sidebar-link path="/docs/marketsquare/profiles/reporting-profiles" name="Reporting Profiles" />
+<x-general.sidebar-link path="/docs/marketsquare/profiles/update" name="Updating a Profile" />
+<x-general.sidebar-link path="/docs/marketsquare/profiles/report" name="Reporting a Profile" />
 <x-general.sidebar-link
     path="/docs/marketsquare/profiles/settings"
     name="Settings"
