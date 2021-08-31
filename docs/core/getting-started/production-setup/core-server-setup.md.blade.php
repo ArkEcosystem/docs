@@ -286,6 +286,10 @@ Chose the preferred method using the `up` and `down` arrow keys, confirm it with
 * _**Encrypted BIP38**_ will encrypt your BIP39 passphrase with your custom password and save the encrypted passphrase. In order to decrypt it you will need to provide your set password so back it up as well. Once you set this up you will need to confirm with the "y" and "enter" keys.
 * _**Plain BIP39**_ will save your 12 word passphrase in plain format. Once you set this up you will need to confirm with the "y" and "enter" keys.
 
+<x-alert type="danger">
+Do **NOT** share login details with unauthorized individuals. BIP38 encryption offers additional protections but does **not** prevent malicious extraction of a BIP39 mnemonic by those with access to your server.
+</x-alert>
+
 An example of setting up **Encrypted BIP38** passphrase:
 
 ```bash
