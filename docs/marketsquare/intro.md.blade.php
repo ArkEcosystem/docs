@@ -53,6 +53,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 <x-link-collection
     :links="[
         ['path' => '/docs/marketsquare/projects/creating-projects', 'name' => 'Project Creation'],
+        ['path' => '/docs/marketsquare/projects/claim', 'name' => 'Claiming a Project'],
         ['path' => '/docs/marketsquare/projects/updating-projects', 'name' => 'Updating Projects'],
         ['path' => '/docs/marketsquare/projects/removing-projects', 'name' => 'Removing a Project'],
         ['path' => '/docs/marketsquare/projects/reporting-projects', 'name' => 'Reporting Projects'],
