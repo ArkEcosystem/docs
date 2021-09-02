@@ -109,7 +109,7 @@ log.download
 | params | object | The parameters of the request. | Yes |
 | params.dateFrom | number | Date from as unix timestamp (s). | Yes |
 | params.dateTo | number | Date to as unix timestamp (s). | Yes |
-| params.levels | string[] | Log levels. | Yes |
+| params.levels | string[] | Log levels. | No |
 | params.processes | string[] | Process names. | No |
 
 ### Result
