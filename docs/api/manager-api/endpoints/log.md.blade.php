@@ -22,8 +22,8 @@ log.search
 | params | object | The parameters of the request. | Yes |
 | params.dateFrom | number | Date from as unix timestamp (s). | No |
 | params.dateTo | number | Date to as unix timestamp (s). | No |
-| params.process | string | Process name. | No |
-| params.level | string | Log level. | No |
+| params.levels | string[] | Log levels. | No |
+| params.processes | string[] | Process names. | No |
 | params.searchTerm | string | Search term. | No |
 | params.limit | string | Max number of results. | No |
 | params.offset | string | Offset results. | No |
@@ -52,8 +52,8 @@ log.search
     "params": {
         "dateFrom": 1605657600,
         "dateTo": 1705657600,
-        "level": "info",
-        "process": "core",
+        "levels": ["info"],
+        "processes": ["core"],
         "searchTerm": "search term",
         "limit": 10,
         "offset": 0,
@@ -109,7 +109,7 @@ log.download
 | params | object | The parameters of the request. | Yes |
 | params.dateFrom | number | Date from as unix timestamp (s). | Yes |
 | params.dateTo | number | Date to as unix timestamp (s). | Yes |
-| params.levels | string[] | Log levels. | Yes |
+| params.levels | string[] | Log levels. | No |
 | params.processes | string[] | Process names. | No |
 
 ### Result
