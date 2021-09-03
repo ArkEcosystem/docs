@@ -168,6 +168,7 @@ FlexToshi
 FluiDB
 fmt
 fn
+focusable
 fpm
 FQCN
 fsSL
@@ -213,6 +214,7 @@ iframe
 iframes
 igo
 im
+img
 incentivize
 incentivizes
 ini
@@ -360,6 +362,7 @@ pre
 printf
 println
 PrintMotd
+programmatically
 proj
 projectconf
 proto
@@ -450,6 +453,7 @@ SVGO
 Symfony
 sys
 systemctl
+tabindex
 TBD
 tcp
 texplorer
