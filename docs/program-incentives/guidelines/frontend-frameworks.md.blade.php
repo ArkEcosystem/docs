@@ -89,3 +89,21 @@ We make use of [Alpine.js](https://github.com/alpinejs/alpine) in addition to Li
 ## React
 
 {{-- **TBD** --}}
+
+## Accessibility & Semantic HTML
+
+- Always add `alt` attribute to `<img>` tag.
+If the image doesn't add any useful information to blind users, you can just leave it empty `alt=""` so it won't be announced by screen-readers.
+- If an element needs to dispatch a `click` event, chances are that you need a `<button>`. _Buttons are accessible by default._
+If employed outside of a form remember to always add `type="button"` attribute (e.g. `<button type="button" @click="callToAction()">`), by default it's set to `submit`.
+In particular situations (for example in a nested component) you can make a `<div>` act like a button using `<div role="button" wire:click="callToAction()">` (use `role` wisely).
+- In particular situations (like custom components with modals) `tabindex` can be helpful to instruct browses to interact with the element or to skip it completely. If or when the component has a toggle functionality, you can programmatically change its value.
+The element will not be focusable if `tabindex="-1"`.
+The element will be focusable if `tabindex="0"`.
+`<x-modal tabindex="{ $show ? 0 : -1 }">...</x-modal>`
+Again, use this wisely and only when the component is receiving the focus even when it's not visible on the DOM.
+
+## Focus State
+
+- Use `focus-visible` when possible. Another solution can be using `focus-within` on parent element. This can be handy when you have e.g. `div > label > input` and you want to focus the wrapper element, in this case `<div class="focus-within:..."><label><input></label></div>`.
+- In certain situations (like dropdown) it can be helpful to use `focus-visible:ring-inset`.
