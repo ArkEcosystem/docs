@@ -92,18 +92,14 @@ We make use of [Alpine.js](https://github.com/alpinejs/alpine) in addition to Li
 
 ## Accessibility & Semantic HTML
 
-- Always add the `alt` attribute to an `<img>` tag.
-If the image _doesn't_ add any useful information to blind users, you can just leave it empty (`alt=""`) so it won't be announced by screen-readers.
-- If an element needs to dispatch a `click` event, chances are that you need a `<button>`. _Buttons are accessible by default._
-If employed outside of a form, remember to always add the `type="button"` attribute (e.g. `<button type="button" @click="callToAction()">`), by default it's set to `submit`.
-In particular situations (for example in a nested component) you can make a `<div>` act like a button using `<div role="button" wire:click="callToAction()">` (use `role` wisely).
-- In particular situations (like custom components with modals) `tabindex` can be helpful to instruct browsers to interact with the element or to skip it completely. If or when the component has a toggle functionality, you can programmatically change its value.
-The element will _not_ be focusable if `tabindex="-1"`.
-The element _will_ be focusable if `tabindex="0"`.
-`<x-modal tabindex="{ $show ? 0 : -1 }">...</x-modal>`
-Again, use this wisely and only when the component is receiving the focus, even when it's not visible on the DOM.
+Always add the `alt` attribute to an `img` tag. If the image _doesn't_ add any useful information to blind users, you can just leave it empty (`alt=""`) so it won't be announced by screen-readers.
+
+If an element needs to dispatch a `click` event, chances are that you need a `button`. _Buttons are accessible by default._ If employed outside of a form, remember to always add the `type="button"` attribute (e.g. `&lt;button type="button" @click="callToAction()"&gt;`), by default it's set to `submit`. In particular situations (for example in a nested component) you can make a `div` act like a button using `&lt;div role="button" wire:click="callToAction()"&gt;` (use `role` wisely).
+
+In particular situations (like custom components with modals) `tabindex` can be helpful to instruct browsers to interact with the element or to skip it completely. If or when the component has a toggle functionality, you can programmatically change its value. The element will _not_ be focusable if `tabindex="-1"`. The element _will_ be focusable if `tabindex="0"`. `&lt;x-modal tabindex="{ $show ? 0 : -1 }"&gt;...&lt;/x-modal&gt;`. Again, use this wisely and only when the component is receiving the focus, even when it's not visible on the DOM.
 
 ## Focus State
 
-- Use `focus-visible` when possible. Another solution can be using `focus-within` on the parent element. This can be handy when you have, for example, `div > label > input` and you want to focus the wrapper element. In this case, `<div class="focus-within:..."><label><input></label></div>`.
-- In certain situations (like dropdowns) it can be helpful to use `focus-visible:ring-inset`.
+Use `focus-visible` when possible. Another solution can be using `focus-within` on the parent element. This can be handy when you have, for example, `div > label > input` and you want to focus the wrapper element. In this case, `&lt;div class="focus-within:..."&gt;&lt;label&gt;&lt;input&gt;&lt;/label&gt;&lt;/div&gt;`.
+
+In certain situations (like dropdowns) it can be helpful to use `focus-visible:ring-inset`.
