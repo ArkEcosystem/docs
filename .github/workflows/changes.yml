@@ -1,0 +1,76 @@
+name: File Changes
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Test changed-files
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v1.1.2
+        with:
+          files: |
+            *.md.blade.php
+
+      - name: List all added files
+        run: |
+          for file in "${{ steps.changed-files.outputs.added_files }}"; do
+            echo "$file was added"
+          done
+
+      - name: List all renamed files
+        run: |
+          for file in "${{ steps.changed-files.outputs.renamed_files }}"; do
+            echo "$file was renamed"
+          done
+
+      - name: List all deleted files
+        run: |
+          for file in "${{ steps.changed-files.outputs.deleted_files }}"; do
+            echo "$file was deleted"
+          done
+
+      - name: Added Files
+        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ steps.changed-files.outputs.added_files }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Added Files**
+            ```
+            ${{ steps.changed-files.outputs.added_files }}
+            ```
+
+      - name: Renamed Files
+        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ steps.changed-files.outputs.renamed_files }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Renamed Files**
+            ```
+            ${{ steps.changed-files.outputs.renamed_files }}
+            ```
+
+      - name: Deleted Files
+        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ steps.changed-files.outputs.deleted_files }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Deleted Files**
+            ```
+            ${{ steps.changed-files.outputs.deleted_files }}
+            ```
