@@ -3,10 +3,10 @@ name: File Changes
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -24,6 +24,12 @@ jobs:
           files: |
             *.md.blade.php
 
+      - name: List all added files
+        run: |
+          for file in "${{ steps.changed-files.outputs.added_files }}"; do
+            echo "$file was added"
+          done
+
       - name: List all renamed files
         run: |
           for file in "${{ steps.changed-files.outputs.renamed_files }}"; do
@@ -35,3 +41,36 @@ jobs:
           for file in "${{ steps.changed-files.outputs.deleted_files }}"; do
             echo "$file was deleted"
           done
+
+      - name: Added Files
+        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ steps.changed-files.outputs.added_files }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Added Files**
+            ```
+            ${{ steps.changed-files.outputs.added_files }}
+            ```
+
+      - name: Renamed Files
+        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ steps.changed-files.outputs.renamed_files }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Renamed Files**
+            ```
+            ${{ steps.changed-files.outputs.renamed_files }}
+            ```
+
+      - name: Deleted Files
+        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ steps.changed-files.outputs.deleted_files }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Deleted Files**
+            ```
+            ${{ steps.changed-files.outputs.deleted_files }}
+            ```
