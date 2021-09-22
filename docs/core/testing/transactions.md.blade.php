@@ -13,7 +13,7 @@ Transactions are an integral component of the ARK Core Framework and requires th
 
 ## Prerequisites
 
-Before testing transactions, you will be required to download a Core 3.0 compatible Desktop Wallet which can be found [here](/docs/core/testing/introduction#desktop-wallet)
+Before testing transactions, you will be required to download a Core 3.0 compatible Desktop Wallet which can be found [here](/docs/core/testing/intro#desktop-wallet)
 
 Guides for sending all transactions within the Desktop Wallet can be found [here](/docs/desktop-wallet/intro#transactions)
 <x-alert type="info">

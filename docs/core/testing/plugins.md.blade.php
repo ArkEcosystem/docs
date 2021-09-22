@@ -12,10 +12,10 @@ Before developing a plugin you should make sure that you have read the following
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/overview/architecture/application-lifecycle', 'name' => 'Application Lifecycle'],
-        ['path' => '/docs/core/overview/architecture/service-container', 'name' => 'Service Container'],
-        ['path' => '/docs/core/overview/architecture/service-provider', 'name' => 'Service Provider'],
-        ['path' => '/docs/core/overview/architecture/managers-and-drivers', 'name' => 'Managers and Drivers'],
+        ['path' => '/docs/core/overview/architecture/lifecycle', 'name' => 'Application Lifecycle'],
+        ['path' => '/docs/core/overview/architecture/container', 'name' => 'Service Container'],
+        ['path' => '/docs/core/overview/architecture/provider', 'name' => 'Service Provider'],
+        ['path' => '/docs/core/overview/architecture/managers-drivers', 'name' => 'Managers and Drivers'],
         ['path' => '/docs/core/overview/architecture/contracts', 'name' => 'Contracts'],
     ]"
 />

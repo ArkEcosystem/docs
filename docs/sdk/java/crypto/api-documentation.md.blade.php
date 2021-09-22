@@ -513,7 +513,7 @@ Sets the typeGroup of transaction.
 public TBuilder nonce(long nonce)
 ```
 
-Sets the nonce of transaction. To see how sequential nonces work, check this guide [Understanding Transaction Nonce](/docs/core/transactions/understanding-the-nonce).
+Sets the nonce of transaction. To see how sequential nonces work, check this guide [Understanding Transaction Nonce](/docs/core/transactions/nonce).
 
 #### Parameters
 
