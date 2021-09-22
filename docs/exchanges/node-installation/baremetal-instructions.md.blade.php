@@ -89,7 +89,7 @@ Starting ark-relay... done
 ```
 
 <x-alert type="info">
-All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/development-guides/command-line-interface/getting-started) documentation or by executing the `ark help`command.
+All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/deployment/cli) documentation or by executing the `ark help`command.
 </x-alert>
 
 ### 8. Checking to See if Everything Is Working

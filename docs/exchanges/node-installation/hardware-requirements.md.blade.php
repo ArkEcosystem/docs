@@ -35,8 +35,8 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
 * Stable internet connection
 * Access to multiple open ports (actual ports may be configured)
 
-  | Service | Port | Required | Enabled by default | Documentation |
-  | :--- | :---: | :---: | :---: | :---: |
-  | p2p | 4001 | ✅ | ✅ | [reference](https://ark.dev/docs/core/getting-started/environment-variables#corep2pport) |
-  | public API | 4003 | ❌ | ✅ | [reference](https://ark.dev/docs/exchanges/public-api-guide) |
-  | webhook | 4004 | ❌ | ❌ | [reference](https://ark.dev/docs/api/webhook-api/getting-started)
+| Service    | Port | Required | Enabled by default |                           Documentation                           |
+| :--------- | :--: | :------: | :----------------: | :---------------------------------------------------------------: |
+| p2p        | 4001 |     ✅    |          ✅         |     [reference](/docs/core/installation/variables#corep2pport)    |
+| public API | 4003 |     ❌    |          ✅         |    [reference](https://ark.dev/docs/exchanges/public-api-guide)   |
+| webhook    | 4004 |     ❌    |          ❌         | [reference](https://ark.dev/docs/api/webhook-api/getting-started) |
