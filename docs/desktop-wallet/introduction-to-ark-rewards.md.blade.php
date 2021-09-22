@@ -64,11 +64,11 @@ You can also view current APN delegates with the official [Delegate Monitor](htt
 
 ## Becoming a Delegate
 
-Some ARK holders want to be more directly involved and participate in the network themselves, rather than delegate their influence to a third party. We highly encourage anyone who is interested in becoming a delegate to read our full guides on [How to Register or Resign a Delegate](https://ark.dev/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate) and [Installing a Core Node](https://ark.dev/docs/core/getting-started/installation) to get started.
+Some ARK holders want to be more directly involved and participate in the network themselves, rather than delegate their influence to a third party. We highly encourage anyone who is interested in becoming a delegate to read our full guides on [How to Register or Resign a Delegate](https://ark.dev/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate) and [Installing a Core Node](/docs/core/installation/intro) to get started.
 
 <livewire:page-reference path="/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate" />
 
-<livewire:page-reference path="/docs/core/getting-started/installation" />
+<livewire:page-reference path="/docs/core/installation/intro" />
 
 You can also join us on [Discord](https://discord.ark.io) to ask questions and find out more from our large community of contributors and active delegates.
 

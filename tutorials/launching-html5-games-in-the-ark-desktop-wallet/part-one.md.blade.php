@@ -81,4 +81,4 @@ We can now test our creation by clicking the triangle in the menu bar. Try enter
 
 That’s it for part 1 of this tutorial series. In our next session, we’ll explore Construct a little more and learn how to connect to a peer to obtain its network version and use that rather than hard-coding the value so our game can be compatible with all bridgechains, and we’ll start our Core plugin for the main game logic.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!

@@ -18,3 +18,13 @@ Use the sidebar to navigate this section, or follow the links below:
 <livewire:page-reference path="/docs/exchanges/json-rpc/examples" />
 <livewire:page-reference path="/docs/exchanges/json-rpc/endpoints/intro" />
 <livewire:page-reference path="/docs/exchanges/public-api-guide" />
+
+## Upgrade Guides
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/exchanges/upgrade/baremetal', 'name' => 'Upgrade to 3.0 - BareMetal or VM Install'],
+        ['path' => '/docs/exchanges/upgrade/docker', 'name' => 'Upgrade to 3.0 - Docker Install'],
+        ['path' => '/docs/exchanges/upgrade/json-rpc', 'name' => 'Upgrade to 3.0 - JSON-RPC Install'],
+    ]"
+/>

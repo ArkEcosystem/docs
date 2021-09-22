@@ -77,7 +77,7 @@ In case you haven’t heard, the ARK Messenger PoC was fully funded by the [ARK 
 
 > **Learn about the ARK Grants guidelines and application process at [http://ark.io/grants](http://ark.io/grants)**.
 
-Thank you for joining us in this series! If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+Thank you for joining us in this series! If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 
 ## ARK Messenger Tutorial Series
 

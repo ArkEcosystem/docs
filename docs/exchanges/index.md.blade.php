@@ -28,3 +28,15 @@
 
 <x-general.sidebar-link path="/docs/exchanges/public-api-guide" name="Exchanges API Guide" />
 <x-general.sidebar-link path="/docs/exchanges/configuring-rate-limits" name="Configuring Rate Limits" />
+
+## Upgrade Guides
+
+<x-general.sidebar-link
+    path="/docs/exchanges/upgrade"
+    name="3.0"
+    :children="[
+        ['path' => '/docs/exchanges/upgrade/baremetal', 'name' => 'Upgrade to 3.0 - BareMetal or VM Install'],
+        ['path' => '/docs/exchanges/upgrade/docker', 'name' => 'Upgrade to 3.0 - Docker Install'],
+        ['path' => '/docs/exchanges/upgrade/json-rpc', 'name' => 'Upgrade to 3.0 - JSON-RPC Install'],
+    ]"
+/>

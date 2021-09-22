@@ -10,12 +10,12 @@ Welcome to the second tutorial in our series of launching an HTML5 game in the A
 
 We left off **[last time](/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one)** with a self-contained [Construct 3](https://editor.construct.net/) app that lets us make sure a supplied address is valid on the ARK Public Network. Now it’s time to evolve this to work with any ARK-powered network of our choice and start building the back-end of our game.
 
-For the rest of this tutorial series, we’re going to focus on building the back-end of our game and using Connect 4, a turn-based blockchain game as our ongoing example and template. We will let a player host a game by deciding their wager, and once a challenger matches it, the game will begin. We’ll use a standard 7 x 6 board and each player will take their turn to pick a column and insert their disc from 1 to 7. If a player lines up 4 discs either vertically, horizontally or diagonally, they’ll win the prize; if the game ends in a tie, both players receive their entry fee back. For simplicity, we will utilize ARK’s Smartbridge field to pick our chosen column on the board from 1 to 7. If you would like to take a more advanced approach, you can consider making [custom transactions with GTI](/docs/core/development-guides/custom-transactions/authoring-transaction-types) on your own bridgechain to make this game truly decentralized.
+For the rest of this tutorial series, we’re going to focus on building the back-end of our game and using Connect 4, a turn-based blockchain game as our ongoing example and template. We will let a player host a game by deciding their wager, and once a challenger matches it, the game will begin. We’ll use a standard 7 x 6 board and each player will take their turn to pick a column and insert their disc from 1 to 7. If a player lines up 4 discs either vertically, horizontally or diagonally, they’ll win the prize; if the game ends in a tie, both players receive their entry fee back. For simplicity, we will utilize ARK’s Smartbridge field to pick our chosen column on the board from 1 to 7. If you would like to take a more advanced approach, you can consider making [custom transactions with GTI](/docs/core/development/transactions/intro) on your own bridgechain to make this game truly decentralized.
 
 While this all may seem daunting at first, we will be making this as simple as possible. All of these tasks will be broken down into manageable sections over the next few tutorials. In this following section, we will look at how to send and receive transactions within the game.
 
 <x-alert type="info">
-**WAIT:** Before we go any further, check the ARK Core Documentation to understand how to [create your first Core module](/docs/core/development-guides/dapps/authoring-core-dapps). Follow the guide and use the starter module template project. It will be the base for the rest of the tutorial.
+**WAIT:** Before we go any further, check the ARK Core Documentation to understand how to [create your first Core module](/docs/core/development/dapps/intro). Follow the guide and use the starter module template project. It will be the base for the rest of the tutorial.
 </x-alert>
 
 Now that you’re set up with your skeleton module, let’s list our objectives for what we want our Core plugin to do by the end of this tutorial. We’re going to:
@@ -198,7 +198,7 @@ Congratulations on reaching the end of the tutorial! It might not seem like much
 
 That’s it for Part 2 of this tutorial series. In our next session, we will make the game work with a betting system and create a lobby to start games and see existing ones!
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 
 ## Missed the previous part?
 

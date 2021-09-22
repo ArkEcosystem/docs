@@ -6,85 +6,60 @@ title: Welcome to ARK Core v3
 
 ## Overview
 
+The **Overview** section will introduce you to the basic concepts surrounding ARK Core v3 development.
+
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/overview/technology-stack', 'name' => 'Technology Stack'],
-        ['path' => '/docs/core/overview/directory-structure', 'name' => 'Directory Structure'],
+        ['path' => '/docs/core/overview/stack', 'name' => 'Technology Stack'],
+        ['path' => '/docs/core/overview/directory', 'name' => 'Directory Structure'],
+        ['path' => '/docs/core/overview/models', 'name' => 'Data Models'],
+        ['path' => '/docs/core/overview/cryptography', 'name' => 'Cryptography'],
     ]"
 />
 
-## Getting Started
+### Architecture
+
+The **Architecture** section will introduce you to the most important concepts and internals of ARK Core v3.
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/getting-started/installation', 'name' => 'Installation'],
-        ['path' => '/docs/core/getting-started/configuration', 'name' => 'Configuration'],
-        ['path' => '/docs/core/getting-started/environment-variables', 'name' => 'Environment Variables'],
+        ['path' => '/docs/core/overview/architecture/lifecycle', 'name' => 'Application Lifecycle'],
+        ['path' => '/docs/core/overview/architecture/container', 'name' => 'Service Container'],
+        ['path' => '/docs/core/overview/architecture/provider', 'name' => 'Service Provider'],
+        ['path' => '/docs/core/overview/architecture/managers-drivers', 'name' => 'Managers and Drivers'],
+        ['path' => '/docs/core/overview/architecture/contracts', 'name' => 'Contracts'],
     ]"
 />
 
-### Development Setup
+### Services
+
+The **Services** section will introduce you to pre-built services that you will be able to leverage to speed up ARK Core v3 development.
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/getting-started/development-setup/introduction', 'name' => 'Introduction'],
-        ['path' => '/docs/core/getting-started/development-setup/linux-macos', 'name' => 'Linux and macOS'],
-        ['path' => '/docs/core/getting-started/development-setup/docker-linux-macos', 'name' => 'Docker on Linux and macOS'],
-        ['path' => '/docs/core/getting-started/development-setup/docker-windows', 'name' => 'Docker on Windows'],
-        ['path' => '/docs/core/getting-started/development-setup/spinning-up-first-testnet', 'name' => 'Spinning up your 1st Testnet'],
-        ['path' => '/docs/core/getting-started/development-setup/node-running-modes', 'name' => 'Node Running Modes'],
-        ['path' => '/docs/core/getting-started/development-setup/using-the-core-tester-cli', 'name' => 'Using the Core Tester CLI'],
-        ['path' => '/docs/core/getting-started/development-setup/local-block-explorer-setup', 'name' => 'Local Block Explorer Setup'],
-    ]"
-/>
+        ['path' => '/docs/core/overview/services/attributes', 'name' => 'Attributes'],
+        ['path' => '/docs/core/overview/services/cache', 'name' => 'Cache'],
+        ['path' => '/docs/core/overview/services/events', 'name' => 'Events'],
+        ['path' => '/docs/core/overview/services/filesystem', 'name' => 'Filesystem'],
+        ['path' => '/docs/core/overview/services/logging', 'name' => 'Logging'],
+        ['path' => '/docs/core/overview/services/mixins', 'name' => 'Mixins'],
+        ['path' => '/docs/core/overview/services/pipeline', 'name' => 'Pipeline'],
+        ['path' => '/docs/core/overview/services/queue', 'name' => 'Queue'],
+        ['path' => '/docs/core/overview/services/schedule', 'name' => 'Schedule'],
+        ['path' => '/docs/core/overview/services/triggers', 'name' => 'Triggers'],
+        ['path' => '/docs/core/overview/services/validation', 'name' => 'Validation'],
 
-### Production Setup
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/core/getting-started/production-setup/core-server-setup', 'name' => 'Server Setup'],
-        ['path' => '/docs/core/getting-started/production-setup/core-docker-setup', 'name' => 'Docker Setup'],
-        ['path' => '/docs/core/getting-started/production-setup/core-node-security', 'name' => 'Node Security'],
-    ]"
-/>
-
-## Architecture
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/core/architecture/application-lifecycle', 'name' => 'Application Lifecycle'],
-        ['path' => '/docs/core/architecture/service-container', 'name' => 'Service Container'],
-        ['path' => '/docs/core/architecture/service-provider', 'name' => 'Service Provider'],
-        ['path' => '/docs/core/architecture/managers-and-drivers', 'name' => 'Managers and Drivers'],
-        ['path' => '/docs/core/architecture/contracts', 'name' => 'Contracts'],
-    ]"
-/>
-
-## Services
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/core/services/attributes', 'name' => 'Attributes'],
-        ['path' => '/docs/core/services/cache', 'name' => 'Cache'],
-        ['path' => '/docs/core/services/events', 'name' => 'Events'],
-        ['path' => '/docs/core/services/filesystem', 'name' => 'Filesystem'],
-        ['path' => '/docs/core/services/logging', 'name' => 'Logging'],
-        ['path' => '/docs/core/services/mixins', 'name' => 'Mixins'],
-        ['path' => '/docs/core/services/pipeline', 'name' => 'Pipeline'],
-        ['path' => '/docs/core/services/queue', 'name' => 'Queue'],
-        ['path' => '/docs/core/services/schedule', 'name' => 'Schedule'],
-        ['path' => '/docs/core/services/triggers', 'name' => 'Triggers'],
-        ['path' => '/docs/core/services/validation', 'name' => 'Validation'],
     ]"
 />
 
 ## Transactions
 
+The **Transactions** section will guide you through the most important concepts, internals, and services that you need to understand for implementing and using ARK Core v3 Transactions.
+
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/transactions/understanding-the-lifecycle', 'name' => 'Understanding the Lifecycle'],
-        ['path' => '/docs/core/transactions/understanding-the-nonce', 'name' => 'Understanding the Nonce'],
-        ['path' => '/docs/core/transactions/cryptography-overview', 'name' => 'Cryptography Overview'],
+        ['path' => '/docs/core/transactions/lifecycle', 'name' => 'Understanding the Lifecycle'],
+        ['path' => '/docs/core/transactions/nonce', 'name' => 'Understanding the Nonce'],
     ]"
 />
 
@@ -92,38 +67,90 @@ title: Welcome to ARK Core v3
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/transactions/transaction-types/overview', 'name' => 'Overview'],
-        ['path' => '/docs/core/transactions/transaction-types/transfer', 'name' => 'Transfer'],
-        ['path' => '/docs/core/transactions/transaction-types/second-signature', 'name' => '2nd Signature Registration'],
-        ['path' => '/docs/core/transactions/transaction-types/delegate-registration', 'name' => 'Delegate Registration'],
-        ['path' => '/docs/core/transactions/transaction-types/vote-unvote', 'name' => 'Vote / Unvote'],
-        ['path' => '/docs/core/transactions/transaction-types/multisignature', 'name' => 'Multisignature Registration'],
-        ['path' => '/docs/core/transactions/transaction-types/ipfs', 'name' => 'Ipfs'],
-        ['path' => '/docs/core/transactions/transaction-types/multipayment', 'name' => 'Multipayment'],
-        ['path' => '/docs/core/transactions/transaction-types/delegate-resignation', 'name' => 'Delegate Resignation'],
-        ['path' => '/docs/core/transactions/transaction-types/htlc', 'name' => 'HTLC'],
-        ['path' => '/docs/core/transactions/transaction-types/entity', 'name' => 'Entity'],
+        ['path' => '/docs/core/transactions/types/overview', 'name' => 'Overview'],
+        ['path' => '/docs/core/transactions/types/transfer', 'name' => 'Transfer'],
+        ['path' => '/docs/core/transactions/types/second-signature', 'name' => '2nd Signature Registration'],
+        ['path' => '/docs/core/transactions/types/delegate-registration', 'name' => 'Delegate Registration'],
+        ['path' => '/docs/core/transactions/types/vote-unvote', 'name' => 'Vote / Unvote'],
+        ['path' => '/docs/core/transactions/types/multisignature', 'name' => 'Multisignature Registration'],
+        ['path' => '/docs/core/transactions/types/ipfs', 'name' => 'Ipfs'],
+        ['path' => '/docs/core/transactions/types/multipayment', 'name' => 'Multipayment'],
+        ['path' => '/docs/core/transactions/types/delegate-resignation', 'name' => 'Delegate Resignation'],
+        ['path' => '/docs/core/transactions/types/htlc', 'name' => 'HTLC'],
+        ['path' => '/docs/core/transactions/types/entity', 'name' => 'Entity'],
+    ]"
+/>
+
+## Installation
+
+The **Installation** section will guide you through configuring and installing ARK Core v3 using Unix and Windows-based environments, including the use of [Docker](https://www.docker.com/).
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/core/installation/intro', 'name' => 'Introduction'],
+        ['path' => '/docs/core/installation/requirements', 'name' => 'Requirements'],
+        ['path' => '/docs/core/installation/configuration', 'name' => 'Configuring Core'],
+        ['path' => '/docs/core/installation/variables', 'name' => 'Database Variables'],
+        ['path' => '/docs/core/installation/script', 'name' => 'Using the Install Script'],
+        ['path' => '/docs/core/installation/source', 'name' => 'Installing from Source'],
+        ['path' => '/docs/core/installation/docker-unix', 'name' => 'Docker on Linux/macOS'],
+        ['path' => '/docs/core/installation/docker-windows', 'name' => 'Docker on Windows'],
+    ]"
+/>
+
+## Security
+
+The **Security** section will guide you through the most important concepts and service you can use to improve the security of your ARK Core v3 node.
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/core/security/intro', 'name' => 'Security Through Obscurity'],
+        ['path' => '/docs/core/security/ssh', 'name' => 'Using SSH'],
+        ['path' => '/docs/core/security/updated', 'name' => 'Staying Up-to-Date'],
+        ['path' => '/docs/core/security/iptables', 'name' => 'Applying iptables'],
+        ['path' => '/docs/core/security/fail2ban', 'name' => 'Installing Fail2Ban'],
+        ['path' => '/docs/core/security/knocking', 'name' => 'Setting Up Port Knocking'],
+        ['path' => '/docs/core/security/ddos', 'name' => 'Cloudflare DDoS Protection'],
+    ]"
+/>
+
+## Deployment
+
+The **Deployment** section will guide you through important actions such as the launching and maintaining of your ARK Core v3 node.
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/core/deployment/modes', 'name' => 'Core Run Modes'],
+        ['path' => '/docs/core/deployment/cli', 'name' => 'Core CLI Commands'],
+        ['path' => '/docs/core/deployment/relay', 'name' => 'Starting a Relay'],
+        ['path' => '/docs/core/deployment/forger', 'name' => 'Starting a Forger'],
+        ['path' => '/docs/core/deployment/snapshots', 'name' => 'Using Snapshots'],
     ]"
 />
 
 ## Development Guides
 
+The **Development Guides** section will guide you, step-by-step, through customizing essential ARK Core v3 plugins and services.
+
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/development-guides/api-servers', 'name' => 'API Servers'],
-        ['path' => '/docs/core/development-guides/core-events', 'name' => 'Core Events'],
-        ['path' => '/docs/core/development-guides/data-models', 'name' => 'Data Models'],
-        ['path' => '/docs/core/development-guides/milestones', 'name' => 'Milestones'],
+        ['path' => '/docs/core/development/factories', 'name' => 'Creating Factories'],
+        ['path' => '/docs/core/development/testnet', 'name' => 'Launching a Testnet'],
+        ['path' => '/docs/core/development/explorer', 'name' => 'Launching a Block Explorer'],
+        ['path' => '/docs/core/development/core-tester-cli', 'name' => 'Using the Core-Tester-CLI'],
+        ['path' => '/docs/core/development/emitters', 'name' => 'Creating Event Emitters'],
+        ['path' => '/docs/core/development/api', 'name' => 'Creating API Servers'],
+        ['path' => '/docs/core/development/milestones', 'name' => 'Implementing Milestones'],
+        ['path' => '/docs/core/development/docker', 'name' => 'Using Docker'],
     ]"
 />
 
-### Command Line Interface (CLI)
+### CLI
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/development-guides/command-line-interface/getting-started', 'name' => 'Getting Started'],
-        ['path' => '/docs/core/development-guides/command-line-interface/core-cli-commands', 'name' => 'Core CLI Commands'],
-        ['path' => '/docs/core/development-guides/command-line-interface/development-commands', 'name' => 'Development Commands'],
+        ['path' => '/docs/core/development/cli/available', 'name' => 'Available Commands'],
+        ['path' => '/docs/core/development/cli/create', 'name' => 'Creating Commands'],
     ]"
 />
 
@@ -131,9 +158,9 @@ title: Welcome to ARK Core v3
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/development-guides/dapps/authoring-core-dapps', 'name' => 'Authoring Core dApps'],
-        ['path' => '/docs/core/development-guides/dapps/modeling-the-structure', 'name' => 'Modeling the Structure'],
-        ['path' => '/docs/core/development-guides/dapps/creating-a-module', 'name' => 'Creating a Module'],
+        ['path' => '/docs/core/development/dapps/intro', 'name' => 'Authoring Core dApps'],
+        ['path' => '/docs/core/development/dapps/structure', 'name' => 'Modeling the Structure'],
+        ['path' => '/docs/core/development/dapps/module', 'name' => 'Creating a Module'],
     ]"
 />
 
@@ -141,8 +168,8 @@ title: Welcome to ARK Core v3
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/development-guides/plugins/managing-plugins', 'name' => 'Managing Plugins'],
-        ['path' => '/docs/core/development-guides/plugins/developing-plugins', 'name' => 'Developing Plugins'],
+        ['path' => '/docs/core/development/plugins/intro', 'name' => 'Authoring Plugins'],
+        ['path' => '/docs/core/development/plugins/manage', 'name' => 'Managing Plugins'],
     ]"
 />
 
@@ -150,80 +177,86 @@ title: Welcome to ARK Core v3
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/development-guides/custom-transactions/authoring-transaction-types', 'name' => 'Authoring Transaction Types'],
-        ['path' => '/docs/core/development-guides/custom-transactions/defining-the-structure', 'name' => 'Defining the Structure'],
-        ['path' => '/docs/core/development-guides/custom-transactions/implementing-the-builder', 'name' => 'Implementing the Builder'],
-        ['path' => '/docs/core/development-guides/custom-transactions/implementing-the-handlers', 'name' => 'Implementing the Handlers'],
-        ['path' => '/docs/core/development-guides/custom-transactions/loading-the-dapp', 'name' => 'Loading the dApp'],
-        ['path' => '/docs/core/development-guides/custom-transactions/running-the-example', 'name' => 'Running the Example'],
+        ['path' => '/docs/core/development/transactions/intro', 'name' => 'Authoring Transaction Types'],
+        ['path' => '/docs/core/development/transactions/structure', 'name' => 'Defining the Structure'],
+        ['path' => '/docs/core/development/transactions/builder', 'name' => 'Implementing the Builder'],
+        ['path' => '/docs/core/development/transactions/handlers', 'name' => 'Implementing the Handler'],
+        ['path' => '/docs/core/development/transactions/load', 'name' => 'Loading the dApp'],
+        ['path' => '/docs/core/development/transactions/run', 'name' => 'Running the Example'],
     ]"
 />
 
 ## Testing
 
-<x-link-collection
-    :links="[
-        ['path' => '/docs/core/testing/introduction', 'name' => 'Introduction'],
-        ['path' => '/docs/core/testing/getting-started', 'name' => 'Getting Started'],
-        ['path' => '/docs/core/testing/sandbox', 'name' => 'Sandbox'],
-        ['path' => '/docs/core/testing/factories', 'name' => 'Factories'],
-        ['path' => '/docs/core/testing/transactions', 'name' => 'Transactions'],
-        ['path' => '/docs/core/testing/core-plugins', 'name' => 'Core Plugins'],
-    ]"
-/>
-
-## Version Guides
+The **Testing** section will introduce you to the most importing tools and knowledge needed to test ARK Core v3 and it's plugins and services.
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.0', 'name' => '2.0 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.0', 'name' => '2.0 Upgrade Guide'],
+        ['path' => '/docs/core/testing/intro', 'name' => 'Introduction'],
+        ['path' => '/docs/core/testing/sandbox', 'name' => 'Using the Sandbox'],
+        ['path' => '/docs/core/testing/plugins', 'name' => 'Testing Plugins'],
+        ['path' => '/docs/core/testing/transactions', 'name' => 'Testing Transactions'],
+    ]"
+/>
+
+## Releases
+
+The **Releases** section provides important ARK Core release and upgrade information.
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/core/releases/release/2.0', 'name' => '2.0 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.0', 'name' => '2.0 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.1', 'name' => '2.1 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.1', 'name' => '2.1 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/2.1', 'name' => '2.1 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.1', 'name' => '2.1 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.2', 'name' => '2.2 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.2', 'name' => '2.2 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/2.2', 'name' => '2.2 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.2', 'name' => '2.2 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.3', 'name' => '2.3 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.3', 'name' => '2.3 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/2.3', 'name' => '2.3 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.3', 'name' => '2.3 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.4', 'name' => '2.4 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.4', 'name' => '2.4 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/2.4', 'name' => '2.4 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.4', 'name' => '2.4 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.5', 'name' => '2.5 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.5', 'name' => '2.5 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/2.5', 'name' => '2.5 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.5', 'name' => '2.5 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/2.6', 'name' => '2.6 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/2.6', 'name' => '2.6 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/2.6', 'name' => '2.6 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/2.6', 'name' => '2.6 Upgrade Guide'],
     ]"
 />
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/version-guides/release/3.0', 'name' => '3.0 Release Guide'],
-        ['path' => '/docs/core/version-guides/upgrade/3.0', 'name' => '3.0 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/3.0', 'name' => '3.0 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/3.0', 'name' => '3.0 Upgrade Guide'],
+        ['path' => '/docs/core/releases/release/3.0', 'name' => '3.0 Release Guide (Docker)'],
+        ['path' => '/docs/core/releases/upgrade/docker/3.0', 'name' => '3.0 Upgrade Guide (Docker)'],
     ]"
 />
 
 ## Support
+
+The **Support** section provides resources for solving and reporting issues in ARK Core v3.
 
 <x-link-collection
     :links="[

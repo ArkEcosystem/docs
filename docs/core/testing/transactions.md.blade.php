@@ -114,7 +114,7 @@ This transaction type enables delegates to block potential voters from voting fo
 
 ## Second Signature
 
-This transaction type enables a user to add an extra layer of security to their address by creating a second passphrase, using mnemonic code for generating deterministic keys via BIP-39 to produce an additional 12 words. Once a second signature has been registered to a wallet, the owner of the wallet will then be required to input their primary and secondary passphrase when sending a transaction to the network.
+This transaction type enables a user to add an extra layer of security to their address by creating a second passphrase, using mnemonic code for generating deterministic keys via BIP-39 to produce an additional mnemonic. Once a second signature has been registered to a wallet, the owner of the wallet will then be required to input their primary and secondary passphrase when sending a transaction to the network.
 
 - Before sending a Second Signature transaction, check the balances of the sender via the explorer or API
 - Using the desktop wallet, send a Second Signature transaction.
@@ -222,4 +222,4 @@ Registered entity names need to be unique by **type**. If a business called `bus
 
 ## Advanced Users
 
-Advanced Users can follow the documentation provided [here](/docs/core/transactions/transaction-types/overview) on each transaction type to attempt send malformed data using tools outside of the Desktop Wallet and core-tx-tester.
+Advanced Users can follow the documentation provided [here](/docs/core/transactions/types/overview) on each transaction type to attempt send malformed data using tools outside of the Desktop Wallet and core-tx-tester.

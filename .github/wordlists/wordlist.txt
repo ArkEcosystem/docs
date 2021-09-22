@@ -11,6 +11,7 @@ AJV
 Alessio
 alpinejs
 Angular's
+anonymized
 apk
 APN
 args
@@ -20,6 +21,7 @@ arktoshi
 ASC
 ASN
 async
+auditable
 auditd
 auth
 authenticator
@@ -63,10 +65,12 @@ CMAKE
 cmd
 codec
 CoinMarketCap
+compendia
 conf
 const
 containerd
 convolves
+corep
 cors
 cov
 Cp
@@ -132,6 +136,7 @@ DT
 DTO
 DUNIT
 dwallets
+dwe
 dyib
 Développement
 ecc
@@ -194,6 +199,7 @@ gzip
 Hackathon
 hacky
 halvenings
+halvings
 Hana
 HandleFunc
 Hapi
@@ -220,6 +226,7 @@ incentivizes
 ini
 init
 inputpasswordhere
+installable
 instantiation
 integrations
 intl
@@ -321,6 +328,7 @@ nodejs
 Nodem
 nologo
 nonces
+NOPASSWD
 npm
 npmjs
 Numériques
@@ -358,6 +366,7 @@ platformio
 png
 poc
 Postgres
+pport
 pre
 printf
 println
@@ -367,6 +376,7 @@ proj
 projectconf
 proto
 Protokol
+psdk
 Pslam
 psql
 PSR
@@ -402,6 +412,7 @@ rw
 SAFU
 Satoshi
 Satoshis
+sbin
 scalability
 scalable
 schemas
@@ -456,7 +467,9 @@ systemctl
 tabindex
 TBD
 tcp
+TestCafe
 texplorer
+timestamping
 tls
 tmp
 TODO
@@ -489,7 +502,9 @@ unassigns
 uncomment
 unencrypted
 unmerged
+Unselected
 unstarred
+Unstoppabledomains
 Unvote
 unvoted
 unvoting

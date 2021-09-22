@@ -300,7 +300,7 @@ Our action for this new event is _Browser &gt; Go to URL._ We want to use the ar
 
 Congratulations, you have now created a playable blockchain game! But you’ll have probably noticed that the winner doesn’t receive a prize, and if there’s a tie the players don’t get their wager back. That’s the focus of the next part in our tutorial series, where we look into how game prizes are calculated, awarded and paid out.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 **Check out previous posts in this series for reference here:**
 
 <livewire:page-reference path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one" />

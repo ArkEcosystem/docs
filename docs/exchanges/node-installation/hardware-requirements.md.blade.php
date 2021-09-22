@@ -8,9 +8,25 @@ A Relay Node is a full node in the ARK network; it maintains a complete copy of 
 
 ## Recommended Hardware Requirements
 
-* 4GB RAM
-* 40GB SSD
-* 2 Cores
+| Relay Specification | Minimum | Recommended   |
+| :-----------------: | :-----: | :-----------: |
+| **CPUs**            | 2       | 4             |
+| **RAM**             | 4GB     | 8GB           |
+| **HDD**             | 80GB    | 100GB - 120GB |
+
+---
+
+| Supported OS | Release Version(s) |
+| :----------: | :----------------: |
+| **Ubuntu**   | 18.x / 20.x        |
+
+---
+
+<x-alert type="warning">
+Ubuntu 16.x and older is **no longer** supported.
+</x-alert>
+
+---
 
 ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
@@ -21,7 +37,6 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
 
   | Service | Port | Required | Enabled by default | Documentation |
   | :--- | :---: | :---: | :---: | :---: |
-  | p2p | 4001 | ✅ | ✅ | [reference](https://github.com/ArkEcosystem/gitbooks-exchange/tree/8af5049dc3d84a5f24ac80597529f2d656c651df/api/p2p/README.md) |
-  | public API | 4003 | ❌ | ✅ | [reference](https://github.com/ArkEcosystem/gitbooks-exchange/tree/8af5049dc3d84a5f24ac80597529f2d656c651df/exchanges/public-api.html) |
-  | webhook | 4004 | ❌ | ❌ | [reference](https://github.com/ArkEcosystem/gitbooks-exchange/tree/8af5049dc3d84a5f24ac80597529f2d656c651df/api/webhooks/README.md) |
-  | JSON-RPC | 8080 | ❌ | ❌ | [reference](https://github.com/ArkEcosystem/gitbooks-exchange/tree/8af5049dc3d84a5f24ac80597529f2d656c651df/exchanges/json-rpc.html) |
+  | p2p | 4001 | ✅ | ✅ | [reference](https://ark.dev/docs/core/getting-started/environment-variables#corep2pport) |
+  | public API | 4003 | ❌ | ✅ | [reference](https://ark.dev/docs/exchanges/public-api-guide) |
+  | webhook | 4004 | ❌ | ❌ | [reference](https://ark.dev/docs/api/webhook-api/getting-started)

@@ -99,7 +99,7 @@ Run yarn build to compile our plugin, then restart ARK Core and enjoy!
 
 Congratulations, our blockchain game can now calculate, award and pay out prizes or refund entry fees in the event of a tie. Our standalone game is now complete! In the final part of our tutorial series, we will set up our game as a plugin inside of the ARK Desktop Wallet.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
 
 **Check out previous posts in this series for reference here:**
 
