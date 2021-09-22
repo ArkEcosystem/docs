@@ -465,6 +465,7 @@ INetworkConfig
 inSingletonScope
 InstanceType
 InternalTransactionType
+InviteUserTest
 IOException
 IoT
 ipfsAsset

@@ -384,6 +384,7 @@ profilesettings
 pubkey
 pubKeyHash
 publicKey
+publicKey's
 puttygen
 quickstart
 readBytes
