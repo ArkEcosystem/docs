@@ -68,17 +68,17 @@ Hello World!
 ```blade
 <x-link-collection
     :links="[
-        ['path' => '/docs/core/services/attributes', 'name' => 'Attributes'],
-        ['path' => '/docs/core/services/cache', 'name' => 'Cache'],
-        ['path' => '/docs/core/services/events', 'name' => 'Events'],
-        ['path' => '/docs/core/services/filesystem', 'name' => 'Filesystem'],
-        ['path' => '/docs/core/services/logging', 'name' => 'Logging'],
-        ['path' => '/docs/core/services/mixins', 'name' => 'Mixins'],
-        ['path' => '/docs/core/services/pipeline', 'name' => 'Pipeline'],
-        ['path' => '/docs/core/services/queue', 'name' => 'Queue'],
-        ['path' => '/docs/core/services/schedule', 'name' => 'Schedule'],
-        ['path' => '/docs/core/services/triggers', 'name' => 'Triggers'],
-        ['path' => '/docs/core/services/validation', 'name' => 'Validation'],
+        ['path' => '/docs/core/overview/services/attributes', 'name' => 'Attributes'],
+        ['path' => '/docs/core/overview/services/cache', 'name' => 'Cache'],
+        ['path' => '/docs/core/overview/services/events', 'name' => 'Events'],
+        ['path' => '/docs/core/overview/services/filesystem', 'name' => 'Filesystem'],
+        ['path' => '/docs/core/overview/services/logging', 'name' => 'Logging'],
+        ['path' => '/docs/core/overview/services/mixins', 'name' => 'Mixins'],
+        ['path' => '/docs/core/overview/services/pipeline', 'name' => 'Pipeline'],
+        ['path' => '/docs/core/overview/services/queue', 'name' => 'Queue'],
+        ['path' => '/docs/core/overview/services/schedule', 'name' => 'Schedule'],
+        ['path' => '/docs/core/overview/services/triggers', 'name' => 'Triggers'],
+        ['path' => '/docs/core/overview/services/validation', 'name' => 'Validation'],
     ]"
 />
 ```

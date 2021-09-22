@@ -23,7 +23,7 @@ ARK Messenger implements a custom _**Message Transaction**_. This is a transacti
 These were considerations made prior to developing the custom transaction. In addition to outlining your technical specifications, you may want to familiarize yourself with how custom transactions work on ARK. The article listed below will give you a solid base in understanding how smart/custom transactions work on the ARK Core Blockchain Framework.
 
 [Understand And Write Custom Transactions TypesThe GTI engine was initially designed to assist our developers to make implementations of new transaction types easier
-Core Developer Documentation](/docs/core/development-guides/custom-transactions/authoring-transaction-types)
+Core Developer Documentation](/docs/core/development/transactions/intro)
 
 ## Creating a Custom Transaction
 
@@ -292,4 +292,4 @@ Alternatives to this approach are:
 
 In our next and final tutorial, we will be deploying a bridgechain and launching the client application. In addition, we will be highlighting all of the examples pertaining to how developers can work with the ARK Core. With future updates and improvements, ARK Core will continue to be one of the simplest and most flexible ways to build blockchain solutions.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/getting-started/development-setup/introduction). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!

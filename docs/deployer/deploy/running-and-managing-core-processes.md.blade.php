@@ -124,4 +124,4 @@ pm2 start all  #start all pm2 processes
 pm2 restart all #restart all pm2 processes
 ```
 
-> The Core CLI is also used to manage snapshots, update installations, and more. Consult [Core CLI Documentation](/docs/core/development-guides/command-line-interface/getting-started) for more information. Take note that Core CLI does not manage the Explorer process.
+> The Core CLI is also used to manage snapshots, update installations, and more. Consult [Core CLI Documentation](/docs/core/deployment/cli) for more information. Take note that Core CLI does not manage the Explorer process.
