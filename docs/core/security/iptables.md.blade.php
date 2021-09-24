@@ -29,7 +29,7 @@ Specifically:
 Download and execute the iptables script using the following commands:
 
 ```shell
-wget -N https://snapshots.ark.io/v3-iptables.sh
+wget -N https://raw.githubusercontent.com/ArkEcosystem/core/master/scripts/v3-iptables.sh
 bash ./v3-iptables.sh start
 ```
 
