@@ -2,6 +2,10 @@
 title: Development - Launching a Block Explorer
 ---
 
+<x-alert type="warning">
+This document is outdated and references the old VueJS explorer.
+</x-alert>
+
 # Launching a Block Explorer
 
 ## Introduction

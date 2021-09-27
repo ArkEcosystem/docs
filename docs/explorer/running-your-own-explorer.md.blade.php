@@ -23,7 +23,7 @@ If you would want to further improve the stability and performance of your setup
 Before getting started you'll have to clone the repository and install the composer and yarn dependencies. The yarn dependencies are needed for the `@arkecosystem/crypto` package which is used to derive multi-signature addresses.
 
 ```bash
-git clone https://github.com/ArkEcosystem/explorer.ark.io.git explorer
+git clone https://github.com/ArkEcosystem/explorer.git
 cd explorer
 composer install
 yarn install
@@ -36,7 +36,8 @@ Next up is preparing the application by copying all necessary files, generating 
 ```bash
 cp .env.prod .env
 php artisan key:generate
-touch database/database.sqlite
+
+# Setup a PSQL database locally, then run
 php artisan migrate:fresh
 php artisan storage:link
 ```
@@ -55,9 +56,6 @@ EXPLORER_DB_PORT=YOUR_CORE_DATABASE_PORT
 EXPLORER_DB_DATABASE=YOUR_CORE_DATABASE
 EXPLORER_DB_USERNAME=YOUR_CORE_DATABASE_USERNAME
 EXPLORER_DB_PASSWORD=YOUR_CORE_DATABASE_PASSWORD
-
-; You can find out the path by running "which node" and then use the output.
-EXPLORER_NODEJS=/path/to/your/nodejs/installation
 ```
 
 > We do recommend to set `PDO_ATTR_PERSISTENT` to `true` (which is the default) to make use of persistent PostgreSQL connections. This greatly increases the execution time of database queries on pages that execute a lot of queries because the server won't have to establish a new connection for every query. Keep in mind that this requires more resources to keep up the connections but ultimately yields a smoother experienced.
@@ -89,11 +87,12 @@ Take a look at the official [Deploying Short Schedule](https://github.com/spatie
 Now that the task scheduler and Horizon are running you'll need to run the below commands in order to cache all of the data that is required for the Explorer to function.
 
 ```bash
-php artisan explorer:cache-network-status
 php artisan explorer:cache-network-aggregates
-php artisan explorer:cache-last-blocks
 php artisan explorer:cache-fees
+php artisan explorer:cache-transactions
 php artisan explorer:cache-prices
+php artisan explorer:cache-currencies-data
+php artisan explorer:cache-currencies-history --no-delay
 php artisan explorer:cache-delegate-aggregates
 php artisan explorer:cache-delegate-performance
 php artisan explorer:cache-delegate-productivity
@@ -101,6 +100,7 @@ php artisan explorer:cache-delegate-resignation-ids
 php artisan explorer:cache-delegate-usernames
 php artisan explorer:cache-delegate-wallets
 php artisan explorer:cache-delegates-with-voters
+php artisan explorer:cache-delegate-voter-counts
 php artisan explorer:cache-multi-signature-addresses
 ```
 
@@ -108,18 +108,19 @@ php artisan explorer:cache-multi-signature-addresses
 
 When updating the Explorer there are a few things to keep in mind. All of them should be executed in the specified order to avoid unexpected issues. You shouldn't run any commands besides those when updating to ensure that the update is completed as fast as possible to reduce potential downtime.
 
-### Restart Horizon
-
-```bash
-php artisan horizon:purge
-php artisan horizon:terminate
-```
-
 ### Clear Cache
 
 ```bash
 php artisan responsecache:clear
 php artisan view:clear
+php artisan config:clear
+```
+
+### Restart Horizon
+
+```bash
+php artisan horizon:purge
+php artisan horizon:terminate
 ```
 
 ### Cache Configuration
