@@ -33,7 +33,7 @@ gem install arkecosystem-crypto
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/ruby-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/ruby-crypto).
 
 2. Clone your forked repository.
 

@@ -4,7 +4,7 @@ title: Release Guides - v2.3
 
 # v2.3
 
-ARK `v2.3` is a minor update but not backward compatible with `v2.2.X`. This update introduces [AIP29](https://github.com/ARKEcosystem/AIPs/blob/master/AIPS/aip-29.md), an increased vendor field length, various performance improvements and more.
+ARK `v2.3` is a minor update but not backward compatible with `v2.2.X`. This update introduces [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md), an increased vendor field length, various performance improvements and more.
 
 * **Upgrade time**: low - upgrading to `v2.3` only requires minimal configuration changes.
 * **Complexity**: medium - the `wallets` table has been removed from the database which can impact third-party applications.
@@ -84,4 +84,4 @@ From 2.3.0 onwards the `next` channel will serve as a combination of all of the 
 
 ## Reporting Problems
 
-If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
+If you happen to experience any issues please [open an issue](https://github.com/ArkEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.

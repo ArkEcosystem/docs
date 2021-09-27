@@ -15,12 +15,12 @@ For further information on how to install Go on your operating system, follow [t
 ### Install package with `get`
 
 ```bash
-go get github.com/ARKEcosystem/go-crypto/crypto
+go get github.com/ArkEcosystem/go-crypto/crypto
 ```
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/go-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/go-crypto).
 
 2. Clone your forked repository.
 

@@ -28,14 +28,14 @@ To install CocoaPods, head over  to the official [guide](https://guides.cocoapod
 To integrate the ARK Swift Crypto in your project, add the following content to your `Podfile` :
 
 ```pod
-'SwiftCrypto', :git => 'https://github.com/ARKEcosystem/swift-crypto.git', :tag => '1.0.1'
+'SwiftCrypto', :git => 'https://github.com/ArkEcosystem/swift-crypto.git', :tag => '1.0.1'
 ```
 
 Afterward, install it by running `pod install`.
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/swift-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/swift-crypto).
 
 2. Clone your forked repository.
 

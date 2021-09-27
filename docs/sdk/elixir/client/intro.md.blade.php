@@ -22,7 +22,7 @@ mix deps.get
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/elixir-client).
+1. Fork the [package](https://github.com/ArkEcosystem/elixir-client).
 2. Clone your forked repository.
 
 ```bash

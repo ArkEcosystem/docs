@@ -12,7 +12,7 @@ pip install arkecosystem-crypto
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/python-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/python-crypto).
 2. Clone your forked repository.
 
 ```bash

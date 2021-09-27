@@ -50,7 +50,7 @@ Once installed, you can edit the `pom.xml` file of the project and add the follo
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/java-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/java-crypto).
 
 2. Clone your forked repository.
 
