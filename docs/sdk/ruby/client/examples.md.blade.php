@@ -9,9 +9,9 @@ title: Examples
 ```ruby
 require 'arkecosystem/client'
 
-manager = ARKEcosystem::Client::ConnectionManager.new()
+manager = ArkEcosystem::Client::ConnectionManager.new()
 
-connection = manager.connect(ARKEcosystem::Client::Connection.new({
+connection = manager.connect(ArkEcosystem::Client::Connection.new({
   host: "http://my.ark.node:port/api/"
 }), 'main')
 ```

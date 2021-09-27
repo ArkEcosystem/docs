@@ -16,7 +16,7 @@ Go to `config/packages/ark.yml` and fill out your configuration similar to this.
 return [
     Symfony\Bundle\FrameworkBundle\FrameworkBundle::class => ['all' => true],
     // ...
-    ARKEcosystem\ARKBundle\ARKBundle::class => ['all' => true],
+    ArkEcosystem\ArkBundle\ArkBundle::class => ['all' => true],
 ];
 ```
 
@@ -59,4 +59,4 @@ class CoolStuffController extends Controller
 
 ## API Documentation
 
-There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the ARK php-client package](https://github.com/ARKEcosystem/php-client).
+There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the ARK php-client package](https://github.com/ArkEcosystem/php-client).

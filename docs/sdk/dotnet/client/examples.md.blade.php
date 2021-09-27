@@ -11,8 +11,8 @@ WARNING! This package is deprecated and is no longer maintained and supported.
 ## Initialization
 
 ```csharp
-using ARKEcosystem.Client;
-using ARKEcosystem.Client.API;
+using ArkEcosystem.Client;
+using ArkEcosystem.Client.API;
 
 static void Main(string[] args)
 {
