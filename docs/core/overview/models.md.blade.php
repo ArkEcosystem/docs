@@ -82,7 +82,7 @@ They share all fields in common with the Wallet data structure, with a few extra
 * **production**:
   * **approval** _the vote share for this delegate_
 * **forged**:
-  * **fess** _the forged fees for this delegate_
+  * **fees** _the forged fees for this delegate_
   * **rewards** _the forged rewards for this delegate_
   * **total** _the forged fees and rewards for this delegate_
 
