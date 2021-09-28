@@ -8,26 +8,48 @@ The Manager API allows you to gather common node information, access logs, contr
 Requests should contain valid JSON RPC 2.0 data which are transformed over HTTP / HTTPS protocol using GET method.
 
 <x-alert type="warning">
-All HTTP requests have to be sent with the `Content-Type: application/vnd.api+json` header. If the header is not present, it will result in malformed responses or request rejections.
+All HTTP/HTTPS requests have to be sent with the `Content-Type: application/vnd.api+json` header. If the header is not present, it will result in malformed responses or request rejections.
 </x-alert>
-
-## Installation
-
-The Manager API comes within an installation of Core by default. If you don't have it installed, you can add it manually by running `yarn global add @arkecosystem/core-manager`.
 
 ## Alias
 
 `manager`
 
-## Configuration
+## Installation
 
-The Manager API comes with default configuration. Additionally, you can customize API specific settings in .env or app.json file.
+The Manager API is official ARK Ecosystem plugin, but it does not come with the default installation. You can install plugin manually by running:
 
-<x-alert type="warning">
-We strongly recommend setting basic authentication using Argon2Id hashing method with custom secret and using HTTPS access only.
+```bash
+ark plugin:install @arkecosystem/core-manager
+```
+
+Check if plugin is installed successfully, by using following command:
+
+```bash
+ark help
+```
+
+You should see `manager` section under available commands.
+
+<x-alert type="info">
+Core plugins are installed per network configuration, which allows installation of different plugins and plugin versions per network. Use `--network=mainnet/devnet/testnet` flag on each command if you are using more than one network configuration.
 </x-alert>
 
-### Argon2Id Authentication
+## Configuration
+
+The Manager API is not configured by default and you should configure it manually by customizing settings in `app.json` and `.env` file. To simplify this process you can perform basic configuration through the interactive process.
+
+```bash
+ark manager:config
+```
+
+<x-alert type="warning">
+We strongly recommend setting basic authentication using **basic** Argon2Id hashing method with custom secret and using **HTTPS** access only.
+</x-alert>
+
+Additionally, you can customize API specific settings in .env or app.json file.
+
+### Argon2Id Basic Authentication
 
 It is recommended to make configuration changes for defining user access and IP whitelisting within your app.json file.
 
