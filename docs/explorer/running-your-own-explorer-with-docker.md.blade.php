@@ -13,6 +13,10 @@ Prerequisites to be installed:
 * [Docker Engine](https://docs.docker.com/install)
 * [Docker Compose](https://docs.docker.com/compose/install)
 
+<x-alert type="warning">
+Minimum supported Docker version is 20.10.x.
+</x-alert>
+
 ## Deployment
 
 > Before continuing with this guide: You will need access to the database of a Core instance. The credentials can be specified in the `.env` file under `EXPLORER_DB_*`.
@@ -89,7 +93,7 @@ bash purge_all.sh
 ## Production Deployment and Zero Downtime Updates
 
 * Blue/Green Deployment approach
-  * Reverse proxy server [Traefik](https://hub.docker.com/_/traefik) with native Let's Encrypt SSL supports including automated certificate requests and renewal.
+  * Reverse proxy server [Traefik](https://hub.docker.com/_/traefik) with native Let's Encrypt SSL support, including automated certificate requests and renewal.
   * Explorer easily deployed and updated with no downtime.
 
 > Before continuing with this guide: You will need access to the database of a Core instance. The credentials can be specified in the `.env` file under `EXPLORER_DB_*`.
