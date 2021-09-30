@@ -126,6 +126,7 @@ dexplorer
 distributable
 dl
 DLT
+dmg
 dnf
 DNOMINMAX
 DOM
@@ -162,6 +163,7 @@ espressif
 ETH
 eth
 Ethereum
+exe
 explainers
 exs
 extensibility
