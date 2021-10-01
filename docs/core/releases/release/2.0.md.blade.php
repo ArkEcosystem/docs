@@ -64,13 +64,13 @@ All SDKs have been updated to reflect the change to `v2`. The structure of each 
 
 | Language | Client | Crypto |
 | :--- | :--- | :--- |
-| Java | [java-client](https://github.com/ARKEcosystem/java-client) | [java-crypto](https://github.com/ARKEcosystem/java-crypto) |
-| .NET | [dotnet-client](https://github.com/ARKEcosystem/dotnet-client) | [dotnet-crypto](https://github.com/ARKEcosystem/dotnet-crypto) |
-| PHP | [php-client](https://github.com/ARKEcosystem/php-client) | [php-crypto](https://github.com/ARKEcosystem/php-crypto) |
-| Python | [python-client](https://github.com/ARKEcosystem/python-client) | [python-crypto](https://github.com/ARKEcosystem/python-client) |
-| Golang | [go-client](https://github.com/ARKEcosystem/go-client) | [go-crypto](https://github.com/ARKEcosystem/go-crypto) |
-| CPP | [cpp-client](https://github.com/ARKEcosystem/cpp-client) | [crypto-client](https://github.com/ARKEcosystem/cpp-crypto) |
-| Ruby | [ruby-client](https://github.com/ARKEcosystem/ruby-client) | [ruby-crypto](https://github.com/ARKEcosystem/ruby-crypto) |
-| Swift | [swift-client](https://github.com/ARKEcosystem/swift-client) | [swift-crypto](https://github.com/ARKEcosystem/swift-crypto) |
-| Rust | [rust-client](https://github.com/ARKEcosystem/rust-client) | [rust-crypto](https://github.com/ARKEcosystem/rust-crypto) |
-| Elixir | [elixir-client](https://github.com/ARKEcosystem/elixir-client) | [elixir-crypto](https://github.com/ARKEcosystem/elixir-crypto) |
+| Java | [java-client](https://github.com/ArkEcosystem/java-client) | [java-crypto](https://github.com/ArkEcosystem/java-crypto) |
+| .NET | [dotnet-client](https://github.com/ArkEcosystem/dotnet-client) | [dotnet-crypto](https://github.com/ArkEcosystem/dotnet-crypto) |
+| PHP | [php-client](https://github.com/ArkEcosystem/php-client) | [php-crypto](https://github.com/ArkEcosystem/php-crypto) |
+| Python | [python-client](https://github.com/ArkEcosystem/python-client) | [python-crypto](https://github.com/ArkEcosystem/python-client) |
+| Golang | [go-client](https://github.com/ArkEcosystem/go-client) | [go-crypto](https://github.com/ArkEcosystem/go-crypto) |
+| CPP | [cpp-client](https://github.com/ArkEcosystem/cpp-client) | [crypto-client](https://github.com/ArkEcosystem/cpp-crypto) |
+| Ruby | [ruby-client](https://github.com/ArkEcosystem/ruby-client) | [ruby-crypto](https://github.com/ArkEcosystem/ruby-crypto) |
+| Swift | [swift-client](https://github.com/ArkEcosystem/swift-client) | [swift-crypto](https://github.com/ArkEcosystem/swift-crypto) |
+| Rust | [rust-client](https://github.com/ArkEcosystem/rust-client) | [rust-crypto](https://github.com/ArkEcosystem/rust-crypto) |
+| Elixir | [elixir-client](https://github.com/ArkEcosystem/elixir-client) | [elixir-crypto](https://github.com/ArkEcosystem/elixir-crypto) |

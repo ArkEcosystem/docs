@@ -47,7 +47,7 @@ Connection<Two> connection = new Connection(map);
 package main
 
 import (
-  ark "github.com/ARKEcosystem/go-client/client"
+  ark "github.com/ArkEcosystem/go-client/client"
   "net/url"
   )
 
@@ -57,8 +57,8 @@ func main() {
 ```
 
 ```python
-from client import ARKClient
-client = ARKClient('http://127.0.0.1:4003/api')
+from client import ArkClient
+client = ArkClient('http://127.0.0.1:4003/api')
 ```
 
 ## Check Wallet Balance

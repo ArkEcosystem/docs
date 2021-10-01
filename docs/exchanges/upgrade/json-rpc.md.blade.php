@@ -16,7 +16,7 @@ exchange-json-rpc update --force --restart
 
 ### Reporting Problems
 
-If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
+If you happen to experience any issues please [open an issue](https://github.com/ArkEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
 
 ## Related ARK Core API changes
 

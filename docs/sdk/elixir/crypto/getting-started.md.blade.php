@@ -38,7 +38,7 @@ mix deps.get
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/elixir-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/elixir-crypto).
 
 2. Clone your forked repository.
 

@@ -25,13 +25,13 @@ For further information on how to install .NET on your operating system :
 ### Package Manager
 
 ```bash
-Install-Package ARKEcosystem.Crypto -Version 0.2.1
+Install-Package ArkEcosystem.Crypto -Version 0.2.1
 ```
 
 ### .NET CLI
 
 ```bash
-dotnet add package ARKEcosystem.Crypto --version 0.2.1
+dotnet add package ArkEcosystem.Crypto --version 0.2.1
 ```
 
 ### PackageReference
@@ -45,12 +45,12 @@ For projects that support PackageReference, copy this XML node into the project 
 ### Paket CLI
 
 ```bash
-paket add ARKEcosystem.Crypto --version 0.2.1
+paket add ArkEcosystem.Crypto --version 0.2.1
 ```
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/dotnet-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/dotnet-crypto).
 
 2. Clone your forked repository.
 

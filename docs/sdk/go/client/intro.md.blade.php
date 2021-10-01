@@ -7,12 +7,12 @@ title: Getting Started
 ## Install package with `get`
 
 ```bash
-go get github.com/ARKEcosystem/go-client/client
+go get github.com/ArkEcosystem/go-client/client
 ```
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/go-client)
+1. Fork the [package](https://github.com/ArkEcosystem/go-client)
 2. Clone forked repository.
 
 ```bash

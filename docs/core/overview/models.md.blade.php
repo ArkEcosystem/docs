@@ -38,7 +38,7 @@ Blocks are the core unit of any given blockchain. In ARK, blocks contain a group
 
 ## Transaction
 
-Transactions are the heart of any blockchain, cryptocurrency or otherwise. They represent a transfer of value from one network participant to another. In ARK, transactions can be of one of multiple types, specified in [AIP11](https://github.com/ARKEcosystem/AIPs/blob/master/AIPS/aip-11.md), which can affect the content and data structure of each transaction's payload.
+Transactions are the heart of any blockchain, cryptocurrency or otherwise. They represent a transfer of value from one network participant to another. In ARK, transactions can be of one of multiple types, specified in [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), which can affect the content and data structure of each transaction's payload.
 
 * **id**
 * **blockId** _the ID of the block in which this transaction is included_

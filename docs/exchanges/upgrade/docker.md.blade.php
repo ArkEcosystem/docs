@@ -25,8 +25,8 @@ Upgrading from `v2.7` to `v3.0` is relatively straightforward if you follow the 
 ```shell
 mkdir ~/mainnet &&
 cd ~/mainnet &&
-curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/mainnet/docker-compose.yml &&
-curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/mainnet/mainnet.env &&
+curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/mainnet/docker-compose.yml &&
+curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/mainnet/mainnet.env &&
 curl -sOJ https://snapshots.ark.io/v3-migrations.sql
 ```
 
@@ -71,7 +71,7 @@ Each run-mode (`core`, `relay`, and `forger`) now contains its own configuration
 
 ### Reporting Problems
 
-If you happen to experience any issues, please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it, and info about your environment.
+If you happen to experience any issues, please [open an issue](https://github.com/ArkEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it, and info about your environment.
 
 ## API Changes
 

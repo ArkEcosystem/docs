@@ -22,14 +22,14 @@ Add the following to your `Cargo.toml`:
 
 ```ini
 [dependencies]
-arkecosystem-crypto = {git = "https://github.com/ARKEcosystem/rust-crypto", branch = "master" }
+arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", branch = "master" }
 ```
 
 You can now run `cargo build`, and Cargo will fetch the new dependencies and all of their dependencies.s
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/rust-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/rust-crypto).
 
 2. Clone your forked repository.
 

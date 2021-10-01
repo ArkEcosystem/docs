@@ -15,13 +15,13 @@ WARNING! This package is deprecated and is no longer maintained and supported.
 ### Install Package
 
 ```bash
-Install-Package ARKEcosystem.Client -Version 0.2.1
+Install-Package ArkEcosystem.Client -Version 0.2.1
 ```
 
 ### .NET CLI
 
 ```bash
-dotnet add package ARKEcosystem.Client --version 0.2.1
+dotnet add package ArkEcosystem.Client --version 0.2.1
 ```
 
 ### PackageReference
@@ -35,12 +35,12 @@ For projects that support PackageReference, copy this XML node into the project 
 ### Paket CLI
 
 ```bash
-paket add ARKEcosystem.Client --version 0.2.1
+paket add ArkEcosystem.Client --version 0.2.1
 ```
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/dotnet-client).
+1. Fork the [package](https://github.com/ArkEcosystem/dotnet-client).
 2. Clone forked repository.
 
 ```bash

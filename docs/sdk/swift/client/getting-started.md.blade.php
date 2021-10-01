@@ -28,14 +28,14 @@ To install CocoaPods, head over  to the official [guide](https://guides.cocoapod
 To integrate the ARK Swift Client in your project, add the following content to your `Podfile` :
 
 ```pod
-'SwiftClient', :git => 'https://github.com/ARKEcosystem/swift-client.git', :tag => '1.0.1'
+'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '1.0.1'
 ```
 
 Afterward, install it by running `pod install`.
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/swift-client).
+1. Fork the [package](https://github.com/ArkEcosystem/swift-client).
 
 2. Clone your forked repository.
 
@@ -70,4 +70,4 @@ Dependencies are now installed, you can now run the tests to see if everything i
 By default, the requests are performed with [Alamofire](https://github.com/Alamofire/Alamofire), and the response is given to the callback function as `[String: Any]`.
 The functions that are responsible for this can be found in `Utils.swift`.
 You can easily override this default functionality by defining your own `handleApiGet` and `handleApiPost` functions and passing them to the endpoint object (e.g. `Blocks`.
-An example of how this is done can be found by looking at the tests, e.g. those of [Blocks](https://github.com/ARKEcosystem/swift-client/blob/master/Client/ClientTests/Api/Endpoints/BlocksTest.swift), as a mocked api handler is used for them.
+An example of how this is done can be found by looking at the tests, e.g. those of [Blocks](https://github.com/ArkEcosystem/swift-client/blob/master/Client/ClientTests/Api/Endpoints/BlocksTest.swift), as a mocked api handler is used for them.

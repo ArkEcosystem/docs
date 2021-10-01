@@ -12,7 +12,7 @@ yarn add @arkecosystem/client
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/javascript-client).
+1. Fork the [package](https://github.com/ArkEcosystem/javascript-client).
 2. Clone your forked repository.
 
 ```bash

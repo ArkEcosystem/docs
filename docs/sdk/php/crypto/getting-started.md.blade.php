@@ -32,7 +32,7 @@ composer require arkecosystem/crypto
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/php-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/php-crypto).
 
 2. Clone your forked repository.
 

@@ -10,7 +10,7 @@ title: Examples
 package main
 
 import (
-    crypto "github.com/ARKEcosystem/go-crypto/crypto"
+    crypto "github.com/ArkEcosystem/go-crypto/crypto"
 )
 ```
 
