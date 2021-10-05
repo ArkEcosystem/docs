@@ -31,3 +31,11 @@ valet link explorer
 Before access the Explorer you'll need to cache data that is accessed a lot. Run `php artisan horizon` and then `php artisan explorer:cache-development-data` and wait until it has finished.
 
 Afterwards, you can navigate to `explorer.test` in your browser to see it in action.
+
+## Delegate Performance
+
+Missed blocks are stored in an additional database to calculate performance metrics for delegates. These values are based on the performance of the past 30 days max, and will need to be generated the first time the explorer is run to fill the void of the past 30 days. This can be done by running `php artisan explorer:forging-stats-build --days=30`. Note that this may take a while to run, but after the initial 30 days are stored the new values will be appended to it through scheduled jobs.
+
+## Votereport
+
+The votereport text file is generated through the `explorer:generate-vote-report` command, which runs every 5 minutes by default. This job requires the existence of `jq`, so make sure to install that if it's not available in your environment.

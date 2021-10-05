@@ -66,9 +66,7 @@ Explorer performs a lot of tasks in the background. These tasks are executed on 
 
 > If you are using Laravel Forge you can create this through their "Scheduler" UI.
 
-### Daemons
-
-Explorer performs a lot of tasks in the background. These tasks are executed on a specific schedule and require the task scheduler to be set up. Take a look at the official [Starting The Scheduler](https://laravel.com/docs/8.x/scheduling#starting-the-scheduler) guide by [Spatie](https://laravel.com/).
+Important to note is that the explorer caches views. Over time these can amount to a lot of files due to the dynamic nature of the explorer page contents. It's therefore advised to periodically clear the cached views. You can do this by setting up a nightly cronjob that runs `php artisan view:clear` to clear the view cache of any obsolete view files.
 
 #### Starting Horizon
 
@@ -103,6 +101,14 @@ php artisan explorer:cache-delegates-with-voters
 php artisan explorer:cache-delegate-voter-counts
 php artisan explorer:cache-multi-signature-addresses
 ```
+
+### Delegate Performance
+
+Missed blocks are stored in an additional database to calculate performance metrics for delegates. These values are based on the performance of the past 30 days max, and will need to be generated the first time the explorer is run to fill the void of the past 30 days. This can be done by running `php artisan explorer:forging-stats-build --days=30`. Note that this may take a while to run, but after the initial 30 days are stored the new values will be appended to it through scheduled jobs.
+
+### Votereport
+
+The votereport text file is generated through the `explorer:generate-vote-report` command, which runs every 5 minutes by default. This job requires the existence of `jq`, so make sure to install that if it's not available in your environment.
 
 ## Updates
 
