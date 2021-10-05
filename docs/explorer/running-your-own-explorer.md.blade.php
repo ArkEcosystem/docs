@@ -106,9 +106,9 @@ php artisan explorer:cache-multi-signature-addresses
 
 Missed blocks are stored in an additional database to calculate performance metrics for delegates. These values are based on the performance of the past 30 days max, and will need to be generated the first time the explorer is run to fill the void of the past 30 days. This can be done by running `php artisan explorer:forging-stats-build --days=30`. Note that this may take a while to run, but after the initial 30 days are stored the new values will be appended to it through scheduled jobs.
 
-### Votereport
+### Vote Report
 
-The votereport text file is generated through the `explorer:generate-vote-report` command, which runs every 5 minutes by default. This job requires the existence of `jq`, so make sure to install that if it's not available in your environment.
+The vote report text file is generated through the `explorer:generate-vote-report` command, which runs every 5 minutes by default. This job requires the existence of `jq`, so make sure to install that if it's not available in your environment.
 
 ## Updates
 
