@@ -16,11 +16,6 @@
 />
 @endforeach
 
-## Frameworks
-
-<x-general.sidebar-link path="/docs/sdk/frameworks/laravel" name="Laravel" />
-<x-general.sidebar-link path="/docs/sdk/frameworks/symfony" name="Symfony" />
-
 ## Deprecated
 
 @foreach(Documentation::deprecatedSDK() as $sdk)
@@ -31,3 +26,8 @@
     :has-complementary="$sdk['has_complementary']"
 />
 @endforeach
+
+## Frameworks
+
+<x-general.sidebar-link path="/docs/sdk/frameworks/laravel" name="Laravel" />
+<x-general.sidebar-link path="/docs/sdk/frameworks/symfony" name="Symfony" />
