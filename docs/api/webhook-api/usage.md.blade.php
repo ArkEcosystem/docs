@@ -6,7 +6,7 @@ title: Usage
 
 ## Introduction
 
-With the release of ARK Core 2.0, a new feature was introduced, called [Webhooks](https://en.wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
+With the release of ARK Core 2.0, a new feature was introduced, called [Webhooks](https://wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
 
 ## Authorization
 
@@ -14,7 +14,7 @@ Before we start working on the implementation of a webhook handler, we will take
 
 To guarantee that only your server is allowed to send data to your webhook handler, an authorization token is generated on creation of a webhook. **The generated token will only be returned once and not be visible again.**
 
-To generate an authorization token, you need to [create a webhook](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/webhooks/webhook-endpoints/README.md#create-a-webhook).
+To generate an authorization token, you need to [create a webhook](/docs/api/webhook-api/endpoints#create-a-webhook).
 
 Lets take the following token as an example `fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66` which is 64 characters long and breaks down into 2 parts at 32 characters length each.
 
@@ -140,10 +140,6 @@ Let's break down the steps we took here:
 * Create the full token based on the `Authorization` header and `Verification` string.
 * Deny access if the `full token` does not equal the `webhook token`.
 * Log and process the request body if the `full token` is valid.
-
-## Closing
-
-Now you should know enough on how to secure and handle incoming webhooks. Head over to the [API docs](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/api/webhooks/README.md) for webhooks to get started.
 
 ## Authentication
 
