@@ -91,7 +91,7 @@ GET /api/webhooks/{id}
 
 ## Create a Webhook
 
-It is recommended to have a backend service running that will handle your webhook calls, as you'll have to provide a `target` value when creating the webhook. To give you an idea of how this works, we created a couple of [example setups](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/webhooks/webhook-usage/README.md#handling-webhooks) that you can use or get inspiration from. A webhook may be triggered by multiple conditions; as long as one of the conditions evaluates to `true`, the webhook will fire.
+It is recommended to have a backend service running that will handle your webhook calls, as you'll have to provide a `target` value when creating the webhook. To give you an idea of how this works, we created a couple of [example setups](/docs/api/webhook-api/usage#handling-webhooks) that you can use or get inspiration from. A webhook may be triggered by multiple conditions; as long as one of the conditions evaluates to `true`, the webhook will fire.
 
 The returned `token` should be saved and used to validate the webhook origin. It is a secret value which should not be shared. For extra security, whitelist the IP of the node with your target service, ensuring other parties are not able to post webhook payloads.
 
