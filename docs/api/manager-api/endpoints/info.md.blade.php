@@ -31,9 +31,10 @@ info.coreVersion
 | result.currentVersion | string | Used core version. | Yes |
 | result.installedVersion | string | Installed core version. | Yes |
 | result.latestVersion | string | Latest core version from NPM. | Yes |
-| result.currentPluginVersion | string | Used core-manager version. | Yes |
-| result.installedPluginVersion | string | Installed core-manager version. | Yes |
-| result.latestPluginVersion | string | Latest core-manager version from NPM. | Yes |
+| result.manager | object | Core-manager versions. | Yes |
+| result.manager.currentVersion | string | Used core-manager version. | Yes |
+| result.manager.installedVersion | string | Installed core-manager version. | Yes |
+| result.manager.latestVersion | string | Latest core-manager version from NPM. | Yes |
 
 ### Request
 
@@ -56,9 +57,11 @@ info.coreVersion
         "currentVersion": "4.0.0-next.0",
         "installedVersion": "4.0.0-next.0",
         "latestVersion": "4.0.0-next.0",
-        "currentPluginVersion": "3.0.2",
-        "installedPluginVersion": "3.0.2",
-        "latestPluginVersion": "3.0.2"
+        "manager": {
+            "currentVersion": "3.0.2",
+            "installedVersion": "3.0.2",
+            "latestVersion": "3.0.2"
+        }
     }
 }
 ```
