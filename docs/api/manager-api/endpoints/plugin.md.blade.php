@@ -56,3 +56,54 @@ plugin.list
     ]
 }
 ```
+
+## Install plugin
+
+### Method
+
+```bash
+plugin.install
+```
+
+### Parameters
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| method | string | The method name. | Yes |
+| params | object | The parameters of the request. | Yes |
+| params.name | string | The plugin name. | Yes |
+| params.version | string | The plugin version. | No |
+
+### Result
+
+| Name | Type | Description | Required |
+| :--- | :---: | :--- | :---: |
+| id | string / number | The identifier of the request. | Yes |
+| jsonrpc | string | The protocol version. | Yes |
+| result | object | Result. | Yes |
+
+### Request
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "method": "plugin.install",
+    "params": {
+        "name": "@arkecosystem/core-manager"
+        "version": "3.0.0",
+    }
+}
+```
+
+### Response
+
+```javascript
+{
+    "id": "unique-request-id",
+    "jsonrpc": "2.0",
+    "result": {}
+}
+```
