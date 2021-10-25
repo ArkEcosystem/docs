@@ -205,4 +205,3 @@ plugin.remove
     "result": {}
 }
 ```
-
