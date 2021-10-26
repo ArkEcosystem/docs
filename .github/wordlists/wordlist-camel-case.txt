@@ -462,6 +462,7 @@ IMultiSignatureAsset
 includeSignature
 INetwork
 INetworkConfig
+installedVersion
 inSingletonScope
 InstanceType
 InternalTransactionType
