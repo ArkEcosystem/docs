@@ -36,13 +36,13 @@ Avoid extending the controller that ships with Laravel if you don't need any of 
 
 This should rarely be the case because middlewares should be applied either in the `RouteServiceProvider` or inside the route files by using the `middleware` method for specific routes or `group(['middleware' => []])` method to apply the same middleware to multiple endpoints. Validation should be performed by calling `$request->validate()` or using by using [Form Request Validation](https://laravel.com/docs/8.x/validation#form-request-validation) to extract more complex rules and processing out of the controller.
 
-## Model
+## Models
 
 Most Laravel models will extend the base Eloquent class. While there are a handful of syntactic sugars provided directly by Eloquent, it's important to note that these should be used with caution and that the database schema is extremely important, yet volatile component of a system. As a result, there are caveats to these syntactic sugars written below as well as their alternatives.
 
 ### Accessors
 
-Eloquent provides a way to generate model attributes on-the-fly, using so called [https://laravel.com/docs/8.x/eloquent-mutators#defining-an-accessor](model accessors). Even though they provide a shortcut to dynamically generate attributes (such as "full name" generated from the "first name" and "last name" attributes), if you're not converting a model to a JSON form and generating an API response from the model (even then, there are alternatives such as API resources), there are certain trade-offs. One is poor IDE support, inability to use these dynamically generated attributes during ordering or querying the model, but the primary reason is hurting the readability of the code and inability to differentiate an actual database field from the dynamically generated attribute, without digging in the model class. In situations like these, always start by implementing a simple method to the model class to serve as a getter.
+Eloquent provides a way to generate model attributes on-the-fly, using so called [model accessors](https://laravel.com/docs/8.x/eloquent-mutators#defining-an-accessor). Even though they provide a shortcut to dynamically generate attributes (such as "full name" generated from the "first name" and "last name" attributes), if you're not converting a model to a JSON form and generating an API response from the model (even then, there are alternatives such as API resources), there are certain trade-offs. One is poor IDE support, inability to use these dynamically generated attributes during ordering or querying the model, but the primary reason is hurting the readability of the code and inability to differentiate an actual database field from the dynamically generated attribute, without digging in the model class. In situations like these, always start by implementing a simple method to the model class to serve as a getter.
 
 #### Good
 ```php
