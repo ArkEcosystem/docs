@@ -94,6 +94,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 <x-link-collection
     :links="[
         ['path' => '/docs/marketsquare/support/supported-assets', 'name' => 'Supported Assets'],
+        ['path' => '/docs/marketsquare/support/curation', 'name' => 'MarketSquare Assets & Manual Curation'],
         ['path' => 'https://ark.dev/contact', 'name' => 'Contact Us'],
     ]"
 />
