@@ -55,4 +55,5 @@
 ## Support
 
 <x-general.sidebar-link path="/docs/marketsquare/support/supported-assets" name="Supported Assets" />
+<x-general.sidebar-link path="/docs/marketsquare/support/curation" name="Assets & Curation" />
 <x-general.sidebar-link path="https://ark.dev/contact" name="Contact Us" />
