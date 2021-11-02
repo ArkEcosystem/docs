@@ -103,7 +103,7 @@ ark plugin:install @vendor/package --network=testnet
 ```
 
 <x-alert type="info">
-Private NPM repository location like (Verdaccio)[https://verdaccio.org/] can be used and set via CORE_NPM_REGISTRY env variable.
+Private NPM repository location like [Verdaccio](https://verdaccio.org) can be used and set via CORE_NPM_REGISTRY env variable.
 </x-alert>
 
 Plugins are installed on default `data` location inside `/plugins` folder. You can check default location with:
