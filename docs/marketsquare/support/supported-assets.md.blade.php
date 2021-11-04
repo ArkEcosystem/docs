@@ -12,9 +12,9 @@ This section contains information about supported metadata for use by Projects o
 
 ### Platforms
 
-A Platform associates projects to a particular cryptoasset and helps users find and identify related projects on MarketSquare.
+Platforms associate a project with a particular cryptoasset or Blockchain and help users find and identify corresponding projects.
 
-Any cryptoasset listed on [CoinMarketCap](https://coinmarketcap.com) should also be available as a platform choice on MarketSquare. Below is just a small example of some of these:
+Any cryptoasset listed on [CoinMarketCap](https://coinmarketcap.com) should also be available as a platform choice on MarketSquare. Below is just a small example of these:
 
 |                                                                       |                               Examples                                |                                                                       |
 | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: |
