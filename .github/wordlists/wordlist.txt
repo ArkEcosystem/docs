@@ -89,6 +89,7 @@ Cryptoconomy
 csharp
 Ctrl
 ctx
+Curation
 customizable
 customizations
 CXX
