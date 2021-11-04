@@ -12,28 +12,16 @@ This section contains information about supported metadata for use by Projects o
 
 ### Platforms
 
-Blockchain Platforms supported for use by Projects on MarketSquare.
+A Platform associates projects to a particular cryptoasset and helps users find and identify related projects on MarketSquare.
 
-|                                                                       |                               Supported                               |                                                                       |
+Any cryptoasset listed on [CoinMarketCap](https://coinmarketcap.com) should also be available as a platform choice on MarketSquare. Below is just a small example of some of these:
+
+|                                                                       |                               Examples                                |                                                                       |
 | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: |
 | <x-ark-icon name="networks/ark" size="md" />          **ARK**         | <x-ark-icon name="networks/avalanche" size="md" />    **Avalanche**   | <x-ark-icon name="networks/hive" size="md" />         **Hive**        |
 | <x-ark-icon name="networks/binance" size="md" />      **Binance**     | <x-ark-icon name="networks/bitcoin" size="md" />      **Bitcoin**     | <x-ark-icon name="networks/cardano" size="md" />      **Cardano**     |
 | <x-ark-icon name="networks/cosmos" size="md" />       **Cosmos**      | <x-ark-icon name="networks/ethereum" size="md" />     **Ethereum**    | <x-ark-icon name="networks/eos" size="md" />          **EOS**         |
 | <x-ark-icon name="networks/neo" size="md" />          **NEO**         | <x-ark-icon name="networks/polkadot" size="md" />     **Polkadot**    | <x-ark-icon name="networks/tron" size="md" />         **Tron**        |
-
-To add a custom platform, click '**Add Platform**' during the Project Registration or Update processes. Next, enter the platforms name, and click '**Save**'.
-
-|                                                                       |                                 Other                                 |                                                                       |
-| :-------------------------------------------------------------------: | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: |
-| **Bancor**                                                            | **Bitcoin Cash**                                                      | **Enjin**                                                             |
-| **Litecoin**                                                          | **Monero**                                                            | **Ripple**                                                            |
-| **Tether**                                                            | **Uniswap**                                                           | **Zcash**                                                             |
-| **Zcoin**                                                             |                                                                       |                                                                       |
-
-|                                                                       |                              Coming Soon                              |                                                                       |
-| :-------------------------------------------------------------------: | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: |
-| <x-ark-icon name="networks/komodo" size="md" />       **Komodo**      | <x-ark-icon name="networks/steem" size="md" />        **Steem**       | <x-ark-icon name="networks/stellar" size="md" />      **Stellar**     |
-| <x-ark-icon name="networks/waves" size="md" />        **Waves**       |                                                                       |                                                                       |
 
 ### Categories
 
