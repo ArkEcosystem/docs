@@ -9,7 +9,7 @@ This page will guide developers through the process of setting up and deploying 
 Developers should be familiar with configuring and handling databases and be comfortable developing in PHP and Laravel environments. In particular, working knowledge of PHP 8, Composer, and Valet are highly recommended.
 
 <x-alert type="info">
-Explorer relies on two separate databases. A Core Node database for serving data to Explorer, the other for local storage of additional data (e.g. forging statistics).
+Explorer relies on two separate databases. A Core database serves data to the Explorer, and the other database is for local storage of additional data (e.g. forging statistics).
 </x-alert>
 
 ## Prerequisites
@@ -33,8 +33,8 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate:fresh
 
-## The following two commands may be used to generate placeholder data.
-## This may be done as an alternative to using a Core Node database.
+## Use the following two commands to generate placeholder data.
+## This is as an alternative to using a Core Node database.
 ## The 'EXPLORER_DB_*' variable must match the exact name of your database.
 ## placeholder data commands:
 # - php artisan migrate --path=tests/migrations --database=explorer
@@ -47,7 +47,7 @@ valet link explorer
 ```
 
 <x-alert type="danger">
-_**IMPORTANT**_: You'll need access to a Core Postgres database to successfully launch an Explorer instance. Alternatively, the `test/migrations` and `composer play` commands commented above may be utilized to produce placeholder data. This detail must be specified using the `EXPLORER_DB_*` variable of your `.env` file.
+**IMPORTANT**: You'll need access to a Core Postgres database to successfully launch an Explorer instance. Alternatively, the `test/migrations` and `composer play` commands commented above may be utilized to produce placeholder data. This detail must be specified using the `EXPLORER_DB_*` variable of your `.env` file.
 </x-alert>
 
 ## Caching
@@ -58,8 +58,8 @@ Afterward, you can navigate to `explorer.test` in your browser to see it in acti
 
 ## Delegate Performance
 
-Missed blocks are stored in an additional database to calculate performance metrics for delegates. These values are based on the performance of the past 30 days max and will need to be generated the first time the explorer is run to fill the void of the past 30 days. This can be done by running `php artisan explorer:forging-stats-build --days=30`. Note that this may take a while to run, but after the initial 30 days are stored the new values will be appended to it through scheduled jobs.
+Missed blocks are stored in an additional database to calculate performance metrics for delegates. These values represent performance from the past 30 days. Generate them the first time you run the Explorer by executing `php artisan explorer:forging-stats-build --days=30`. While this calculation may initially take a while to run, new values get appended through scheduled jobs after storing the initial 30 days.
 
 ## Vote Report
 
-The vote report text file is generated through the `explorer:generate-vote-report` command, which runs every 5 minutes by default. This job requires the existence of `jq`, so make sure to install that if it's not available in your environment.
+The vote report text file gets created using the `explorer:generate-vote-report` command, which runs every 5 minutes by default. This job requires the existence of `jq`, so make sure to install that if it's not available in your environment.
