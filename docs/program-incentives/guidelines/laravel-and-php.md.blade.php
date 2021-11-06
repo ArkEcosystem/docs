@@ -122,7 +122,7 @@ class User extends Model
 // User::banned()->first()
 ```
 
-This will reduce complexity in the model class, provide a good IDE support and appropriately separate the concerns, where model class wouldn't need to contain dozens of scopes manipulating the query builder.
+This will reduce complexity in the model class, provide a good IDE support and appropriately separate the concerns, where model class wouldn't need to contain dozens of scopes manipulating the query builder. Testing a custom query builder can be performed by simply unit testing the query builder instance, apart from the user model test.
 
 ## Database Migrations
 
