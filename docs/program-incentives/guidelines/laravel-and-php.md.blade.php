@@ -45,6 +45,7 @@ Most Laravel models will extend the base Eloquent class. While there are a handf
 Eloquent provides a way to generate model attributes on-the-fly, using so called [model accessors](https://laravel.com/docs/8.x/eloquent-mutators#defining-an-accessor). Even though they provide a shortcut to dynamically generate attributes (such as "full name" generated from the "first name" and "last name" attributes), if you're not converting a model to a JSON form and generating an API response from the model (even then, there are alternatives such as API resources), there are certain trade-offs. One is poor IDE support, inability to use these dynamically generated attributes during ordering or querying the model, but the primary reason is hurting the readability of the code and inability to differentiate an actual database field from the dynamically generated attribute, without digging in the model class. In situations like these, always start by implementing a simple method to the model class to serve as a getter.
 
 #### Good
+
 ```php
 class User extends Model
 {
@@ -58,6 +59,7 @@ class User extends Model
 ```
 
 #### Bad
+
 ```php
 class User extends Model
 {
