@@ -72,6 +72,12 @@ Livewire can automatically determine the view that should be used. This means th
 
 If you are working on a project that makes use of DDD you will either have to keep the render method because of the way that Livewire resolves the view location or overwrite the method that resolves the view location to only take the class name into account instead of the FQCN of the component. Overriding the resolution method is recommended if a large number of components are used.
 
+#### Blade component as an alternative
+
+While Livewire allows developers to quickly build interactive UIs, always using Livewire for UI components can be a bad practice -- Blade components combined with [Alpine.js](https://github.com/alpinejs/alpine) can also produce rich UI elements. If the component requires no interactivity (simply rendering an HTML), always prefer Blade before a Livewire component. An example is when a root Livewire component iterates over specific items and renders each of them as a UI component. If no item in the list requires any interactivity with the server-side then always prefer to componentize using Blade components.
+
+Only using Livewire when it's needed lowers the performance overhead created by Livewire's boot time. Because Livewire has both front-end and back-end components, not using Livewire for every UI component can significantly improve the performance of the application. Other than performance overhead, this can help lessen the amount of [DOM diffing issues](https://laravel-livewire.com/docs/2.x/troubleshooting) and bugs created by nesting Livewire components.
+
 ### State Management
 
 When working with Livewire you will work a lot with models and their array representations or small bits of data from them that you will need to update. All of this data should be looked at as the state of the component and be stored in a `$state` array that will hold all of the values that are modified on the component. An exception to this rule are models that are passed to the `mount` method because these models will not be modified directly, they only are modified through updates that are using the state data.
