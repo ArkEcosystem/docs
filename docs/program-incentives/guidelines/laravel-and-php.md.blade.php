@@ -120,6 +120,36 @@ class UpdateUserNameForm extends Component
 
 Always ensure to apply validation before performing an action that makes use of component state. This validation can be either performed in real-time or at the time of a method call. If a method is being executed based on events or instant feedback is executed it is recommended to use real-time validation for faster feedback for an improved UX.
 
+### Authorization
+
+If the component performs database queries to retrieve models, always make sure the user performing the request is authorized to retrieve the model. A good example is if you're locating a server model, but the constraint is that the server instance is tied to the user instance (through a one-to-many relationship), always retrieve the server model via the relationship. This prevents bugs where unauthorized users can perform illegal actions.
+
+On top of that, always ensure user has appropriate permissions to interact with the model, using policies, permissions or gates (depending on the application setup). To help you with that, Livewire offers you to import the `Illuminate\Foundation\Auth\Access\AuthorizesRequests` trait into the component and will properly handle all unauthorized responses. To read more, check out the [Livewire documentation](https://laravel-livewire.com/docs/2.x/authorization) on this topic.
+
+```php
+namespace App\Http\Livewire;
+
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Livewire\Component;
+
+class DeleteServer extends Component
+{
+    use InteractsWithUser, AuthorizesRequests;
+
+    public function submit($serverId)
+    {
+        // Bad ❌
+        $server = Server::findOrFail($serverId);
+
+        // Good ✅
+        $server = $this->user->servers()->findOrFail($serverId);
+
+        // Authorize against deletion...
+        $this->authorize('delete', $server);
+    }
+}
+```
+
 ### Localization
 
 For localization, we make use of `kebab-case` for keys that contain nested entries and `snake_case` for key value pairs. As for parameters, we use `camelCase`
