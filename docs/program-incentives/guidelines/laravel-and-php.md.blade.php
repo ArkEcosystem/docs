@@ -72,6 +72,22 @@ class User extends Model
 
 So, what is the good use case for using accessors? Imagine a situation when working on an older codebase where you stored both user's first name and last name and also user's full name in the database. You make changes and want to remove the `full_name` from the database. To save yourself the hassle of updating all the references to the `full_name` attribute throughout the codebase and from a declined PR, consider creating the magic accessor to serve as a temporary proxy for this database column.
 
+### Building `WHERE` clauses
+
+Just like with accessors, Eloquent allows the developer to use a syntax sugar (dynamically building the `where()` method) to generate the `WHERE` clause while building the database query. An example is if you want to locate the user record by their name, you can chain the `->whereName('John Doe')` call to the query builder.
+
+This should never be used and you should always define the column name appropriately as a first parameter in the `where()` method.
+
+```
+// Bad ❌
+User::whereName('John Doe')->first();
+
+// Good ✅
+User::where('name', 'John Doe')->first();
+```
+
+Explicitly defining column name as string parameters makes it more clear which column is targeted, especially when there's potential collision with common Laravel methods like `whereDate`, `whereColumn`, `whereRaw` and others. This produces clearer and more maintainable code, making future refactorings easier for fellow developers.
+
 ## Database Migrations
 
 You should always avoid the usage of the `down` method in migrations which can be used for database rollbacks. There are several reasons why you should avoid the usage of this method but the primary reason is the loss of data in production. It is quite risky to rollback a production database and more often than not you will lose data and have to apply a database backup which costs even more time.
