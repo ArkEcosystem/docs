@@ -78,7 +78,7 @@ Just like with accessors, Eloquent allows the developer to use a syntax sugar (d
 
 This should never be used and you should always define the column name appropriately as a first parameter in the `where()` method.
 
-```
+```php
 // Bad ❌
 User::whereName('John Doe')->first();
 
@@ -87,6 +87,42 @@ User::where('name', 'John Doe')->first();
 ```
 
 Explicitly defining column name as string parameters makes it more clear which column is targeted, especially when there's potential collision with common Laravel methods like `whereDate`, `whereColumn`, `whereRaw` and others. This produces clearer and more maintainable code, making future refactorings easier for fellow developers.
+
+### Complex queries
+
+If you see yourself reaching for [query scopes](https://laravel.com/docs/8.x/eloquent#query-scopes) a lot and have a lot of custom database queries in a model, consider building a custom query builder instance and attach it to the model.
+
+```php
+use Illuminate\Database\Eloquent\Builder;
+
+class UserQuery extends Builder
+{
+    public function banned() : self
+    {
+        return $this->whereNotNull('banned_at');
+    }
+
+    // ...
+}
+```
+
+```php
+use App\Queries\UserQuery;
+
+class User extends Model
+{
+    // ...
+
+    public function newEloquentBuilder($query) : UserQuery
+    {
+        return new UserQuery($query);
+    }
+}
+
+// User::banned()->first()
+```
+
+This will reduce complexity in the model class, provide a good IDE support and appropriately separate the concerns, where model class wouldn't need to contain dozens of scopes manipulating the query builder.
 
 ## Database Migrations
 
