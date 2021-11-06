@@ -565,3 +565,16 @@ Zilliqa
 zsh
 zshrc
 zypper
+Accessors
+UserQuery
+accessor
+accessors
+getNameAttribute
+getter
+mutators
+newEloquentBuilder
+whereColumn
+whereDate
+whereName
+whereNotNull
+whereRaw
