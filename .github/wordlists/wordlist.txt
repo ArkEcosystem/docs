@@ -578,3 +578,11 @@ whereDate
 whereName
 whereNotNull
 whereRaw
+AuthorizesRequests
+DeleteServer
+InteractsWithUser
+Livewire's
+UIs
+componentize
+findOrFail
+serverId
