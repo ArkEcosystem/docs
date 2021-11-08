@@ -36,6 +36,96 @@ Avoid extending the controller that ships with Laravel if you don't need any of 
 
 This should rarely be the case because middlewares should be applied either in the `RouteServiceProvider` or inside the route files by using the `middleware` method for specific routes or `group(['middleware' => []])` method to apply the same middleware to multiple endpoints. Validation should be performed by calling `$request->validate()` or using by using [Form Request Validation](https://laravel.com/docs/8.x/validation#form-request-validation) to extract more complex rules and processing out of the controller.
 
+## Models
+
+Most Laravel models will extend the base Eloquent class. While there are a handful of syntactic sugars provided directly by Eloquent, it's important to note that these should be used with caution and that the database schema is extremely important, yet volatile component of a system. As a result, there are caveats to these syntactic sugars written below as well as their alternatives.
+
+### Accessors
+
+Eloquent provides a way to generate model attributes on-the-fly, using so called [model accessors](https://laravel.com/docs/8.x/eloquent-mutators#defining-an-accessor). Even though they provide a shortcut to dynamically generate attributes (such as "full name" generated from the "first name" and "last name" attributes), if you're not converting a model to a JSON form and generating an API response from the model (even then, there are alternatives such as API resources), there are certain trade-offs. One is poor IDE support, inability to use these dynamically generated attributes during ordering or querying the model, but the primary reason is hurting the readability of the code and inability to differentiate an actual database field from the dynamically generated attribute, without digging in the model class. In situations like these, always start by implementing a simple method to the model class to serve as a getter.
+
+#### Good
+
+```php
+class User extends Model
+{
+    public function name()
+    {
+        return $this->first_name.' '.$this->last_name;
+    }
+}
+
+// $user->name();
+```
+
+#### Bad
+
+```php
+class User extends Model
+{
+    public function getNameAttribute()
+    {
+        return $this->first_name.' '.$this->last_name;
+    }
+}
+
+// $user->name;
+```
+
+So, what is the good use case for using accessors? Imagine a situation when working on an older codebase where you stored both user's first name and last name and also user's full name in the database. You make changes and want to remove the `full_name` from the database. To save yourself the hassle of updating all the references to the `full_name` attribute throughout the codebase and from a declined PR, consider creating the magic accessor to serve as a temporary proxy for this database column.
+
+### Building `WHERE` clauses
+
+Just like with accessors, Eloquent allows the developer to use a syntax sugar (dynamically building the `where()` method) to generate the `WHERE` clause while building the database query. An example is if you want to locate the user record by their name, you can chain the `->whereName('John Doe')` call to the query builder.
+
+This should never be used and you should always define the column name appropriately as a first parameter in the `where()` method.
+
+```php
+// Bad ❌
+User::whereName('John Doe')->first();
+
+// Good ✅
+User::where('name', 'John Doe')->first();
+```
+
+Explicitly defining column name as string parameters makes it more clear which column is targeted, especially when there's potential collision with common Laravel methods like `whereDate`, `whereColumn`, `whereRaw` and others. This produces clearer and more maintainable code, making future refactorings easier for fellow developers.
+
+### Complex queries
+
+If you see yourself reaching for [query scopes](https://laravel.com/docs/8.x/eloquent#query-scopes) a lot and have a lot of custom database queries in a model, consider building a custom query builder instance and attach it to the model.
+
+```php
+use Illuminate\Database\Eloquent\Builder;
+
+class UserQuery extends Builder
+{
+    public function banned() : self
+    {
+        return $this->whereNotNull('banned_at');
+    }
+
+    // ...
+}
+```
+
+```php
+use App\Queries\UserQuery;
+
+class User extends Model
+{
+    // ...
+
+    public function newEloquentBuilder($query) : UserQuery
+    {
+        return new UserQuery($query);
+    }
+}
+
+// User::banned()->first()
+```
+
+This will reduce complexity in the model class, provide a good IDE support and appropriately separate the concerns, where model class wouldn't need to contain dozens of scopes manipulating the query builder. Testing a custom query builder can be performed by simply unit testing the query builder instance, apart from the user model test.
+
 ## Database Migrations
 
 You should always avoid the usage of the `down` method in migrations which can be used for database rollbacks. There are several reasons why you should avoid the usage of this method but the primary reason is the loss of data in production. It is quite risky to rollback a production database and more often than not you will lose data and have to apply a database backup which costs even more time.
