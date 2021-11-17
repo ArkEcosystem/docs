@@ -212,6 +212,29 @@ class UpdateUserNameForm extends Component
 }
 ```
 
+#### What counts as "state"
+
+If the Livewire component contains forms, all the input fields within the form will count as state, and always keep those in the `$state` property. Storing these fields as a separate property would result in potentially dozens of properties within the component and would produce a mess. In that case, it would be hard to visually differentiate which properties are form state and which properties are relevant component data.
+
+If you're displaying a loading indicator, interacting with Eloquent models or resolving services, these can be safely stored as an additional property on the component.
+
+```php
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+
+class UpdateUserForm extends Component
+{
+    public bool $isLoading = false;
+    protected Stripe $stripe;
+
+    public array $state = [
+        'name' => null,
+        'email' => null,
+    ];
+}
+```
+
 ### Validation
 
 Always ensure to apply validation before performing an action that makes use of component state. This validation can be either performed in real-time or at the time of a method call. If a method is being executed based on events or instant feedback is executed it is recommended to use real-time validation for faster feedback for an improved UX.
