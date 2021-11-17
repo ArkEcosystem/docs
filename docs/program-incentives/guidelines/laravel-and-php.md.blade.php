@@ -148,6 +148,14 @@ These tools should always be used with their most strict configurations. This en
 
 Do keep in mind that some issues might be false-positives because things like [Facades](https://laravel.com/docs/8.x/facades) require additional type hints and comments in your code so that these tools can understand what the underlying binding of a facade is doing. A few of the aforementioned tools have plugins for Laravel that try to solve this issue but you might still occasionally end up with false-positives.
 
+## Usage of Composer dependencies
+
+When building features, there will be a dilemma whether to pull in a Composer dependency that performs the needed action or to build your own from scratch. Try to base the decision on several things, such as **complexity of the feature, tests and the technical debt**. In general, if the dependency hasn't received an update in a long time, isn't actively maintained or has little to no tests -- always prefer to build your own. Pulling in the library that has very little tests can be a maintenance burden in the future. Because we try to keep high standards regarding static analysis in ARK projects, third-party libraries often do not satisfy these static analysis tools, so think about that as well.
+
+Developing from scratch gives you more control and allows you to fine-tune the feature to your own specific needs, and of course make you learn something new. On the other hand, reinventing the wheel can cause you to waste time. Always weigh the advantages and disadvantages before making a final decision. Of course, there are several instances where you would never try to develop your own features, but rather use huge libraries which are actively maintained and would save a lot of time. A few examples are if you need to interact with the Stripe API, or the AWS SDK -- you would never try to build your own, but rather pull in their respective libraries.
+
+Sometimes, building from scratch results in a more maintainable code than pulling in a third-party library.
+
 ## Front-End Interactions
 
 If you need interactivity for certain functionality or want to avoid page reloads you should use [Laravel Livewire](https://laravel-livewire.com/) and [Alpine.js](https://github.com/alpinejs/alpine). Livewire allows you to seamlessly integrate with the back-end without having to build a separate API for communication with the back-end. Alpine provides you with an expressive API to manipulate the DOM without having to pull in heavyweights like [Vue](https://vuejs.org/) or [React](https://reactjs.org/).
