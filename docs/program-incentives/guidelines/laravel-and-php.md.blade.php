@@ -156,6 +156,16 @@ If you find yourself in a situation where you think Livewire or Alpine are insuf
 
 ## Livewire
 
+### Data binding
+
+There are 2 common ways to [bind data](https://laravel-livewire.com/docs/2.x/properties#data-binding) from a client-side to the Livewire component in the back-end using `wire:model` directive -- real-time and deferred.
+
+Use real-time data binding (`wire:model="state.name"`) when you need the real-time validation and when you need certain aspects changed in real-time ("as user types"). Keep in mind that Livewire will send an HTTP request to the back-end every time an input event is emitted on the HTML element (typed into input field, etc). When opting for real-time data binding, consider modifying the debounce to fit the needs of the component.
+
+Use deferred updating (`wire:model.defer="state.name"`) if the component doesn't need real-time validation and there's no need to update the UI in real time. If there's no need to perform an AJAX request to the back-end to store and validate the input, there's no reason to use real-time data binding. Deferred updating can drastically reduce the number of requests.
+
+In general, always prefer deferred updating to save the network usage and improve performance, but fallback to real-time when you need it.
+
 ### Rendering
 
 Livewire can automatically determine the view that should be used. This means that you should generally omit the `render` method and let Livewire figure out what should be rendered. This means less code to think about and no room for human error in referencing a wrong view.
