@@ -23,12 +23,12 @@ CORE_API_RATE_LIMIT_WHITELIST=127.0.0.1,192.168.1.1,172.31.255.1
 ```
 
 Setting `CORE_API_RATE_LIMIT_DISABLED=true` will globally disable all rate limits. For internal use this is safe. More fine-grained control may be exerted by using `CORE_API_RATE_LIMIT_USER_LIMIT`, which uses IP addresses to assign rate limits. The unit is `requests/minute` (default: 100 requests/per minute/per IP).
- Excluding certain IP addresses from rate limitting can be achieved by setting `CORE_API_RATE_LIMIT_WHITELIST=` followed by comma separated list of IP addresses (default: 172.0.0.1).  
+Excluding certain IP addresses from rate limiting can be achieved by setting `CORE_API_RATE_LIMIT_WHITELIST=` followed by comma separated list of IP addresses (default: 172.0.0.1).
 
 ## Use case 1: Disable Rate Limits  <a id="disable-rate-limits"></a>
 
 <x-alert type="warning">
-**WARNING:** Make sure API is accesible only to your internal network and not visible to the outside world.
+**WARNING:** Make sure API is accessible only to your internal network and not visible to the outside world.
 </x-alert>
 
 ```javascript
@@ -38,7 +38,7 @@ CORE_API_RATE_LIMIT_DISABLED=true
 ## Use case 2: White Listing  <a id="white-listing"></a>
 
 <x-alert type="info">
-**INFO:** Instead of globally disabling rate limits it is possible to exclude certain IP addresses from rate limits and raise the global limits. 
+**INFO:** Instead of globally disabling rate limits it is possible to exclude certain IP addresses from rate limits and raise the global limits.
 </x-alert>
 
 ```javascript
