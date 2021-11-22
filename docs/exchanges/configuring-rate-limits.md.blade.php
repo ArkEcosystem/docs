@@ -12,48 +12,36 @@ By default, rate limits are enabled on ARK Core nodes. When the rate limit is ex
 
 ## Configuring the Rate Limit <a id="configuring-the-rate-limit"></a>
 
-The default way to configure the node's rate limit is by editing the .env file found at `~/.config/ark-core/{network}/.env`. Two keys interest us here:
+You can fine tune or completely disable the node's rate limit by editing the .env file found at `~/.config/ark-core/{network}/.env`. Find most important parameters below:
 
 ### file: ~/.config/ark-core/{network}/.env <a id="file-config-ark-core-network-env"></a>
 
 ```javascript
-CORE_API_RATE_LIMIT=true
+CORE_API_RATE_LIMIT_DISABLED=true
+CORE_API_RATE_LIMIT_USER_LIMIT=300
+CORE_API_RATE_LIMIT_WHITELIST=127.0.0.1,192.168.1.1,172.31.255.1
+```
+
+Setting `CORE_API_RATE_LIMIT_DISABLED=true` will globally disable all rate limits. For internal use this is safe. More fine-grained control may be exerted by using `CORE_API_RATE_LIMIT_USER_LIMIT`, which uses IP addresses to assign rate limits. The unit is `requests/minute` (default: 100 requests/per minute/per IP).
+Excluding certain IP addresses from rate limiting can be achieved by setting `CORE_API_RATE_LIMIT_WHITELIST=` followed by comma separated list of IP addresses (default: 172.0.0.1).
+
+## Use case 1: Disable Rate Limits  <a id="disable-rate-limits"></a>
+
+<x-alert type="warning">
+**WARNING:** Make sure API is accessible only to your internal network and not visible to the outside world.
+</x-alert>
+
+```javascript
+CORE_API_RATE_LIMIT_DISABLED=true
+```
+
+## Use case 2: White Listing  <a id="white-listing"></a>
+
+<x-alert type="info">
+**INFO:** Instead of globally disabling rate limits it is possible to exclude certain IP addresses from rate limits and raise the global limits.
+</x-alert>
+
+```javascript
+CORE_API_RATE_LIMIT_WHITELIST=127.0.0.1,192.168.1.1,172.31.255.1
 CORE_API_RATE_LIMIT_USER_LIMIT=300
 ```
-
-Setting `CORE_API_RATE_LIMIT` to false will globally disable all rate limits. For internal use this is secure. More fine-grained control may be exerted by using `CORE_API_RATE_LIMIT_USER_LIMIT`, which uses IP addresses to assign rate limits. The unit is `requests/minute`.
-
-## Configuration Through a Plugin <a id="configuration-through-a-plugin"></a>
-
-Lower access to the rate limiting can be obtained by writing a plugin at `~/.config/ark-core/{network}/plugin.js`. We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the ARK Core rate limiter.
-
-```javascript
-"@arkecosystem/core-api": {
-    enabled: !process.env.CORE_API_DISABLED,
-    host: process.env.CORE_API_HOST || "0.0.0.0",
-    port: process.env.CORE_API_PORT || 4003,
-    whitelist: ["*"],
-}
-```
-
-The `whitelist` option may be used to allow specific IP addresses to access the RPC service, which by default is only accessible by requests originating from `localhost`.
-
-Cache timeouts can be disabled, which is especially useful on resource-strained machines running heavy queries, such as walking the chain block by block.
-
-## Further Reference <a id="further-reference"></a>
-
-ARK Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This rate-limiter can be configured by setting/altering [core-api](https://github.com/ArkEcosystem/core/tree/develop/packages/core-api/src/defaults.js#L48-L56).
-
-```javascript
-rateLimit: {
-    enabled: !process.env.CORE_API_RATE_LIMIT,
-    pathLimit: false,
-    userLimit: process.env.CORE_API_RATE_LIMIT_USER_LIMIT || 300,
-    userCache: {
-        expiresIn: process.env.CORE_API_RATE_LIMIT_USER_EXPIRES || 60000,
-    },
-    ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1"],
-},
-```
-
-Here, `pathLimit` can be used to limit the total requests per path per given period, or set it to `false` to disable it. By default `pathLimits` are disabled.
