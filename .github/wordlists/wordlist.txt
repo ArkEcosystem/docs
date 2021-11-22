@@ -458,6 +458,7 @@ struct
 su
 submitdelegateregistration
 submitsecondsignature
+subpage
 sudo
 sudoers
 SV

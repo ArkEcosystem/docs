@@ -73,6 +73,7 @@ ARKCommunity
 ARKCrypto
 ARKDeserializer
 ARKExplorer
+arkHistoryListing
 ArkHTTPException
 ARKManager
 ARKMessage
