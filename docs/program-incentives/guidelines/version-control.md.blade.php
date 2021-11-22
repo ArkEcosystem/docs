@@ -51,7 +51,7 @@ Appears under "Performance Improvements" header, and under "Breaking Changes" wi
 ```
 perf(crypto): remove arkHistoryListing option
 
-BREAKING CHANGE: The ARK history listing option is removed in favor of new new ARK history subpage.
+BREAKING CHANGE: The ARK history listing option is removed in favor of new ARK history subpage.
 ```
 
 The following commit and commit `7d1bbd2` do not appear in the changelog if they are under the same release. If not, the revert commit appears under the "Reverts" header.
