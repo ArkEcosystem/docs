@@ -13,9 +13,6 @@ jobs:
                   ref: ${{ github.head_ref }}
                   token: ${{ secrets.GH_TOKEN }}
 
-            - name: Authenticate Nova
-              run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_PASSWORD }}
-
             - name: Update dependencies
               run: npx @faustbrian/node-composer-check-updates --caret-minor
 
