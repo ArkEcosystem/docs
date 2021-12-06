@@ -85,10 +85,10 @@ All available types:
 * ***perf:*** A code change that improves performance (will appear in the changelog)
 * ***refactor:*** A code change that neither fixes a bug nor adds a feature
 * ***chore:*** small task-related things that don’t fix bugs, e.g. rewording a translation
-* **docs:** documentation only changes
+* ***docs:*** documentation only changes
 * ***refactor:*** changing existing code without it being a bugfix or introducing a new feature
 * ***test:*** test related, e.g. adding missing coverage or fixing failing ones
-* ***Style:*** Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* ***style:*** Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 * ***build:*** Changes that affect the build system or external dependencies (example scope: npm)
 * ***ci:*** Changes to our CI configuration files and scripts (example scope: GitHub)
 
