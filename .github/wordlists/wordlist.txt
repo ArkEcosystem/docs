@@ -52,6 +52,8 @@ browserify
 BTC
 btc
 buf
+bugfix
+bugfixes
 buz
 Cardano
 cast
