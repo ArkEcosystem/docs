@@ -41,8 +41,9 @@ EXPLORER_DB_PORT=YOUR_CORE_DATABASE_PORT
 EXPLORER_DB_DATABASE=YOUR_CORE_DATABASE
 EXPLORER_DB_USERNAME=YOUR_CORE_DATABASE_USERNAME
 EXPLORER_DB_PASSWORD=YOUR_CORE_DATABASE_PASSWORD
-
 ```
+
+If you're using a database that's running on the Docker host (such as local machine or server), you may use the `EXPLORER_DB_HOST=host.docker.internal` environment variable to proxy calls from Docker container to the host.
 
 ### Run ARK Explorer - official ARK Explorer image
 
