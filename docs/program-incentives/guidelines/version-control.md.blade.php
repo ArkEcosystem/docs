@@ -78,6 +78,20 @@ If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. Howev
 
 Other prefixes are up to your discretion. Suggested prefixes are `docs`, `chore`, `style`, `refactor`, and `test` for non-changelog related tasks.
 
+All available types:
+
+- ***feat:*** adding a new feature (will appear in the changelog)
+- ***fix:*** bugfixes (will appear in the changelog)
+- ***perf:*** A code change that improves performance (will appear in the changelog)
+- ***refactor:*** A code change that neither fixes a bug nor adds a feature
+- ***chore:*** small task-related things that don’t fix bugs, e.g. rewording a translation
+- **docs:** documentation only changes
+- ***refactor:*** changing existing code without it being a bugfix or introducing a new feature
+- ***test:*** test related, e.g. adding missing coverage or fixing failing ones
+- ***Style:*** Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- ***build:*** Changes that affect the build system or external dependencies (example scope: npm)
+- ***ci:*** Changes to our CI configuration files and scripts (example scope: GitHub)
+
 ### Scope
 
 The scope could be anything specifying the place of the commit change. For example `core`, `profile`, `crypto`, `database` etc...
