@@ -100,6 +100,7 @@ DAO
 dapp
 dapps
 davecgh
+DBDEE
 DDOS
 DDTHH
 debranding
@@ -468,6 +469,7 @@ sudoers
 SV
 SVG
 svg
+SVG's
 SVGO
 Symfony
 sys
