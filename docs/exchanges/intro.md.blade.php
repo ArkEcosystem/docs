@@ -13,10 +13,15 @@ We have added "quick guides" to walk you through the process of interacting with
 Use the sidebar to navigate this section, or follow the links below:
 
 <livewire:page-reference path="/docs/exchanges/node-installation/baremetal-instructions" />
+
 <livewire:page-reference path="/docs/exchanges/node-installation/docker-installation" />
+
 <livewire:page-reference path="/docs/exchanges/json-rpc/getting-started" />
+
 <livewire:page-reference path="/docs/exchanges/json-rpc/examples" />
+
 <livewire:page-reference path="/docs/exchanges/json-rpc/endpoints/intro" />
+
 <livewire:page-reference path="/docs/exchanges/public-api-guide" />
 
 ## Upgrade Guides
