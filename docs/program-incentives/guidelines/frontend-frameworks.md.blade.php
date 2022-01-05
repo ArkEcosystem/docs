@@ -82,6 +82,32 @@ We have plenty of icons that are used, and we prefer to make use of SVGs on webp
 2. Once minimized, check the source of the SVG for any remaining `style` attributes. If present, these styles make use of generic ids like `st0`, but these will be reused across different SVGs. As a result, if you would make use of this SVG in its current state and have another on the same page that references the same id, their styles will clash. Therefore you should rewrite these ids to something unique; usually the name of the file followed by `-st0` will do. Alternatively you can open the icon in Adobe Illustrator and save it again, but with inline styles. Then the class styling should be removed and there is no risk of interference.
 3. When working with icons, make sure the code does not reference hardcoded color values but makes use of `currentColor` instead. This will allow us to set the colors to our liking when using them in the views.
 
+### Dark mode SVG's
+
+You can prepare SVG's for dark mode by adding a class of `.light-dark-icon` to the SVG. We've created a list of color pairs that work well between light and dark mode. Also, by conforming to this list, we can keep consistency in these designs.
+
+Below you can find a reference table on how you van utilize this class. Please note that the hex color in the syntax varies on your theme. You'll need to replace it with the hex color value of the `light mode color`.
+
+| syntax | light mode color | dark mode color |
+| --- | --- | --- |
+| var(--icon-color-primary-100, #E5F0F8) | theme-color-primary-100 | theme-color-primary-900 |
+| var(--icon-color-primary-200, #BAD6F0) | theme-color-primary-200 | theme-primary-900 |
+| var(--icon-color-secondary-200, #EEF3F5) | theme-color-secondary-200 | theme-secondary-800 |
+| var(--icon-color-secondary-300, #DBDEE5) | theme-color-secondary-300 | theme-secondary-800 |
+| var(--icon-color-secondary-900, #212225) | theme-color-secondary-900 | theme-secondary-600 |
+| var(--icon-color-success-50, #F1FBF4) | theme-color-success-50 | theme-success-800 |
+| var(--icon-color-warning-100, #FFE6B8) | theme-color-warning-100 | theme-warning-900 |
+| var(--icon-color-danger-100, #FFE0DA) | theme-color-danger-100 | theme-danger-800|
+
+#### Example
+
+```xml
+<path d="M165.992 72h-17v6h17v-6z" fill="#E5F0F8"/>
+
+/** light-dark version */
+<path d="M165.992 72h-17v6h17v-6z" fill="var(--icon-color-primary-100, #E5F0F8)"/>
+```
+
 ## Alpine.js
 
 We make use of [Alpine.js](https://github.com/alpinejs/alpine) in addition to Livewire / Laravel to handle behavior that we cannot produce otherwise, like dropdowns. When making use of alpine, keep it simple. Generally you only need one or two states to keep track of in `x-data` to get the desired frontend behavior. If you seem to need more than that, please rethink if you really need alpine for everything you are trying to do or if (part of) it can be delegated to a Livewire component instead. In the rare case where you do need more than a few properties and methods, consider moving it to a separate `.js` file and referencing that in `x-data`.
