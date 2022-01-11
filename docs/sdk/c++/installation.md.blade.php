@@ -68,7 +68,7 @@ cmake --build .
 
 Download and install the Arduino IDE (&gt;=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
-Using the Arduino IDEs built-in Library Manager, install the ARK-Cpp-Crypto library. Be sure to install the "-arduino" version of Cpp-Crypto.
+Using the Arduino IDEs built-in Library Manager, install the Ark-Cpp-Crypto library. Be sure to install the "-arduino" version of Cpp-Crypto.
 
 #### Dependencies
 

@@ -12,7 +12,7 @@ package main
 import (
     "net/url"
 
-    ark "github.com/ARKEcosystem/go-client/client"
+    ark "github.com/ArkEcosystem/go-client/client"
 )
 
 func main() {

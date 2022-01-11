@@ -6,7 +6,7 @@ title: Usage
 
 ## Introduction
 
-With the release of ARK Core 2.0, a new feature was introduced, called [Webhooks](https://en.wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
+With the release of ARK Core 2.0, a new feature was introduced, called [Webhooks](https://wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
 
 ## Authorization
 
@@ -14,7 +14,7 @@ Before we start working on the implementation of a webhook handler, we will take
 
 To guarantee that only your server is allowed to send data to your webhook handler, an authorization token is generated on creation of a webhook. **The generated token will only be returned once and not be visible again.**
 
-To generate an authorization token, you need to [create a webhook](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/webhooks/webhook-endpoints/README.md#create-a-webhook).
+To generate an authorization token, you need to [create a webhook](/docs/api/webhook-api/endpoints#create-a-webhook).
 
 Lets take the following token as an example `fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66` which is 64 characters long and breaks down into 2 parts at 32 characters length each.
 
@@ -106,29 +106,70 @@ func main() {
 ```
 
 ```python
+import pickle
+import hashlib
+
 from flask import Flask, request
 from werkzeug.exceptions import Unauthorized
 from functools import wraps
 
 app = Flask(__name__)
 
-verification = "0c8e74e1cbfe36404386d33a5bbd8b66"
-token = "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
+def dump_webhook_token(token):
+    authorization = token[:32]  # "fe944e318edb02b979d6bf0c87978b64"
+    verification = token[32:]   # "0c8e74e1cbfe36404386d33a5bbd8b66"
+    filename = hashlib.md5(authorization.encode("utf-8")).hexdigest()
+    with open(filename, "wb") as out:
+        pickle.dump(
+            {
+                "verification": verification,
+                "hash": hashlib.sha256(token.encode("utf-8")).hexdigest()
+            },
+            out
+        )
 
+
+def check_webhook_token(authorization):
+    filename = hashlib.md5(authorization.encode("utf-8")).hexdigest()
+    try:
+        with open(filename, "rb") as in_:
+            data = pickle.load(in_)
+    except Exception:
+        return False
+    else:
+        token = authorization + data["verification"]
+        return hashlib.sha256(
+            token.encode("utf-8")
+        ).hexdigest() == data["hash"]
+
+
+# ... 
+# Somewhere On Webhook Subscription
+dump_webhook_token(
+    "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
+)
+# verification = "0c8e74e1cbfe36404386d33a5bbd8b66"
+# token = "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
+
+
+#...
 # This Should Be Middleware if This App Is Dedicated to Webhooks
 def token_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if request.headers.get("authorization") + verification != token:
+        # if request.headers.get("authorization") + verification != token:
+        if not check_webhook_token(request.headers.get("authorization")):
             raise Unauthorized("Unauthorized!")
         return f(*args, **kwargs)
     return decorated_function
+
 
 @app.route("/blocks")
 @token_required
 def handle_block():
     block = request.get_json()
     # do something with the block
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
@@ -140,10 +181,6 @@ Let's break down the steps we took here:
 * Create the full token based on the `Authorization` header and `Verification` string.
 * Deny access if the `full token` does not equal the `webhook token`.
 * Log and process the request body if the `full token` is valid.
-
-## Closing
-
-Now you should know enough on how to secure and handle incoming webhooks. Head over to the [API docs](https://github.com/ArkEcosystem/gitbooks-api/tree/9815499ca52e615b8de858160da915cd960e6ea3/api/webhooks/README.md) for webhooks to get started.
 
 ## Authentication
 

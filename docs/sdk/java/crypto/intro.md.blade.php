@@ -42,7 +42,7 @@ mvn install
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/java-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/java-crypto).
 2. Clone forked repository.
 
 ```bash

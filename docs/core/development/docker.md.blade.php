@@ -48,8 +48,8 @@ The code sample below downloads the needed files from our official [GitHub Core 
 NETWORK=devnet
 mkdir ~/$NETWORK
 cd ~/$NETWORK
-curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/$NETWORK/docker-compose.yml
-curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/$NETWORK/$NETWORK.env
+curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/$NETWORK/docker-compose.yml
+curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/$NETWORK/$NETWORK.env
 ```
 
 ### Running a Relay Node

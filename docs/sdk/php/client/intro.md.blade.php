@@ -18,7 +18,7 @@ composer require arkecosystem/client
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/php-client).
+1. Fork the [package](https://github.com/ArkEcosystem/php-client).
 2. Clone forked repository.
 
 ```bash

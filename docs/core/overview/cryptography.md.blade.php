@@ -24,9 +24,9 @@ To promote usability while also maintaining security, ARK passphrases are implem
 
 ![Cryptography overview](/storage/docs/docs/core/assets/overview_nologo.svg)
 
-The following examples will be using test-fixtures from the [ARK Core](https://github.com/ARKEcosystem/core/) repo on [GitHub](https://github.com/ARKEcosystem/).
+The following examples will be using test-fixtures from the [ARK Core](https://github.com/ArkEcosystem/core/) repo on [GitHub](https://github.com/ArkEcosystem/).
 
-[Identities Test Fixtures:](https://github.com/ARKEcosystem/core/blob/develop/__tests__/unit/crypto/identities/fixture.json)
+[Identities Test Fixtures:](https://github.com/ArkEcosystem/core/blob/develop/__tests__/unit/crypto/identities/fixture.json)
 
 ```javascript
 {
@@ -40,7 +40,7 @@ The following examples will be using test-fixtures from the [ARK Core](https://g
 }
 ```
 
-[Message Test Fixtures:](https://github.com/ARKEcosystem/core/blob/develop/__tests__/unit/crypto/utils/message.test.ts)
+[Message Test Fixtures:](https://github.com/ArkEcosystem/core/blob/develop/__tests__/unit/crypto/utils/message.test.ts)
 
 ```typescript
 const fixture = {

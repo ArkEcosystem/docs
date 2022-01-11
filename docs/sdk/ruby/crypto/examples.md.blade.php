@@ -9,7 +9,7 @@ title: Examples
 ```ruby
 require 'arkecosystem/crypto'
 
-transaction = ARKEcosystem::Crypto::Transactions::Builder::Transfer.new()
+transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
   .set_recipient_id('validAddress')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')
@@ -25,7 +25,7 @@ A transaction is an object specifying the transfer of funds from the sender's wa
 The crypto SDK can sign a transaction using your private key or passphrase (from which the private key is generated). Ensure you are familiar with [digital signatures](https://en.wikipedia.org/wiki/Digital_signature) before using the crypto SDKs.
 
 ```ruby
-transaction = ARKEcosystem::Crypto::Transactions::Builder::Transfer.new()
+transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
   .set_recipient_id('validAddress')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')
@@ -41,7 +41,7 @@ print transaction.class
 > Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the ARK blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
 
 ```ruby
-serializer = ARKEcosystem::Crypto::Transactions::Serializer.new(transaction)
+serializer = ArkEcosystem::Crypto::Transactions::Serializer.new(transaction)
 
 print serializer.class
 
@@ -53,7 +53,7 @@ print serializer.class
 > A serialized transaction may be deserialized for inspection purposes. The public API does not return serialized transactions, so you should only need to deserialize in exceptional circumstances.
 
 ```ruby
-deserializer = ARKEcosystem::Crypto::Transactions::Deserializer.new(serialized_transaction)
+deserializer = ArkEcosystem::Crypto::Transactions::Deserializer.new(serialized_transaction)
 
 print deserializer.class
 
@@ -69,7 +69,7 @@ The crypto SDK not only supports transactions but can also work with other arbit
 > Signing a string works much like signing a transaction: in most implementations, the message is hashed, and the resulting hash is signed using the `private key` or `passphrase`.
 
 ```ruby
-message = ARKEcosystem::Crypto::Utils::Message.sign('Hello World', 'this is a top secret passphrase')
+message = ArkEcosystem::Crypto::Utils::Message.sign('Hello World', 'this is a top secret passphrase')
 
 print message.class
 
@@ -81,7 +81,7 @@ print message.class
 > A message's signature can easily be verified by hash, without the private key that signed the message, by using the `verify` method.
 
 ```ruby
-message = ARKEcosystem::Crypto::Utils::Message.new(
+message = ArkEcosystem::Crypto::Utils::Message.new(
   publickey: 'validPublicKey',
   signature: 'validSignature',
   message: 'Hello World'
@@ -99,7 +99,7 @@ print message.class
 ### Derive the Address from a Passphrase
 
 ```ruby
-address = ARKEcosystem::Crypto::Identities::Address.from_passphrase('this is a top secret passphrase')
+address = ArkEcosystem::Crypto::Identities::Address.from_passphrase('this is a top secret passphrase')
 
 print address.class
 
@@ -109,7 +109,7 @@ print address.class
 ### Derive the Address from a Public Key
 
 ```ruby
-address = ARKEcosystem::Crypto::Identities::Address.from_public_key('validPublicKey')
+address = ArkEcosystem::Crypto::Identities::Address.from_public_key('validPublicKey')
 
 print address.class
 
@@ -119,7 +119,7 @@ print address.class
 ### Derive the Address from a Private Key
 
 ```ruby
-address = ARKEcosystem::Crypto::Identities::Address.from_private_key('validPrivateKey')
+address = ArkEcosystem::Crypto::Identities::Address.from_private_key('validPrivateKey')
 
 print address.class
 
@@ -129,7 +129,7 @@ print address.class
 ### Validate an Address
 
 ```ruby
-address = ARKEcosystem::Crypto::Identities::Address.validate('validAddress')
+address = ArkEcosystem::Crypto::Identities::Address.validate('validAddress')
 
 print address.class
 
@@ -143,7 +143,7 @@ print address.class
 ### Derive the Private Key from a Passphrase
 
 ```ruby
-privateKey = ARKEcosystem::Crypto::Identities::PrivateKey.from_passphrase('this is a top secret passphrase')
+privateKey = ArkEcosystem::Crypto::Identities::PrivateKey.from_passphrase('this is a top secret passphrase')
 
 print privateKey.class
 
@@ -153,7 +153,7 @@ print privateKey.class
 ### Derive the Private Key Instance Object from a Hexadecimal Encoded String
 
 ```ruby
-privateKey = ARKEcosystem::Crypto::Identities::PrivateKey.from_hex('validHexString')
+privateKey = ArkEcosystem::Crypto::Identities::PrivateKey.from_hex('validHexString')
 
 print privateKey.class
 
@@ -173,7 +173,7 @@ This function has not been implemented in this client library.
 ### Derive the Public Key from a Passphrase
 
 ```ruby
-publicKey = ARKEcosystem::Crypto::Identities::PublicKey.from_passphrase('this is a top secret passphrase')
+publicKey = ArkEcosystem::Crypto::Identities::PublicKey.from_passphrase('this is a top secret passphrase')
 
 print publicKey.class
 
@@ -183,7 +183,7 @@ print publicKey.class
 ### Derive the Public Key Instance Object from a Hexadecimal Encoded String
 
 ```ruby
-publicKey = ARKEcosystem::Crypto::Identities::PublicKey.from_hex('validHexString')
+publicKey = ArkEcosystem::Crypto::Identities::PublicKey.from_hex('validHexString')
 
 print publicKey.class
 
@@ -203,7 +203,7 @@ This function has not been implemented in this client library.
 ### Derive the WIF from a Passphrase
 
 ```ruby
-wif = ARKEcosystem::Crypto::Identities::WIF.from_passphrase('this is a top secret passphrase')
+wif = ArkEcosystem::Crypto::Identities::WIF.from_passphrase('this is a top secret passphrase')
 
 print wif.class
 

@@ -7,7 +7,7 @@ title: Examples
 ## Initialization
 
 ```php
-use ARKEcosystem\Client\Connection;
+use ArkEcosystem\Client\Connection;
 
 $connection = new Connection([
     'host' => 'http://my.ark.node:port/api/',

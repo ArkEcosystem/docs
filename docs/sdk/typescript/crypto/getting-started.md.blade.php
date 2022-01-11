@@ -26,7 +26,7 @@ yarn add @arkecosystem/crypto
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/javascript-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/javascript-crypto).
 
 2. Clone your forked repository.
 

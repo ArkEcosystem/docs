@@ -20,7 +20,7 @@ The crypto SDK can sign a transaction using your private key or passphrase (from
 
 ```swift
 // Creating a transaction automatically signs it with the provides passphrase(s)
-let transfer = ARKBuilder.buildTransfer(
+let transfer = ArkBuilder.buildTransfer(
     "secret passphrase",
     secondPassphrase: nil,
     to: "DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8",
@@ -37,7 +37,7 @@ print(type(of: transfer))
 > Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the ARK blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
 
 ```swift
-let serialized = ARKSerializer.serialize(transaction: transaction)
+let serialized = ArkSerializer.serialize(transaction: transaction)
 
 print(type(of: serialized))
 
@@ -49,7 +49,7 @@ print(type(of: serialized))
 > A serialized transaction may be deserialized for inspection purposes. The public API does not return serialized transactions, so you should only need to deserialize in exceptional circumstances.
 
 ```swift
-let deserialized = ARKDeserializer.deserialize(serialized: serialized)
+let deserialized = ArkDeserializer.deserialize(serialized: serialized)
 
 print(type(of: deserialized))
 
@@ -65,7 +65,7 @@ The crypto SDK not only supports transactions but can also work with other arbit
 > Signing a string works much like signing a transaction: in most implementations, the message is hashed, and the resulting hash is signed using the `private key` or `passphrase`.
 
 ```swift
-let message = ARKMessage.sign(message: "Hello World", passphrase: "this is a top secret passphrase")
+let message = ArkMessage.sign(message: "Hello World", passphrase: "this is a top secret passphrase")
 
 print(type(of: message))
 
@@ -77,7 +77,7 @@ print(type(of: message))
 > A message's signature can easily be verified by hash, without the private key that signed the message, by using the `verify` method.
 
 ```swift
-let message = ARKMessage(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+let message = ArkMessage(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
                          signature: "304402200fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e02205ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8",
                          message: "Hello World")
 
@@ -93,7 +93,7 @@ print(type(of: message.verify()))
 ### Derive the Address from a Passphrase
 
 ```swift
-let address = ARKAddress.from(passphrase: "this is a top secret passphrase")
+let address = ArkAddress.from(passphrase: "this is a top secret passphrase")
 
 print(type(of: address))
 
@@ -103,7 +103,7 @@ print(type(of: address))
 ### Derive the Address from a Public Key
 
 ```swift
-let address = ARKAddress.from(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192")
+let address = ArkAddress.from(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192")
 
 print(type(of: address))
 
@@ -113,7 +113,7 @@ print(type(of: address))
 ### Derive the Address from a Private Key
 
 ```swift
-let address = ARKAddress.from(privateKey: ARKPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712"))
+let address = ArkAddress.from(privateKey: ArkPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712"))
 
 print(type(of: address))
 
@@ -123,7 +123,7 @@ print(type(of: address))
 ### Validate an Address
 
 ```swift
-let address = ARKAddress.validate(address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib")
+let address = ArkAddress.validate(address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib")
 
 print(type(of: address))
 
@@ -137,7 +137,7 @@ print(type(of: address))
 ### Derive the Private Key from a Passphrase
 
 ```swift
-let privateKey = ARKPrivateKey.from(passphrase: "this is a top secret passphrase")
+let privateKey = ArkPrivateKey.from(passphrase: "this is a top secret passphrase")
 
 print(type(of: privateKey))
 
@@ -147,7 +147,7 @@ print(type(of: privateKey))
 ### Derive the Private Key Instance Object from a Hexadecimal Encoded String
 
 ```swift
-let privateKey = ARKPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
+let privateKey = ArkPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
 
 print(type(of: privateKey))
 
@@ -167,7 +167,7 @@ This function has not been implemented in this client library.
 ### Derive the Public Key from a Passphrase
 
 ```swift
-let publicKey = ARKPublicKey.from(passphrase: "this is a top secret passphrase")
+let publicKey = ArkPublicKey.from(passphrase: "this is a top secret passphrase")
 
 print(type(of: publicKey))
 
@@ -177,7 +177,7 @@ print(type(of: publicKey))
 ### Derive the Public Key Instance Object from a Hexadecimal Encoded String
 
 ```swift
-let publicKey = ARKPublicKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
+let publicKey = ArkPublicKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
 
 print(type(of: publicKey))
 

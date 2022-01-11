@@ -96,7 +96,7 @@ Following these guidelines is required to provide a streamlined experience acros
 
 The structure outlined here should be followed as closely as possible. If you work with an **Object Oriented Programming Language** you should be able to implement this structure as is, small adjustments might be required for languages like Go as nested packages can get hacky.
 
-You can check [https://github.com/ARKEcosystem/php-crypto](https://github.com/ARKEcosystem/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
+You can check [https://github.com/ArkEcosystem/php-crypto](https://github.com/ArkEcosystem/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
 
 ```text
 [src | lib | crypto]
@@ -164,11 +164,11 @@ There are already a few implementations of cryptography packages available, so t
 
 ### Object Oriented Programming
 
-* [https://github.com/ARKEcosystem/php-crypto](https://github.com/ARKEcosystem/php-crypto)
-* [https://github.com/ARKEcosystem/python-crypto](https://github.com/ARKEcosystem/python-crypto)
-* [https://github.com/ARKEcosystem/ruby-crypto](https://github.com/ARKEcosystem/ruby-crypto)
+* [https://github.com/ArkEcosystem/php-crypto](https://github.com/ArkEcosystem/php-crypto)
+* [https://github.com/ArkEcosystem/python-crypto](https://github.com/ArkEcosystem/python-crypto)
+* [https://github.com/ArkEcosystem/ruby-crypto](https://github.com/ArkEcosystem/ruby-crypto)
 
 ### Functional Programming
 
-* [https://github.com/ARKEcosystem/elixir-crypto](https://github.com/ARKEcosystem/elixir-crypto)
-* [https://github.com/ARKEcosystem/go-crypto](https://github.com/ARKEcosystem/go-crypto)
+* [https://github.com/ArkEcosystem/elixir-crypto](https://github.com/ArkEcosystem/elixir-crypto)
+* [https://github.com/ArkEcosystem/go-crypto](https://github.com/ArkEcosystem/go-crypto)

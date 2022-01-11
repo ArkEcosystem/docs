@@ -9,12 +9,12 @@ title: Getting Started
 > Get downloads the packages named by the import paths, along with their dependencies. It then installs the named packages, like 'go install'.
 
 ```bash
-go get github.com/ARKEcosystem/go-crypto/crypto
+go get github.com/ArkEcosystem/go-crypto/crypto
 ```
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/go-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/go-crypto).
 2. Clone forked repository.
 
 ```bash

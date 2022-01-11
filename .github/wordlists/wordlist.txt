@@ -27,6 +27,7 @@ auth
 authenticator
 Authy
 autoconf
+autoloader
 AVAX
 avencera
 AWSEC
@@ -88,6 +89,7 @@ Cryptoconomy
 csharp
 Ctrl
 ctx
+Curation
 customizable
 customizations
 CXX
@@ -126,6 +128,7 @@ dexplorer
 distributable
 dl
 DLT
+dmg
 dnf
 DNOMINMAX
 DOM
@@ -162,6 +165,7 @@ espressif
 ETH
 eth
 Ethereum
+exe
 explainers
 exs
 extensibility
@@ -397,6 +401,7 @@ replicable
 repo
 repos
 req
+reqs
 resync
 RGBA
 Rhel
@@ -455,6 +460,7 @@ struct
 su
 submitdelegateregistration
 submitsecondsignature
+subpage
 sudo
 sudoers
 SV
@@ -562,3 +568,27 @@ Zilliqa
 zsh
 zshrc
 zypper
+Accessors
+UserQuery
+accessor
+accessors
+getNameAttribute
+getter
+mutators
+newEloquentBuilder
+whereColumn
+whereDate
+whereName
+whereNotNull
+whereRaw
+AuthorizesRequests
+DeleteServer
+InteractsWithUser
+Livewire's
+UIs
+componentize
+findOrFail
+serverId
+UpdateUserForm
+isLoading
+debounce

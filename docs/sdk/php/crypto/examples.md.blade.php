@@ -7,7 +7,7 @@ title: Examples
 ## Initialization
 
 ```php
-use ARKEcosystem\Crypto\Transactions\Builder\Transfer;
+use ArkEcosystem\Crypto\Transactions\Builder\Transfer;
 ```
 
 ## Transactions
@@ -35,7 +35,7 @@ echo gettype($transaction);
 > Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the ARK blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
 
 ```php
-use ARKEcosystem\Crypto\Transactions\Serializer;
+use ArkEcosystem\Crypto\Transactions\Serializer;
 
 $buffer = Serializer::new($transaction)->serialize();
 
@@ -49,7 +49,7 @@ echo gettype($buffer);
 > A serialized transaction may be deserialized for inspection purposes. The public API does not return serialized transactions, so you should only need to deserialize in exceptional circumstances.
 
 ```php
-use ARKEcosystem\Crypto\Transactions\Deserializer;
+use ArkEcosystem\Crypto\Transactions\Deserializer;
 
 $transaction = Deserializer::new($serializedTransaction)->deserialize();
 
@@ -67,7 +67,7 @@ The crypto SDK not only supports transactions but can also work with other arbit
 > Signing a string works much like signing a transaction: in most implementations, the message is hashed, and the resulting hash is signed using the `private key` or `passphrase`.
 
 ```php
-use ARKEcosystem\Crypto\Utils\Message;
+use ArkEcosystem\Crypto\Utils\Message;
 
 $message = Message::sign('Hello World', 'this is a top secret passphrase');
 
@@ -81,7 +81,7 @@ echo gettype($message);
 > A message's signature can easily be verified by hash, without the private key that signed the message, by using the `verify` method.
 
 ```php
-use ARKEcosystem\Crypto\Utils\Message;
+use ArkEcosystem\Crypto\Utils\Message;
 
 $message = Message::new([
     'publickey' => 'validPublicKey',
@@ -101,7 +101,7 @@ echo($message->verify() ? 'Valid' : 'Invalid');
 ### Derive the Address from a Passphrase
 
 ```php
-use ARKEcosystem\Crypto\Identities\Address;
+use ArkEcosystem\Crypto\Identities\Address;
 
 $address = Address::fromPassphrase('this is a top secret passphrase');
 
@@ -113,7 +113,7 @@ echo gettype($address);
 ### Derive the Address from a Public Key
 
 ```php
-use ARKEcosystem\Crypto\Identities\Address;
+use ArkEcosystem\Crypto\Identities\Address;
 
 $address = Address::fromPublicKey('validPublicKey');
 
@@ -125,7 +125,7 @@ echo gettype($address);
 ### Derive the Address from a Private Key
 
 ```php
-use ARKEcosystem\Crypto\Identities\Address;
+use ArkEcosystem\Crypto\Identities\Address;
 
 $address = Address::fromPrivateKey('validPrivateKey');
 
@@ -137,7 +137,7 @@ echo gettype($address);
 ### Validate an Address
 
 ```php
-use ARKEcosystem\Crypto\Identities\Address;
+use ArkEcosystem\Crypto\Identities\Address;
 
 $address = Address::validate('validAddress');
 
@@ -153,7 +153,7 @@ echo gettype($address);
 ### Derive the Private Key from a Passphrase
 
 ```php
-use ARKEcosystem\Crypto\Identities\PrivateKey;
+use ArkEcosystem\Crypto\Identities\PrivateKey;
 
 $privateKey = PrivateKey::fromPassphrase('this is a top secret passphrase');
 
@@ -165,7 +165,7 @@ echo gettype($privateKey);
 ### Derive the Private Key Instance Object from a Hexadecimal Encoded String
 
 ```php
-use ARKEcosystem\Crypto\Identities\PrivateKey;
+use ArkEcosystem\Crypto\Identities\PrivateKey;
 
 $privateKey = PrivateKey::fromHex('validHexString');
 
@@ -178,7 +178,7 @@ echo gettype($privateKey);
 ### Derive the Private Key from a WIF
 
 ```php
-use ARKEcosystem\Crypto\Identities\PrivateKey;
+use ArkEcosystem\Crypto\Identities\PrivateKey;
 
 $privateKey = PrivateKey::fromWif('validWif');
 
@@ -194,7 +194,7 @@ echo gettype($privateKey);
 ### Derive the Public Key from a Passphrase
 
 ```php
-use ARKEcosystem\Crypto\Identities\PublicKey;
+use ArkEcosystem\Crypto\Identities\PublicKey;
 
 $publicKey = PublicKey::fromPassphrase('this is a top secret passphrase');
 
@@ -206,7 +206,7 @@ echo gettype($publicKey);
 ### Derive the Public Key Instance Object from a Hexadecimal Encoded String
 
 ```php
-use ARKEcosystem\Crypto\Identities\PublicKey;
+use ArkEcosystem\Crypto\Identities\PublicKey;
 
 $publicKey = PublicKey::fromHex('validHexString');
 
@@ -218,7 +218,7 @@ echo gettype($publicKey);
 ### Validate a Public Key
 
 ```php
-use ARKEcosystem\Crypto\Identities\PublicKey;
+use ArkEcosystem\Crypto\Identities\PublicKey;
 
 $publicKey = PublicKey::validate('validPublicKey');
 
@@ -234,7 +234,7 @@ echo gettype($publicKey);
 ### Derive the WIF from a Passphrase
 
 ```php
-use ARKEcosystem\Crypto\Identities\WIF;
+use ArkEcosystem\Crypto\Identities\WIF;
 
 $wif = WIF::fromPassphrase('this is a top secret passphrase');
 

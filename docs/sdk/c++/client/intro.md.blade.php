@@ -6,7 +6,7 @@ title: Getting Started
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/cpp-client).
+1. Fork the [package](https://github.com/ArkEcosystem/cpp-client).
 2. Clone the newly forked repository.
 
 ```bash

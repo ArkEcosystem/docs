@@ -90,7 +90,7 @@ pip install arkecosystem-client
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/python-client).
+1. Fork the [package](https://github.com/ArkEcosystem/python-client).
 
 2. Clone your forked repository.
 

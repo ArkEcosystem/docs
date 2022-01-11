@@ -13,7 +13,7 @@ This is the reference guide for the Public API. This API exposes all resources a
 * Mainnet: [https://explorer.ark.io](https://explorer.ark.io)
 * Devnet: [https://dexplorer.ark.io](https://dexplorer.ark.io)
 
-> If you have any problems or requests please [open an issue](https://github.com/ARKEcosystem/core/issues/new/choose).
+> If you have any problems or requests please [open an issue](https://github.com/ArkEcosystem/core/issues/new/choose).
 
 ## Pagination
 

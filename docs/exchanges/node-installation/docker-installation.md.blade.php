@@ -112,8 +112,8 @@ sudo usermod -aG docker ${USER}
 ```bash
 mkdir mainnet &&
 cd mainnet &&
-curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/mainnet/docker-compose.yml &&
-curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/mainnet/mainnet.env
+curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/mainnet/docker-compose.yml &&
+curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/mainnet/mainnet.env
 ```
 
 ### Running the Node
@@ -172,7 +172,7 @@ docker logs --tail 50 core-mainnet -f
 
 ## Update
 
-### Docker Live Updates Are Now Possible With [CLI](/docs/core/development-guides/command-line-interface/getting-started)
+### Docker Live Updates Are Now Possible With [CLI](/docs/core/development/docker#option-1-docker-live-updates-are-now-possible-with-cli)
 
 * As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 

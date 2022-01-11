@@ -64,11 +64,11 @@ There are already a few implementations of cryptography packages available, so t
 
 ### Object Oriented Programming
 
-* [https://github.com/ARKEcosystem/php-client](https://github.com/ARKEcosystem/php-client)
-* [https://github.com/ARKEcosystem/python-client](https://github.com/ARKEcosystem/python-client)
-* [https://github.com/ARKEcosystem/ruby-client](https://github.com/ARKEcosystem/ruby-client)
+* [https://github.com/ArkEcosystem/php-client](https://github.com/ArkEcosystem/php-client)
+* [https://github.com/ArkEcosystem/python-client](https://github.com/ArkEcosystem/python-client)
+* [https://github.com/ArkEcosystem/ruby-client](https://github.com/ArkEcosystem/ruby-client)
 
 ### Functional Programming
 
-* [https://github.com/ARKEcosystem/elixir-client](https://github.com/ARKEcosystem/elixir-client)
-* [https://github.com/ARKEcosystem/go-client](https://github.com/ARKEcosystem/go-client)
+* [https://github.com/ArkEcosystem/elixir-client](https://github.com/ArkEcosystem/elixir-client)
+* [https://github.com/ArkEcosystem/go-client](https://github.com/ArkEcosystem/go-client)

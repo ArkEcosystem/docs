@@ -10,14 +10,14 @@ Add the following to your `Cargo.toml`:
 
 ```text
 [dependencies]
-arkecosystem-client = {git = "https://github.com/ARKEcosystem/rust-client", branch = "master" }
+arkecosystem-client = {git = "https://github.com/ArkEcosystem/rust-client", branch = "master" }
 ```
 
 You can now run `cargo build`, and Cargo will fetch the new dependencies and all of their dependencies.
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/rust-client).
+1. Fork the [package](https://github.com/ArkEcosystem/rust-client).
 2. Clone your forked repository.
 
 ```bash

@@ -73,6 +73,7 @@ ARKCommunity
 ARKCrypto
 ARKDeserializer
 ARKExplorer
+arkHistoryListing
 ArkHTTPException
 ARKManager
 ARKMessage
@@ -462,6 +463,7 @@ IMultiSignatureAsset
 includeSignature
 INetwork
 INetworkConfig
+installedVersion
 inSingletonScope
 InstanceType
 InternalTransactionType

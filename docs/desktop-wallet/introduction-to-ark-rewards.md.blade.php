@@ -4,7 +4,7 @@ title: An Introduction to ARK Rewards (Staking)
 
 # An Introduction to ARK Rewards (Staking)
 
-The ARK Public Network (APN) is a sovereign Blockchain with a native Cryptoasset called ARK. It is based on the Delegated-Prof-of-Stake (DPoS) consensus mechanism and has 51 active Delegates (Validators) who secure the network. In this article, we will discuss how block rewards work within the APN and how you can earn a portion of the rewards by becoming an active delegate or voting with your ARK coins.
+The ARK Public Network (APN) is a sovereign Blockchain with a native Cryptoasset called ARK. It is based on the Delegated-Proof-of-Stake (DPoS) consensus mechanism and has 51 active Delegates (Validators) who secure the network. In this article, we will discuss how block rewards work within the APN and how you can earn a portion of the rewards by becoming an active delegate or voting with your ARK coins.
 
 ## Staking Considerations
 

@@ -7,7 +7,7 @@ title: Examples
 ## Initialization
 
 ```elixir
-client = ARKEcosystem.Client.new(%{
+client = ArkEcosystem.Client.new(%{
     host: "http://my.node.ip:myport/api",
     nethash: "validNethash",
     version: "1.0.0"
@@ -23,7 +23,7 @@ This service API grants access to the [blocks resource](https://github.com/ArkEc
 ### List All Blocks
 
 ```elixir
-blocks = ARKEcosystem.Client.API.Blocks.list(client)
+blocks = ArkEcosystem.Client.API.Blocks.list(client)
 
 IO.inspect blocks
 
@@ -33,7 +33,7 @@ IO.inspect blocks
 ### Retrieve a Block
 
 ```elixir
-block = ARKEcosystem.Client.API.Blocks.show(client, "validBlockId")
+block = ArkEcosystem.Client.API.Blocks.show(client, "validBlockId")
 
 IO.inspect block
 
@@ -43,7 +43,7 @@ IO.inspect block
 ### List All Transactions of a Block
 
 ```elixir
-blockTransactions = ARKEcosystem.Client.API.Blocks.transactions(client, "validBlockId")
+blockTransactions = ArkEcosystem.Client.API.Blocks.transactions(client, "validBlockId")
 
 IO.inspect blockTransactions
 
@@ -53,7 +53,7 @@ IO.inspect blockTransactions
 ### Search All Blocks
 
 ```elixir
-searchedBlock = ARKEcosystem.Client.API.Blocks.search(client, %{q: "searchQuery"})
+searchedBlock = ArkEcosystem.Client.API.Blocks.search(client, %{q: "searchQuery"})
 
 IO.inspect searchedBlock
 
@@ -71,7 +71,7 @@ A delegate is a regular wallet that has broadcast a registration transaction, ac
 ### List All Delegates
 
 ```elixir
-delegates = ARKEcosystem.Client.API.Delegates.list(client)
+delegates = ArkEcosystem.Client.API.Delegates.list(client)
 
 IO.inspect delegates
 
@@ -81,7 +81,7 @@ IO.inspect delegates
 ### Retrieve a Delegate
 
 ```elixir
-delegate = ARKEcosystem.Client.API.Delegates.show(client, "validDelegateId")
+delegate = ArkEcosystem.Client.API.Delegates.show(client, "validDelegateId")
 
 IO.inspect delegate
 
@@ -91,7 +91,7 @@ IO.inspect delegate
 ### List All Blocks of a Delegate
 
 ```elixir
-delegateBlocks = ARKEcosystem.Client.API.Delegates.blocks(client, "validDelegateId")
+delegateBlocks = ArkEcosystem.Client.API.Delegates.blocks(client, "validDelegateId")
 
 IO.inspect delegateBlocks
 
@@ -101,7 +101,7 @@ IO.inspect delegateBlocks
 ### List All Voters of a Delegate
 
 ```elixir
-delegateVoters = ARKEcosystem.Client.API.Delegates.voters(client, "validDelegateId")
+delegateVoters = ArkEcosystem.Client.API.Delegates.voters(client, "validDelegateId")
 
 IO.inspect delegateVoters
 
@@ -115,7 +115,7 @@ The ARK network consists of different anonymous nodes (servers), maintaining the
 ### Retrieve the Configuration
 
 ```elixir
-nodeConfiguration = ARKEcosystem.Client.API.Node.configuration(client)
+nodeConfiguration = ArkEcosystem.Client.API.Node.configuration(client)
 
 IO.inspect nodeConfiguration
 
@@ -125,7 +125,7 @@ IO.inspect nodeConfiguration
 ### Retrieve the Status
 
 ```elixir
-nodeStatus = ARKEcosystem.Client.API.Node.status(client)
+nodeStatus = ArkEcosystem.Client.API.Node.status(client)
 
 IO.inspect nodeStatus
 
@@ -135,7 +135,7 @@ IO.inspect nodeStatus
 ### Retrieve the Syncing Status
 
 ```elixir
-nodeSyncingStatus = ARKEcosystem.Client.API.Node.syncing(client)
+nodeSyncingStatus = ArkEcosystem.Client.API.Node.syncing(client)
 
 IO.inspect nodeSyncingStatus
 
@@ -151,7 +151,7 @@ Each node is connected to a set of peers, which are Relay or Delegate Nodes as w
 ### List All Peers
 
 ```elixir
-peers = ARKEcosystem.Client.API.Peers.list(client)
+peers = ArkEcosystem.Client.API.Peers.list(client)
 
 IO.inspect peers
 
@@ -161,7 +161,7 @@ IO.inspect peers
 ### Retrieve a Peer
 
 ```elixir
-peer = ARKEcosystem.Client.API.Peers.show(client, "validIpAddress")
+peer = ArkEcosystem.Client.API.Peers.show(client, "validIpAddress")
 
 IO.inspect peer
 
@@ -177,7 +177,7 @@ The heart of any blockchain is formed by its transactions; state-altering payloa
 ### Create a Transaction
 
 ```elixir
-transaction = ARKEcosystem.Client.API.Transactions.create(client, %{id: "dummyCreatedId"})
+transaction = ArkEcosystem.Client.API.Transactions.create(client, %{id: "dummyCreatedId"})
 
 IO.inspect transaction
 
@@ -187,7 +187,7 @@ IO.inspect transaction
 ### Retrieve a Transaction
 
 ```elixir
-transaction = ARKEcosystem.Client.API.Transactions.show(client, "validTransactionId")
+transaction = ArkEcosystem.Client.API.Transactions.show(client, "validTransactionId")
 
 IO.inspect transaction
 
@@ -197,7 +197,7 @@ IO.inspect transaction
 ### List All Transactions
 
 ```elixir
-transactions = ARKEcosystem.Client.API.Transactions.list(client)
+transactions = ArkEcosystem.Client.API.Transactions.list(client)
 
 IO.inspect transactions
 
@@ -207,7 +207,7 @@ IO.inspect transactions
 ### List All Unconfirmed Transactions
 
 ```elixir
-unconfirmedTransactions = ARKEcosystem.Client.API.Transactions.list_unconfirmed(client)
+unconfirmedTransactions = ArkEcosystem.Client.API.Transactions.list_unconfirmed(client)
 
 IO.inspect unconfirmedTransactions
 
@@ -217,7 +217,7 @@ IO.inspect unconfirmedTransactions
 ### Get Unconfirmed Transaction
 
 ```elixir
-unconfirmedTransaction = ARKEcosystem.Client.API.Transactions.list_unconfirmed(client, "validTransactionId")
+unconfirmedTransaction = ArkEcosystem.Client.API.Transactions.list_unconfirmed(client, "validTransactionId")
 
 IO.inspect unconfirmedTransaction
 
@@ -227,7 +227,7 @@ IO.inspect unconfirmedTransaction
 ### Search Transactions
 
 ```elixir
-transactions = ARKEcosystem.Client.API.Transactions.search(client, %{q: "searchQuery"})
+transactions = ArkEcosystem.Client.API.Transactions.search(client, %{q: "searchQuery"})
 
 IO.inspect transactions
 
@@ -237,7 +237,7 @@ IO.inspect transactions
 ### List Transaction Types
 
 ```elixir
-transactionTypes = ARKEcosystem.Client.API.Transactions.types(client)
+transactionTypes = ArkEcosystem.Client.API.Transactions.types(client)
 
 IO.inspect transactionTypes
 
@@ -251,7 +251,7 @@ A [vote](https://github.com/ArkEcosystem/gitbooks-sdk/tree/fcb399a02301c4ed91f0d
 ### List All Votes
 
 ```elixir
-votes = ARKEcosystem.Client.API.Votes.list(client)
+votes = ArkEcosystem.Client.API.Votes.list(client)
 
 IO.inspect votes
 
@@ -261,7 +261,7 @@ IO.inspect votes
 ### Retrieve a Vote
 
 ```elixir
-vote = ARKEcosystem.Client.API.Transactions.types(client, "validVoteId")
+vote = ArkEcosystem.Client.API.Transactions.types(client, "validVoteId")
 
 IO.inspect vote
 
@@ -279,7 +279,7 @@ The [wallet resource](https://github.com/ArkEcosystem/gitbooks-sdk/tree/fcb399a0
 ### Retrieve All Wallets
 
 ```elixir
-wallets = ARKEcosystem.Client.API.Wallets.list(client)
+wallets = ArkEcosystem.Client.API.Wallets.list(client)
 
 IO.inspect wallets
 
@@ -289,7 +289,7 @@ IO.inspect wallets
 ### Retrieve a Wallet
 
 ```elixir
-wallet = ARKEcosystem.Client.API.Wallets.show(client, "validWalletId")
+wallet = ArkEcosystem.Client.API.Wallets.show(client, "validWalletId")
 
 IO.inspect wallet
 
@@ -299,7 +299,7 @@ IO.inspect wallet
 ### List All Transactions of a Wallet
 
 ```elixir
-walletTransactions = ARKEcosystem.Client.API.Wallets.transactions(client, "validWalletId")
+walletTransactions = ArkEcosystem.Client.API.Wallets.transactions(client, "validWalletId")
 
 IO.inspect walletTransactions
 
@@ -309,7 +309,7 @@ IO.inspect walletTransactions
 ### List All Received Transactions of a Wallet
 
 ```elixir
-walletReceivedTransactions = ARKEcosystem.Client.API.Wallets.received_transactions(client, "validWalletId")
+walletReceivedTransactions = ArkEcosystem.Client.API.Wallets.received_transactions(client, "validWalletId")
 
 IO.inspect walletReceivedTransactions
 
@@ -319,7 +319,7 @@ IO.inspect walletReceivedTransactions
 ### List All Sent Transactions of a Wallet
 
 ```elixir
-walletSentTransactions = ARKEcosystem.Client.API.Wallets.sent_transactions(client, "validWalletId")
+walletSentTransactions = ArkEcosystem.Client.API.Wallets.sent_transactions(client, "validWalletId")
 
 IO.inspect walletReceivedTransactions
 
@@ -329,7 +329,7 @@ IO.inspect walletReceivedTransactions
 ### List All Votes of a Wallet
 
 ```elixir
-walletVotes = ARKEcosystem.Client.API.Wallets.votes(client, "validWalletId")
+walletVotes = ArkEcosystem.Client.API.Wallets.votes(client, "validWalletId")
 
 IO.inspect walletVotes
 
@@ -339,7 +339,7 @@ IO.inspect walletVotes
 ### List All Top Wallets
 
 ```elixir
-topWallets = ARKEcosystem.Client.API.Wallets.top(client)
+topWallets = ArkEcosystem.Client.API.Wallets.top(client)
 
 IO.inspect topWallets
 
@@ -349,7 +349,7 @@ IO.inspect topWallets
 ### Search All Wallets
 
 ```elixir
-wallets = ARKEcosystem.Client.API.Wallets.search(client, %{q: "searchQuery"})
+wallets = ArkEcosystem.Client.API.Wallets.search(client, %{q: "searchQuery"})
 
 IO.inspect wallets
 

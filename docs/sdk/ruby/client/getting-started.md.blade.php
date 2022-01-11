@@ -33,7 +33,7 @@ gem install arkecosystem-client
 
 ## Development
 
-1. Fork the [package](https://github.com/ARKEcosystem/ruby-client).
+1. Fork the [package](https://github.com/ArkEcosystem/ruby-client).
 
 2. Clone your forked repository.
 

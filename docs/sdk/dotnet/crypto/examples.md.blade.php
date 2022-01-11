@@ -11,7 +11,7 @@ WARNING! This package is deprecated and is no longer maintained and supported.
 ## Initialization
 
 ```csharp
-using ARKEcosystem.Crypto;
+using ArkEcosystem.Crypto;
 ```
 
 ## Transactions
