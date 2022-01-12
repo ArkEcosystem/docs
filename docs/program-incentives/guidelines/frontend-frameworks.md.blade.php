@@ -90,14 +90,14 @@ Below you can find a reference table on how you van utilize this class. Please n
 
 | syntax | light mode color | dark mode color |
 | --- | --- | --- |
-| var(--icon-color-primary-100, #E5F0F8) | theme-color-primary-100 | theme-color-primary-900 |
-| var(--icon-color-primary-200, #BAD6F0) | theme-color-primary-200 | theme-primary-900 |
-| var(--icon-color-secondary-200, #EEF3F5) | theme-color-secondary-200 | theme-secondary-800 |
-| var(--icon-color-secondary-300, #DBDEE5) | theme-color-secondary-300 | theme-secondary-800 |
-| var(--icon-color-secondary-900, #212225) | theme-color-secondary-900 | theme-secondary-600 |
-| var(--icon-color-success-50, #F1FBF4) | theme-color-success-50 | theme-success-800 |
-| var(--icon-color-warning-100, #FFE6B8) | theme-color-warning-100 | theme-warning-900 |
-| var(--icon-color-danger-100, #FFE0DA) | theme-color-danger-100 | theme-danger-800|
+| `var(--icon-color-primary-100, #E5F0F8)` | `theme-color-primary-100` | `theme-color-primary-900` |
+| `var(--icon-color-primary-200, #BAD6F0)` | `theme-color-primary-200` | `theme-color-primary-900` |
+| `var(--icon-color-secondary-200, #EEF3F5)` | `theme-color-secondary-200` | `theme-color-secondary-800` |
+| `var(--icon-color-secondary-300, #DBDEE5)` | `theme-color-secondary-300` | `theme-color-secondary-800` |
+| `var(--icon-color-secondary-900, #212225)` | `theme-color-secondary-900` | `theme-color-secondary-600` |
+| `var(--icon-color-success-50, #F1FBF4)` | `theme-color-success-50` | `theme-color-success-800` |
+| `var(--icon-color-warning-100, #FFE6B8)` | `theme-color-warning-100` | `theme-color-warning-900` |
+| `var(--icon-color-danger-100, #FFE0DA)` | `theme-color-danger-100` | `theme-color-danger-800` |
 
 #### Example
 
