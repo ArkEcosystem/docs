@@ -9,6 +9,7 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
 ## Prerequisites to be installed
 
 <livewire:embed-link url="https://docs.docker.com/install" caption="Docker Community Edition" />
+
 <livewire:embed-link url="https://docs.docker.com/compose/install" caption="Docker Compose" />
 
 ## Install Docker Community Edition
