@@ -304,5 +304,7 @@ If you become stuck at any point make sure to consult our documents on our [Core
 **Check out previous posts in this series for reference here:**
 
 <livewire:page-reference path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-one" />
+
 <livewire:page-reference path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-two" />
+
 <livewire:page-reference path="/tutorials/launching-html5-games-in-the-ark-desktop-wallet/part-three" />
