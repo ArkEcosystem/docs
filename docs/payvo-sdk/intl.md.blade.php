@@ -8,7 +8,7 @@ This is an Internationalization package for the Platform SDK. The implementation
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-intl" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/intl" />
 
 ## Installation
 
@@ -29,4 +29,4 @@ yarn add @payvo/sdk-intl
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@ark.io](mailto:security@ark.io). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.

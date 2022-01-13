@@ -9,7 +9,7 @@ The `UUID` class provides methods to make working with UUIDs easier and consiste
 ## Importing the UUID class
 
 ```typescript
-import { UUID } from "@payvo/sdk-crypto";
+import { UUID } from "@payvo/sdk-cryptography";
 ```
 
 ## Generate a UUID based on the current time

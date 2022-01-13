@@ -9,7 +9,7 @@ The `HDKey` class provides methods to make derivation of hierarchical determinis
 ## Importing the HDKey class
 
 ```typescript
-import { HDKey } from "@payvo/sdk-crypto";
+import { HDKey } from "@payvo/sdk-cryptography";
 ```
 
 ## Derive a key from a seed

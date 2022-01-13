@@ -8,12 +8,12 @@ This is a CryptoCompare Client for the Platform SDK. The implementation makes us
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-cryptocompare" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/drivers/cryptocompare" />
 
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-cryptocompare
+yarn add @payvo/sdk-markets
 ```
 
 ## Security

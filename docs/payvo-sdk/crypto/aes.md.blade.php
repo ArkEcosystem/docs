@@ -9,7 +9,7 @@ The `AES` class provides methods to extract the numerical value out of any curre
 ## Importing the AES class
 
 ```typescript
-import { AES } from "@payvo/sdk-crypto";
+import { AES } from "@payvo/sdk-cryptography";
 ```
 
 ## Encrypt a message with the given password

@@ -9,7 +9,7 @@ The `BIP38` class provides methods to extract the numerical value out of any cur
 ## Importing the BIP38 class
 
 ```typescript
-import { BIP38 } from "@payvo/sdk-crypto";
+import { BIP38 } from "@payvo/sdk-cryptography";
 ```
 
 ## Encrypt a buffer with the given mnemonic

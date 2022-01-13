@@ -14,7 +14,7 @@ We recommend to use [Jest](https://jestjs.io/) for testing but any other framewo
 
 ## Example
 
-We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk-profiles/src/drivers/memory/profiles/portfolio.test.ts) class as an example as it exposes a few underlying components of the Platform SDK.
+We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/profiles/source/portfolio.test.ts) class as an example as it exposes a few underlying components of the Platform SDK.
 
 ### Mocking Network Requests
 
@@ -142,6 +142,6 @@ export class StubStorage implements Storage {
 container.rebind(Identifiers.Storage, new StubStorage());
 ```
 
-The above example is taken from the test suite of the `platform-sdk-profiles` package and shows you how to swap out a core component of the package with your own implementation. This example implements a storage that is mostly a stub and will only keep data in-memory for the duration of the test it is used in.
+The above example is taken from the test suite of the `profiles` package and shows you how to swap out a core component of the package with your own implementation. This example implements a storage that is mostly a stub and will only keep data in-memory for the duration of the test it is used in.
 
 This is useful because it means we won't have to deal with any kind of persistence issues or overlaps between tests and can preload a fixture for the storage if it is available.

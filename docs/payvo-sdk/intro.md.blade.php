@@ -44,20 +44,6 @@ The **Markets** section will introduce you to Cryptocurrency Data Services. Thes
     ]"
 />
 
-## HTTP Clients
-
-The **HTTP Clients** section will introduce you to HTTP communication. The Platform SDK itself is agnostic as to what HTTP client you want to use as long as it adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). This will make it easier to get the SDK working in different environments, like Electron, because you can use packages that were built specifically for your environment.
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/payvo-sdk/http/axios', 'name' => 'axios'],
-        ['path' => '/docs/payvo-sdk/http/bent', 'name' => 'bent'],
-        ['path' => '/docs/payvo-sdk/http/got', 'name' => 'got'],
-        ['path' => '/docs/payvo-sdk/http/ky', 'name' => 'ky'],
-        ['path' => '/docs/payvo-sdk/http/node-fetch', 'name' => 'node-fetch'],
-    ]"
-/>
-
 ## Cryptography
 
 The **Cryptography** section will introduce you to encryption, hashing and identity computation. Cryptography is at the core of everything we do daily at ARK. The cryptography packages are responsible for providing secure encryption of data, hashing of passwords and providing interfaces to interact with common [BIP](https://github.com/bitcoin/bips) functionality like mnemonic generation.
@@ -124,7 +110,20 @@ The **Utility** section will introduce you to supportive functionality. The pack
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/payvo-sdk/utility/news', 'name' => 'News'],
-        ['path' => '/docs/payvo-sdk/utility/support', 'name' => 'Support'],
+        ['path' => '/docs/payvo-sdk/news', 'name' => 'News'],
+        ['path' => '/docs/payvo-sdk/helpers', 'name' => 'Helpers'],
+        ['path' => '/docs/payvo-sdk/markets', 'name' => 'Markets'],
+        ['path' => '/docs/payvo-sdk/fetch', 'name' => 'fetch'],
+    ]"
+/>
+
+## Guides
+
+The **Guides** section will provide in-depth explanations as to what you will need to do, how to do it, and what limitations and gotchas there are that need to be kept in mind when developing and testing your integration.
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/payvo-sdk/guides/development', 'name' => 'Development'],
+        ['path' => '/docs/payvo-sdk/guides/testing', 'name' => 'Testing'],
     ]"
 />

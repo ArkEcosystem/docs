@@ -8,7 +8,7 @@ This is a CoinGecko Client for the Platform SDK. The implementation makes use of
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-markets" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/markets" />
 
 ## Installation
 
@@ -22,9 +22,8 @@ yarn add @payvo/sdk-markets
 
 ```typescript
 import { MarketService } from "@payvo/sdk-markets";
-import { PriceTracker } from "@payvo/sdk-cryptocompare";
 
-MarketService.make(new PriceTracker(), new Request());
+MarketService.make("cryptocompare", new Request());
 ```
 
 ### Verify if the given currency exists on the service
@@ -107,4 +106,4 @@ await marketService.dailyAverage("ark", "btc", Date.now());
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@ark.io](mailto:security@ark.io). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.

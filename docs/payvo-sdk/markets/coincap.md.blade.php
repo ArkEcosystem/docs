@@ -8,12 +8,12 @@ This is a CoinCap Client for the Platform SDK. The implementation makes use of [
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-coincap" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/drivers/coincap" />
 
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-coincap
+yarn add @payvo/sdk-markets
 ```
 
 ## Security

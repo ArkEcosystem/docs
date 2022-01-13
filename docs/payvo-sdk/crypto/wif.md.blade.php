@@ -9,7 +9,7 @@ The `WIF` class provides methods to make working with the `Bitcoin Wallet Import
 ## Importing the WIF class
 
 ```typescript
-import { WIF } from "@payvo/sdk-crypto";
+import { WIF } from "@payvo/sdk-cryptography";
 ```
 
 ## Encode a private key

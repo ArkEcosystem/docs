@@ -8,12 +8,12 @@ This is a CoinGecko Client for the Platform SDK. The implementation makes use of
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-coingecko" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/drivers/coingecko" />
 
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-coingecko
+yarn add @payvo/sdk-markets
 ```
 
 ## Security

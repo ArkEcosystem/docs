@@ -9,7 +9,7 @@ title: Environment
 ```typescript
 import { ARK } from "@payvo/sdk-ark";
 import { Environment } from "@payvo/sdk-profiles";
-import { Request } from "@payvo/sdk-http-bent";
+import { Request } from "@payvo/sdk-fetch";
 
 new Environment({
     coins: { ARK },
