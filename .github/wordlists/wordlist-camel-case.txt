@@ -3,6 +3,7 @@ AbstractDeserializer
 AbstractManager
 AbstractNetwork
 AbstractSerializer
+AbstractSignedTransactionData
 AbstractTransaction
 AbstractTransactionBuilder
 acceptExpiredTransactionTimestamps
@@ -27,9 +28,16 @@ addQuarter
 addressBytes
 AddressFromPassphrase
 addressHash
+AddressMnemonicBip
+AddressMultiSignature
+AddressPrivateKey
+AddressPublicKey
+AddressSecret
 addressStr
 addressString
 AddressToBytes
+AddressValidate
+AddressWif
 addSchema
 addSecond
 addSeconds
@@ -122,6 +130,7 @@ bridgechainId
 bridgechainRegistration
 bridgechainResignation
 bridgechainUpdate
+broadcastData
 broadcastResponse
 buildApplication
 buildBIP
@@ -171,6 +180,8 @@ ConfigFlags
 configManagers
 ConfigPlugins
 ConfigurationAsync
+ConfirmedTransactionData
+ConfirmedTransactionDataCollection
 ConnectionManager
 ConsoleLogger
 ContactRepository
@@ -264,6 +275,7 @@ EcPrivateKey
 EcPublicKey
 emitEvents
 errorKey
+estimateExpiration
 eventBus
 EventDispatcher
 EventDispatcherService
@@ -286,8 +298,10 @@ extendTransaction
 FactoryBuilder
 fastRebuild
 FeatureManager
+FeeCalculate
 FeeConfiguration
 feeContext
+FeedService
 FeePolicy
 FilesystemService
 findByName
@@ -297,6 +311,7 @@ firstEvent
 firstPage
 foreverMany
 forgetAttribute
+forgetById
 forgetIndex
 forgetMany
 formatAsCurrency
@@ -306,6 +321,8 @@ forType
 FrameworkBundle
 FrameworkExtraBundle
 FriendsOfPHP
+fromAddress
+fromAddressWithDerivationPath
 fromBase
 fromBytes
 fromBytesUnsafe
@@ -316,10 +333,13 @@ fromExtendedPublicKey
 fromHex
 fromJson
 fromKeys
+fromMnemonicWithBIP
+fromMultiSignature
 fromMultiSignatureAsset
 fromNow
 fromObject
 fromPrivateKey
+fromSecret
 fromSeed
 fromString
 FromTo
@@ -463,8 +483,8 @@ IMultiSignatureAsset
 includeSignature
 INetwork
 INetworkConfig
-installedVersion
 inSingletonScope
+installedVersion
 InstanceType
 InternalTransactionType
 InviteUserTest
@@ -482,6 +502,7 @@ IResponse
 isActivated
 isAfter
 isArray
+isAwaitingFinalSignature
 isAwaitingOtherSignatures
 isAwaitingOurSignature
 isBad
@@ -513,7 +534,11 @@ JsonObject
 jsonParser
 jsonTransaction
 KernelEvent
+KeyPairMnemonicBip
+KeyPairPrivateKey
 keyPairs
+KeyPairSecret
+KeyPairWif
 KeyValuePair
 KeywordDefinition
 lastForgedBlock
@@ -656,7 +681,10 @@ PrivateKeyFromBytes
 PrivateKeyFromHex
 PrivateKeyFromPassphrase
 privateKeyHex
+PrivateKeyMnemonicBip
+PrivateKeySecret
 privateKeyString
+PrivateKeyWif
 processStatus
 processSync
 processType
@@ -674,8 +702,12 @@ PublicKeyFromPassphrase
 PublicKeyFromPrivateKey
 publicKeyHash
 publicKeyHex
+PublicKeyMnemonicBip
+PublicKeyMultiSignature
 publicKeys
+PublicKeySecret
 publicKeyString
+PublicKeyWif
 putMany
 QRCodes
 QRCodeToDataURLOptions
@@ -801,9 +833,13 @@ showUnconfirmed
 showUnconfirmedAsync
 signatureAsset
 signECDSA
+signedData
+signedID
+SignedTransactionData
 signHash
 signSchnorr
 signSignature
+signUnlockToken
 signWithWif
 skipCompression
 skipDiscovery
@@ -856,6 +892,7 @@ throwIfCannotEnterPool
 TLSv
 ToAddress
 toArray
+toBeFalse
 toBytes
 toConstantValue
 toDataURL
@@ -911,6 +948,9 @@ TransactionType
 TransactionTypeFactory
 transactionTypes
 transactionUnconfirmed
+TransactionUnlockToken
+TransactionUnlockTokenLedgerS
+TransactionUnlockTokenLedgerX
 TransferBuilder
 TransferTransaction
 transformPlugins
@@ -924,8 +964,11 @@ txString
 TypesAsync
 unconfirmedTransaction
 unconfirmedTransactions
+unlockableBalances
 unlockedLocks
 unlockSecret
+unlockToken
+UnlockTokenResponse
 updateEnv
 updatePlugins
 UpdateUserNameForm
@@ -981,6 +1024,7 @@ verifyToken
 virtualEnvName
 voteBalance
 VoteBuilder
+VoteReport
 VotersAsync
 votesAsset
 VotesAsync
@@ -988,6 +1032,8 @@ VotesService
 VoteTransaction
 walletApi
 walletAttributes
+WalletDataCollection
+walletFactory
 walletInfoParams
 walletLocks
 walletReceivedTransactions
@@ -1014,6 +1060,8 @@ WebSQL
 weeklyOn
 whereKind
 wifKey
+WifMnemonicBip
+WifSecret
 wifString
 wifVersion
 WinstonLogger
