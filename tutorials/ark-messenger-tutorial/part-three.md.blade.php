@@ -84,4 +84,5 @@ Thank you for joining us in this series! If you become stuck at any point make s
 If you have missed other ARK Messenger Tutorials, you can read them by following the links below:
 
 <livewire:page-reference path="/tutorials/ark-messenger-tutorial/part-one" />
+
 <livewire:page-reference path="/tutorials/ark-messenger-tutorial/part-two" />
