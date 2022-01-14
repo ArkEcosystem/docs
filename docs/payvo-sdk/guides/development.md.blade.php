@@ -161,26 +161,6 @@ Preparing test fixtures for Ledger can be a non-trivial task, but essentially in
 
 Visit the [Core Transfer](https://ark.dev/docs/core/transactions/types/transfer) page to see the structure of a serialized ARK transaction. You can further examine the ARK Ledger Transport's [test fixtures](https://github.com/ArkEcosystem/ledger-transport/blob/c7d67ed0a52929699d45cf828747de57cacd650b/__tests__/__fixtures__/transport-fixtures.ts) and [APDU constants](https://github.com/ArkEcosystem/ledger-transport/blob/c7d67ed0a52929699d45cf828747de57cacd650b/src/apdu.ts#L5-#L66) to get an idea of how serialized transactions should be wrapped.
 
-### Link
-
-The Link service is responsible for generating links to view data on an explorer. This only applies to blocks, transactions, and wallets and should use the most popular explorer.
-
-**Implementation**:
-
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/services/link.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk-ark/source/link.service.ts).
-
-- The `block` method should generate a `https` URL to an explorer to view information about a block by its ID.
-- The `transaction` method should generate a `https` URL to an explorer to view information about a transaction by its ID.
-- The `wallet` method should generate a `https` URL to an explorer to view information about a wallet by its ID.
-
-**Testing**:
-
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/link.service.test.ts) but we'll outline what you should keep in mind when writing tests.
-
-- Ensure that all methods generate URLs with `https` to ensure secure communication between the client and server.
-- Ensure that all methods generate URLs that respond with status code 200 or 301. Any other status indicates that the user won't reach it easily or at all.
-- Ensure that no methods throw a `NotImplemented` exception. All methods have to be implemented to allow a client to display the correct information.
-
 ### Message
 
 The Message service is responsible for signing and verifying messages. These messages are anything the user wants to sign and serves no critical functionality.
