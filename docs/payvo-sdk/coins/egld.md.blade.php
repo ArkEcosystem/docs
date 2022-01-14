@@ -4,7 +4,7 @@ title: EGLD
 
 # Elrond
 
-This is an Elrond Driver for the Platform SDK. The implementation makes use of [Elrond](https://elrond.com/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
+This is an Elrond Driver for the Payvo SDK. The implementation makes use of [Elrond](https://elrond.com/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
 
 ## Repository
 

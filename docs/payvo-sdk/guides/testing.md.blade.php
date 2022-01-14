@@ -6,7 +6,7 @@ title: Testing
 
 Writing automated tests for your software is important to ensure no regressions sneak in, everything works as expected and that you're not corrupting user data.
 
-The Platform SDK is designed in such a way that testing it is quite simple because everything can be mocked and some core components can even be completely replaced with custom implementations.
+The Payvo is designed in such a way that testing it is quite simple because everything can be mocked and some core components can even be completely replaced with custom implementations.
 
 ## Prerequisites
 
@@ -14,11 +14,11 @@ We recommend to use [Jest](https://jestjs.io/) for testing but any other framewo
 
 ## Example
 
-We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/profiles/source/portfolio.test.ts) class as an example as it exposes a few underlying components of the Platform SDK.
+We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/profiles/source/portfolio.test.ts) class as an example as it exposes a few underlying components of the Payvo SDK.
 
 ### Mocking Network Requests
 
-This one isn't specific to the Platform SDK but we do recommend to use [nock](https://github.com/nock/nock) for mocking of network requests. This will make your life a lot easier when you are bootstrapping a coin in tests because a coin will always try to connect to a network to gather some information.
+This one isn't specific to the Payvo SDK but we do recommend to use [nock](https://github.com/nock/nock) for mocking of network requests. This will make your life a lot easier when you are bootstrapping a coin in tests because a coin will always try to connect to a network to gather some information.
 
 ```ts
 beforeAll(() => nock.disableNetConnect());
@@ -38,7 +38,7 @@ beforeEach(async () => {
 });
 ```
 
-This is what a typical network mocking setup would look like if you are writing a test that would involve the `platform-sdk-ark` integration when bootstrapping the environment. This ensures that the tests won't be able to use your real network connection which will ensure that your tests throw an exception if you are missing any mocks.
+This is what a typical network mocking setup would look like if you are writing a test that would involve the `@payvohq/sdk-ark` integration when bootstrapping the environment. This ensures that the tests won't be able to use your real network connection which will ensure that your tests throw an exception if you are missing any mocks.
 
 If you are missing any mocks you should make sure that you add them to guarantee consistent results when running your tests but also ensure that they are as fast as they possibly can be.
 

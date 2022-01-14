@@ -4,7 +4,7 @@ title: CoinGecko
 
 # CoinGecko
 
-This is a CoinGecko Client for the Platform SDK. The implementation makes use of [CoinGecko](https://coingecko.com/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [Markets](/docs/payvo-sdk/markets) package.**
+This is a CoinGecko Client for the Payvo SDK. The implementation makes use of [CoinGecko](https://coingecko.com/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [Markets](/docs/payvo-sdk/markets) package.**
 
 ## Repository
 

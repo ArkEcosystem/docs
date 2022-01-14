@@ -4,7 +4,7 @@ title: EOS
 
 # EOS
 
-This is a EOS Driver for the Platform SDK. The implementation makes use of [EOS](https://eos.io/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
+This is a EOS Driver for the Payvo SDK. The implementation makes use of [EOS](https://eos.io/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
 
 ## Repository
 
