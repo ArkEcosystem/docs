@@ -225,24 +225,6 @@ await wallet.transaction().htlcClaim(input, options);
 // Create a new htlc refund transaction
 await wallet.transaction().htlcRefund(input, options);
 
-// Create a new business registration transaction
-await wallet.transaction().businessRegistration(input, options);
-
-// Create a new business resignation transaction
-await wallet.transaction().businessResignation(input, options);
-
-// Create a new business update transaction
-await wallet.transaction().businessUpdate(input, options);
-
-// Create a new bridgechain registration transaction
-await wallet.transaction().bridgechainRegistration(input, options);
-
-// Create a new bridgechain resignation transaction
-await wallet.transaction().bridgechainResignation(input, options);
-
-// Create a new bridgechain update transaction
-await wallet.transaction().bridgechainUpdate(input, options);
-
 // Sign a new message
 await wallet.message().sign(input);
 
@@ -422,13 +404,11 @@ if (response.hasMore()) {
 ```typescript
 // 1. Sign and store the ID
 const transactionId = await wallet.transaction().signTransfer({
-    sign: {
-        mnemonic: "this is a top secret passphrase",
-    },
     data: {
         amount: "1",
         to: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
     },
+    signatory: await wallet.signatory().mnemonic("this is a top secret passphrase"),
 });
 
 // 2. Broadcast with the ID from signing
@@ -443,34 +423,74 @@ await wallet.transactions().confirm(transactionId);
 > You should always ensure to call `wallet.syncIdentity()` before trying to sign transactions.
 
 ```typescript
-// This is the initial transaction without any signatures.
-const transactionId = await wallet.transaction().signTransfer({
-    nonce: "1",
-    from: "DRsenyd36jRmuMqqrFJy6wNbUwYvoEt51y",
-    sign: {
-        multiSignature: wallet.multiSignature(),
-    },
+const PA = BIP39.generate();
+const PB = BIP39.generate();
+const PC = BIP39.generate();
+
+const publicKeys = [
+    (await wallet.coin().publicKey().fromMnemonic(PA)).publicKey,
+    (await wallet.coin().publicKey().fromMnemonic(PB)).publicKey,
+    (await wallet.coin().publicKey().fromMnemonic(PC)).publicKey,
+];
+
+wallet = await profile.walletFactory().fromAddress({
+    coin: "ARK",
+    network: "ark.devnet",
+    address: "DAWdHfDFEvvu57cHjAhs5K5di33B2DdCu1",
+});
+await wallet.synchroniser().identity();
+
+const uuid = await wallet.transaction().signTransfer({
+    signatory: await wallet.coin().signatory().multiSignature({ min: 2, publicKeys }),
     data: {
-        amount: "1",
-        to: "DRsenyd36jRmuMqqrFJy6wNbUwYvoEt51y",
-        memo: "Sent from SDK",
+        amount: 1,
+        to: "DAWdHfDFEvvu57cHjAhs5K5di33B2DdCu1",
     },
 });
 
-// Broadcast the transaction without any signatures.
-await wallet.transaction().broadcast(transactionId);
-
-// Add the first signature and re-broadcast the transaction.
-await wallet.transaction().addSignature(transactionId, "FIRST_PASSPHRASE");
-
-// Add the second signature and re-broadcast the transaction.
-await wallet.transaction().addSignature(transactionId, "SECOND_PASSPHRASE");
+// Broadcast the transaction to make it accessible for all participants.
+await wallet.transaction().broadcast(uuid);
 
 // Sync all of the transactions from the Multi-Signature Server and check the state of each.
 await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeTrue();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeFalse();
+
+// Add the second signature and re-broadcast the transaction.
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeTrue();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeFalse();
+await wallet.transaction().addSignature(uuid, await wallet.coin().signatory().mnemonic(PA));
+
+// Sync all of the transactions from the Multi-Signature Server and check the state of each.
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeTrue();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeFalse();
+
+// Add the third signature and re-broadcast the transaction.
+await wallet.transaction().addSignature(uuid, await wallet.coin().signatory().mnemonic(PB));
+
+// Sync all of the transactions from the Multi-Signature Server and check the state of each.
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeFalse();
+
+// Add the final signature by signing the whole transaction with the signatures of all participants.
+await wallet.transaction().addSignature(uuid, await wallet.coin().signatory().mnemonic(PC));
+
+// Sync all of the transactions from the Multi-Signature Server and check the state of each.
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeFalse();
 
 // Broadcast the multi signature.
-await wallet.transaction().broadcast(transactionId);
+for (const signedID of Object.keys(wallet.transaction().signed())) {
+    console.log(JSON.stringify(await wallet.transaction().broadcast(signedID), null, 4));
+}
 ```
 
 #### Sign and broadcast a multi-signature registration with 3 participants
@@ -478,51 +498,83 @@ await wallet.transaction().broadcast(transactionId);
 > You should always ensure to call `wallet.syncIdentity()` before trying to sign transactions.
 
 ```typescript
-// This is the initial transaction without any signatures.
-const transactionId = await wallet.transaction().signMultiSignature({
-    nonce: "2",
-    from: wallet1Address,
-    sign: {
-        multiSignature: {
-            publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
-            min: 3,
-        }
-    },
+const PA = BIP39.generate();
+const PB = BIP39.generate();
+const PC = BIP39.generate();
+
+const publicKeys = [
+    (await wallet.coin().publicKey().fromMnemonic(PA)).publicKey,
+    (await wallet.coin().publicKey().fromMnemonic(PB)).publicKey,
+    (await wallet.coin().publicKey().fromMnemonic(PC)).publicKey,
+];
+
+wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+    coin: "ARK",
+    network: "ark.devnet",
+    mnemonic: PA,
+});
+await wallet.synchroniser().identity();
+
+const uuid = await wallet.transaction().signMultiSignature({
+    nonce: wallet.nonce().plus(1).toString(),
+    fee: 5,
+    signatory: await wallet.coin().signatory().mnemonic(PA),
     data: {
-        publicKeys:[wallet1PublicKey, wallet2PublicKey, wallet3PublicKey],
-        min: 3,
-        senderPublicKey: wallet1PublicKey,
+        publicKeys,
+        min: 2,
+        senderPublicKey: wallet.publicKey(),
     },
 });
 
-await activeWallet.transaction().broadcast(transactionId);
+try {
+    await wallet.coin().multiSignature().forgetById(uuid);
+} catch {
+    // Does not exist.
+}
 
-// Add the first signature and re-broadcast the transaction.
-await activeWallet.transaction().addSignature(transactionId, "FIRST_PASSPHRASE");
+// Broadcast the transaction to make it accessible for all participants.
+await wallet.transaction().broadcast(uuid);
 
 // Sync all of the transactions from the Multi-Signature Server and check the state of each.
-await activeWallet.transaction().sync();
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeTrue();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeTrue();
 
 // Add the second signature and re-broadcast the transaction.
-await activeWallet.transaction().addSignature(transactionId, "SECOND_PASSPHRASE");
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeTrue();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeTrue();
+await wallet.transaction().addSignature(uuid, await wallet.coin().signatory().mnemonic(PB));
 
 // Sync all of the transactions from the Multi-Signature Server and check the state of each.
-await activeWallet.transaction().sync();
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeTrue();
 
 // Add the third signature and re-broadcast the transaction.
-await activeWallet.transaction().addSignature(transactionId, "THIRD_PASSPHRASE");
+await wallet.transaction().addSignature(uuid, await wallet.coin().signatory().mnemonic(PC));
 
 // Sync all of the transactions from the Multi-Signature Server and check the state of each.
-await activeWallet.transaction().sync();
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeTrue();
 
 // Add the final signature by signing the whole transaction with the signatures of all participants.
-await activeWallet.transaction().addSignature(transactionId, "FIRST_PASSPHRASE");
+await wallet.transaction().addSignature(uuid, await wallet.coin().signatory().mnemonic(PA));
 
 // Sync all of the transactions from the Multi-Signature Server and check the state of each.
-await activeWallet.transaction().sync();
+await wallet.transaction().sync();
+expect(wallet.transaction().isAwaitingOurSignature(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingOtherSignatures(uuid)).toBeFalse();
+expect(wallet.transaction().isAwaitingFinalSignature(uuid)).toBeFalse();
 
 // Broadcast the multi signature.
-await activeWallet.transaction().broadcast(transactionId);
+for (const signedID of Object.keys(wallet.transaction().signed())) {
+    console.log(JSON.stringify(await wallet.transaction().broadcast(signedID), null, 4));
+}
 ```
 
 #### Check what signatures a Multi-Signature Transaction or Registration is awaiting

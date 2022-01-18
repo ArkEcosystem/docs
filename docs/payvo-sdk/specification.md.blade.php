@@ -10,9 +10,9 @@ Each coin follows a strict implementation contract. All of these contracts can b
 
 <x-link-collection
     :links="[
-        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/sdk/src/contracts/coins', 'name' => 'Coins'],
-        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/sdk/src/contracts/price-trackers', 'name' => 'Markets'],
-        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/sdk/src/dto', 'name' => 'DTO'],
+        ['path' => 'https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/coin.contracts.ts', 'name' => 'Coins'],
+        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/contracts', 'name' => 'Markets'],
+        ['path' => 'https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/dto.ts', 'name' => 'DTO'],
     ]"
 />
 
@@ -27,7 +27,7 @@ Let's take the `sdk-ark` network manifest as an example. It contains some inform
 ```typescript
 import { Networks } from "@payvo/sdk";
 
-import { explorer, transactions, importMethods, featureFlags } from "../shared";
+import { explorer, featureFlags, importMethods, transactions } from "./shared";
 
 const network: Networks.NetworkManifest = {
     id: "ark.mainnet",
@@ -45,11 +45,11 @@ const network: Networks.NetworkManifest = {
     hosts: [
         {
             type: "full",
-            host: "https://wallets.ark.io/api",
+            host: "https://ark-live.payvo.com/api",
         },
         {
             type: "musig",
-            host: "https://musig1.ark.io",
+            host: "https://ark-live-musig.payvo.com",
         },
         {
             type: "explorer",
@@ -74,7 +74,7 @@ const network: Networks.NetworkManifest = {
 export default network;
 ```
 
-> [sdk-ark/src/networks/ark/mainnet.ts](https://github.com/PayvoHQ/sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/sdk-ark/src/networks/ark/mainnet.ts) | [Platform SDK v9.0.4](https://github.com/PayvoHQ/sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
+> [packages/sdk-ark/source/networks/ark.mainnet.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/networks/ark.mainnet.ts)
 
 ---
 
@@ -188,7 +188,7 @@ export const explorer: Networks.NetworkManifestExplorer = {
 };
 ```
 
-> [sdk-ark/src/networks/shared.ts](https://github.com/PayvoHQ/sdk/blob/0ad2fbc1f61247a282ee00789ce1933617ca8579/packages/sdk-ark/src/networks/shared.ts) | [Platform SDK v9.0.4](https://github.com/PayvoHQ/sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
+> [packages/sdk-ark/source/networks/shared.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/networks/shared.ts)
 
 ---
 
@@ -210,6 +210,16 @@ Below is a list of all currently-available feature flags.
 
 ```typescript
 export enum FeatureFlag {
+    AddressMnemonicBip39 = "Address.mnemonic.bip39",
+    AddressMnemonicBip44 = "Address.mnemonic.bip44",
+    AddressMnemonicBip49 = "Address.mnemonic.bip49",
+    AddressMnemonicBip84 = "Address.mnemonic.bip84",
+    AddressMultiSignature = "Address.multiSignature",
+    AddressPrivateKey = "Address.privateKey",
+    AddressPublicKey = "Address.publicKey",
+    AddressSecret = "Address.secret",
+    AddressValidate = "Address.validate",
+    AddressWif = "Address.wif",
     ClientBroadcast = "Client.broadcast",
     ClientDelegate = "Client.delegate",
     ClientDelegates = "Client.delegates",
@@ -220,51 +230,34 @@ export enum FeatureFlag {
     ClientWallet = "Client.wallet",
     ClientWallets = "Client.wallets",
     FeeAll = "Fee.all",
-    IdentityAddressMnemonicBip39 = "Identity.address.mnemonic.bip39",
-    IdentityAddressMnemonicBip44 = "Identity.address.mnemonic.bip44",
-    IdentityAddressMnemonicBip49 = "Identity.address.mnemonic.bip49",
-    IdentityAddressMnemonicBip84 = "Identity.address.mnemonic.bip84",
-    IdentityAddressMultiSignature = "Identity.address.multiSignature",
-    IdentityAddressPrivateKey = "Identity.address.privateKey",
-    IdentityAddressPublicKey = "Identity.address.publicKey",
-    IdentityAddressSecret = "Identity.address.secret",
-    IdentityAddressValidate = "Identity.address.validate",
-    IdentityAddressWif = "Identity.address.wif",
-    IdentityKeyPairMnemonicBip39 = "Identity.keyPair.mnemonic.bip39",
-    IdentityKeyPairMnemonicBip44 = "Identity.keyPair.mnemonic.bip44",
-    IdentityKeyPairMnemonicBip49 = "Identity.keyPair.mnemonic.bip49",
-    IdentityKeyPairMnemonicBip84 = "Identity.keyPair.mnemonic.bip84",
-    IdentityKeyPairPrivateKey = "Identity.keyPair.privateKey",
-    IdentityKeyPairSecret = "Identity.keyPair.secret",
-    IdentityKeyPairWif = "Identity.keyPair.wif",
-    IdentityPrivateKeyMnemonicBip39 = "Identity.privateKey.mnemonic.bip39",
-    IdentityPrivateKeyMnemonicBip44 = "Identity.privateKey.mnemonic.bip44",
-    IdentityPrivateKeyMnemonicBip49 = "Identity.privateKey.mnemonic.bip49",
-    IdentityPrivateKeyMnemonicBip84 = "Identity.privateKey.mnemonic.bip84",
-    IdentityPrivateKeySecret = "Identity.privateKey.secret",
-    IdentityPrivateKeyWif = "Identity.privateKey.wif",
-    IdentityPublicKeyMnemonicBip39 = "Identity.publicKey.mnemonic.bip39",
-    IdentityPublicKeyMnemonicBip44 = "Identity.publicKey.mnemonic.bip44",
-    IdentityPublicKeyMnemonicBip49 = "Identity.publicKey.mnemonic.bip49",
-    IdentityPublicKeyMnemonicBip84 = "Identity.publicKey.mnemonic.bip84",
-    IdentityPublicKeyMultiSignature = "Identity.publicKey.multiSignature",
-    IdentityPublicKeySecret = "Identity.publicKey.secret",
-    IdentityPublicKeyWif = "Identity.publicKey.wif",
-    IdentityWifMnemonicBip39 = "Identity.wif.mnemonic.bip39",
-    IdentityWifMnemonicBip44 = "Identity.wif.mnemonic.bip44",
-    IdentityWifMnemonicBip49 = "Identity.wif.mnemonic.bip49",
-    IdentityWifMnemonicBip84 = "Identity.wif.mnemonic.bip84",
-    IdentityWifSecret = "Identity.wif.secret",
+    FeeCalculate = "Fee.calculate",
+    KeyPairMnemonicBip39 = "KeyPair.mnemonic.bip39",
+    KeyPairMnemonicBip44 = "KeyPair.mnemonic.bip44",
+    KeyPairMnemonicBip49 = "KeyPair.mnemonic.bip49",
+    KeyPairMnemonicBip84 = "KeyPair.mnemonic.bip84",
+    KeyPairPrivateKey = "KeyPair.privateKey",
+    KeyPairSecret = "KeyPair.secret",
+    KeyPairWif = "KeyPair.wif",
     LedgerGetPublicKey = "Ledger.getPublicKey",
     LedgerGetVersion = "Ledger.getVersion",
     LedgerSignMessage = "Ledger.signMessage",
     LedgerSignTransaction = "Ledger.signTransaction",
-    LinkBlock = "Link.block",
-    LinkTransaction = "Link.transaction",
-    LinkWallet = "Link.wallet",
     MessageSign = "Message.sign",
     MessageVerify = "Message.verify",
     PeerSearch = "Peer.search",
+    PrivateKeyMnemonicBip39 = "PrivateKey.mnemonic.bip39",
+    PrivateKeyMnemonicBip44 = "PrivateKey.mnemonic.bip44",
+    PrivateKeyMnemonicBip49 = "PrivateKey.mnemonic.bip49",
+    PrivateKeyMnemonicBip84 = "PrivateKey.mnemonic.bip84",
+    PrivateKeySecret = "PrivateKey.secret",
+    PrivateKeyWif = "PrivateKey.wif",
+    PublicKeyMnemonicBip39 = "PublicKey.mnemonic.bip39",
+    PublicKeyMnemonicBip44 = "PublicKey.mnemonic.bip44",
+    PublicKeyMnemonicBip49 = "PublicKey.mnemonic.bip49",
+    PublicKeyMnemonicBip84 = "PublicKey.mnemonic.bip84",
+    PublicKeyMultiSignature = "PublicKey.multiSignature",
+    PublicKeySecret = "PublicKey.secret",
+    PublicKeyWif = "PublicKey.wif",
     TransactionDelegateRegistration = "Transaction.delegateRegistration",
     TransactionDelegateRegistrationLedgerS = "Transaction.delegateRegistration.ledgerS",
     TransactionDelegateRegistrationLedgerX = "Transaction.delegateRegistration.ledgerX",
@@ -295,10 +288,18 @@ export enum FeatureFlag {
     TransactionTransfer = "Transaction.transfer",
     TransactionTransferLedgerS = "Transaction.transfer.ledgerS",
     TransactionTransferLedgerX = "Transaction.transfer.ledgerX",
+    TransactionUnlockToken = "Transaction.unlockToken",
+    TransactionUnlockTokenLedgerS = "Transaction.unlockToken.ledgerS",
+    TransactionUnlockTokenLedgerX = "Transaction.unlockToken.ledgerX",
     TransactionVote = "Transaction.vote",
     TransactionVoteLedgerS = "Transaction.vote.ledgerS",
     TransactionVoteLedgerX = "Transaction.vote.ledgerX",
+    WifMnemonicBip39 = "WIF.mnemonic.bip39",
+    WifMnemonicBip44 = "WIF.mnemonic.bip44",
+    WifMnemonicBip49 = "WIF.mnemonic.bip49",
+    WifMnemonicBip84 = "WIF.mnemonic.bip84",
+    WifSecret = "WIF.secret",
 }
 ```
 
-> [sdk-ark/src/enums.ts](https://github.com/PayvoHQ/sdk/blob/6eeb6d9cac724fc73e059680b50f41215974e045/packages/sdk/src/enums.ts) | [Platform SDK v9.0.4](https://github.com/PayvoHQ/sdk/tree/9c16ecb85166dd04ce6b92925284562840702b99)
+> [packages/sdk/source/enums.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/enums.ts)

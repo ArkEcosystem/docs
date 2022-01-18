@@ -1,3 +1,6 @@
+accessor
+Accessors
+accessors
 ACR
 addon
 addr
@@ -12,6 +15,8 @@ Alessio
 alpinejs
 Angular's
 anonymized
+APDU
+apdu
 apk
 APN
 args
@@ -25,6 +30,7 @@ auditable
 auditd
 auth
 authenticator
+AuthorizesRequests
 Authy
 autoconf
 autoloader
@@ -39,6 +45,7 @@ bbd
 bblanchon
 bcl
 bcrypt
+bech
 BFT
 bg
 Binance
@@ -46,6 +53,7 @@ bip
 Bitcoind
 bitcoinpaperwallet
 bmp
+boilerplates
 bool
 brk
 browserify
@@ -68,7 +76,9 @@ CMAKE
 cmd
 codec
 CoinMarketCap
+CommonJS
 compendia
+componentize
 conf
 const
 containerd
@@ -103,6 +113,7 @@ davecgh
 DBDEE
 DDOS
 DDTHH
+debounce
 debranding
 decrypt
 decrypted
@@ -112,6 +123,7 @@ Delegatee
 delegatelistunvote
 delegatemonitoroverview
 Delegator
+DeleteServer
 Deployer
 deps
 DER
@@ -136,10 +148,12 @@ dnf
 DNOMINMAX
 DOM
 Don'ts
+Dont's
 dpos
 dsnapshots
 DT
 DTO
+DTOs
 DUNIT
 dwallets
 dwe
@@ -176,6 +190,7 @@ extern
 facto
 falsy
 favicon
+findOrFail
 FlexToshi
 FluiDB
 fmt
@@ -190,6 +205,8 @@ functools
 Fungibility
 gclib
 GDPR
+getNameAttribute
+getter
 gg
 githubusercontent
 Golang
@@ -236,6 +253,7 @@ inputpasswordhere
 installable
 instantiation
 integrations
+InteractsWithUser
 intl
 inversify
 inversifyjs
@@ -245,6 +263,7 @@ iostream
 IPC
 IPFS
 iptables
+isLoading
 javase
 jdk
 jemalloc
@@ -279,6 +298,8 @@ libudev
 Linkedin
 linuxconfig
 Lisk
+Livewire's
+lquixada
 lsb
 LSK
 lte
@@ -313,6 +334,7 @@ MSQ
 Multisig
 musig
 mut
+mutators
 mv
 mvn
 mydelegate
@@ -325,6 +347,7 @@ Nano
 natively
 nes
 Netlify
+newEloquentBuilder
 nft
 ngd
 Nginx
@@ -361,6 +384,7 @@ Payvo
 PayvoHQ
 PBKDF
 perf
+performant
 permissioned
 pgtune
 pid
@@ -412,6 +436,7 @@ RIPEMD
 Ropsten
 RPC
 RSA
+rss
 runc
 rushjs
 rustup
@@ -442,6 +467,7 @@ Sensio
 serde
 serializer
 Serializers
+serverId
 sha
 signup
 sindresorhus
@@ -472,6 +498,7 @@ svg
 SVG's
 SVGO
 Symfony
+synchroniser
 sys
 systemctl
 tabindex
@@ -506,6 +533,7 @@ uglifyjs
 UI
 ui
 uint
+UIs
 ulong
 uname
 unassigns
@@ -518,13 +546,16 @@ Unstoppabledomains
 Unvote
 unvoted
 unvoting
+UpdateUserForm
 Uptime
 URI
 USD
+UserQuery
 usr
 utf
 util
 utils
+UTXO
 UUID
 UUIDs
 validator
@@ -546,8 +577,14 @@ wampserver
 Weibo
 werkzeug
 wget
+whereColumn
+whereDate
+whereName
+whereNotNull
+whereRaw
 whois
 WIF
+WIFs
 WIP
 ws
 WSL
@@ -572,27 +609,3 @@ Zilliqa
 zsh
 zshrc
 zypper
-Accessors
-UserQuery
-accessor
-accessors
-getNameAttribute
-getter
-mutators
-newEloquentBuilder
-whereColumn
-whereDate
-whereName
-whereNotNull
-whereRaw
-AuthorizesRequests
-DeleteServer
-InteractsWithUser
-Livewire's
-UIs
-componentize
-findOrFail
-serverId
-UpdateUserForm
-isLoading
-debounce

@@ -4,16 +4,16 @@ title: CryptoCompare
 
 # CryptoCompare
 
-This is a CryptoCompare Client for the Platform SDK. The implementation makes use of [CryptoCompare](https://www.cryptocompare.com/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [Markets](/docs/payvo-sdk/markets) package.**
+This is a CryptoCompare Client for the Payvo SDK. The implementation makes use of [CryptoCompare](https://www.cryptocompare.com/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [Markets](/docs/payvo-sdk/markets) package.**
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-cryptocompare" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/drivers/cryptocompare" />
 
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-cryptocompare
+yarn add @payvo/sdk-markets
 ```
 
 ## Security
