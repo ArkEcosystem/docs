@@ -4,9 +4,13 @@
 
 <x-general.sidebar-link path="/docs/nodem/intro" name="Welcome to Nodem" />
 
+## Overview
+
+<x-general.sidebar-link path="/docs/nodem/overview/nodem" name="Nodem Overview" />
+<x-general.sidebar-link path="/docs/nodem/overview/stack" name="Technology Stack" />
+
 ## Getting Started
 
-<x-general.sidebar-link path="/docs/nodem/getting-started/stack" name="Technology Stack" />
 <x-general.sidebar-link path="/docs/nodem/getting-started/requirements" name="Requirements" />
 <x-general.sidebar-link
     path="/docs/nodem/getting-started/"
