@@ -12,8 +12,7 @@ Nodem is a new utility that enables developers and network Validators to streaml
 
 <x-link-collection
     :links="[
-
-        ['path' => '/docs/nodem/overview/nodem', 'name' => 'Nodem Overview'],
+        ['path' => '/docs/nodem/overview/features', 'name' => 'Nodem Features'],
         ['path' => '/docs/nodem/overview/stack', 'name' => 'Technology Stack'],
     ]"
 />
