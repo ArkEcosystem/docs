@@ -1248,9 +1248,9 @@ Describes sensitive personal information, as described in GDPR guidelines.
 
 See [Personally Identifiable Information](#personally-identifiable-information)
 
-### Platform SDK
+### Payvo SDK
 
-The simplest way for developers to interface with 10+ popular Blockchain technologies including Bitcoin and Ethereum.
+The simplest way for developers to interface with over a dozen popular Blockchain technologies including Bitcoin, Ethereum, Cardano, Polkadot, Solana, and more...
 
 **More:** [Blockchain](#blockchain), [Coin](#coin)
 
