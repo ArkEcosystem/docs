@@ -88,10 +88,10 @@ Social Media platforms supported for use by Profiles and Projects on MarketSquar
 
 |                                                                       |                               Supported                               |                                                                       |
 | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: | :-------------------------------------------------------------------: |
-| <x-ark-icon name="brands.discord" size="md" />        **Discord**     | <x-ark-icon name="brands.facebook" size="md" />       **Facebook**    | <x-ark-icon name="networks/hive" size="md" />         **Hive**        |
+| <x-ark-icon name="brands.discord" size="md" />        **Discord**     | <x-ark-icon name="brands.facebook" size="md" />       **Facebook**    | <x-ark-icon name="networks.hive" size="md" />         **Hive**        |
 | <x-ark-icon name="brands.instagram" size="md" />      **Instagram**   | <x-ark-icon name="brands.linkedin" size="md" />       **Linkedin**    | <x-ark-icon name="brands.medium" size="md" />         **Medium**      |
 | <x-ark-icon name="brands.reddit" size="md" />         **Reddit**      | <x-ark-icon name="brands.slack" size="md" />          **Slack**       | <x-ark-icon name="brands.telegram" size="md" />       **Telegram**    |
-| <x-ark-icon name="brands.twitter" size="md" />        **Twitter**     | <x-ark-icon name="brands.youtube" size="md" />        **Youtube**     | <x-ark-icon name="brands.outline/weibo" size="md" />  **Weibo**       |
+| <x-ark-icon name="brands.twitter" size="md" />        **Twitter**     | <x-ark-icon name="brands.youtube" size="md" />        **Youtube**     | <x-ark-icon name="brands.weibo" size="md" />  **Weibo**       |
 
 ### Repositories
 
