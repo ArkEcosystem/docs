@@ -25,33 +25,31 @@ Nodem is a new utility that enables developers and network Validators to streaml
         ['path' => '/docs/nodem/getting-started/development', 'name' => 'Development Setup'],
         ['path' => '/docs/nodem/getting-started/production', 'name' => 'Production Setup'],
         ['path' => '/docs/nodem/getting-started/core', 'name' => 'Core Server Configuration'],
-    ]"
+    ]",
 />
 
-## Accounts
+## Using Nodem
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/nodem/accounts/setup', 'name' => 'First-Time Account Setup'],
-        ['path' => '/docs/nodem/accounts/settings', 'name' => 'Account Settings'],
-    ]"
+        ['path' => '/docs/nodem/usage/management', 'name' => 'Server Management'],
 />
 
-## Teams
+### Accounts
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/nodem/teams/inviting', 'name' => 'Inviting Team Members'],
-        ['path' => '/docs/nodem/teams/managing', 'name' => 'Managing Team Members'],
+        ['path' => '/docs/nodem/usage/setup', 'name' => 'First-Time Account Setup'],
+        ['path' => '/docs/nodem/usage/settings', 'name' => 'Account Settings'],
     ]"
 />
 
-## Servers
+### Teams
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/nodem/servers/management', 'name' => 'Server Management'],
-        ['path' => '/docs/nodem/servers/providers', 'name' => 'Supported Server Providers'],
+        ['path' => '/docs/nodem/usage/inviting', 'name' => 'Inviting Team Members'],
+        ['path' => '/docs/nodem/usage/managing', 'name' => 'Managing Team Members'],
     ]"
 />
 
