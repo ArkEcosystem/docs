@@ -333,6 +333,7 @@ nock
 nodeip
 nodejs
 Nodem
+Nodem's
 nologo
 nonces
 NOPASSWD
@@ -472,6 +473,7 @@ svg
 SVG's
 SVGO
 Symfony
+symlink
 sys
 systemctl
 tabindex
