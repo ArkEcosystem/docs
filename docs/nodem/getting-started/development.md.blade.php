@@ -20,7 +20,7 @@ Make sure you have the following installed and ready to work with:
 
 ## Frameworks
 
-For Nodem, various frameworks are utilized with which you should make yourself familiair. These include:
+For Nodem, various frameworks are utilized with which you should make yourself familiar. These include:
 
 * [Laravel](https://laravel.com/) - the main PHP framework used
 * [Livewire](https://laravel-livewire.com/) - for dynamic interfaces with Laravel
