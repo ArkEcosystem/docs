@@ -7,7 +7,6 @@
 ## Overview
 
 <x-general.sidebar-link path="/docs/nodem/overview/features" name="Features" />
-<x-general.sidebar-link path="/docs/nodem/overview/stack" name="Technology Stack" />
 
 ## Getting Started
 
