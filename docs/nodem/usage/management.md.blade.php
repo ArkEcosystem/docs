@@ -1,5 +1,5 @@
 ---
-title: Servers - Management
+title: Usage - Server Management
 ---
 
 # Server Management
