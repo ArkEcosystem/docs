@@ -4,7 +4,7 @@ title: Getting Started - Development Setup
 
 # Nodem Development Setup
 
-This section aims to give an overview of the requirements needed to run Nodem locally for development purposes.
+This section aims to provide an overview of the requirements needed to run Nodem locally for development purposes.
 
 ## Requirements
 
@@ -47,7 +47,7 @@ yarn
 
 ### 2) Configure the Environment
 
-Next is to configure your `.env`.
+Next is to configure your `.env` file.
 
 Copy the example `.env` file and generate an application key using the following commands:
 
@@ -56,16 +56,16 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-Afterwards, adjust the `.env` file to your setup. Make sure to create a database for your Nodem instance and provide the credentials in your `.env`. Note that it is advised to make use of Redis as `CACHE_DRIVER` and `QUEUE_DRIVER`.
+Afterward, adjust the `.env` file to your setup. Make sure to create a database for your Nodem instance and provide the credentials in your `.env`. Note that it is advised to use Redis as `CACHE_DRIVER` and `QUEUE_DRIVER`.
 
-Please note that by default the Nodem application enforces 2FA for every user. As this can be annoying during development, you can disable it by setting `TWO_FACTOR_ENABLED=false`. This should only be used in a development environment.
+Nodem enforces 2FA for all users by default. You can disable 2FA by setting `TWO_FACTOR_ENABLED=false` in your `.env` file. Note that you should **only** use this in a development environment; **never** in production.
 
 ### 3) Prepare the Application
 
 There are two presets available for Nodem for development purposes:
 
-- Running `composer db:dev` will give you dummy data for servers, users, invites and notifications. This is advised if you want to see at a glance what Nodem has to offer. Note that the seeded servers are not possible to connect to, so certain states will not be available with this preset because of the connection issues.
-- Running `composer db:bare` will only give you the bare minimum to run nodem, e.g. user accounts and permissions. This will not include any servers, meaning you will have to add a server manually to see what Nodem has to offer. This is advised when working with Nodem in addition to an actual Core instance running the Core-manager plugin.
+* Running `composer db:dev` will create placeholder data for servers, users, invites, and notifications. This is useful for demonstrating what Nodem has to offer. Note that connecting to seed servers is not possible using this preset, so certain states will not be available.
+* Running `composer db:bare` produces the minimum configuration for running Nodem. e.g., user accounts and permissions. This setup doesn't include servers, so you will need to add a server manually to see the full extent of what Nodem has to offer. This is advised when working with an actual Core instance running the `core-manager` plugin.
 
 To finish it up, make sure to symlink storage, start horizon and link the application to Valet:
 
@@ -80,5 +80,4 @@ When you are making changes to the UI, don't forget to run `yarn watch` in addit
 
 ### 4) Launch Nodem
 
-If everything went well, you should now be able to visit `nodem.test` in your browser and be greeting by the Nodem sign in screen. You can log in with the default seeded account: username `nodem` and password `password`.
-
+If everything went well, you should now be able to visit `nodem.test` in your browser and be greeted by the Nodem sign-in screen. You can then log in with the default seeded account: username `nodem` and password `password`.

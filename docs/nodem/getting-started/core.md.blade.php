@@ -16,12 +16,12 @@ ark plugin:install @arkecosystem/core-manager
 
 ## 2) Configure the Core-Manager Plugin
 
-The Manager API does not have a 'default' setup. Your Core Server's `app.json` and `.env` files can be used for manual configuration; however, the basic parameters may be set using an interactive process offered by the following command:
+The Manager API does not have a 'default' setup. You can use your Core instance's `app.json` and `.env` files to manually configure the required parameters or establish a basic configuration using an interactive process offered by the following command:
 
 ```bash
 ark manager:config
 ```
 
 <x-alert type="info">
-For additional information on logging, authentication, and related environment variables, please refer to the Core Manager API documentation page found [here.](https://ark.dev/docs/api/manager-api/getting-started)
+Please refer to the [Core Manager API](https://ark.dev/docs/api/manager-api/getting-started) documentation page for additional information on logging, authentication, and related environment variables.
 </x-alert>
