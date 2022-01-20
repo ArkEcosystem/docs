@@ -80,5 +80,5 @@ When you are making changes to the UI, don't forget to run `yarn watch` in addit
 
 ### 4) Launch Nodem
 
-If everything went well, you should now be able to visit `nodem.test` in your browser and be greeting by the Nodem sign in screen.
+If everything went well, you should now be able to visit `nodem.test` in your browser and be greeting by the Nodem sign in screen. You can log in with the default seeded account: username `nodem` and password `password`.
 
