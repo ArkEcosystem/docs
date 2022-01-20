@@ -22,20 +22,25 @@
 />
 <x-general.sidebar-link path="/docs/nodem/getting-started/core" name="Core Configuration" />
 
-## Accounts
+## Using Nodem
 
-<x-general.sidebar-link path="/docs/nodem/accounts/setup" name="First-Time Setup" />
-<x-general.sidebar-link path="/docs/nodem/accounts/settings" name="Settings" />
-
-## Teams
-
-<x-general.sidebar-link path="/docs/nodem/teams/inviting" name="Inviting Members" />
-<x-general.sidebar-link path="/docs/nodem/teams/managing" name="Managing Members" />
-
-## Servers
-
-<x-general.sidebar-link path="/docs/nodem/servers/management" name="Management" />
-<x-general.sidebar-link path="/docs/nodem/servers/providers" name="Supported Providers" />
+<x-general.sidebar-link path="/docs/nodem/usage/management" name="Server Management" />
+<x-general.sidebar-link
+    path="/docs/nodem/usage/"
+    name="Accounts"
+    :children="[
+        ['path' => '/docs/nodem/usage/setup', 'name' => 'First-Time Setup'],
+        ['path' => '/docs/nodem/usage/settings', 'name' => 'Settings'],
+    ]"
+/>
+<x-general.sidebar-link
+    path="/docs/nodem/usage/"
+    name="Teams"
+    :children="[
+        ['path' => '/docs/nodem/usage/inviting', 'name' => 'Inviting Members'],
+        ['path' => '/docs/nodem/usage/managing', 'name' => 'Managing Members'],
+    ]"
+/>
 
 ## Support
 
