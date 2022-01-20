@@ -4,11 +4,11 @@ title: Usage - Owner Setup
 
 # Owner Account Setup
 
-When using Nodem in a production environment, it will be installed without any user accounts. In order to start using it, you will need to manually create the first account; this will be designated as the "Owner". This is made easy through means of a CLI command.
+Because Nodem production environments do not include user accounts by default, you must first create an "Owner" account using the CLI commands outlined below.
 
 ## CLI Process
 
-To start the process of adding your first user, make sure to navigate to your Nodem installation directory and run `php artisan nodem:install` . You'll be presented with an interactive CLI to setup the basics.
+To create your initial "Owner" account, go to your Nodem installation directory and run `php artisan nodem:install`. The interactive CLI will then guide you through setting up the basics.
 
 The first step will ask you if you are ready to start.
 
@@ -17,16 +17,20 @@ Are you ready to start? (yes/no) [yes]:
 > yes
 ```
 
-Responding `yes` will run the migrations to get your database tables in order and seed required data such as user account permissions.
+Responding `yes` will run the migrations to get your database tables in order, and seed required data such as user account permissions.
 
-This will be followed by a question to fill in a username for your owner account. Be precise, as this account will not be able to get a different username afterwards. You can pick any username you like, but note that it will be visible to others in your team too if you decide to invite other people down the line.
+The CLI will then ask you to provide a username for your Owner account.
+
+<x-alert type="warning">
+This (owner) username cannot be changed once set and will be visible to others on your team, so make sure it's entered correctly before proceeding.
+</x-alert>
 
 ```bash
 Which username do you want to use for the owner account?
 > nodem
 ```
 
-After filling in your username, the CLI will present you with instructions on how to finalize the user account. You will be asked to visit a URL (based on your setup), which brings you to the registration page for Nodem. Here you will need to fill in the username you've chosen and the corresponding invitation code. After doing so, you will be logged in to Nodem and are ready to start using it by [adding servers](/docs/nodem/usage/servers) or [team member accounts.](/docs/nodem/usage/teams).
+After providing a username, the CLI will present you with instructions on how to finalize your owner account and direct you to visit a URL (based on your setup); this brings you to the registration page for Nodem. Here you will need to fill in the username you've chosen and the corresponding invitation code. After doing so, you will be logged in to Nodem and are ready to start using it by [adding servers](/docs/nodem/usage/servers) or [team member accounts.](/docs/nodem/usage/teams).
 
 ```bash
 Here we go!
@@ -39,6 +43,12 @@ username:                   nodem
 
 ## Troubleshooting
 
-In the event something went wrong with the CLI setup, you can rerun the `php artisan nodem:install` command if there was no further data stored in the database yet. This will restart the process, giving you a clean slate to work from again.
+If something goes wrong during the CLI setup, you may rerun the `php artisan nodem:install` command.
 
-If there was additional data found in the database (e.g. you already signed up with your account but want to restart anyway), running the command will give you a warning and a way to empty your database. ONLY do this if you are completely sure all data in the database can be removed, as it will not be possible to restore this!
+If your database does not contain additional data, the setup process will restart, allowing you to work from a clean slate.
+
+If your database _does_ contain additional data _(e.g., you already signed up with your account but want to restart anyway)_, the CLI will provide a warning and offer a way to empty your database.
+
+<x-alert type="danger">
+Do **NOT** empty your database unless you're sure the data is unimportant. It will not be possible to restore this data once deleted!
+</x-alert>

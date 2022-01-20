@@ -4,7 +4,7 @@ title: Usage - Adding Accounts
 
 # Adding Team Member Accounts
 
-After [setting up your owner account](/docs/nodem/usage/owner), you can log in and begin [adding server instances](/docs/nodem/usage/servers) or team member accounts. Team member accounts are added using a basic create-and-share scheme--i.e., you, the owner, create new accounts and share a code that others use to sign up and gain access to your Nodem deployment. 
+After [setting up your owner account](/docs/nodem/usage/owner), you can log in and begin [adding server instances](/docs/nodem/usage/servers) or team member accounts. Team member accounts are added using a basic create-and-share scheme--i.e., you, the owner, create new accounts and share a code that others use to sign up and gain access to your Nodem deployment.
 
 ## Inviting Users / Creating Accounts
 
