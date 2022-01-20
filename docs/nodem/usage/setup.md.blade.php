@@ -1,5 +1,5 @@
 ---
-title: Accounts - First-Time Setup
+title: Usage - Account Setup
 ---
 
 # First-Time Account Setup
