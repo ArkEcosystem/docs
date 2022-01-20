@@ -24,23 +24,9 @@
 
 ## Using Nodem
 
-<x-general.sidebar-link path="/docs/nodem/usage/management" name="Server Management" />
-<x-general.sidebar-link
-    path="/docs/nodem/usage/"
-    name="Accounts"
-    :children="[
-        ['path' => '/docs/nodem/usage/setup', 'name' => 'First-Time Setup'],
-        ['path' => '/docs/nodem/usage/settings', 'name' => 'Settings'],
-    ]"
-/>
-<x-general.sidebar-link
-    path="/docs/nodem/usage/"
-    name="Teams"
-    :children="[
-        ['path' => '/docs/nodem/usage/inviting', 'name' => 'Inviting Members'],
-        ['path' => '/docs/nodem/usage/managing', 'name' => 'Managing Members'],
-    ]"
-/>
+<x-general.sidebar-link path="/docs/nodem/usage/owner" name="Owner Setup" />
+<x-general.sidebar-link path="/docs/nodem/usage/teams" name="Adding Accounts" />
+<x-general.sidebar-link path="/docs/nodem/usage/servers" name="Server Management" />
 
 ## Support
 

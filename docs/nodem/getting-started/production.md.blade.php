@@ -6,8 +6,6 @@ title: Getting Started - Production Setup
 
 <!--
 TODO: Describe manual setup w/PHP + nginx + PostgreSQL (https://laravel.com/docs/8.x/deployment)?
-
-TODO: user setup/configuration pages
 -->
 
 This section will guide developers through the steps necessary to set up Nodem in a production environment
@@ -55,7 +53,7 @@ php artisan nodem:install
 ```
 
 <x-alert type="success">
-This step will also guide you in generating the invitation code needed to create your first account (owner).
+This step will also guide you in generating the invitation code needed to create your first account as the owner. You can find more information about this process [here.](/docs/nodem/usage/owner)
 </x-alert>
 
 ## 4) Prepare the Application

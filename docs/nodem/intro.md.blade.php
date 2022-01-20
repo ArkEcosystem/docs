@@ -32,25 +32,9 @@ Nodem is a new utility that enables developers and network Validators to streaml
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/nodem/usage/management', 'name' => 'Server Management'],
-/>
-
-### Accounts
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/nodem/usage/setup', 'name' => 'First-Time Account Setup'],
-        ['path' => '/docs/nodem/usage/settings', 'name' => 'Account Settings'],
-    ]"
-/>
-
-### Teams
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/nodem/usage/inviting', 'name' => 'Inviting Team Members'],
-        ['path' => '/docs/nodem/usage/managing', 'name' => 'Managing Team Members'],
-    ]"
+        ['path' => '/docs/nodem/usage/owner', 'name' => 'Owner Account Setup'],
+        ['path' => '/docs/nodem/usage/teams', 'name' => 'Adding Team Member Accounts'],
+        ['path' => '/docs/nodem/usage/servers', 'name' => 'Server Management'],
 />
 
 ## Support

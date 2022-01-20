@@ -4,10 +4,6 @@ title: Getting Started - Development Setup
 
 # Nodem Development Setup
 
-<!--
-TODO: Link to core-manager plugin setup + user setup/configuration pages
--->
-
 This section will guide developers through the steps necessary to set up Nodem in a development environment and does _not_ require a separate Core Server. You should be familiar with using PHP, Composer, Valet, and PostgreSQL or MySQL.
 
 <x-alert type="info">
