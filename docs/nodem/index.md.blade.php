@@ -10,7 +10,6 @@
 
 ## Getting Started
 
-<x-general.sidebar-link path="/docs/nodem/getting-started/requirements" name="Requirements" />
 <x-general.sidebar-link
     path="/docs/nodem/getting-started/"
     name="Nodem Setup"
