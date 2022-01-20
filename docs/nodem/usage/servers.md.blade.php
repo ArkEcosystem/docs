@@ -4,13 +4,11 @@ title: Usage - Server Management
 
 # Server Management
 
-After [setting up your owner account](/docs/nodem/usage/owner), you can log in and begin [adding team members](/docs/nodem/usage/teams) or server instances.
+After [setting up your owner account](/docs/nodem/usage/owner), you can log in and begin [adding team members](/docs/nodem/usage/teams) or server instances. Any ARK Core-based server configured with the `core-manager` plugin may be added to Nodem.
 
-<!--
-TODO: Explain that servers which are running core-manager can be added to nodem.
-
-Listed providers in the dropdown are only for UI purposes so you can see at a glance where your servers are; nodem support all providers as it interacts with an RPC from a core plugin and does not care about the underlying provider.
--->
+<x-alert type="info">
+Server hosts listed in the dropdown UI are provided for your at-a-glance reference. Nodem uses an RPC interface to communicate with your server's Manager API, so all hosting providers are supported.
+</x-alert>
 
 ## Adding Servers
 
