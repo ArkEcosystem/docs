@@ -11,7 +11,7 @@ TODO: user setup/configuration pages
 -->
 
 This section will guide developers through the steps necessary to set up Nodem in a production environment
-and requires a separate Core Server. This process is relatively similar to Laravel Forge's [development setup.](https://forge.laravel.com) You should be familiar with using PHP, Composer, and PostgreSQL or MySQL. 
+and requires a separate Core Server. This process is relatively similar to Laravel Forge's [development setup.](https://forge.laravel.com) You should be familiar with using PHP, Composer, and PostgreSQL or MySQL.
 
 <x-alert type="info">
 Be sure to review Nodem's [additional tooling requirements](/docs/nodem/getting-started/requirements) and its [technology stack](/docs/nodem/overview/stack) before proceeding.
@@ -42,7 +42,7 @@ php artisan key:generate
 
 Adjust the `APP_URL` variable in your `.env` file to reflect the host address (_i.e., the server's IP address where Nodem runs_).
 
-```
+```bash
 APP_URL=http://127.0.0.1
 ```
 

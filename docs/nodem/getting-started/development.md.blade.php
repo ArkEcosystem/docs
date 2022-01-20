@@ -45,7 +45,7 @@ php artisan key:generate
 
 Adjust the `APP_URL` variable in your `.env` file to reflect the host address (_i.e., the server's IP address where Nodem runs_).
 
-```
+```bash
 APP_URL=http://127.0.0.1
 ```
 
