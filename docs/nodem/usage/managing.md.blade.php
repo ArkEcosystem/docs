@@ -1,5 +1,5 @@
 ---
-title: Teams - Managing Members
+title: Usage - Managing Members
 ---
 
 # Managing Team Members

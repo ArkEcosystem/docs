@@ -1,5 +1,5 @@
 ---
-title: Teams - Inviting Members
+title: Usage - Inviting Members
 ---
 
 # Inviting Team Members
