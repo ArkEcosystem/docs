@@ -12,7 +12,7 @@ Developers running Nodem should be familiar with the following:
 * [PostgreSQL](http://www.postgresql.org) or [MySQL](www.mysql.com)
 
 <x-alert type="info">
-Review the Nodem Technology Stack **[here](/docs/nodem/overview/stack)**.
+Review the Nodem Technology Stack **[here.](/docs/nodem/overview/stack)**   
 </x-alert>
 
 ## Other requirements

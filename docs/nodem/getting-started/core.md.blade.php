@@ -1,19 +1,27 @@
 ---
-title: Getting Started - Server Configuration
+title: Getting Started - Core Configuration
 ---
 
-# Nodem Server Configuration
+# Core Server Configuration
 
-<!--
-Preparing core servers will require an explanation on how to prepare existing (or new) core servers to be able to interact with nodem.
+Because Nodem communicates with your Core installation using the Manager API, you must install the `core-manager` plugin. This page will guide you through this process using your new--or existing--Core Server instance.
 
-This comes down to the following steps:
-- Installing the core-manager plugin through 'ark plugin:install @arkecosystem/core-manager'
-- configuring the plugin, can be done easily through 'ark manager:config' and following the steps.
+## 1) Install the Core-Manager Plugin
 
-The document should explain the different auth options.
-Make it clear to the reader that if they want to see logs in nodem that they will have to add the core-manager plugin as an entry to their app.json file, putting it in the right process(es) depending on how they run their core instances.
+After connecting to your Core Server, install the `core-manager` plugin using the `ark` command below:
 
-Might suffice to link to the existing core-manager docs on https://ark.dev/docs/api/manager-api/getting-started#content-installation for this section.
-See if that covers everything and otherwise add to it there to keep it all in a single place.
--->
+```bash
+ark plugin:install @arkecosystem/core-manager
+```
+
+## 2) Configure the Core-Manager Plugin
+
+The Manager API does not have a 'default' setup. Your Core Server's `app.json` and `.env` files can be used for manual configuration; however, the basic parameters may be set using an interactive process offered by the following command:
+
+```bash
+ark manager:config
+```
+
+<x-alert type="info">
+For additional information on logging, authentication, and related environment variables, please refer to the Core Manager API documentation page found [here.](https://ark.dev/docs/api/manager-api/getting-started)
+</x-alert>
