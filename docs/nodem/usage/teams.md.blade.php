@@ -10,15 +10,21 @@ After [setting up your owner account](/docs/nodem/usage/owner), you can log in a
 
 Inviting users is a straightforward process outlined below.
 
-1) Get started by clicking on your profile's avatar, then select **'team'** from the dropdown menu.
+### 1) Navigate to the Team Management Dashboard
+
+Get started by clicking on your profile's avatar, then select **'team'** from the dropdown menu.
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-menu-select.png)
 
-2) Click the **'Invite'** button on the Team Management Dashboard.
+### 2) Click 'Invite'
+
+Click the **'Invite'** button on the Team Management Dashboard.
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-invite-button.png)
 
-3) Fill in the details of the person you want to invite.
+### 3) Enter the Member's Details
+
+Enter the details of the person you want to invite.
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-invite-details.png)
 
@@ -42,10 +48,14 @@ Inviting users is a straightforward process outlined below.
     * Permitted to perform all server actions
     * Permitted to add, edit, or remove team members, including the reassignment of roles
 
-4) Click 'Generate' to create your new member's invitation code.
+### 4) Generate an Invitation Code
+
+Click 'Generate' to create your new member's invitation code.
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-invite-generate.png)
 
-5) Share this invitation code with your new member who will use it at sign-up.
+### 5) Share the Invitation Code
+
+Share this invitation code with your new member, who will use it at sign-up.
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-invite-code.png)
