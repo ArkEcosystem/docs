@@ -3,10 +3,7 @@
 <!-- markdownlint-enable MD041 -->
 
 <x-general.sidebar-link path="/docs/nodem/intro" name="Welcome to Nodem" />
-
-## Overview
-
-<x-general.sidebar-link path="/docs/nodem/overview/features" name="Features" />
+<x-general.sidebar-link path="/docs/nodem/features" name="Features" />
 
 ## Getting Started
 

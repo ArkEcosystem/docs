@@ -8,11 +8,11 @@ title: Welcome to Nodem
 
 Nodem is a new utility that enables developers and network Validators to streamline the management of their ARK Core-based nodes and relays from a single, easy-to-use interface. Nodem is designed securely using ARK Core plugins to access predefined node endpoints and never has access to the server itself!
 
-## Overview
+## Introduction
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/nodem/overview/features', 'name' => 'Nodem Features'],
+        ['path' => '/docs/nodem/features', 'name' => 'Nodem Features'],
     ]"
 />
 
