@@ -25,7 +25,7 @@ Nodem is a new utility that enables developers and network Validators to streaml
         ['path' => '/docs/nodem/getting-started/development', 'name' => 'Development Setup'],
         ['path' => '/docs/nodem/getting-started/production', 'name' => 'Production Setup'],
         ['path' => '/docs/nodem/getting-started/core', 'name' => 'Core Server Configuration'],
-    ]",
+    ]"
 />
 
 ## Using Nodem
@@ -35,6 +35,7 @@ Nodem is a new utility that enables developers and network Validators to streaml
         ['path' => '/docs/nodem/usage/owner', 'name' => 'Owner Account Setup'],
         ['path' => '/docs/nodem/usage/teams', 'name' => 'Adding Team Member Accounts'],
         ['path' => '/docs/nodem/usage/servers', 'name' => 'Server Management'],
+    ]"
 />
 
 ## Support
