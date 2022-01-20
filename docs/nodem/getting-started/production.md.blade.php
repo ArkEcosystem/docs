@@ -8,12 +8,14 @@ title: Getting Started - Production Setup
 TODO: Describe manual setup w/PHP + nginx + PostgreSQL (https://laravel.com/docs/8.x/deployment)?
 -->
 
+{{-- The application relies on the `cmd` function that is used to run a `ping` command on the terminal and extract the server response time, this function should work in most cases but there are some considerations to take in mind:
+
+* The `ping` command may not work in Windows-based servers
+* Some servers may not have permission to run the PHP `cmd` function. --}}
+
 This section will guide developers through the steps necessary to set up Nodem in a production environment
 and requires a separate Core Server. This process is relatively similar to Laravel Forge's [development setup.](https://forge.laravel.com) You should be familiar with using PHP, Composer, and PostgreSQL or MySQL.
 
-<x-alert type="info">
-Be sure to review Nodem's [additional tooling requirements](/docs/nodem/getting-started/requirements) and its [technology stack](/docs/nodem/overview/stack) before proceeding.
-</x-alert>
 
 ## 1) Clone the Repository and Install Dependencies
 
