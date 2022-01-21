@@ -326,7 +326,7 @@ The `WalletData` DTO is responsible for normalizing and exposing the data that r
 
 ## Packaging
 
-Once you've implemented all of the [services](/docs/payvo-sdk/development/services) and [data transfer objects](/docs/payvo-sdk/development/dto), you're probably wondering how to package it all up to be ready for a release. There are a few things to keep in mind for your package to flawlessly work when used by the SDK.
+Once you've implemented all of the [services](#services) and [data transfer objects](#data-transfer-objects-dtos), you're probably wondering how to package it all up to be ready for a release. There are a few things to keep in mind for your package to flawlessly work when used by the SDK.
 
 ### Exporting Service Provider
 
