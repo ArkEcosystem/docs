@@ -4,9 +4,6 @@ title: Troubleshooting
 
 # Troubleshooting
 
-<!--
-Troubleshooting:
-List issues that were noticed while writing the docs?
+If you find a bug or issue while installing or using Nodem, you can create an issue or contribute a fix by opening a pull request in Nodem's official open-source repo on GitHub.
 
-Link to github, that’s where they can open issues and work on fixing issues because open source.
--->
+<livewire:embed-link url="https://github.com/ArkEcosystem/nodem4979caac887a" caption="Official Nodem Repo" />
