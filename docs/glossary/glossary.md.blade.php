@@ -286,7 +286,7 @@ Encryption method used by ARK and most other cryptoassets, where different priva
 
 ### Atomic Swap
 
-Specialized cross-chain transaction between two independent Blockchains where data or value is exchanged in a decentralized environment.
+Specialized cross-chain transaction between two independent Blockchains where data or value is exchanged in a decentralized environment. [Watch Video](https://youtu.be/BsWWZIXG9vE)
 
 **More:** [Decentralized](#decentralized), [Cross-chain](#cross-chain), [Transaction](#transaction), [Blockchain](#blockchain)
 
@@ -322,7 +322,7 @@ See [ARK Explorer](#ark-explorer)
 
 ### Block Height
 
-Integer used to determine the specific order of a block in a Blockchain. If a chain contains 10 blocks, the oldest block has a height of 1 and the newest block has a height of 10.
+Integer used to determine the specific order of a block in a Blockchain. If a chain contains 10 blocks, the oldest block has a height of 1 and the newest block has a height of 10. [Watch Video](https://youtu.be/0r4dvEUJtpw)
 
 **More:** [Blockchain](#blockchain)
 
@@ -370,7 +370,7 @@ Refers to the zero-sum relationship between scalability, security, and decentral
 
 ### Bounty
 
-An award paid via a cryptoasset for contributing to the codebase, disclosing security vulnerabilities, discovering bugs, or some other effort.
+An award paid via a cryptoasset for contributing to the codebase, disclosing security vulnerabilities, discovering bugs, or some other effort. [Watch Video](https://youtu.be/zfeuee-Hq4A)
 
 **More:** [Cryptoasset](#cryptoasset), [Codebase](#codebase)
 
@@ -948,7 +948,7 @@ File or set of parameters that defines the properties of a new ARK-based Blockch
 
 ### Key
 
-Alphanumeric string used in cryptography to either encrypt or decrypt data.
+Alphanumeric string used in cryptography to either encrypt or decrypt data. [Watch Video](https://youtu.be/vtrcAiN1-z8)
 
 **More:** [Cryptography](#cryptography)
 
@@ -989,6 +989,10 @@ See [Light Client](#light-client)
 The ability of a coin to be converted into another asset without a change in market price. [Watch Video](https://youtu.be/vt9pUVWWtXs)
 
 **More:** [DeFi](#defi), [Decentralized Finance](#decentralized-finance)
+
+### Liquidity Mining
+
+See [Yield Farming](#yield-farming)
 
 ## M
 
@@ -1216,6 +1220,12 @@ See [Peer-to-Peer](#peer-to-peer)
 
 See [Mnemonic](#mnemonic)
 
+### Payvo SDK
+
+The simplest way for developers to interface with over a dozen popular Blockchain technologies including Bitcoin, Ethereum, Cardano, Polkadot, Solana, and more...
+
+**More:** [Blockchain](#blockchain), [Coin](#coin)
+
 ### Peer
 
 A server-node participating in a peer-to-peer network.
@@ -1247,12 +1257,6 @@ Describes sensitive personal information, as described in GDPR guidelines.
 ### PII
 
 See [Personally Identifiable Information](#personally-identifiable-information)
-
-### Payvo SDK
-
-The simplest way for developers to interface with over a dozen popular Blockchain technologies including Bitcoin, Ethereum, Cardano, Polkadot, Solana, and more...
-
-**More:** [Blockchain](#blockchain), [Coin](#coin)
 
 ### Plugin
 
@@ -1341,6 +1345,10 @@ Enterprise services subsidiary of ARK.io. Enables organizations to solve real bu
 ### Provably Fair
 
 Describes a public method by which the randomness of a process can be confirmed.
+
+### PSDK
+
+See [Payvo SDK](#payvo-sdk)
 
 ### Pseudonymous
 
@@ -1791,3 +1799,13 @@ See [ARK Whitepaper](#ark-whitepaper)
 ### WIF
 
 See [Wallet Import Format](#wallet-import-format)
+
+## Y
+
+---
+
+### Yield Farming
+
+A process that allows investors to deposit assets into a lending protocol to earn rewards from trading fees on a network. [Watch Video](https://youtu.be/JPlRNymAXho)
+
+**More:** [DeFi](#defi), [Decentralized Finance](#decentralized-finance), [Liquidity](#liquidity)
