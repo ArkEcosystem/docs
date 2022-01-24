@@ -64,6 +64,6 @@ Please make sure to read our contributing guidelines and follow instructions the
 
 ### Want to chat with other developers and brainstorm on new exciting ideas or share your thoughts?
 
-> Join us on [Discord](https://discord.ark.io)
+> Join the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem)
 
 *Submitting PR (Pull-Request) is a tacit agreement of the ongoing terms. The decision of the monetary reward is the sole responsibility of the ARK team, and no appeals will be taken. We reserve the right to change any rules and rewards, as well as cancel this program at any time.*

@@ -70,7 +70,7 @@ Some ARK holders want to be more directly involved and participate in the networ
 
 <livewire:page-reference path="/docs/core/installation/intro" />
 
-You can also join us on [Discord](https://discord.ark.io) to ask questions and find out more from our large community of contributors and active delegates.
+You can also join the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) to ask questions and find out more from our large community of contributors and active delegates.
 
 ## Contact Us
 

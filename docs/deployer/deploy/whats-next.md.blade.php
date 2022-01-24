@@ -22,4 +22,4 @@ Now you’re ready to build your application on top of your blockchain. Visit [d
 * [SDKs](/docs/sdk/)
 * [API](/docs/api/)
 
-Thanks for using the ARK Deployer! We really appreciate you using ARK technology. Remember, you’re not alone. If you need support or assistance, join the discussion on [Discord](https://discord.ark.io). We look forward to hearing from you!
+Thanks for using the ARK Deployer! We really appreciate you using ARK technology. Remember, you’re not alone. If you need support or assistance, [contact us](https://ark.dev/contact) or open an issue in the official [Deployer Repo](https://github.com/ArkEcosystem/deployer) on GitHub. We look forward to hearing from you!
