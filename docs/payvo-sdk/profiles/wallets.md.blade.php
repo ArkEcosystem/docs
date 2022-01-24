@@ -46,36 +46,6 @@ profile.wallets().keys();
 profile.wallets().values();
 ```
 
-### Create a new wallet from a mnemonic, coin implementation and network
-
-```typescript
-await profile.wallets().importByMnemonic("this is a top secret passphrase", "ARK", "devnet");
-```
-
-### Create a new wallet from an address, coin implementation and network
-
-```typescript
-await profile.wallets().importByAddress("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "ARK", "devnet");
-```
-
-### Create a new wallet from an address, coin implementation, network and ledger account index
-
-```typescript
-await profile.wallets().importByAddressWithLedgerPath("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", "ARK", "devnet", "0");
-```
-
-### Create a new wallet from an address, coin implementation, network and BIP38 password
-
-```typescript
-await profile.wallets().importByMnemonicWithEncryption("this is a top secret passphrase", "ARK", "devnet", "password");
-```
-
-### Generate a new wallet from a coin implementation and network
-
-```typescript
-await profile.wallets().generate("ARK", "ark.devnet");
-```
-
 ### Restore a wallet using its wallet data
 
 ```typescript
@@ -154,6 +124,72 @@ profile.wallets().count();
 profile.wallets().toObject();
 ```
 
+### Generate a new wallet
+
+```typescript
+await profile.walletFactory().generate({ ... });
+```
+
+### Create a new wallet from an mnemonic with BIP39 derivation
+
+```typescript
+await profile.walletFactory().fromMnemonicWithBIP39({ ... });
+```
+
+### Create a new wallet from an mnemonic with BIP44 derivation
+
+```typescript
+await profile.walletFactory().fromMnemonicWithBIP44({ ... });
+```
+
+### Create a new wallet from an mnemonic with BIP49 derivation
+
+```typescript
+await profile.walletFactory().fromMnemonicWithBIP49({ ... });
+```
+
+### Create a new wallet from an mnemonic with BIP84 derivation
+
+```typescript
+await profile.walletFactory().fromMnemonicWithBIP84({ ... });
+```
+
+### Create a new wallet from an address
+
+```typescript
+await profile.walletFactory().fromAddress({ ... });
+```
+
+### Create a new wallet from a public key
+
+```typescript
+await profile.walletFactory().fromPublicKey({ ... });
+```
+
+### Create a new wallet from a private key
+
+```typescript
+await profile.walletFactory().fromPrivateKey({ ... });
+```
+
+### Create a new wallet from an address and derivation path (Ledger)
+
+```typescript
+await profile.walletFactory().fromAddressWithDerivationPath({ ... });
+```
+
+### Create a new wallet from a secret (non-BIP39 passphrase)
+
+```typescript
+await profile.walletFactory().fromSecret({ ... });
+```
+
+### Create a new wallet from a WIF (Wallet Import Format)
+
+```typescript
+await profile.walletFactory().fromWIF({ ... });
+```
+
 ## API Calls
 
 <x-alert type="info">
@@ -176,9 +212,6 @@ recipientId?: string;
 walletId?: string;
 senderPublicKey?: string;
 recipientPublicKey?: string;
-entityType?: number;
-entitySubType?: number;
-entityAction?: string;
 asset?: Record<string, any>;
 type?: number;
 typeGroup?: number;
@@ -242,12 +275,6 @@ await wallet.votes("034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0
 
 ```typescript
 await wallet.voters("genesis_1");
-```
-
-### Check if the peer is syncing
-
-```typescript
-await wallet.client().syncing();
 ```
 
 ### Broadcast all of the given transactions
@@ -322,6 +349,12 @@ await wallet.transaction().signHtlcClaim(input, options);
 
 ```typescript
 await wallet.transaction().signHtlcRefund(input, options);
+```
+
+### Create a new unlock token transaction
+
+```typescript
+await wallet.transaction().signUnlockToken(input, options);
 ```
 
 ## Messages

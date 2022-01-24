@@ -4,16 +4,16 @@ title: Support
 
 # Support
 
-This is a Collection of Helpers for the Platform SDK. The implementation adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
+This is a Collection of Helpers for the Payvo SDK. The implementation adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-support" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/helpers" />
 
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-support
+yarn add @payvo/sdk-helpers
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ yarn add @payvo/sdk-support
 #### Importing the `Arr` class
 
 ```typescript
-import { Arr } from "@payvo/sdk-support";
+import { Arr } from "@payvo/sdk-helpers";
 ```
 
 #### Get a random element from the given array
@@ -37,7 +37,7 @@ Arr.randomElement(items: any[]);
 #### Importing the `BigNumber` class
 
 ```typescript
-import { BigNumber } from "@payvo/sdk-support";
+import { BigNumber } from "@payvo/sdk-helpers";
 ```
 
 #### Create a new `BigNumber` instance from the given value
@@ -171,7 +171,7 @@ bigNumber.valueOf(): string;
 #### Importing the `Censor` class
 
 ```typescript
-import { Censor } from "@payvo/sdk-support";
+import { Censor } from "@payvo/sdk-helpers";
 
 const censor = new Censor();
 ```
@@ -193,7 +193,7 @@ censor.process(value: string): string;
 #### Importing the `Markdown` class
 
 ```typescript
-import { Markdown } from "@payvo/sdk-support";
+import { Markdown } from "@payvo/sdk-helpers";
 ```
 
 #### Parse the given content into HTML
@@ -207,7 +207,7 @@ Markdown.parse(content: string): { meta: MarkdownMeta; content: String };
 #### Importing the `QRCode` class
 
 ```typescript
-import { QRCode } from "@payvo/sdk-support";
+import { QRCode } from "@payvo/sdk-helpers";
 ```
 
 #### Create a new QRCode from a string
@@ -239,7 +239,7 @@ await qrcode.toString(type: StringType = "utf8"): Promise<string>;
 #### Importing the `Validator` class
 
 ```typescript
-import { Validator } from "@payvo/sdk-support";
+import { Validator } from "@payvo/sdk-helpers";
 
 const validator = new Validator();
 ```
@@ -276,4 +276,4 @@ validator.error(): ValidationError | undefined;
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@ark.io](mailto:security@ark.io). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.

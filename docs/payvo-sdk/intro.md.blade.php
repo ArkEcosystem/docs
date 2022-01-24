@@ -6,7 +6,7 @@ title: Introduction
 
 ## Coins
 
-The **Coin** section will introduce you to Coins. Coins are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardized user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
+The **Coin** section will introduce you to Coins. Coins are the most important part of the Payvo SDK because they provide all of the core functionality that makes it possible to build a standardized user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
 
 <x-link-collection
     :links="[
@@ -41,20 +41,6 @@ The **Markets** section will introduce you to Cryptocurrency Data Services. Thes
         ['path' => '/docs/payvo-sdk/markets/coincap', 'name' => 'CoinCap'],
         ['path' => '/docs/payvo-sdk/markets/coingecko', 'name' => 'CoinGecko'],
         ['path' => '/docs/payvo-sdk/markets/cryptocompare', 'name' => 'CryptoCompare'],
-    ]"
-/>
-
-## HTTP Clients
-
-The **HTTP Clients** section will introduce you to HTTP communication. The Platform SDK itself is agnostic as to what HTTP client you want to use as long as it adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). This will make it easier to get the SDK working in different environments, like Electron, because you can use packages that were built specifically for your environment.
-
-<x-link-collection
-    :links="[
-        ['path' => '/docs/payvo-sdk/http/axios', 'name' => 'axios'],
-        ['path' => '/docs/payvo-sdk/http/bent', 'name' => 'bent'],
-        ['path' => '/docs/payvo-sdk/http/got', 'name' => 'got'],
-        ['path' => '/docs/payvo-sdk/http/ky', 'name' => 'ky'],
-        ['path' => '/docs/payvo-sdk/http/node-fetch', 'name' => 'node-fetch'],
     ]"
 />
 
@@ -98,7 +84,7 @@ The **Internationalization** section will introduce you to locale-based function
 
 ## Profiles
 
-The **Profiles** section will introduce you to the core of our Desktop & Mobile wallets. The profiles package is the amalgamation of all the Platform SDK components to provide an easy and consistent way of using the SDK in our products.
+The **Profiles** section will introduce you to the core of our Desktop & Mobile wallets. The profiles package is the amalgamation of all the Payvo SDK components to provide an easy and consistent way of using the SDK in our products.
 
 <x-link-collection
     :links="[
@@ -124,7 +110,20 @@ The **Utility** section will introduce you to supportive functionality. The pack
 
 <x-link-collection
     :links="[
-        ['path' => '/docs/payvo-sdk/utility/news', 'name' => 'News'],
-        ['path' => '/docs/payvo-sdk/utility/support', 'name' => 'Support'],
+        ['path' => '/docs/payvo-sdk/news', 'name' => 'News'],
+        ['path' => '/docs/payvo-sdk/helpers', 'name' => 'Helpers'],
+        ['path' => '/docs/payvo-sdk/markets', 'name' => 'Markets'],
+        ['path' => '/docs/payvo-sdk/fetch', 'name' => 'fetch'],
+    ]"
+/>
+
+## Guides
+
+The **Guides** section will provide in-depth explanations as to what you will need to do, how to do it, and what limitations and gotchas there are that need to be kept in mind when developing and testing your integration.
+
+<x-link-collection
+    :links="[
+        ['path' => '/docs/payvo-sdk/guides/development', 'name' => 'Development'],
+        ['path' => '/docs/payvo-sdk/guides/testing', 'name' => 'Testing'],
     ]"
 />

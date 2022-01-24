@@ -137,7 +137,7 @@ This functionality is enabled only when package is added into `app.json` setting
             "package": "@arkecosystem/core-logger-pino"
         },
         {
-            "package": "@arkecosystem/core-manager",
+            "package": "@arkecosystem/core-manager"
         },
         {
             "package": "@arkecosystem/core-state"

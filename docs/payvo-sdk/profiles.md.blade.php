@@ -4,11 +4,11 @@ title: Profiles
 
 # Profiles
 
-This is a Profile System for the Desktop/Mobile Wallet, based on the Platform SDK. The implementation makes use of various Platform SDK components and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
+This is a Profile System for the Desktop/Mobile Wallet, based on the Payvo SDK. The implementation makes use of various Payvo SDK components and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-profiles" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/profiles" />
 
 ## Installation
 
@@ -33,4 +33,4 @@ yarn add @payvo/sdk-profiles
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@ark.io](mailto:security@ark.io). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.

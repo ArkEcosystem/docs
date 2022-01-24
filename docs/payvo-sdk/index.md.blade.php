@@ -6,17 +6,7 @@
 <x-general.sidebar-link path="/docs/payvo-sdk/architecture" name="Architecture" />
 <x-general.sidebar-link path="/docs/payvo-sdk/specification" name="Specification" />
 <x-general.sidebar-link path="/docs/payvo-sdk/testing" name="Testing" />
-
-## SDK
-
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk" name="Introduction" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/coins" name="Coins" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/contracts" name="Contracts" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/data" name="Data" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/dto" name="DTO" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/exceptions" name="Exceptions" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/helpers" name="Helpers" />
-<x-general.sidebar-link path="/docs/payvo-sdk/sdk/http" name="HTTP" />
+<x-general.sidebar-link path="/docs/payvo-sdk/guidelines" name="Guidelines" />
 
 ## Coins
 
@@ -38,21 +28,6 @@
 <x-general.sidebar-link path="/docs/payvo-sdk/coins/xlm" name="XLM" />
 <x-general.sidebar-link path="/docs/payvo-sdk/coins/xrp" name="XRP" />
 <x-general.sidebar-link path="/docs/payvo-sdk/coins/zil" name="ZIL" />
-
-## Markets
-
-<x-general.sidebar-link path="/docs/payvo-sdk/markets" name="Markets" />
-<x-general.sidebar-link path="/docs/payvo-sdk/markets/coincap" name="CoinCap" />
-<x-general.sidebar-link path="/docs/payvo-sdk/markets/coingecko" name="CoinGecko" />
-<x-general.sidebar-link path="/docs/payvo-sdk/markets/cryptocompare" name="CryptoCompare" />
-
-## HTTP Clients
-
-<x-general.sidebar-link path="/docs/payvo-sdk/http/axios" name="axios" />
-<x-general.sidebar-link path="/docs/payvo-sdk/http/bent" name="bent" />
-<x-general.sidebar-link path="/docs/payvo-sdk/http/got" name="got" />
-<x-general.sidebar-link path="/docs/payvo-sdk/http/ky" name="ky" />
-<x-general.sidebar-link path="/docs/payvo-sdk/http/node-fetch" name="node-fetch" />
 
 ## Cryptography
 
@@ -94,9 +69,12 @@
 
 ## Utility
 
-<x-general.sidebar-link path="/docs/payvo-sdk/utility/news" name="News" />
-<x-general.sidebar-link path="/docs/payvo-sdk/utility/support" name="Support" />
+<x-general.sidebar-link path="/docs/payvo-sdk/news" name="News" />
+<x-general.sidebar-link path="/docs/payvo-sdk/helpers" name="Helpers" />
+<x-general.sidebar-link path="/docs/payvo-sdk/markets" name="Markets" />
+<x-general.sidebar-link path="/docs/payvo-sdk/fetch" name="fetch" />
 
 ## Guides
 
+<x-general.sidebar-link path="/docs/payvo-sdk/guides/development" name="Development" />
 <x-general.sidebar-link path="/docs/payvo-sdk/guides/testing" name="Testing" />

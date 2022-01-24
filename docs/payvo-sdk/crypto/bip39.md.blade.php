@@ -9,7 +9,7 @@ The `BIP39` class provides methods to generate, extract, normalize, and validate
 ## Importing the BIP39 class
 
 ```typescript
-import { BIP39 } from "@payvo/sdk-crypto";
+import { BIP39 } from "@payvo/sdk-cryptography";
 ```
 
 ## Generate a mnemonic

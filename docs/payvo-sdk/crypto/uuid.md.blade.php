@@ -4,12 +4,12 @@ title: UUID
 
 # UUID
 
-The `UUID` class provides methods to make working with UUIDs easier and consistent across all Platform SDK products.
+The `UUID` class provides methods to make working with UUIDs easier and consistent across all Payvo SDK products.
 
 ## Importing the UUID class
 
 ```typescript
-import { UUID } from "@payvo/sdk-crypto";
+import { UUID } from "@payvo/sdk-cryptography";
 ```
 
 ## Generate a UUID based on the current time

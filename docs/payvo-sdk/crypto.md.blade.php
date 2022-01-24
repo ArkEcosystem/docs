@@ -4,16 +4,16 @@ title: Crypto
 
 # Crypto
 
-This is a Cryptography package for the Platform SDK. The implementation makes use native and third-party packages to ensure consistent outcomes and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
+This is a Cryptography package for the Payvo SDK. The implementation makes use native and third-party packages to ensure consistent outcomes and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-crypto" />
+<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/cryptography" />
 
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-crypto
+yarn add @payvo/sdk-cryptography
 ```
 
 ## Usage
@@ -39,4 +39,4 @@ yarn add @payvo/sdk-crypto
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@ark.io](mailto:security@ark.io). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.

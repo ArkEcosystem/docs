@@ -9,7 +9,7 @@ The `Argon2` class provides methods to extract the numerical value out of any cu
 ## Importing the Argon2 class
 
 ```typescript
-import { Argon2 } from "@payvo/sdk-crypto";
+import { Argon2 } from "@payvo/sdk-cryptography";
 ```
 
 ## Hash a value

@@ -9,7 +9,7 @@ The `Bcrypt` class provides methods to extract the numerical value out of any cu
 ## Importing the Bcrypt class
 
 ```typescript
-import { Bcrypt } from "@payvo/sdk-crypto";
+import { Bcrypt } from "@payvo/sdk-cryptography";
 ```
 
 ## Hash a value

@@ -41,11 +41,10 @@ profile.contacts().values();
 ## Create a new contact for the given data
 
 ```typescript
-profile.contacts().create({
-    name: "Jane Doe",
-    addresses: [{ coin: "Ethereum", network: "testnet", address: "TESTNET-ADDRESS" }],
-    starred: true,
-});
+profile.contacts().create(
+    "Jane Doe",
+    [{ coin: "Ethereum", network: "testnet", address: "TESTNET-ADDRESS" }],
+);
 ```
 
 ## Fill the contacts with the given contacts object
