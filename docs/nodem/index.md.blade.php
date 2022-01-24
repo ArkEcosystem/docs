@@ -20,7 +20,7 @@
 ## Using Nodem
 
 <x-general.sidebar-link path="/docs/nodem/usage/owner" name="Owner Setup" />
-<x-general.sidebar-link path="/docs/nodem/usage/teams" name="Adding Accounts" />
+<x-general.sidebar-link path="/docs/nodem/usage/teams" name="Team Management" />
 <x-general.sidebar-link path="/docs/nodem/usage/servers" name="Server Management" />
 
 ## Support
