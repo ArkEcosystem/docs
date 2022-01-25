@@ -77,7 +77,7 @@ Owner accounts and Team Admins may need to update the details of a server at som
 
 ### 1) Click 'Edit'
 
-From either the Nodem dashboard or a server's details page, click the '**Edit**' button.
+From the server's details page, click the '**Edit**' button.
 
 ![](/storage/docs/docs/nodem/assets/usage/servers-edit-button.png)
 
