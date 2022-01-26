@@ -47,13 +47,15 @@ Next, Nodem will ask you to provide details about your Core Server.
   * Visible from the Nodem Dashboard
   * Can be changed later by Team Admins
 * **Host** - The Host address or IP of your Core Server instance
-* **Process Type** - The type of server you're adding
-  * **Separate** - Either a Relay or a Forger
-  * **Combined** - A Relay **and** a Forger
+  * Must include both, address and port (e.g., `ip:port`).
+* **Process Type**
+  * **Separate** - Relay and/or Forger are ran as distinct processes
+  * **Combined** - Relay and/or Forger are ran as a singular instance
 * **Access** - Your Core Server's access credentials
   * **Account** - A Username and Password
   * **Access Key** - Found in your Core Server's `app.json` file
 * **BIP38 Encryption** - Whether your Forger uses [BIP-38 Encryption](/docs/core/deployment/forger#content-getting-started)
+  * Only check this box if applicable
 
 <x-alert type="info">
 Server hosts listed in the dropdown UI are provided for your at-a-glance reference. Nodem uses an RPC interface to communicate with your server's Manager API, which supports all hosting providers.
@@ -63,7 +65,7 @@ Server hosts listed in the dropdown UI are provided for your at-a-glance referen
 
 When you have entered all of your Core Server's details, click the '**+ Add**' button.
 
-If your Core instance is a Forger and uses [BIP-38 Encryption](/docs/core/deployment/forger#content-getting-started), you'll additionally be prompted to enter your encryption password.
+You'll be prompted to enter your encryption password if you selected the BIP-38 checkbox.
 
 ![](/storage/docs/docs/nodem/assets/usage/servers-add-details-bip38.png)
 
@@ -177,8 +179,24 @@ Select your desired servers, then click the '**Continue**' button.
 
 If the process is successful, you'll be shown a list of your newly-imported servers. At this time, you can now proceed to your Nodem dashboard.
 
-![](/storage/docs/docs/nodem/assets/usage/servers-import-1
-e.png)
+![](/storage/docs/docs/nodem/assets/usage/servers-import-3.png)
+
+### Import Errors
+
+In the event that there was an error importing your servers, Nodem will provide you with some helpful warnings.
+
+**Failed Connection** - Nodem will test server connections during the import process. If Nodem fails to connect to a particular instance, a red '_X_' will be displayed where you would otherwise select that server and a warning banner will be presented. When this happens, try clicking the '**Retry**' button first. If the connection still fails, check that:
+
+* your server is still running,
+* the `core-manager` plugin was installed and properly configured,
+* the host address is saved correctly in your `.json` file, and that
+* the access credentials are saved correctly in your `.json` file
+
+**Duplicate Server** - Duplicate servers are not permitted. When attempting to import a duplicate server, a yellow '_!_' warning will be displayed where you would otherwise select that server and a warning banner will be presented.
+
+Refer to the mocked up image below for examples of what a failed connection or duplicated server should look like.
+
+![](/storage/docs/docs/nodem/assets/usage/server-import-errors.png)
 
 ## Removing Servers
 
