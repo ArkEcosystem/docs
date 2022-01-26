@@ -30,6 +30,7 @@ process.list
 | result | array | Result. | Yes |
 | result.pid | number | Process ID. | Yes |
 | result.name | number | Process name. | Yes |
+| result.version | string | Process version. | Yes |
 | result.pm_id | number | PM2 process ID. | Yes |
 | result.status | string | PM2 process status. | Yes |
 | result.monit.memory | number | Used memory. (KB) | Yes |
@@ -61,6 +62,7 @@ process.list
                 "memory": 109600,
                 "cpu": 0.5
             },
+            "version": "4.0.0"
             "status": "online"
         }
     ]
