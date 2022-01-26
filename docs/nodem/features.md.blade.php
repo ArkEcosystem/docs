@@ -4,7 +4,7 @@ title: Overview - Nodem Features
 
 # Nodem Features
 
-Nodem is a new utility that enables developers and network Validators to streamline the management of their ARK Core-based nodes and relays from a single, easy-to-use interface. Nodem is designed securely using ARK Core plugins to access predefined node endpoints and never has access to the server itself!
+Nodem is a new utility that enables developers and network Validators to streamline the management of their ARK Core-based nodes and relays from a single, easy-to-use interface. Nodem is designed securely using a single ARK Core plugin to access predefined node endpoints and never has access to the server itself!
 
 ![](/storage/docs/docs/nodem/assets/overview/nodes.png)
 
@@ -16,7 +16,7 @@ With Nodem, you will be able to manage all your nodes and work collaboratively, 
 
 ## All-in-One Management
 
-Nodem features a rich all-in-one management dashboard to view the status of your deployments in real-time. Receive alerts, monitor resources, and view logs across multiple servers.
+Nodem features a rich all-in-one management dashboard to view the status of your deployments in real-time. Monitor resources and view logs across multiple servers.
 
 ![](/storage/docs/docs/nodem/assets/overview/performance.png)
 
@@ -26,10 +26,10 @@ Looking at the logs has never been more appealing. With the ability to quickly s
 
 ## Collaboration
 
-Maintaining delegate nodes and relays can be hard work. Countless hours are spent ensuring the stability of a network, and it can be a thankless job. Scaling is especially challenging when you're flying solo.
+Properly maintaining Blockchain nodes and relays can be hard work. You could spend countless hours ensuring the stability of a network, and it can be a thankless job. Scaling is especially challenging when you're flying solo.
 
 Fortunately, you don't have to go it alone anymore!
 
 ![](/storage/docs/docs/nodem/assets/overview/team.png)
 
-Managing Blockchain nodes no longer has to be a single-player game. Go faster and further by inviting Team Members, setting access roles, and building together with Nodem!
+Managing Blockchain nodes no longer has to be a single-player game. Go faster and further by inviting Team Members, setting access roles, and working together with Nodem!
