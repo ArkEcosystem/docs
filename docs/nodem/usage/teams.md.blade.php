@@ -170,7 +170,7 @@ From the 'Team Management' Dashboard, click the '**Remove**' button next to the 
 
 You'll now be presented with the option to cancel or confirm your decision to remove the team member invitation.
 
-If you'd like to proceed with deleting this invitation, click the '**Remove**' button.
+If you'd like to proceed with deleting this member, click the '**Remove**' button.
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-remove-confirm.png)
 
