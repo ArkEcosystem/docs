@@ -129,7 +129,7 @@ Now it will take some time to publish it to the NPM and if there are no errors t
 
 _Some additional information_. If you are going to be publishing updated versions of your plugin, all you need to do is modify your .css file (new colors, etc…), commit your changes and finally, you will need to open _package.json_ and under `version`, increase the number eg. from 0.0.1 to 0.0.2 (if you don’t update this in _package.json,_ NPM will offer to bump the version for you). After you have done this, repeat the final part from the NPM publishing (`git clone` and `npm publish` commands).
 
-Once you have done this, your updated package will be ready. But remember, if you run into any kind of trouble developing this or get stuck at any step, don’t hesitate to join our [Discord](https://discord.ark.io) and ask for some assistance in the \#help channel.
+Once you have done this, your updated package will be ready. But remember, if you run into any kind of trouble developing this or get stuck at any step, don’t hesitate to [contact us](https://ark.dev/contact) or join the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and ask for some assistance in the \#help channel.
 
 ## **Developing Your Own Plugin**
 

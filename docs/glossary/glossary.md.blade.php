@@ -84,7 +84,7 @@ Deprecated shell interface for managing an ARK node, and has since been replaced
 
 ### ARK Community Committee
 
-Group of ARK community members who collaborate on projects that do not require coding. Members are paid in ARK and collaborate on the ARK Discord.
+Group of ARK community members who collaborate on projects that do not require coding. Members are paid in ARK and collaborate on the [ARK Community Fund](#ark-community-fund)'s [Community Discord](https://discord.gg/arkecosystem).
 
 ### ARK Community Fund
 
