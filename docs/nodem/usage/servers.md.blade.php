@@ -47,27 +47,28 @@ Next, Nodem will ask you to provide details about your Core Server.
   * Visible from the Nodem Dashboard
   * Can be changed later by Team Admins
 * **Host** - The Host address or IP of your Core Server instance
-  * Must include both, address and port (e.g., `ip:port`).
+  * Must include both address and port (e.g., `ip:port`).
 * **Process Type**
-  * **Separate** - Relay and/or Forger are ran as distinct processes
-  * **Combined** - Relay and/or Forger are ran as a singular instance
-* **Access** - Your Core Server's access credentials
-  * **Account** - A Username and Password
-  * **Access Key** - Found in your Core Server's `app.json` file
+  * **Separate** - Relay and/or Forger are run as distinct processes
+  * **Combined** - Relay and/or Forger are run as a singular instance
+* **Access** - Your Core Server's access credentials created while [configuring](/docs/nodem/getting-started/core#configuration) the Manager API
+  * **Account** - A traditional username and password
+  * **Access Key** - A traditional access token
 * **BIP38 Encryption** - Whether your Forger uses [BIP-38 Encryption](/docs/core/deployment/forger#content-getting-started)
   * Only check this box if applicable
+  * You'll be prompted to enter your encryption pass whenever you start or restart your server
 
 <x-alert type="info">
 Server hosts listed in the dropdown UI are provided for your at-a-glance reference. Nodem uses an RPC interface to communicate with your server's Manager API, which supports all hosting providers.
 </x-alert>
 
+<x-alert type="info">
+Visit the [Core Configuration](/docs/nodem/getting-started/core#configuration) page for additional guidance and information on creating **access credentials**.
+</x-alert>
+
 ### 3) Confirm Details
 
 When you have entered all of your Core Server's details, click the '**+ Add**' button.
-
-You'll be prompted to enter your encryption password if you selected the BIP-38 checkbox.
-
-![](/storage/docs/docs/nodem/assets/usage/servers-add-details-bip38.png)
 
 After successfully entering and confirming your Core Server's details, you should now see it in the Nodem dashboard 🎉
 
@@ -77,11 +78,11 @@ After successfully entering and confirming your Core Server's details, you shoul
 
 Owner accounts and Team Admins may need to update the details of a server at some point. Any parameter may be edited, whether it be a server's dashboard name, host address, server type, or access credentials.
 
-### 1) Click 'Edit'
+### 1) Select 'Edit'
 
-From the server's details page, click the '**Edit**' button.
+Get started by clicking the '**Action**' button next to the server you'd like to edit, then select '**Edit**'.
 
-![](/storage/docs/docs/nodem/assets/usage/servers-edit-button.png)
+![](/storage/docs/docs/nodem/assets/usage/servers-edit.png)
 
 ### 2) Update the Details
 
@@ -185,16 +186,16 @@ If the process is successful, you'll be shown a list of your newly-imported serv
 
 In the event that there was an error importing your servers, Nodem will provide you with some helpful warnings.
 
-**Failed Connection** - Nodem will test server connections during the import process. If Nodem fails to connect to a particular instance, a red '_X_' will be displayed where you would otherwise select that server and a warning banner will be presented. When this happens, try clicking the '**Retry**' button first. If the connection still fails, check that:
+**Failed Connection** - Nodem will test server connections during the import process. If Nodem fails to connect to a particular instance, a red '_X_' will be displayed where you would otherwise select that server, and a warning banner will be presented. When this happens, try clicking the '**Retry**' button first. If the connection still fails, check that:
 
 * your server is still running,
 * the `core-manager` plugin was installed and properly configured,
 * the host address is saved correctly in your `.json` file, and that
 * the access credentials are saved correctly in your `.json` file
 
-**Duplicate Server** - Duplicate servers are not permitted. When attempting to import a duplicate server, a yellow '_!_' warning will be displayed where you would otherwise select that server and a warning banner will be presented.
+**Duplicate Server** - Duplicate servers are not permitted. When attempting to import a duplicate server, a yellow '_!_' warning will be displayed where you would otherwise select that server, and a warning banner will be presented.
 
-Refer to the mocked up image below for examples of what a failed connection or duplicated server should look like.
+Refer to the mocked-up image below for examples of what a failed connection or duplicated server should look like.
 
 ![](/storage/docs/docs/nodem/assets/usage/server-import-errors.png)
 
@@ -253,10 +254,10 @@ A server's statistics page provides an excellent overview of its performance and
 
 ## Server Logs
 
-Logs are visible from a server's details page and allows your team to view its activity, including actions performed within Nodem by individual team members.
+Logs are visible from a server's details page and lets your team to view its activity, including actions performed within Nodem by individual team members.
 
 <x-alert type="warning">
-Note: The logging feature must be enabled in your server's `core-manager` plugin configuration. Visit Nodem's [Core Configuration](/docs/nodem/getting-started/core) docs for more details.
+Before Nodem can access and provide logging features, you must first extend process logging to your server's Manager API.<br>Refer to the [Server Logging](/docs/nodem/getting-started/core#logging) section for additional information and guidance.
 </x-alert>
 
 <x-alert type="info">
