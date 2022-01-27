@@ -174,4 +174,4 @@ If you'd like to proceed with deleting this member, click the '**Remove**' butto
 
 ![](/storage/docs/docs/nodem/assets/usage/teams-remove-confirm.png)
 
-The pending invitation should no longer be visible from the 'Team Management' dashboard.
+The member should no longer be visible from the 'Team Management' dashboard.
