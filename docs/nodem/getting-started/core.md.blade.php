@@ -93,7 +93,7 @@ Note that allowing access by all IP addresses is heavily discouraged. You should
 ? Can you confirm? › (y/N)
 ```
 
-**Token** _(Discouraged)_ - `Token` is a traditional access key consisting of a random string of characters. This method is discouraged as tokens are easier to compromise compated to a username and password.
+**Token** _(Discouraged)_ - `Token` is a traditional access key consisting of a random string of characters. This method is discouraged as tokens are easier to compromise compared to a username and password.
 
 <x-alert type="danger">
 Access tokens are stored in plain text. If compromised, it must be replaced anywhere it's used, and each team member must update their credentials accordingly.
