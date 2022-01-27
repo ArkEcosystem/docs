@@ -153,7 +153,7 @@ After you have made your selection, you will need to confirm by pressing `y` and
 At this point, ARK Core has been successfully installed with its configuration options properly published.
 
 <x-alert type="info">
-**Tinkering with 'Devnet'?** Create an Address using the [ARK Desktop Wallet](https://ark.io/download#desktop-wallet), then head over to [Discord](https://discord.ark.io) and visit the **`#community_bots`** channel. (_Use the **`!faucet`** command to receive DARK tokens_)
+**Tinkering with 'Devnet'?** Create an Address using the [ARK Desktop Wallet](https://ark.io/download#desktop-wallet), then head over to the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and visit the **`#community_bots`** channel. (_Use the **`!faucet`** command to receive DARK tokens_)
 </x-alert>
 
 ### Step 6: Configuring the Core Database

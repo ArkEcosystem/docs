@@ -41,7 +41,7 @@ It is important to understand that ARK Core v3.0 is a massive improvement over e
 
 ## Join the Testing
 
-Help from our community during this test phase is critical to ensure a smooth transition from 2.7 to 3.0 on the ARK Public Network. If you would like to help out with testing then please join us on [Discord](https://discord.ark.io) in the #devnet channel. Within this channel you will find all the assistance required to get started with Core V3 on the ARK Development Network.
+Help from our community during this test phase is critical to ensure a smooth transition from 2.7 to 3.0 on the ARK Public Network. If you would like to help out with testing then please join the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and visit the #devnet channel. Within this channel you will find all the assistance required to get started with Core V3 on the ARK Development Network.
 
 As you test different aspects of Core V3, you are encouraged to use your own initiative and come up with interesting and unique ways to test Core 3.0.
 

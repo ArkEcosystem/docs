@@ -7,7 +7,7 @@ title: Troubleshooting
 This page will cover common issues related to the ARK Desktop Wallet `v2.x`.
 
 <x-alert type="info">
-If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://ark.io/contact), or reach out on [Discord](https://discord.ark.io/)!
+If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://ark.io/contact)!
 </x-alert>
 
 ## Getting Started
@@ -348,5 +348,5 @@ The easiest and most common way is to use the built-in **Dev Tools**, which **wi
 ![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/storage/docs/docs/desktop-wallet/assets/troubleshooting-dev-tools.jpeg)
 
 <x-alert type="info">
-If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://ark.io/contact), or reach out on [Discord](https://discord.ark.io/)!
+If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://ark.io/contact)!
 </x-alert>

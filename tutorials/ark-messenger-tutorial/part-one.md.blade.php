@@ -207,4 +207,4 @@ But most importantly, a bridgechain allows you to run a network with your own cu
 
 Our next tutorial will cover the development of a custom transaction, testing that transaction on our bridgechain, and developing the client which will serve as the front-end application.
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, you can reach out via our [contact](https://ark.dev/contact) form.
