@@ -8,9 +8,9 @@ Nodem communicates with your Core server using the [Manager API](/docs/api/manag
 
 This page will provide a brief overview of:
 
-* what the [Manager Manager Plugin](#the-core-manager-plugin) is;
+* what the [Manager API Plugin](#the-core-manager-plugin) is;
 * how to [install](#installation) it, and
-* some common configurations, including how to extend server logging to the Manager API
+* some common [configurations](#configuration), including how to extend server [logging](#logging) to the Manager API
 
 ## The Core Manager Plugin
 
@@ -139,7 +139,7 @@ Once the process is complete, your new settings will be reflected in your server
     }
 }
 
-```json
+```
 
 ### Logging
 
@@ -149,7 +149,7 @@ To extend logging to the Manager API, add `core-manager` to the desired process(
 
 The `core-manager` plugin should be added to the `plugins` property of the desired process(es) directly below the `core-logger-pino` object. This can be done using the CLI of your server (e.g., `sudo nano .config/ark-core/devnet/app.json`).
 
-Below is an example of adding `core-manager` to the `Forger` process to extend logging. 
+Below is an example of adding `core-manager` to the `Forger` process to extend logging.
 
 **Before**:
 
