@@ -17,6 +17,7 @@ Angular's
 anonymized
 APDU
 apdu
+API's
 apk
 APN
 args
