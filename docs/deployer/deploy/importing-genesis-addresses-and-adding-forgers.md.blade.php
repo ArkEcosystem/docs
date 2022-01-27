@@ -29,7 +29,7 @@ Now that you have the ARK Desktop Wallet communicating with your new network, it
 
 At this point you have a genesis node running with autoforging genesis delegates on it, and a number of network peers running as relays. Since your goal is likely to have a decentralized network, you'll need to introduce _live forging delegates_ to your network. These live forging delegates will be ranked by vote weight, and that will dictate who is authorized to insert blocks into the ledger and receive forging rewards.
 
-How you proceed from here depends on your blockchain goals. Unfortunately, there are too many permutations regarding network architecture and token distribution models to cover here. You can reach out to the ARK community and team via [Discord](https://discord.ark.io) or [Reddit](https://reddit.ark.io) to discuss your specific goals.
+How you proceed from here depends on your blockchain goals. Unfortunately, there are too many permutations regarding network architecture and token distribution models to cover here. You can reach out to the ARK community via the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) or [Reddit](https://reddit.ark.io) to discuss your specific goals.
 
 The below procedure simply describes how you or someone else would configure and introduce a live forging delegate node into the network:
 

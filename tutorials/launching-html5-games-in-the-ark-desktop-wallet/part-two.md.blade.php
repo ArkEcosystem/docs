@@ -198,7 +198,7 @@ Congratulations on reaching the end of the tutorial! It might not seem like much
 
 That’s it for Part 2 of this tutorial series. In our next session, we will make the game work with a betting system and create a lobby to start games and see existing ones!
 
-If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, our team and developers are active on [Discord](https://discord.ark.io) so do not hesitate to reach out to us!
+If you become stuck at any point make sure to consult our documents on our [Core Developer Docs](/docs/core/installation/intro). In addition, you can reach out via our [contact](https://ark.dev/contact) form.
 
 ## Missed the previous part?
 
