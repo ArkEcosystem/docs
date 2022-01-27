@@ -28,7 +28,7 @@ info.coreVersion
 | id | string / number | The identifier of the request. | Yes |
 | jsonrpc | string | The protocol version. | Yes |
 | result | object | Result. | Yes |
-| result.currentVersion | string | Used core version. | Yes |
+| result.currentVersion | string | Used core version. | No |
 | result.installedVersion | string | Installed core version. | Yes |
 | result.latestVersion | string | Latest core version from NPM. | Yes |
 | result.manager | object | Core-manager versions. | Yes |
