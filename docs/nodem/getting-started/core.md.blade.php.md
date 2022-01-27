@@ -55,14 +55,18 @@ ark manager:config
 **Whitelist** - This sets the `"whitelist"` array property of your `app.json` file and represents the list of IP addresses permitted to access the Manager API. Use the `*` symbol to denote an IP range (`12.34.56.*"`) or as a wildcard to allow all IP addresses (`*`).
 
 <x-alert type="danger">
-Note that allowing access by all IP addresses is heavily discouraged. Access to your server's Manager API should be restricted only to those for whom you wish to permit access.
+Note that allowing access by all IP addresses is heavily discouraged. You should restrict access to your server's Manager API only to those for whom you wish to permit access.
 </x-alert>
 
 ```shell
 ? Which IPs can be whitelisted? Separate values with a comma. Enter * for all. … *
 ```
 
-**Authentication** - This sets the `"basic/tokenAuthentication"` property of your `app.json` file and defines how users will be permitted to access your server's Manager API. These values are user-provided (i.e., you manually create, record, and enter them). These will be used for adding your server to Nodem, so make sure to write them down and keep them safe.
+**Authentication** - This sets the `"basic/tokenAuthentication"` property of your `app.json` file and defines how users will be permitted to access your server's Manager API. These values are user-provided (i.e., you manually create, record, and enter them), and you will later use these to add your server to Nodem.
+
+<x-alert type="danger">
+**These values are important!**<br>Passwords, for instance, are hashed and will not be recoverable once entered.<br>Make sure to write these values down and keep them safe!
+</x-alert>
 
 ```shell
 ? Which authentication system do you want to use? › - Use arrow-keys. Return to submit.
@@ -79,7 +83,11 @@ Note that allowing access by all IP addresses is heavily discouraged. Access to 
 ? Can you confirm? › (y/N)
 ```
 
-**Token** _(Discouraged)_ - `Token` is a traditional access key consisting of a random string of characters.
+**Token** _(Discouraged)_ - `Token` is a traditional access key consisting of a random string of characters. This method is discouraged as they are easier to compromise.
+
+<x-alert type="danger">
+Access tokens are stored in plain text. If compromised, it must be replaced anywhere it's used, and each team member must update their credentials accordingly.
+</x-alert>
 
 ```shell
 ✔ Enter authentication token: … ********************
@@ -124,7 +132,7 @@ Once the process is complete, your new settings will be reflected in your server
                 "users": [
                     {
                         "username": "test",
-                        "password": "****"
+                        "password": "$argon2id$v=19$m=4096,t=3,p=1$NiGA5Cy5vFWTxhBaZMG/3Q$TwEFlzTuIB0fDy+qozEas+GzEiBcLRkm5F+/ClVRCDY"
                     }
                 ]
             }
@@ -143,11 +151,11 @@ Once the process is complete, your new settings will be reflected in your server
 
 ### Logging
 
-Before Nodem can access and provide logging features, server logging must be extended to the Manager API.
+Before Nodem can access and provide logging features, you must first extend process logging to your server's Manager API.
 
-To extend logging to the Manager API, add `core-manager` to the desired process(es) in your `app.json` file. You can add `core-manager` to either the `Relay` and/or `Forger` process for individual logging or the `Core` process for combined logs.
+To extend logging functionality, add `core-manager` to the desired process(es) in your `app.json` file. You may add `core-manager` to either the `Relay` and/or `Forger` process for individual logging or the `Core` process for combined logs.
 
-The `core-manager` plugin should be added to the `plugins` property of the desired process(es) directly below the `core-logger-pino` object. This can be done using the CLI of your server (e.g., `sudo nano .config/ark-core/devnet/app.json`).
+You must add the `core-manager` plugin to the `plugins` property of the desired process(es) directly below the `core-logger-pino` object. You can do this using your server's CLI (e.g., `sudo nano .config/ark-core/devnet/app.json`).
 
 Below is an example of adding `core-manager` to the `Forger` process to extend logging.
 
