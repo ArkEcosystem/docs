@@ -34,11 +34,15 @@ The Core Manager plugin does not have a default configuration. You may set param
 For more information on all available configuration options, please visit the [Core Manager API's](/docs/api/manager-api/getting-started#configuration) documentation.
 </x-alert>
 
+---
+
 Launch the interactive process by executing the following command:
 
 ```bash
 ark manager:config
 ```
+
+---
 
 **Host** - This sets the `CORE_MANAGER_HOST` `.env` variable and represents the host IP to which the Manager API should be exposed. The default value is `0.0.0.0`.
 
@@ -46,11 +50,15 @@ ark manager:config
 ? What host do you want to use? … 0.0.0.0
 ```
 
+---
+
 **Port** - This sets the `CORE_MANAGER_PORT` `.env` variable and represents the API port on which the Manager API plugin will listen. The default value is `4005`.
 
 ```shell
 ? What port do you want to use? … 4005
 ```
+
+---
 
 **Whitelist** - This sets the `"whitelist"` array property of your `app.json` file and represents the list of IP addresses permitted to access the Manager API. Use the `*` symbol to denote an IP range (`12.34.56.*"`) or as a wildcard to allow all IP addresses (`*`).
 
@@ -61,6 +69,8 @@ Note that allowing access by all IP addresses is heavily discouraged. You should
 ```shell
 ? Which IPs can be whitelisted? Separate values with a comma. Enter * for all. … *
 ```
+
+---
 
 **Authentication** - This sets the `"basic/tokenAuthentication"` property of your `app.json` file and defines how users will be permitted to access your server's Manager API. These values are user-provided (i.e., you manually create, record, and enter them), and you will later use these to add your server to Nodem.
 
@@ -83,7 +93,7 @@ Note that allowing access by all IP addresses is heavily discouraged. You should
 ? Can you confirm? › (y/N)
 ```
 
-**Token** _(Discouraged)_ - `Token` is a traditional access key consisting of a random string of characters. This method is discouraged as they are easier to compromise.
+**Token** _(Discouraged)_ - `Token` is a traditional access key consisting of a random string of characters. This method is discouraged as tokens are easier to compromise compated to a username and password.
 
 <x-alert type="danger">
 Access tokens are stored in plain text. If compromised, it must be replaced anywhere it's used, and each team member must update their credentials accordingly.
@@ -93,6 +103,8 @@ Access tokens are stored in plain text. If compromised, it must be replaced anyw
 ✔ Enter authentication token: … ********************
 ? Can you confirm? › (y/N)
 ```
+
+---
 
 When satisfied with your entries, enter `y` to commit your configuration changes.
 
@@ -105,6 +117,8 @@ When satisfied with your entries, enter `y` to commit your configuration changes
 ✔ Enter password: … ****
 ✔ Can you confirm? … yes
 ```
+
+---
 
 Once the process is complete, your new settings will be reflected in your server's `.env` file and your server's `app.json` file as exampled below.
 
@@ -155,7 +169,7 @@ Before Nodem can access and provide logging features, you must first extend proc
 
 To extend logging functionality, add `core-manager` to the desired process(es) in your `app.json` file. You may add `core-manager` to either the `Relay` and/or `Forger` process for individual logging or the `Core` process for combined logs.
 
-You must add the `core-manager` plugin to the `plugins` property of the desired process(es) directly below the `core-logger-pino` object. You can do this using your server's CLI (e.g., `sudo nano .config/ark-core/devnet/app.json`).
+You must add `core-manager` to the `plugins` property of the desired process(es) directly below the `core-logger-pino` object. You can do this using your server's CLI (e.g., `sudo nano .config/ark-core/devnet/app.json`).
 
 Below is an example of adding `core-manager` to the `Forger` process to extend logging.
 

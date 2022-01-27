@@ -227,17 +227,6 @@ To get started, click the '**Action**' icon next to your desired server.
 
 ![](/storage/docs/docs/nodem/assets/usage/servers-actions.png)
 
-**Available Actions**:
-
-* **Start**
-* **Restart**
-* **Stop**
-* **Delete**
-* **Edit**
-* **Update**
-
-**Action Permissions**:
-
 * **Readonly**
   * _Not_ permitted to perform server actions
 * **Maintainer**
@@ -261,7 +250,7 @@ Before Nodem can access and provide logging features, you must first extend proc
 </x-alert>
 
 <x-alert type="info">
-Actions performed directly from your server do not include user information as Nodem has no way to recognize this activity
+Actions performed directly from your server do not include user information as Nodem has no way to recognize this activity.
 </x-alert>
 
 ### Downloading Logs
@@ -269,6 +258,8 @@ Actions performed directly from your server do not include user information as N
 From a server's details page under either 'Relay' or 'Forger,' click the '**Download**' icon.
 
 ![](/storage/docs/docs/nodem/assets/usage/servers-logs-download-button.png)
+
+---
 
 You can then select from a range of dates, times, and log types, after which you can click the '**Download**' button to save your server's logs.
 
