@@ -46,6 +46,7 @@ bazFoo
 bbd
 bblanchon
 bcl
+bcmath
 bcrypt
 bech
 BFT
@@ -117,6 +118,7 @@ DDOS
 DDTHH
 debounce
 debranding
+DEBUGBAR
 decrypt
 decrypted
 deduplicate
@@ -191,6 +193,7 @@ extensibility
 extern
 facto
 falsy
+fastcgi
 favicon
 findOrFail
 FlexToshi
@@ -246,6 +249,7 @@ iframe
 iframes
 igo
 im
+imagick
 img
 incentivize
 incentivizes
@@ -292,6 +296,7 @@ latestblockoverview
 latesttransactionoverview
 lel
 Lemii
+LEPP
 Lerna
 LF
 libjemalloc
@@ -314,6 +319,7 @@ mailto
 mamp
 markdownlint
 matchers
+mbstring
 mem
 memberof
 memoization
@@ -362,6 +368,7 @@ Nodem's
 nologo
 nonces
 NOPASSWD
+nosniff
 npm
 npmjs
 Numériques
@@ -370,6 +377,7 @@ nvm
 oclif
 Oculus
 onclick
+ondrej
 onwards
 OOP
 OpenJDK
@@ -380,6 +388,7 @@ ovh
 Packagist
 Paket
 parallelizes
+param
 params
 passwd
 patriksimek
@@ -389,7 +398,9 @@ PBKDF
 perf
 performant
 permissioned
+pgsql
 pgtune
+phar
 pid
 PII
 pinky
@@ -400,6 +411,7 @@ platformio
 png
 poc
 Postgres
+ppa
 pport
 pre
 printf
@@ -423,6 +435,7 @@ qrcode
 rbenv
 reactjs
 README
+realpath
 recompress
 Reddit
 refactorings
@@ -446,6 +459,7 @@ rustup
 rvm
 rw
 SAFU
+SAMEORIGIN
 Satoshi
 Satoshis
 sbin
@@ -543,6 +557,7 @@ uname
 unassigns
 uncomment
 unencrypted
+unlink
 unmerged
 Unselected
 unstarred
