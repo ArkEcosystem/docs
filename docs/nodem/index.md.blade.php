@@ -7,15 +7,9 @@
 
 ## Getting Started
 
-<x-general.sidebar-link
-    path="/docs/nodem/getting-started/"
-    name="Nodem Setup"
-    :children="[
-        ['path' => '/docs/nodem/getting-started/development', 'name' => 'Development'],
-        ['path' => '/docs/nodem/getting-started/production', 'name' => 'Production'],
-    ]"
-/>
 <x-general.sidebar-link path="/docs/nodem/getting-started/core" name="Core Configuration" />
+<x-general.sidebar-link path="/docs/nodem/getting-started/development" name="Development Setup" />
+<x-general.sidebar-link path="/docs/nodem/getting-started/production" name="Production Setup" />
 
 ## Using Nodem
 

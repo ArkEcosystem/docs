@@ -20,9 +20,9 @@ Nodem is a new utility that enables developers and network Validators to streaml
 
 <x-link-collection
     :links="[
+        ['path' => '/docs/nodem/getting-started/core', 'name' => 'Core Server Configuration'],
         ['path' => '/docs/nodem/getting-started/development', 'name' => 'Development Setup'],
         ['path' => '/docs/nodem/getting-started/production', 'name' => 'Production Setup'],
-        ['path' => '/docs/nodem/getting-started/core', 'name' => 'Core Server Configuration'],
     ]"
 />
 
