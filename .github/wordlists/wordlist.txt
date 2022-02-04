@@ -239,6 +239,7 @@ href
 HTLC
 htm
 https
+hw
 ico
 ietf
 iframe
@@ -289,6 +290,9 @@ kwargs
 Laravel
 latestblockoverview
 latesttransactionoverview
+LedgerHQ
+LedgerHQ's
+ledgerjs
 lel
 Lemii
 Lerna
@@ -544,6 +548,7 @@ unmerged
 Unselected
 unstarred
 Unstoppabledomains
+untrusted
 Unvote
 unvoted
 unvoting
