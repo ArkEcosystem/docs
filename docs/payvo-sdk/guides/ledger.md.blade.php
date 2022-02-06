@@ -20,7 +20,7 @@ The Ledger Service is responsible for all interactions with a Ledger Hardware Wa
 
 ## Service Implementation
 
-If we take the [ledger contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/ledger.contract.ts) and implement it to network's SDK package; we can use `[sdk-ark](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/ledger.service.test.ts)` as an example.
+If we take the [ledger contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/ledger.contract.ts) and implement it to network's SDK package; we can use [sdk-ark](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/ledger.service.test.ts) as an example.
 
 ## Testing
 
@@ -34,7 +34,7 @@ Ensure that unsupported methods throw a `NotImplemented` exception.
 
 ### Test Fixtures
 
-The Payvo SDK uses LedgerHQ's `[hw-transport-mocker](https://github.com/LedgerHQ/ledgerjs/tree/master/packages/hw-transport-mocker)` package to emulate and replay device communication sessions to facilitate testing without the need for a live device. i.e., these replay sessions are what constitute Ledger test fixtures.
+The Payvo SDK uses LedgerHQ's [hw-transport-mocker](https://github.com/LedgerHQ/ledgerjs/tree/master/packages/hw-transport-mocker) package to emulate and replay device communication sessions to facilitate testing without the need for a live device. i.e., these replay sessions are what constitute Ledger test fixtures.
 
 <x-alert type="success">
 Check out the `sdk-ark` [ledger fixtures](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/ledger.ts) to see what this communication replay looks like.
@@ -48,7 +48,7 @@ So what's the `record` about? How does _that_ work?
 
 Remember that Ledger devices use APDU payloads for communication. What you're looking at here is a series of hex-encoded calls and responses; i.e., the message _to_ a device (`=>`) and the response _from_ a device (`<=`).
 
-The payloads are split up like this because APDU commands have a size limit of 260 (since this is hex, you'll notice 520 characters), we can't send the entire instruction in one go. So after sending a max-sized payload (`=>`) the Ledger will respond (`<=`) with the code `9000` meaning the payload was received successfully. This process continues until the entire instruction has been received, at which point a Ledger device would proceed with executing the request.
+The payloads are split up like this because APDU commands have a size limit of 260 (since this is hex, you'll notice 520 characters); we can't send the full instruction in one go. So after sending a max-sized payload (`=>`) the Ledger will respond (`<=`) with the code `9000`, meaning the payload was received successfully. This process continues until the entire instruction has been received, at which point a Ledger device would proceed with executing the request.
 
 ```typescript
 transaction: {
@@ -98,12 +98,12 @@ Let's take a closer look at how this header is constructed:
     * `0x01` - **P1_MORE**: Subsequent of many segments
     * `0x81` - **P1_LAST**: Final segment
 * `APDU[3]` - **P2**: Parameter 2 - _(this will also vary by context)_
-  * **App / PublicKey Context** - User Approval
+  * **App / PublicKey Context** - Chaincode flag. Used for public derivation
     * `0x00` - **P2_NO_CHAINCODE**: Don't use a ChainCode
     * `0x01` - **P2_CHAINCODE**: Use a Chaincode
   * **Signing Context** - Signing Algorithm
     * `0x50` - **P2_SCHNORR_LEG**: *Only legacy Schnorr is currently supported
-* `APDU[4]` - **Message Length**: The Length of the actual messaged being encoded in this payload. In this case, `0xff` or 255
+* `APDU[4]` - **Message Length**: The Length of the actual message being encoded in this payload. In this case, `0xff` or 255
 
 #### Breaking Down Our Example
 
@@ -117,7 +117,7 @@ So now that we see how the headers are constructed, let's break down this first 
 * `0x50` - The resulting signature should use the legacy Schnorr algorithm
 * `0xff` - 255. This payload uses the max available space
 
-And finally, just before the message payload itself, we have the the signing path information. This will only exist the first payload.
+And finally, just before the message payload itself, we have the signing path information. This will only exist in the first payload.
 
 * `0x058000002c8000006f800000000000000000000000` - Encoded BIP-44 Signing Path
   * `0x05` - The Path Length
@@ -136,6 +136,6 @@ Next, you'll see the subsequent payload headers begin with the following:
 
 Notice how the 2nd through 6th payload are all prepended with `e0040150ff...`. Looking back at how these payloads are constructed and remembering what we learned from the first segment's header, we can quickly spot that APDU[2] (`P2`) is the only difference. It's `0x01`, meaning it's neither the first nor last payload in this series of messages. We can also see that these segments are maxed out at `0xff`/ 255.
 
-Now take a look at that 7th and final header, `e004815078...`. Jumping straight to the `P2` value, we find `0x81`, meaning this is the final payload segment in the series. Note that the message length here is `0x78` or 120 in length. To tell Ledger that we're done sending messages, we'll add the value `9000` to the end of this final segment.
+Now take a look at that 7th and final header, `e004815078...`. Jumping straight to the `P2` value, we find `0x81`, meaning this is the last payload segment in the series. Note that the message length here is `0x78` or 120 in size. To tell Ledger that we're done sending messages, we'll add the value `9000` to the end of this final segment.
 
 <!-- Visit the [Core Transfer](https://ark.dev/docs/core/transactions/types/transfer) page to see the structure of a serialized ARK transaction. You can further examine the ARK Ledger Transport's [test fixtures](https://github.com/ArkEcosystem/ledger-transport/blob/c7d67ed0a52929699d45cf828747de57cacd650b/__tests__/__fixtures__/transport-fixtures.ts) and [APDU constants](https://github.com/ArkEcosystem/ledger-transport/blob/c7d67ed0a52929699d45cf828747de57cacd650b/src/apdu.ts#L5-#L66) to get an idea of how serialized transactions should be wrapped. -->
