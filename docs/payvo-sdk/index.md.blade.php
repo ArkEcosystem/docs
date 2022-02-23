@@ -77,4 +77,5 @@
 ## Guides
 
 <x-general.sidebar-link path="/docs/payvo-sdk/guides/development" name="Development" />
+<x-general.sidebar-link path="/docs/payvo-sdk/guides/ledger" name="Ledger Development" />
 <x-general.sidebar-link path="/docs/payvo-sdk/guides/testing" name="Testing" />
