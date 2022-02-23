@@ -141,26 +141,6 @@ Testing the service is fairly straightforward and an example can be seen [here](
 
 - Ensure that unsupported methods throw an `NotImplemented` exception.
 
-### Ledger
-
-The Ledger service is responsible for all interactions with a Ledger Hardware Wallet. This includes derivation and signing of transactions and is limited to 1 device at a time.
-
-**Implementation**:
-
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/ledger.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/ledger.service.ts).
-
-**Testing**:
-
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/ledger.service.test.ts) but we'll outline what you should keep in mind when writing tests.
-
-- Ensure that unsupported methods throw an `NotImplemented` exception.
-
-**Test Fixtures**:
-
-Preparing test fixtures for Ledger can be a non-trivial task, but essentially involves wrapping a serialized transaction into an [APDU](https://wikipedia.org/wiki/Smart_card_application_protocol_data_unit) payload.
-
-Visit the [Core Transfer](https://ark.dev/docs/core/transactions/types/transfer) page to see the structure of a serialized ARK transaction. You can further examine the ARK Ledger Transport's [test fixtures](https://github.com/ArkEcosystem/ledger-transport/blob/c7d67ed0a52929699d45cf828747de57cacd650b/__tests__/__fixtures__/transport-fixtures.ts) and [APDU constants](https://github.com/ArkEcosystem/ledger-transport/blob/c7d67ed0a52929699d45cf828747de57cacd650b/src/apdu.ts#L5-#L66) to get an idea of how serialized transactions should be wrapped.
-
 ### Message
 
 The Message service is responsible for signing and verifying messages. These messages are anything the user wants to sign and serves no critical functionality.
