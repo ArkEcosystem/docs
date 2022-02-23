@@ -124,6 +124,7 @@ The **Guides** section will provide in-depth explanations as to what you will ne
 <x-link-collection
     :links="[
         ['path' => '/docs/payvo-sdk/guides/development', 'name' => 'Development'],
+        ['path' => '/docs/payvo-sdk/guides/ledger', 'name' => 'Ledger Development'],
         ['path' => '/docs/payvo-sdk/guides/testing', 'name' => 'Testing'],
     ]"
 />
