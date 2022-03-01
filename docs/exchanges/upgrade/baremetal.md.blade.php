@@ -16,7 +16,7 @@ ARK `v3.0` is a major update **not backward compatible with `v2.7`**.
 
 Upgrading from `v2.7` to `v3.0` is relatively straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create an excellent solution to a problem.
 
-<x-alert type="danger">
+<x-alert type="warning">
 **DANGER:** Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 </x-alert>
 
@@ -24,7 +24,7 @@ Upgrading from `v2.7` to `v3.0` is relatively straightforward if you follow the 
 
 After upgrading, check that your application still works as expected and that no plugins are broken. See the following notes on which changes to consider when upgrading from one version to another.
 
-<x-alert type="danger">
+<x-alert type="warning">
 **DANGER:** Do NOT run any of the mentioned commands with **sudo** unless explicitly stated.
 </x-alert>
 
@@ -102,11 +102,11 @@ Failing to apply permissions will prevent the iptables script from executing aft
 
 ### Step 3: Update & Start Core
 
-<x-alert type="danger">
+<x-alert type="warning">
 **DANGER:** The commands below will remove and reset your configuration files in `~/.config/ark-core/mainnet`.
 </x-alert>
 
-<x-alert type="danger">
+<x-alert type="warning">
 **Please backup any configuration files you may need later, such as your `delegate.json`, `plugin.js` & `.env` files.**
 </x-alert>
 

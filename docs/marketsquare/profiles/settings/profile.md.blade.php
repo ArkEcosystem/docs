@@ -55,7 +55,7 @@ After clicking **'Export Personal Data'**, a zip file will be sent to the email 
 
 Once an account is deleted, all of its resources and data will be permanently deleted. This includes **all** Projects _created_ by this account. Back up any important data or information before deleting your account.
 
-<x-alert type="danger">
+<x-alert type="warning">
 Deleting an Account is **PERMANENT**. Make sure all important Profile or Project-related content is saved before proceeding. **This action cannot be reversed**.
 </x-alert>
 

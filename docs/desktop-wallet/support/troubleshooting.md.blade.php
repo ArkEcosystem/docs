@@ -130,7 +130,7 @@ Unfortunately, no mechanism exists to recover a lost recovery mnemonic. This sec
 
 It is <u>**always**</u> advised to write your recovery phrase down on paper, double and triple check that it is written down correctly, keep it safe and **share it with no one**.
 
-<x-alert type="danger">
+<x-alert type="warning">
 Your 12-word passphrase is <u>**your**</u> responsibility. If it is lost or stolen, you <u>**will**</u> lose access to your funds. Lost mnemonic recovery passphrases are <u>**NOT**</u> recoverable.
 </x-alert>
 
@@ -329,7 +329,7 @@ In rare cases, a user's profile may have become corrupted.
 
 A user is then advised to **restore** the ARK Desktop Wallet to its **default settings**, then **re-import** wallets and watch-addresses.
 
-<x-alert type="danger">
+<x-alert type="warning">
 This will **erase a user's** **profile data**, make sure <u>**all**</u> **mnemonic recovery phrases** and **watch-addresses** are **written down** and **saved properly**. Funds **will** be **lost** if your data is **not** backed up. <u>**This action cannot be undone**</u>.
 </x-alert>
 

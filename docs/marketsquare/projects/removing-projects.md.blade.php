@@ -4,7 +4,7 @@ title: Removing Projects
 
 # Removing a Project on MarketSquare
 
-<x-alert type="danger">
+<x-alert type="warning">
 Once a MarketSquare Project is removed, all of its resources and data will be permanently deleted. Before deleting a Project, be sure to backup any important data or information
 </x-alert>
 
@@ -32,6 +32,6 @@ Confirm removal of a Project on MarketSquare by entering the Project name, then 
 
 ![](/storage/docs/docs/marketsquare/assets/projects/projects-delete-confirm.png)
 
-<x-alert type="danger">
+<x-alert type="warning">
 Deleting a Project is **PERMANENT**. Make sure all important content is saved appropriately before proceeding as this action cannot be reversed
 </x-alert>

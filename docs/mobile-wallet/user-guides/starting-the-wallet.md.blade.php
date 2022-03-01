@@ -16,7 +16,7 @@ After reading through the welcome slides, you will be able to create a profile.
 
 After you hit the **Create A Profile** button, you will be prompted to create a six-digit PIN confirm it afterward.
 
-<x-alert type="danger">
+<x-alert type="warning">
 It is imperative that you remember this PIN.
 </x-alert>
 

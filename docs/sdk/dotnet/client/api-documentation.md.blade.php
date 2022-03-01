@@ -4,7 +4,7 @@ title: API Documentation
 
 # API Documentation
 
-<x-alert type="danger">
+<x-alert type="warning">
 WARNING! This package is deprecated and is no longer maintained and supported.
 </x-alert>
 

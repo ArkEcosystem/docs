@@ -61,7 +61,7 @@ Once an account is deleted, all of its resources and data will be permanently de
 
 ![](/storage/docs/docs/marketsquare/assets/profiles/profiles-settings-user-account-delete.png)
 
-<x-alert type="danger">
+<x-alert type="warning">
 Deleting an Account is **PERMANENT**. Make sure all important Profile or Project-related content is saved appropriately before proceeding as this action cannot be reversed
 </x-alert>
 
@@ -176,6 +176,6 @@ Users should **not** rely on these codes as a normal means of logging in. Should
 Each 2FA recovery code is one-time-use.
 </x-alert>
 
-<x-alert type="danger">
+<x-alert type="warning">
 If all recovery codes have been used **and** your 2FA device is inaccessible, you will be locked out of your account.
 </x-alert>

@@ -8,7 +8,7 @@ To download the application, you can visit the link below and select the appropr
 
 <livewire:embed-link url="https://ark.io/download#desktop-wallet" caption="ARK Desktop Wallet Releases" />
 
-<x-alert type="danger">
+<x-alert type="warning">
 **Note**: The above link is the authoritative source for ARK Desktop Wallet releases. As a friendly reminder, don't ever click on links that are not provided by the ARK Team.
 </x-alert>
 

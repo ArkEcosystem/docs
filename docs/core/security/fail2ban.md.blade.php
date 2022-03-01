@@ -16,7 +16,7 @@ During this guide, we will configure network and SSH parameters, which if improp
 
 The basic idea behind fail2ban is to monitor the logs of standard services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits.
 
-<x-alert type="danger">
+<x-alert type="warning">
 [Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) can reduce the rate of incorrect authentications attempts however it cannot eliminate the risk that weak authentication presents. Configure services to use only two factor or public/private authentication mechanisms if you want to protect services. :::
 </x-alert>
 

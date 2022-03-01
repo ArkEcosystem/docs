@@ -46,7 +46,7 @@ yarn watch
 valet link explorer
 ```
 
-<x-alert type="danger">
+<x-alert type="warning">
 **IMPORTANT**: You'll need access to a Core Postgres database to successfully launch an Explorer instance. Alternatively, the `test/migrations` and `composer play` commands commented above may be utilized to produce placeholder data. This detail must be specified using the `EXPLORER_DB_*` variable of your `.env` file.
 </x-alert>
 

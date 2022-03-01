@@ -79,7 +79,7 @@ In the first menu, which you access by clicking the settings icon of the navigat
 * Toggle the display of the price chart on the dashboard.
 * Reset the wallet's data.
 
-<x-alert type="danger">
+<x-alert type="warning">
 WARNING:
 
 Resetting the wallet's data should almost never be done. It will permanently delete all of your profiles, wallets, contacts, addresses and all other data associated with the application.

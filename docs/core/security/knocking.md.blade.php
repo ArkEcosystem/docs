@@ -218,7 +218,7 @@ Apr 17 04:23:37 node1 knockd: closeSSH: running command: ufw delete allow 55555/
 
 ### SSH Connection Using Your KeyPair
 
-<x-alert type="danger">
+<x-alert type="warning">
 If you do not copy the correct key to your server, in the right location, you will be unable to authenticate.
 </x-alert>
 
