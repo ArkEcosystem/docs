@@ -23,7 +23,7 @@ sudo sed -i 's/node_.*.x/node_14.x/' /etc/apt/sources.list.d/nodesource.list \
 && sudo apt-get update && sudo apt-get install nodejs -y
 ```
 
-This will get you on node version 14. You can check it afterwards by running `node --version` again to verify the upgrade was succesful.
+This will get you on node version 14. You can check it afterwards by running `node --version` again to verify the upgrade was successful.
 
 ## Migrating to pnpm
 
