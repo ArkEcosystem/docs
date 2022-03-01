@@ -133,7 +133,7 @@ After restarting, your node will first execute migrations to get the database re
 
 ### Optional - Database Changes
 
-With the introduction of the new multisignature logic, the `recipient_id` in the transaction table is no longer necessary to be set for the version 1 mulstignature instances. As a result, any newly synced node starting from this core version will no longer have a `recipient_id` set for those transactions.
+With the introduction of the new multisignature logic, the `recipient_id` in the transaction table is no longer necessary to be set for the version 1 multisignature instances. As a result, any newly synced node starting from this core version will no longer have a `recipient_id` set for those transactions.
 
 Although optional, there is no harm in retaining the data, you can bring your existing database in line with a freshly synced one by getting rid of the obsolete `recipient_id` for those transactions. You can do this by running the following query on your database:
 
