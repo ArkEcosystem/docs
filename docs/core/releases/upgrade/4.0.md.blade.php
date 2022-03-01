@@ -10,20 +10,20 @@ title: Upgrade Guides - Core v3.x to v4.x
 
 ## Prerequisites
 
-Before starting the upgrade, make sure that you are on node version 14 or higher. You can check your current version by running the following command:
+Before starting the upgrade, make sure that you are on node version 16 or higher. You can check your current version by running the following command:
 
 ```bash
 node --version
 ```
 
-If this indicates that you are below version 14.x, you will have to upgrade node first by running the following:
+If this indicates that you are below version 16.x, you will have to upgrade node first by running the following:
 
 ```bash
-sudo sed -i 's/node_.*.x/node_14.x/' /etc/apt/sources.list.d/nodesource.list \
+sudo sed -i 's/node_.*.x/node_16.x/' /etc/apt/sources.list.d/nodesource.list \
 && sudo apt-get update && sudo apt-get install nodejs -y
 ```
 
-This will get you on node version 14. You can check it afterwards by running `node --version` again to verify the upgrade was successful.
+This will get you on node version 16. You can check it afterwards by running `node --version` again to verify the upgrade was successful.
 
 ## Migrating to pnpm
 
