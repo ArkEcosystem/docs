@@ -18,10 +18,10 @@ So what’s new? Well, quite a lot actually… In the most exciting feature-pack
 
 ### New Features
 
-* \*\*\*\* **Generic Transaction Interface (GTI)** — Developers can use the GTI to create custom transaction types tailored to their exact needs using custom logic. An alternative to smart contracts, the GTI on ARK Core gives developers an incredibly simple way to build their own applications using ARK’s blockchain technology — simple, clean and very effective.
-* \*\*\*\* **Sequential Nonces for Transactions** - We’ve added a sequential [nonce](/docs/core/transactions/nonce) for transactions, which means adding a sequential number to transactions to make them unique. This helps mitigate the risk of replay attacks and makes the blockchain even more secure.
+* **Generic Transaction Interface (GTI)** — Developers can use the GTI to create custom transaction types tailored to their exact needs using custom logic. An alternative to smart contracts, the GTI on ARK Core gives developers an incredibly simple way to build their own applications using ARK’s blockchain technology — simple, clean and very effective.
+* **Sequential Nonces for Transactions** - We’ve added a sequential [nonce](/docs/core/transactions/nonce) for transactions, which means adding a sequential number to transactions to make them unique. This helps mitigate the risk of replay attacks and makes the blockchain even more secure.
 
-### **New Transaction Types:**
+### New Transaction Types
 
 * **Multipayments** — You can now save time, effort and transaction fees when sending ARK to multiple addresses using the Multipayments feature in ARK Desktop Wallet. Add up to 64 addresses that you want to send to, customize the amount and send just one transaction, all in a few seconds.
 * **IPFS** — With the IPFS feature now enabled, you’ll be able to save an IPFS compliant hash for data saved on an IPFS solution.
@@ -46,8 +46,8 @@ By adding all these helpful new features, with Core v2.6 we’re making everythi
 
 Upgrading from `v2.5` to `v2.6` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
-<x-alert type="danger">
-**WARNING: Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.**
+<x-alert type="warning">
+Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.**
 </x-alert>
 
 ### Notes <a id="notes"></a>
@@ -56,8 +56,8 @@ After upgrading you should check whether your application still works as expecte
 
 ## Upgrade Steps
 
-<x-alert type="danger">
-**WARNING:** Do NOT run any of the mentioned commands with **sudo** unless explicitly stated.
+<x-alert type="warning">
+Do NOT run any of the mentioned commands with **sudo** unless explicitly stated.
 </x-alert>
 
 ### Prerequisites
@@ -107,7 +107,7 @@ sudo apt-get install -y libjemalloc-dev
     }
 ```
 
-### **Step 2. Updating ARK Core from v2.5.x to v2.6**
+### Step 2. Updating ARK Core from v2.5.x to v2.6
 
 1. To update to v2.6 run the following command (wait for it to complete):
 
@@ -130,6 +130,22 @@ Afterwards, you will have to start your core processes again. This can be done b
 <x-alert type="info">
 After restarting, your node will first execute migrations to get the database ready for v2.6. Please be aware that this can take upward of 30 minutes to complete depending on your server specs.
 </x-alert>
+
+### Optional - Database Changes
+
+With the introduction of the new multisignature logic, the `recipient_id` in the transaction table is no longer necessary to be set for the version 1 mulstignature instances. As a result, any newly synced node starting from this core version will no longer have a `recipient_id` set for those transactions.
+
+Although optional, there is no harm in retaining the data, you can bring your existing database in line with a freshly synced one by getting rid of the obsolete `recipient_id` for those transactions. You can do this by running the following query on your database:
+
+```sql
+UPDATE transactions SET recipient_id = NULL WHERE transactions."type" = 4 AND transactions."version" = 1;
+```
+
+If successful, you will get a response similar to below:
+
+```bash
+Query 1 OK: UPDATE 6, 6 rows affected
+```
 
 ### Reporting Problems
 
