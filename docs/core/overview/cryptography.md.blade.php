@@ -10,7 +10,7 @@ This section provides definition of common cryptography terms used through the A
 
 ## Passphrase
 
-<x-alert type="danger">
+<x-alert type="warning">
 The **passphrase** is the master password (key) for your ARK tokens. Every ARK address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
 
 Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. **We CANNOT recover any lost passphrases.**

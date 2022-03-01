@@ -106,7 +106,7 @@ Click ‘**Yes, I’m Sure**’ to confirm member removal.
 
 ![](/storage/docs/docs/marketsquare/assets/teams/teams-delete-confirm.png)
 
-<x-alert type="danger">
+<x-alert type="warning">
 While removing a team member is permanent, you will be required to send a new invitation before the user can re-join the team.
 </x-alert>
 

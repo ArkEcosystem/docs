@@ -16,7 +16,7 @@ ARK `v3.0` is a major update **not backward compatible with `v2.7`**.
 
 Upgrading from `v2.7` to `v3.0` is relatively straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create an excellent solution to a problem.
 
-<x-alert type="danger">
+<x-alert type="warning">
 **DANGER:** Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 </x-alert>
 

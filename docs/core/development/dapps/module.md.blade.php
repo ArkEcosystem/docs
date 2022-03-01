@@ -94,7 +94,7 @@ module.exports = {
 
 ```
 
-<x-alert type="danger">
+<x-alert type="warning">
 Make sure to run **yarn setup** from the **core** root folder when you change or add code to **core/plugins.** This command takes a long time, just let it finish.
 </x-alert>
 

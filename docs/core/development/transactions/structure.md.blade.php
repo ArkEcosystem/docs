@@ -76,7 +76,7 @@ export class BusinessRegistrationTransaction extends Transactions.Transaction {
 
 Each custom transaction is accompanied by enforced schema validation. To achieve this we must extend base `TransactionSchema` and provide rules for the custom field validation. Schema is defined with **AJV** and we can access it by calling the [getSchema()](https://github.com/learn-ark/dapp-custom-transaction-example/blob/master/src/transactions/BusinessRegistrationTransaction.ts#L16)method inside your new transaction class, in our case the `BusinessRegistrationTransaction` class.
 
-<x-alert type="danger">
+<x-alert type="warning">
 When implementing new transaction types, **never allow plain strings** in the **transaction.asset,** but always restrict to something that excludes null bytes (\u0000).
 </x-alert>
 

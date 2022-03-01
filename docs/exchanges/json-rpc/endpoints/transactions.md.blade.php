@@ -166,7 +166,7 @@ transactions.create
 Parameter **params.fee** is optional. If the parameter is not set, transaction is created by using the current public network average fee.
 </x-alert>
 
-<x-alert type="danger">
+<x-alert type="warning">
 Make sure to check the network [for average fee values](/docs/api/public-rest-api/endpoints/node#retrieve-the-fee-statistics), before signing and sending a transaction. This is to handle edge case of them being higher than the current static ones.
 </x-alert>
 
@@ -245,7 +245,7 @@ transactions.list
 Parameter **params.fee** is optional. If the parameter is not set, transaction is created by using the current public network average fee.
 </x-alert>
 
-<x-alert type="danger">
+<x-alert type="warning">
 Make sure to check the network [for average fee values](/docs/api/public-rest-api/endpoints/node#retrieve-the-fee-statistics), before signing and sending a transaction. This is to handle edge case of them being higher than the current static ones.
 </x-alert>
 

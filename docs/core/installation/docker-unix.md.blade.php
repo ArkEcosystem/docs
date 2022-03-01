@@ -53,7 +53,7 @@ In the next sections we will explain two approaches on how you can setup you dev
 
 **This approach runs a PostgreSQL container while using NodeJS from your local environment.** This configuration is well suited when you are not developing ARK Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
 
-<x-alert type="danger">
+<x-alert type="warning">
 PostgreSQL is run in a separate container and its port gets mapped to your localhost, so you should **NOT** have PostgreSQL running locally.
 </x-alert>
 
@@ -117,7 +117,7 @@ yarn relay:devnet
 
 _Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
-<x-alert type="danger">
+<x-alert type="warning">
 Development files/presets are not Production ready. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
 </x-alert>
 

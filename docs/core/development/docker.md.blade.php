@@ -61,7 +61,7 @@ docker-compose up -d
 
 This will run two separate containers. One for Core itself and another one for PostgreSQL.
 
-<x-alert type="danger">
+<x-alert type="warning">
 The public API won't be available until a relay is fully synchronized with the network and blockchain. All requests before this will result in a connection reset because the port is not yet bound to an application.
 </x-alert>
 
@@ -84,7 +84,7 @@ sed -i 's/^MODE=relay/MODE=forger/g $NETWORK.env
 
 You will be asked to enter your delegate secret, followed by entering your password twice. Script will create a new folder named `enc`, containing set of encrypted public and private keys.
 
-<x-alert type="danger">
+<x-alert type="warning">
 Folder **enc** is needed during core container startup. After making sure your **forger** is up and running it is preferably to delete it. The disadvantage of this would be that if you your server gets rebooted or simply core container restarted, you will have repeat step 2.
 </x-alert>
 
@@ -197,7 +197,7 @@ Updates and all changes made to the containers are kept even on container or hos
 
 #### Option 2: Update is also possible by destroying and running Core container from scratch, so it downloads the latest image
 
-<x-alert type="danger">
+<x-alert type="warning">
 Make sure you destroy only Core container in order to keep your database and avoid syncing the blockchain from zero block. The commands example below does this:
 </x-alert>
 
@@ -277,6 +277,6 @@ docker exec -it ark-$NETWORK-core bash
 
 _Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
-<x-alert type="danger">
+<x-alert type="warning">
 **Development files/presets are not Production ready**. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
 </x-alert>

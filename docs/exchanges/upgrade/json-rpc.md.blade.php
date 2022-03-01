@@ -4,7 +4,7 @@ title: Upgrade Guides - Core v2.7 to v3.0 - JSON-RPC
 
 # v3.0 Upgrade Guide - JSON-RPC
 
-<x-alert type="danger">
+<x-alert type="warning">
 **WARNING:** Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 </x-alert>
 

@@ -89,7 +89,7 @@ After 2FA is activated, you'll have the option to back up the list of single-use
 
 If a device is lost or reset, each recovery code is used to log in directly, bypassing 2FA. Each code may be used only once.
 
-<x-alert type="danger">
+<x-alert type="warning">
 If all recovery codes have been used **and** your 2FA device is inaccessible, you will be locked out of your account.
 </x-alert>
 

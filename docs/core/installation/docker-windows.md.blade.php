@@ -23,7 +23,7 @@ Once you installed [Docker Desktop for Windows](https://docs.docker.com/docker-f
 
 ### Step 2.2: Setup Line Endings Style
 
-<x-alert type="danger">
+<x-alert type="warning">
 **IMPORTANT!** To avoid Windows and Unix format end of lines mess [EOL](https://en.wikipedia.org/wiki/Newline).
 Prior to cloning ARK Core repository, enter the following code in your command prompt or PowerShell:
 

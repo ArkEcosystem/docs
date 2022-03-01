@@ -55,7 +55,7 @@ Throughout the docs, you'll notice that we make use of custom components, in add
 
 ### Rendering an Alert
 
-> Type can be `info`, `success`, `warning` or `danger`.
+> Type can be `hint`, `info`, `success`, `warning` or `error`.
 
 ```blade
 <x-alert type="info">

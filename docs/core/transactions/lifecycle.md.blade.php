@@ -20,7 +20,7 @@ In the next sections we will look into the transaction lifecycle from creation t
 
 Transactions are generated and signed locally with one of many available [SDK libraries](/docs/sdk/). Locally generated and signed transactions are sent as a [POST request](/docs/api/public-rest-api/endpoints/transactions/) with transaction data to the Core Server node.
 
-<x-alert type="danger">
+<x-alert type="warning">
 Core Server (node) will accept a valid transaction, signed with a valid signature from a private key. Make sure you invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
 </x-alert>
 

@@ -85,7 +85,7 @@ USAGE
 
 All of the `send` commands have a subset of options. To explore more around them, please check `--help` for each of the subcommands.
 
-<x-alert type="danger">
+<x-alert type="warning">
 By default all **send** commands have probing enabled. This means that we check if the wallet exists and if funds where received. To skip probing  use the **--skipProbing** option.
 </x-alert>
 

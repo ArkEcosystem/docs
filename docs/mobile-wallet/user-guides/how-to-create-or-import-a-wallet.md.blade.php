@@ -8,7 +8,7 @@ title: How to Create or Import a Wallet?
 
 If you choose to generate a wallet, follow the prompts and you should be shown your shareable Public Address and your Secret Passphrase.
 
-<x-alert type="danger">
+<x-alert type="warning">
 Keep your secret passphrase safe and secure, without it, you will not be able to restore your wallet, and you will lose all of your ARK tokens.
 </x-alert>
 
@@ -24,7 +24,7 @@ The next screen will show you the amount of ARK tokens you have in your wallets,
 
 If you choose to import a wallet and follow the prompts, you will have two options to import your wallet: QR Code or by putting in your secret passphrase or address manually.
 
-<x-alert type="danger">
+<x-alert type="warning">
 WARNING
 
 If you decide to copy and paste your information into the app, make sure your device does not add a space after your passphrase or address. If a space is there, it will create a new wallet and not import your wallet.
