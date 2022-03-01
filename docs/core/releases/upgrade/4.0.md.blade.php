@@ -25,7 +25,7 @@ sudo sed -i 's/node_.*.x/node_14.x/' /etc/apt/sources.list.d/nodesource.list \
 
 This will get you on node version 14. You can check it afterwards by running `node --version` again to verify the upgrade was succesful.
 
-## Migrating to PNpm
+## Migrating to pnpm
 
 With core 4.x, we are moving away from `yarn` to `pnpm`. [pnpm](https://pnpm.io/) is an alternative package manager, which is better suited for the monorepo structure core is making use of. As core is currently installed by `yarn`, the easiest way to switch is to uninstall that core version and reinstall it through `pnpm`. The below commands will do this for you. Note that this does not affect your database and you will be good to go after core has been installed through `pnpm`.
 
