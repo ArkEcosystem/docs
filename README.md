@@ -55,10 +55,10 @@ Throughout the docs, you'll notice that we make use of custom components, in add
 
 ### Rendering an Alert
 
-> Type can be `hint`, `info`, `success`, `warning` or `error`.
+> Type can be `hint`, `info`, `success`, `warning` or `error`. Title can be any string, which will replace the default title based on alert type.
 
 ```blade
-<x-alert type="info">
+<x-alert type="info" title="Custom Alert Title">
 Hello World!
 </x-alert>
 ```
