@@ -12,7 +12,7 @@ The ARK Desktop Wallet is an application which allows you to manage ARK transact
 
 To get started with th
 e ARK Desktop Wallet, follow the documentation below for guides on Installation, Wallet Navigation, Creating Wallets and more...
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/installation', 'name' => 'Installation'],
         ['path' => '/docs/desktop-wallet/user-guides/wallet-interface', 'name' => 'Wallet Navigation'],
@@ -26,7 +26,7 @@ e ARK Desktop Wallet, follow the documentation below for guides on Installation,
 ## Transactions
 
 The ARK Desktop Wallet enables you to send a wide variety of transactions on the ARK Public Network and other ARK Core based Blockchains. Follow the guides below for information on each transaction.
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/how-to-send', 'name' => 'Send ARK Transfer'],
         ['path' => '/docs/desktop-wallet/user-guides/how-to-vote-unvote', 'name' => 'Vote or Unvote a Delegate'],
@@ -41,7 +41,7 @@ The ARK Desktop Wallet enables you to send a wide variety of transactions on the
 ## Developer Guides
 
 The ARK Desktop Wallet offers a wide range of customization which empowers developers to create Plugins to enhance the experience within the Wallet from Games, Utilities and Theme's. Follow the guides below to get started with development within the ARK Desktop Wallet.
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/developer-guides/how-to-build-from-source', 'name' => 'Build the Wallet from Source'],
         ['path' => '/docs/desktop-wallet/developer-guides/developing-your-first-plugin', 'name' => 'Develop a Plugin'],
@@ -52,7 +52,7 @@ The ARK Desktop Wallet offers a wide range of customization which empowers devel
 
 ## Support
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/support/troubleshooting', 'name' => 'Troubleshooting'],
     ]"

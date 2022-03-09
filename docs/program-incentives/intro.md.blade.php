@@ -25,7 +25,7 @@ Developers, auditors, and bug hunters may earn bounties for discovering and repo
 ## Contribution Guidelines
 
 Developers are expected to follow contribution guidelines to keep the codebase efficient, readable, and standardized. Contribution guidelines are clearly laid out so developers and contributors can submit their work without much revision, resulting in faster development and more useful contributions. Check out these guidelines before contributing code to the project.
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/program-incentives/guidelines/clean-code-and-tests', 'name' => 'Clean Code & Tests'],
         ['path' => '/docs/program-incentives/guidelines/contributing', 'name' => 'Contributing'],

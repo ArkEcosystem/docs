@@ -14,7 +14,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Overview
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/overview/home-page', 'name' => 'The MarketSquare Home Page'],
         ['path' => '/docs/marketsquare/overview/marketsquare-hubs', 'name' => 'MarketSquare Hubs'],
@@ -23,7 +23,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Getting Started
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/getting-started/account-sign-up', 'name' => 'Account Sign Up'],
         ['path' => '/docs/marketsquare/getting-started/what-next', 'name' => 'What Can I Do Next?'],
@@ -32,7 +32,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Profiles
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/profiles/updating-profile', 'name' => 'Updating My Profile'],
         ['path' => '/docs/marketsquare/profiles/reporting-profiles', 'name' => 'Reporting Profiles'],
@@ -41,7 +41,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ### Settings
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/profiles/settings/profile', 'name' => 'Profile Settings'],
         ['path' => '/docs/marketsquare/profiles/settings/security', 'name' => 'Security Settings'],
@@ -50,7 +50,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Projects
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/projects/creating-projects', 'name' => 'Project Creation'],
         ['path' => '/docs/marketsquare/projects/claim', 'name' => 'Claiming a Project'],
@@ -62,7 +62,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Teams
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/teams/inviting-members', 'name' => 'Inviting Team Members'],
         ['path' => '/docs/marketsquare/teams/managing-members', 'name' => 'Managing Team Members'],
@@ -71,7 +71,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Reviews
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/reviews/writing-reviews', 'name' => 'Writing Reviews'],
         ['path' => '/docs/marketsquare/reviews/my-reviews', 'name' => 'My Reviews'],
@@ -82,7 +82,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Notifications
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/notifications/handling-notifications', 'name' => 'Notification Handling'],
         ['path' => '/docs/marketsquare/notifications/hub-announcements', 'name' => 'Hub Announcements'],
@@ -91,7 +91,7 @@ Learn how to use MarketSquare with helpful guides and step-by-step tutorials. Ma
 
 ## Support
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/marketsquare/support/supported-assets', 'name' => 'Supported Assets'],
         ['path' => '/docs/marketsquare/support/curation', 'name' => 'MarketSquare Assets & Manual Curation'],

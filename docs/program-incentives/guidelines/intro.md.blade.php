@@ -2,7 +2,7 @@
 
 Please read the following documentation to follow the best practices when contributing to the ARK project:
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/program-incentives/guidelines/clean-code-and-tests', 'name' => 'Clean Code & Tests'],
         ['path' => '/docs/program-incentives/guidelines/contributing', 'name' => 'Contributing'],

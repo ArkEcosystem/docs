@@ -27,7 +27,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 
 ### Typescript
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/sdk/typescript/installation', 'name' => 'Installation'],
         ['path' => '/docs/sdk/typescript/crypto/api-documentation', 'name' => 'Crypto'],
@@ -39,7 +39,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 
 ### PHP
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/sdk/php/installation', 'name' => 'Installation'],
         ['path' => '/docs/sdk/php/crypto/api-documentation', 'name' => 'Crypto'],
@@ -51,7 +51,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 
 ### Python
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/sdk/python/installation', 'name' => 'Installation'],
         ['path' => '/docs/sdk/python/crypto/api-documentation', 'name' => 'Crypto'],
@@ -63,7 +63,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 
 ### Java
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/sdk/java/installation', 'name' => 'Installation'],
         ['path' => '/docs/sdk/java/crypto/api-documentation', 'name' => 'Crypto'],
@@ -75,7 +75,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 
 ### GO
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/sdk/go/installation', 'name' => 'Installation'],
         ['path' => '/docs/sdk/go/crypto/api-documentation', 'name' => 'Crypto'],
@@ -87,7 +87,7 @@ Below you can find the Installation, Crypto and Client documentation for the lan
 
 ### C++
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/sdk/c++/installation', 'name' => 'Installation'],
         ['path' => '/docs/sdk/c++/crypto/api-documentation', 'name' => 'Crypto'],

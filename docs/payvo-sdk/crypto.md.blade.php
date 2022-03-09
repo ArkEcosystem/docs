@@ -18,7 +18,7 @@ yarn add @payvo/sdk-cryptography
 
 ## Usage
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/payvo-sdk/crypto/aes', 'name' => 'AES'],
         ['path' => '/docs/payvo-sdk/crypto/argon2', 'name' => 'argon2'],

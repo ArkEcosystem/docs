@@ -11,7 +11,7 @@ The ARK Mobile Wallet is an application which allows you to manage ARK transacti
 ## Getting Started
 
 To get started with the ARK Mobile Wallet, read the selection of guides presented below:
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/mobile-wallet/user-guides/installation', 'name' => 'Installation'],
         ['path' => '/docs/mobile-wallet/user-guides/starting-the-wallet', 'name' => 'Starting the Wallet'],

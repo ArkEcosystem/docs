@@ -66,7 +66,7 @@ Hello World!
 ### Rendering a Link Collection
 
 ```blade
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/overview/services/attributes', 'name' => 'Attributes'],
         ['path' => '/docs/core/overview/services/cache', 'name' => 'Cache'],
