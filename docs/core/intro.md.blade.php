@@ -254,6 +254,12 @@ The **Releases** section provides important ARK Core release and upgrade informa
     ]"
 />
 
+<x-link-collection
+    :links="[
+        ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
+    ]"
+/>
+
 ## Support
 
 The **Support** section provides resources for solving and reporting issues in ARK Core v3.

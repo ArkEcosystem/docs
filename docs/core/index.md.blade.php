@@ -212,6 +212,13 @@
         ['path' => '/docs/core/releases/upgrade/docker/3.0', 'name' => '3.0 Upgrade Guide (Docker)'],
     ]"
 />
+<x-general.sidebar-link
+    path="/docs/core/releases"
+    name="4.0 (Development)"
+    :children="[
+        ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
+    ]"
+/>
 
 ## Support
 
