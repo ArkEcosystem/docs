@@ -26,7 +26,7 @@ Use the sidebar to navigate this section, or follow the links below:
 
 ## Upgrade Guides
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/exchanges/upgrade/baremetal', 'name' => 'Upgrade to 3.0 - BareMetal or VM Install'],
         ['path' => '/docs/exchanges/upgrade/docker', 'name' => 'Upgrade to 3.0 - Docker Install'],

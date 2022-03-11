@@ -18,7 +18,7 @@ yarn add @payvo/sdk-intl
 
 ## Usage
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/payvo-sdk/intl/currency', 'name' => 'Currency'],
         ['path' => '/docs/payvo-sdk/intl/datetime', 'name' => 'DateTime'],

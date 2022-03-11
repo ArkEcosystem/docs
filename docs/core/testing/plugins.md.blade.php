@@ -10,7 +10,7 @@ Testers who previously created Plugins for Core are encouraged to migrate their 
 
 Before developing a plugin you should make sure that you have read the following links.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/overview/architecture/lifecycle', 'name' => 'Application Lifecycle'],
         ['path' => '/docs/core/overview/architecture/container', 'name' => 'Service Container'],

@@ -8,7 +8,7 @@ title: Specification
 
 Each coin follows a strict implementation contract. All of these contracts can be found at the following links.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => 'https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/coin.contracts.ts', 'name' => 'Coins'],
         ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/contracts', 'name' => 'Markets'],

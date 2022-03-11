@@ -18,7 +18,7 @@ yarn add @payvo/sdk-profiles
 
 ## Usage
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/payvo-sdk/profiles/contacts', 'name' => 'Contacts'],
         ['path' => '/docs/payvo-sdk/profiles/data', 'name' => 'Data'],

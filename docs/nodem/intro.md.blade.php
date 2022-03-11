@@ -6,7 +6,7 @@ title: Introduction
 
 ## Support
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => 'https://ark.dev/contact', 'name' => 'Contact Us'],
     ]"

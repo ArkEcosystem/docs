@@ -8,7 +8,7 @@ title: Welcome to ARK Core v3
 
 The **Overview** section will introduce you to the basic concepts surrounding ARK Core v3 development.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/overview/stack', 'name' => 'Technology Stack'],
         ['path' => '/docs/core/overview/directory', 'name' => 'Directory Structure'],
@@ -21,7 +21,7 @@ The **Overview** section will introduce you to the basic concepts surrounding AR
 
 The **Architecture** section will introduce you to the most important concepts and internals of ARK Core v3.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/overview/architecture/lifecycle', 'name' => 'Application Lifecycle'],
         ['path' => '/docs/core/overview/architecture/container', 'name' => 'Service Container'],
@@ -35,7 +35,7 @@ The **Architecture** section will introduce you to the most important concepts a
 
 The **Services** section will introduce you to pre-built services that you will be able to leverage to speed up ARK Core v3 development.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/overview/services/attributes', 'name' => 'Attributes'],
         ['path' => '/docs/core/overview/services/cache', 'name' => 'Cache'],
@@ -56,7 +56,7 @@ The **Services** section will introduce you to pre-built services that you will 
 
 The **Transactions** section will guide you through the most important concepts, internals, and services that you need to understand for implementing and using ARK Core v3 Transactions.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/transactions/lifecycle', 'name' => 'Understanding the Lifecycle'],
         ['path' => '/docs/core/transactions/nonce', 'name' => 'Understanding the Nonce'],
@@ -65,7 +65,7 @@ The **Transactions** section will guide you through the most important concepts,
 
 ### Transaction Types
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/transactions/types/overview', 'name' => 'Overview'],
         ['path' => '/docs/core/transactions/types/transfer', 'name' => 'Transfer'],
@@ -85,7 +85,7 @@ The **Transactions** section will guide you through the most important concepts,
 
 The **Installation** section will guide you through configuring and installing ARK Core v3 using Unix and Windows-based environments, including the use of [Docker](https://www.docker.com/).
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/installation/intro', 'name' => 'Introduction'],
         ['path' => '/docs/core/installation/requirements', 'name' => 'Requirements'],
@@ -102,7 +102,7 @@ The **Installation** section will guide you through configuring and installing A
 
 The **Security** section will guide you through the most important concepts and service you can use to improve the security of your ARK Core v3 node.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/security/intro', 'name' => 'Security Through Obscurity'],
         ['path' => '/docs/core/security/ssh', 'name' => 'Using SSH'],
@@ -118,7 +118,7 @@ The **Security** section will guide you through the most important concepts and 
 
 The **Deployment** section will guide you through important actions such as the launching and maintaining of your ARK Core v3 node.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/deployment/modes', 'name' => 'Core Run Modes'],
         ['path' => '/docs/core/deployment/cli', 'name' => 'Core CLI Commands'],
@@ -132,7 +132,7 @@ The **Deployment** section will guide you through important actions such as the 
 
 The **Development Guides** section will guide you, step-by-step, through customizing essential ARK Core v3 plugins and services.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/development/factories', 'name' => 'Creating Factories'],
         ['path' => '/docs/core/development/testnet', 'name' => 'Launching a Testnet'],
@@ -147,7 +147,7 @@ The **Development Guides** section will guide you, step-by-step, through customi
 
 ### CLI
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/development/cli/available', 'name' => 'Available Commands'],
         ['path' => '/docs/core/development/cli/create', 'name' => 'Creating Commands'],
@@ -156,7 +156,7 @@ The **Development Guides** section will guide you, step-by-step, through customi
 
 ### dApps
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/development/dapps/intro', 'name' => 'Authoring Core dApps'],
         ['path' => '/docs/core/development/dapps/structure', 'name' => 'Modeling the Structure'],
@@ -166,7 +166,7 @@ The **Development Guides** section will guide you, step-by-step, through customi
 
 ### Plugins
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/development/plugins/intro', 'name' => 'Authoring Plugins'],
         ['path' => '/docs/core/development/plugins/manage', 'name' => 'Managing Plugins'],
@@ -175,7 +175,7 @@ The **Development Guides** section will guide you, step-by-step, through customi
 
 ### Custom Transactions
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/development/transactions/intro', 'name' => 'Authoring Transaction Types'],
         ['path' => '/docs/core/development/transactions/structure', 'name' => 'Defining the Structure'],
@@ -190,7 +190,7 @@ The **Development Guides** section will guide you, step-by-step, through customi
 
 The **Testing** section will introduce you to the most importing tools and knowledge needed to test ARK Core v3 and it's plugins and services.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/testing/intro', 'name' => 'Introduction'],
         ['path' => '/docs/core/testing/sandbox', 'name' => 'Using the Sandbox'],
@@ -203,49 +203,49 @@ The **Testing** section will introduce you to the most importing tools and knowl
 
 The **Releases** section provides important ARK Core release and upgrade information.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.0', 'name' => '2.0 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.0', 'name' => '2.0 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.1', 'name' => '2.1 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.1', 'name' => '2.1 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.2', 'name' => '2.2 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.2', 'name' => '2.2 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.3', 'name' => '2.3 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.3', 'name' => '2.3 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.4', 'name' => '2.4 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.4', 'name' => '2.4 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.5', 'name' => '2.5 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.5', 'name' => '2.5 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/2.6', 'name' => '2.6 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/2.6', 'name' => '2.6 Upgrade Guide'],
     ]"
 />
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/releases/release/3.0', 'name' => '3.0 Release Guide'],
         ['path' => '/docs/core/releases/upgrade/3.0', 'name' => '3.0 Upgrade Guide'],
@@ -264,7 +264,7 @@ The **Releases** section provides important ARK Core release and upgrade informa
 
 The **Support** section provides resources for solving and reporting issues in ARK Core v3.
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/core/support/troubleshooting', 'name' => 'Troubleshooting'],
         ['path' => '/docs/core/support/security', 'name' => 'Security Vulnerabilities'],

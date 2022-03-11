@@ -18,7 +18,7 @@ yarn add @payvo/sdk
 
 ## Usage
 
-<x-link-collection
+<x-ark-link-collection
     :links="[
         ['path' => '/docs/payvo-sdk/sdk/coins', 'name' => 'Coins'],
         ['path' => '/docs/payvo-sdk/sdk/contracts', 'name' => 'Contracts'],
