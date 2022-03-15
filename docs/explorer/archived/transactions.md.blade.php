@@ -1,8 +1,12 @@
 ---
-title: How To Add New Transactions Types?
+title: How to Add New Transaction Types
 ---
 
-# How To Add New Transactions Types?
+# How to Add New Transaction Types
+
+<x-alert type="info">
+The following archived information only serves as a reference to the prior VueJS implementation of the Explorer which now resides [here.](https://github.com/ArkEcosystemArchive/explorer)
+</x-alert>
 
 By default the ARK Explorer will work with new transaction types by treating them like transfers (type 0). This may not be the correct way to fully utilize the properties your new transaction type has, so lets take a look at the components that are involved.
 
@@ -10,13 +14,13 @@ By default the ARK Explorer will work with new transaction types by treating the
 
 > [src/enums.ts](https://github.com/ArkEcosystem/explorer/blob/master/src/enums.ts)
 
-The first thing you'll want to adjust, are the `enum` options that are currently available. It's a good practice to not rely on magic numbers when checking transaction types, so instead it's advised to add your new transaction type in here so you can use it throughout the Explorer by referring to the enum value. It's preferred if you add a new type for your custom transactions, and not add it to the existing `core` and `magistrate` enums.
+The first thing you will want to adjust are the `enum` options that are currently available. It's a good practice to not rely on magic numbers when checking transaction types, so instead it's advised to add your new transaction type in here so you can use it throughout the Explorer by referring to the enum value. It's preferred if you add a new type for your custom transactions, and not add it to the existing `core` and `magistrate` enums.
 
 ## Transaction Selection Dropdown
 
 > [src/components/SelectionType.vue](https://github.com/ArkEcosystem/explorer/blob/master/src/components/SelectionType.vue)
 
-This component shows the dropdown options that are for example shown on the homepage, letting you filter transactions on a certain type. To make it possible to sort on your custom type, you'll have to extend the array in this component with the required information.
+This component shows the dropdown options that are for example shown on the homepage, letting you filter transactions on a certain type. To make it possible to sort on your custom type, you will have to extend the array in this component with the required information.
 
 ## i18n
 
@@ -28,13 +32,13 @@ All texts used throughout the Explorer, are stored in language files. This means
 
 > [src/interfaces.ts](https://github.com/ArkEcosystem/explorer/blob/master/src/interfaces.ts)
 
-Inside this file you'll find certain interfaces and their definitions. This include a generic transaction interface. Depending on the changes you made to your new transaction type, it might be necessary to extend this interface to match the new / changed properties. This is not needed if the new transaction type only has its properties contained in the `asset` property, as that is not covered in the interface definition.
+Within this file you will find certain interfaces and their definitions. This include a generic transaction interface. Depending on the changes you made to your new transaction type, it might be necessary to extend this interface to match the new / changed properties. This is not needed if the new transaction type only has its properties contained in the `asset` property, as that is not covered in the interface definition.
 
 ## TransactionService
 
 > [src/services/transaction.ts](https://github.com/ArkEcosystem/explorer/blob/develop/src/services/transaction.ts)
 
-In this file you'll find the communication being done with the API. In case your transaction types end up adding new endpoints (e.g. like a `lock` endpoint for timelocks), you will have to add a function to this file to fetch that kind of data.
+In this file you will find the communication being done with the API. In case your transaction types end up adding new endpoints (e.g. like a `lock` endpoint for timelocks), you will have to add a function to this file to fetch that kind of data.
 
 ## LinkWallet
 
@@ -54,7 +58,7 @@ In short, you will want to look into this component when your new transaction ty
 
 The Explorer consists mostly of tables that show information fetches from the blockchain. These tables have specific column that fit a general transaction, but if you require different columns to show properties of your new transaction type (e.g. `businesses` or `timelock`), you will want to add a new table component in this directory to properly show it. The simplest way would be to take a look at how the other tables are constructed here, and create your own version with the columns you need.
 
-Please note that there are desktop and mobile versions of the tables, where the desktop one is a traditional table with rows, while the mobile version consists of larger "rows" (more like blocks) with the transaction data.
+Please note that there are desktop and mobile versions of the tables, where the desktop one is a traditional table with rows, while the mobile version consists of larger 'rows' (more like blocks) with the transaction data.
 
 After you have added a new table, you will have to include it on a page in order to have it show up on the Explorer. You can find existing pages in `src/pages/*` where you can add your new table to an existing page or create a new page if needed.
 

@@ -1,8 +1,12 @@
 ---
-title: How To Set Custom Branding?
+title: How to Set Custom Branding
 ---
 
-# How To Set Custom Branding?
+# How to Set Custom Branding
+
+<x-alert type="info">
+The following archived information only serves as a reference to the prior VueJS implementation of the Explorer which now resides [here.](https://github.com/ArkEcosystemArchive/explorer)
+</x-alert>
 
 This document will explain the files that you might have to adjust to have the Explorer work with your custom chain and have it displayed in your own brand colors.
 
@@ -14,9 +18,9 @@ The Explorer fetches certain information from the network, which is done in this
 
 ## Colors
 
-In [src/assets/css/_theme.css](https://github.com/ArkEcosystem/explorer/blob/master/src/assets/css/_theme.css) you'll see the color codes that we use throughout the Explorer and the corresponding variable names. There are also some default colors in [tailwind.config.js](https://github.com/ArkEcosystem/explorer/blob/master/tailwind.config.js) that are used throughout the Explorer, although we are working on minimizing this. Keep in mind that we use SVG icons in a lot of places and that some of these come with styling, which means that you will have to edit the SVG file if you want to move away from the colors it uses. This is mostly the case when an SVG icon consists of more than a single color.
+In [src/assets/css/_theme.css](https://github.com/ArkEcosystem/explorer/blob/master/src/assets/css/_theme.css) you will see the color codes that we use throughout the Explorer and the corresponding variable names. There are also some default colors in [tailwind.config.js](https://github.com/ArkEcosystem/explorer/blob/master/tailwind.config.js) that are used throughout the Explorer, although we are working on minimizing this. Keep in mind that we use SVG icons in a lot of places and that some of these come with styling, which means that you will have to edit the SVG file if you want to move away from the colors it uses. This is mostly the case when an SVG icon consists of more than a single color.
 
-## Languages / Social Media
+## Languages/Social Media
 
 > [src/config/index.ts](https://github.com/ArkEcosystem/explorer/blob/master/src/config/index.ts)
 
@@ -28,7 +32,7 @@ You can find the networks in the [network](https://github.com/ArkEcosystem/explo
 
 ## Images
 
-There are a couple images you'd want to have changed to match your own brand:
+There are a couple images you will want to change in order to match your own brand:
 
 * [src/assets/images/logo.png](https://github.com/ArkEcosystem/explorer/tree/master/src/assets/images); ARK logo used in the Explorer
 * [public/favicon.ico\|png](https://github.com/ArkEcosystem/explorer/tree/master/public); favicon, which is an ARK logo
