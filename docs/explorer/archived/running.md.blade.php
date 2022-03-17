@@ -24,15 +24,15 @@ Your root repository for GitHub pages is one named `username.github.io`, for exa
 
 When you don't use a root repository for GitHub pages (e.g. because it's already in use), you can still have it hosted in a sub-directory of your GitHub pages website. If you for example create a repository called `my-explorer`, it will become available on `username.github.io/my-explorer`. If you would then build the Explorer by running `yarn build --base https://username.github.io/my-explorer/` and push the contents of the generated `dist` files to your repository `my-explorer`, it will be served on your GitHub pages website. The additional `--base` parameter is needed to point the Explorer to the correct url, as it will use the root domain by default.
 
-## 2. Run Explorer on Netlify
+## Run Explorer on Netlify
 
 The Explorer is also compatible with [Netlify](https://www.netlify.com). In order to run it on there, you will need to:
 
-1. Link your Explorer repository
-2. Choose the `master` branch
-3. Set `yarn build:mainnet` or (`devnet`, depending on what you need) as build command
-4. Set `dist` as publish directory
-5. Deploy, and your Explorer will become visible on your netlify URL
+- Link your Explorer repository
+- Choose the `master` branch
+- Set `yarn build:mainnet` or (`devnet`, depending on what you need) as build command
+- Set `dist` as publish directory
+- Deploy, and your Explorer will become visible on your netlify URL
 
 ## Run Explorer as an Express Server
 

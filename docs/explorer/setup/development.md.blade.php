@@ -58,7 +58,7 @@ cp .env.example .env
 
 ---
 
-**Create a Database** - As mentioned earlier, Explorer requires two databases, one of which is a local database for forging statistics. By default, the .`env` file is configured to use SQlite via the `DB_CONNECTION=sqlite` setting. As such, the default database name it will look for is `database.sqlite`, so create the necessary file by running `touch database/database.sqlite`.
+**Create a Database** - As mentioned earlier, Explorer requires two databases, one of which is a local database for forging statistics. By default, the `.env` file is configured to use SQlite via the `DB_CONNECTION=sqlite` setting. As such, the default database name it will look for is `database.sqlite`, so create the necessary file by running `touch database/database.sqlite`.
 
 <x-alert type="hint">
 While SQLite will work, it is also possible to use PostgreSQL. To learn more about how to set up a PostgreSQL database, click [here.](https://www.postgresql.org/docs/current/sql-createdatabase.html)
