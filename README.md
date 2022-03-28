@@ -93,7 +93,6 @@ Hello World!
 <x-ark-separator type="dashed" />
 
 <-x-ark-separator type="dotted" spacing=5 />
-
 ```
 
 ### Tutorial Intro Page
