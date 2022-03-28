@@ -26,6 +26,14 @@ Throughout the docs, you'll notice that we make use of custom components, in add
 <livewire:embed-link url="https://blog.ark.io/ark-core-series-schnorrs-multisignatures-4979caac887a" caption="ARK Core - Schnorr" />
 ```
 
+### Rendering a Sidebar Group
+
+```blade
+<x-general.sidebar-group path="/docs/api/public-rest-api/*" title="Public REST API">
+    <x-general.sidebar-link path="/docs/api/public-rest-api/getting-started" name="Getting Started" />
+</x-general.sidebar-group>
+```
+
 ### Rendering a Sidebar Link
 
 ```blade
