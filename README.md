@@ -83,6 +83,19 @@ Hello World!
 />
 ```
 
+### Rendering a Separator
+
+> Type can be `bold`, `dotted`, `dashed` or `line` (default). Spacing can be a number between 1 and 8 (default)
+
+```blade
+<x-ark-separator />
+
+<x-ark-separator type="dashed" />
+
+<-x-ark-separator type="dotted" spacing=5 />
+
+```
+
 ### Tutorial Intro Page
 
 The tutorial intro page has specific properties you can use at the top of the document as explained below (they need to be encapsulated between the listed `---`)
