@@ -1,4 +1,4 @@
-<x-general.sidebar-group :path="[
+<x-general.sidebar-group first :path="[
     '/docs/explorer',
     '/docs/explorer/intro',
     '/docs/explorer/features',

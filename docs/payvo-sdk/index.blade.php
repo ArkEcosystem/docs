@@ -1,4 +1,4 @@
-<x-general.sidebar-group :path="[
+<x-general.sidebar-group first :path="[
     '/docs/payvo-sdk',
     '/docs/payvo-sdk/architecture',
     '/docs/payvo-sdk/specification',

@@ -1,6 +1,4 @@
-<x-general.sidebar-group :path="['/docs/exchanges', '/docs/exchanges/intro']" title="Introduction">
-    <x-general.sidebar-link path="/docs/exchanges/intro" name="Introduction" />
-</x-general.sidebar-group>
+<x-general.sidebar-link first top-level path="/docs/exchanges/intro" name="Introduction" />
 
 <x-general.sidebar-group path="/docs/exchanges/node-installation/*" title="Core Node Installation">
     <x-general.sidebar-link path="/docs/exchanges/node-installation/hardware-requirements" name="Hardware Requirements" />

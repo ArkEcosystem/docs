@@ -1,6 +1,4 @@
-<x-general.sidebar-group :path="['/docs/program-incentives/intro', '/docs/program-incentives']" title="Introduction">
-    <x-general.sidebar-link top-leve path="/docs/program-incentives/intro" name="Introduction" />
-</x-general.sidebar-group>
+<x-general.sidebar-link first top-level path="/docs/program-incentives/intro" name="Introduction" />
 
 <x-general.sidebar-group :path="[
     '/docs/program-incentives/ark-grants-program-guidelines',

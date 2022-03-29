@@ -1,6 +1,4 @@
-<x-general.sidebar-group :path="['/docs/api/intro', '/docs/api']" title="Introduction">
-    <x-general.sidebar-link path="/docs/api/intro" name="Introduction" />
-</x-general.sidebar-group>
+<x-general.sidebar-link first top-level path="/docs/api/intro" name="Introduction" />
 
 <x-general.sidebar-group path="/docs/api/public-rest-api/*" title="Public REST API">
     <x-general.sidebar-link path="/docs/api/public-rest-api/getting-started" name="Getting Started" />

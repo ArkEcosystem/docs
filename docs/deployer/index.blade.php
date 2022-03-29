@@ -1,6 +1,4 @@
-<x-general.sidebar-group :path="['/docs/deployer/intro', '/docs/deployer']" title="Introduction">
-    <x-general.sidebar-link path="/docs/deployer/intro" name="Introduction" />
-</x-general.sidebar-group>
+<x-general.sidebar-link first top-level path="/docs/deployer/intro" name="Introduction" />
 
 <x-general.sidebar-group path="/docs/deployer/prepare/*" title="Prepare">
     <x-general.sidebar-link path="/docs/deployer/prepare/prepare-introduction" name="Prepare Introduction" />

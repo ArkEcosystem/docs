@@ -1,6 +1,4 @@
-<x-general.sidebar-group :path="['/docs/mobile-wallet', '/docs/mobile-wallet/intro']" title="Introduction">
-    <x-general.sidebar-link path="/docs/mobile-wallet/intro" name="Introduction" />
-</x-general.sidebar-group>
+<x-general.sidebar-link first top-level path="/docs/mobile-wallet/intro" name="Introduction" />
 
 <x-general.sidebar-group path="/docs/mobile-wallet/user-guides/*" title="Getting Started">
     <x-general.sidebar-link path="/docs/mobile-wallet/user-guides/installation" name="Installation" />
