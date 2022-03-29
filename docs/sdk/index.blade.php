@@ -16,7 +16,7 @@
 />
 @endforeach
 
-<h3 class="documentation-sidebar-subheading">Deprecated</h3>
+<h3 class="pl-9 mt-4 pt-4 text-base font-semibold uppercase border-t text-theme-secondary-500 border-theme-secondary-200">Deprecated</h3>
 
 @foreach(Documentation::deprecatedSDK() as $sdk)
 <x-sdk-sidebar-group
