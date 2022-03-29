@@ -1,0 +1,29 @@
+<h3 class="pl-9 mt-4 pt-4 text-base font-semibold uppercase border-t text-theme-secondary-500 border-theme-secondary-200">Glossary</h3>
+
+<x-general.sidebar-link top-level path="#2" name="2" />
+<x-general.sidebar-link top-level path="#a" name="A" />
+<x-general.sidebar-link top-level path="#b" name="B" />
+<x-general.sidebar-link top-level path="#c" name="C" />
+<x-general.sidebar-link top-level path="#d" name="D" />
+<x-general.sidebar-link top-level path="#e" name="E" />
+<x-general.sidebar-link top-level path="#f" name="F" />
+<x-general.sidebar-link top-level path="#g" name="G" />
+<x-general.sidebar-link top-level path="#h" name="H" />
+<x-general.sidebar-link top-level path="#i" name="I" />
+<x-general.sidebar-link top-level path="#j" name="J" />
+<x-general.sidebar-link top-level path="#k" name="K" />
+<x-general.sidebar-link top-level path="#l" name="L" />
+<x-general.sidebar-link top-level path="#m" name="M" />
+<x-general.sidebar-link top-level path="#n" name="N" />
+<x-general.sidebar-link top-level path="#o" name="O" />
+<x-general.sidebar-link top-level path="#p" name="P" />
+<x-general.sidebar-link top-level path="#q" name="Q" />
+<x-general.sidebar-link top-level path="#r" name="R" />
+<x-general.sidebar-link top-level path="#s" name="S" />
+<x-general.sidebar-link top-level path="#t" name="T" />
+<x-general.sidebar-link top-level path="#u" name="U" />
+<x-general.sidebar-link top-level path="#v" name="V" />
+<x-general.sidebar-link top-level path="#w" name="W" />
+<x-general.sidebar-link top-level path="#x" name="X" />
+<x-general.sidebar-link top-level path="#y" name="Y" />
+<x-general.sidebar-link top-level path="#z" name="Z" />
