@@ -1,4 +1,4 @@
-<x-general.sidebar-group path="/docs/exchanges/intro" title="Introduction">
+<x-general.sidebar-group :path="['/docs/exchanges', '/docs/exchanges/intro']" title="Introduction">
     <x-general.sidebar-link path="/docs/exchanges/intro" name="Introduction" />
 </x-general.sidebar-group>
 

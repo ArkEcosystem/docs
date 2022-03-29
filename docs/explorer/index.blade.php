@@ -1,4 +1,5 @@
 <x-general.sidebar-group :path="[
+    '/docs/explorer',
     '/docs/explorer/intro',
     '/docs/explorer/features',
 ]" title="Introduction">

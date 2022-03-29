@@ -1,5 +1,5 @@
-<x-general.sidebar-group path="/docs/program-incentives/intro" title="Introduction">
-    <x-general.sidebar-link path="/docs/program-incentives/intro" name="Introduction" />
+<x-general.sidebar-group :path="['/docs/program-incentives/intro', '/docs/program-incentives']" title="Introduction">
+    <x-general.sidebar-link top-leve path="/docs/program-incentives/intro" name="Introduction" />
 </x-general.sidebar-group>
 
 <x-general.sidebar-group :path="[
