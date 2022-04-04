@@ -136,17 +136,17 @@
             "description": "The maximum production approval rate of the delegate to be retrieved.",
             "rules": ["nullable", "integer"]
         },
-        "forged.fess": {
+        "forged.fees": {
             "type": "query",
             "description": "The forged fees of the delegate to be retrieved.",
             "rules": ["nullable", "integer"]
         },
-        "forged.fess.from": {
+        "forged.fees.from": {
             "type": "query",
             "description": "The minimum forged fees of the delegate to be retrieved.",
             "rules": ["nullable", "integer"]
         },
-        "forged.fess.to": {
+        "forged.fees.to": {
             "type": "query",
             "description": "The maximum forged fees of the delegate to be retrieved.",
             "rules": ["nullable", "integer"]
