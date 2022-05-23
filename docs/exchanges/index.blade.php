@@ -1,5 +1,7 @@
 <x-general.sidebar-link first top-level path="/docs/exchanges/intro" name="Introduction" />
 
+<x-ark-docs-sidebar-link first top-level path="/docs/exchanges/available-exchanges" name="Available Exchanges" />
+
 <x-general.sidebar-group path="/docs/exchanges/node-installation/*" title="Core Node Installation">
     <x-general.sidebar-link path="/docs/exchanges/node-installation/hardware-requirements" name="Hardware Requirements" />
     <x-general.sidebar-link path="/docs/exchanges/node-installation/baremetal-instructions" name="BareMetal or VM Install" />
