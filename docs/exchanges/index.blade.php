@@ -30,7 +30,7 @@
     <x-general.sidebar-link path="/docs/exchanges/configuring-rate-limits" name="Configuring Rate Limits" />
 </x-general.sidebar-group>
 
-<x-general.sidebar-group path="/docs/exchanges/*" title="Upgrade Guides">
+<x-general.sidebar-group path="/docs/exchanges/upgrade/*" title="Upgrade Guides">
     <x-general.sidebar-link
         path="/docs/exchanges/upgrade"
         name="3.0"
