@@ -1,5 +1,7 @@
 <x-ark-docs-sidebar-link first top-level path="/docs/exchanges/intro" name="Introduction" />
 
+<x-ark-docs-sidebar-link first top-level path="/docs/exchanges/available-exchanges" name="Available Exchanges" />
+
 <x-ark-docs-sidebar-group path="/docs/exchanges/node-installation/*" title="Core Node Installation">
     <x-ark-docs-sidebar-link path="/docs/exchanges/node-installation/hardware-requirements" name="Hardware Requirements" />
     <x-ark-docs-sidebar-link path="/docs/exchanges/node-installation/baremetal-instructions" name="BareMetal or VM Install" />
@@ -28,7 +30,7 @@
     <x-ark-docs-sidebar-link path="/docs/exchanges/configuring-rate-limits" name="Configuring Rate Limits" />
 </x-ark-docs-sidebar-group>
 
-<x-ark-docs-sidebar-group path="/docs/exchanges/*" title="Upgrade Guides">
+<x-ark-docs-sidebar-group path="/docs/exchanges/upgrade/*" title="Upgrade Guides">
     <x-ark-docs-sidebar-link
         path="/docs/exchanges/upgrade"
         name="3.0"
