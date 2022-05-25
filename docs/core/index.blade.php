@@ -1,13 +1,13 @@
-<x-general.sidebar-group first :path="['/docs/core/intro', '/docs/core']" title="Introduction">
-    <x-general.sidebar-link path="/docs/core/intro" name="Welcome to ARK Core v3" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group first :path="['/docs/core/intro', '/docs/core']" title="Introduction">
+    <x-ark-docs-sidebar-link path="/docs/core/intro" name="Welcome to ARK Core v3" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/overview/*" title="Overview">
-    <x-general.sidebar-link path="/docs/core/overview/stack" name="Technology Stack" />
-    <x-general.sidebar-link path="/docs/core/overview/directory" name="Directory Structure" />
-    <x-general.sidebar-link path="/docs/core/overview/models" name="Data Models" />
-    <x-general.sidebar-link path="/docs/core/overview/cryptography" name="Cryptography" />
-    <x-general.sidebar-link
+<x-ark-docs-sidebar-group path="/docs/core/overview/*" title="Overview">
+    <x-ark-docs-sidebar-link path="/docs/core/overview/stack" name="Technology Stack" />
+    <x-ark-docs-sidebar-link path="/docs/core/overview/directory" name="Directory Structure" />
+    <x-ark-docs-sidebar-link path="/docs/core/overview/models" name="Data Models" />
+    <x-ark-docs-sidebar-link path="/docs/core/overview/cryptography" name="Cryptography" />
+    <x-ark-docs-sidebar-link
         path="/docs/core/overview/architecture"
         name="Architecture"
         :children="[
@@ -18,7 +18,7 @@
             ['path' => '/docs/core/overview/architecture/contracts', 'name' => 'Contracts'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/overview/services"
         name="Services"
         :children="[
@@ -35,12 +35,12 @@
             ['path' => '/docs/core/overview/services/validation', 'name' => 'Validation'],
         ]"
     />
-</x-general.sidebar-group>
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/transactions/*" title="Transactions">
-    <x-general.sidebar-link path="/docs/core/transactions/lifecycle" name="Understanding the Lifecycle" />
-    <x-general.sidebar-link path="/docs/core/transactions/nonce" name="Understanding the Nonce" />
-    <x-general.sidebar-link
+<x-ark-docs-sidebar-group path="/docs/core/transactions/*" title="Transactions">
+    <x-ark-docs-sidebar-link path="/docs/core/transactions/lifecycle" name="Understanding the Lifecycle" />
+    <x-ark-docs-sidebar-link path="/docs/core/transactions/nonce" name="Understanding the Nonce" />
+    <x-ark-docs-sidebar-link
         path="/docs/core/transactions/types"
         name="Transaction Types"
         :children="[
@@ -57,47 +57,47 @@
             ['path' => '/docs/core/transactions/types/entity', 'name' => 'Entity'],
         ]"
     />
-</x-general.sidebar-group>
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/installation/*" title="Installation">
-    <x-general.sidebar-link path="/docs/core/installation/intro" name="Introduction" />
-    <x-general.sidebar-link path="/docs/core/installation/requirements" name="Requirements" />
-    <x-general.sidebar-link path="/docs/core/installation/configuration" name="Configuring Core" />
-    <x-general.sidebar-link path="/docs/core/installation/variables" name="Database Variables" />
-    <x-general.sidebar-link path="/docs/core/installation/script" name="Using the Install Script" />
-    <x-general.sidebar-link path="/docs/core/installation/source" name="Installing from Source" />
-    <x-general.sidebar-link path="/docs/core/installation/docker-unix" name="Docker on Linux/macOS" />
-    <x-general.sidebar-link path="/docs/core/installation/docker-windows" name="Docker on Windows" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/core/installation/*" title="Installation">
+    <x-ark-docs-sidebar-link path="/docs/core/installation/intro" name="Introduction" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/requirements" name="Requirements" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/configuration" name="Configuring Core" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/variables" name="Database Variables" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/script" name="Using the Install Script" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/source" name="Installing from Source" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/docker-unix" name="Docker on Linux/macOS" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/docker-windows" name="Docker on Windows" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/security/*" title="Security">
-    <x-general.sidebar-link path="/docs/core/security/intro" name="Security Through Obscurity" />
-    <x-general.sidebar-link path="/docs/core/security/ssh" name="Using SSH" />
-    <x-general.sidebar-link path="/docs/core/security/updated" name="Staying Up-to-Date" />
-    <x-general.sidebar-link path="/docs/core/security/iptables" name="Applying iptables" />
-    <x-general.sidebar-link path="/docs/core/security/fail2ban" name="Installing Fail2Ban" />
-    <x-general.sidebar-link path="/docs/core/security/knocking" name="Setting Up Port Knocking" />
-    <x-general.sidebar-link path="/docs/core/security/ddos" name="Cloudflare DDoS Protection" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/core/security/*" title="Security">
+    <x-ark-docs-sidebar-link path="/docs/core/security/intro" name="Security Through Obscurity" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/ssh" name="Using SSH" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/updated" name="Staying Up-to-Date" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/iptables" name="Applying iptables" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/fail2ban" name="Installing Fail2Ban" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/knocking" name="Setting Up Port Knocking" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/ddos" name="Cloudflare DDoS Protection" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/deployment/*" title="Deployment">
-    <x-general.sidebar-link path="/docs/core/deployment/modes" name="Core Run Modes" />
-    <x-general.sidebar-link path="/docs/core/deployment/cli" name="Core CLI Commands" />
-    <x-general.sidebar-link path="/docs/core/deployment/relay" name="Starting a Relay" />
-    <x-general.sidebar-link path="/docs/core/deployment/forger" name="Starting a Forger" />
-    <x-general.sidebar-link path="/docs/core/deployment/snapshots" name="Using Snapshots" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/core/deployment/*" title="Deployment">
+    <x-ark-docs-sidebar-link path="/docs/core/deployment/modes" name="Core Run Modes" />
+    <x-ark-docs-sidebar-link path="/docs/core/deployment/cli" name="Core CLI Commands" />
+    <x-ark-docs-sidebar-link path="/docs/core/deployment/relay" name="Starting a Relay" />
+    <x-ark-docs-sidebar-link path="/docs/core/deployment/forger" name="Starting a Forger" />
+    <x-ark-docs-sidebar-link path="/docs/core/deployment/snapshots" name="Using Snapshots" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/development/*" title="Development Guides">
-    <x-general.sidebar-link path="/docs/core/development/factories" name="Creating Factories" />
-    <x-general.sidebar-link path="/docs/core/development/testnet" name="Launching a Testnet" />
-    <x-general.sidebar-link path="/docs/core/development/explorer" name="Launching a Block Explorer" />
-    <x-general.sidebar-link path="/docs/core/development/core-tester-cli" name="Using the Core-Tester-CLI" />
-    <x-general.sidebar-link path="/docs/core/development/emitters" name="Creating Event Emitters" />
-    <x-general.sidebar-link path="/docs/core/development/api" name="Creating API Servers" />
-    <x-general.sidebar-link path="/docs/core/development/milestones" name="Implementing Milestones" />
-    <x-general.sidebar-link path="/docs/core/development/docker" name="Using Docker" />
-    <x-general.sidebar-link
+<x-ark-docs-sidebar-group path="/docs/core/development/*" title="Development Guides">
+    <x-ark-docs-sidebar-link path="/docs/core/development/factories" name="Creating Factories" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/testnet" name="Launching a Testnet" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/explorer" name="Launching a Block Explorer" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/core-tester-cli" name="Using the Core-Tester-CLI" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/emitters" name="Creating Event Emitters" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/api" name="Creating API Servers" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/milestones" name="Implementing Milestones" />
+    <x-ark-docs-sidebar-link path="/docs/core/development/docker" name="Using Docker" />
+    <x-ark-docs-sidebar-link
         path="/docs/core/development/cli"
         name="Core CLI"
         :children="[
@@ -105,7 +105,7 @@
             ['path' => '/docs/core/development/cli/create', 'name' => 'Creating Commands'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/development/dapps"
         name="dApps"
         :children="[
@@ -114,7 +114,7 @@
             ['path' => '/docs/core/development/dapps/module', 'name' => 'Creating a Module'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/development/plugins"
         name="Plugins"
         :children="[
@@ -122,7 +122,7 @@
             ['path' => '/docs/core/development/plugins/manage', 'name' => 'Managing Plugins'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/development/transactions"
         name="Custom Transactions"
         :children="[
@@ -134,17 +134,17 @@
             ['path' => '/docs/core/development/transactions/run', 'name' => 'Running the Example'],
         ]"
     />
-</x-general.sidebar-group>
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/testing/*" title="Testing">
-    <x-general.sidebar-link path="/docs/core/testing/intro" name="Introduction" />
-    <x-general.sidebar-link path="/docs/core/testing/sandbox" name="Using the Sandbox" />
-    <x-general.sidebar-link path="/docs/core/testing/plugins" name="Testing Plugins" />
-    <x-general.sidebar-link path="/docs/core/testing/transactions" name="Testing Transactions" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/core/testing/*" title="Testing">
+    <x-ark-docs-sidebar-link path="/docs/core/testing/intro" name="Introduction" />
+    <x-ark-docs-sidebar-link path="/docs/core/testing/sandbox" name="Using the Sandbox" />
+    <x-ark-docs-sidebar-link path="/docs/core/testing/plugins" name="Testing Plugins" />
+    <x-ark-docs-sidebar-link path="/docs/core/testing/transactions" name="Testing Transactions" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/releases/*" title="Releases">
-    <x-general.sidebar-link
+<x-ark-docs-sidebar-group path="/docs/core/releases/*" title="Releases">
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.0"
         :children="[
@@ -152,7 +152,7 @@
             ['path' => '/docs/core/releases/upgrade/2.0', 'name' => '2.0 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.1"
         :children="[
@@ -160,7 +160,7 @@
             ['path' => '/docs/core/releases/upgrade/2.1', 'name' => '2.1 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.2"
         :children="[
@@ -168,7 +168,7 @@
             ['path' => '/docs/core/releases/upgrade/2.2', 'name' => '2.2 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.3"
         :children="[
@@ -176,7 +176,7 @@
             ['path' => '/docs/core/releases/upgrade/2.3', 'name' => '2.3 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.4"
         :children="[
@@ -184,7 +184,7 @@
             ['path' => '/docs/core/releases/upgrade/2.4', 'name' => '2.4 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.5"
         :children="[
@@ -192,7 +192,7 @@
             ['path' => '/docs/core/releases/upgrade/2.5', 'name' => '2.5 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="2.6"
         :children="[
@@ -200,7 +200,7 @@
             ['path' => '/docs/core/releases/upgrade/2.6', 'name' => '2.6 Upgrade Guide'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="3.0"
         :children="[
@@ -209,17 +209,17 @@
             ['path' => '/docs/core/releases/upgrade/docker/3.0', 'name' => '3.0 Upgrade Guide (Docker)'],
         ]"
     />
-    <x-general.sidebar-link
+    <x-ark-docs-sidebar-link
         path="/docs/core/releases"
         name="4.0 (Development)"
         :children="[
             ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
         ]"
     />
-</x-general.sidebar-group>
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/core/support/*" title="Support">
-    <x-general.sidebar-link path="/docs/core/support/troubleshooting" name="Troubleshooting" />
-    <x-general.sidebar-link path="/docs/core/support/security" name="Security Vulnerabilities" />
-    <x-general.sidebar-link path="https://ark.dev/contact" name="Contact Us" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/core/support/*" title="Support">
+    <x-ark-docs-sidebar-link path="/docs/core/support/troubleshooting" name="Troubleshooting" />
+    <x-ark-docs-sidebar-link path="/docs/core/support/security" name="Security Vulnerabilities" />
+    <x-ark-docs-sidebar-link path="https://ark.dev/contact" name="Contact Us" />
+</x-ark-docs-sidebar-group>

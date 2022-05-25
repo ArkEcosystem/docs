@@ -1,8 +1,8 @@
-<x-general.sidebar-link first top-level path="/docs/api/intro" name="Introduction" />
+<x-ark-docs-sidebar-link first top-level path="/docs/api/intro" name="Introduction" />
 
-<x-general.sidebar-group path="/docs/api/public-rest-api/*" title="Public REST API">
-    <x-general.sidebar-link path="/docs/api/public-rest-api/getting-started" name="Getting Started" />
-    <x-general.sidebar-link
+<x-ark-docs-sidebar-group path="/docs/api/public-rest-api/*" title="Public REST API">
+    <x-ark-docs-sidebar-link path="/docs/api/public-rest-api/getting-started" name="Getting Started" />
+    <x-ark-docs-sidebar-link
         path="/docs/api/public-rest-api/endpoints"
         name="Endpoints"
         :children="[
@@ -18,20 +18,20 @@
             ['path' => '/docs/api/public-rest-api/endpoints/wallets', 'name' => 'Wallets'],
         ]"
     />
-    <x-general.sidebar-link path="/docs/api/public-rest-api/modify-response" name="Modify response" />
-    <x-general.sidebar-link path="/docs/api/public-rest-api/troubleshooting" name="Troubleshooting" />
-</x-general.sidebar-group>
+    <x-ark-docs-sidebar-link path="/docs/api/public-rest-api/modify-response" name="Modify response" />
+    <x-ark-docs-sidebar-link path="/docs/api/public-rest-api/troubleshooting" name="Troubleshooting" />
+</x-ark-docs-sidebar-group>
 
 
-<x-general.sidebar-group path="/docs/api/webhook-api/*" title="Webhook API">
-    <x-general.sidebar-link path="/docs/api/webhook-api/getting-started" name="Getting Started" />
-    <x-general.sidebar-link path="/docs/api/webhook-api/usage" name="Usage" />
-    <x-general.sidebar-link path="/docs/api/webhook-api/endpoints" name="Endpoints" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/api/webhook-api/*" title="Webhook API">
+    <x-ark-docs-sidebar-link path="/docs/api/webhook-api/getting-started" name="Getting Started" />
+    <x-ark-docs-sidebar-link path="/docs/api/webhook-api/usage" name="Usage" />
+    <x-ark-docs-sidebar-link path="/docs/api/webhook-api/endpoints" name="Endpoints" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/api/manager-api/*" title="Manager API">
-    <x-general.sidebar-link path="/docs/api/manager-api/getting-started" name="Getting Started" />
-    <x-general.sidebar-link
+<x-ark-docs-sidebar-group path="/docs/api/manager-api/*" title="Manager API">
+    <x-ark-docs-sidebar-link path="/docs/api/manager-api/getting-started" name="Getting Started" />
+    <x-ark-docs-sidebar-link
         path="/docs/api/manager-api/endpoints"
         name="Endpoints"
         :children="[
@@ -43,4 +43,4 @@
             ['path' => '/docs/api/manager-api/endpoints/watcher', 'name' => 'Watcher'],
         ]"
     />
-</x-general.sidebar-group>
+</x-ark-docs-sidebar-group>
