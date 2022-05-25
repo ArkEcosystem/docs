@@ -1,11 +1,11 @@
-<x-general.sidebar-group :path="['/docs/sdk/intro', '/docs/sdk']" title="Introduction">
-    <x-general.sidebar-link path="/docs/sdk/intro" name="Introduction" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group :path="['/docs/sdk/intro', '/docs/sdk']" title="Introduction">
+    <x-ark-docs-sidebar-link path="/docs/sdk/intro" name="Introduction" />
+</x-ark-docs-sidebar-group>
 
-<x-general.sidebar-group path="/docs/sdk/guidelines/*" title="Guidelines">
-    <x-general.sidebar-link path="/docs/sdk/guidelines/crypto" name="Crypto Libraries" />
-    <x-general.sidebar-link path="/docs/sdk/guidelines/client" name="Client Libraries" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/sdk/guidelines/*" title="Guidelines">
+    <x-ark-docs-sidebar-link path="/docs/sdk/guidelines/crypto" name="Crypto Libraries" />
+    <x-ark-docs-sidebar-link path="/docs/sdk/guidelines/client" name="Client Libraries" />
+</x-ark-docs-sidebar-group>
 
 @foreach(Documentation::availableSDK() as $sdk)
 <x-sdk-sidebar-group
@@ -27,7 +27,7 @@
 />
 @endforeach
 
-<x-general.sidebar-group path="/docs/sdk/frameworks/*" title="Frameworks">
-    <x-general.sidebar-link path="/docs/sdk/frameworks/laravel" name="Laravel" />
-    <x-general.sidebar-link path="/docs/sdk/frameworks/symfony" name="Symfony" />
-</x-general.sidebar-group>
+<x-ark-docs-sidebar-group path="/docs/sdk/frameworks/*" title="Frameworks">
+    <x-ark-docs-sidebar-link path="/docs/sdk/frameworks/laravel" name="Laravel" />
+    <x-ark-docs-sidebar-link path="/docs/sdk/frameworks/symfony" name="Symfony" />
+</x-ark-docs-sidebar-group>
