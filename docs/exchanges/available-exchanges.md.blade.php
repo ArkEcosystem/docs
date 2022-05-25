@@ -134,7 +134,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
     <x-table.rows.exchange
         name="CryptosDesk"
         icon="docs-exchanges.assets.icons.cryptosdesk"
-        url="https://crypto.com"
+        url="https://www.cryptosdesk.io"
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
@@ -279,7 +279,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc
     />
     <x-table.rows.exchange
-        name="Upbit"
+        name="Upbit Indonesia"
         icon="docs-exchanges.assets.icons.upbit"
         url="https://id.upbit.com"
         has-btc
