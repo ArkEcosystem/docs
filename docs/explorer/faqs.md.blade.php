@@ -64,8 +64,8 @@ Click [here](https://github.com/ArkEcosystem/explorer/blob/develop/app/Console/K
 
 **I have adjusted the parameters for my Core database but cannot get Explorer to work.**
 
-You will need to set up a **Core database** before attempting to set up Explorer. Please follow the [Core Setup](https://docs.ihost.org/docs/explorer/setup/core) guide before proceeding further with your installation.
+You will need to set up a **Core database** before attempting to set up Explorer. Please follow the [Core Setup](/docs/explorer/setup/core) guide before proceeding further with your installation.
 
-Alternatively, you may use **dummy data** for testing purposes by following the [Generate Placeholder Data](https://docs.ihost.org/docs/explorer/setup/development/#generate-placeholder-data-only-for-local-testing) section of the [Development Setup](https://docs.ihost.org/docs/explorer/setup/development) documentation.
+Alternatively, you may use **dummy data** for testing purposes by following the [Generate Placeholder Data](/docs/explorer/setup/development/#generate-placeholder-data-only-for-local-testing) section of the [Development Setup](/docs/explorer/setup/development) documentation.
 
 ---

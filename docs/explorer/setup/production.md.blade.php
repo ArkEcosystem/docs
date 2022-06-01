@@ -73,7 +73,7 @@ yarn
 
 ### Prepare the Application
 
-**Generate the Environment** - Run the following command to create a copy of the default environment variables for Explorer. This will generate a `.env` file containing some of the necessary data you will require for your production instance. Naturally you will need to configure some parameters in accordance with your unique setup, but we will cover this in [Adjust Environment Variables.](https://docs.ihost.org/docs/explorer/setup/production/#adjust-environment-variables)
+**Generate the Environment** - Run the following command to create a copy of the default environment variables for Explorer. This will generate a `.env` file containing some of the necessary data you will require for your production instance. Naturally you will need to configure some parameters in accordance with your unique setup, but we will cover this in [Adjust Environment Variables.](/docs/explorer/setup/production/#adjust-environment-variables)
 
 ```bash
 cp .env.example .env
@@ -102,7 +102,7 @@ DB_USERNAME=<your-username>
 DB_PASSWORD=<your-password>
 ```
 
-The next step involves setting the parameters for your core database - if you have not yet set up a core database, please follow the [Core Setup](https://docs.ihost.org/docs/explorer/setup/core) guide before proceeding further.
+The next step involves setting the parameters for your core database - if you have not yet set up a core database, please follow the [Core Setup](/docs/explorer/setup/core) guide before proceeding further.
 
 You will need to fill in the necessary details for either a local connection or a PostgreSQL database. Regardless of which applies to your installation, you will use the exact same environment variables but enter in any values that apply to your particular database.
 

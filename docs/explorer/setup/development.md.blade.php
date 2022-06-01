@@ -50,7 +50,7 @@ yarn
 
 ### Prepare the Application
 
-**Generate the Environment** - Run the following command to create a copy of the default environment variables for Explorer. This will generate a `.env` file containing some of the necessary data you will require for your development instance. Naturally you will need to configure some parameters in accordance with your unique setup, but we will cover this in [Adjust Environment Variables.](https://docs.ihost.org/docs/explorer/setup/development/#adjust-environment-variables)
+**Generate the Environment** - Run the following command to create a copy of the default environment variables for Explorer. This will generate a `.env` file containing some of the necessary data you will require for your development instance. Naturally you will need to configure some parameters in accordance with your unique setup, but we will cover this in [Adjust Environment Variables.](/docs/explorer/setup/development/#adjust-environment-variables)
 
 ```bash
 cp .env.example .env
