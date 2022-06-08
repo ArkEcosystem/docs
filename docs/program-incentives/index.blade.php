@@ -1,12 +1,8 @@
 <x-ark-docs-sidebar-link first top-level path="/docs/program-incentives/intro" name="Introduction" />
 
 <x-ark-docs-sidebar-group :path="[
-    '/docs/program-incentives/ark-grants-program-guidelines',
-    '/docs/program-incentives/development-bounty-program',
     '/docs/program-incentives/security-vulnerability-program',
 ]" title="Programs">
-    <x-ark-docs-sidebar-link path="/docs/program-incentives/ark-grants-program-guidelines" name="ARK Grants" />
-    <x-ark-docs-sidebar-link path="/docs/program-incentives/development-bounty-program" name="Development Bounty" />
     <x-ark-docs-sidebar-link path="/docs/program-incentives/security-vulnerability-program" name="Security Vulnerability" />
 </x-ark-docs-sidebar-group>
 
