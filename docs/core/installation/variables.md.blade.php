@@ -1,5 +1,5 @@
 ---
-title: Installation - Database Variables
+title: Installation - Environment Variables
 ---
 
 # Database Variables
