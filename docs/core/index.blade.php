@@ -63,7 +63,7 @@
     <x-ark-docs-sidebar-link path="/docs/core/installation/intro" name="Introduction" />
     <x-ark-docs-sidebar-link path="/docs/core/installation/requirements" name="Requirements" />
     <x-ark-docs-sidebar-link path="/docs/core/installation/configuration" name="Configuring Core" />
-    <x-ark-docs-sidebar-link path="/docs/core/installation/variables" name="Database Variables" />
+    <x-ark-docs-sidebar-link path="/docs/core/installation/variables" name="Environment Variables" />
     <x-ark-docs-sidebar-link path="/docs/core/installation/script" name="Using the Install Script" />
     <x-ark-docs-sidebar-link path="/docs/core/installation/source" name="Installing from Source" />
     <x-ark-docs-sidebar-link path="/docs/core/installation/docker-unix" name="Docker on Linux/macOS" />
