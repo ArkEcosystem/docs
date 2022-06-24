@@ -4,7 +4,7 @@ title: Profiles
 
 # Profiles
 
-This is a Profile System for the Desktop/Mobile Wallet, based on the Payvo SDK. The implementation makes use of various Payvo SDK components and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
+This is a Profile System for the Desktop/Mobile Wallet, based on the Payvo SDK. The implementation makes use of various Payvo SDK components and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 ## Repository
 
@@ -20,14 +20,14 @@ yarn add @ardenthq/sdk-profiles
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/payvo-sdk/profiles/contacts', 'name' => 'Contacts'],
-        ['path' => '/docs/payvo-sdk/profiles/data', 'name' => 'Data'],
-        ['path' => '/docs/payvo-sdk/profiles/environment', 'name' => 'Environment'],
-        ['path' => '/docs/payvo-sdk/profiles/notifications', 'name' => 'Notifications'],
-        ['path' => '/docs/payvo-sdk/profiles/plugins', 'name' => 'Plugins'],
-        ['path' => '/docs/payvo-sdk/profiles/settings', 'name' => 'Settings'],
-        ['path' => '/docs/payvo-sdk/profiles/transactions', 'name' => 'Transactions'],
-        ['path' => '/docs/payvo-sdk/profiles/wallets', 'name' => 'Wallets'],
+        ['path' => '/docs/platform-sdk/profiles/contacts', 'name' => 'Contacts'],
+        ['path' => '/docs/platform-sdk/profiles/data', 'name' => 'Data'],
+        ['path' => '/docs/platform-sdk/profiles/environment', 'name' => 'Environment'],
+        ['path' => '/docs/platform-sdk/profiles/notifications', 'name' => 'Notifications'],
+        ['path' => '/docs/platform-sdk/profiles/plugins', 'name' => 'Plugins'],
+        ['path' => '/docs/platform-sdk/profiles/settings', 'name' => 'Settings'],
+        ['path' => '/docs/platform-sdk/profiles/transactions', 'name' => 'Transactions'],
+        ['path' => '/docs/platform-sdk/profiles/wallets', 'name' => 'Wallets'],
     ]"
 />
 

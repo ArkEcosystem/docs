@@ -4,7 +4,7 @@ title: Intl
 
 # Intl
 
-This is an Internationalization package for the Payvo SDK. The implementation makes use of native and third-party packages to ensure consistent outcomes and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification).
+This is an Internationalization package for the Payvo SDK. The implementation makes use of native and third-party packages to ensure consistent outcomes and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 ## Repository
 
@@ -20,10 +20,10 @@ yarn add @ardenthq/sdk-intl
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/payvo-sdk/intl/currency', 'name' => 'Currency'],
-        ['path' => '/docs/payvo-sdk/intl/datetime', 'name' => 'DateTime'],
-        ['path' => '/docs/payvo-sdk/intl/money', 'name' => 'Money'],
-        ['path' => '/docs/payvo-sdk/intl/numeral', 'name' => 'Numeral'],
+        ['path' => '/docs/platform-sdk/intl/currency', 'name' => 'Currency'],
+        ['path' => '/docs/platform-sdk/intl/datetime', 'name' => 'DateTime'],
+        ['path' => '/docs/platform-sdk/intl/money', 'name' => 'Money'],
+        ['path' => '/docs/platform-sdk/intl/numeral', 'name' => 'Numeral'],
     ]"
 />
 

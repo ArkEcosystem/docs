@@ -4,7 +4,7 @@ title: NANO
 
 # Nano
 
-This is a Nano Driver for the Payvo SDK. The implementation makes use of [Nano](https://nano.org/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
+This is a Nano Driver for the Payvo SDK. The implementation makes use of [Nano](https://nano.org/) and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/platform-sdk/sdk) package.**
 
 ## Repository
 
@@ -18,7 +18,7 @@ yarn add @ardenthq/sdk-nano
 
 ## Specification
 
-<livewire:coin-spec spec="payvo-sdk/coins/specs/nano.json" />
+<livewire:coin-spec spec="platform-sdk/coins/specs/nano.json" />
 
 ## Security
 

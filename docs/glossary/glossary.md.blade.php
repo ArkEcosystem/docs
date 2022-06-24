@@ -1348,7 +1348,7 @@ Describes a public method by which the randomness of a process can be confirmed.
 
 ### PSDK
 
-See [Payvo SDK](#payvo-sdk)
+See [Payvo SDK](#platform-sdk)
 
 ### Pseudonymous
 

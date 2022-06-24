@@ -4,7 +4,7 @@ title: TRX
 
 # Tron
 
-This is a Tron Driver for the Payvo SDK. The implementation makes use of [Tron](https://tron.network/) and adheres to the contracts laid out in the [specification](/docs/payvo-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/payvo-sdk/sdk) package.**
+This is a Tron Driver for the Payvo SDK. The implementation makes use of [Tron](https://tron.network/) and adheres to the contracts laid out in the [specification](/docs/platform-sdk/specification). **This package should not be used directly. It is designed to be consumed through the [SDK](/docs/platform-sdk/sdk) package.**
 
 ## Repository
 
@@ -18,7 +18,7 @@ yarn add @ardenthq/sdk-tron
 
 ## Specification
 
-<livewire:coin-spec spec="payvo-sdk/coins/specs/trx.json" />
+<livewire:coin-spec spec="platform-sdk/coins/specs/trx.json" />
 
 ## Security
 
