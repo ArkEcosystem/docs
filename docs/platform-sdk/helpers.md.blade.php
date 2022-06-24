@@ -8,7 +8,7 @@ This is a Collection of Helpers for the Platform SDK. The implementation adheres
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/helpers" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/helpers" />
 
 ## Installation
 

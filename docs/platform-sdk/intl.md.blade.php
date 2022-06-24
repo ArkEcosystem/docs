@@ -8,7 +8,7 @@ This is an Internationalization package for the Platform SDK. The implementation
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/intl" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/intl" />
 
 ## Installation
 

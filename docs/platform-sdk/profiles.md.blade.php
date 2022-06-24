@@ -8,7 +8,7 @@ This is a Profile System for the Desktop/Mobile Wallet, based on the Platform SD
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/profiles" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/profiles" />
 
 ## Installation
 

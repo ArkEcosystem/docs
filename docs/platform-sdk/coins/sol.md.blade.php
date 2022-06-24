@@ -8,7 +8,7 @@ This is a Solana Driver for the Platform SDK. The implementation makes use of [S
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-sol" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-sol" />
 
 ## Installation
 

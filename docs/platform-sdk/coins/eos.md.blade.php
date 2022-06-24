@@ -8,7 +8,7 @@ This is a EOS Driver for the Platform SDK. The implementation makes use of [EOS]
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-eos" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-eos" />
 
 ## Installation
 

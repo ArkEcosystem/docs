@@ -8,7 +8,7 @@ This is a CryptoCompare Client for the Platform SDK. The implementation makes us
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/drivers/cryptocompare" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/markets/source/drivers/cryptocompare" />
 
 ## Installation
 

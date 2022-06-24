@@ -8,7 +8,7 @@ This is an HTTP Client for the Platform SDK. The implementation makes use of [cr
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/fetch" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/fetch" />
 
 ## Installation
 

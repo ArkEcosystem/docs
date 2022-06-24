@@ -20,7 +20,7 @@ Integrating a new blockchain into the Platform SDK is a fairly straightforward p
 
 ### Recommendations
 
-- **Don't pull in your own cryptography dependencies.** This sounds like an absolute statement but there are exceptions. Our [cryptography](https://github.com/PayvoHQ/sdk/tree/master/packages/cryptography) package provides a lot of utilities for working with base58, base64, bip32, bip38, bip39, bip44 and many more. Unless you need very customized versions of those implementations you should use this package for the consistency, compatibility, and performance benefits it provides.
+- **Don't pull in your own cryptography dependencies.** This sounds like an absolute statement but there are exceptions. Our [cryptography](https://github.com/ArdentHQ/platform-sdk/tree/master/packages/cryptography) package provides a lot of utilities for working with base58, base64, bip32, bip38, bip39, bip44 and many more. Unless you need very customized versions of those implementations you should use this package for the consistency, compatibility, and performance benefits it provides.
 - **Don't pull in your own HTTP client dependencies.** The SDK requires dependencies like key-value storage and HTTP client to be passed in during instantiation. This means all coins have access to an HTTP client without having to implement one themselves and they shouldn't. Each client has different needs which means the HTTP client implementations will also differ so trust the client to do handle the HTTP requests as they see fit.
 
 ## Networks
@@ -39,7 +39,7 @@ The Address service is responsible for deriving addresses from mnemonics, public
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/address.contract.ts) and apply it to an implementation, we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/address.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/address.contract.ts) and apply it to an implementation, we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/address.service.ts).
 
 - The `fromMnemonic` method should derive an address from a BIP39-compliant mnemonic. **Any non-compliant value should throw an exception.**
 - The `fromMultiSignature` method should derive an address from a number of participants and their public keys. **If your blockchain does not support MuSig you should not implement this method.**
@@ -51,9 +51,9 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/address.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/address.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
-- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
+- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
 - Ensure that `fromMnemonic` throws an exception if the mnemonic is not compliant with BIP39.
 - Ensure that `fromSecret` throws an exception if the secret is compliant with BIP39.
 - Ensure that unsupported methods throw a `NotImplemented` exception.
@@ -64,7 +64,7 @@ The Client service is responsible for communication between the client and netwo
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/client.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/client.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/client.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/client.service.ts).
 
 - The `transaction` method should return a `ConfirmedTransactionData` instance that contains information about a transaction by its ID.
 - The `transactions` method should return a `ConfirmedTransactionDataCollection` instance that contains information about all transactions that match the given parameters.
@@ -79,9 +79,9 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/transaction.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/transaction.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
-- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
+- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
 - Ensure that `broadcast` is tested for both local and remote failures. The reason why a transaction fails to be broadcast isn't always a network issue so make sure you handle local issues like type mismatches.
 - Ensure that unsupported methods throw a `NotImplemented` exception.
 
@@ -91,14 +91,14 @@ The Fee service is responsible for retrieving and calculating fees. The calculat
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/fee.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/fee.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/fee.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/fee.service.ts).
 
 - The `all` method should return a `TransactionFees` instance which contains the minimum, average and maximum values for fees based on type. **If there are no type-specific fees you should return the same value for every type.**
 - The `calculate` method should calculate and return the fee for a transaction. **If your blockchain uses static or dynamic fees then this method should not be implemented.**
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/fee.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/fee.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
 - Ensure that `all` and `calculate` throw an exception if the network request to retrieve fees fails. You can use `nock` to simulate network request issues.
 - Ensure that `calculate` produces the same fees as other applications you know to support this feature for your blockchain.
@@ -111,7 +111,7 @@ The Key-Pair service is responsible for deriving public and private keys. *This 
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/key-pair.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/key-pair.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/key-pair.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/key-pair.service.ts).
 
 - The `fromMnemonic` method should derive a key-pair from a BIP39-compliant mnemonic. **Any non-compliant value should throw an exception.**
 - The `fromPrivateKey` method should derive a key-pair from a private key. **If your blockchain has legacy private keys because of a change in the signature algorithm you should handle them or throw an exception.**
@@ -120,9 +120,9 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/key-pair.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/key-pair.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
-- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
+- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
 - Ensure that `fromMnemonic` throws an exception if the mnemonic is not compliant with BIP39.
 - Ensure that `fromSecret` throws an exception if the secret is compliant with BIP39.
 - Ensure that unsupported methods throw an `NotImplemented` exception.
@@ -133,11 +133,11 @@ The Known Wallets service is responsible for identifying publicly known wallets 
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/known-wallet.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/known-wallet.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/known-wallet.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/known-wallet.service.ts).
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/known-wallet.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/known-wallet.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
 - Ensure that unsupported methods throw an `NotImplemented` exception.
 
@@ -147,11 +147,11 @@ The Ledger service is responsible for all interactions with a Ledger Hardware Wa
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/ledger.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/ledger.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/ledger.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/ledger.service.ts).
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/ledger.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/ledger.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
 - Ensure that unsupported methods throw an `NotImplemented` exception.
 
@@ -167,14 +167,14 @@ The Message service is responsible for signing and verifying messages. These mes
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/message.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/message.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/message.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/message.service.ts).
 
 - The `sign` method should cryptographically sign a message to produce a signature.
 - The `verify` method should cryptographically compare a message, signature, and signatory for its validity.
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/message.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/message.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
 - Ensure that `sign` handles all possible signatories that your blockchain supports. Meaning mnemonic or secret or whatever else you support that fits into constraints of the SDK.
 - Ensure that `verify` returns `false` for all kinds of malfunctions. This ensures that the client doesn't have to manually catch exceptions to invalidate a message.
@@ -186,11 +186,11 @@ The Multi-Signature service is responsible for determining the state of multi-si
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/multi-signature.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/multi-signature.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/multi-signature.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/multi-signature.service.ts).
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/multi-signature.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/multi-signature.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
 - Ensure that unsupported methods throw an `NotImplemented` exception.
 
@@ -200,7 +200,7 @@ The Private Key service is responsible for deriving private keys. This is the st
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/private-key.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/private-key.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/private-key.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/private-key.service.ts).
 
 - The `fromMnemonic` method should derive a private key from a BIP39-compliant mnemonic. **Any non-compliant value should throw an exception.**
 - The `fromSecret` method should derive a private key from a string that is not compliant with BIP39. **Any BIP39-compliant value should throw an exception.**
@@ -208,9 +208,9 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/private-key.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/private-key.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
-- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
+- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
 - Ensure that `fromMnemonic` throws an exception if the mnemonic is not compliant with BIP39.
 - Ensure that `fromSecret` throws an exception if the secret is compliant with BIP39.
 - Ensure that unsupported methods throw an `NotImplemented` exception.
@@ -221,7 +221,7 @@ The Public Key service is responsible for deriving public keys.
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/public-key.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/public-key.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/public-key.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/public-key.service.ts).
 
 - The `fromMnemonic` method should derive a public key from a BIP39-compliant mnemonic. **Any non-compliant value should throw an exception.**
 - The `fromMultiSignature` method should derive a public key from a number of participants and their public keys. **If your blockchain does not support MuSig you should not implement this method.**
@@ -230,9 +230,9 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/public-key.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/public-key.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
-- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
+- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
 - Ensure that `fromMnemonic` throws an exception if the mnemonic is not compliant with BIP39.
 - Ensure that `fromSecret` throws an exception if the secret is compliant with BIP39.
 - Ensure that unsupported methods throw an `NotImplemented` exception.
@@ -243,7 +243,7 @@ The Transaction service is responsible for signing transactions.
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/transaction.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/transaction.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/transaction.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/transaction.service.ts).
 
 - The `transfer` method should return a `SignedTransactionData` instance that contains a signed payload for a transfer transaction. **If your blockchain does not support this transaction type you should not implement it.**
 - The `secondSignature` method should return a `SignedTransactionData` instance that contains a signed payload for a second signature transaction. **If your blockchain does not support this transaction type you should not implement it.**
@@ -261,7 +261,7 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/transaction.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/transaction.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
 - Ensure that all methods throw exceptions if invalid input is provided or required input is missing. **What is required and what is optional depends on the blockchain so it's your job to handle this part.**
 - Ensure that all signatories are handled. If you don't support signing with a specific type of signatory you should throw an exception.
@@ -273,7 +273,7 @@ The WIF service is responsible for deriving WIFs.
 
 **Implementation**:
 
-If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/wif.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/wif.service.ts).
+If we take the [implementation contract](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/wif.contract.ts) and apply it to an implementation we can [use ARK as an example](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/wif.service.ts).
 
 - The `fromMnemonic` method should derive a WIF from a BIP39-compliant mnemonic. **Any non-compliant value should throw an exception.**
 - The `fromPrivateKey` method should derive a WIF from a private key. **If your blockchain has legacy private keys because of a change in the signature algorithm you should handle them or throw an exception.**
@@ -281,9 +281,9 @@ If we take the [implementation contract](https://github.com/PayvoHQ/sdk/blob/mas
 
 **Testing**:
 
-Testing the service is fairly straightforward and an example can be seen [here](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/wif.service.test.ts) but we'll outline what you should keep in mind when writing tests.
+Testing the service is fairly straightforward and an example can be seen [here](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/wif.service.test.ts) but we'll outline what you should keep in mind when writing tests.
 
-- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
+- Ensure that all methods produce the same output with the same input, every single time. **Use an [identity fixture](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/test/fixtures/identity.ts) to ensure you are testing against a known set of keys.**
 - Ensure that `fromMnemonic` throws an exception if the mnemonic is not compliant with BIP39.
 - Ensure that `fromSecret` throws an exception if the secret is compliant with BIP39.
 - Ensure that unsupported methods throw an `NotImplemented` exception.
@@ -298,9 +298,9 @@ The `ConfirmedTransactionData` DTO is responsible for normalizing and exposing c
 
 **Relevant**:
 
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.ts)
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.contract.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.contract.ts)
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/confirmed-transaction.dto.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/confirmed-transaction.dto.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.contract.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/confirmed-transaction.dto.contract.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/confirmed-transaction.dto.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/confirmed-transaction.dto.ts)
 
 ### Signed Transaction
 
@@ -310,9 +310,9 @@ Implementing this DTO is fairly straightforward and the SDK provides an `Abstrac
 
 **Relevant**:
 
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/signed-transaction.dto.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/signed-transaction.dto.ts)
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/signed-transaction.dto.contract.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/signed-transaction.dto.contract.ts)
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/signed-transaction.dto.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/signed-transaction.dto.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/signed-transaction.dto.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/signed-transaction.dto.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/signed-transaction.dto.contract.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/signed-transaction.dto.contract.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/signed-transaction.dto.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/signed-transaction.dto.ts)
 
 ### Wallet
 
@@ -320,9 +320,9 @@ The `WalletData` DTO is responsible for normalizing and exposing the data that r
 
 **Relevant**:
 
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/wallet.dto.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/wallet.dto.ts)
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/contracts.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/contracts.ts)
-- [https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/wallet.dto.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/wallet.dto.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/wallet.dto.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/wallet.dto.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/contracts.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/contracts.ts)
+- [https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/wallet.dto.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/wallet.dto.ts)
 
 ## Packaging
 
@@ -330,8 +330,8 @@ Once you've implemented all of the [services](#services) and [data transfer obje
 
 ### Exporting Service Provider
 
-The service provider is what will be executed to create an instance of your implementation. This class should be used to do everything that needs to be done to prepare your coin to be usable. With ARK, for example, we need to [retrieve configurations from the blockchain network](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/coin.provider.ts#L20-L47) while Zilliqa doesn't require any extra work which means we can just [construct the instance](https://github.com/PayvoHQ/sdk/blob/master/packages/zil/source/coin.provider.ts#L6-L8) and move on. **Use [this](https://github.com/PayvoHQ/sdk/blob/master/packages/zil/source/coin.provider.ts) as an example and store it in the `coin.provider.ts` file of your package.**
+The service provider is what will be executed to create an instance of your implementation. This class should be used to do everything that needs to be done to prepare your coin to be usable. With ARK, for example, we need to [retrieve configurations from the blockchain network](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/coin.provider.ts#L20-L47) while Zilliqa doesn't require any extra work which means we can just [construct the instance](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/zil/source/coin.provider.ts#L6-L8) and move on. **Use [this](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/zil/source/coin.provider.ts) as an example and store it in the `coin.provider.ts` file of your package.**
 
 ### Exporting Everything
 
-Now that we've prepared all working parts that need to be exported we can organize them and export the whole construct. **Use [this](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/index.ts) as an example and store it in the `index.ts` file of your package.** Ensure that the name of the export reflects the name of your primary ticker. For ARK the primary ticker is `ARK` because it can be traded on exchanges while `DARK` is the secondary ticker because it is the testnet token.
+Now that we've prepared all working parts that need to be exported we can organize them and export the whole construct. **Use [this](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/index.ts) as an example and store it in the `index.ts` file of your package.** Ensure that the name of the export reflects the name of your primary ticker. For ARK the primary ticker is `ARK` because it can be traded on exchanges while `DARK` is the secondary ticker because it is the testnet token.

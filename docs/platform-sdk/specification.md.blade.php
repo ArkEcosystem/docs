@@ -10,9 +10,9 @@ Each coin follows a strict implementation contract. All of these contracts can b
 
 <x-ark-link-collection
     :links="[
-        ['path' => 'https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/coin.contracts.ts', 'name' => 'Coins'],
-        ['path' => 'https://github.com/PayvoHQ/sdk/tree/master/packages/markets/source/contracts', 'name' => 'Markets'],
-        ['path' => 'https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/dto.ts', 'name' => 'DTO'],
+        ['path' => 'https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/coin.contracts.ts', 'name' => 'Coins'],
+        ['path' => 'https://github.com/ArdentHQ/platform-sdk/tree/master/packages/markets/source/contracts', 'name' => 'Markets'],
+        ['path' => 'https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/dto.ts', 'name' => 'DTO'],
     ]"
 />
 
@@ -74,7 +74,7 @@ const network: Networks.NetworkManifest = {
 export default network;
 ```
 
-> [packages/sdk-ark/source/networks/ark.mainnet.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/networks/ark.mainnet.ts)
+> [packages/sdk-ark/source/networks/ark.mainnet.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/networks/ark.mainnet.ts)
 
 ---
 
@@ -188,7 +188,7 @@ export const explorer: Networks.NetworkManifestExplorer = {
 };
 ```
 
-> [packages/sdk-ark/source/networks/shared.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/ark/source/networks/shared.ts)
+> [packages/sdk-ark/source/networks/shared.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/networks/shared.ts)
 
 ---
 
@@ -302,4 +302,4 @@ export enum FeatureFlag {
 }
 ```
 
-> [packages/sdk/source/enums.ts](https://github.com/PayvoHQ/sdk/blob/master/packages/sdk/source/enums.ts)
+> [packages/sdk/source/enums.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/sdk/source/enums.ts)

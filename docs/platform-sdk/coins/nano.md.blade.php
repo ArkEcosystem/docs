@@ -8,7 +8,7 @@ This is a Nano Driver for the Platform SDK. The implementation makes use of [Nan
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/sdk-nano" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-nano" />
 
 ## Installation
 

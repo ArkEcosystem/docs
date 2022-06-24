@@ -8,7 +8,7 @@ This is a Cryptography package for the Platform SDK. The implementation makes us
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/PayvoHQ/sdk/tree/master/packages/cryptography" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/cryptography" />
 
 ## Installation
 
