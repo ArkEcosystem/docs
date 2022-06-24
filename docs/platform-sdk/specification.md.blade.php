@@ -45,11 +45,11 @@ const network: Networks.NetworkManifest = {
     hosts: [
         {
             type: "full",
-            host: "https://ark-live.payvo.com/api",
+            host: "https://ark-live.arkvault.io/api",
         },
         {
             type: "musig",
-            host: "https://ark-live-musig.payvo.com",
+            host: "https://ark-live-musig.arkvault.io",
         },
         {
             type: "explorer",
