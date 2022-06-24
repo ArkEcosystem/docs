@@ -14,11 +14,11 @@ We recommend to use [Jest](https://jestjs.io/) for testing but any other framewo
 
 ## Example
 
-We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/profiles/source/portfolio.test.ts) class as an example as it exposes a few underlying components of the Payvo SDK.
+We will use the [Portfolio](https://github.com/PayvoHQ/sdk/blob/master/packages/profiles/source/portfolio.test.ts) class as an example as it exposes a few underlying components of the Platform SDK.
 
 ### Mocking Network Requests
 
-This one isn't specific to the Payvo SDK but we do recommend to use [nock](https://github.com/nock/nock) for mocking of network requests. This will make your life a lot easier when you are bootstrapping a coin in tests because a coin will always try to connect to a network to gather some information.
+This one isn't specific to the Platform SDK but we do recommend to use [nock](https://github.com/nock/nock) for mocking of network requests. This will make your life a lot easier when you are bootstrapping a coin in tests because a coin will always try to connect to a network to gather some information.
 
 ```ts
 beforeAll(() => nock.disableNetConnect());

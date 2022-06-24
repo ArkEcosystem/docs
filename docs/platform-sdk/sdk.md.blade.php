@@ -1,10 +1,10 @@
 ---
-title: Payvo SDK
+title: Platform SDK
 ---
 
-# Payvo SDK
+# Platform SDK
 
-This is the foundation of the Payvo SDK. This package contains all of the contracts and foundational functionality to ensure consistent behaviors across all implementations.
+This is the foundation of the Platform SDK. This package contains all of the contracts and foundational functionality to ensure consistent behaviors across all implementations.
 
 ## Repository
 

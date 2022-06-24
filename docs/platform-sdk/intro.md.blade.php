@@ -6,7 +6,7 @@ title: Introduction
 
 ## Coins
 
-The **Coin** section will introduce you to Coins. Coins are the most important part of the Payvo SDK because they provide all of the core functionality that makes it possible to build a standardized user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
+The **Coin** section will introduce you to Coins. Coins are the most important part of the Platform SDK because they provide all of the core functionality that makes it possible to build a standardized user experience across the board. All of them adhere to the contracts laid out in the [specification](/docs/platform-sdk/specification).
 
 <x-ark-link-collection
     :links="[
@@ -84,7 +84,7 @@ The **Internationalization** section will introduce you to locale-based function
 
 ## Profiles
 
-The **Profiles** section will introduce you to the core of our Desktop & Mobile wallets. The profiles package is the amalgamation of all the Payvo SDK components to provide an easy and consistent way of using the SDK in our products.
+The **Profiles** section will introduce you to the core of our Desktop & Mobile wallets. The profiles package is the amalgamation of all the Platform SDK components to provide an easy and consistent way of using the SDK in our products.
 
 <x-ark-link-collection
     :links="[

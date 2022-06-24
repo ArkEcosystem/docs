@@ -4,7 +4,7 @@ title: SDK Development Guide
 
 # SDK Development Guide
 
-The Payvo SDK provides all the boilerplate and structures you need to integrate your blockchain into Payvo products. This guide will provide in-depth explanations as to what you will need to do, how to do it, and what limitations and gotchas there are that need to be kept in mind when developing your integration.
+The Platform SDK provides all the boilerplate and structures you need to integrate your blockchain into Payvo products. This guide will provide in-depth explanations as to what you will need to do, how to do it, and what limitations and gotchas there are that need to be kept in mind when developing your integration.
 
 ## Requirements & Limitations
 
@@ -16,7 +16,7 @@ Besides local resource consumption, you should also keep network traffic in mind
 
 ## Getting Started
 
-Integrating a new blockchain into the Payvo SDK is a fairly straightforward process but there are a few things to keep in mind to provide an integration that follows best practices and recommendations to ensure consistent behavior for clients. Following the best practices and recommendations made in the following sections is essential to providing an implementation that requires low maintenance.
+Integrating a new blockchain into the Platform SDK is a fairly straightforward process but there are a few things to keep in mind to provide an integration that follows best practices and recommendations to ensure consistent behavior for clients. Following the best practices and recommendations made in the following sections is essential to providing an implementation that requires low maintenance.
 
 ### Recommendations
 
@@ -290,7 +290,7 @@ Testing the service is fairly straightforward and an example can be seen [here](
 
 ## Data Transfer Objects (DTOs)
 
-The Payvo SDK exposes a variety of Data Transfer Objects *(referred to as DTO from here on)* to normalize data that is passed around between the SDK and the client. This is important so that we can give the client some guarantees as to what the data will look like when working with the SDK. Without those guarantees, a lot of work would be deferred to the client and result in inconsistent implementations.
+The Platform SDK exposes a variety of Data Transfer Objects *(referred to as DTO from here on)* to normalize data that is passed around between the SDK and the client. This is important so that we can give the client some guarantees as to what the data will look like when working with the SDK. Without those guarantees, a lot of work would be deferred to the client and result in inconsistent implementations.
 
 ### Confirmed Transaction
 
