@@ -8,7 +8,7 @@ This is a ARK Driver for the Platform SDK. The implementation makes use of [ARK]
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-ark" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/ark" />
 
 ## Installation
 

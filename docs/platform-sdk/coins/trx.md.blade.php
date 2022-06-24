@@ -8,7 +8,7 @@ This is a Tron Driver for the Platform SDK. The implementation makes use of [Tro
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-trx" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/trx" />
 
 ## Installation
 

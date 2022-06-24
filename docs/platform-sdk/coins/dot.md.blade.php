@@ -8,7 +8,7 @@ This is an Polkadot Driver for the Platform SDK. The implementation makes use of
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-dot" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/dot" />
 
 ## Installation
 

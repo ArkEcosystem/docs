@@ -8,7 +8,7 @@ This is a Cosmos Driver for the Platform SDK. The implementation makes use of [C
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-atom" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/atom" />
 
 ## Installation
 

@@ -74,7 +74,7 @@ const network: Networks.NetworkManifest = {
 export default network;
 ```
 
-> [packages/sdk-ark/source/networks/ark.mainnet.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/networks/ark.mainnet.ts)
+> [packages/ark/source/networks/ark.mainnet.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/networks/ark.mainnet.ts)
 
 ---
 
@@ -188,7 +188,7 @@ export const explorer: Networks.NetworkManifestExplorer = {
 };
 ```
 
-> [packages/sdk-ark/source/networks/shared.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/networks/shared.ts)
+> [packages/ark/source/networks/shared.ts](https://github.com/ArdentHQ/platform-sdk/blob/master/packages/ark/source/networks/shared.ts)
 
 ---
 

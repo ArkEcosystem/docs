@@ -8,7 +8,7 @@ This is a Terra Driver for the Platform SDK. The implementation makes use of [Te
 
 ## Repository
 
-<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/sdk-luna" />
+<livewire:embed-link url="https://github.com/ArdentHQ/platform-sdk/tree/master/packages/luna" />
 
 ## Installation
 
