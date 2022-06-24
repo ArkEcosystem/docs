@@ -9,7 +9,7 @@ The `Base64` class provides methods to encode, decode, and validate base64 strin
 ## Importing the Base64 class
 
 ```typescript
-import { Base64 } from "@payvo/sdk-cryptography";
+import { Base64 } from "@ardenthq/sdk-cryptography";
 ```
 
 ## Encode a string to Base64

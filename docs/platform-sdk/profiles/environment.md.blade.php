@@ -7,9 +7,9 @@ title: Environment
 ## Create a new environment
 
 ```typescript
-import { ARK } from "@payvo/sdk-ark";
-import { Environment } from "@payvo/sdk-profiles";
-import { Request } from "@payvo/sdk-fetch";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Environment } from "@ardenthq/sdk-profiles";
+import { Request } from "@ardenthq/sdk-fetch";
 
 new Environment({
     coins: { ARK },

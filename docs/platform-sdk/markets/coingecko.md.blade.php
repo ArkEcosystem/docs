@@ -13,7 +13,7 @@ This is a CoinGecko Client for the Payvo SDK. The implementation makes use of [C
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-markets
+yarn add @ardenthq/sdk-markets
 ```
 
 ## Security

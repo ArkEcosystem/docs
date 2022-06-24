@@ -9,7 +9,7 @@ The `BIP32` class provides methods to make derivation of hierarchical determinis
 ## Importing the BIP32 class
 
 ```typescript
-import { BIP32 } from "@payvo/sdk-cryptography";
+import { BIP32 } from "@ardenthq/sdk-cryptography";
 ```
 
 ## Derive a key from a mnemonic

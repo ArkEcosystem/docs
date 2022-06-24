@@ -13,7 +13,7 @@ This is a Nano Driver for the Payvo SDK. The implementation makes use of [Nano](
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-nano
+yarn add @ardenthq/sdk-nano
 ```
 
 ## Specification
@@ -22,4 +22,4 @@ yarn add @payvo/sdk-nano
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

@@ -38,7 +38,7 @@ beforeEach(async () => {
 });
 ```
 
-This is what a typical network mocking setup would look like if you are writing a test that would involve the `@payvohq/sdk-ark` integration when bootstrapping the environment. This ensures that the tests won't be able to use your real network connection which will ensure that your tests throw an exception if you are missing any mocks.
+This is what a typical network mocking setup would look like if you are writing a test that would involve the `@ardenthqhq/sdk-ark` integration when bootstrapping the environment. This ensures that the tests won't be able to use your real network connection which will ensure that your tests throw an exception if you are missing any mocks.
 
 If you are missing any mocks you should make sure that you add them to guarantee consistent results when running your tests but also ensure that they are as fast as they possibly can be.
 

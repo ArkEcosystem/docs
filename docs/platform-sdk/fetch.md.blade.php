@@ -13,18 +13,18 @@ This is an HTTP Client for the Payvo SDK. The implementation makes use of [cross
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-fetch
+yarn add @ardenthq/sdk-fetch
 ```
 
 ## Usage
 
 ```typescript
-import { Environment } from "@payvo/sdk-profiles";
-import { Request } from "@payvo/sdk-fetch";
+import { Environment } from "@ardenthq/sdk-profiles";
+import { Request } from "@ardenthq/sdk-fetch";
 
 new Environment({ httpClient: new Request() });
 ```
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

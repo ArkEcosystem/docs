@@ -9,7 +9,7 @@ The `PBKDF2` (_Password-Based Key Derivation Function 2_) class provides methods
 ## Importing the PBKDF2 class
 
 ```typescript
-import { PBKDF2 } from "@payvo/sdk-cryptography";
+import { PBKDF2 } from "@ardenthq/sdk-cryptography";
 ```
 
 ## Encode a string to Base64

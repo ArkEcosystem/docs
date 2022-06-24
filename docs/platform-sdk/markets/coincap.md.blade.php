@@ -13,7 +13,7 @@ This is a CoinCap Client for the Payvo SDK. The implementation makes use of [Coi
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-markets
+yarn add @ardenthq/sdk-markets
 ```
 
 ## Security

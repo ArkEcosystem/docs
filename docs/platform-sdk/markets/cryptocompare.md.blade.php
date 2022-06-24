@@ -13,7 +13,7 @@ This is a CryptoCompare Client for the Payvo SDK. The implementation makes use o
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-markets
+yarn add @ardenthq/sdk-markets
 ```
 
 ## Security

@@ -13,7 +13,7 @@ This is an Internationalization package for the Payvo SDK. The implementation ma
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-intl
+yarn add @ardenthq/sdk-intl
 ```
 
 ## Usage
@@ -29,4 +29,4 @@ yarn add @payvo/sdk-intl
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

@@ -9,7 +9,7 @@ The `BIP44` class provides methods to extract the numerical value out of any cur
 ## Importing the BIP44 class
 
 ```typescript
-import { BIP44 } from "@payvo/sdk-cryptography";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 ```
 
 ## Derive a child wallet from the given mnemonic

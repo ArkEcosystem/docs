@@ -7,7 +7,7 @@ title: Money
 ## Importing the Money class
 
 ```typescript
-import { Money } from "@payvo/sdk-intl";
+import { Money } from "@ardenthq/sdk-intl";
 ```
 
 ## Get the amount in cents

@@ -25,7 +25,7 @@ Each coin follows a strict implementation contract which can be incomplete for c
 Let's take the `sdk-ark` network manifest as an example. It contains some information like the name and ticker, but the important part is the `featureFlags` object. This object contains all supported services and methods.
 
 ```typescript
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 
 import { explorer, featureFlags, importMethods, transactions } from "./shared";
 
@@ -79,7 +79,7 @@ export default network;
 ---
 
 ```typescript
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 
 export const transactions: Networks.NetworkManifestTransactions = {
     expirationType: "height",

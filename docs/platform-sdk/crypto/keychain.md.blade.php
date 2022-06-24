@@ -9,7 +9,7 @@ The `Keychain` class provides methods to extract the numerical value out of any 
 ## Importing the Keychain class
 
 ```typescript
-import { Keychain } from "@payvo/sdk-cryptography";
+import { Keychain } from "@ardenthq/sdk-cryptography";
 ```
 
 ## Get an account from the keychain

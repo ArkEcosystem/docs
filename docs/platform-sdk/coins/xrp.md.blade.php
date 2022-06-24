@@ -13,7 +13,7 @@ This is a Ripple Driver for the Payvo SDK. The implementation makes use of [Ripp
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-xrp
+yarn add @ardenthq/sdk-xrp
 ```
 
 ## Specification
@@ -22,4 +22,4 @@ yarn add @payvo/sdk-xrp
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

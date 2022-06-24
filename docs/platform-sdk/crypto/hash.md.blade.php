@@ -9,7 +9,7 @@ The `Hash` class provides methods to extract the numerical value out of any curr
 ## Importing the Hash class
 
 ```typescript
-import { Hash } from "@payvo/sdk-cryptography";
+import { Hash } from "@ardenthq/sdk-cryptography";
 ```
 
 ## Hash a value with the RIPEMD160 algorithm

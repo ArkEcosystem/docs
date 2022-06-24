@@ -13,7 +13,7 @@ This is a Stellar Driver for the Payvo SDK. The implementation makes use of [Ste
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-xlm
+yarn add @ardenthq/sdk-xlm
 ```
 
 ## Specification
@@ -22,4 +22,4 @@ yarn add @payvo/sdk-xlm
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

@@ -9,8 +9,8 @@ title: Profiles
 ### Create a new environment
 
 ```typescript
-import { ARK } from "@payvo/sdk-ark";
-import { Environment } from "@payvo/sdk-profiles";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Environment } from "@ardenthq/sdk-profiles";
 
 // 1. Create a new environment
 const env = new Environment({ coins: { ARK }, httpClient: new HttpClient(), storage: "localstorage" });

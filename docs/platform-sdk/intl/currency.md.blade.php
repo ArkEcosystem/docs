@@ -9,7 +9,7 @@ The `Currency` class provides methods to extract the numerical value out of any 
 ## Importing the Currency class
 
 ```typescript
-import { Currency } from "@payvo/sdk-intl";
+import { Currency } from "@ardenthq/sdk-intl";
 ```
 
 ## Instantiating from ARK (with comma)

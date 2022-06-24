@@ -13,7 +13,7 @@ This is a Terra Driver for the Payvo SDK. The implementation makes use of [Terra
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-luna
+yarn add @ardenthq/sdk-luna
 ```
 
 ## Specification
@@ -22,4 +22,4 @@ yarn add @payvo/sdk-luna
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

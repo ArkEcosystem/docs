@@ -7,7 +7,7 @@ title: Numeral
 ## Importing the Numeral class
 
 ```typescript
-import { Numeral } from "@payvo/sdk-intl";
+import { Numeral } from "@ardenthq/sdk-intl";
 ```
 
 ## Format the given number

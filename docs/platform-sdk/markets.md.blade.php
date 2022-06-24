@@ -13,7 +13,7 @@ This is a CoinGecko Client for the Payvo SDK. The implementation makes use of [C
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-markets
+yarn add @ardenthq/sdk-markets
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn add @payvo/sdk-markets
 ### Initialize the market service instance
 
 ```typescript
-import { MarketService } from "@payvo/sdk-markets";
+import { MarketService } from "@ardenthq/sdk-markets";
 
 MarketService.make("cryptocompare", new Request());
 ```
@@ -106,4 +106,4 @@ await marketService.dailyAverage("ark", "btc", Date.now());
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

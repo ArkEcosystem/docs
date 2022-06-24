@@ -13,7 +13,7 @@ This is a Cryptography package for the Payvo SDK. The implementation makes use n
 ## Installation
 
 ```bash
-yarn add @payvo/sdk-cryptography
+yarn add @ardenthq/sdk-cryptography
 ```
 
 ## Usage
@@ -39,4 +39,4 @@ yarn add @payvo/sdk-cryptography
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@payvo.com](mailto:security@payvo.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@ardenthq.com](mailto:security@ardenthq.com). All security vulnerabilities will be promptly addressed.

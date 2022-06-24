@@ -9,7 +9,7 @@ The `Currency` class provides methods to extract the numerical value out of any 
 ## Importing the DateTime class
 
 ```typescript
-import { DateTime } from "@payvo/sdk-intl";
+import { DateTime } from "@ardenthq/sdk-intl";
 ```
 
 ## Create an instance from a date
