@@ -1220,7 +1220,7 @@ See [Peer-to-Peer](#peer-to-peer)
 
 See [Mnemonic](#mnemonic)
 
-### Payvo SDK
+### Platform SDK
 
 The simplest way for developers to interface with over a dozen popular Blockchain technologies including Bitcoin, Ethereum, Cardano, Polkadot, Solana, and more...
 
@@ -1348,7 +1348,7 @@ Describes a public method by which the randomness of a process can be confirmed.
 
 ### PSDK
 
-See [Payvo SDK](#payvo-sdk)
+See [Platform SDK](#platform-sdk)
 
 ### Pseudonymous
 
