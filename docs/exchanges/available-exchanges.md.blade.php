@@ -215,12 +215,6 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-usd
     />
     <x-table.rows.exchange
-        name="p2pb2b"
-        icon="docs-exchanges.assets.icons.p2pb2b"
-        url="https://p2pb2b.com"
-        has-btc has-eth
-    />
-    <x-table.rows.exchange
         name="Probit"
         icon="docs-exchanges.assets.icons.probit"
         url="https://www.probit.com"
