@@ -132,12 +132,6 @@ If your exchange appears below but requires updating, or if you support $ARK and
         url="https://crypto.com"
     />
     <x-table.rows.exchange
-        name="CryptosDesk"
-        icon="docs-exchanges.assets.icons.cryptosdesk"
-        url="https://www.cryptosdesk.io"
-        has-btc has-eth has-usd
-    />
-    <x-table.rows.exchange
         name="Exodus"
         icon="docs-exchanges.assets.icons.exodus"
         url="https://www.exodus.com"
