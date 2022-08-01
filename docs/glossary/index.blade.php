@@ -1,29 +1,29 @@
 <h3 class="pl-9 mt-4 pt-4 text-base font-semibold uppercase border-t text-theme-secondary-500 border-theme-secondary-200">Glossary</h3>
 
-<x-ark-docs-sidebar-link top-level path="#2" name="2" />
-<x-ark-docs-sidebar-link top-level path="#a" name="A" />
-<x-ark-docs-sidebar-link top-level path="#b" name="B" />
-<x-ark-docs-sidebar-link top-level path="#c" name="C" />
-<x-ark-docs-sidebar-link top-level path="#d" name="D" />
-<x-ark-docs-sidebar-link top-level path="#e" name="E" />
-<x-ark-docs-sidebar-link top-level path="#f" name="F" />
-<x-ark-docs-sidebar-link top-level path="#g" name="G" />
-<x-ark-docs-sidebar-link top-level path="#h" name="H" />
-<x-ark-docs-sidebar-link top-level path="#i" name="I" />
-<x-ark-docs-sidebar-link top-level path="#j" name="J" />
-<x-ark-docs-sidebar-link top-level path="#k" name="K" />
-<x-ark-docs-sidebar-link top-level path="#l" name="L" />
-<x-ark-docs-sidebar-link top-level path="#m" name="M" />
-<x-ark-docs-sidebar-link top-level path="#n" name="N" />
-<x-ark-docs-sidebar-link top-level path="#o" name="O" />
-<x-ark-docs-sidebar-link top-level path="#p" name="P" />
-<x-ark-docs-sidebar-link top-level path="#q" name="Q" />
-<x-ark-docs-sidebar-link top-level path="#r" name="R" />
-<x-ark-docs-sidebar-link top-level path="#s" name="S" />
-<x-ark-docs-sidebar-link top-level path="#t" name="T" />
-<x-ark-docs-sidebar-link top-level path="#u" name="U" />
-<x-ark-docs-sidebar-link top-level path="#v" name="V" />
-<x-ark-docs-sidebar-link top-level path="#w" name="W" />
-<x-ark-docs-sidebar-link top-level path="#x" name="X" />
-<x-ark-docs-sidebar-link top-level path="#y" name="Y" />
-<x-ark-docs-sidebar-link top-level path="#z" name="Z" />
+<x-ark-docs-sidebar-link top-level path="#2" name="2" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#a" name="A" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#b" name="B" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#c" name="C" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#d" name="D" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#e" name="E" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#f" name="F" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#g" name="G" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#h" name="H" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#i" name="I" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#j" name="J" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#k" name="K" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#l" name="L" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#m" name="M" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#n" name="N" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#o" name="O" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#p" name="P" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#q" name="Q" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#r" name="R" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#s" name="S" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#t" name="T" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#u" name="U" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#v" name="V" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#w" name="W" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#x" name="X" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#y" name="Y" :top-border="false" />
+<x-ark-docs-sidebar-link top-level path="#z" name="Z" :top-border="false" />
