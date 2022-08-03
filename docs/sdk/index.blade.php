@@ -1,4 +1,4 @@
-<x-ark-docs-sidebar-group :path="['/docs/sdk/intro', '/docs/sdk']" title="Introduction">
+<x-ark-docs-sidebar-group :path="['/docs/sdk/intro', '/docs/sdk']" title="Introduction" borderless>
     <x-ark-docs-sidebar-link path="/docs/sdk/intro" name="Introduction" />
 </x-ark-docs-sidebar-group>
 
