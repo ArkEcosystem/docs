@@ -1,6 +1,6 @@
-<h3 class="pl-9 mt-4 pt-4 text-base font-semibold uppercase border-t text-theme-secondary-500 border-theme-secondary-200">Glossary</h3>
+<x-ark-docs-sidebar-subheading>Glossary</x-ark-docs-sidebar-subheading>
 
-<x-ark-docs-sidebar-link top-level path="#2" name="2" />
+<x-ark-docs-sidebar-link top-level path="#2" name="2" top-border />
 <x-ark-docs-sidebar-link top-level path="#a" name="A" />
 <x-ark-docs-sidebar-link top-level path="#b" name="B" />
 <x-ark-docs-sidebar-link top-level path="#c" name="C" />

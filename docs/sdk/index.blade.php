@@ -1,4 +1,4 @@
-<x-ark-docs-sidebar-group :path="['/docs/sdk/intro', '/docs/sdk']" title="Introduction">
+<x-ark-docs-sidebar-group :path="['/docs/sdk/intro', '/docs/sdk']" title="Introduction" borderless>
     <x-ark-docs-sidebar-link path="/docs/sdk/intro" name="Introduction" />
 </x-ark-docs-sidebar-group>
 
@@ -16,7 +16,7 @@
 />
 @endforeach
 
-<h3 class="pl-9 mt-4 pt-4 text-base font-semibold uppercase border-t text-theme-secondary-500 border-theme-secondary-200">Deprecated</h3>
+<x-ark-docs-sidebar-subheading>Deprecated</x-ark-docs-sidebar-subheading>
 
 @foreach(Documentation::deprecatedSDK() as $sdk)
 <x-sdk-sidebar-group

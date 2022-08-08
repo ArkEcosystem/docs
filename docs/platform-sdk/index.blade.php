@@ -4,7 +4,7 @@
     '/docs/platform-sdk/specification',
     '/docs/platform-sdk/testing',
     '/docs/platform-sdk/guidelines',
-]" title="Introduction">
+]" title="Introduction" borderless>
     <x-ark-docs-sidebar-link path="/docs/platform-sdk" name="Introduction" />
     <x-ark-docs-sidebar-link path="/docs/platform-sdk/architecture" name="Architecture" />
     <x-ark-docs-sidebar-link path="/docs/platform-sdk/specification" name="Specification" />

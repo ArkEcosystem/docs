@@ -1,4 +1,4 @@
-<x-ark-docs-sidebar-group first :path="['/docs/core/intro', '/docs/core']" title="Introduction">
+<x-ark-docs-sidebar-group first :path="['/docs/core/intro', '/docs/core']" title="Introduction" borderless>
     <x-ark-docs-sidebar-link path="/docs/core/intro" name="Welcome to ARK Core v3" />
 </x-ark-docs-sidebar-group>
 
