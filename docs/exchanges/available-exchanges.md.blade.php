@@ -56,6 +56,11 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
+        name="Bitladon"
+        icon="docs-exchanges.assets.icons.bitladon"
+        url="https://www.bitladon.com"
+    />
+    <x-table.rows.exchange
         name="Bitsonic"
         icon="docs-exchanges.assets.icons.bitsonic"
         url="https://bitsonic.co.kr"
