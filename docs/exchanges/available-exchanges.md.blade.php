@@ -1,6 +1,6 @@
 # Available Exchanges
 
-$ARK is available from over 40 exchange providers (as listed below). The pairs provided indicate whether it is possible to exchange a given cryptoasset for $ARK (Bitcoin, Ethereum and stablecoins USDC and USDT).
+$ARK is available from over 40 exchange providers (as listed below). The pairs provided indicate whether it is possible to exchange a given cryptoasset for $ARK (Bitcoin, Ethereum and stablecoins USDC and/or USDT and/or BUSD).
 
 If a listed exchange displays an :x: for all of these options, it means that other means of purchasing $ARK exist, such as fiat currency (SEPA, bank transfers and so forth) or credit card only.
 
@@ -47,7 +47,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
         name="Binance"
         icon="docs-exchanges.assets.icons.binance"
         url="https://www.binance.com"
-        has-btc
+        has-btc has-usd
     />
     <x-table.rows.exchange
         name="Bitexen"
@@ -197,6 +197,12 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
+        name="Mandala Exchange"
+        icon="docs-exchanges.assets.icons.mandalaex"
+        url="https://mandala.exchange/"
+        has-btc has-usd
+    />
+    <x-table.rows.exchange
         name="MEXC"
         icon="docs-exchanges.assets.icons.mexc"
         url="https://www.mexc.com"
@@ -276,6 +282,12 @@ If your exchange appears below but requires updating, or if you support $ARK and
         name="Wazirx"
         icon="docs-exchanges.assets.icons.wazirx"
         url="https://wazirx.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="xInvestor"
+        icon="docs-exchanges.assets.icons.xinvestor"
+        url="https://www.xinvestor.com/"
         has-usd
     />
 </x-table.exchanges>
