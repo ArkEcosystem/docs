@@ -209,6 +209,12 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-usd
     />
     <x-table.rows.exchange
+        name="Nominex"
+        icon="docs-exchanges.assets.icons.nominex"
+        url="https://nominex.io"
+        has-btc
+    />
+    <x-table.rows.exchange
         name="Probit"
         icon="docs-exchanges.assets.icons.probit"
         url="https://www.probit.com"
