@@ -284,7 +284,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
         url="https://wazirx.com"
         has-usd
     />
-	<x-table.rows.exchange
+    <x-table.rows.exchange
         name="xInvestor"
         icon="docs-exchanges.assets.icons.xinvestor"
         url="https://www.xinvestor.com/"
