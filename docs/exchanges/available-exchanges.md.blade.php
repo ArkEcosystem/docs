@@ -296,4 +296,10 @@ If your exchange appears below but requires updating, or if you support $ARK and
         url="https://www.xinvestor.com/"
         has-usd
     />
+    <x-table.rows.exchange
+        name="ZT Exchange"
+        icon="docs-exchanges.assets.icons.ztbzh"
+        url="https://www.ztbzh.net"
+        has-usd
+    />
 </x-table.exchanges>
