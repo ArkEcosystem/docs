@@ -297,7 +297,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-usd
     />
     <x-table.rows.exchange
-        name="ZT Global"
+        name="ZT Exchange"
         icon="docs-exchanges.assets.icons.ztbzh"
         url="https://www.ztbzh.net"
         has-usd
