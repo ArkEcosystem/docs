@@ -99,7 +99,7 @@ Open the **MetaMask Extension** in your browser and click on the **Assets** tab.
 
 ![](/storage/docs/docs/core/assets/migration/av-metamask-import-tokens.png)
 
-You will then need to enter the **DARK Token contract address** in the field provided. For your convenience, the contract address is *(add-contract-address-here)*. Simply copy and paste the token contract address in the field provided.
+You will then need to enter the **DARK Token contract address** in the field provided. For your convenience, the contract address is `0x23117305080f62b803ce0271cae547cbf84e5627`. Simply copy and paste the token contract address in the field provided.
 
 ![](/storage/docs/docs/core/assets/migration/av-metamask-custom-token.png)
 
