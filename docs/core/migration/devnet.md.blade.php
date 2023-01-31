@@ -129,26 +129,26 @@ Note that if you wish to transfer or move your DARK tokens around on the Mumbai 
 
 ## Troubleshooting
 
-**Can I migrate my DARK tokens on Polygon back to the ARK Devnet once a migration is complete?**
+### Can I migrate my DARK tokens on Polygon back to the ARK Devnet once a migration is complete?
 
 Once you migrate your DARK tokens to Polygon, you cannot transfer them back to the ARK Devnet. The migration process is one-way and thus irreversible. Any corresponding DARK tokens that existed on the ARK Devnet will transfer to a burn address and cease to exist once you have migrated your tokens to Polygon's Mumbai Testnet.
 
-**I don't want to migrate all of my tokens to Polygon immediately. How do I only send some tokens from a wallet?**
+### I don't want to migrate all of my tokens to Polygon immediately. How do I only send some tokens from a wallet?
 
 Migrations transfer the entire wallet balance to Polygon. If you do not wish to transfer all of your tokens immediately, you will need to send the amount you wish to migrate to another (empty) ARK Devnet wallet and use that wallet to perform the migration.
 
-**Can I use any wallet other than MetaMask?**
+### Can I use any wallet other than MetaMask?
 
 You may only migrate tokens using ARKVault and MetaMask. This approach ensures that the process is kept as secure and straightforward as possible. You cannot connect any other kind of Ethereum wallet to ARKVault in order to carry out a migration.
 
-**I can't see my DARK tokens in my MetaMask after migrating from the ARK Devnet**
+### I can't see my DARK tokens in my MetaMask after migrating from the ARK Devnet
 
 Migrations should occur instantly but can take up to 5 minutes to complete. However, you will not see the tokens until you have added them to MetaMask. For more information, please refer to the [Viewing Your Migrated Tokens in MetaMask](#viewing-your-migrated-tokens-in-metamask) section of this guide.
 
-**I can't transfer or move my DARK tokens on the Polygon Network**
+### I can't transfer or move my DARK tokens on the Polygon Network
 
 MATIC is the native digital asset used to pay network fees on Polygon networks. For this reason you will need to fund your MetaMask wallet with some MATIC if you want to move or transfer your DARK tokens on the network.
 
-**I can't see my ARK Devnet wallet in the Migration Wizard**
+### I can't see my ARK Devnet wallet in the Migration Wizard
 
 Only ARK Devnet wallets with a balance greater than or equal to 1 DARK will appear on the Migration Wizard. Ensure that your wallet possesses the minimum number of tokens for migration before attempting to migrate your tokens.
