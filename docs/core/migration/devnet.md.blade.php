@@ -26,7 +26,7 @@ To begin, log in to your ARKVault profile and click on either the **Migration** 
 ![](/storage/docs/docs/core/assets/migration/av-portfolio-migration.png)
 
 <x-alert type="hint">
-You will need to have at least *one* wallet with a minimum balance of **1 DARK** in order to successfully migrate your tokens. For more information on importing wallets, please see the [Import a Wallet](/docs/wallets/import) page.
+You will need to have at least *one* wallet with a minimum balance of **1 DARK** in order to successfully migrate your tokens. For more information on importing wallets, please see the [Import a Wallet](https://arkvault.io/docs/wallets/import) page. In case you have no DARK tokens, you can make use of our [DARK Faucet](https://faucet.ark.io) to get some.
 </x-alert>
 
 The **Migrate to Polygon** page will appear. To begin the migration process, click the **New Migration** button located near the top right corner of the page.
