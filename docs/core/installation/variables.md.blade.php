@@ -44,6 +44,10 @@ This variable determines how many requests a user can send for any given period.
 
 This variable determines which user are exempted from rate limiting.
 
+## CORE_API_SEMAPHORE_DISABLED
+
+This variable determines if semaphore plugin is disabled.
+
 ## CORE_API_SSL
 
 This variable determines if SSL (HTTPS) is enabled.
