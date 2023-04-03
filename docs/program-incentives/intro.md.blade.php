@@ -17,6 +17,7 @@ Developers are expected to follow contribution guidelines to keep the codebase e
     :links="[
         ['path' => '/docs/program-incentives/guidelines/clean-code-and-tests', 'name' => 'Clean Code & Tests'],
         ['path' => '/docs/program-incentives/guidelines/contributing', 'name' => 'Contributing'],
+        ['path' => '/docs/program-incentives/guidelines/code-of-conduct', 'name' => 'Code of Conduct'],
         ['path' => '/docs/program-incentives/guidelines/releases-and-versioning', 'name' => 'Releases & Versioning'],
         ['path' => '/docs/program-incentives/guidelines/laravel-and-php', 'name' => 'Laravel & PHP'],
         ['path' => '/docs/program-incentives/guidelines/frontend-frameworks', 'name' => 'Frontend Frameworks'],
