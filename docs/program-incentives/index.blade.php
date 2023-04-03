@@ -8,6 +8,7 @@
 
 <x-ark-docs-sidebar-group path="/docs/program-incentives/guidelines/*" title="Guidelines">
     <x-ark-docs-sidebar-link path="/docs/program-incentives/guidelines/contributing" name="Contributing" />
+    <x-ark-docs-sidebar-link path="/docs/program-incentives/guidelines/code-of-conduct" name="Code of Conduct" />
     <x-ark-docs-sidebar-link path="/docs/program-incentives/guidelines/clean-code-and-tests" name="Clean Code & Tests" />
     <x-ark-docs-sidebar-link path="/docs/program-incentives/guidelines/version-control" name="Version Control" />
     <x-ark-docs-sidebar-link path="/docs/program-incentives/guidelines/releases-and-versioning" name="Releases & Versioning" />
