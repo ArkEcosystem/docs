@@ -50,6 +50,12 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-usd
     />
     <x-table.rows.exchange
+        name="BingX"
+        icon="docs-exchanges.assets.icons.bingx"
+        url="https://bingx.com"
+        has-usd
+    />
+    <x-table.rows.exchange
         name="Bitexen"
         icon="docs-exchanges.assets.icons.bitexen"
         url="https://www.bitexen.com"
