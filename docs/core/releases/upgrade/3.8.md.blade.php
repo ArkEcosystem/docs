@@ -47,6 +47,7 @@ PGUSER=$(grep CORE_DB_USER .config/ark-core/mainnet/.env | cut -d'=' -f2)
 PGPASSWORD=$(grep CORE_DB_PASSWORD .config/ark-core/mainnet/.env | cut -d'=' -f2)
 psql -l
 ```
+
 - You should see your ARK DB.
 
 **Remove the old PostgreSQL version and PG cluster**
