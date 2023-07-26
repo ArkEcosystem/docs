@@ -213,8 +213,8 @@
         path="/docs/core/releases"
         name="3.8.2"
         :children="[
-            ['path' => '/docs/core/releases/release/3.82', 'name' => '3.8.2 Release Guide'],
-            ['path' => '/docs/core/releases/upgrade/3.82', 'name' => '3.8.2 Upgrade Guide'],
+            ['path' => '/docs/core/releases/release/3.8', 'name' => '3.8.2 Release Guide'],
+            ['path' => '/docs/core/releases/upgrade/3.8', 'name' => '3.8.2 Upgrade Guide'],
         ]"
     />
     <x-ark-docs-sidebar-link
