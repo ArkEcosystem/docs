@@ -256,6 +256,13 @@ The **Releases** section provides important ARK Core release and upgrade informa
 
 <x-ark-link-collection
     :links="[
+        ['path' => '/docs/core/releases/release/3.1', 'name' => '3.8.2 Release Guide'],
+        ['path' => '/docs/core/releases/upgrade/3.82', 'name' => '3.8.2 Upgrade Guide'],
+    ]"
+/>
+
+<x-ark-link-collection
+    :links="[
         ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
     ]"
 />

@@ -11,14 +11,14 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 ---
 
 <x-alert type="warning">
-Ubuntu 16.x is **no longer** supported.
+Ubuntu 16.x is **no longer** supported. We also strongly suggest using PostgreSQL 15.x for Core when setting up a new server.
 </x-alert>
 
 ---
 
 | Supported OS | Release Version(s) |
 | :----------: | :----------------: |
-| **Ubuntu**   | 18.x / 20.x        |
+| **Ubuntu**   | 18.x / 20.x / 22.x       |
 
 | Relay Specification | Minimum | Recommended   |
 | :-----------------: | :-----: | :-----------: |
