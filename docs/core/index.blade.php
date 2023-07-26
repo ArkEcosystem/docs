@@ -218,11 +218,6 @@
     />
 </x-ark-docs-sidebar-group>
 
-<x-ark-docs-sidebar-group path="/docs/core/migration" title="Migration">
-    <x-ark-docs-sidebar-link path="/docs/core/migration/devnet" name="Devnet" />
-    <x-ark-docs-sidebar-link path="/docs/core/migration/mainnet" name="Mainnet" />
-</x-ark-docs-sidebar-group>
-
 <x-ark-docs-sidebar-group path="/docs/core/support/*" title="Support">
     <x-ark-docs-sidebar-link path="/docs/core/support/troubleshooting" name="Troubleshooting" />
     <x-ark-docs-sidebar-link path="/docs/core/support/security" name="Security Vulnerabilities" />
