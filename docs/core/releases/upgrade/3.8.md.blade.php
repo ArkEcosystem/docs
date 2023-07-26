@@ -24,7 +24,7 @@ The procedure below gives you the exact steps needed for the upgrade to the late
     These steps have only been tested on Ubuntu versions 18 and 20.
 </x-alert>
 
-**Stop Core and install latest PostgreSQL.**
+### Step 1. Stop Core and install latest PostgreSQL
 
 ```bash
 pm2 stop all
@@ -33,14 +33,14 @@ echo "deb [signed-by=/usr/share/keyrings/pgdg.gpg] http://apt.postgresql.org/pub
 sudo apt-get update && sudo apt-get install postgresql -y
 ```
 
-**Drop the default new PostgreSQL cluster created with the install and perform the upgrade process**
+### Step 2. Drop the default new PostgreSQL cluster created with the install and perform the upgrade process
 
 ```bash
 sudo pg_dropcluster --stop $(pg_lsclusters -h | awk 'NR==2' | awk '{print $1}') main
 sudo pg_upgradecluster $(pg_lsclusters -h | awk '{print $1}') main
 ```
 
-**Make sure you are able to list DBs**
+### Step 3. Make sure you are able to list DBs
 
 ```bash
 PGUSER=$(grep CORE_DB_USER .config/ark-core/mainnet/.env | cut -d'=' -f2)
@@ -50,13 +50,13 @@ psql -l
 
 - You should see your ARK DB.
 
-**Remove the old PostgreSQL version and PG cluster**
+### Step 4. Remove the old PostgreSQL version and PG cluster
 
 ```bash
 sudo apt-get purge postgresql-contrib postgresql-$(pg_lsclusters -h | awk 'NR==1' | awk '{print $1}') -y
 ```
 
-**Finally restart your new PostgreSQL and start Core**
+### Step 5. Finally restart your new PostgreSQL and start Core
 
 ```bash
 sudo systemctl restart postgresql
