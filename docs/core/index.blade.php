@@ -211,16 +211,19 @@
     />
     <x-ark-docs-sidebar-link
         path="/docs/core/releases"
+        name="3.8.2"
+        :children="[
+            ['path' => '/docs/core/releases/release/3.8', 'name' => '3.8.2 Release Guide'],
+            ['path' => '/docs/core/releases/upgrade/3.8', 'name' => '3.8.2 Upgrade Guide'],
+        ]"
+    />
+    <x-ark-docs-sidebar-link
+        path="/docs/core/releases"
         name="4.0 (Development)"
         :children="[
             ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
         ]"
     />
-</x-ark-docs-sidebar-group>
-
-<x-ark-docs-sidebar-group path="/docs/core/migration" title="Migration">
-    <x-ark-docs-sidebar-link path="/docs/core/migration/devnet" name="Devnet" />
-    <x-ark-docs-sidebar-link path="/docs/core/migration/mainnet" name="Mainnet" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/core/support/*" title="Support">
