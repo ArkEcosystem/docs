@@ -79,6 +79,12 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc
     />
     <x-table.rows.exchange
+        name="Bybit"
+        icon="docs-exchanges.assets.icons.bybit"
+        url="https://www.bybit.com/"
+        has-usd
+    />
+    <x-table.rows.exchange
         name="Changelly"
         icon="docs-exchanges.assets.icons.changelly"
         url="https://changelly.com"
