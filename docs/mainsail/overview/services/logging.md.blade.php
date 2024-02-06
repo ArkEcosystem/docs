@@ -8,16 +8,6 @@ When working with any application, the necessity for logging is there and nothin
 
 > The default logger that ships with ARK Core is an implementation of [pino](https://github.com/pinojs/pino) with support for console and file streams.
 
-## Prerequisites
-
-Before we start, we need to establish what a few recurring variables and imports in this document refer to when they are used.
-
-```typescript
-import { app } from "@arkecosystem/core-kernel";
-```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
-
 ## Usage
 
 The application logger is accessible through the `log` property of the `app` instance. The logger contract that is provided by ARK Core follows the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424).

@@ -12,18 +12,6 @@ In this article we'll look into what they do, how to use them, what ups and down
 All stage functions and stage handlers can be synchronous and asynchronous. By default, we recommend to use the **process** method to process all stages sequentially with async/await. If you wish to process all stages synchronously then you can use the **processSync** method.
 </x-alert>
 
-## Prerequisites
-
-Before we start, we need to establish what a few recurring variables and imports in this document refer to when they are used.
-
-```typescript
-import { app, Container, Services } from "@arkecosystem/core-kernel";
-```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
-* The `Container` import refers to a namespace that contains all of the container specific entities like binding symbols and interfaces.
-* The `Services` import refers to a namespace that contains all of the core services. This generally will only be needed for type hints as Core is responsible for service creation and maintenance.
-
 ## Creating a Pipeline
 
 When you have the need for a new pipeline, you'll need to resolve it through the application in order to ensure that it has all of the required dependencies for it to function injected into it.

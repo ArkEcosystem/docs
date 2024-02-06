@@ -6,18 +6,6 @@ title: Services - Cache
 
 Core ships with a cache abstraction that makes it easy to switch from an in-memory cache to a redis-based one. The default driver that is shipped provides an in-memory cache but using your own cache driver is just as easy.
 
-## Prerequisites
-
-Before we start, we need to establish what a few recurring variables and imports in this document refer to when they are used.
-
-```typescript
-import { app, Container, Services } from "@arkecosystem/core-kernel";
-```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
-* The `Container` import refers to a namespace that contains all of the container specific entities like binding symbols and interfaces.
-* The `Services` import refers to a namespace that contains all of the core services. This generally will only be needed for type hints as Core is responsible for service creation and maintenance.
-
 ## Cache Usage
 
 ### Create an instance

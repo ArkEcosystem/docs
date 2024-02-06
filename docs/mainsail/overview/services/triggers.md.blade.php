@@ -8,18 +8,6 @@ Triggers allow you to overwrite specific functionality of Core which would other
 
 We ship with a few default triggers like `validateBlock`, `validateTransaction` and `acceptPeer`. If you are running a fork or working on a bridgechain and plan to overwrite them you should stick around as we go into more details.
 
-## Prerequisites
-
-Before we start, we need to establish what a few recurring variables and imports in this document refer to when they are used.
-
-```typescript
-import { app, Container, Services } from "@arkecosystem/core-kernel";
-```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
-* The `Container` import refers to a namespace that contains all of the container specific entities like binding symbols and interfaces.
-* The `Services` import refers to a namespace that contains all of the core services. This generally will only be needed for type hints as Core is responsible for service creation and maintenance.
-
 ## Architecture
 
 The Trigger service consists of two entities - the **Triggers** and **Action** class. The **Triggers** class is responsible for storing all triggers associated with their action. The **Action** class is responsible for storing all information about an action, like what function and hooks should be executed.

@@ -8,18 +8,6 @@ There will be times where you have tasks that need to be executed on a fixed sch
 
 Core makes running recurring tasks easy by providing a task scheduling manager that allows tasks to be scheduled based on times or block events.
 
-## Prerequisites
-
-Before we start, we need to establish what a few recurring variables and imports in this document refer to when they are used.
-
-```typescript
-import { app, Container, Services } from "@arkecosystem/core-kernel";
-```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
-* The `Container` import refers to a namespace that contains all of the container specific entities like binding symbols and interfaces.
-* The `Services` import refers to a namespace that contains all of the core services. This generally will only be needed for type hints as Core is responsible for service creation and maintenance.
-
 ## Cron Job
 
 ### Get an instance of a CronJob

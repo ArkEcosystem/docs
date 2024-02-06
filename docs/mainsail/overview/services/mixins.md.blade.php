@@ -10,16 +10,6 @@ TypeScript has something called mixins. They act somewhat like traits in PHP, wi
 
 Mixins are a powerful tool to make use of composition over inheritance but they should be used with caution, as with everything, or you'll end up with the same issues that come with the excessive use of inheritance.
 
-## Prerequisites
-
-Before we start we need to establish what a few recurring variables and imports in this document refer to when they are used.
-
-```typescript
-import { app } from "@arkecosystem/core-kernel";
-```
-
-* The `app` import refers to the application instance which grants access to the container, configurations, system information and more.
-
 ## Mixins Usage
 
 ```typescript
