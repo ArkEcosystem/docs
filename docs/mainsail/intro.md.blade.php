@@ -124,64 +124,6 @@ The **Deployment** section will guide you through important actions such as the 
     ]"
 />
 
-## Development Guides
-
-The **Development Guides** section will guide you, step-by-step, through customizing essential Mainsail plugins and services.
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/development/factories', 'name' => 'Creating Factories'],
-        ['path' => '/docs/mainsail/development/testnet', 'name' => 'Launching a Testnet'],
-        ['path' => '/docs/mainsail/development/explorer', 'name' => 'Launching a Block Explorer'],
-        ['path' => '/docs/mainsail/development/core-tester-cli', 'name' => 'Using the Core-Tester-CLI'],
-        ['path' => '/docs/mainsail/development/emitters', 'name' => 'Creating Event Emitters'],
-        ['path' => '/docs/mainsail/development/api', 'name' => 'Creating API Servers'],
-        ['path' => '/docs/mainsail/development/milestones', 'name' => 'Implementing Milestones'],
-        ['path' => '/docs/mainsail/development/docker', 'name' => 'Using Docker'],
-    ]"
-/>
-
-### CLI
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/development/cli/available', 'name' => 'Available Commands'],
-        ['path' => '/docs/mainsail/development/cli/create', 'name' => 'Creating Commands'],
-    ]"
-/>
-
-### dApps
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/development/dapps/intro', 'name' => 'Authoring Core dApps'],
-        ['path' => '/docs/mainsail/development/dapps/structure', 'name' => 'Modeling the Structure'],
-        ['path' => '/docs/mainsail/development/dapps/module', 'name' => 'Creating a Module'],
-    ]"
-/>
-
-### Plugins
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/development/plugins/intro', 'name' => 'Authoring Plugins'],
-        ['path' => '/docs/mainsail/development/plugins/manage', 'name' => 'Managing Plugins'],
-    ]"
-/>
-
-### Custom Transactions
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/development/transactions/intro', 'name' => 'Authoring Transaction Types'],
-        ['path' => '/docs/mainsail/development/transactions/structure', 'name' => 'Defining the Structure'],
-        ['path' => '/docs/mainsail/development/transactions/builder', 'name' => 'Implementing the Builder'],
-        ['path' => '/docs/mainsail/development/transactions/handlers', 'name' => 'Implementing the Handler'],
-        ['path' => '/docs/mainsail/development/transactions/load', 'name' => 'Loading the dApp'],
-        ['path' => '/docs/mainsail/development/transactions/run', 'name' => 'Running the Example'],
-    ]"
-/>
-
 ## Testing
 
 The **Testing** section will introduce you to the most importing tools and knowledge needed to test Mainsail and it's plugins and services.

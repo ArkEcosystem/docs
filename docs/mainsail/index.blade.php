@@ -86,54 +86,6 @@
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/snapshots" name="Using Snapshots" />
 </x-ark-docs-sidebar-group>
 
-<x-ark-docs-sidebar-group path="/docs/mainsail/development/*" title="Development Guides">
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/factories" name="Creating Factories" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/testnet" name="Launching a Testnet" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/explorer" name="Launching a Block Explorer" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/core-tester-cli" name="Using the Core-Tester-CLI" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/emitters" name="Creating Event Emitters" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/api" name="Creating API Servers" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/milestones" name="Implementing Milestones" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/development/docker" name="Using Docker" />
-    <x-ark-docs-sidebar-link
-        path="/docs/mainsail/development/cli"
-        name="Core CLI"
-        :children="[
-            ['path' => '/docs/mainsail/development/cli/available', 'name' => 'Available Commands'],
-            ['path' => '/docs/mainsail/development/cli/create', 'name' => 'Creating Commands'],
-        ]"
-    />
-    <x-ark-docs-sidebar-link
-        path="/docs/mainsail/development/dapps"
-        name="dApps"
-        :children="[
-            ['path' => '/docs/mainsail/development/dapps/intro', 'name' => 'Authoring Core dApps'],
-            ['path' => '/docs/mainsail/development/dapps/structure', 'name' => 'Modeling the Structure'],
-            ['path' => '/docs/mainsail/development/dapps/module', 'name' => 'Creating a Module'],
-        ]"
-    />
-    <x-ark-docs-sidebar-link
-        path="/docs/mainsail/development/plugins"
-        name="Plugins"
-        :children="[
-            ['path' => '/docs/mainsail/development/plugins/intro', 'name' => 'Authoring Plugins'],
-            ['path' => '/docs/mainsail/development/plugins/manage', 'name' => 'Managing Plugins'],
-        ]"
-    />
-    <x-ark-docs-sidebar-link
-        path="/docs/mainsail/development/transactions"
-        name="Custom Transactions"
-        :children="[
-            ['path' => '/docs/mainsail/development/transactions/intro', 'name' => 'Authoring Transaction Types'],
-            ['path' => '/docs/mainsail/development/transactions/structure', 'name' => 'Defining the Structure'],
-            ['path' => '/docs/mainsail/development/transactions/builder', 'name' => 'Implementing the Builder'],
-            ['path' => '/docs/mainsail/development/transactions/handlers', 'name' => 'Implementing the Handler'],
-            ['path' => '/docs/mainsail/development/transactions/load', 'name' => 'Loading the dApp'],
-            ['path' => '/docs/mainsail/development/transactions/run', 'name' => 'Running the Example'],
-        ]"
-    />
-</x-ark-docs-sidebar-group>
-
 <x-ark-docs-sidebar-group path="/docs/mainsail/testing/*" title="Testing">
     <x-ark-docs-sidebar-link path="/docs/mainsail/testing/intro" name="Introduction" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/testing/sandbox" name="Using the Sandbox" />
