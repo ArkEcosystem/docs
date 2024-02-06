@@ -7,7 +7,7 @@ title: Installation - Installing from Source
 A step-by-step guide on how to prepare a fully-functional **Production** environment from source.
 
 <x-alert type="success">
-If you plan on using Core V3 for testing or development, consider setting up a **Development** environment by [Using the Install Script](/docs/mainsail/installation/script).
+If you plan on using Mainsail for testing or development, consider setting up a **Development** environment by [Using the Install Script](/docs/mainsail/installation/script).
 </x-alert>
 
 ---
@@ -85,76 +85,3 @@ cd core
 git checkout develop
 yarn setup  #run Lerna to clean, bootstrap and build the core packages
 ```
-
-## Step 7: Setting Up The Development Database
-
-ARK Core stores all the blockchain data in a [PostgreSQL](https://www.postgresql.org/) database. You have two options on how to setup your development database.
-
-<x-alert type="info">
-Follow **Step 7.1** if you are working locally on your developer computer and have docker environment in place, otherwise follow **Step 7.2** (for example if you are running on a cloud based Ubuntu instance or prefer native database install).
-</x-alert>
-
-### Step 7.1 Database Setup Using Docker
-
-If you are already using `Docker` and  have  `docker-compose` installed, then you can generate docker files from the command line, with the `yarn docker ark` command where (ark is the name of the `network` for which you want to generate docker files). For now let's stick with `ark` as the default name of the network.
-
-Executing the command `yarn docker ark` in the root folder of the previously cloned repository, like this:
-
-```bash
-cd core  #root folder of the cloned repository
-yarn docker ark
-```
-
-will generate the following docker files inside our `core/docker` folder (see folder tree below):
-
-```bash
-#core/docker tree in the cloned repository folder
-├── development
-│   ├── devnet
-│   │   ├── Dockerfile
-│   │   ├── docker-compose.yml
-│   │   ├── entrypoint.sh
-│   │   ├── purge_all.sh
-│   │   └── restore.sh
-│   ├── mainnet
-│   │   └── docker-compose.yml
-│   ├── testnet #this is the folder where we will start our PostgreSQL testnet DB
-│   │   ├── Dockerfile
-│   │   ├── docker-compose.yml
-│   │   ├── entrypoint.sh
-│   │   ├── purge_all.sh
-│   │   └── restore.sh
-│   └── unitnet
-│       ├── docker-compose.yml
-│       └── purge.sh
-└── production
-...
-```
-
-To start the PostgreSQL docker container we must go into the corresponding folder and run the `docker-compose` command. For testnet we need to run the following:
-
-```bash
-cd docker/development/testnet
-docker-compose up -d postgres #postgres is the name of the PostgreSQL container
-```
-
-The `docker-compose up -d postgres` will start PostgresSQL container and expose it to our core via standard PostgreSQL port 5432.
-
-### Step 7.2 Installing Postgres Database System-Wide
-
-If you don't want to install and run docker on your local computer you can still install PostgreSQL database natively on your running operating system. For \*.deb based Linux systems the commands are the following:
-
-```bash
-sudo apt-get install postgresql postgresql-contrib -y
-sudo -i -u postgres psql -c "CREATE USER ark  WITH PASSWORD 'password' CREATEDB;"
-sudo -i -u postgres psql -c "CREATE DATABASE ark_testnet WITH OWNER ark;"
-sudo -i -u postgres psql -c "CREATE DATABASE ark_devnet WITH OWNER ark;"
-```
-
-The commands above install PostgreSQL database locally and create databases for running testnet and devnet networks with user `ark` as the database owner. If you have skipped the Step 1: User setup, you have to change `ark` user to your development username, usually the logged in username.
-
-## Start Core and Play With Public API
-
-You can jump to Spinning Up Your First Testnet Section here and test your local Core Server, by following the link below:
-
-<livewire:page-reference path="/docs/mainsail/development/testnet" />
