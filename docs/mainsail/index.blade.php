@@ -47,10 +47,12 @@
             ['path' => '/docs/mainsail/transactions/types/overview', 'name' => 'Overview'],
             ['path' => '/docs/mainsail/transactions/types/transfer', 'name' => 'Transfer'],
             ['path' => '/docs/mainsail/transactions/types/delegate-registration', 'name' => 'Delegate Registration'],
+            ['path' => '/docs/mainsail/transactions/types/delegate-resignation', 'name' => 'Delegate Resignation'],
+            ['path' => '/docs/mainsail/transactions/types/username-registration', 'name' => 'Username Registration'],
+            ['path' => '/docs/mainsail/transactions/types/username-resignation', 'name' => 'Username Resignation'],
             ['path' => '/docs/mainsail/transactions/types/vote-unvote', 'name' => 'Vote / Unvote'],
             ['path' => '/docs/mainsail/transactions/types/multisignature', 'name' => 'Multisignature Registration'],
             ['path' => '/docs/mainsail/transactions/types/multipayment', 'name' => 'Multipayment'],
-            ['path' => '/docs/mainsail/transactions/types/delegate-resignation', 'name' => 'Delegate Resignation'],
         ]"
     />
 </x-ark-docs-sidebar-group>

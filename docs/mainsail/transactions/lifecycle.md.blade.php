@@ -77,7 +77,7 @@ With this information in hand, the block data and sorted transactions are passed
 
 A block is a collection of transactions, but also it is the incremental unit of the blockchain. Every eight seconds, a Delegate Node (Forging Node) creates a new block by bundling a bunch of transactions, verifying each transaction, and signing the block.
 
-Blocks hold quite a lot of metadata on the ARK blockchain, like:
+Blocks hold quite a lot of metadata on the Mainsail blockchain, like:
 
 * Height, an incremental ID.
 * Timestamp.
@@ -96,7 +96,7 @@ The `Block.create` method uses the following algorithm to create a new block:
 6. Cast the data into a Block model using the new transaction and block ID.
 7. Return the cast Block object.
 
-Here, the cryptographic functions used by ARK to generate hashes are identical to those used by Bitcoin. These functions are battle-tested by years of use and analysis in Bitcoin. Resources to learn more about the block creation process can be found in [Bitcoin educational materials](https://github.com/bitcoinbook/bitcoinbook) as well as relevant ARK documentation on serialization.
+Here, the cryptographic functions used by Mainsail to generate hashes are identical to those used by Bitcoin. These functions are battle-tested by years of use and analysis in Bitcoin. Resources to learn more about the block creation process can be found in [Bitcoin educational materials](https://github.com/bitcoinbook/bitcoinbook) as well as relevant Mainsail documentation on serialization.
 
 ### 5. Block Propagation
 
