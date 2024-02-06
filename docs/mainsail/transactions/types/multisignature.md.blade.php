@@ -18,7 +18,7 @@ You can also set-up your own Multisignature server by following this guide:
 | :--- | :--- |
 | ARK Improvement Proposals | [AIP18](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-18.md) |
 | API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions) |
-| AJV Schema | [Base](https://github.com/ArkEcosystem/mainsail/blob/main/packages/crypto-transaction/source/validation/schemas.ts#L19-L40) \| [MultiSignature Transaction](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L149-L190) |
+| AJV Schema | [Base](https://github.com/ArkEcosystem/mainsail/blob/main/packages/crypto-transaction/source/validation/schemas.ts#L19-L40) \| [MultiSignature Transaction](https://github.com/ArkEcosystem/mainsail/blob/cb19935b0d6ba170994f8a6a237cfc13e9f98050/packages/crypto-transaction-multi-signature-registration/source/versions/1.ts#L24-L66) |
 
 ## Transaction Structure
 
