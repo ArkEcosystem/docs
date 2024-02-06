@@ -8,9 +8,9 @@ Keep in mind that the data structures are kept consistent as much as possible fo
 
 This is something to keep in mind when accessing these models through the Event API, for example, as the correct way to obtain information might be different from following the structure listed here.
 
-Where possible, these discrepancies are noted below. The `resources` directories in the `core-api` module help to paint a complete picture; they can be found in their respective repositories:
+Where possible, these discrepancies are noted below. The `resources` directories in the `api-http` module help to paint a complete picture; they can be found in their respective repositories:
 
-<livewire:embed-link url="https://github.com/ArkEcosystem/core/tree/develop/packages/core-api/src/resources" caption="Resources for the data structures returned via core-api" />
+<livewire:embed-link url="https://github.com/ArkEcosystem/mainsail/tree/develop/packages/api-http/source/resources" caption="Resources for the data structures returned via api-http" />
 
 ## Block
 
