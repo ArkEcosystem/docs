@@ -37,7 +37,6 @@ The **Services** section will introduce you to pre-built services that you will 
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/mainsail/overview/services/attributes', 'name' => 'Attributes'],
         ['path' => '/docs/mainsail/overview/services/cache', 'name' => 'Cache'],
         ['path' => '/docs/mainsail/overview/services/events', 'name' => 'Events'],
         ['path' => '/docs/mainsail/overview/services/filesystem', 'name' => 'Filesystem'],

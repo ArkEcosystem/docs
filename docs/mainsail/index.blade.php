@@ -22,7 +22,6 @@
         path="/docs/mainsail/overview/services"
         name="Services"
         :children="[
-            ['path' => '/docs/mainsail/overview/services/attributes', 'name' => 'Attributes'],
             ['path' => '/docs/mainsail/overview/services/cache', 'name' => 'Cache'],
             ['path' => '/docs/mainsail/overview/services/events', 'name' => 'Events'],
             ['path' => '/docs/mainsail/overview/services/filesystem', 'name' => 'Filesystem'],
