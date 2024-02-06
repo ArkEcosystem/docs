@@ -12,7 +12,7 @@ Transactions are the heart of any blockchain, cryptocurrency or otherwise. They 
 
 Using the [ARK SDKs](/docs/sdk/), developers can employ the programming language of their choice to build applications utilizing the Mainsail blockchain. The ARK SDKs are split into two packages for each language: Client and Cryptography.
 
-**Client** SDKs help developers fetch information from the ARK blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
+**Client** SDKs help developers fetch information from the ARK blockchain about its current state: which validators are currently forging, what transactions are associated with a given wallet, and so on.
 
 **Cryptography** SDKs, by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
 
@@ -24,9 +24,9 @@ In the following sections basic transaction types and their structure is present
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/transfer" />
 
-<livewire:page-reference path="/docs/mainsail/transactions/types/delegate-registration" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/validator-registration" />
 
-<livewire:page-reference path="/docs/mainsail/transactions/types/delegate-resignation" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/validator-resignation" />
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/username-registration" />
 

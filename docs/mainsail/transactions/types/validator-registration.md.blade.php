@@ -1,16 +1,16 @@
 ---
-title: Transaction Types - Delegate Registration
+title: Transaction Types - Validator Registration
 ---
 
-# Delegate Registration
+# Validator Registration
 
-A user or organization can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
+A user or organization can register their address to become a validator and secure the network. Upon accumulating sufficient vote weight, the validator will begin forging transactions and receiving block rewards.
 
 | References |  |
 | :--- | :--- |
 | ARK Improvement Proposals | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md) |
 | API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions) |
-| AJV Schema | [Base](https://github.com/ArkEcosystem/mainsail/blob/cb19935b0d6ba170994f8a6a237cfc13e9f98050/packages/crypto-transaction/source/validation/schemas.ts#L19-L40) \| [Delegate Registration](https://github.com/ArkEcosystem/mainsail/blob/cb19935b0d6ba170994f8a6a237cfc13e9f98050/packages/crypto-transaction-validator-registration/source/versions/1.ts#L17-L34) |
+| AJV Schema | [Base](https://github.com/ArkEcosystem/mainsail/blob/cb19935b0d6ba170994f8a6a237cfc13e9f98050/packages/crypto-transaction/source/validation/schemas.ts#L19-L40) \| [Validator Registration](https://github.com/ArkEcosystem/mainsail/blob/cb19935b0d6ba170994f8a6a237cfc13e9f98050/packages/crypto-transaction-validator-registration/source/versions/1.ts#L17-L34) |
 
 ## Transaction Structure
 

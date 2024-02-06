@@ -26,7 +26,7 @@ If you are using a shell other then the default bash, like zsh, you will need to
 
 If the processes fail to start or restart after an update it is most likely an issue with pm2. Running `pm2 update` should usually resolve the issue.
 
-If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a delegate.
+If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a validator.
 
 ## Process Has Entered an Unknown State
 

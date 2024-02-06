@@ -4,7 +4,7 @@ title: Security - Setting Up Port Knocking
 
 # Setting Up Port Knocking
 
-When running an ARK node, especially a Delegate Node, you should consider your server's security as your main priority.
+When running an ARK node, especially a Validator Node, you should consider your server's security as your main priority.
 
 <x-alert type="warning">
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.

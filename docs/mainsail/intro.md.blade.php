@@ -68,11 +68,13 @@ The **Transactions** section will guide you through the most important concepts,
     :links="[
         ['path' => '/docs/mainsail/transactions/types/overview', 'name' => 'Overview'],
         ['path' => '/docs/mainsail/transactions/types/transfer', 'name' => 'Transfer'],
-        ['path' => '/docs/mainsail/transactions/types/delegate-registration', 'name' => 'Delegate Registration'],
+        ['path' => '/docs/mainsail/transactions/types/validator-registration', 'name' => 'Validator Registration'],
+        ['path' => '/docs/mainsail/transactions/types/validator-resignation', 'name' => 'Validator Resignation'],
+        ['path' => '/docs/mainsail/transactions/types/username-registration', 'name' => 'Username Registration'],
+        ['path' => '/docs/mainsail/transactions/types/username-resignation', 'name' => 'Username Resignation'],
         ['path' => '/docs/mainsail/transactions/types/vote-unvote', 'name' => 'Vote / Unvote'],
         ['path' => '/docs/mainsail/transactions/types/multisignature', 'name' => 'Multisignature Registration'],
         ['path' => '/docs/mainsail/transactions/types/multipayment', 'name' => 'Multipayment'],
-        ['path' => '/docs/mainsail/transactions/types/delegate-resignation', 'name' => 'Delegate Resignation'],
     ]"
 />
 

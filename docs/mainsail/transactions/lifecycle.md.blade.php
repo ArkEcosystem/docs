@@ -65,17 +65,17 @@ At this point, Core Server has a list of incoming transactions to add to the tra
 
 ### 3. From TransactionPool To Transaction Inclusion Within Blocks
 
-Transactions move out of the pool once a forging Delegate (a forger) is ready and eligible to forge it. At the moment of forging, transactions in the forger's pool are grouped into a potential block and passed to the delegate's `forge` method for inclusion in a block.
+Transactions move out of the pool once a forging Valdaitor (a forger) is ready and eligible to forge it. At the moment of forging, transactions in the forger's pool are grouped into a potential block and passed to the validator's `forge` method for inclusion in a block.
 
 Inside the `forge` method, all transaction values, fees, and IDs within the block are added together. The values and fees are used to calculate block metadata, while the hashed IDs are concatenated and used as the block's `payloadHash` property.
 
 ![](/storage/docs/docs/mainsail/assets/forger.png)
 
-With this information in hand, the block data and sorted transactions are passed to the crypto library's `Block.create` method alongside the forging delegate's keys.
+With this information in hand, the block data and sorted transactions are passed to the crypto library's `Block.create` method alongside the forging validator's keys.
 
 ### 4. Block Creation
 
-A block is a collection of transactions, but also it is the incremental unit of the blockchain. Every eight seconds, a Delegate Node (Forging Node) creates a new block by bundling a bunch of transactions, verifying each transaction, and signing the block.
+A block is a collection of transactions, but also it is the incremental unit of the blockchain. Every eight seconds, a Validator Node (Forging Node) creates a new block by bundling a bunch of transactions, verifying each transaction, and signing the block.
 
 Blocks hold quite a lot of metadata on the Mainsail blockchain, like:
 
