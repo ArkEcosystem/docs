@@ -90,7 +90,6 @@ The **Installation** section will guide you through configuring and installing M
         ['path' => '/docs/mainsail/installation/script', 'name' => 'Using the Install Script'],
         ['path' => '/docs/mainsail/installation/source', 'name' => 'Installing from Source'],
         ['path' => '/docs/mainsail/installation/docker-unix', 'name' => 'Docker on Linux/macOS'],
-        ['path' => '/docs/mainsail/installation/docker-windows', 'name' => 'Docker on Windows'],
     ]"
 />
 

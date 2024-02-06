@@ -65,7 +65,6 @@
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/script" name="Using the Install Script" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/source" name="Installing from Source" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/docker-unix" name="Docker on Linux/macOS" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/installation/docker-windows" name="Docker on Windows" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/security/*" title="Security">
