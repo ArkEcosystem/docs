@@ -37,4 +37,3 @@ In the following sections basic transaction types and their structure is present
 <livewire:page-reference path="/docs/mainsail/transactions/types/multisignature" />
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/multipayment" />
-

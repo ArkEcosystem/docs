@@ -109,7 +109,7 @@ The validator configuration is responsible for providing the information that is
 
 ## Peer Configuration
 
-The peer configuration is responsible for providing the information that is necessary to know who the seeds are so that we can retrieve a list of peers from them and start communicating with the network. By default it ships with a list of seeds and an additional list of sources on GitHub which is loaded when Core starts. Configuration is stored in `peers.json` file. 
+The peer configuration is responsible for providing the information that is necessary to know who the seeds are so that we can retrieve a list of peers from them and start communicating with the network. By default it ships with a list of seeds and an additional list of sources on GitHub which is loaded when Core starts. Configuration is stored in `peers.json` file.
 
 ## Environment Configuration
 

@@ -103,4 +103,3 @@ app
     .get<Services.Filesystem.FilesystemService>(Container.Identifiers.FilesystemService)
     .deleteDirectory("/home/ark");
 ```
-
