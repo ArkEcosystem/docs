@@ -131,9 +131,6 @@ The **Testing** section will introduce you to the most importing tools and knowl
 <x-ark-link-collection
     :links="[
         ['path' => '/docs/mainsail/testing/intro', 'name' => 'Introduction'],
-        ['path' => '/docs/mainsail/testing/sandbox', 'name' => 'Using the Sandbox'],
-        ['path' => '/docs/mainsail/testing/plugins', 'name' => 'Testing Plugins'],
-        ['path' => '/docs/mainsail/testing/transactions', 'name' => 'Testing Transactions'],
     ]"
 />
 
