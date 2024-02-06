@@ -1,5 +1,5 @@
 <x-ark-docs-sidebar-group first :path="['/docs/mainsail/intro', '/docs/mainsail']" title="Introduction" borderless>
-    <x-ark-docs-sidebar-link path="/docs/mainsail/intro" name="Welcome to ARK Core v3" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/intro" name="Welcome to Mainsail" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/overview/*" title="Overview">

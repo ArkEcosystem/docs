@@ -1,12 +1,12 @@
 ---
-title: Welcome to ARK Core v3
+title: Welcome to Mainsail
 ---
 
-# Welcome to ARK Core v3
+# Welcome to Mainsail
 
 ## Overview
 
-The **Overview** section will introduce you to the basic concepts surrounding ARK Core v3 development.
+The **Overview** section will introduce you to the basic concepts surrounding Mainsail development.
 
 <x-ark-link-collection
     :links="[
@@ -19,7 +19,7 @@ The **Overview** section will introduce you to the basic concepts surrounding AR
 
 ### Architecture
 
-The **Architecture** section will introduce you to the most important concepts and internals of ARK Core v3.
+The **Architecture** section will introduce you to the most important concepts and internals of Mainsail.
 
 <x-ark-link-collection
     :links="[
@@ -33,7 +33,7 @@ The **Architecture** section will introduce you to the most important concepts a
 
 ### Services
 
-The **Services** section will introduce you to pre-built services that you will be able to leverage to speed up ARK Core v3 development.
+The **Services** section will introduce you to pre-built services that you will be able to leverage to speed up Mainsail development.
 
 <x-ark-link-collection
     :links="[
@@ -54,7 +54,7 @@ The **Services** section will introduce you to pre-built services that you will 
 
 ## Transactions
 
-The **Transactions** section will guide you through the most important concepts, internals, and services that you need to understand for implementing and using ARK Core v3 Transactions.
+The **Transactions** section will guide you through the most important concepts, internals, and services that you need to understand for implementing and using Mainsail Transactions.
 
 <x-ark-link-collection
     :links="[
@@ -83,7 +83,7 @@ The **Transactions** section will guide you through the most important concepts,
 
 ## Installation
 
-The **Installation** section will guide you through configuring and installing ARK Core v3 using Unix and Windows-based environments, including the use of [Docker](https://www.docker.com/).
+The **Installation** section will guide you through configuring and installing Mainsail using Unix and Windows-based environments, including the use of [Docker](https://www.docker.com/).
 
 <x-ark-link-collection
     :links="[
@@ -100,7 +100,7 @@ The **Installation** section will guide you through configuring and installing A
 
 ## Security
 
-The **Security** section will guide you through the most important concepts and service you can use to improve the security of your ARK Core v3 node.
+The **Security** section will guide you through the most important concepts and service you can use to improve the security of your Mainsail node.
 
 <x-ark-link-collection
     :links="[
@@ -116,7 +116,7 @@ The **Security** section will guide you through the most important concepts and 
 
 ## Deployment
 
-The **Deployment** section will guide you through important actions such as the launching and maintaining of your ARK Core v3 node.
+The **Deployment** section will guide you through important actions such as the launching and maintaining of your Mainsail node.
 
 <x-ark-link-collection
     :links="[
@@ -130,7 +130,7 @@ The **Deployment** section will guide you through important actions such as the 
 
 ## Development Guides
 
-The **Development Guides** section will guide you, step-by-step, through customizing essential ARK Core v3 plugins and services.
+The **Development Guides** section will guide you, step-by-step, through customizing essential Mainsail plugins and services.
 
 <x-ark-link-collection
     :links="[
@@ -188,7 +188,7 @@ The **Development Guides** section will guide you, step-by-step, through customi
 
 ## Testing
 
-The **Testing** section will introduce you to the most importing tools and knowledge needed to test ARK Core v3 and it's plugins and services.
+The **Testing** section will introduce you to the most importing tools and knowledge needed to test Mainsail and it's plugins and services.
 
 <x-ark-link-collection
     :links="[
@@ -199,77 +199,9 @@ The **Testing** section will introduce you to the most importing tools and knowl
     ]"
 />
 
-## Releases
-
-The **Releases** section provides important ARK Core release and upgrade information.
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.0', 'name' => '2.0 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.0', 'name' => '2.0 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.1', 'name' => '2.1 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.1', 'name' => '2.1 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.2', 'name' => '2.2 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.2', 'name' => '2.2 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.3', 'name' => '2.3 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.3', 'name' => '2.3 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.4', 'name' => '2.4 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.4', 'name' => '2.4 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.5', 'name' => '2.5 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.5', 'name' => '2.5 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/2.6', 'name' => '2.6 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/2.6', 'name' => '2.6 Upgrade Guide'],
-    ]"
-/>
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/3.0', 'name' => '3.0 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/3.0', 'name' => '3.0 Upgrade Guide'],
-        ['path' => '/docs/mainsail/releases/release/3.0', 'name' => '3.0 Release Guide (Docker)'],
-        ['path' => '/docs/mainsail/releases/upgrade/docker/3.0', 'name' => '3.0 Upgrade Guide (Docker)'],
-    ]"
-/>
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/release/3.8', 'name' => '3.8.2 Release Guide'],
-        ['path' => '/docs/mainsail/releases/upgrade/3.8', 'name' => '3.8.2 Upgrade Guide'],
-    ]"
-/>
-
-<x-ark-link-collection
-    :links="[
-        ['path' => '/docs/mainsail/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
-    ]"
-/>
-
 ## Support
 
-The **Support** section provides resources for solving and reporting issues in ARK Core v3.
+The **Support** section provides resources for solving and reporting issues in Mainsail.
 
 <x-ark-link-collection
     :links="[
