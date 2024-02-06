@@ -5,7 +5,7 @@ title: Deployment - Core CLI Commands
 # Core CLI Commands
 
 <x-alert type="success">
-View all available ARK CLI commands **[here](/docs/core/development/cli/available)** or learn how to [create your own](/docs/core/development/cli/create).
+View all available ARK CLI commands **[here](/docs/mainsail/development/cli/available)** or learn how to [create your own](/docs/mainsail/development/cli/create).
 </x-alert>
 
 ARK Core comes packaged with a robust command line interface (CLI) which is an essential tool that enables any node operator to update, manage, or monitor their node installation without the need for external programs.

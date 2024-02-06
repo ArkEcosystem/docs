@@ -60,15 +60,15 @@ Press `CTRL+X` to exit the file, `Y` to save the file, and `ENTER` to write to t
 
 Login to your Cloudflare dashboard and click on the `DNS` button.
 
-![](/storage/docs/docs/core/assets/cloudflare_dns.png)
+![](/storage/docs/docs/mainsail/assets/cloudflare_dns.png)
 
 Then go to `Crypto`.
 
-![](/storage/docs/docs/core/assets/cloudflare_crypto.png)
+![](/storage/docs/docs/mainsail/assets/cloudflare_crypto.png)
 
 Scroll down to `Origin Certificates` and click the `Create Certificate` button. Keep this window open after Cloudflare generates your two keys.
 
-![](/storage/docs/docs/core/assets/cloudflare_certificate.png)
+![](/storage/docs/docs/mainsail/assets/cloudflare_certificate.png)
 
 Open Terminal on your ARK node server
 

@@ -41,7 +41,7 @@ Depending on your operating system you will connect to your server in different 
 
 Open PuTTy and place the `IP address` given to you by your provider in the `Host Name` field as shown below. You should probably save this host, so you don't have to enter it every time.
 
-![](/storage/docs/docs/core/assets/howtosetupanewserverimage1.jpeg)
+![](/storage/docs/docs/mainsail/assets/howtosetupanewserverimage1.jpeg)
 
 `MacOS / Linux`
 
@@ -210,7 +210,7 @@ Starting ark-relay... done
 ```
 
 <x-alert type="info">
-All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/deployment/cli) documentation or by running the `ark help`command.
+All of the CLI commands with a description can be viewed in our [Core CLI](/docs/mainsail/deployment/cli) documentation or by running the `ark help`command.
 </x-alert>
 
 ## Step 11: Checking that Everything is Working
@@ -237,4 +237,4 @@ Once the syncing finishes you will see messages ‘Delegate allowed to forge’ 
 Extra security guide: if you want to secure your server with additional security countermeasures, please give this **"How To Secure Your ARK Node"** guide a read.
 </x-alert>
 
-<livewire:page-reference path="/docs/core/security/intro" />
+<livewire:page-reference path="/docs/mainsail/security/intro" />

@@ -55,4 +55,4 @@ A fully working example is available for you to examine, learn and download here
 
 Now, let's get the example running:
 
-<livewire:page-reference path="/docs/core/development/transactions/run" />
+<livewire:page-reference path="/docs/mainsail/development/transactions/run" />

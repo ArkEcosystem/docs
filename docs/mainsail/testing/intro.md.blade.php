@@ -56,10 +56,10 @@ Throughout this documentation, we will be using various tools to test Core V3.0 
 ### Core V3 Server Setup
 
 If your server was previously operational on devnet with Core 2.7, then please follow this upgrade guide:
-<livewire:page-reference path="/docs/core/releases/upgrade/3.0" />
+<livewire:page-reference path="/docs/mainsail/releases/upgrade/3.0" />
 
 If you are creating a new server for V3 testing, please follow the guides found in the 'Development Setup' section:
-<livewire:page-reference path="/docs/core/installation/intro" />
+<livewire:page-reference path="/docs/mainsail/installation/intro" />
 
 ### Desktop Wallet
 
@@ -95,7 +95,7 @@ Transactions are an integral component of the ARK Core Framework and requires th
 
 To get stuck in with testing Transactions, you can follow this document below:
 
-<livewire:page-reference path="/docs/core/testing/transactions" />
+<livewire:page-reference path="/docs/mainsail/testing/transactions" />
 
 ## Plugin Development
 
@@ -103,4 +103,4 @@ Testers who previously created Plugins for Core are encouraged to migrate their 
 
 To get stuck in with Plugin Development, follow the link below:
 
-<livewire:page-reference path="/docs/core/testing/plugins" />
+<livewire:page-reference path="/docs/mainsail/testing/plugins" />

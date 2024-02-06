@@ -37,7 +37,7 @@ This makes it easier to include in light-client application, where only payload 
 
 We assume that you already have local development environment setup. If not head over here:
 
-<livewire:page-reference path="/docs/core/installation/intro" />
+<livewire:page-reference path="/docs/mainsail/installation/intro" />
 
 After successful setup of local development environment we need to add the plugin handle/name to the corresponding files. We need to add the handle **"@arkecosystem/custom-transactions"** to the configuration file for each network configuration :
 
@@ -45,15 +45,15 @@ After successful setup of local development environment we need to add the plugi
 
 The How To Steps are explained in here:
 
-<livewire:page-reference path="/docs/core/development/transactions/load" />
+<livewire:page-reference path="/docs/mainsail/development/transactions/load" />
 
 ## STEP 2: Setup Development Docker Database
 
-Setup docker database config and run Postgres DB via Docker. Follow the steps from here: [Core Docker Setup](/docs/core/installation/docker-unix)
+Setup docker database config and run Postgres DB via Docker. Follow the steps from here: [Core Docker Setup](/docs/mainsail/installation/docker-unix)
 
 ## STEP 3: Start Local Testnet Blockchain
 
-Start local blockchain with testnet running on your developer computer. Follow steps defined in here: [Spinning Up Your First Testnet](path' => '/docs/core/tutorials/testnet#step-2-testnet-network-boot)
+Start local blockchain with testnet running on your developer computer. Follow steps defined in here: [Spinning Up Your First Testnet](path' => '/docs/mainsail/tutorials/testnet#step-2-testnet-network-boot)
 
 ## STEP 4: Send New Custom Transaction To The Local Node
 

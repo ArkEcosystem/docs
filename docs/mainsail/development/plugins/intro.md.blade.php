@@ -94,13 +94,13 @@ Internally the discovery and integration into Core of any plugin consists of fiv
 4. The plugins `register` method is executed to prepare for the booting process.
 5. The plugins `boot` method is executed and the plugin becomes active.
 
-As you have probably figured out by now, the whole lifecycle of a plugin revolves around [service providers](/docs/core/overview/architecture/provider) about which we've talked in earlier documents when looking at the architecture of Core.
+As you have probably figured out by now, the whole lifecycle of a plugin revolves around [service providers](/docs/mainsail/overview/architecture/provider) about which we've talked in earlier documents when looking at the architecture of Core.
 
 ## Service Providers
 
-[Service providers](/docs/core/overview/architecture/provider) are the building blocks that are responsible for composing Core. The sole responsibility of a service provider is to create bindings in the service container and manage inform Core about what should happen with your plugin at certain points of the application lifecycle.
+[Service providers](/docs/mainsail/overview/architecture/provider) are the building blocks that are responsible for composing Core. The sole responsibility of a service provider is to create bindings in the service container and manage inform Core about what should happen with your plugin at certain points of the application lifecycle.
 
-A service provider always contains 3 methods: `register`, `boot` and `dispose`. To learn more about the structure and purpose of service providers, check out [their documentation](/docs/core/overview/architecture/provider).
+A service provider always contains 3 methods: `register`, `boot` and `dispose`. To learn more about the structure and purpose of service providers, check out [their documentation](/docs/mainsail/overview/architecture/provider).
 
 ## Naming Conventions
 

@@ -7,7 +7,7 @@ title: Installation - Installing from Source
 A step-by-step guide on how to prepare a fully-functional **Production** environment from source.
 
 <x-alert type="success">
-If you plan on using Core V3 for testing or development, consider setting up a **Development** environment by [Using the Install Script](/docs/core/installation/script).
+If you plan on using Core V3 for testing or development, consider setting up a **Development** environment by [Using the Install Script](/docs/mainsail/installation/script).
 </x-alert>
 
 ---
@@ -157,4 +157,4 @@ The commands above install PostgreSQL database locally and create databases for 
 
 You can jump to Spinning Up Your First Testnet Section here and test your local Core Server, by following the link below:
 
-<livewire:page-reference path="/docs/core/development/testnet" />
+<livewire:page-reference path="/docs/mainsail/development/testnet" />

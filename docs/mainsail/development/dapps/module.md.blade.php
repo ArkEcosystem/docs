@@ -8,7 +8,7 @@ title: Development - Creating a dApp Module
 
 Many components are required to have a proper environment setup for the development of your ARK Core module. You can view instructions on how to setup your development environment here:
 
-<livewire:page-reference path="/docs/core/installation/intro" />
+<livewire:page-reference path="/docs/mainsail/installation/intro" />
 
 ## Step 2: Create A New Module From A Template
 
@@ -49,10 +49,10 @@ Once everything is set up and configured, we can move on to developing the plugi
 ## Step 3: Module Registration Within Network Configuration
 
 <x-alert type="info">
-In order to make sure that your plugin is registered and loaded when **Core Node starts**, you will need to modify the **`app.json`** file related to the current [network run mode](/docs/core/deployment/modes).
+In order to make sure that your plugin is registered and loaded when **Core Node starts**, you will need to modify the **`app.json`** file related to the current [network run mode](/docs/mainsail/deployment/modes).
 </x-alert>
 
-Since, we are running a [local development environment](/docs/core/development/explorer), we will need to edit the Testnet configuration folder (`core/packages/core/bin/config/testnet/app.json`) and add our **module name** to the list of loaded modules. This is also a good place to set up the module's default properties, defined in the **`default.ts`** file in our module's root folder.
+Since, we are running a [local development environment](/docs/mainsail/development/explorer), we will need to edit the Testnet configuration folder (`core/packages/core/bin/config/testnet/app.json`) and add our **module name** to the list of loaded modules. This is also a good place to set up the module's default properties, defined in the **`default.ts`** file in our module's root folder.
 
 `app.json`
 
@@ -117,7 +117,7 @@ Every plugin that is being registered in this file will be automatically **loade
 
 Start local blockchain with Testnet running on your developer computer. Follow steps defined in here:
 
-<livewire:page-reference path="/docs/core/development/testnet" />
+<livewire:page-reference path="/docs/mainsail/development/testnet" />
 
 If you already have compiled and running core, just go to `core/packages/core` and run the `yarn full:testnet` command.
 

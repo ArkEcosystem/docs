@@ -16,14 +16,14 @@ By outlining how to secure a node we're breaking a fundamental property of netwo
 
 ---
 
-<livewire:page-reference path="/docs/core/security/ssh" />
+<livewire:page-reference path="/docs/mainsail/security/ssh" />
 
-<livewire:page-reference path="/docs/core/security/updated" />
+<livewire:page-reference path="/docs/mainsail/security/updated" />
 
-<livewire:page-reference path="/docs/core/security/iptables" />
+<livewire:page-reference path="/docs/mainsail/security/iptables" />
 
-<livewire:page-reference path="/docs/core/security/fail2ban" />
+<livewire:page-reference path="/docs/mainsail/security/fail2ban" />
 
-<livewire:page-reference path="/docs/core/security/knocking" />
+<livewire:page-reference path="/docs/mainsail/security/knocking" />
 
-<livewire:page-reference path="/docs/core/security/ddos" />
+<livewire:page-reference path="/docs/mainsail/security/ddos" />

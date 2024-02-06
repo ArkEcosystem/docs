@@ -22,7 +22,7 @@ We can technically use any word, phrase, or string as a passphrase which will re
 
 To promote usability while also maintaining security, ARK passphrases are implemented using the [BIP39 Protocol](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). Simply, it's a mnemonic sentence constructed via randomly chosen words from a large [wordlist](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md). From here, that sentence or "Passphrase" is piped through a series of hashing, curve, and encoding algorithms to derive a [PrivateKey](#privatekey) / [WIF](#wif-privatekey), a [PublicKey](#publickey), and subsequently [Addresses](#address--wallet) / Wallets and [Signatures](#signature).
 
-![Cryptography overview](/storage/docs/docs/core/assets/overview_nologo.svg)
+![Cryptography overview](/storage/docs/docs/mainsail/assets/overview_nologo.svg)
 
 The following examples will be using test-fixtures from the [ARK Core](https://github.com/ArkEcosystem/core/) repo on [GitHub](https://github.com/ArkEcosystem/).
 
@@ -61,7 +61,7 @@ const fixture = {
 
 A PrivateKey is a 256-bit integer represented by a 32-byte Hex-encoded string of 64 characters obtained via [SHA256 hashing](https://en.bitcoin.it/wiki/SHA-256) of a [Passphrase](#passphrase).
 
-![PrivateKey Generation Steps](/storage/docs/docs/core/assets/private_key_nologo.svg)
+![PrivateKey Generation Steps](/storage/docs/docs/mainsail/assets/private_key_nologo.svg)
 
 To understand the significance of this large number, consider the following:
 
@@ -89,7 +89,7 @@ The DEC representation is the "base 10" interpretation of our PrivateKey and giv
 
 WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte (`0xaa` for ARK Mainnet & Devnet Network). The compression byte indicates that ARK uses compressed PublicKeys.
 
-![WIF Encoding](/storage/docs/docs/core/assets/wif_nologo.svg)
+![WIF Encoding](/storage/docs/docs/mainsail/assets/wif_nologo.svg)
 
 It's essentially a more usable/human-readable [PrivateKey](#privatekey) and should be treated with the same diligence with regards to storage and security.
 
@@ -97,7 +97,7 @@ It's essentially a more usable/human-readable [PrivateKey](#privatekey) and shou
 
 A PublicKey is like an ID or Passport. It is a mathematical proof of identity and is derived from a PrivateKey via ECDSA and SECP256K1 computation.
 
-![PublicKey Generation Steps](/storage/docs/docs/core/assets/publickey_nologo.svg)
+![PublicKey Generation Steps](/storage/docs/docs/mainsail/assets/publickey_nologo.svg)
 
 ARK also uses "Point Compression" to obtain compressed PublicKeys that are 33-bytes in length.
 
@@ -107,7 +107,7 @@ An ARK address is shareable much like an e-mail address. It is the destination t
 
 Since an address is derived from a PublicKey, that means it is also mathematically tied to a PrivateKey and Passphrase.
 
-![ARK Address Generation Steps](/storage/docs/docs/core/assets/address_nologo.svg)
+![ARK Address Generation Steps](/storage/docs/docs/mainsail/assets/address_nologo.svg)
 
 ### Network Prefixes
 
@@ -249,7 +249,7 @@ A Signature is essentially proof that a message or transaction was "signed" by a
 
 Remember that this same PrivateKey also has a matching PublicKey. That means a Signature is computationally linked to its corresponding PublicKey using ECDSA and SECP256K1 standards.
 
-![Signing Process Example](/storage/docs/docs/core/assets/signature_msg_nologo.svg)
+![Signing Process Example](/storage/docs/docs/mainsail/assets/signature_msg_nologo.svg)
 
 ARK Signatures use DER Encoding.
 
@@ -291,7 +291,7 @@ An ARK Signature is [DER Encoded](https://en.wikipedia.org/wiki/X.690#DER_encodi
 
 Upon obtaining a Signature from the ECDSA/SECP256K1 algorithm, it will first be in its raw form known as an "r" and "s" value.
 
-![Signature: DER (X.690 : ASN.1) Encoding](/storage/docs/docs/core/assets/signature_der_nologo.svg)
+![Signature: DER (X.690 : ASN.1) Encoding](/storage/docs/docs/mainsail/assets/signature_der_nologo.svg)
 
 Signature (r, s):
 

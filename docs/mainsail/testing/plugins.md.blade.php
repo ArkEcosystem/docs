@@ -12,11 +12,11 @@ Before developing a plugin you should make sure that you have read the following
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/core/overview/architecture/lifecycle', 'name' => 'Application Lifecycle'],
-        ['path' => '/docs/core/overview/architecture/container', 'name' => 'Service Container'],
-        ['path' => '/docs/core/overview/architecture/provider', 'name' => 'Service Provider'],
-        ['path' => '/docs/core/overview/architecture/managers-drivers', 'name' => 'Managers and Drivers'],
-        ['path' => '/docs/core/overview/architecture/contracts', 'name' => 'Contracts'],
+        ['path' => '/docs/mainsail/overview/architecture/lifecycle', 'name' => 'Application Lifecycle'],
+        ['path' => '/docs/mainsail/overview/architecture/container', 'name' => 'Service Container'],
+        ['path' => '/docs/mainsail/overview/architecture/provider', 'name' => 'Service Provider'],
+        ['path' => '/docs/mainsail/overview/architecture/managers-drivers', 'name' => 'Managers and Drivers'],
+        ['path' => '/docs/mainsail/overview/architecture/contracts', 'name' => 'Contracts'],
     ]"
 />
 

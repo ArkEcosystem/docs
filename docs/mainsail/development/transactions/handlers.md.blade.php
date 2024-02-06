@@ -4,7 +4,7 @@ title: Custom Transactions - Implementing the Handlers
 
 # Implementing Transaction Handlers
 
-The previous two classes [Builder](/docs/core/development/transactions/builder) and [Transaction](/docs/core/development/transactions/intro), introduced a new transaction type, implemented the **serde** process, and created signed transaction payload. **Handler class is connected with the blockchain protocol, following its strict mechanics such as consensus rules, transaction and block processing.**
+The previous two classes [Builder](/docs/mainsail/development/transactions/builder) and [Transaction](/docs/mainsail/development/transactions/intro), introduced a new transaction type, implemented the **serde** process, and created signed transaction payload. **Handler class is connected with the blockchain protocol, following its strict mechanics such as consensus rules, transaction and block processing.**
 
 By inheriting default `TransactionHandler` behavior we enforce existing GTI engine rules and provide options to implement additional transaction apply logic.
 
@@ -70,7 +70,7 @@ export class BusinessRegistrationTransactionHandler extends Handlers.Transaction
 
 Usually, we want to **add custom properties to our global state (the walletManager class**). These properties need to be quickly accessible (memoization) and searchable (indexed). We defined custom transaction fields and structure in here:
 
-<livewire:page-reference path="/docs/core/development/transactions/structure" />
+<livewire:page-reference path="/docs/mainsail/development/transactions/structure" />
 
 Usually, we want to **add custom properties to our global state (the walletManager class**). These properties need to be quickly accessible (memoization) and searchable (indexed) and are computed during the bootstrap process.
 

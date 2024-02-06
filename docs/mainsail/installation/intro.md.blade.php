@@ -20,15 +20,15 @@ This guide will take you through the basic steps of setting up a development env
 
 **Please select one of the development setup tutorial you would like to start with:**
 
-<livewire:page-reference path="/docs/core/installation/script" />
+<livewire:page-reference path="/docs/mainsail/installation/script" />
 
-<livewire:page-reference path="/docs/core/installation/docker-unix" />
+<livewire:page-reference path="/docs/mainsail/installation/docker-unix" />
 
-<livewire:page-reference path="/docs/core/installation/docker-windows" />
+<livewire:page-reference path="/docs/mainsail/installation/docker-windows" />
 
 <x-alert type="info">
 These tutorials are for **setting up the development environment** for ARK core. If you are looking to run a core node in production, we provide other tools and resources, such as:
 
 * [ARK Deployer](https://ark.io/deployer) - Create Blockchain in Minutes
-* [Core Server Installation Instructions](/docs/core/installation/source) - Server Installation Instructions For Production Node
+* [Core Server Installation Instructions](/docs/mainsail/installation/source) - Server Installation Instructions For Production Node
 </x-alert>

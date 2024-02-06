@@ -13,7 +13,7 @@ Transactions are an integral component of the ARK Core Framework and requires th
 
 ## Prerequisites
 
-Before testing transactions, you will be required to download a Core 3.0 compatible Desktop Wallet which can be found [here](/docs/core/testing/intro#desktop-wallet)
+Before testing transactions, you will be required to download a Core 3.0 compatible Desktop Wallet which can be found [here](/docs/mainsail/testing/intro#desktop-wallet)
 
 Guides for sending all transactions within the Desktop Wallet can be found [here](/docs/desktop-wallet/intro#transactions)
 <x-alert type="info">
@@ -222,4 +222,4 @@ Registered entity names need to be unique by **type**. If a business called `bus
 
 ## Advanced Users
 
-Advanced Users can follow the documentation provided [here](/docs/core/transactions/types/overview) on each transaction type to attempt send malformed data using tools outside of the Desktop Wallet and core-tx-tester.
+Advanced Users can follow the documentation provided [here](/docs/mainsail/transactions/types/overview) on each transaction type to attempt send malformed data using tools outside of the Desktop Wallet and core-tx-tester.

@@ -14,9 +14,9 @@ Modules are the core building blocks of our blockchain development framework. Mo
 
 Everything you build will be packaged as a core module. That will also enable you to separate your code from our core blockchain platform, meaning updates and migration will be almost zero-configuration and effort. To learn more about module structure and how to write them follow the links below:
 
-<livewire:page-reference path="/docs/core/development/dapps/structure" />
+<livewire:page-reference path="/docs/mainsail/development/dapps/structure" />
 
-<livewire:page-reference path="/docs/core/development/dapps/module" />
+<livewire:page-reference path="/docs/mainsail/development/dapps/module" />
 
 ## Reusable dApp Starter Core Module Templates
 

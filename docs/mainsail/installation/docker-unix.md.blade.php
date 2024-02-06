@@ -38,7 +38,7 @@ For instance, you could use this command (to be run from `core` root folder):
 yarn docker ark
 ```
 
-This command creates a new directory (`docker`) that contains 1 folder per network. You can read more about generating of Docker configurations [here](/docs/core/installation/source#step-71-database-setup-using-docker).
+This command creates a new directory (`docker`) that contains 1 folder per network. You can read more about generating of Docker configurations [here](/docs/mainsail/installation/source#step-71-database-setup-using-docker).
 
 <x-alert type="info">
 Once your basic docker configurations are generated, you can select one of the two available **approaches** on how to best utilize the most fitting docker development setup.
@@ -125,4 +125,4 @@ Development files/presets are not Production ready. Official Production ARK-Core
 
 You can jump to Spinning Up Your First Testnet Section here and test your local Core Server, by following the link below:
 
-<livewire:page-reference path="/docs/core/development/testnet" />
+<livewire:page-reference path="/docs/mainsail/development/testnet" />

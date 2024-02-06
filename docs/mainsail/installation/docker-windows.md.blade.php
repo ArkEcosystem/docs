@@ -121,4 +121,4 @@ yarn full:testnet
 
 You can jump to Spinning Up Your First Testnet Section here and test your local Core Server, by following the link below:
 
-<livewire:page-reference path="/docs/core/development/testnet" />
+<livewire:page-reference path="/docs/mainsail/development/testnet" />

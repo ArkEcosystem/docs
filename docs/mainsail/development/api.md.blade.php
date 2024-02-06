@@ -14,7 +14,7 @@ Core provides a package called [core-http-utils](https://github.com/ArkEcosystem
 
 To create a new module from a template follow this simple guide:
 
-<livewire:page-reference path="/docs/core/development/dapps/module" />
+<livewire:page-reference path="/docs/mainsail/development/dapps/module" />
 
 After you have created the module and adjusted basic properties (name, structure, dependencies) we can start to add custom functionalities, like **adding a HTTP server.**
 
@@ -34,7 +34,7 @@ If you used the dApp Http Server Module Template, the boilerplate HTTP Server im
 
 **Steps 1 and 2** are basic explanation of needed packages and implementation decisions for the HTTP server module template we are using. This is a **recommended read** if you want to understand the basic server mechanics and how to add it to you existing modules.
 
-As you've learned in [How to write a Core Modules](/docs/core/development/dapps/intro) you will need to install the required dependencies. For our example we will use we need the **core-http-utils** package which you can install with the following command:
+As you've learned in [How to write a Core Modules](/docs/mainsail/development/dapps/intro) you will need to install the required dependencies. For our example we will use we need the **core-http-utils** package which you can install with the following command:
 
 ```bash
 cd your-module-folder
@@ -219,13 +219,13 @@ We already learned how to load the new module within selected network configurat
 
 ### **Step 3.1: Add New Module To The Network plugins.js file**
 
-Go [here](/docs/core/development/dapps/module#step-3-module-registration-within-network-configuration) for detailed explanation on how to achieve this.
+Go [here](/docs/mainsail/development/dapps/module#step-3-module-registration-within-network-configuration) for detailed explanation on how to achieve this.
 
 ### **Step 3.2: Start Your dApp**
 
 Your implemented dApp application leaves and works from the ARK Core blockchain node as an independent Core module.
 
-Now **Go And Start You Local Testnet** Blockchain with the new module enabled by following [this guide](/docs/core/development/dapps/module#step-4-running-your-dapp)!
+Now **Go And Start You Local Testnet** Blockchain with the new module enabled by following [this guide](/docs/mainsail/development/dapps/module#step-4-running-your-dapp)!
 
 ## Step 4: Test Your New API Server
 

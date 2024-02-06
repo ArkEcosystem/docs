@@ -6,7 +6,7 @@ title: Development - Launching a Testnet
 
 ## Step 1: Start Docker Testnet Database
 
-You already generated docker files during the [development environment setup](/docs/core/installation/docker-unix#step-7-setting-up-the-development-database) (if not please run the following commands as specified [here](/docs/core/installation/docker-unix#step-71-database-setup-using-docker)).
+You already generated docker files during the [development environment setup](/docs/mainsail/installation/docker-unix#step-7-setting-up-the-development-database) (if not please run the following commands as specified [here](/docs/mainsail/installation/docker-unix#step-71-database-setup-using-docker)).
 
 ```bash
 cd core/docker/development/testnet #testnet docker folder
@@ -85,4 +85,4 @@ Your core server is now running and responding to your requests. Look at the [Pu
 To **create a simple transaction and post it to the local running blockchain** use the **core-tester-cli** package (link below). **Core-Tester** provides set of instructions on how to run commands for creating and sending transactions across any ARK Core network from the CLI interface.
 </x-alert>
 
-<livewire:page-reference path="/docs/core/development/core-tester-cli" />
+<livewire:page-reference path="/docs/mainsail/development/core-tester-cli" />

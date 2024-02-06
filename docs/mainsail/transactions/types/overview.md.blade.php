@@ -18,24 +18,24 @@ Using the [ARK SDKs](/docs/sdk/), developers can employ the programming language
 
 For more information about SDK implementations visit [ARK SDKs hub](/docs/sdk/).
 
-In the following sections basic transaction types and their structure is presented. If you are interested in the signature generation process and algorithm used, please check the [Cryptography Overview](/docs/core/overview/cryptography) page.
+In the following sections basic transaction types and their structure is presented. If you are interested in the signature generation process and algorithm used, please check the [Cryptography Overview](/docs/mainsail/overview/cryptography) page.
 
 ## List of Transaction Types
 
-<livewire:page-reference path="/docs/core/transactions/types/transfer" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/transfer" />
 
-<livewire:page-reference path="/docs/core/transactions/types/second-signature" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/second-signature" />
 
-<livewire:page-reference path="/docs/core/transactions/types/delegate-registration" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/delegate-registration" />
 
-<livewire:page-reference path="/docs/core/transactions/types/vote-unvote" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/vote-unvote" />
 
-<livewire:page-reference path="/docs/core/transactions/types/multisignature" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/multisignature" />
 
-<livewire:page-reference path="/docs/core/transactions/types/ipfs" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/ipfs" />
 
-<livewire:page-reference path="/docs/core/transactions/types/multipayment" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/multipayment" />
 
-<livewire:page-reference path="/docs/core/transactions/types/delegate-resignation" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/delegate-resignation" />
 
-<livewire:page-reference path="/docs/core/transactions/types/htlc" />
+<livewire:page-reference path="/docs/mainsail/transactions/types/htlc" />

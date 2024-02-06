@@ -95,7 +95,7 @@ This will fire up two separate containers. One for Core itself and another one f
 #### Custom Settings
 
 <x-alert type="info">
-If you prefer to use custom DB Name, DB User and DB Password simply adjust variables **POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB** (file=docker-compose.yml) and **CORE_DB_PASSWORD, CORE_DB_USERNAME** and **CORE_DB_DATABASE** (**file=$NETWORK.env**) correspondingly. For a full list of Core variables go [here](/docs/core/installation/variables).
+If you prefer to use custom DB Name, DB User and DB Password simply adjust variables **POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB** (file=docker-compose.yml) and **CORE_DB_PASSWORD, CORE_DB_USERNAME** and **CORE_DB_DATABASE** (**file=$NETWORK.env**) correspondingly. For a full list of Core variables go [here](/docs/mainsail/installation/variables).
 
 You can also change default log levels by adjusting variables **CORE_LOG_LEVEL** and **CORE_LOG_LEVEL_FILE** (**file=$NETWORK.env**). Note that _DEBUG_ level will probably add some CPU overhead during network sync.
 </x-alert>

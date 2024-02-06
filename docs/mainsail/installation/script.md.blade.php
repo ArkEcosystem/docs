@@ -7,7 +7,7 @@ title: Installation - Using the Install Script
 A step-by-step guide on how to prepare a fully-functional **Development** environment using the install script.
 
 <x-alert type="success">
-If you plan on using Core V3 for production purposes, consider setting up a **Production** environment by [Installing from Source](/docs/core/installation/source).
+If you plan on using Core V3 for production purposes, consider setting up a **Production** environment by [Installing from Source](/docs/mainsail/installation/source).
 </x-alert>
 
 ---

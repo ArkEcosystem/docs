@@ -24,7 +24,7 @@ Transactions are generated and signed locally with one of many available [SDK li
 Core Server (node) will accept a valid transaction, signed with a valid signature from a private key. Make sure you invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
 </x-alert>
 
-![](/storage/docs/docs/core/assets/send_to_node.png)
+![](/storage/docs/docs/mainsail/assets/send_to_node.png)
 
 ### 2. Receive and Validate Transaction on The Core Server
 
@@ -69,7 +69,7 @@ Transactions move out of the pool once a forging Delegate (a forger) is ready an
 
 Inside the `forge` method, all transaction values, fees, and IDs within the block are added together. The values and fees are used to calculate block metadata, while the hashed IDs are concatenated and used as the block's `payloadHash` property.
 
-![](/storage/docs/docs/core/assets/forger.png)
+![](/storage/docs/docs/mainsail/assets/forger.png)
 
 With this information in hand, the block data and sorted transactions are passed to the crypto library's `Block.create` method alongside the forging delegate's keys.
 

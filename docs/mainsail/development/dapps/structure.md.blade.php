@@ -67,6 +67,6 @@ public async register(): Promise<void> {
 }
 ```
 
-Take a look on [Service Providers](/docs/core/overview/architecture/provider) to learn more about it.
+Take a look on [Service Providers](/docs/mainsail/overview/architecture/provider) to learn more about it.
 
 **Let's head over to the next section, where we will learn how to write our own dApp in a few minutes, just by following our dApp core module template repository.**

@@ -16,7 +16,7 @@ In the next sections we will learn more about the basic commands of the Tester-C
 
 Make sure your development environment is setup and built with `yarn setup`and that your local Testnet is running with `yarn full:testnet.`For instructions how to do this follow this link:
 
-<livewire:page-reference path="/docs/core/development/testnet" />
+<livewire:page-reference path="/docs/mainsail/development/testnet" />
 
 ## Tester-CLI Commands
 
