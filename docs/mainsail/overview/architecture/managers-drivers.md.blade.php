@@ -4,17 +4,17 @@ title: Architecture - Managers and Drivers
 
 # Managers and Drivers
 
-ARK Core makes use of a variant of the Builder pattern, known as the Manager pattern, to provide a high degree of extensibility together with a delightful developer experience through expressive and simple to understand code to create your own set of drivers to alter how ARK Core behaves for certain features.
+Mainsail makes use of a variant of the Builder pattern, known as the Manager pattern, to provide a high degree of extensibility together with a delightful developer experience through expressive and simple to understand code to create your own set of drivers to alter how Mainsail behaves for certain features.
 
-> Throughout this article we will reference the Builder pattern as Manager pattern as ARK Core internally uses the wording `Manager` for all the classes that manage the state of drivers.
+> Throughout this article we will reference the Builder pattern as Manager pattern as Mainsail internally uses the wording `Manager` for all the classes that manage the state of drivers.
 
 ## Manager
 
 In simple terms a Manager is a class that _manages_ the state of the drivers for a specific feature. Think for example about a caching feature that needs to scale up as more data is stored. You might ship a default `ArrayDriver` driver which stores data in-memory and is sufficient for a few thousand sets of data but becomes slow over time.
 
-What the Manager pattern allows you to do is to simply create a new driver, for example `RedisDriver`, based on a given implementation contract, register it with ARK Core and reap the benefits of increased performance.
+What the Manager pattern allows you to do is to simply create a new driver, for example `RedisDriver`, based on a given implementation contract, register it with Mainsail and reap the benefits of increased performance.
 
-**This is extremely useful for extending or altering how ARK Core behaves and what it is capable of doing, all done through the use of managers and drivers with a common public API.**
+**This is extremely useful for extending or altering how Mainsail behaves and what it is capable of doing, all done through the use of managers and drivers with a common public API.**
 
 ## Driver
 
@@ -24,36 +24,38 @@ All of them are interchangeable as they have to satisfy the same implementation 
 
 ## Creating a Manager
 
-ARK Core comes with a variety of managers out of the box such as `CacheManager`, `LogManager` and `ValidationManager`. Lets learn how to create your own manager and how to register to expose it to other plugins.
+Mainsail comes with a variety of managers out of the box such as `CacheManager`, `LogManager` and `ValidationManager`. Lets learn how to create your own manager and how to register to expose it to other plugins.
 
 We'll create the `LogManager` from scratch to have a real-world example. Lets set up some boilerplate and then we'll break it down step-by-step.
 
 ```typescript
-import { Contracts, Support } from "@arkecosystem/core-kernel";
-import { ConsoleLogger } from "./drivers";
+import { Contracts } from "@mainsail/contracts";
 
-export class LogManager extends Support.Manager<Contracts.Logger> {
-    protected async createConsoleDriver(): Promise<Contracts.Logger> {
-        return this.app.resolve(ConsoleLogger).make();
-    }
+import { InstanceManager } from "../../support/instance-manager";
+import { MemoryLogger } from "./drivers/memory";
 
-    protected getDefaultDriver(): string {
-        return "console";
-    }
+export class LogManager extends InstanceManager<Contracts.Kernel.Logger> {
+	protected async createMemoryDriver(): Promise<Contracts.Kernel.Logger> {
+		return this.app.resolve(MemoryLogger).make();
+	}
+
+	protected getDefaultDriver(): string {
+		return "memory";
+	}
 }
 ```
 
 1. We create a new class which ideally should be named as `FeatureManager`, in this case the feature is `Log` which is responsible for all logging functionality so we name the class `LogManager`.
 2. We extend the `Support.Manager` class an inherit all of its methods and let it know that is responsible for managing logger drivers by type hinting `Contracts.Logger`.
-3. We create a `createConsoleDriver` method which will be responsible for instantiating our console-specific driver implementation.
-4. We create a `getDefaultDriver` method which in our case returns `console` as the desired default driver.
+3. We create a `createMemoryDriver` method which will be responsible for instantiating our console-specific driver implementation.
+4. We create a `getDefaultDriver` method which in our case returns `memory` as the desired default driver.
 
 ## Creating a Driver
 
-Implementing a logger driver is as simple as implementing a manager. The logger contract that is provided by ARK Core follows the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424). Again we'll setup some boilerplate and then break it down.
+Implementing a logger driver is as simple as implementing a manager. The logger contract that is provided by Mainsail follows the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424). Again we'll setup some boilerplate and then break it down.
 
 ```typescript
-import { Contracts } from "@arkecosystem/core-kernel";
+import { Contracts } from "@mainsail/contracts";
 
 export class ConsoleLogger implements Contracts.Logger {
     protected logger: Console;
@@ -108,31 +110,30 @@ export class ConsoleLogger implements Contracts.Logger {
 The final step is to stitch together the manager and driver and bind it to the service container. We'll use a service provider for this, about which we've learned in a previous article.
 
 ```typescript
-import { Container, Providers } from "@arkecosystem/core-kernel";
+import { interfaces } from "@mainsail/container";
+import { Identifiers } from "@mainsail/contracts";
+
+import { ServiceProvider as BaseServiceProvider } from "../../providers";
 import { LogManager } from "./manager";
 
-export class ServiceProvider extends Providers.ServiceProvider {
-    public async register(): Promise<void> {
-        this.app
-            .bind<LogManager>(Container.Identifiers.LogManager)
-            .to(LogManager)
-            .inSingletonScope();
+export class ServiceProvider extends BaseServiceProvider {
+	public async register(): Promise<void> {
+		this.app.bind<LogManager>(Identifiers.Services.Log.Manager).to(LogManager).inSingletonScope();
 
-        await this.app
-            .get<LogManager>(Container.Identifiers.LogManager)
-            .boot();
+		await this.app.get<LogManager>(Identifiers.Services.Log.Manager).boot();
 
-        this.app
-            .bind(Container.Identifiers.LogService)
-            .toDynamicValue((context: interfaces.Context) =>
-                context.container.get<LogManager>(Container.Identifiers.LogManager).driver(),
-            );
-    }
+		this.app
+			.bind(Identifiers.Services.Log.Service)
+			.toDynamicValue((context: interfaces.Context) =>
+				context.container.get<LogManager>(Identifiers.Services.Log.Manager).driver(),
+			);
+	}
 }
+
 ```
 
-1. We create a new binding inside the service container by calling the `bind` method with `Container.Identifiers.LogManager` and the `to` method with `LogManager`. This will let the container know that we wish to receive an instance of `LogManager` when we later on call `get(Container.Identifiers.LogManager)`.
-2. We resolve the `LogManager` from the service container via `Container.Identifiers.LogManager` and call the `boot` method to create an instance of the previously configured default driver, in our case the `ConsoleLogger`.
-3. We create a new binding inside the service container by calling the `bind` method with `Container.Identifiers.LogService` and the `toDynamicValue` with a function call that will return an instance of the default driver that we instantiated in the previous step.
+1. We create a new binding inside the service container by calling the `bind` method with `Identifiers.Services.Log.Manager` and the `to` method with `LogManager`. This will let the container know that we wish to receive an instance of `LogManager` when we later on call `get(Identifiers.Services.Log.Manager)`.
+2. We resolve the `LogManager` from the service container via `Identifiers.Services.Log.Manager` and call the `boot` method to create an instance of the previously configured default driver, in our case the `MemoryLogger`.
+3. We create a new binding inside the service container by calling the `bind` method with `Identifiers.Services.Log.Service` and the `toDynamicValue` with a function call that will return an instance of the default driver that we instantiated in the previous step.
 
-> It is important to use the container identifiers provided by `core-kernel` if you wish to extend or overwrite internal functionality. Symbols are unique and used to avoid name collisions, using the string value of a Symbol will result in duplicate bindings.
+> It is important to use the container identifiers provided by `@mainsail/kernel` if you wish to extend or overwrite internal functionality. Symbols are unique and used to avoid name collisions, using the string value of a Symbol will result in duplicate bindings.
