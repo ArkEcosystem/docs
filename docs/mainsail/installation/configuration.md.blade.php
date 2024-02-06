@@ -13,64 +13,64 @@ Plugins are packages that expose services which expand or alter what Mainsail no
 ```json
 {
     "plugins": [
-		{
-			"package": "@mainsail/validation"
-		},
-		{
-			"package": "@mainsail/crypto-config"
-		},
-		{
-			"package": "@mainsail/crypto-validation"
-		},
-		{
-			"package": "@mainsail/crypto-hash-bcrypto"
-		},
-		{
-			"package": "@mainsail/crypto-signature-schnorr-secp256k1"
-		},
-		{
-			"package": "@mainsail/crypto-key-pair-ecdsa"
-		},
-		{
-			"package": "@mainsail/crypto-consensus-bls12-381"
-		},
-		{
-			"package": "@mainsail/crypto-address-base58"
-		},
-		{
-			"package": "@mainsail/crypto-wif"
-		},
-		{
-			"package": "@mainsail/serializer"
-		},
-		{
-			"package": "@mainsail/p2p"
-		},
-		{
-			"package": "@mainsail/api-transaction-pool"
-		},
-		{
-			"package": "@mainsail/processor"
-		},
-		{
-			"package": "@mainsail/validator-set-static"
-		},
-		{
-			"package": "@mainsail/validator"
-		},
-		{
-			"package": "@mainsail/proposer"
-		},
-		{
-			"package": "@mainsail/consensus"
-		},
-		{
-			"package": "@mainsail/webhooks"
-		},
-		{
-			"package": "@mainsail/bootstrap"
-		}
-	]
+        {
+            "package": "@mainsail/validation"
+        },
+        {
+            "package": "@mainsail/crypto-config"
+        },
+        {
+            "package": "@mainsail/crypto-validation"
+        },
+        {
+            "package": "@mainsail/crypto-hash-bcrypto"
+        },
+        {
+            "package": "@mainsail/crypto-signature-schnorr-secp256k1"
+        },
+        {
+            "package": "@mainsail/crypto-key-pair-ecdsa"
+        },
+        {
+            "package": "@mainsail/crypto-consensus-bls12-381"
+        },
+        {
+            "package": "@mainsail/crypto-address-base58"
+        },
+        {
+            "package": "@mainsail/crypto-wif"
+        },
+        {
+            "package": "@mainsail/serializer"
+        },
+        {
+            "package": "@mainsail/p2p"
+        },
+        {
+            "package": "@mainsail/api-transaction-pool"
+        },
+        {
+            "package": "@mainsail/processor"
+        },
+        {
+            "package": "@mainsail/validator-set-static"
+        },
+        {
+            "package": "@mainsail/validator"
+        },
+        {
+            "package": "@mainsail/proposer"
+        },
+        {
+            "package": "@mainsail/consensus"
+        },
+        {
+            "package": "@mainsail/webhooks"
+        },
+        {
+            "package": "@mainsail/bootstrap"
+        }
+    ]
 }
 ```
 

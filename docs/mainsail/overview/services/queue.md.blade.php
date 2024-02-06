@@ -155,13 +155,13 @@ import { MemoryQueue } from "./memory-queue";
 
 export class ServiceProvider extends Providers.ServiceProvider {
     public async register(): Promise<void> {
-		const cacheManager = this.app.get<Services.Log.QueueManager>(
-			Identifiers.Services.Queue.Manager,
-		);
+        const cacheManager = this.app.get<Services.Log.QueueManager>(
+            Identifiers.Services.Queue.Manager,
+        );
 
-   		await cacheManager.extend("console", async () =>
-			this.app.resolve<Contracts.Kernel.Queue>(MemoryQueue).make()
-		);
+        await cacheManager.extend("console", async () =>
+            this.app.resolve<Contracts.Kernel.Queue>(MemoryQueue).make()
+        );
     }
 }
 ```

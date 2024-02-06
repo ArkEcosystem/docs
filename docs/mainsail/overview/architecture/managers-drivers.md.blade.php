@@ -35,13 +35,13 @@ import { InstanceManager } from "../../support/instance-manager";
 import { MemoryLogger } from "./drivers/memory";
 
 export class LogManager extends InstanceManager<Contracts.Kernel.Logger> {
-	protected async createMemoryDriver(): Promise<Contracts.Kernel.Logger> {
-		return this.app.resolve(MemoryLogger).make();
-	}
+    protected async createMemoryDriver(): Promise<Contracts.Kernel.Logger> {
+        return this.app.resolve(MemoryLogger).make();
+    }
 
-	protected getDefaultDriver(): string {
-		return "memory";
-	}
+    protected getDefaultDriver(): string {
+        return "memory";
+    }
 }
 ```
 
@@ -117,19 +117,18 @@ import { ServiceProvider as BaseServiceProvider } from "../../providers";
 import { LogManager } from "./manager";
 
 export class ServiceProvider extends BaseServiceProvider {
-	public async register(): Promise<void> {
-		this.app.bind<LogManager>(Identifiers.Services.Log.Manager).to(LogManager).inSingletonScope();
+    public async register(): Promise<void> {
+        this.app.bind<LogManager>(Identifiers.Services.Log.Manager).to(LogManager).inSingletonScope();
 
-		await this.app.get<LogManager>(Identifiers.Services.Log.Manager).boot();
+        await this.app.get<LogManager>(Identifiers.Services.Log.Manager).boot();
 
-		this.app
-			.bind(Identifiers.Services.Log.Service)
-			.toDynamicValue((context: interfaces.Context) =>
-				context.container.get<LogManager>(Identifiers.Services.Log.Manager).driver(),
-			);
-	}
+        this.app
+            .bind(Identifiers.Services.Log.Service)
+            .toDynamicValue((context: interfaces.Context) =>
+                context.container.get<LogManager>(Identifiers.Services.Log.Manager).driver(),
+            );
+    }
 }
-
 ```
 
 1. We create a new binding inside the service container by calling the `bind` method with `Identifiers.Services.Log.Manager` and the `to` method with `LogManager`. This will let the container know that we wish to receive an instance of `LogManager` when we later on call `get(Identifiers.Services.Log.Manager)`.

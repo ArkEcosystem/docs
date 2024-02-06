@@ -132,15 +132,15 @@ import { ConsoleLogger } from "./console-logger";
 
 export class ServiceProvider extends Providers.ServiceProvider {
     public async register(): Promise<void> {
-		const logManager: Services.Log.LogManager = this.app.get<Services.Log.LogManager>(
-			Identifiers.Services.Log.Manager,
-		);
+        const logManager: Services.Log.LogManager = this.app.get<Services.Log.LogManager>(
+            Identifiers.Services.Log.Manager,
+        );
 
-		await logManager.extend("console", async () =>
-			this.app.resolve<Contracts.Kernel.Logger>(ConsoleLogger).make(this.config().all()),
-		);
+        await logManager.extend("console", async () =>
+            this.app.resolve<Contracts.Kernel.Logger>(ConsoleLogger).make(this.config().all()),
+        );
 
-		logManager.setDefaultDriver("console");
+        logManager.setDefaultDriver("console");
     }
 }
 ```
