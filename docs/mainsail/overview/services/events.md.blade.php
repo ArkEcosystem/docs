@@ -13,7 +13,7 @@ The event dispatcher implementation that ships with Core supports both synchrono
 Before we start, we need to inject the EventDispatcher service into our class so we can use events.
 
 ```typescript
-@Container.inject(Container.Identifiers.EventDispatcherService)
+@Container.inject(Identifiers.Services.EventDispatcher.Service)
 private readonly events!: Contracts.Kernel.EventDispatcher;
 ```
 

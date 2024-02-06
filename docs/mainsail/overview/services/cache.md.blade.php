@@ -11,7 +11,9 @@ Core ships with a cache abstraction that makes it easy to switch from an in-memo
 ### Create an instance
 
 ```typescript
-const cacheStore: CacheStore<string, string> = app.get<CacheStore<string, string>>(Container.Identifiers.CacheFactory)()
+import { Contracts } from "@mainsail/contracts";
+
+const cacheStore = app.get<Contracts.Kernel.CacheStore<string, string>>(Identifiers.Services.Cache.Factory)()
 ```
 
 ### Get all of the items in the cache
@@ -119,12 +121,12 @@ As explained in a previous article, it is possible to extend Core services due t
 Implementing a new driver is as simple as importing the cache store contract that needs to be satisfied and implement the methods specified in it.
 
 ```typescript
-import { Contracts } from "@arkecosystem/core-kernel";
+import { Contracts } from "@mainsail/contracts";
 
-export class MemoryCacheStore<K, T> implements Contracts.Cache.CacheStore<K, T> {
+export class MemoryCacheStore<K, T> implements Contracts.Kernel.CacheStore<K, T> {
     private readonly store: Map<K, T> = new Map<K, T>();
 
-    public async make(): Promise<CacheStore<K, T>> {
+    public async make(): Promise<Contracts.Kernel.CacheStore<K, T>> {
         return this;
     }
 
@@ -209,12 +211,13 @@ export class MemoryCacheStore<K, T> implements Contracts.Cache.CacheStore<K, T> 
 Now that we have implemented our memory driver for the cache service, we can create a service provider to register it.
 
 ```typescript
-import { Container, Contracts, Providers, Services } from "@arkecosystem/core-kernel";
+import { Providers, Services } from "@mainsail/kernel";
+import { Contracts } from "@mainsail/contracts";
 
 export class ServiceProvider extends Providers.ServiceProvider {
     public async register(): Promise<void> {
         const cacheManager: Services.Cache.CacheManager = this.app.get<Services.Cache.CacheManager>(
-            Container.Identifiers.CacheManager,
+            Identifiers.Services.Cache.Manager,
         );
 
         await cacheManager.extend("memory", MemoryCacheStore);

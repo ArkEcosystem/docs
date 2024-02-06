@@ -13,8 +13,6 @@ Mixins are a powerful tool to make use of composition over inheritance but they 
 ## Mixins Usage
 
 ```typescript
-import { app } from "@arkecosystem/core-kernel";
-
 // Class we will extend through a mixin
 class Block {}
 

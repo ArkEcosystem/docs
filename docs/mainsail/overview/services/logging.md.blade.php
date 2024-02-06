@@ -15,7 +15,7 @@ The application logger is accessible through the `log` property of the `app` ins
 ### Get an instance of the Logger
 
 ```typescript
-const logger: Contracts.Kernel.Log.Logger = app.get<Contracts.Kernel.Log.Logger>(Container.Identifiers.LogService)
+const logger: Contracts.Kernel.Log.Logger = app.get<Contracts.Kernel.Logger>(Identifiers.Services.Log.Service)
 ```
 
 ### Logging an `emergency` message
@@ -75,12 +75,12 @@ As explained in a previous article, it is possible to extend Core services due t
 Implementing a new driver is as simple as importing the logger contract that needs to be satisfied and implement the methods specified in it.
 
 ```typescript
-import { Contracts } from "@arkecosystem/core-kernel";
+import { Contracts } from "@mainsail/contracts";
 
 export class ConsoleLogger implements Contracts.Logger {
     protected logger: Console;
 
-    public async make(): Promise<Contracts.Logger> {
+    public async make(): Promise<Contracts.Kernel.Logger> {
         this.logger = console;
 
         return this;
@@ -125,19 +125,22 @@ export class ConsoleLogger implements Contracts.Logger {
 Now that we have implemented our console driver for the log service, we can create a service provider to register it.
 
 ```typescript
-import { Container, Contracts, Providers, Services } from "@arkecosystem/core-kernel";
+import { Contracts, Identifiers } from "@mainsail/contracts";
+import { Providers, Services } from "@mainsail/kernel";
+
+import { ConsoleLogger } from "./console-logger";
 
 export class ServiceProvider extends Providers.ServiceProvider {
     public async register(): Promise<void> {
-        const logManager: Services.Log.LogManager = this.app.get<Services.Log.LogManager>(
-            Container.Identifiers.LogManager,
-        );
+		const logManager: Services.Log.LogManager = this.app.get<Services.Log.LogManager>(
+			Identifiers.Services.Log.Manager,
+		);
 
-        await logManager.extend("console", async () =>
-            this.app.resolve<Contracts.Log.Logger>(ConsoleLogger).make(this.config().all()),
-        );
+		await logManager.extend("console", async () =>
+			this.app.resolve<Contracts.Kernel.Logger>(ConsoleLogger).make(this.config().all()),
+		);
 
-        logManager.setDefaultDriver("console");
+		logManager.setDefaultDriver("console");
     }
 }
 ```
@@ -146,4 +149,4 @@ export class ServiceProvider extends Providers.ServiceProvider {
 2. We call the `extend` method with an asynchronous function which is responsible for creating the logger instance.
 3. We call the `setDefaultDriver` method which will tell Core to use `console` as the new default logger.
 
-> If you do not call `setDefaultDriver` you'll need to manually retrieve the console logger instance via `app.get<LogManager>(LogManager).driver("console")`.
+> If you do not call `setDefaultDriver` you'll need to manually retrieve the console logger instance via `app.get<Services.Log.LogManager>(Identifiers.Services.Log.Manager).driver("console")`.

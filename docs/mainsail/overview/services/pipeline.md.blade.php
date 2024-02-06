@@ -17,7 +17,9 @@ All stage functions and stage handlers can be synchronous and asynchronous. By d
 When you have the need for a new pipeline, you'll need to resolve it through the application in order to ensure that it has all of the required dependencies for it to function injected into it.
 
 ```typescript
-const pipeline: Pipeline = app.get<PipelineFactory>(Container.Identifiers.PipelineFactory)();
+import { Contracts, Identifiers } from "@mainsail/contracts";
+
+const pipeline: Pipeline = app.get<Contract.Kernel.PipelineFactory>(Identifiers.Services.Pipeline.Factory)();
 ```
 
 ## **Stage Functions**
@@ -25,7 +27,7 @@ const pipeline: Pipeline = app.get<PipelineFactory>(Container.Identifiers.Pipeli
 The first way is to use functions that serve as stages. This is a more JavaScript way of doing things but won't give you full access to the application and its bindings.
 
 ```typescript
-import { Services } from "@arkecosystem/core-kernel";
+import { Services } from "@mainsail/kernel";
 
 const removeDash = async (payload: string) => payload.replace("_", "");
 const removeUnderscore = async (payload: string) => payload.replace("-", " ");

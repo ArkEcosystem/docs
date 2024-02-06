@@ -20,7 +20,7 @@ Creating a trigger is as simple as passing in a name and a function to the `bind
 
 ```typescript
 app
-    .get<Services.Triggers.TriggerService>(Container.Identifiers.TriggerService)
+    .get<Services.Triggers.Triggers>(Identifiers.Services.Trigger.Service)
     .bind("log", (message: string) => console.log(message));
 ```
 
@@ -30,7 +30,7 @@ Calling a trigger is just as simple as creating it, simply pass in the name of t
 
 ```typescript
 app
-    .get<Services.Triggers.TriggerService>(Container.Identifiers.TriggerService)
+    .get<Services.Triggers.Triggers>(Identifiers.Services.Trigger.Service)
     .call("log", "Hello World");
 ```
 
@@ -44,7 +44,7 @@ The `before` hook is executed before an action is executed. **This will always b
 
 ```typescript
 app
-    .get<Services.Triggers.TriggerService>(Container.Identifiers.TriggerService)
+    .get<Services.Triggers.Triggers>(Identifiers.Services.Trigger.Service)
     .bind("log", (message: string) => console.log(message))
     .before(() => console.log("I am running before the action!"));
 ```
@@ -55,7 +55,7 @@ The `error` hook is executed when an exception is caught while the action is exe
 
 ```typescript
 app
-    .get<Services.Triggers.TriggerService>(Container.Identifiers.TriggerService)
+    .get<Services.Triggers.Triggers>(Identifiers.Services.Trigger.Service)
     .bind("log", (message: string) => console.log(message))
     .error(() => console.log("I am running if the action encounters an error!"));
 ```
@@ -66,7 +66,7 @@ The `after` hook is executed after an action has been executed. **This will alwa
 
 ```typescript
 app
-    .get<Services.Triggers.TriggerService>(Container.Identifiers.TriggerService)
+    .get<Services.Triggers.Triggers>(Identifiers.Services.Trigger.Service)
     .bind("log", (message: string) => console.log(message))
     .after(() => console.log("I am running after the action!"));
 ```

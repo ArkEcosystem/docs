@@ -13,7 +13,9 @@ The default driver that is shipped provides an in-memory queue that is capable o
 ### Create an instance
 
 ```typescript
-const queue: Queue = app.get<QueueFactory>(Container.Identifiers.QueueFactory)();
+import { Contracts, Identifiers } from "@mainsail/contracts";
+
+const queue: Queue = app.get<Contracts.Kernel.QueueFactory>(Identifiers.Services.Queue.Factory)();
 ```
 
 ### Start the queue
@@ -86,9 +88,9 @@ In this example we will use [p-queue](https://github.com/sindresorhus/p-queue) w
 </x-alert>
 
 ```typescript
-import { Contracts } from "@arkecosystem/core-kernel";
+import { Contracts } from "@mainsail/contracts";
 
-export class MemoryQueue implements Contracts.Queue.Queue {
+export class MemoryQueue implements Contracts.Kernel.Queue {
     private readonly queue: PQueue = new PQueue({ autoStart: false });
 
     public async start(): Promise<void> {
@@ -143,6 +145,23 @@ export class ServiceProvider extends Providers.ServiceProvider {
         );
 
         await cacheManager.extend("memory", MemoryQueue);
+    }
+}
+
+import { Contracts, Identifiers } from "@mainsail/contracts";
+import { Providers, Services } from "@mainsail/kernel";
+
+import { MemoryQueue } from "./memory-queue";
+
+export class ServiceProvider extends Providers.ServiceProvider {
+    public async register(): Promise<void> {
+		const cacheManager = this.app.get<Services.Log.QueueManager>(
+			Identifiers.Services.Queue.Manager,
+		);
+
+   		await cacheManager.extend("console", async () =>
+			this.app.resolve<Contracts.Kernel.Queue>(MemoryQueue).make()
+		);
     }
 }
 ```

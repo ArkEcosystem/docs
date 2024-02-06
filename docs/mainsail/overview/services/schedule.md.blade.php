@@ -14,7 +14,7 @@ Core makes running recurring tasks easy by providing a task scheduling manager t
 
 ```typescript
 const cronJob: Services.Schedule.CronJob = app
-    .get<Services.Schedule.ScheduleService>(Container.Identifiers.ScheduleService)
+    .get<Contracts.Kernel.ScheduleService>(Identifiers.Sevices.Schedule.Service)
     .cron()
 ```
 

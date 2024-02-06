@@ -104,6 +104,3 @@ app
     .deleteDirectory("/home/ark");
 ```
 
-## Extending
-
-@TODO
