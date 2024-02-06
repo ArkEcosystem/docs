@@ -119,7 +119,6 @@ The **Deployment** section will guide you through important actions such as the 
         ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Core CLI Commands'],
         ['path' => '/docs/mainsail/deployment/relay', 'name' => 'Starting a Relay'],
         ['path' => '/docs/mainsail/deployment/forger', 'name' => 'Starting a Forger'],
-        ['path' => '/docs/mainsail/deployment/snapshots', 'name' => 'Using Snapshots'],
     ]"
 />
 

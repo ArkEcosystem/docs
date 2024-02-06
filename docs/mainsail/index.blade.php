@@ -82,7 +82,6 @@
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli" name="Core CLI Commands" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/relay" name="Starting a Relay" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/forger" name="Starting a Forger" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/snapshots" name="Using Snapshots" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/testing/*" title="Testing">
