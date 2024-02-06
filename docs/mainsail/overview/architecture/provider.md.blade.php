@@ -11,9 +11,9 @@ Service providers are the building blocks that are responsible for composing Cor
 When you're developing a new plugin, the first thing you'll need to do is to write a service provider so that Core will be able to discover and register your plan. All service providers need to extend the `Support.ServiceProvider` which is an abstract class which provides some common basic functionality that is necessary for Core to do its job.
 
 ```typescript
-import { Support } from "@arkecosystem/core-kernel";
+import { Providers } from "@mainsail/kernel";
 
-export class ServiceProvider extends Support.ServiceProvider {
+export class ServiceProvider extends Providers.ServiceProvider {
     public async register(): Promise<void> {
         console.log("Hey, I am preparing things!")
     }
@@ -58,14 +58,14 @@ It's important to note that the `bootWhen` and `disposeWhen` methods are called 
 
 ### Example of deferred booting
 
-If you want to defer the booting of your service provider until some condition is fulfilled, you can use the `bootWhen` method. In the below example, we simply wait for the `@arkecosystem/core-database` service provider to be booted before booting our own service provider.
+If you want to defer the booting of your service provider until some condition is fulfilled, you can use the `bootWhen` method. In the below example, we simply wait for the `@mainsail/database` service provider to be booted before booting our own service provider.
 
 ```typescript
-import { Support } from "@arkecosystem/core-kernel";
+import { Providers } from "@mainsail/kernel";
 
-export class ServiceProvider extends Support.ServiceProvider {
+export class ServiceProvider extends Providers.ServiceProvider {
     public async bootWhen(serviceProvider?: string): Promise<boolean> {
-        return serviceProvider === "@arkecosystem/core-database";
+        return serviceProvider === "@mainsail/database";
     }
 }
 ```
