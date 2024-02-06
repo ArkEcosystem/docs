@@ -92,6 +92,5 @@
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/support/*" title="Support">
     <x-ark-docs-sidebar-link path="/docs/mainsail/support/troubleshooting" name="Troubleshooting" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/support/security" name="Security Vulnerabilities" />
     <x-ark-docs-sidebar-link path="https://ark.dev/contact" name="Contact Us" />
 </x-ark-docs-sidebar-group>

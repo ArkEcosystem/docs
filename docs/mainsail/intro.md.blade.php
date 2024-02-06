@@ -141,7 +141,6 @@ The **Support** section provides resources for solving and reporting issues in M
 <x-ark-link-collection
     :links="[
         ['path' => '/docs/mainsail/support/troubleshooting', 'name' => 'Troubleshooting'],
-        ['path' => '/docs/mainsail/support/security', 'name' => 'Security Vulnerabilities'],
         ['path' => 'https://ark.dev/contact', 'name' => 'Contact Us'],
     ]"
 />
