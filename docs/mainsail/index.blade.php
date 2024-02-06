@@ -46,15 +46,11 @@
         :children="[
             ['path' => '/docs/mainsail/transactions/types/overview', 'name' => 'Overview'],
             ['path' => '/docs/mainsail/transactions/types/transfer', 'name' => 'Transfer'],
-            ['path' => '/docs/mainsail/transactions/types/second-signature', 'name' => '2nd Signature Registration'],
             ['path' => '/docs/mainsail/transactions/types/delegate-registration', 'name' => 'Delegate Registration'],
             ['path' => '/docs/mainsail/transactions/types/vote-unvote', 'name' => 'Vote / Unvote'],
             ['path' => '/docs/mainsail/transactions/types/multisignature', 'name' => 'Multisignature Registration'],
-            ['path' => '/docs/mainsail/transactions/types/ipfs', 'name' => 'Ipfs'],
             ['path' => '/docs/mainsail/transactions/types/multipayment', 'name' => 'Multipayment'],
             ['path' => '/docs/mainsail/transactions/types/delegate-resignation', 'name' => 'Delegate Resignation'],
-            ['path' => '/docs/mainsail/transactions/types/htlc', 'name' => 'HTLC'],
-            ['path' => '/docs/mainsail/transactions/types/entity', 'name' => 'Entity'],
         ]"
     />
 </x-ark-docs-sidebar-group>

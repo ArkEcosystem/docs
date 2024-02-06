@@ -24,18 +24,12 @@ In the following sections basic transaction types and their structure is present
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/transfer" />
 
-<livewire:page-reference path="/docs/mainsail/transactions/types/second-signature" />
-
 <livewire:page-reference path="/docs/mainsail/transactions/types/delegate-registration" />
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/vote-unvote" />
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/multisignature" />
 
-<livewire:page-reference path="/docs/mainsail/transactions/types/ipfs" />
-
 <livewire:page-reference path="/docs/mainsail/transactions/types/multipayment" />
 
 <livewire:page-reference path="/docs/mainsail/transactions/types/delegate-resignation" />
-
-<livewire:page-reference path="/docs/mainsail/transactions/types/htlc" />
