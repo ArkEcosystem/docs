@@ -4,9 +4,9 @@ title: Architecture - Contracts
 
 # Contracts
 
-Contracts inside of Core are collections of interfaces, also referred to as implementation contracts, that define what methods a class has to implement. These contracts ensure that any alternative implementations of services are compliant with what Core expects internally.
+Contracts inside of Mainsail are collections of interfaces, also referred to as implementation contracts, that define what methods a class has to implement. These contracts ensure that any alternative implementations of services are compliant with what Mainsail expects internally.
 
-Core ships a default implementation for every contract that is defined, the logger comes with a [pino](https://github.com/pinojs/pino) implementation, caching comes with an in-memory implementation and validation comes with a [joi](https://github.com/hapijs/joi) implementation.
+Mainsail ships a default implementation for every contract that is defined, the logger comes with a [pino](https://github.com/pinojs/pino) implementation, caching comes with an in-memory implementation and validation comes with a [joi](https://github.com/hapijs/joi) implementation.
 
 ## When To Use Contracts
 
