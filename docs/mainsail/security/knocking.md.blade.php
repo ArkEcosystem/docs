@@ -4,7 +4,7 @@ title: Security - Setting Up Port Knocking
 
 # Setting Up Port Knocking
 
-When running an ARK node, especially a Validator Node, you should consider your server's security as your main priority.
+When running an Mainsail node, especially a Validator Node, you should consider your server's security as your main priority.
 
 <x-alert type="warning">
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.
@@ -160,7 +160,7 @@ sudo apt-get install knockd
 
 Logs for knockd appear in `syslog` and will be crucial if you need to troubleshoot.
 
-Run the following command on your ARK node server.
+Run the following command on your Mainsail node server.
 
 ```bash
 tail -f /var/log/syslog
@@ -189,7 +189,7 @@ Apr 17 04:02:18 node1 knockd: openSSH: running command: ufw allow 55555/tcp
 Running `sudo ufw status` should list your SSH port as enabled.
 
 ```bash
-arkoar@node1:~$ sudo ufw status
+mainsail@node1:~$ sudo ufw status
 Status: active
 
 To                         Action      From
@@ -259,7 +259,7 @@ Windows users can generate their ssh key using [PuTTY Key Generator](https://www
 
 `Copy your PUBLIC KEY to your Server`
 
-Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your ARK node server.
+Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your Mainsail node server.
 
 #### **Disable Password Authentication**
 

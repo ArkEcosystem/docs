@@ -4,7 +4,7 @@ title: Security - Cloudflare DDoS Protection
 
 # Cloudflare DDoS Protection
 
-When running an ARK node, especially a Valdiator Node, you should consider your server's security as your main priority.
+When running an Mainsail node, especially a Valdiator Node, you should consider your server's security as your main priority.
 
 <x-alert type="warning">
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.
@@ -35,8 +35,8 @@ Paste in the following config, making sure you edit the `server_name` and `proxy
 server {
     listen 443 ssl;
     server_name node.yoursite.com;
-    ssl_certificate /etc/nginx/ssl/ark.crt;
-    ssl_certificate_key /etc/nginx/ssl/ark.key;
+    ssl_certificate /etc/nginx/ssl/mainsail.crt;
+    ssl_certificate_key /etc/nginx/ssl/mainsail.key;
     ssl_verify_client off;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers EECDH+CHACHA20:EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5;
@@ -70,17 +70,17 @@ Scroll down to `Origin Certificates` and click the `Create Certificate` button. 
 
 ![](/storage/docs/docs/mainsail/assets/cloudflare_certificate.png)
 
-Open Terminal on your ARK node server
+Open Terminal on your Mainsail node server
 
 We need to create a new folder and copy our keys to our server.
 
 ```bash
 mkdir /etc/nginx/ssl
 cd /etc/nginx/ssl
-touch ark.crt ark.key
+touch mainsail.crt mainsail.key
 ```
 
-Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
+Copy the `PRIVATE KEY` to the file `mainsail.key` and the `CERTIFICATE` to `mainsail.crt`.
 
 ### **Start Nginx**
 
@@ -88,7 +88,7 @@ Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
 sudo service nginx start
 ```
 
-If everything started fine, you should be able to access your ARK node APIs behind SSL. Giving you the bonus of Cloudflare DDOS protection.
+If everything started fine, you should be able to access your Mainsail node APIs behind SSL. Giving you the bonus of Cloudflare DDOS protection.
 
 Otherwise, if you get any errors run the following command to troubleshoot nginx.
 
