@@ -59,7 +59,7 @@
 <x-ark-docs-sidebar-group path="/docs/mainsail/installation/*" title="Installation">
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/intro" name="Introduction" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/requirements" name="Requirements" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/installation/configuration" name="Configuring Core" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/installation/configuration" name="Configuring Mainsail" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/variables" name="Environment Variables" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/script" name="Using the Install Script" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/source" name="Installing from Source" />
