@@ -6,14 +6,10 @@ title: Installation - Using the Install Script
 
 A step-by-step guide on how to prepare a fully-functional **Development** environment using the install script.
 
-<x-alert type="success">
-If you plan on using Core V3 for production purposes, consider setting up a **Production** environment by [Installing from Source](/docs/mainsail/installation/source).
-</x-alert>
-
 ---
 
 <x-alert type="success">
-If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$100** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
+If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$200** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
 </x-alert>
 
 ## Getting Started
