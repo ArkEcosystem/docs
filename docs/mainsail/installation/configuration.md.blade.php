@@ -97,7 +97,7 @@ Keys that are type of object will be merged with default configuration. String, 
 
 ## Validator Configuration
 
-The validator configuration is responsible for providing the information that is necessary to know who should be forging on a server. This can either be a list of plaintext bip39 passphrases or a bip38 encrypted passphrase that is protected with a password. Configuration is stored inside `validators.json`ß file.
+The validator configuration is responsible for providing the information that is necessary to know who should be forging on a server. This can either be a list of plaintext bip39 passphrases or a bip38 encrypted passphrase that is protected with a password. Configuration is stored inside `validators.json` file.
 
 ```json
 {
