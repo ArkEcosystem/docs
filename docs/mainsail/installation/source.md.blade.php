@@ -4,16 +4,12 @@ title: Installation - Installing from Source
 
 # Installing from Source
 
-A step-by-step guide on how to prepare a fully-functional **Production** environment from source.
-
-<x-alert type="success">
-If you plan on using Mainsail for testing or development, consider setting up a **Development** environment by [Using the Install Script](/docs/mainsail/installation/script).
-</x-alert>
+A step-by-step guide on how to prepare a fully-functional environment from source.
 
 ---
 
 <x-alert type="success">
-If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$100** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
+If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$200** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
 </x-alert>
 
 ## Introduction
