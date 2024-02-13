@@ -45,7 +45,7 @@ sudo apt-get upgrade -y
 As the most popular version control software in existence, Git is a staple of many developer workflows, and ARK is no exception. Downloading Git will allow you to clone the latest version of ARK Core.
 
 ```bash
-sudo apt-get install -y git curl apt-transport-https
+sudo apt-get install -y git curl apt-transport-https python-is-python3
 ```
 
 ## Step 4: Install NVM & Node.js Runtime
