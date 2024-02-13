@@ -132,3 +132,38 @@ That’s it, your installation is all set! 🎉
 <x-alert type="success">
 **Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail core:start --token=ark --network=testnet && pm2 logs`**
 </x-alert>
+
+## API installation
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+
+mainsail core:start
+
+pm2 logs
+```
+
+```bash
+[sudo] password for mainsail: <input your password for user you created>
+```
+
+```bash
+    ==> Installed PostgreSQL!
+Would you like to configure the database? [y/N]: y
+Enter the database username: ark
+Enter the database password: password
+Enter the database name: ark_testnet
+database username: ark
+database password: password
+database name: ark_testnet
+Proceed? [y/N]: y
+```
+
+```bash
+    ==> Installed Mainsail API Server!
+Are you going to run the backend Core server on the same node? [y/N]: y
+```
+
+<x-alert type="success">
+**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail-api api:start --token=ark --network=testnet && pm2 logs`**
+</x-alert>
