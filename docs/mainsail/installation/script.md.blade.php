@@ -138,6 +138,13 @@ That’s it, your installation is all set! 🎉
 
 ## API installation
 
+Mainsail core installation comes without the active API server. Additional steps are required to install the API server. Once installed API server for Mainsail will be available as `mainsail-api` CLI command.   
+
+The easiest way to install the API server is to use the `install-alpha.sh` script. This script will install the API server and all of its dependencies onto your server, then publish the configuration files for it.
+API server can be installed besides the Mainsail Core server or on a separate node. We will illustrate the installation on the same node as the core server.
+
+To install the API server, you can use the following commands:
+
 ```bash
 bash install-alpha.sh --api
 
@@ -145,10 +152,37 @@ mainsail-api api:start --token=ark --network=testnet
 
 pm2 logs
 ```
+## Step-by-Step API Installation via the Script
+
+### Step 1: Ensure the user account exist with sudo privileges
+
+Ensure the user account has all of the necessary privileges to run Mainsail software properly. This will give our user account `sudo` privileges.
+We already created a user account in the previous steps when we install Mainsail core, so we can skip this step.
+
+```bash
+sudo adduser mainsail
+sudo usermod -a -G sudo mainsail
+sudo su - mainsail
+````
+
+### Step 2: Run the Installation Script
+
+Run the install script by copying and pasting this one line command into your terminal. Be aware that the `--api` flag is used to install the API server.
+
+```bash
+bash install-alpha.sh --api
+```
+
+
+You will be asked to input your user password to grant sudo privileges:
 
 ```bash
 [sudo] password for mainsail: <input your password for user you created>
 ```
+
+### Step 3: Configure PostgreSQL database
+
+After the installation of the API server, you will be asked to configure the database. You can use the following example to configure the database:
 
 ```bash
     ==> Installed PostgreSQL!
@@ -161,6 +195,13 @@ database password: password
 database name: ark_testnet
 Proceed? [y/N]: y
 ```
+
+This will create a PostgreSQL role and database to be used for storing blockchain data.
+
+
+### Step 4: Configure Mainsail core
+
+After the installation of the API server, you will be asked to configure the Mainsail core. You can use the following example to configure the Mainsail. Following configuration will update Mainsail configuration to use the PostgreSQL database for API server. 
 
 ```bash
     ==> Installed Mainsail API Server!
