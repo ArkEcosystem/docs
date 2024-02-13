@@ -130,5 +130,5 @@ At this point, Mainsail Core has been successfully installed with its configurat
 That’s it, your installation is all set! 🎉
 
 <x-alert type="success">
-**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail core:start && pm2 logs`**
+**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail core:start --token=ark --network=testnet && pm2 logs`**
 </x-alert>
