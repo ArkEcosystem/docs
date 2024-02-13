@@ -75,6 +75,8 @@ nvm install --lts
 ```bash
 npm install -g npm@latest
 npm i -g pnpm
+
+pnpm setup
 ```
 
 ## Step 7: Install Dependencies
