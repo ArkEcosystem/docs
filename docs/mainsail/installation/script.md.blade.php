@@ -23,16 +23,19 @@ sudo adduser mainsail
 sudo usermod -a -G sudo mainsail
 sudo su - mainsail
 
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+wget https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/install-alpha.sh
+bash install-alpha.sh
 
-mainsail core:start
+mainsail core:start --token=ark --network=testnet
 
 pm2 logs
 ```
 
+<!--
 <x-alert type="info">
 Installing **Devnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. Proceed to the '[Additional Devnet Steps](#additional-devnet-steps)' section for further instructions.
 </x-alert>
+-->
 
 ## Step-by-Step Installation via the Script
 
@@ -136,9 +139,9 @@ That’s it, your installation is all set! 🎉
 ## API installation
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash install-alpha.sh --api
 
-mainsail core:start
+mainsail-api api:start --token=ark --network=testnet
 
 pm2 logs
 ```
