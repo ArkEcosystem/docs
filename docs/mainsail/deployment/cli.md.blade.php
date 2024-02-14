@@ -1,8 +1,8 @@
 ---
-title: Deployment - Core CLI Commands
+title: Deployment - Mainsail CLI Commands
 ---
 
-# Core CLI Commands
+# Mainsail CLI Commands
 
 <x-alert type="success">
 View all available ARK CLI commands **[here](/docs/ark/development/cli/available)** or learn how to [create your own](/docs/ark/development/cli/create).
