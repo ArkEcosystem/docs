@@ -14,7 +14,7 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 
 ## Getting Started
 
-The instructions on this page will guide you through creating a new user account with the correct privileges, installing and configuring Mainsail Core, then starting a relay instance and logging the output using the installation script.
+The instructions on this page will guide you through creating a new user account with the correct privileges, installing and configuring Mainsail Core, then starting a node instance and logging the output using the installation script.
 
 Directly below is a quick summary of these install commands:
 

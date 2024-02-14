@@ -79,7 +79,6 @@
 <x-ark-docs-sidebar-group path="/docs/mainsail/deployment/*" title="Deployment">
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/modes" name="Core Run Modes" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli" name="Core CLI Commands" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/relay" name="Starting a Relay" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/forger" name="Starting a Forger" />
 </x-ark-docs-sidebar-group>
 

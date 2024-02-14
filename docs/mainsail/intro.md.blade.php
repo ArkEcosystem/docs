@@ -118,7 +118,6 @@ The **Deployment** section will guide you through important actions such as the 
     :links="[
         ['path' => '/docs/mainsail/deployment/modes', 'name' => 'Core Run Modes'],
         ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Core CLI Commands'],
-        ['path' => '/docs/mainsail/deployment/relay', 'name' => 'Starting a Relay'],
         ['path' => '/docs/mainsail/deployment/forger', 'name' => 'Starting a Forger'],
     ]"
 />
