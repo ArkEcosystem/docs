@@ -31,7 +31,7 @@ mainsail core:log --token=ark --network=testnet
 - Check the logs to ensure that the process has started correctly
 
 <x-alert type="info">
-If your `core` process isn't running, then an error should be displayed. You can check the status of your `core` process with `mainsail core:start --token=ark --network=testnet`
+If your `core` process isn't running, then an error should be displayed. You can check the status of your `core` process with `mainsail core:status --token=ark --network=testnet`
 </x-alert>
 
 You can restart your `core` process with the following command:
@@ -48,14 +48,10 @@ You can stop your `core` process with the following command.
 mainsail core:stop --token=ark --network=testnet
 ```
 
-<x-alert type="info">
-If your `core` process isn't running, then an error should be displayed. You can check the status of your `core` process with `ark core:status`
-</x-alert>
-
 You can run the `core` process in foreground with the following command
 
 ```shell
 mainsail core:run --token=ark --network=testnet
 ```
 
-- Exit the process and ensure that it has stopped from running with `mainsail core:status --token=ark --network=testnet`
+- Exit the process and ensure that it has stopped from running with `mainsail core:stop --token=ark --network=testnet`
