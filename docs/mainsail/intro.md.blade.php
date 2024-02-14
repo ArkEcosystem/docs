@@ -116,7 +116,6 @@ The **Deployment** section will guide you through important actions such as the 
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/mainsail/deployment/modes', 'name' => 'Core Run Modes'],
         ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Mainsail CLI Commands'],
         ['path' => '/docs/mainsail/deployment/cli-api', 'name' => 'Mainsail API CLI Commands'],
     ]"
