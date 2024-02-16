@@ -71,6 +71,7 @@
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/ssh" name="Using SSH" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/updated" name="Staying Up-to-Date" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/iptables-p2p" name="Applying P2P iptables" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/security/iptables-api" name="Applying API iptables" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/fail2ban" name="Installing Fail2Ban" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/knocking" name="Setting Up Port Knocking" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/ddos" name="Cloudflare DDoS Protection" />

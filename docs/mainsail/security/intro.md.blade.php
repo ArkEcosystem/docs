@@ -22,6 +22,8 @@ By outlining how to secure a node we're breaking a fundamental property of netwo
 
 <livewire:page-reference path="/docs/mainsail/security/iptables-p2p" />
 
+<livewire:page-reference path="/docs/mainsail/security/iptables-api" />
+
 <livewire:page-reference path="/docs/mainsail/security/fail2ban" />
 
 <livewire:page-reference path="/docs/mainsail/security/knocking" />

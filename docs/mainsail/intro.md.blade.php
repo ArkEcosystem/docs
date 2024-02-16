@@ -104,6 +104,7 @@ The **Security** section will guide you through the most important concepts and 
         ['path' => '/docs/mainsail/security/ssh', 'name' => 'Using SSH'],
         ['path' => '/docs/mainsail/security/updated', 'name' => 'Staying Up-to-Date'],
         ['path' => '/docs/mainsail/security/iptables-p2p', 'name' => 'Applying P2P iptables'],
+        ['path' => '/docs/mainsail/security/iptables-api', 'name' => 'Applying API iptables'],
         ['path' => '/docs/mainsail/security/fail2ban', 'name' => 'Installing Fail2Ban'],
         ['path' => '/docs/mainsail/security/knocking', 'name' => 'Setting Up Port Knocking'],
         ['path' => '/docs/mainsail/security/ddos', 'name' => 'Cloudflare DDoS Protection'],
