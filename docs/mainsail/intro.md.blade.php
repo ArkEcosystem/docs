@@ -86,6 +86,7 @@ The **Installation** section will guide you through configuring and installing M
     :links="[
         ['path' => '/docs/mainsail/installation/intro', 'name' => 'Introduction'],
         ['path' => '/docs/mainsail/installation/requirements', 'name' => 'Requirements'],
+        ['path' => '/docs/mainsail/installation/networks', 'name' => 'Networks'],
         ['path' => '/docs/mainsail/installation/configuration', 'name' => 'Configuring Mainsail'],
         ['path' => '/docs/mainsail/installation/variables', 'name' => 'Database Variables'],
         ['path' => '/docs/mainsail/installation/script', 'name' => 'Using the Install Script'],
