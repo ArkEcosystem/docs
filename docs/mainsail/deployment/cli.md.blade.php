@@ -17,27 +17,27 @@ mainsail
 This series will describe the `core` process commands. The 'core' process will run Mainsail node a single process. You can start the core process with the following command:
 
 ```shell
-mainsail core:start --token=ark --network=testnet
+mainsail core:start
 ```
 
-- Run `mainsail core:status --token=ark --network=testnet` to ensure that the core to check the status of your process.
+- Run `mainsail core:status` to ensure that the core to check the status of your process.
 
 You can view your `core` process logs with the following command:
 
 ```shell
-mainsail core:log --token=ark --network=testnet
+mainsail core:log
 ```
 
 - Check the logs to ensure that the process has started correctly
 
 <x-alert type="info">
-If your `core` process isn't running, then an error should be displayed. You can check the status of your `core` process with `mainsail core:status --token=ark --network=testnet`
+If your `core` process isn't running, then an error should be displayed. You can check the status of your `core` process with `mainsail core:status`
 </x-alert>
 
 You can restart your `core` process with the following command:
 
 ```shell
-mainsail core:restart --token=ark --network=testnet
+mainsail core:restart
 ```
 
 - Check your `core` logs to ensure that the process has restarted successfully
@@ -45,13 +45,13 @@ mainsail core:restart --token=ark --network=testnet
 You can stop your `core` process with the following command.
 
 ```shell
-mainsail core:stop --token=ark --network=testnet
+mainsail core:stop
 ```
 
 You can run the `core` process in foreground with the following command
 
 ```shell
-mainsail core:run --token=ark --network=testnet
+mainsail core:run
 ```
 
-- Exit the process and ensure that it has stopped from running with `mainsail core:stop --token=ark --network=testnet`
+- Exit the process and ensure that it has stopped from running with `mainsail core:stop`

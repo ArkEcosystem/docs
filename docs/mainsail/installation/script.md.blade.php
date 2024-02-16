@@ -26,7 +26,7 @@ sudo su - mainsail
 wget https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/install-alpha.sh
 bash install-alpha.sh
 
-mainsail core:start --token=ark --network=testnet
+mainsail core:start
 
 pm2 logs
 ```
@@ -133,7 +133,7 @@ At this point, Mainsail Core has been successfully installed with its configurat
 That’s it, your installation is all set! 🎉
 
 <x-alert type="success">
-**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail core:start --token=ark --network=testnet && pm2 logs`**
+**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail core:start && pm2 logs`**
 </x-alert>
 
 ## API installation
@@ -148,7 +148,7 @@ To install the API server, you can use the following commands:
 ```bash
 bash install-alpha.sh --api
 
-mainsail-api api:start --token=ark --network=testnet
+mainsail-api api:start
 
 pm2 logs
 ```
@@ -209,5 +209,5 @@ Are you going to run the backend Core server on the same node? [y/N]: y
 ```
 
 <x-alert type="success">
-**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail-api api:start --token=ark --network=testnet && pm2 logs`**
+**Hint:** start a node instance and log its output by entering the following command into your terminal: **`mainsail-api api:start && pm2 logs`**
 </x-alert>
