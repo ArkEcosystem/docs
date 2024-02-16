@@ -6,6 +6,10 @@ title: Security - Applying iptables
 
 iptables is a utility that allows system admins to configure IP packet filtering rules for Linux's kernel firewall. These rules are organized in separate tables and determine how to treat network packets. Using iptables is _highly recommended_ and shouldn't be overlooked unless required by your system's architecture and/or you're aware of the security implications.
 
+<x-alert type="warning">
+Using iptables is highly recommended. Be aware that Mainsail can implement multiple API endpoints, and you should consider applying the iptables script to each of them.
+</x-alert>
+
 ## The iptables Script
 
 The iptables script offers additional protection for Mainsail and Mainsail API nodes by using standard firewall tools to rate-limit certain connections.
