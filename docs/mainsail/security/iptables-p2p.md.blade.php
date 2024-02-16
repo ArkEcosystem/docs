@@ -2,7 +2,7 @@
 title: Security - Applying iptables
 ---
 
-# Applying iptables
+# Applying P2P iptables
 
 iptables is a utility that allows system admins to configure IP packet filtering rules for Linux's kernel firewall. These rules are organized in separate tables and determine how to treat network packets. Using iptables is _highly recommended_ and shouldn't be overlooked unless required by your system's architecture and/or you're aware of the security implications.
 
