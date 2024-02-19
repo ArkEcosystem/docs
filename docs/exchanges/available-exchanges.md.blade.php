@@ -38,16 +38,16 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
-        name="Bilaxy"
-        icon="docs-exchanges.assets.icons.bilaxy"
-        url="https://bilaxy.com"
-        has-btc
-    />
-    <x-table.rows.exchange
         name="Binance"
         icon="docs-exchanges.assets.icons.binance"
         url="https://www.binance.com"
         has-btc has-usd
+    />
+    <x-table.rows.exchange
+        name="Binance Turkey"
+        icon="docs-exchanges.assets.icons.binance"
+        url="https://www.trbinance.com"
+        has-usd
     />
     <x-table.rows.exchange
         name="Bitexen"
@@ -56,27 +56,58 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
-        name="Bitladon"
-        icon="docs-exchanges.assets.icons.bitladon"
-        url="https://www.bitladon.com"
+        name="Bitforex"
+        icon="docs-exchanges.assets.icons.bitforex"
+        url="https://bitforex.com"
+        has-usd
     />
     <x-table.rows.exchange
-        name="Bitsonic"
-        icon="docs-exchanges.assets.icons.bitsonic"
-        url="https://bitsonic.co.kr"
-        has-btc
+        name="Bithumb"
+        icon="docs-exchanges.assets.icons.bithumb"
+        url="https://bithumb.com"
+        has-usd
     />
     <x-table.rows.exchange
-        name="Bittrex"
-        icon="docs-exchanges.assets.icons.bittrex"
-        url="https://bittrex.com"
-        has-btc
+        name="BitKan"
+        icon="docs-exchanges.assets.icons.bitkan"
+        url="https://www.bitkan.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="BitMart"
+        icon="docs-exchanges.assets.icons.bitmart"
+        url="https://bitmart.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="BitMEX"
+        icon="docs-exchanges.assets.icons.bitmex"
+        url="https://bitmex.com/"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="Bitrue"
+        icon="docs-exchanges.assets.icons.bitrue"
+        url="https://bitrue.com"
+        has-usd
     />
     <x-table.rows.exchange
         name="Bitvavo"
         icon="docs-exchanges.assets.icons.bitvavo"
         url="https://bitvavo.com"
         has-btc
+    />
+    <x-table.rows.exchange
+        name="BitVenus"
+        icon="docs-exchanges.assets.icons.bitvenus"
+        url="https://bitvenus.me"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="Blofin"
+        icon="docs-exchanges.assets.icons.blofin"
+        url="https://blofin.com"
+        has-usd
     />
     <x-table.rows.exchange
         name="Bybit"
@@ -103,12 +134,6 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc
     />
     <x-table.rows.exchange
-        name="Coindirect"
-        icon="docs-exchanges.assets.icons.coindirect"
-        url="https://www.coindirect.com"
-        has-btc
-    />
-    <x-table.rows.exchange
         name="CoinEx"
         icon="docs-exchanges.assets.icons.coinex"
         url="https://www.coinex.com"
@@ -127,9 +152,15 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
-        name="Crypto"
+        name="Crypto.com"
         icon="docs-exchanges.assets.icons.crypto"
         url="https://crypto.com"
+    />
+    <x-table.rows.exchange
+        name="Deepcoin"
+        icon="docs-exchanges.assets.icons.deepcoin"
+        url="https://www.deepcoin.com"
+		has-usd
     />
     <x-table.rows.exchange
         name="Exodus"
@@ -138,10 +169,10 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
-        name="Exolix"
-        icon="docs-exchanges.assets.icons.exolix"
-        url="https://exolix.com"
-        has-btc has-eth has-usd
+        name="Gate.io"
+        icon="docs-exchanges.assets.icons.gate"
+        url="https://www.gate.io"
+		has-usd
     />
     <x-table.rows.exchange
         name="Godex"
@@ -167,16 +198,28 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-usd
     />
     <x-table.rows.exchange
+        name="HTX (Huobi)"
+        icon="docs-exchanges.assets.icons.htx"
+        url="https://futures.htx.com/"
+		has-usd
+    />
+    <x-table.rows.exchange
+        name="Hyperliquid"
+        icon="docs-exchanges.assets.icons.hyperliquid"
+        url="https://hyperliquid.xyz/"
+		has-usd
+    />
+    <x-table.rows.exchange
         name="InstantExchangers"
         icon="docs-exchanges.assets.icons.instantexchangers"
         url="https://instantexchangers.net"
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
-        name="InstaSwap"
-        icon="docs-exchanges.assets.icons.instaswap"
-        url="https://instaswap.io"
-        has-btc has-eth
+        name="IXFI"
+        icon="docs-exchanges.assets.icons.ixfi"
+        url="https://www.ixfi.com/"
+        has-usd
     />
     <x-table.rows.exchange
         name="Kaiserex"
@@ -185,15 +228,21 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
-        name="Kriptomat"
-        icon="docs-exchanges.assets.icons.kriptomat"
-        url="https://kriptomat.io"
-        has-btc has-eth has-usd
+        name="KuCoin"
+        icon="docs-exchanges.assets.icons.kucoin"
+        url="https://www.kucoin.com/"
+        has-usd
     />
     <x-table.rows.exchange
         name="LAToken"
         icon="docs-exchanges.assets.icons.latoken"
         url="https://latoken.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="LBank"
+        icon="docs-exchanges.assets.icons.lbank"
+        url="https://www.lbank.com/"
         has-usd
     />
     <x-table.rows.exchange
@@ -219,6 +268,36 @@ If your exchange appears below but requires updating, or if you support $ARK and
         icon="docs-exchanges.assets.icons.nominex"
         url="https://nominex.io"
         has-btc
+    />
+    <x-table.rows.exchange
+        name="NovaDAX"
+        icon="docs-exchanges.assets.icons.novadax"
+        url="https://www.novadax.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="Onus"
+        icon="docs-exchanges.assets.icons.onus"
+        url="hhttps://pro.goonus.io"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="OrangeX"
+        icon="docs-exchanges.assets.icons.orangex"
+        url="https://www.orangex.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="Phemex"
+        icon="docs-exchanges.assets.icons.phemex"
+        url="https://www.phemex.com"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="Pionex"
+        icon="docs-exchanges.assets.icons.pionex"
+        url="https://www.pionex.com/"
+        has-usd
     />
     <x-table.rows.exchange
         name="Probit"
@@ -247,6 +326,12 @@ If your exchange appears below but requires updating, or if you support $ARK and
         name="SwapSpace"
         icon="docs-exchanges.assets.icons.swapspace"
         url="https://swapspace.co"
+        has-btc has-eth has-usd
+    />
+    <x-table.rows.exchange
+        name="Swapter"
+        icon="docs-exchanges.assets.icons.swapter"
+        url="https://swapter.io"
         has-btc has-eth has-usd
     />
     <x-table.rows.exchange
@@ -291,15 +376,21 @@ If your exchange appears below but requires updating, or if you support $ARK and
         has-btc
     />
     <x-table.rows.exchange
-        name="Wazirx"
-        icon="docs-exchanges.assets.icons.wazirx"
-        url="https://wazirx.com"
+        name="WebSea"
+        icon="docs-exchanges.assets.icons.websea"
+        url="https://www.websea.com"
         has-usd
     />
     <x-table.rows.exchange
         name="xInvestor"
         icon="docs-exchanges.assets.icons.xinvestor"
         url="https://www.xinvestor.com/"
+        has-usd
+    />
+    <x-table.rows.exchange
+        name="Zoomex"
+        icon="docs-exchanges.assets.icons.zoomex"
+        url="https://www.zoomex.com"
         has-usd
     />
     <x-table.rows.exchange
