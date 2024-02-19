@@ -160,7 +160,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
         name="Deepcoin"
         icon="docs-exchanges.assets.icons.deepcoin"
         url="https://www.deepcoin.com"
-		has-usd
+        has-usd
     />
     <x-table.rows.exchange
         name="Exodus"
@@ -172,7 +172,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
         name="Gate.io"
         icon="docs-exchanges.assets.icons.gate"
         url="https://www.gate.io"
-		has-usd
+        has-usd
     />
     <x-table.rows.exchange
         name="Godex"
@@ -201,13 +201,13 @@ If your exchange appears below but requires updating, or if you support $ARK and
         name="HTX (Huobi)"
         icon="docs-exchanges.assets.icons.htx"
         url="https://futures.htx.com/"
-		has-usd
+        has-usd
     />
     <x-table.rows.exchange
         name="Hyperliquid"
         icon="docs-exchanges.assets.icons.hyperliquid"
         url="https://hyperliquid.xyz/"
-		has-usd
+        has-usd
     />
     <x-table.rows.exchange
         name="InstantExchangers"
@@ -278,7 +278,7 @@ If your exchange appears below but requires updating, or if you support $ARK and
     <x-table.rows.exchange
         name="Onus"
         icon="docs-exchanges.assets.icons.onus"
-        url="hhttps://pro.goonus.io"
+        url="https://pro.goonus.io"
         has-usd
     />
     <x-table.rows.exchange
