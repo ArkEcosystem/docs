@@ -36,3 +36,7 @@ Active Mainsail networks:
 | 49.13.30.19                | 4003        |
 | 49.12.202.234              | 4003        |
 | 65.108.217.98              | 4003        |
+
+### Ark Scan
+
+- [Testnet Explorer](http://51.91.80.232:8898)
