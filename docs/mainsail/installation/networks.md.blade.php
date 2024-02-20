@@ -28,3 +28,11 @@ Active Mainsail networks:
 | **Public API**             | 4003        |
 | **Transaction Pool API**   | 4007        |
 
+
+### API Nodes
+
+| Ip                         | Port number |
+| :------------------------: | :---------: |
+| 49.13.30.19                | 4003        |
+| 49.12.202.234              | 4003        |
+| 65.108.217.98              | 4003        |
