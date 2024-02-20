@@ -86,7 +86,8 @@ The **Installation** section will guide you through configuring and installing M
     :links="[
         ['path' => '/docs/mainsail/installation/intro', 'name' => 'Introduction'],
         ['path' => '/docs/mainsail/installation/requirements', 'name' => 'Requirements'],
-        ['path' => '/docs/mainsail/installation/configuration', 'name' => 'Configuring Core'],
+        ['path' => '/docs/mainsail/installation/networks', 'name' => 'Networks'],
+        ['path' => '/docs/mainsail/installation/configuration', 'name' => 'Configuring Mainsail'],
         ['path' => '/docs/mainsail/installation/variables', 'name' => 'Database Variables'],
         ['path' => '/docs/mainsail/installation/script', 'name' => 'Using the Install Script'],
         ['path' => '/docs/mainsail/installation/source', 'name' => 'Installing from Source'],
@@ -103,7 +104,8 @@ The **Security** section will guide you through the most important concepts and 
         ['path' => '/docs/mainsail/security/intro', 'name' => 'Security Through Obscurity'],
         ['path' => '/docs/mainsail/security/ssh', 'name' => 'Using SSH'],
         ['path' => '/docs/mainsail/security/updated', 'name' => 'Staying Up-to-Date'],
-        ['path' => '/docs/mainsail/security/iptables', 'name' => 'Applying iptables'],
+        ['path' => '/docs/mainsail/security/iptables-p2p', 'name' => 'Applying P2P iptables'],
+        ['path' => '/docs/mainsail/security/iptables-api', 'name' => 'Applying API iptables'],
         ['path' => '/docs/mainsail/security/fail2ban', 'name' => 'Installing Fail2Ban'],
         ['path' => '/docs/mainsail/security/knocking', 'name' => 'Setting Up Port Knocking'],
         ['path' => '/docs/mainsail/security/ddos', 'name' => 'Cloudflare DDoS Protection'],
@@ -116,10 +118,8 @@ The **Deployment** section will guide you through important actions such as the 
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/mainsail/deployment/modes', 'name' => 'Core Run Modes'],
-        ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Core CLI Commands'],
-        ['path' => '/docs/mainsail/deployment/relay', 'name' => 'Starting a Relay'],
-        ['path' => '/docs/mainsail/deployment/forger', 'name' => 'Starting a Forger'],
+        ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Mainsail CLI Commands'],
+        ['path' => '/docs/mainsail/deployment/cli-api', 'name' => 'Mainsail API CLI Commands'],
     ]"
 />
 

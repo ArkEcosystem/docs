@@ -10,10 +10,15 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 
 | Supported OS | Release Version(s) |
 | :----------: | :----------------: |
-| **Ubuntu**   | 22.x       |
+| **Ubuntu**   | 22.x               |
 
-| Node Specification | Minimum | Recommended   |
-| :-----------------: | :-----: | :-----------: |
-| **CPUs**            | 2       | 4             |
-| **RAM**             | 4GB     | 8GB           |
-| **HDD**             | 20GB    | 20GB - 100GB |
+| Software       | Release Version(s) |
+| :------------: | :----------------: |
+| **NodeJs**     | >=20.x             |
+| **PostgreSQL** | >=15.x             |
+
+| Hardware Specification | Minimum | Recommended   |
+| :--------------------: | :-----: | :-----------: |
+| **CPUs**               | 2       | 4             |
+| **RAM**                | 4GB     | 8GB           |
+| **HDD**                | 20GB    | 20GB - 100GB  |

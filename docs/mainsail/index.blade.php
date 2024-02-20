@@ -59,7 +59,8 @@
 <x-ark-docs-sidebar-group path="/docs/mainsail/installation/*" title="Installation">
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/intro" name="Introduction" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/requirements" name="Requirements" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/installation/configuration" name="Configuring Core" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/installation/networks" name="Networks" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/installation/configuration" name="Configuring Mainsail" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/variables" name="Environment Variables" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/script" name="Using the Install Script" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/installation/source" name="Installing from Source" />
@@ -70,17 +71,16 @@
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/intro" name="Security Through Obscurity" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/ssh" name="Using SSH" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/updated" name="Staying Up-to-Date" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/security/iptables" name="Applying iptables" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/security/iptables-p2p" name="Applying P2P iptables" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/security/iptables-api" name="Applying API iptables" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/fail2ban" name="Installing Fail2Ban" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/knocking" name="Setting Up Port Knocking" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/security/ddos" name="Cloudflare DDoS Protection" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/deployment/*" title="Deployment">
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/modes" name="Core Run Modes" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli" name="Core CLI Commands" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/relay" name="Starting a Relay" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/forger" name="Starting a Forger" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli" name="Mainsail CLI Commands" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli-api" name="Mainsail API CLI Commands" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/testing/*" title="Testing">

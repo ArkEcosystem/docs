@@ -4,7 +4,7 @@ title: Security - Using SSH
 
 # Using SSH
 
-When running an ARK node, especially a Validator Node, you should consider your server's security as your main priority.
+When running an Mainsail node, especially a Validator Node, you should consider your server's security as your main priority.
 
 <x-alert type="warning">
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.
@@ -118,4 +118,4 @@ exit
 ssh user@yournode -p 55555
 ```
 
-If everything was setup successfully, you should be reconnected to your ARK node. Replace `55555` with the port you chose when setting up your `sshd_config`.
+If everything was setup successfully, you should be reconnected to your Mainsail node. Replace `55555` with the port you chose when setting up your `sshd_config`.

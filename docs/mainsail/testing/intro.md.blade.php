@@ -26,7 +26,7 @@ The integration tests are responsible for testing functionality that requires fu
 
 The unit tests are responsible for testing isolated functionality that doesn't depend on any other components or a running instance of Core. These tests ensure that each component is working as intended while you work up to stitch them together to a plugin or new functionality. They are the best way to get started with TDD as you start out small and slowly work your way up to bigger tests as you gain confidence in your implementation.
 
-### core-tx-tester
+### Core-tx-tester
 
 The `mainsail-tx-tester` is a useful tool that allows you to send transactions on the Mainsail Development Network via command line and may be preferable to the Desktop Wallet. You can find a set up guide for the `core-tx-tester` below:
 <livewire:embed-link url="https://github.com/ArkEcosystem/mainsail-tx-tester" caption="Mainsail TX Tester" />

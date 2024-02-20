@@ -16,7 +16,8 @@ The following development tools need to be installed on your machine to develop 
 * [InversifyJS](https://inversify.io/) - A powerful and lightweight inversion of control container for JavaScript & Node.js apps powered by TypeScript.
 * [Lerna.js](https://lerna.js.org/) - A tool for managing JavaScript projects with multiple packages.
 * [NodeJS](https://nodejs.org/en/) - As Mainsail is written exclusively in NodeJS, the server-side framework for JavaScript, installing Node is a necessity for core development.
-* [PostgreSQL](https://www.postgresql.org/) - our "standard" database is Postgres. Postgres is the most "mature" Open Source Relational Database. It's 100% Free (including all "advanced" features).
+* [LMDB](https://github.com/kriszyp/lmdb-js) - our ledger database is LMDB. LMDB is the fastes and most efficient key-value database for storage and retrieval of structured JS data.
+* [PostgreSQL](https://www.postgresql.org/) - our API database is Postgres. Postgres is the most "mature" Open Source Relational Database. It's 100% Free (including all "advanced" features).
 * [TypeORM](https://typeorm.io) - ORM for TypeScript and JavaScript (ES7, ES6, ES5). Supports MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, SAP Hana, WebSQL databases. Works in NodeJS, Browser, Ionic, Cordova and Electron platforms.
 * [TypeScript](https://github.com/microsoft/typescript) -  A language for application-scale of JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript.
 

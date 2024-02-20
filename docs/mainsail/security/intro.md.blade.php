@@ -4,7 +4,7 @@ title: Security - Security Through Obscurity
 
 # Security Through Obscurity
 
-When running an ARK node, especially a Validator Node, you should consider your server's security as your main priority.
+When running an Mainsail node, especially a Validator Node, you should consider your server's security as your main priority.
 
 <x-alert type="warning">
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.
@@ -20,7 +20,9 @@ By outlining how to secure a node we're breaking a fundamental property of netwo
 
 <livewire:page-reference path="/docs/mainsail/security/updated" />
 
-<livewire:page-reference path="/docs/mainsail/security/iptables" />
+<livewire:page-reference path="/docs/mainsail/security/iptables-p2p" />
+
+<livewire:page-reference path="/docs/mainsail/security/iptables-api" />
 
 <livewire:page-reference path="/docs/mainsail/security/fail2ban" />
 
