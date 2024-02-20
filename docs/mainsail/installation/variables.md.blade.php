@@ -150,8 +150,6 @@ This variable determines how many node workers are used for cryptographic operat
 
 This variable determines if the cryptographic worker logs are enabled.
 
-# Mainsail API Environment variables
-
 ## API Variables
 
 ### CORE_API_CACHE
@@ -236,38 +234,38 @@ This variable determines what port will be used for database communication.
 
 This variable determines what username will be used for database communication.
 
-# Aplication Environment variables 
+## Aplication Variables
 
-## CORE_TOKEN
+### CORE_TOKEN
 
 > This variable is exposed by core and cannot be manually configured.
 This variable determines the name of the token.
 
-## CORE_NETWORK_NAME
+### CORE_NETWORK_NAME
 
 > This variable is exposed by core and cannot be manually configured.
 This variable exposes the name of the network that has been configured.
 
-## CORE_PATH_DATA
+### CORE_PATH_DATA
 
 > This variable is exposed by core and cannot be manually configured.
 This variable exposes the path at which application stores data.
 
-## CORE_PATH_CONFIG
+### CORE_PATH_CONFIG
 
 This variable exposes the path at which application stores configuration.
 
-## CORE_PATH_CACHE
+### CORE_PATH_CACHE
 
 > This variable is exposed by core and cannot be manually configured.
 This variable exposes the path at which application stores cache.
 
-## CORE_PATH_LOG
+### CORE_PATH_LOG
 
 > This variable is exposed by core and cannot be manually configured.
 This variable exposes the path at which application stores logs.
 
-## CORE_PATH_TEMP
+### CORE_PATH_TEMP
 
 > This variable is exposed by core and cannot be manually configured.
 This variable exposes the path at which application stores temporary data.

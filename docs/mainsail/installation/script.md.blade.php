@@ -152,6 +152,7 @@ mainsail-api api:start
 
 pm2 logs
 ```
+
 ## Step-by-Step API Installation via the Script
 
 ### Step 1: Ensure the user account exist with sudo privileges
@@ -199,7 +200,7 @@ This will create a PostgreSQL role and database to be used for storing blockchai
 
 ### Step 4: Configure Mainsail core
 
-After the installation of the API server, you will be asked to configure the Mainsail core. You can use the following example to configure the Mainsail. Following configuration will update Mainsail configuration to use the PostgreSQL database for API server. 
+After the installation of the API server, you will be asked to configure the Mainsail core. You can use the following example to configure the Mainsail. Following configuration will update Mainsail configuration to use the PostgreSQL database for API server.
 
 ```bash
     ==> Installed Mainsail API Server!
