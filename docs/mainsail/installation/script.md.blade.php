@@ -68,11 +68,11 @@ Retype new password:
 passwd: password updated successfully
 Changing the user information for mainsail
 Enter the new value, or press ENTER for the default
-	Full Name []: 
-	Room Number []: 
-	Work Phone []: 
-	Home Phone []: 
-	Other []: 
+    Full Name []: 
+    Room Number []: 
+    Work Phone []: 
+    Home Phone []: 
+    Other []: 
 Is the information correct? [Y/n] Y
 ```
 
@@ -138,7 +138,7 @@ That’s it, your installation is all set! 🎉
 
 ## API installation
 
-Mainsail core installation comes without the active API server. Additional steps are required to install the API server. Once installed API server for Mainsail will be available as `mainsail-api` CLI command.   
+Mainsail core installation comes without the active API server. Additional steps are required to install the API server. Once installed API server for Mainsail will be available as `mainsail-api` CLI command.
 
 The easiest way to install the API server is to use the `install-alpha.sh` script. This script will install the API server and all of its dependencies onto your server, then publish the configuration files for it.
 API server can be installed besides the Mainsail Core server or on a separate node. We will illustrate the installation on the same node as the core server.
@@ -173,8 +173,7 @@ Run the install script by copying and pasting this one line command into your te
 bash install-alpha.sh --api
 ```
 
-
-You will be asked to input your user password to grant sudo privileges:
+rd to grant sudo privileges:
 
 ```bash
 [sudo] password for mainsail: <input your password for user you created>
@@ -197,7 +196,6 @@ Proceed? [y/N]: y
 ```
 
 This will create a PostgreSQL role and database to be used for storing blockchain data.
-
 
 ### Step 4: Configure Mainsail core
 

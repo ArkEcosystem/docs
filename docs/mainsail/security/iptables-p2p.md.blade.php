@@ -36,7 +36,7 @@ Download and execute the iptables script using the following commands:
 wget -N https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/scripts/p2p-iptables.sh
 ```
 
-Edit the iptables script an use correct settings. 
+Edit the iptables script an use correct settings.
 
 ```shell
 nano ./p2p-iptables.sh
@@ -50,12 +50,11 @@ bash ./p2p-iptables.sh start
 
 ## Configuration
 
-Edit the iptables script an review setting. 
+Edit the iptables script an review setting.
 
 ```shell
 nano ./p2p-iptables.sh
 ```
-
 
 | Option     | Description                     |
 | :---------- | :---------------------------- |

@@ -36,7 +36,7 @@ Download and execute the iptables script using the following commands:
 wget -N https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/scripts/api-iptables.sh
 ```
 
-Edit the iptables script an use correct settings. 
+Edit the iptables script an use correct settings.
 
 ```shell
 nano ./api-iptables.sh
@@ -50,7 +50,7 @@ bash ./api-iptables.sh start
 
 ## Configuration
 
-Edit the iptables script an review setting. 
+Edit the iptables script an review setting.
 
 ```shell
 nano ./api-iptables.sh
@@ -69,7 +69,6 @@ nano ./api-iptables.sh
 | :---------- | :---------------------------- |
 | api   | The public API that is part of `mainsail-api` script.  |
 | pool  |  The transaction pool API that is part of `mainsail` script.   |
-
 
 ## Creating a cron job
 
