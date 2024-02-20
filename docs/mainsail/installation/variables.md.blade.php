@@ -212,28 +212,6 @@ This variable determines where the SSL Key is located.
 
 This variable determines the host at which the HTTPS API will listen for traffic.
 
-## API Database Variables
-
-### CORE_DB_DATABASE
-
-This variable determines what database will be used for database communication.
-
-### CORE_DB_HOST
-
-This variable determines what host will be used for database communication.
-
-### CORE_DB_PASSWORD
-
-This variable determines what password will be used for database communication.
-
-### CORE_DB_PORT
-
-This variable determines what port will be used for database communication.
-
-### CORE_DB_USERNAME
-
-This variable determines what username will be used for database communication.
-
 ## Aplication Variables
 
 ### CORE_TOKEN
