@@ -1,5 +1,5 @@
 ---
-title: Security - Applying iptables
+title: Security - Applying API iptables
 ---
 
 # Applying API iptables

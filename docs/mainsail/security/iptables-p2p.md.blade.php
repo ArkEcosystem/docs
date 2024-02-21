@@ -1,5 +1,5 @@
 ---
-title: Security - Applying iptables
+title: Security - Applying P2P Iptables
 ---
 
 # Applying P2P iptables
