@@ -214,19 +214,10 @@ This variable determines the host at which the HTTPS API will listen for traffic
 
 ## Aplication Variables
 
-### CORE_TOKEN
-
-> This variable is exposed by core and cannot be manually configured.
-This variable determines the name of the token.
-
-### CORE_NETWORK_NAME
-
-> This variable is exposed by core and cannot be manually configured.
-This variable exposes the name of the network that has been configured.
-
 ### CORE_PATH_DATA
 
 > This variable is exposed by core and cannot be manually configured.
+
 This variable exposes the path at which application stores data.
 
 ### CORE_PATH_CONFIG
@@ -236,16 +227,19 @@ This variable exposes the path at which application stores configuration.
 ### CORE_PATH_CACHE
 
 > This variable is exposed by core and cannot be manually configured.
+
 This variable exposes the path at which application stores cache.
 
 ### CORE_PATH_LOG
 
 > This variable is exposed by core and cannot be manually configured.
+
 This variable exposes the path at which application stores logs.
 
 ### CORE_PATH_TEMP
 
 > This variable is exposed by core and cannot be manually configured.
+
 This variable exposes the path at which application stores temporary data.
 
 ### CORE_NPM_REGISTRY
