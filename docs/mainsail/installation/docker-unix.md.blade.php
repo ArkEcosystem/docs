@@ -11,7 +11,7 @@ How To Set Up Docker Development Environment On Unix Based Operating Systems.
 Docker is the de facto industry standard for packaging applications into a container. By doing so, all dependencies, such as the language run-times, operating system, and libraries are combined with the product.
 
 <x-alert type="info">
-This guide is for setting up the development environment with Docker. If you are looking for Mainsak TEstner ready Docker images, they are now available at [Docker Hub](https://hub.docker.com/u/arkecosystem), but are not meant to be used for development purposes.
+This guide is for setting up the development environment with Docker. If you are looking for Mainsail testnet ready Docker images, they are now available at [Docker Hub](https://hub.docker.com/u/arkecosystem), but are not meant to be used for development purposes.
 </x-alert>
 
 ## Option 1: Mainsail Core setup
