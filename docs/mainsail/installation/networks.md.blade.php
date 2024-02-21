@@ -5,7 +5,7 @@ title: Installation - Networks
 # Networks
 
 <x-alert type="success">
-If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$w00** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
+If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$200** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
 </x-alert>
 
 Active Mainsail networks:
