@@ -38,4 +38,4 @@ Active Mainsail networks:
 
 ### Ark Scan
 
-- [Testnet Explorer](http://51.91.80.232:8898)
+- [Testnet Explorer](https://explorer-demo.mainsailhq.com)

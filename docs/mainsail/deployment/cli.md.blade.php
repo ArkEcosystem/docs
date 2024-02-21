@@ -12,6 +12,20 @@ View the installed version of Core and a list of available CLI commands by typin
 mainsail
 ```
 
+## Deploy
+
+Before you can start using the `core` process, you need to deploy the configuration. You can deploy the configuration with the following command, if you want to join Mainsail official testnet:
+
+```shell
+mainsail config:publish --network=testnet --reset
+```
+
+If you want to join official Mainsail testnet use following command:
+
+```shell
+ mainsail config:publish:custom --app=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/app.json --crypto=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/crypto.json --peers=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/peers.json --reset 
+```
+
 ## Core
 
 This series will describe the `core` process commands. The 'core' process will run Mainsail node a single process. You can start the core process with the following command:

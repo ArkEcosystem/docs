@@ -101,7 +101,9 @@ git pull
 pnpm run setup  #run Lerna to clean, bootstrap and build the core packages
 ```
 
-## Step 9: Run local testnet network
+## Step 9: Run network
+
+### Step 9.1: Run local testnet
 
 Now that we have the core repository cloned and setup, we can run a local testnet network. Local testnet network is a local blockchain network that is used for development and testing purposes.
 Local network will not be able to connect to the mainnet or devnet, but it will allow you to test your plugins and dApps in a controlled environment.
@@ -109,4 +111,15 @@ Local network will not be able to connect to the mainnet or devnet, but it will 
 ```bash
 cd packages/core
 pnpm run full:testnet
+```
+
+### Step 9.2: Run official testnet
+
+If you want to run the official testnet, you can use the following command.
+
+```bash
+cd packages/core
+
+pnpm run mainsail config:publish:custom --app=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/app.json --crypto=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/crypto.json --peers=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/peers.json --reset
+pnpm run mainsail core:run
 ```

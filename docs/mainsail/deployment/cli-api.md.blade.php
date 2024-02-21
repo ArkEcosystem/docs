@@ -12,7 +12,15 @@ View the installed version of Mainsail API and a list of available CLI commands 
 mainsail-api
 ```
 
-## Core
+## Deploy
+
+Before you can start using the `api` process, you need to deploy the configuration. You can deploy the configuration with the following command:
+
+```shell
+mainsail-api config:publish --reset
+````
+
+## Api
 
 This series will describe the `api` process commands. The 'api' process will run Mainsail API node a single process. You can start the api process with the following command:
 
