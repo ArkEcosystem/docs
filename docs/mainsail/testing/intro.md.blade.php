@@ -34,7 +34,7 @@ The `mainsail-tx-tester` is a useful tool that allows you to send transactions o
 ### Explorer
 
 The ARK Explorer is a pivotal tool to use whilst testing. You can find the ARK Development Network Explorer below:
-<livewire:embed-link url="http://51.91.80.232:8898" caption="Mainsail Development Network Explorer" />
+<livewire:embed-link url="https://explorer-demo.mainsailhq.com" caption="Mainsail Testnet Network Explorer" />
 
 ## Reporting Issues
 
