@@ -26,7 +26,6 @@ If you want to join official Mainsail testnet use following command:
  mainsail config:publish:custom --app=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/app.json --crypto=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/crypto.json --peers=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/peers.json --reset 
 ```
 
-
 ## Core
 
 This series will describe the `core` process commands. The 'core' process will run Mainsail node a single process. You can start the core process with the following command:
@@ -70,4 +69,3 @@ mainsail core:run
 ```
 
 - Exit the process and ensure that it has stopped from running with `mainsail core:stop`
-
