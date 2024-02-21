@@ -18,10 +18,10 @@ This guide is for setting up the development environment with Docker. If you are
 
 The easiest way to get started with Mainsail is to use the official Docker image.
 
-Follow setup instructions on the official [mainsail-core](https://hub.docker.com/r/arkecosystem/mainsail-core) docker image. 
+Follow setup instructions on the official [mainsail-core](https://hub.docker.com/r/arkecosystem/mainsail-core) docker image.
 
 ## Option 2: Mainsail Core & Mainsail API setup
 
 Alternatively, you can use the official Docker images for both Mainsail Core and Mainsail API.
 
-Follow setup instructions on the official [mainsail-core](https://hub.docker.com/r/arkecosystem/mainsail-core) and [mainsail-api](https://hub.docker.com/r/arkecosystem/mainsail-api) docker images. 
+Follow setup instructions on the official [mainsail-core](https://hub.docker.com/r/arkecosystem/mainsail-core) and [mainsail-api](https://hub.docker.com/r/arkecosystem/mainsail-api) docker images.
