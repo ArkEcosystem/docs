@@ -39,3 +39,9 @@ Active Mainsail networks:
 ### Ark Scan
 
 - [Testnet Explorer](https://explorer-demo.mainsailhq.com)
+
+### Receiving testnet tokens
+
+You can receive testnet tokens from the [DARK Faucet](https://faucet-demo.mainsailhq.com/). The faucet is a service that provides free tokens to testnet users.
+
+You need to provide your testnet address to receive tokens. If you don't have a testnet address, you can create one using the [Mainsail TX Tester](https://github.com/ArkEcosystem/mainsail-tx-tester).
