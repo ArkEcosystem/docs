@@ -28,7 +28,7 @@ If you want to join official Mainsail testnet use following command:
 
 ## Configure validator
 
-You can set your node as a validator with the following command. This command will ask you for a valdiator mnemonic and will enable forging on your node. Validator should be registered on the network using **validator registration transaction**, before you can start forging. Use the same mnemonic you used to register your validators BLS12-381 public key.
+You can set your node as a validator with the following command. This command will ask you for a valdiator mnemonic and will enable forging on your node. Validator should be registered on the network using the **validator registration transaction**, before you can start forging. Use the same mnemonic you used to register your validator's BLS12-381 public key.
 
 ```shell
 mainsail config:forger:bip39
