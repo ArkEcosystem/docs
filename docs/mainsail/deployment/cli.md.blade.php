@@ -26,7 +26,7 @@ If you want to join official Mainsail testnet use following command:
  mainsail config:publish:custom --app=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/app.json --crypto=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/crypto.json --peers=https://raw.githubusercontent.com/ArkEcosystem/mainsail-network-config/main/testnet/mainsail/peers.json --reset 
 ```
 
-## Set validator
+## Configure validator
 
 You can set your node as a validator with the following command. This command will ask you for a valdiator mnemonic and will enable forging on your node. Validator should be registered on the network using **validator registration transaction**, before you can start forging. Use the same mnemonic you used to register your validators BLS12-381 public key.
 
