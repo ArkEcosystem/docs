@@ -42,7 +42,7 @@ sudo apt-get upgrade -y
 
 ## Step 3: Install Git Source Control System
 
-As the most popular version control software in existence, Git is a staple of many developer workflows, and ARK is no exception. Downloading Git will allow you to clone the latest version of ARK Core.
+As the most popular version control software in existence, Git is a staple of many developer workflows, and ARK is no exception. Downloading Git will allow you to clone the latest version of Mainsail.
 
 ```bash
 sudo apt-get install -y git curl apt-transport-https build-essential python-is-python3
@@ -50,7 +50,7 @@ sudo apt-get install -y git curl apt-transport-https build-essential python-is-p
 
 ## Step 4: Install NVM & Node.js Runtime
 
-Mainsail is written exclusively in [Node.js](https://nodejs.org/), the server-side framework for JavaScript, Typescript, installing Node.js is a necessity for core development. The code below installs [NVM - Node Version Manager](https://github.com/nvm-sh/nvm), which allows you to install and manage multiple versions of Node.js on the same system.
+Mainsail is written exclusively in [Node.js](https://nodejs.org/), the server-side framework for JavaScript, Typescript, installing Node.js is a necessity for Mainsail development. The code below installs [NVM - Node Version Manager](https://github.com/nvm-sh/nvm), which allows you to install and manage multiple versions of Node.js on the same system.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -81,31 +81,31 @@ pnpm setup
 
 ## Step 7: Install Dependencies
 
-Dependencies are needed for `Mainsail` to be compiled, run and controlled while living inside you linux based environment. To command below installs some of those needed dependencies that are used by core or related scripts.
+Dependencies are needed for `Mainsail` to be compiled, run and controlled while living inside you linux based environment. To command below installs some of those needed dependencies that are used by Mainsail or related scripts.
 
 ```bash
 sudo apt-get install build-essential python-is-python3 libjemalloc-dev -yq
 ```
 
-## Step 8: Clone The Core Repository
+## Step 8: Clone The Mainsail Repository
 
-Let's clone our `core` repository and run the initial `pnpm run setup` command.
+Let's clone our Mainsail repository and run the initial `pnpm run setup` command.
 
-`pnpm run setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the core packages (including transpiling typescript). For mode information look into project `package.json` file in the root folder.
+`pnpm run setup` command leverages [Lerna](https://github.com/lerna/lerna) to clean, bootstrap and build the Mainsail packages (including transpiling typescript). For mode information look into project `package.json` file in the root folder.
 
 ```bash
-git clone https://github.com/arkecosystem/core
+git clone https://github.com/ArkEcosystem/mainsail
 cd mainsail
 git checkout main
 git pull
-pnpm run setup  #run Lerna to clean, bootstrap and build the core packages
+pnpm run setup  #run Lerna to clean, bootstrap and build packages
 ```
 
 ## Step 9: Run network
 
 ### Step 9.1: Run local testnet
 
-Now that we have the core repository cloned and setup, we can run a local testnet network. Local testnet network is a local blockchain network that is used for development and testing purposes.
+Now that we have the Mainsail repository cloned and setup, we can run a local testnet network. Local testnet network is a local blockchain network that is used for development and testing purposes.
 Local network will not be able to connect to the mainnet or devnet, but it will allow you to test your plugins and dApps in a controlled environment.
 
 ```bash
