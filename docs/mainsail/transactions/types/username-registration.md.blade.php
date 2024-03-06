@@ -14,3 +14,5 @@ Transaction can register **username** with the follwing properties:
 - only lowercase letters, numbers and hyphens are allowed
 - cannot start or end with hyphen
 - cannot contain two or more consecutive hyphens
+
+Check out the [Username Registration Transaction - Schema](https://github.com/ArkEcosystem/mainsail/blob/f831da020d0dd13c441bd2c84b597f9df89a5672/packages/crypto-transaction-username-registration/source/validation/schemas.ts#L4-L7) for implementation.
