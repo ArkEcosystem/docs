@@ -108,12 +108,18 @@ sudo su - mainsail
 
 ### Step 4: Run the Installation Script
 
-Here, we will use the `install.sh` script. This installs Mainsail Core and all of its dependencies onto your server, then publishes the configuration files for it.
+Here, we will use the `install-alpha.sh` script. This installs Mainsail Core and all of its dependencies onto your server, then publishes the configuration files for it.
 
-Run the install script by copying and pasting this one line command into your terminal:
+You can download script by copying and pasting this one line command into your terminal:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+wget https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/scripts/install-alpha.sh
+```
+
+Then, run the install script by copying and pasting this one line command into your terminal:
+
+```bash
+bash install-alpha.sh
 ```
 
 You will be asked to input your user password to grant sudo privileges:
