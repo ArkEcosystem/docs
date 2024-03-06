@@ -120,6 +120,7 @@ The **Deployment** section will guide you through important actions such as the 
     :links="[
         ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Mainsail CLI Commands'],
         ['path' => '/docs/mainsail/deployment/cli-api', 'name' => 'Mainsail API CLI Commands'],
+        ['path' => '/docs/mainsail/deployment/validator', 'name' => 'Becomming a Validator'],
     ]"
 />
 
