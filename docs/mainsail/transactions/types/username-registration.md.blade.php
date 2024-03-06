@@ -13,7 +13,7 @@ Transaction can register **username** with the follwing properties:
 - minimum length of 1 character
 - maximum length of 20 characters
 - only lowercase letters, numbers and underscores are allowed
-- cannot start or end with underscores
+- cannot start or end with underscore
 - cannot contain two or more consecutive underscores
 
 Check out the [Username Registration Transaction - Schema](https://github.com/ArkEcosystem/mainsail/blob/f831da020d0dd13c441bd2c84b597f9df89a5672/packages/crypto-transaction-username-registration/source/validation/schemas.ts#L4-L7) for implementation.
