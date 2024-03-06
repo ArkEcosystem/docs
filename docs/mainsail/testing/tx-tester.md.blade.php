@@ -2,7 +2,7 @@
 title: Testing - TX Tester
 ---
 
-# Mainsail TX Tester
+# Mainsail Transaction Tester
 
 Mainsail TX Tester is a useful tool that allows you to create wallets and send transactions on the Mainsail Networks via command line. Mainsail TX Tester is accessibe on the following link: [Mainsail TX Tester](https://github.com/ArkEcosystem/mainsail-tx-tester)
 

@@ -130,6 +130,7 @@ The **Testing** section will introduce you to the most importing tools and knowl
 <x-ark-link-collection
     :links="[
         ['path' => '/docs/mainsail/testing/intro', 'name' => 'Introduction'],
+        ['path' => '/docs/mainsail/testing/tx-tester', 'name' => 'Transaction Tester'],
     ]"
 />
 

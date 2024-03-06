@@ -85,6 +85,7 @@
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/testing/*" title="Testing">
     <x-ark-docs-sidebar-link path="/docs/mainsail/testing/intro" name="Introduction" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/testing/tx-tester" name="Transaction Tester" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/support/*" title="Support">
