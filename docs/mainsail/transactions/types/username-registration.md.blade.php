@@ -9,6 +9,7 @@ A user or organization can register the username to their address. Single wallet
 ## Username schema
 
 Transaction can register **username** with the follwing properties:
+
 - minimum length of 1 character
 - maximum length of 20 characters
 - only lowercase letters, numbers and hyphens are allowed
