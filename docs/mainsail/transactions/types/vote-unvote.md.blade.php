@@ -6,7 +6,7 @@ title: Transaction Types - Vote / Unvote
 
 A key feature of the ARK DPoS model is that each address can vote for one validator of their choosing to secure the network. A vote and unvote transaction type is therefore necessary to enable this functionality. Once an address votes for a validator, funds can enter and leave the address as needed, and vote weight adjusts automatically. Voting does not send funds to the validators’s ARK address in question - it only assigns vote weight
 
-Holders of ARK vote through their wallets for validators who secure the network, insert blocks into the ledger, and create new ARK. The top 51 vote earners are named elected forging validators. Number of valdiators is related to [DPOS mechanism configuration](https://whitepaper.ark.io/public-network#4-2-consensus-mechanism).
+Holders of ARK vote through their wallets for validators who secure the network, insert blocks into the ledger, and create new ARK. The top 51 vote earners are named elected forging validators. Number of validators is related to [DPOS mechanism configuration](https://whitepaper.ark.io/public-network#4-2-consensus-mechanism).
 
 | References |  |
 | :--- | :--- |

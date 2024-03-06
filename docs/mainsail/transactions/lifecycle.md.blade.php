@@ -65,7 +65,7 @@ At this point, Core Server has a list of incoming transactions to add to the tra
 
 ### 3. From TransactionPool To Transaction Inclusion Within Blocks
 
-Transactions move out of the pool once a forging Valdaitor (a forger) is ready and eligible to forge it. At the moment of forging, transactions in the forger's pool are grouped into a potential block and passed to the validator's `forge` method for inclusion in a block.
+Transactions move out of the pool once a forging Validator (a forger) is ready and eligible to forge it. At the moment of forging, transactions in the forger's pool are grouped into a potential block and passed to the validator's `forge` method for inclusion in a block.
 
 Inside the `forge` method, all transaction values, fees, and IDs within the block are added together. The values and fees are used to calculate block metadata, while the hashed IDs are concatenated and used as the block's `payloadHash` property.
 

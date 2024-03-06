@@ -120,6 +120,7 @@ The **Deployment** section will guide you through important actions such as the 
     :links="[
         ['path' => '/docs/mainsail/deployment/cli', 'name' => 'Mainsail CLI Commands'],
         ['path' => '/docs/mainsail/deployment/cli-api', 'name' => 'Mainsail API CLI Commands'],
+        ['path' => '/docs/mainsail/deployment/validator', 'name' => 'Becoming a Validator'],
     ]"
 />
 
@@ -130,6 +131,7 @@ The **Testing** section will introduce you to the most importing tools and knowl
 <x-ark-link-collection
     :links="[
         ['path' => '/docs/mainsail/testing/intro', 'name' => 'Introduction'],
+        ['path' => '/docs/mainsail/testing/tx-tester', 'name' => 'Transaction Tester'],
     ]"
 />
 

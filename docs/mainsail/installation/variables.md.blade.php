@@ -26,7 +26,7 @@ This variable determines the port at which the P2P API will be listening for tra
 
 ### CORE_P2P_API_NODES
 
-This variable determines the list of nodes that has runing Mainsail Public API. List is shared with other nodes.
+This variable determines the list of nodes that has running Mainsail Public API. List is shared with other nodes.
 
 ### CORE_P2P_MAX_PEERS_BROADCAST
 
@@ -120,7 +120,7 @@ This variable determines how many transactions can be in the transaction pool by
 
 ### CORE_RESET_POOL
 
-This variable determines if transacction pool database should be truncated at boot.
+This variable determines if transaction pool database should be truncated at boot.
 
 ## Webhooks Variables
 
@@ -140,7 +140,7 @@ This variable determines the port at which the Webhook API will be listening for
 
 This variable determines how long it will take for a request to timeout when trying to transmit a webhook payload.
 
-## Crypto woker Variables
+## Crypto worker Variables
 
 ### CORE_CRYPTO_WORKER_COUNT
 
@@ -212,7 +212,7 @@ This variable determines where the SSL Key is located.
 
 This variable determines the host at which the HTTPS API will listen for traffic.
 
-## Aplication Variables
+## Application Variables
 
 ### CORE_PATH_DATA
 
