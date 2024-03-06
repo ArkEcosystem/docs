@@ -9,13 +9,14 @@ Mainsail TX Tester is a useful tool that allows you to create wallets and send t
 ## Requirements
 
 Make sure you have the following software installed:
+
 - git
 - nodeJs
 - pnpm (or yarn)
-- build-essential 
+- build-essential
 - python3
 
-You can setup required software by following **Step 1** to **Step 7** explained in the [Install from Source](/docs/mainsail/installation/source) guide. 
+You can setup required software by following **Step 1** to **Step 7** explained in the [Install from Source](/docs/mainsail/installation/source) guide.
 
 ## Installation
 
@@ -118,7 +119,7 @@ Please provide TX number in arguments:
 
 ### Transfer
 
-Before sending transfer transaction, modify the **transfer** object in the **config.js** file. 
+Before sending transfer transaction, modify the **transfer** object in the **config.js** file.
 
 ```json
     transfer: {
@@ -159,7 +160,7 @@ pnpm run start 2
 
 ### Username Registration
 
-Before sending username registration transaction, modify the **userNameRegistration** object in the **config.js** file. 
+Before sending username registration transaction, modify the **userNameRegistration** object in the **config.js** file.
 
 ```json
     userNameRegistration: {
@@ -167,6 +168,7 @@ Before sending username registration transaction, modify the **userNameRegistrat
         fee: "2500000000",
     }
 ```
+
 Check out the [Username Registration](/docs/mainsail/transactions/types/username-registration) transaction for more details.
 
 To send a username registration transaction, run the following command:
@@ -186,7 +188,6 @@ Before sending username resignation transaction, modify the **userNameResignatio
 ```
 
 Check out the [Username Resignation](/docs/mainsail/transactions/types/username-resignation) transaction for more details.
-
 
 To send a username resignation transaction, run the following command:
 
@@ -233,6 +234,7 @@ Before sending validator registration transaction, modify the **validatorRegistr
         fee: "2500000000",
     },
 ```
+
 Check out the [Validator Registration](/docs/mainsail/transactions/types/validator-registration) transaction for more details.
 
 To send a validator registration transaction, run the following command:
