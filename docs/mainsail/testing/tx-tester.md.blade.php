@@ -4,7 +4,7 @@ title: Testing - TX Tester
 
 # Mainsail Transaction Tester
 
-Mainsail TX Tester is a useful tool that allows you to create wallets and send transactions on the Mainsail Networks via command line. Mainsail TX Tester is accessibe on the following link: [Mainsail TX Tester](https://github.com/ArkEcosystem/mainsail-tx-tester)
+Mainsail TX Tester is a useful tool that allows you to create wallets and send transactions on the Mainsail Networks via command line. Mainsail TX Tester is accessible on the following link: [Mainsail TX Tester](https://github.com/ArkEcosystem/mainsail-tx-tester)
 
 ## Requirements
 
@@ -54,7 +54,7 @@ To create a wallet, run the following command:
 pnpm run wallet
 ```
 
-or with provied mnemonic:
+or with provided mnemonic:
 
 ```bash
 pnpm run wallet "lottery end olympic solid end wonder index raw income switch twice marriage page tree replace cube daring engage ivory spy satisfy length cricket between"
@@ -73,7 +73,7 @@ Private Key:  2be1626052967ca7672557a4675afdacd3e6d719ebaacb80934f4c047a8b9d32
 Address:  D9ZAZfRFfRy22KQSotfR2FgP3cUoN8RkhP
 ```
 
-### Receie tokens
+### Receive tokens
 
 Go to the [Mainsail Faucet](https://faucet-demo.mainsailhq.com/) and enter the address generated in the previous step to receive some DARK tokens.
 
@@ -140,7 +140,7 @@ pnpm run start 1
 
 ### Vote
 
-Before sending transfer transaction, modify the **transfer** object in the **config.js** file. If you want to vote for a validator, provide the validator's public key in the **voteAsset** field. If you want to unvote a validator, provide the validator's public key in the **unvoteAsset** field. You can combine vota and unvote in a single transaction.
+Before sending transfer transaction, modify the **transfer** object in the **config.js** file. If you want to vote for a validator, provide the validator's public key in the **voteAsset** field. If you want to unvote a validator, provide the validator's public key in the **unvoteAsset** field. You can combine vote and unvote in a single transaction.
 
 ```json
     vote: {
