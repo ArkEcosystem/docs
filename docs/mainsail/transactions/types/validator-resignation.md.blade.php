@@ -2,7 +2,7 @@
 title: Transaction Types - Validator Resignation
 ---
 
-# Valdaitor Resignation
+# Validator Resignation
 
 This transaction type enables validators to block potential voters from voting for them if they choose to withdraw their status as validator. A non-reversible transaction can be sent to the network to indicate that the validator should no longer be included in any future forging rounds.
 

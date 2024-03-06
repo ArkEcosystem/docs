@@ -81,7 +81,7 @@
 <x-ark-docs-sidebar-group path="/docs/mainsail/deployment/*" title="Deployment">
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli" name="Mainsail CLI Commands" />
     <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/cli-api" name="Mainsail API CLI Commands" />
-    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/validator" name="Becomming a Validator" />
+    <x-ark-docs-sidebar-link path="/docs/mainsail/deployment/validator" name="Becoming a Validator" />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/mainsail/testing/*" title="Testing">

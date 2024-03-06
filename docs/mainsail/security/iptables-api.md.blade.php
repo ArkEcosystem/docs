@@ -65,7 +65,7 @@ nano ./api-iptables.sh
 | API_GLOBAL_RATE    |  Request rate for Transaction pool.   |
 | API_GLOBAL_BURST | Burst for Transaction pool API. |
 
-| Procees     | Description                     |
+| Process     | Description                     |
 | :---------- | :---------------------------- |
 | api   | The public API that is part of `mainsail-api` script.  |
 | pool  |  The transaction pool API that is part of `mainsail` script.   |

@@ -4,7 +4,7 @@ title: Transaction Types - Validator Registration
 
 # Validator Registration
 
-A user or organization can register their address to become a validator and secure the network. Upon accumulating sufficient vote weight, the validator will begin forging transactions and receiving block rewards. In validator registration transaction, valdiator registers BLS12-281 public key. Registered public key is used to sign blocks and consensus messages.
+A user or organization can register their address to become a validator and secure the network. Upon accumulating sufficient vote weight, the validator will begin forging transactions and receiving block rewards. In validator registration transaction, validator registers BLS12-281 public key. Registered public key is used to sign blocks and consensus messages.
 
 | References |  |
 | :--- | :--- |
