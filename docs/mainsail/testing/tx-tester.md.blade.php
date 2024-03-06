@@ -129,6 +129,8 @@ Before sending transfer transaction, modify the **transfer** object in the **con
     }
 ```
 
+Check out the [Transfer](/docs/mainsail/transactions/types/transfer) transaction for more details.
+
 To send a transfer transaction, run the following command:
 
 ```bash
@@ -147,6 +149,8 @@ Before sending transfer transaction, modify the **transfer** object in the **con
     }
 ```
 
+Check out the [Vote](/docs/mainsail/transactions/types/vote-unvote) transaction for more details.
+
 To send a vote transaction, run the following command:
 
 ```bash
@@ -157,14 +161,13 @@ pnpm run start 2
 
 Before sending username registration transaction, modify the **userNameRegistration** object in the **config.js** file. 
 
-Check out the [Username Registration](/docs/mainsail/transactions/types/username-registration) for more details.
-
 ```json
     userNameRegistration: {
         username: "demo_100",
         fee: "2500000000",
     }
 ```
+Check out the [Username Registration](/docs/mainsail/transactions/types/username-registration) transaction for more details.
 
 To send a username registration transaction, run the following command:
 
@@ -181,6 +184,9 @@ Before sending username resignation transaction, modify the **userNameResignatio
         fee: "2500000000",
     }
 ```
+
+Check out the [Username Resignation](/docs/mainsail/transactions/types/username-resignation) transaction for more details.
+
 
 To send a username resignation transaction, run the following command:
 
@@ -209,6 +215,14 @@ Before sending multi payment transaction, modify the **multiPayment** object in 
     }
 ```
 
+Check out the [MultiPayment](/docs/mainsail/transactions/types/multipayment) transaction for more details.
+
+To send a multi payment transaction, run the following command:
+
+```bash
+pnpm run start 5
+```
+
 ### Validator Registration
 
 Before sending validator registration transaction, modify the **validatorRegistration** object in the **config.js** file. You need to provide the validator's public key in the **validatorPublicKey** field. You can generate new validator key pair by running the **pnpm run wallet** command.
@@ -219,6 +233,7 @@ Before sending validator registration transaction, modify the **validatorRegistr
         fee: "2500000000",
     },
 ```
+Check out the [Validator Registration](/docs/mainsail/transactions/types/validator-registration) transaction for more details.
 
 To send a validator registration transaction, run the following command:
 
@@ -235,6 +250,8 @@ Before sending validator resignation transaction, modify the **validatorResignat
         fee: "2500000000",
     }
 ```
+
+Check out the [Validator Resignation](/docs/mainsail/transactions/types/validator-resignation) transaction for more details.
 
 To send a validator resignation transaction, run the following command:
 
