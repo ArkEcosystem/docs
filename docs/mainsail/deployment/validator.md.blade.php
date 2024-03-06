@@ -47,7 +47,7 @@ Keep your menmonic and validator private key safe. Do not share it with unauthor
 
 After you have registered your validator, you need to set up your node to start forging.
 
-Node will check `validator.json` file located on the config path. If menmonic is included node will automatically detect validator and start if your validator is part of active validators list. You can check that in the (ARK Scan - Delegates)[https://explorer-demo.mainsailhq.com/delegates?delegates&resigned=false].
+Node will check `validator.json` file located on the config path. If menmonic is included node will automatically detect validator and start if your validator is part of active validators list. You can check that in the (ARK Scan - Delegates)[https://explorer-demo.mainsailhq.com/delegates].
 
 Configuration path can be obtained by running the following command:
 
@@ -73,4 +73,4 @@ Your validator will become a forger once it is part of the active validators lis
 
 Active validator are validators that are not resigned and have enough votes to be part of the consensus. Mainsail currently uses 53 active validators.
 
-Nwtwork participants (wallets) need to vote for your validator to become active. You can check the current votes and rank for your validator in the (ARK Scan - Delegate)[https://explorer-demo.mainsailhq.com/delegates?delegates&resigned=false] page.
+Nwtwork participants (wallets) need to vote for your validator to become active. You can check the current votes and rank for your validator in the (ARK Scan - Delegate)[https://explorer-demo.mainsailhq.com/delegates] page.
