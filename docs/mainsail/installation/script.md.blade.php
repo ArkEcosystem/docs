@@ -23,7 +23,7 @@ sudo adduser mainsail
 sudo usermod -a -G sudo mainsail
 sudo su - mainsail
 
-wget https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/install-alpha.sh
+wget https://raw.githubusercontent.com/ArkEcosystem/mainsail/main/scripts/install-alpha.sh
 bash install-alpha.sh
 
 mainsail core:start
