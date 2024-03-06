@@ -9,7 +9,7 @@ A step-by-step guide on how to prepare a fully-functional **Development** enviro
 ---
 
 <x-alert type="success">
-If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$200** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
+If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) and other cloud providers.
 </x-alert>
 
 ## Getting Started
@@ -63,16 +63,16 @@ Adding new group `mainsail' (1001) ...
 Adding new user `mainsail' (1001) with group `mainsail' ...
 Creating home directory `/home/mainsail' ...
 Copying files from `/etc/skel' ...
-New password: 
-Retype new password: 
+New password:
+Retype new password:
 passwd: password updated successfully
 Changing the user information for mainsail
 Enter the new value, or press ENTER for the default
-    Full Name []: 
-    Room Number []: 
-    Work Phone []: 
-    Home Phone []: 
-    Other []: 
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
 Is the information correct? [Y/n] Y
 ```
 

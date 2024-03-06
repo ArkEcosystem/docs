@@ -5,7 +5,7 @@ title: Installation - Server Requirements
 # Server Requirements
 
 <x-alert type="success">
-If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) by using this **$100** referral link: [Referral Link](https://m.do.co/c/09d061526b12).
+If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) and other cloud providers.
 </x-alert>
 
 ---
