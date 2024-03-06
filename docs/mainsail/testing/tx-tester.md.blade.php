@@ -72,7 +72,7 @@ Private Key:  2be1626052967ca7672557a4675afdacd3e6d719ebaacb80934f4c047a8b9d32
 Address:  D9ZAZfRFfRy22KQSotfR2FgP3cUoN8RkhP
 ```
 
-### Receie some DARK tokens
+### Receie tokens
 
 Go to the [Mainsail Faucet](https://faucet-demo.mainsailhq.com/) and enter the address generated in the previous step to receive some DARK tokens.
 
