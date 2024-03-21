@@ -30,11 +30,7 @@ Active Mainsail networks:
 
 ### API Nodes
 
-| Ip                         | Port number |
-| :------------------------: | :---------: |
-| 49.13.30.19                | 4003        |
-| 49.12.202.234              | 4003        |
-| 65.108.217.98              | 4003        |
+You can make use of https://dwallets.mainsailhq.com/ as API node. This is a load balancer with 3 separate servers behind it.
 
 ### Ark Scan
 
