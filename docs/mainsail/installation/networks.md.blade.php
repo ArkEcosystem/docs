@@ -30,7 +30,7 @@ Active Mainsail networks:
 
 ### API Nodes
 
-You can make use of https://dwallets.mainsailhq.com/ as API node. This is a load balancer with 3 separate servers behind it.
+You can make use of [https://dwallets.mainsailhq.com/](https://dwallets.mainsailhq.com/) as API node. This is a load balancer with 3 separate servers behind it.
 
 ### Ark Scan
 
