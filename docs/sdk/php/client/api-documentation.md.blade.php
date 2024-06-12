@@ -455,24 +455,6 @@ Get an unconfirmed transaction by the given id.
 
 `array`
 
-### `search()`
-
-```php
-public function search(array $parameters)
-```
-
-Filter all transactions by the given parameters.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| array | query | No | Search parameters |
-
-#### Return Value
-
-`array`
-
 ### `types()`
 
 ```php
@@ -480,6 +462,30 @@ public function types()
 ```
 
 Get a list of valid transaction types.
+
+#### Return Value
+
+`array`
+
+### `fees()`
+
+```php
+public function fees()
+```
+
+Get the list of static transaction fees.
+
+#### Return Value
+
+`array`
+
+### `schemas()`
+
+```php
+public function schemas()
+```
+
+Get the list of transaction schemas.
 
 #### Return Value
 
