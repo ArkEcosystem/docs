@@ -167,6 +167,26 @@ Filter all blocks by the given parameters.
 
 `array`
 
+## ArkEcosystem\Client\API\Commits
+
+### `show()`
+
+```php
+public function show(int $height)
+```
+
+Takes a block height and returns the commit details
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| int | height | Yes | Block Height |
+
+#### Return Value
+
+`array`
+
 ## ArkEcosystem\Client\API\Delegates
 
 ### `all()`
