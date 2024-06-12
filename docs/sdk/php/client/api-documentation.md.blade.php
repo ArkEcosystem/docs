@@ -277,6 +277,18 @@ Get the node configuration.
 
 `array`
 
+### `crypto()`
+
+```php
+public function crypto()
+```
+
+Get the node crypto configuration.
+
+#### Return Value
+
+`array`
+
 ### `status()`
 
 ```php
