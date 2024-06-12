@@ -491,6 +491,62 @@ Get the list of transaction schemas.
 
 `array`
 
+## ArkEcosystem\Client\API\Rounds
+
+### `show()`
+
+```php
+public function show(int $round_id)
+```
+
+Get a round by the given id.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| string | round_id | Yes | Round ID |
+
+#### Return Value
+
+`array`
+
+### `all()`
+
+```php
+public function all(array $query = [])
+```
+
+Get all rounds.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| array | query | No | Query parameters |
+
+#### Return Value
+
+`array`
+
+### `delegates()`
+
+```php
+public function delegates(int $round_id)
+```
+
+Get the forging delegates of a round by the given id.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| string | round_id | Yes | Round ID |
+
+#### Return Value
+
+`array`
+
 ## ArkEcosystem\Client\API\Votes
 
 ### `all()`
