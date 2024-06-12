@@ -58,6 +58,26 @@ Send a POST request with JSON-encoded parameters.
 
 `array|string`
 
+## ArkEcosystem\Client\API\ApiNodes
+
+### `all()`
+
+```php
+public function all(array $query = [])
+```
+
+Shows an overview of available nodes serving APIs.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| array | query | No | Query parameters |
+
+#### Return Value
+
+`array`
+
 ## ArkEcosystem\Client\API\Blockchain
 
 ### `blockchain()`
