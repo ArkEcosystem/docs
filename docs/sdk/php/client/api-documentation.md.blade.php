@@ -58,6 +58,20 @@ Send a POST request with JSON-encoded parameters.
 
 `array|string`
 
+## ArkEcosystem\Client\API\Blockchain
+
+### `blockchain()`
+
+```php
+public function blockchain()
+```
+
+Get the blockchain information.
+
+#### Return Value
+
+`array`
+
 ## ArkEcosystem\Client\API\Blocks
 
 ### `all()`
