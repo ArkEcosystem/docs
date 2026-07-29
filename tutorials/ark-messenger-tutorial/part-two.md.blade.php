@@ -29,7 +29,7 @@ Core Developer Documentation](/docs/core/development/transactions/intro)
 
 Creating a custom transaction is a straightforward process. We will be using ARK Messenger’s custom transaction — _**Message Transaction**_ as our template.
 
-The custom _**Message Transaction**_ is based on the _**Business Registration Transaction**_ from the [guide above](https://blog.ark.io/an-introduction-to-blockchain-application-development-part-2-2-909b4984bae). For reference, you can find the code [here](https://github.com/learn-ark/dapp-custom-transaction-example).
+The custom _**Message Transaction**_ is based on the _**Business Registration Transaction**_ from the [guide above](https://arkscic.com/blog/an-introduction-to-blockchain-application-development-part-22). For reference, you can find the code [here](https://github.com/learn-ark/dapp-custom-transaction-example).
 
 In order to create our custom transaction, we will be going over the transaction class, the transaction handler, and the transaction builder below. Please use the files below while working on each one:
 
