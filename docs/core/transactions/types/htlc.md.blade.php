@@ -8,7 +8,7 @@ A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a 
 
 For a detailed explanation of how HTLC transaction works, please read our blog post here:
 
-<livewire:embed-link url="https://blog.ark.io/ark-core-series-hash-time-locked-contracts-6611a23fcba3" caption="Explaining the mechanics of HTLC transactions" />
+<livewire:embed-link url="https://arkscic.com/blog/ark-core-series-hash-time-locked-contracts-arkio-blog" caption="Explaining the mechanics of HTLC transactions" />
 
 ## HTLC Lock
 

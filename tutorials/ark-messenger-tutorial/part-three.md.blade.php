@@ -61,9 +61,9 @@ Throughout this series, we have seen several ways that building on ARK adapted t
 
 ### **Custom Transactions**
 
-In order to create the transactions that would become the basis of ARK Messenger, modifications needed to be made to some of the existing transaction types within ARK Core. For this purpose, ARK has made it easy to make these changes through our [Generic Transaction Interface](https://blog.ark.io/ark-core-gti-introduction-to-generic-transaction-interface-57633346c249) (GTI). The purpose of GTI is to give developers an easy way to implement and include new transaction types in the ARK Core without having to modify large parts of the ARK Core.
+In order to create the transactions that would become the basis of ARK Messenger, modifications needed to be made to some of the existing transaction types within ARK Core. For this purpose, ARK has made it easy to make these changes through our [Generic Transaction Interface](https://arkscic.com/blog/ark-core-gti-introduction-to-generic-transaction-interface) (GTI). The purpose of GTI is to give developers an easy way to implement and include new transaction types in the ARK Core without having to modify large parts of the ARK Core.
 
-If you would like to learn more about developing Custom Transaction Types with GTI, then read [here](https://blog.ark.io/an-introduction-to-blockchain-application-development-part-2-2-909b4984bae).
+If you would like to learn more about developing Custom Transaction Types with GTI, then read [here](https://arkscic.com/blog/an-introduction-to-blockchain-application-development-part-22).
 
 ### **ARK Deployer**
 
@@ -73,7 +73,7 @@ If you would like to take a closer look at how this is all possible, please feel
 
 ## Funded by ARK Grants
 
-In case you haven’t heard, the ARK Messenger PoC was fully funded by the [ARK Grants](https://blog.ark.io/introducing-ark-grants-a-development-incentive-program-backed-by-1-million-ark-b0b26ec65390) program. ARK Grants is a developer incentive program aimed at our growing community of developers. Developers can receive funding for building ARK-based PoC’s, plugins and full production-ready applications. The program is being backed by 1 million ARK and currently accepting applications!
+In case you haven’t heard, the ARK Messenger PoC was fully funded by the [ARK Grants](https://arkscic.com/blog/introducing-ark-grants-a-development-incentive-program-backed-by-1-million-ark) program. ARK Grants is a developer incentive program aimed at our growing community of developers. Developers can receive funding for building ARK-based PoC’s, plugins and full production-ready applications. The program is being backed by 1 million ARK and currently accepting applications!
 
 > **Learn about the ARK Grants guidelines and application process at [http://ark.io/grants](http://ark.io/grants)**.
 
