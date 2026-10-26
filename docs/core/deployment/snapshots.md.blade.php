@@ -6,13 +6,14 @@ title: Deployment - Using Snapshots
 
 Snapshot functionality is a built-in feature of the Core that you can easily use with the integrated CLI. Snapshot makes a backup of the current DB state so you can recover from a previously made snapshot and get synced much faster than syncing from 0.
 
+* [Creating a Snapshot](#creating-a-snapshot)
 * [Restoring from a Snapshot](#restoring-from-a-snapshot)
 * [Rolling back a Blockchain](#rolling-back-a-blockchain)
-* [Copying Snapshots Between Servers](#copying-snapshots-between-servers)
+* [Sharing a Database Between Servers](#sharing-a-database-between-servers)
 
-## Getting Started
+## Creating a Snapshot
 
-This function should be done at least once per month if you need to recover due to some failure down the road (database corruption, database integrity failure, …) or to quickly set up on additional servers.
+You should create a snapshot at least once per month, so you can recover from a failure down the road (database corruption, database integrity failure, …) or quickly set up additional servers.
 
 <x-alert type="warning">
 All snapshot input data that represent block height are rounded down to the beginning of the round that contains given height.
@@ -48,24 +49,23 @@ After it’s done, you’ll see this message informing you that the process to c
 
 This is it! You just made a backup of the blockchain.
 
-You can see a list of all completed snapshots in this filepath (_replace_ _**&lt;network&gt;**_ _with the network you operate on — mainnet,devnet,testnet_):
+Snapshots are stored per network. Replace `<network>` with the network you operate on (`mainnet`, `devnet` or `testnet`) to list them:
 
 ```bash
-ls /home/ark/.local/share/ark-core/<network>/snapshots
-example:
-ls /home/ark/.local/share/ark-core/mainnet/snapshots
-//In our example it made backup of blockchain 1-153 which means
-from height 1 to height 153
+ls ~/.local/share/ark-core/<network>/snapshots
 ```
 
-_Useful tip: next time you want to make a snapshot, you can start dump from height following latest stored snapshot. Lets use our snapshot we made in the previous step (directory filename 1-153) and increase height by 1, to prepare following snapshot. We’ll run the command, replacing the filename with yours, which can be obtained by running the command from previous paragraph_ ``**`ls /home/ark/.local/share/ark-core/<network>/snapshots`** _to list files. Let’s run this to create new snapshot:_
+The folder name is the range of blocks in the snapshot. In our example, `1-153` contains the blocks from height 1 to height 153.
+
+### Appending to a Snapshot
+
+Next time, you don't have to dump the whole chain again. Start from the height after your latest snapshot instead. Continuing with our `1-153` example:
 
 ```bash
 ark snapshot:dump --start=154
-//replace 1-153 with your own folder from previously created snapshot.
 ```
 
-We do recommend that you also take full (complete) snaps regularly.
+We do recommend that you also take full (complete) snapshots regularly.
 
 ## Restoring from a Snapshot
 
@@ -77,12 +77,15 @@ First, let’s stop the ARK Relay process, if we have it currently running, with
 ark relay:stop
 ```
 
-After that we’ll run the restore command:
+The restore command does not clear the database by itself. Clear it first with `snapshot:truncate`, or roll back to the height the snapshot starts from with [`snapshot:rollback`](#rolling-back-a-blockchain):
 
 ```bash
-ark snapshot:restore --blocks=<folder name>
-//replace <folder name> with your previously made latest snapshot
-in our case lets use 1-153 so we'd run this command to restore:
+ark snapshot:truncate
+```
+
+Then run the restore command, replacing `1-153` with the folder name of your snapshot:
+
+```bash
 ark snapshot:restore --blocks=1-153
 ```
 
@@ -99,10 +102,7 @@ You will see a message similar to this. It will take some time, so leave it runn
 [2021-06-29 08:26:21.028] DEBUG: Disconnecting from database
 [2021-06-29 08:26:21.029] DEBUG: Disconnected from database
 [2021-06-29 08:26:21.030] DEBUG: Disposing @arkecosystem/core-logger-pino...
-
 ```
-
-Restore command does not automatically clear the database. Use snapshot:rollback or snapshot:truncate command, to rollback or clear the database.
 
 After it is completed, we need to start the relay process again for it to resync (if applicable) back to current height:
 
@@ -120,55 +120,25 @@ First, let’s stop the ARK Relay process with:
 ark relay:stop
 ```
 
-After that, we’ll make use of Snapshot command _**rollback**_ — for this case we can use two commands:
+After that, we’ll make use of Snapshot command _**rollback**_. You can roll back to a specific height, or by a number of blocks.
 
 ### Rolling back to a Specific Height
 
+Let's say the current height is 7,740,000 and we want to go back 2,000 blocks. Then we roll back to height 7,738,000:
+
 ```bash
-ark snapshot:rollback --height=<height>
-
-start to sync from the network. In our case lets say current
-blockchain height is 7,740,000 and if we want to go back 2,000 blocks
-we'll input 7738000 in <height> so we'll run. We'd run:
-
 ark snapshot:rollback --height=7738000
 ```
 
-You’ll see a message similar to this:
+### Rolling back a Number of Blocks
+
+The same rollback, but expressed as the number of blocks to remove from the top of the chain:
 
 ```bash
-[2021-06-29 08:41:03.467] INFO : Connecting to database: ark_testnet
-[2021-06-29 08:41:03.571] DEBUG: Connection established.
-[2021-06-29 08:41:03.575] INFO : Running ROLLBACK
-[2021-06-29 08:41:03.666] INFO : Last block height is: 7,740,000
-[2021-06-29 08:41:03.715] INFO : Rolling back chain to last finished round 151,725 with last block height 7,737,975
-[2021-06-29 08:41:03.716] DEBUG: Disposing @arkecosystem/core-snapshots...
-[2021-06-29 08:41:03.716] DEBUG: Disposing @arkecosystem/core-database...
-[2021-06-29 08:41:03.717] DEBUG: Disconnecting from database
-[2021-06-29 08:41:03.718] DEBUG: Disconnected from database
-[2021-06-29 08:41:03.718] DEBUG: Disposing @arkecosystem/core-logger-pino...
-```
-
-After it is finished, we need to start the relay process again for it to resync from the previously rolled back state and sync back up to the current height by running:
-
-```bash
-ark relay:start
-```
-
-### Rolling back to a Specific Block Number
-
-```bash
-ark snapshot:rollback --number=<number>
-
-//where we replace <number> with a number of blocks we want to
-rollback to and start to sync from the network. In our case lets say
-current blockchain height is 7,740,000 and if we want to go back
-2,000 blocks we'll input 2000 in <number> so we'll run. We'd run:
-
 ark snapshot:rollback --number=2000
 ```
 
-You’ll see a message similar to this:
+In both cases, you’ll see a message similar to this:
 
 ```bash
 [2021-06-29 08:41:03.467] INFO : Connecting to database: ark_testnet
@@ -191,35 +161,163 @@ ark relay:start
 
 Let it sync back, and you are back in business!
 
-## Copying Snapshots Between Servers
+## Sharing a Database Between Servers
 
-If you want to copy a snapshot to another server you own to bring it quickly into sync or to store a copy in a different location, we can make use of SCP (Secure Copy Protocol) which supports secure file transfers between different hosts.
+Syncing a new node from height 0 can take days. If you already run a synced node, or someone you trust does, it is much faster to copy their database. The [`ark-db-sync.sh`](https://raw.githubusercontent.com/ArkEcosystem/core/master/scripts/ark-db-sync.sh) script takes care of dumping, transferring and importing the database in one command.
 
-SCP allows files to be copied to / from / between different hosts. It uses SSH protocol for transfers and provides the same authentication and level of security as SSH.
+<x-alert type="warning">
+Only import a database from a server you control or from someone you trust. A dump replaces your entire chain, and your node accepts its contents as they are.
+</x-alert>
 
-If you want to copy files from one server to another, we’ll run this command where we need to replace `<network>` with the network you operate on (in our example mainnet), `<folder-name>` with snapshot name we are copying in our example it will be 1-7739894, `<username>` with username of the server we are copying to and `<IP>` with its IP address:
+### Methods
+
+The script supports two methods. Both sides need to use the same one.
+
+| Method | How it works | When to use |
+| :----- | :----------- | :---------- |
+| **`pg`** (default) | `pg_dump` and `pg_restore` in parallel, compressed with zstd | Fastest by far. Can dump while Core keeps running on the source |
+| **`snapshot`** | `ark snapshot:dump` and `ark snapshot:restore` | Core-native format, for example if the PostgreSQL versions differ |
+
+<x-alert type="info">
+With the `pg` method, `pg_restore` on the receiving server must be the same or a newer PostgreSQL version than the one that created the dump. Servers set up with the [install script](/docs/core/installation/script) all run PostgreSQL 18.
+</x-alert>
+
+### Requirements
+
+* Both servers have Core installed and a database configured, for example with the [install script](/docs/core/installation/script).
+* Both servers run the same network (`mainnet`, `devnet` or `testnet`). The script detects it, or you pass it with `--network`.
+* `rsync` is installed on both servers: `sudo apt-get install -y rsync`.
+* The receiving server has at least **twice** the size of the dump free. The script checks this before sending anything.
+* You run the script as the user that runs Core. No root access is needed on either side.
+
+### Download the Script
+
+On the server that has the synced database (the source):
 
 ```bash
-scp -r /home/ark/.local/share/ark-core/<network>/snapshots/<folder-name> <username>@IP:/home/ark/.local/share/ark-core/<network>/snapshots/<folder-name>
-
-// to put this into a practical example:
-
-scp -r /home/ark/.local/share/ark-core/mainnet/snapshots/1-7739894 ark@111.11.11.1:/home/ark/.local/share/ark-core/mainnet/snapshots/1-7739894
+curl -fsSLO https://raw.githubusercontent.com/ArkEcosystem/core/master/scripts/ark-db-sync.sh
+chmod +x ark-db-sync.sh
+./ark-db-sync.sh --help
 ```
 
-After this, you will enter `yes` to confirm you want to connect to the server and add it to the list of known hosts.
+The receiving server doesn't need to download it. When pushing, the script copies itself over and runs the import there.
+
+### Set Up an SSH Key Between the Servers
+
+The source server connects to the receiving server (the target) over SSH. It needs a key the target accepts. If the target only allows key logins, for example after [securing it](/docs/core/security/intro), `ssh-copy-id` won't work, so add the key from your own SSH session instead.
+
+On the source server, create a key and print it:
 
 ```bash
-The authenticity of host ‘<IP>’ can’t be established.
-ECDSA key fingerprint is <key>
-Are you sure you want to continue connecting (yes/no)? yes
+ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
 ```
 
-After that, you will be prompted for the password of the server you are connecting to:
+On the target server, as the Core user, append that line to the authorized keys:
 
 ```bash
-Warning: Permanently added '<ip>' (ECDSA) to the list of known hosts.
-ark@<ip>'s password: inputpasswordhere
+echo "ssh-ed25519 AAAA... ark@source" >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
 ```
 
-Your files will begin copying from one server to another. Wait until it completes, and you are good to go! If you wish to restore from the snapshot on your second server, login to that server and follow "_Restoring from the Snapshot_" above.
+### Push the Database to Another Server
+
+With the key in place, a single command dumps the database, sends it over SSH and imports it on the target:
+
+```bash
+./ark-db-sync.sh push --to ark@203.0.113.20
+```
+
+If the target uses a custom SSH port and [port knocking](/docs/core/security/knocking), pass those as well. The script knocks before connecting, and keeps a single SSH connection open for the whole transfer, so it doesn't matter that the port closes again in the meantime:
+
+```bash
+./ark-db-sync.sh push --to ark@203.0.113.20 --ssh-port 55555 --knock 7000,8000,9000
+```
+
+The script will:
+
+1. Check that the target has Core configured for the same network and has `rsync` and `pg_restore` available.
+2. Reuse the latest complete dump on the source, or create a new one. Pass `--fresh` to always create a new dump, which also removes older dumps for that network.
+3. Check that the target has enough free disk space, then send the dump with `rsync`. An interrupted transfer continues where it left off when you run the command again.
+4. Stop the Core processes on the target that are managed by PM2, replace the database, and start the processes that were running again.
+
+<x-alert type="info">
+The import replaces the database on the target. The script asks for confirmation first, unless you pass `--yes`.
+</x-alert>
+
+### Share a Dump with Someone Else
+
+You can also create a dump and import it as separate steps, for example to hand a dump to another node operator, or to keep one as a backup.
+
+On the source server, create the dump:
+
+```bash
+./ark-db-sync.sh dump
+```
+
+The dump is saved in `~/ark-db-dumps/<network>-<height>-<date>`. It is a folder that is already compressed, so you can send it as it is with `rsync`, or pack it into a single file without compressing it again:
+
+```bash
+cd ~/ark-db-dumps
+tar -cf mainnet-dump.tar mainnet-7740000-20261026-120000
+sha256sum mainnet-dump.tar > mainnet-dump.tar.sha256
+```
+
+Share the `.tar` file together with its checksum, for example on a web server or file share. On the receiving server, [download the script](#download-the-script) to the home directory, verify and unpack the dump, then import it:
+
+```bash
+mkdir -p ~/ark-db-dumps && cd ~/ark-db-dumps
+sha256sum -c mainnet-dump.tar.sha256
+tar -xf mainnet-dump.tar
+~/ark-db-sync.sh import --path ~/ark-db-dumps/mainnet-7740000-20261026-120000
+```
+
+The import checks that the dump is for the same network as your node, stops Core, replaces the database and starts Core again. Once Core is running it syncs the remaining blocks from the network.
+
+### Using Core Snapshots Instead
+
+Add `--method snapshot` to any of the commands above to use Core's own snapshots instead of `pg_dump`:
+
+```bash
+./ark-db-sync.sh push --to ark@203.0.113.20 --method snapshot
+```
+
+This uses `ark snapshot:dump` on the source, copies the snapshot to `~/.local/share/ark-core/<network>/snapshots` on the target, then runs `ark snapshot:truncate` and `ark snapshot:restore` there. It is slower than the `pg` method, but does not depend on the PostgreSQL versions on both servers.
+
+To import a snapshot that is already on the server, pass its folder name:
+
+```bash
+./ark-db-sync.sh import --method snapshot --path 1-7740000
+```
+
+### Options
+
+| Option | Description |
+| :----- | :---------- |
+| `--method pg\|snapshot` | `pg_dump`/`pg_restore` (default) or ARK snapshots |
+| `--network NAME` | `mainnet`, `devnet` or `testnet`. Detected automatically if only one is configured |
+| `--jobs N` | Parallel jobs for dump and restore. Defaults to the number of CPUs |
+| `--to user@host` | `push`: the target server |
+| `--ssh-port N` | `push`: the target's SSH port (default `22`) |
+| `--knock a,b,c` | `push`: knock these ports on the target before connecting |
+| `--path DIR` | `import`: the dump folder, or the snapshot folder name |
+| `--keep-remote` | `push`: keep the dump on the target after importing |
+| `--fresh` | `push`: always create a new dump, and remove older dumps for this network |
+| `--no-start` | Don't start Core again after importing |
+| `--yes` | Don't ask for confirmation |
+
+<x-alert type="info">
+**Why not just run `pg_restore`?** Core's database has check constraints that look up other rows, such as the nonce of a sender's previous transaction. `pg_dump` doesn't write rows in that order, so a plain restore fails, or takes hours on mainnet. The script removes these checks while loading and adds them back afterwards. They then apply to every new block, without checking all existing rows again, which were already validated on the source.
+</x-alert>
+
+### Copying Snapshots Manually
+
+You can also copy a snapshot folder yourself, for example to store it in a different location. Use `rsync` over SSH, replacing `55555` with the target's SSH port and `1-7739894` with your snapshot's folder name. Knock first if the target uses [port knocking](/docs/core/security/knocking):
+
+```bash
+rsync -az --partial --info=progress2 -e "ssh -p 55555" \
+    ~/.local/share/ark-core/mainnet/snapshots/1-7739894/ \
+    ark@203.0.113.20:.local/share/ark-core/mainnet/snapshots/1-7739894/
+```
+
+`--partial` lets you resume an interrupted transfer by running the same command again. Once the copy is complete, log in to the target and follow [Restoring from a Snapshot](#restoring-from-a-snapshot).

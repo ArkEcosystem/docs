@@ -12,6 +12,10 @@ A step-by-step guide on how to prepare a fully-functional **Development** enviro
 If you don't have access to a Linux box you can quickly setup one on [DigitalOcean](https://cloud.digitalocean.com) and other cloud providers.
 </x-alert>
 
+<x-alert type="info">
+The install script targets **Ubuntu 24.04 LTS** and **Ubuntu 26.04 LTS**. Other Debian and RedHat based distributions may work on a best-effort basis. See the [Server Requirements](/docs/core/installation/requirements) for details.
+</x-alert>
+
 ## Getting Started
 
 The instructions on this page will guide you through creating a new user account with the correct privileges, installing and configuring ARK Core, then starting a relay instance and logging the output using the installation script.
@@ -23,7 +27,7 @@ sudo adduser ark
 sudo usermod -a -G sudo ark
 sudo su - ark
 
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 
 ark relay:start
 
@@ -110,7 +114,15 @@ Here, we will use the `install.sh` script. This installs ARK Core and all of its
 Run the install script by copying and pasting this one line command into your terminal:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+```
+
+If you prefer to read the script before running it, download it first:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh
+less install.sh
+bash install.sh
 ```
 
 You will be asked to input your user password to grant sudo privileges:
@@ -122,6 +134,26 @@ You will be asked to input your user password to grant sudo privileges:
 <x-alert type="warning">
 The install process might take a while, don’t interrupt it, wait for it to finish.
 </x-alert>
+
+The script runs without any further questions until Core itself is installed. Along the way it sets up the following:
+
+| Component | Details |
+| :-------- | :------ |
+| **Locale** | Sets `en_US.UTF-8` for the current shell and in `~/.bashrc` |
+| **Node.js 24** | Installed from the NodeSource repository, pinned so it takes priority over the Ubuntu `nodejs` package |
+| **Yarn** | Enabled through Corepack, which ships with Node.js |
+| **PM2** | Installed globally with npm, including `pm2-logrotate` (500MB per file, compressed, 7 files kept) |
+| **PostgreSQL 18** | Installed from the official PostgreSQL apt repository |
+| **Build tools** | `build-essential`, `libpq-dev`, `jq`, `libjemalloc-dev` and other packages needed to compile native modules |
+| **chrony** | Keeps the server clock in sync. It replaces `systemd-timesyncd` and removes any `ntp` or `ntpsec` from earlier installs. An accurate clock is required for forging in the correct slot |
+| **System updates** | Runs a full `apt-get upgrade` and `dist-upgrade` |
+| **ARK Core** | Installed globally with npm as `@arkecosystem/core` |
+
+<x-alert type="info">
+Core's transaction pool pins `better-sqlite3@9.3.0`, which does not compile against Node.js 22 or newer. The script therefore installs Core with `--ignore-scripts`, adds an npm override that moves every copy of `better-sqlite3` to a compatible version, rebuilds the native modules and checks that the module loads before continuing. If that check fails the script stops with an error.
+</x-alert>
+
+The script is safe to run again on a server that was set up with an older version of it. It removes the old NodeSource and Yarn repositories before updating, and replaces `ntp` with `chrony`.
 
 ### Step 5: Select the Core network
 
@@ -174,11 +206,17 @@ Replace `<network_name>` with the appropriate custom or pre-defined network name
 
 ```bash
 Enter the database username: ark
-Enter the database password: password
+Enter the database password: <a strong password>
 Enter the database name: <network_name> # your chosen network name
 ```
 
-This will create a PostgreSQL role and database to be used for storing blockchain data.
+This will create a PostgreSQL role and database to be used for storing blockchain data, and store the credentials in Core's `.env` file (`CORE_DB_USERNAME`, `CORE_DB_PASSWORD` and `CORE_DB_DATABASE`).
+
+<x-alert type="info">
+The credentials are printed so you can confirm them before they are applied. If the user or database already exists you are asked whether to recreate it or keep it.
+</x-alert>
+
+Once the script is done it reloads your shell, so the `ark` command and the locale settings are available right away.
 
 ## Additional Devnet Steps
 
@@ -203,3 +241,8 @@ That’s it, your installation is all set! 🎉
 <x-alert type="success">
 **Hint:** start a relay instance and log its output by entering the following command into your terminal: **`ark relay:start && pm2 logs`**
 </x-alert>
+
+## Next Steps
+
+* [Secure your server](/docs/core/security/intro) before you expose it to the internet, especially when running a forger.
+* Syncing from scratch can take a long time. If you or someone you trust already runs a synced node, [copy their database](/docs/core/deployment/snapshots#sharing-a-database-between-servers) instead.

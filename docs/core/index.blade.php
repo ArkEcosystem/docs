@@ -72,11 +72,11 @@
 
 <x-ark-docs-sidebar-group path="/docs/core/security/*" title="Security">
     <x-ark-docs-sidebar-link path="/docs/core/security/intro" name="Security Through Obscurity" />
-    <x-ark-docs-sidebar-link path="/docs/core/security/ssh" name="Using SSH" />
     <x-ark-docs-sidebar-link path="/docs/core/security/updated" name="Staying Up-to-Date" />
-    <x-ark-docs-sidebar-link path="/docs/core/security/iptables" name="Applying iptables" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/ssh" name="Using SSH" />
     <x-ark-docs-sidebar-link path="/docs/core/security/fail2ban" name="Installing Fail2Ban" />
     <x-ark-docs-sidebar-link path="/docs/core/security/knocking" name="Setting Up Port Knocking" />
+    <x-ark-docs-sidebar-link path="/docs/core/security/iptables" name="Applying iptables" />
     <x-ark-docs-sidebar-link path="/docs/core/security/ddos" name="Cloudflare DDoS Protection" />
 </x-ark-docs-sidebar-group>
 

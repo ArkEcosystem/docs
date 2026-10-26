@@ -16,7 +16,7 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 
 ARK Core is written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages and uses [Node.js](https://nodejs.org) as execution environment.
 
-This guide will take you through the basic steps of setting up a development environment. We recommend Linux (\*.deb based) operating system as the default environment. We officially recommend and support **Ubuntu** operating system.
+This guide will take you through the basic steps of setting up a development environment. We officially recommend and support the **Ubuntu LTS** releases **24.04** and **26.04**. Other Linux distributions may work, but are not tested. See the [Server Requirements](/docs/core/installation/requirements) for details.
 
 **Please select one of the development setup tutorial you would like to start with:**
 

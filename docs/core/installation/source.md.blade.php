@@ -18,7 +18,7 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 
 ## Introduction
 
-This guide will take you through the basic steps of setting up a development environment from scratch on a fresh Linux (\*.deb based) box. We officially recommend and support **Ubuntu** operating system.
+This guide will take you through the basic steps of setting up a development environment from scratch on a fresh **Ubuntu 24.04 LTS** or **Ubuntu 26.04 LTS** server. Other distributions may work, but are not officially supported.
 
 ## Step 1: User setup
 
@@ -40,29 +40,36 @@ sudo su - ark
 As the most popular version control software in existence, Git is a staple of many developer workflows, and ARK is no exception. Downloading Git will allow you to clone the latest version of ARK Core.
 
 ```bash
-sudo apt-get install -y git curl apt-transport-https update-notifier
+sudo apt-get update
+sudo apt-get install -y git curl ca-certificates gnupg
 ```
 
 ## Step 3: Install Node.js Runtime
 
-As ARK Core is written exclusively in [Node.js](https://nodejs.org/), the server-side framework for JavaScript, Typescript, installing Node.js is a necessity for core development. The code below installs Node.js from source.
+As ARK Core is written exclusively in [Node.js](https://nodejs.org/), the server-side framework for JavaScript, Typescript, installing Node.js is a necessity for core development. The code below installs Node.js 24 from the NodeSource repository.
 
 ```bash
-sudo wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-(echo "deb https://deb.nodesource.com/node_14.x $(lsb_release -s -c) main" | sudo tee /etc/apt/sources.list.d/nodesource.list)
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/nodesource.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_24.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+echo -e "Package: nodejs\nPin: origin deb.nodesource.com\nPin-Priority: 999" | sudo tee /etc/apt/preferences.d/nodesource
 sudo apt-get update
-sudo apt-get install nodejs -y
+sudo apt-get install -y nodejs
 ```
+
+<x-alert type="info">
+`apt-key` is deprecated and no longer available on recent Ubuntu releases. Repository keys are stored in `/usr/share/keyrings` and referenced with `signed-by` instead. The pin makes sure the NodeSource package is preferred over the older `nodejs` package that ships with Ubuntu.
+</x-alert>
 
 ## Step 4: Install Yarn Package Manager
 
-[Yarn](https://yarnpkg.com/) is a package manager that seeks to build upon the foundation of Node's npm. Although yarn is not a strict requirement, in many cases it works faster and more elegantly than npm. Most ARK developers use yarn, and as such, you will see yarn commands often used throughout our documentation.
+[Yarn](https://yarnpkg.com/) is a package manager that seeks to build upon the foundation of Node's npm. Most ARK developers use yarn, and as such, you will see yarn commands often used throughout our documentation.
+
+Yarn is no longer installed from its own apt repository. It ships with Node.js through [Corepack](https://nodejs.org/api/corepack.html). The Core repository is a Yarn 1 (classic) workspace, so activate that version:
 
 ```bash
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-(echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list)
-sudo apt-get update
-sudo apt-get install -y yarn
+sudo corepack enable
+COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack install --global yarn@1
+yarn --version
 ```
 
 ## Step 5: Install Dependencies
@@ -70,7 +77,7 @@ sudo apt-get install -y yarn
 Dependencies are needed for `core` to be compiled, run and controlled while living inside you linux based environment. To command below installs some of those needed dependencies that are used by core or related scripts.
 
 ```bash
-sudo apt-get install build-essential libcairo2-dev pkg-config libtool autoconf automake python libpq-dev jq -y
+sudo apt-get install -y build-essential pkg-config libtool autoconf automake python3 libpq-dev jq libjemalloc-dev
 ```
 
 ## Step 6: Clone The Core Repository
@@ -86,6 +93,18 @@ git checkout develop
 yarn setup  #run Lerna to clean, bootstrap and build the core packages
 ```
 
+<x-alert type="warning">
+`@arkecosystem/core-transaction-pool` pins `better-sqlite3@9.3.0`, which does not compile against Node.js 22 or newer. If `yarn setup` fails while building `better-sqlite3`, add a resolution to the root `package.json` and run `yarn setup` again:
+
+```json
+"resolutions": {
+    "better-sqlite3": "13.0.3"
+}
+```
+
+The [install script](/docs/core/installation/script) applies the same fix for npm installs.
+</x-alert>
+
 ## Step 7: Setting Up The Development Database
 
 ARK Core stores all the blockchain data in a [PostgreSQL](https://www.postgresql.org/) database. You have two options on how to setup your development database.
@@ -96,7 +115,7 @@ Follow **Step 7.1** if you are working locally on your developer computer and ha
 
 ### Step 7.1 Database Setup Using Docker
 
-If you are already using `Docker` and  have  `docker-compose` installed, then you can generate docker files from the command line, with the `yarn docker ark` command where (ark is the name of the `network` for which you want to generate docker files). For now let's stick with `ark` as the default name of the network.
+If you are already using `Docker` with the `docker compose` plugin installed, then you can generate docker files from the command line, with the `yarn docker ark` command where (ark is the name of the `network` for which you want to generate docker files). For now let's stick with `ark` as the default name of the network.
 
 Executing the command `yarn docker ark` in the root folder of the previously cloned repository, like this:
 
@@ -131,27 +150,34 @@ will generate the following docker files inside our `core/docker` folder (see fo
 ...
 ```
 
-To start the PostgreSQL docker container we must go into the corresponding folder and run the `docker-compose` command. For testnet we need to run the following:
+To start the PostgreSQL docker container we must go into the corresponding folder and run the `docker compose` command. For testnet we need to run the following:
 
 ```bash
 cd docker/development/testnet
-docker-compose up -d postgres #postgres is the name of the PostgreSQL container
+docker compose up -d postgres #postgres is the name of the PostgreSQL container
 ```
 
-The `docker-compose up -d postgres` will start PostgresSQL container and expose it to our core via standard PostgreSQL port 5432.
+The `docker compose up -d postgres` command will start PostgresSQL container and expose it to our core via standard PostgreSQL port 5432.
 
 ### Step 7.2 Installing Postgres Database System-Wide
 
-If you don't want to install and run docker on your local computer you can still install PostgreSQL database natively on your running operating system. For \*.deb based Linux systems the commands are the following:
+If you don't want to install and run docker on your local computer you can still install PostgreSQL database natively on your running operating system. We recommend PostgreSQL 18 from the official [PostgreSQL apt repository](https://wiki.postgresql.org/wiki/Apt), which is also what the install script uses:
 
 ```bash
-sudo apt-get install postgresql postgresql-contrib -y
-sudo -i -u postgres psql -c "CREATE USER ark  WITH PASSWORD 'password' CREATEDB;"
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | sudo tee /usr/share/keyrings/pgdg.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/pgdg.gpg] https://apt.postgresql.org/pub/repos/apt $(. /etc/os-release && echo "$VERSION_CODENAME")-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+sudo apt-get update
+sudo apt-get install -y postgresql-18
+sudo -i -u postgres psql -c "CREATE USER ark WITH PASSWORD 'password' CREATEDB;"
 sudo -i -u postgres psql -c "CREATE DATABASE ark_testnet WITH OWNER ark;"
 sudo -i -u postgres psql -c "CREATE DATABASE ark_devnet WITH OWNER ark;"
 ```
 
 The commands above install PostgreSQL database locally and create databases for running testnet and devnet networks with user `ark` as the database owner. If you have skipped the Step 1: User setup, you have to change `ark` user to your development username, usually the logged in username.
+
+<x-alert type="warning">
+Replace `password` with a strong password of your own on any server that is reachable from the internet.
+</x-alert>
 
 ## Start Core and Play With Public API
 
