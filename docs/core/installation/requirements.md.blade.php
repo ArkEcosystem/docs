@@ -11,22 +11,24 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 ---
 
 <x-alert type="warning">
-Only Ubuntu **LTS** releases are supported. Ubuntu 22.04 and older are **no longer** supported, so upgrade or reinstall these servers before updating Core.
+Only Ubuntu **LTS** releases are supported. Ubuntu 20.04 and older are **no longer** supported. If you run Core 3.13.0 or older on one of these, follow the [upgrade guide](/docs/core/releases/upgrade/node-24).
 </x-alert>
 
 ---
 
 | Supported OS | Release Version(s)          |
 | :----------: | :-------------------------: |
-| **Ubuntu**   | 24.04 LTS / 26.04 LTS       |
+| **Ubuntu**   | 24.04 LTS / 26.04 LTS (recommended)<br>22.04 LTS |
 
-Other Debian-based distributions, and RedHat-based distributions such as Rocky Linux or AlmaLinux, can work with the [install script](/docs/core/installation/script) on a best-effort basis, but they are not tested or officially supported.
+We recommend Ubuntu 24.04 or 26.04 for new servers. Ubuntu 22.04 is still supported, but its standard support ends in May 2027.
+
+Other Debian-based distributions may work with the [install script](/docs/core/installation/script) on a best-effort basis, but they are not tested or officially supported. RedHat-based distributions are no longer supported by the install script.
 
 | Software       | Version | Installed by                                          |
 | :------------: | :-----: | :---------------------------------------------------: |
-| **Node.js**    | 24.x    | [install script](/docs/core/installation/script)      |
+| **Node.js**    | 24.22.1 or newer | [install script](/docs/core/installation/script)      |
 | **PostgreSQL** | 18.x    | [install script](/docs/core/installation/script)      |
-| **PM2**        | latest  | [install script](/docs/core/installation/script)      |
+| **PM2**        | 7.x     | [install script](/docs/core/installation/script)      |
 
 | Relay Specification | Minimum | Recommended   |
 | :-----------------: | :-----: | :-----------: |

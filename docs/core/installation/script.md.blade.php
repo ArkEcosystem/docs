@@ -13,7 +13,9 @@ If you don't have access to a Linux box you can quickly setup one on [DigitalOce
 </x-alert>
 
 <x-alert type="info">
-The install script targets **Ubuntu 24.04 LTS** and **Ubuntu 26.04 LTS**. Other Debian and RedHat based distributions may work on a best-effort basis. See the [Server Requirements](/docs/core/installation/requirements) for details.
+The install script targets **Ubuntu 24.04 LTS** and **Ubuntu 26.04 LTS**. Ubuntu 22.04 LTS works as well, but its standard support ends in May 2027. Other Debian-based distributions may work on a best-effort basis. See the [Server Requirements](/docs/core/installation/requirements) for details.
+
+Upgrading an existing Core 3.13.0 node? Follow the [upgrade guide](/docs/core/releases/upgrade/node-24) instead.
 </x-alert>
 
 ## Getting Started
@@ -139,21 +141,15 @@ The script runs without any further questions until Core itself is installed. Al
 
 | Component | Details |
 | :-------- | :------ |
-| **Locale** | Sets `en_US.UTF-8` for the current shell and in `~/.bashrc` |
+| **Locale** | Generates `en_US.UTF-8` and sets it for the current shell and in `~/.bashrc` |
+| **NTP** | Installs and enables `systemd-timesyncd`, which keeps the server clock in sync. An accurate clock is required for forging in the correct slot |
 | **Node.js 24** | Installed from the NodeSource repository, pinned so it takes priority over the Ubuntu `nodejs` package |
-| **Yarn** | Enabled through Corepack, which ships with Node.js |
-| **PM2** | Installed globally with npm, including `pm2-logrotate` (500MB per file, compressed, 7 files kept) |
+| **Yarn** | Installed from the Yarn apt repository |
+| **PM2 7** | Installed globally with Yarn, including `pm2-logrotate` (500MB per file, compressed, 7 files kept) |
 | **PostgreSQL 18** | Installed from the official PostgreSQL apt repository |
-| **Build tools** | `build-essential`, `libpq-dev`, `jq`, `libjemalloc-dev` and other packages needed to compile native modules |
-| **chrony** | Keeps the server clock in sync. It replaces `systemd-timesyncd` and removes any `ntp` or `ntpsec` from earlier installs. An accurate clock is required for forging in the correct slot |
+| **Build tools** | `build-essential`, `python3`, `libpq-dev`, `jq`, `libjemalloc-dev` and other packages needed to compile native modules |
 | **System updates** | Runs a full `apt-get upgrade` and `dist-upgrade` |
-| **ARK Core** | Installed globally with npm as `@arkecosystem/core` |
-
-<x-alert type="info">
-Core's transaction pool pins `better-sqlite3@9.3.0`, which does not compile against Node.js 22 or newer. The script therefore installs Core with `--ignore-scripts`, adds an npm override that moves every copy of `better-sqlite3` to a compatible version, rebuilds the native modules and checks that the module loads before continuing. If that check fails the script stops with an error.
-</x-alert>
-
-The script is safe to run again on a server that was set up with an older version of it. It removes the old NodeSource and Yarn repositories before updating, and replaces `ntp` with `chrony`.
+| **ARK Core** | Installed globally with Yarn as `@arkecosystem/core`. The script adds `$(yarn global bin)` to your `PATH` in `~/.bashrc` |
 
 ### Step 5: Select the Core network
 
@@ -213,7 +209,7 @@ Enter the database name: <network_name> # your chosen network name
 This will create a PostgreSQL role and database to be used for storing blockchain data, and store the credentials in Core's `.env` file (`CORE_DB_USERNAME`, `CORE_DB_PASSWORD` and `CORE_DB_DATABASE`).
 
 <x-alert type="info">
-The credentials are printed so you can confirm them before they are applied. If the user or database already exists you are asked whether to recreate it or keep it.
+The credentials are printed so you can confirm them before they are applied. If the user or database already exists you are asked whether to recreate it or keep it. An existing database is handed to the Core user, so Core can create its tables on PostgreSQL 15 and newer.
 </x-alert>
 
 Once the script is done it reloads your shell, so the `ark` command and the locale settings are available right away.

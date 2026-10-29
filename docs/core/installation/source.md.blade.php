@@ -64,12 +64,13 @@ sudo apt-get install -y nodejs
 
 [Yarn](https://yarnpkg.com/) is a package manager that seeks to build upon the foundation of Node's npm. Most ARK developers use yarn, and as such, you will see yarn commands often used throughout our documentation.
 
-Yarn is no longer installed from its own apt repository. It ships with Node.js through [Corepack](https://nodejs.org/api/corepack.html). The Core repository is a Yarn 1 (classic) workspace, so activate that version:
+The Core repository is a Yarn 1 (classic) workspace. Install it from the Yarn apt repository, the same way the install script does:
 
 ```bash
-sudo corepack enable
-COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack install --global yarn@1
-yarn --version
+curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update
+sudo apt-get install -y yarn
 ```
 
 ## Step 5: Install Dependencies
@@ -77,7 +78,7 @@ yarn --version
 Dependencies are needed for `core` to be compiled, run and controlled while living inside you linux based environment. To command below installs some of those needed dependencies that are used by core or related scripts.
 
 ```bash
-sudo apt-get install -y build-essential pkg-config libtool autoconf automake python3 libpq-dev jq libjemalloc-dev
+sudo apt-get install -y build-essential python-is-python3 python3-setuptools pkg-config libtool autoconf automake libpq-dev jq libjemalloc-dev
 ```
 
 ## Step 6: Clone The Core Repository
@@ -92,18 +93,6 @@ cd core
 git checkout develop
 yarn setup  #run Lerna to clean, bootstrap and build the core packages
 ```
-
-<x-alert type="warning">
-`@arkecosystem/core-transaction-pool` pins `better-sqlite3@9.3.0`, which does not compile against Node.js 22 or newer. If `yarn setup` fails while building `better-sqlite3`, add a resolution to the root `package.json` and run `yarn setup` again:
-
-```json
-"resolutions": {
-    "better-sqlite3": "13.0.3"
-}
-```
-
-The [install script](/docs/core/installation/script) applies the same fix for npm installs.
-</x-alert>
 
 ## Step 7: Setting Up The Development Database
 
