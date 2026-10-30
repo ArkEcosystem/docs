@@ -208,6 +208,16 @@ timedatectl
 
 ### Step 4: PostgreSQL
 
+<x-alert type="warning">
+Upgrading the database needs the binaries of **both** your current PostgreSQL version and PostgreSQL 18. If your current version was removed during the Ubuntu upgrade, your data is still on disk, but nothing can read it until that version is installed again. Check this first:
+
+```bash
+pg_lsclusters
+```
+
+If your cluster shows as `down` and doesn't start, add the PostgreSQL repository and run `apt-get update` with the first three commands below, then install your old version again, for example `sudo apt-get install -y postgresql-14`. If that version is no longer available for your Ubuntu release, you can't upgrade this database in place: [move to a new server](#moving-to-a-new-server) and copy the database from another node, or sync from 0.
+</x-alert>
+
 Add the PostgreSQL repository for your new Ubuntu release and install PostgreSQL 18:
 
 ```bash
@@ -230,8 +240,6 @@ Ver Cluster Port Status Owner    Data directory              Log file
 ```
 
 Your data is in the old cluster on port `5432`, version 14 in this example. Replace `14` in the commands below with your version.
-
-If the old cluster shows as `down` and doesn't start, its PostgreSQL version may have been removed during the Ubuntu upgrade. Install it again with `sudo apt-get install -y postgresql-14`. If that version is no longer available for your Ubuntu release, you can't upgrade this database in place: [move to a new server](#moving-to-a-new-server) and copy the database from another node, or sync from 0.
 
 <x-alert type="info">
 If the list shows more than one old cluster, for example because the Ubuntu upgrade installed its own PostgreSQL version, check which one holds your database with `sudo -u postgres psql -p <port> -l`. Only upgrade that one.

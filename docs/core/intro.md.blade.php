@@ -263,7 +263,7 @@ The **Releases** section provides important ARK Core release and upgrade informa
 
 <x-ark-link-collection
     :links="[
-        ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
+        ['path' => '/docs/core/releases/upgrade/node-24', 'name' => '3.13 to Node.js 24 Upgrade Guide'],
     ]"
 />
 

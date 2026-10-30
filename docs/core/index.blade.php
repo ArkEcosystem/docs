@@ -224,13 +224,6 @@
             ['path' => '/docs/core/releases/upgrade/node-24', 'name' => 'Upgrade Guide'],
         ]"
     />
-    <x-ark-docs-sidebar-link
-        path="/docs/core/releases"
-        name="4.0 (Development)"
-        :children="[
-            ['path' => '/docs/core/releases/upgrade/4.0', 'name' => '4.0 Upgrade Guide - Devnet'],
-        ]"
-    />
 </x-ark-docs-sidebar-group>
 
 <x-ark-docs-sidebar-group path="/docs/core/support/*" title="Support">
