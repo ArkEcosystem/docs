@@ -34,7 +34,7 @@ The most straightforward way is to set up a new server with Ubuntu 24.04 or 26.0
 
 You can get the new server's database in two ways:
 
-* **Copy the database** from your current node with [`ark-db-sync.sh`](/docs/core/deployment/snapshots#sharing-a-database-between-servers). This is the fastest option, and works from a 3.13.0 node.
+* **Copy the database** from your current node, as described in [Sharing a Database Between Servers](/docs/core/deployment/snapshots#sharing-a-database-between-servers). This is the fastest option, and works from a 3.13.0 node.
 * **Sync from 0.** This takes a long time, but you can start it well in advance and keep forging on your current server in the meantime.
 
 Follow [Moving to a New Server](#moving-to-a-new-server) below.
@@ -343,11 +343,7 @@ The PM2 process name depends on your network and token. Use `pm2 list` to see th
 
 1. Set up a new server with Ubuntu 24.04 or 26.04 and install Core with the [install script](/docs/core/installation/script). Choose the same network as your current node and configure the database. Check that `ark version` shows `<version>`.
 2. [Secure the new server](/docs/core/security/intro).
-3. Get the database onto the new server. Either let it sync from 0, or copy it from your current node with [`ark-db-sync.sh`](/docs/core/deployment/snapshots#sharing-a-database-between-servers). The script runs on your current 3.13.0 node, needs `rsync` on both servers, and can dump while Core keeps running:
-
-   ```bash
-   ./ark-db-sync.sh push --to ark@<new-server-ip>
-   ```
+3. Get the database onto the new server. Either let it sync from 0, or create a backup on your current 3.13.0 node and copy it over, as described in [Sharing a Database Between Servers](/docs/core/deployment/snapshots#sharing-a-database-between-servers).
 
 4. Start the relay on the new server with `ark relay:start`, and let it sync to the current height.
 5. If you made changes to `app.json` or `.env` on your current node, apply them on the new server. Don't copy the `.env` file as a whole, as the database credentials can be different.

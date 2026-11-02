@@ -9,6 +9,7 @@ Snapshot functionality is a built-in feature of the Core that you can easily use
 * [Creating a Snapshot](#creating-a-snapshot)
 * [Restoring from a Snapshot](#restoring-from-a-snapshot)
 * [Rolling back a Blockchain](#rolling-back-a-blockchain)
+* [Using a Database Dump Instead](#using-a-database-dump-instead)
 * [Sharing a Database Between Servers](#sharing-a-database-between-servers)
 
 ## Creating a Snapshot
@@ -161,163 +162,267 @@ ark relay:start
 
 Let it sync back, and you are back in business!
 
-## Sharing a Database Between Servers
+## Using a Database Dump Instead
 
-Syncing a new node from height 0 can take days. If you already run a synced node, or someone you trust does, it is much faster to copy their database. The [`ark-db-sync.sh`](https://raw.githubusercontent.com/ArkEcosystem/core/master/scripts/ark-db-sync.sh) script takes care of dumping, transferring and importing the database in one command.
+Instead of Core snapshots, you can also back up the database with PostgreSQL's own `pg_dump` and `pg_restore` tools. This is a lot faster, especially on mainnet, as both the dump and the restore run in parallel, and the dump can be created while Core keeps running.
 
 <x-alert type="warning">
-Only import a database from a server you control or from someone you trust. A dump replaces your entire chain, and your node accepts its contents as they are.
+We recommend using [snapshots](#creating-a-snapshot) instead. A database dump is imported as it is: Core doesn't verify the blocks and transactions in it, and the restore below skips the database checks for existing rows. Only use a database dump if you understand the steps below and fully trust the source of the dump, for example because it comes from your own server.
 </x-alert>
 
-### Methods
-
-The script supports two methods. Both sides need to use the same one.
-
-| Method | How it works | When to use |
-| :----- | :----------- | :---------- |
-| **`pg`** (default) | `pg_dump` and `pg_restore` in parallel, compressed with zstd | Fastest by far. Can dump while Core keeps running on the source |
-| **`snapshot`** | `ark snapshot:dump` and `ark snapshot:restore` | Core-native format, for example if the PostgreSQL versions differ |
-
-<x-alert type="info">
-With the `pg` method, `pg_restore` on the receiving server must be the same or a newer PostgreSQL version than the one that created the dump. Servers set up with the [install script](/docs/core/installation/script) all run PostgreSQL 18.
-</x-alert>
-
-### Requirements
-
-* Both servers have Core installed and a database configured, for example with the [install script](/docs/core/installation/script).
-* Both servers run the same network (`mainnet`, `devnet` or `testnet`). The script detects it, or you pass it with `--network`.
-* `rsync` is installed on both servers: `sudo apt-get install -y rsync`.
-* The receiving server has at least **twice** the size of the dump free. The script checks this before sending anything.
-* You run the script as the user that runs Core. No root access is needed on either side.
-
-### Download the Script
-
-On the server that has the synced database (the source):
+The examples below use the default database name `ark_mainnet` and user `ark`. Look up the values for your node in its configuration, replacing `<network>` with the network you operate on:
 
 ```bash
-curl -fsSLO https://raw.githubusercontent.com/ArkEcosystem/core/master/scripts/ark-db-sync.sh
-chmod +x ark-db-sync.sh
-./ark-db-sync.sh --help
+grep CORE_DB ~/.config/ark-core/<network>/.env
 ```
 
-The receiving server doesn't need to download it. When pushing, the script copies itself over and runs the import there.
+Then make them available to the PostgreSQL tools for the current session, replacing the values with the ones from your configuration:
+
+```bash
+export PGHOST=localhost PGPORT=5432 PGUSER=ark PGPASSWORD=password
+```
+
+### Creating a Database Dump
+
+Check the current height, so you can include it in the name of the dump:
+
+```bash
+psql -d ark_mainnet -tAc "SELECT max(height) FROM blocks"
+```
+
+Then create the dump, replacing `7740000` with that height. It uses the directory format, so it can run in parallel with one job per CPU:
+
+```bash
+mkdir -p ~/ark-db-dumps
+pg_dump -d ark_mainnet --format=directory --jobs=$(nproc) --compress=zstd:3 \
+    --no-owner --no-privileges --file=$HOME/ark-db-dumps/mainnet-7740000
+```
+
+<x-alert type="info">
+Compressing with `zstd` requires PostgreSQL 16 or newer. Check your version with `pg_dump --version`, and use `--compress=6` instead on older versions.
+</x-alert>
+
+The dump is a folder that is already compressed, so it doesn't need to be compressed again when you copy or pack it.
+
+### Restoring a Database Dump
+
+The version of `pg_restore` on the server you restore to must be the same or newer than the version of `pg_dump` that created the dump. Check it with `pg_restore --version`. Servers set up with the [install script](/docs/core/installation/script) all run PostgreSQL 18.
+
+First, stop the relay and the forger (if you run one on this server):
+
+```bash
+ark relay:stop
+ark forger:stop
+```
+
+Remove the current database and create an empty one, owned by your Core database user:
+
+```bash
+psql -d postgres -c 'DROP DATABASE IF EXISTS ark_mainnet WITH (FORCE)'
+psql -d postgres -c 'CREATE DATABASE ark_mainnet OWNER ark'
+```
+
+Restore the tables first, without any data, replacing the path with the location of your dump:
+
+```bash
+pg_restore -d ark_mainnet --no-owner --no-privileges --exit-on-error \
+    --section=pre-data ~/ark-db-dumps/mainnet-7740000
+```
+
+Core's database has check constraints that look up other rows, such as the nonce of a sender's previous transaction. `pg_dump` doesn't write rows in that order, so loading the data with these checks in place fails, or takes hours on mainnet. Save the checks to a file, so you can add them back later:
+
+```bash
+psql -d ark_mainnet -tA -v ON_ERROR_STOP=1 -o ~/ark-checks.sql <<'SQL'
+SELECT format('ALTER TABLE %I.%I ADD CONSTRAINT %I %s NOT VALID;',
+              n.nspname, t.relname, c.conname,
+              regexp_replace(pg_get_constraintdef(c.oid), '\s+NOT VALID$', ''))
+FROM pg_constraint c
+JOIN pg_class t ON t.oid = c.conrelid
+JOIN pg_namespace n ON n.oid = t.relnamespace
+WHERE c.contype = 'c' AND n.nspname = 'public';
+SQL
+```
+
+Then remove the checks from the database:
+
+```bash
+psql -d ark_mainnet -v ON_ERROR_STOP=1 <<'SQL'
+DO $$
+DECLARE r record;
+BEGIN
+    FOR r IN SELECT n.nspname, t.relname, c.conname
+             FROM pg_constraint c
+             JOIN pg_class t ON t.oid = c.conrelid
+             JOIN pg_namespace n ON n.oid = t.relnamespace
+             WHERE c.contype = 'c' AND n.nspname = 'public'
+    LOOP
+        EXECUTE format('ALTER TABLE %I.%I DROP CONSTRAINT %I', r.nspname, r.relname, r.conname);
+    END LOOP;
+END $$;
+SQL
+```
+
+Restore the data and indexes in parallel. This is the step that takes the longest:
+
+```bash
+pg_restore -d ark_mainnet --no-owner --no-privileges --exit-on-error \
+    --section=data --section=post-data --jobs=$(nproc) ~/ark-db-dumps/mainnet-7740000
+```
+
+Add the checks back and update the database statistics:
+
+```bash
+psql -d ark_mainnet -v ON_ERROR_STOP=1 -f ~/ark-checks.sql
+psql -d ark_mainnet -c 'ANALYZE'
+```
+
+The checks are added as `NOT VALID`: they apply to every new block from now on, but the rows from the dump are not checked again. This is why you should only restore a dump from a source you trust.
+
+Finally, start the relay (and the forger, if applicable) again. It syncs the remaining blocks from the network:
+
+```bash
+ark relay:start
+```
+
+## Sharing a Database Between Servers
+
+Syncing a new node from height 0 can take days. If you already run a synced node, or someone you trust does, it is much faster to copy its database. This comes down to three steps: create a backup on the server with the synced database (the source), send it to the new server (the target), and import it there.
+
+<x-alert type="warning">
+Only import a database from a server you control or from someone you trust. A backup replaces your entire chain.
+</x-alert>
+
+Both servers need to run the same network (`mainnet`, `devnet` or `testnet`), and the target needs at least **twice** the size of the backup in free disk space.
+
+### Create a Backup
+
+On the source, create a backup in one of two ways:
+
+| Method | Steps | When to use |
+| :----- | :---- | :---------- |
+| **Snapshot** (recommended) | [Creating a Snapshot](#creating-a-snapshot) | Core-native format, works across PostgreSQL versions |
+| **Database dump** | [Creating a Database Dump](#creating-a-database-dump) | A lot faster and can run while Core keeps running, but only if you [trust the source](#using-a-database-dump-instead) |
 
 ### Set Up an SSH Key Between the Servers
 
-The source server connects to the receiving server (the target) over SSH. It needs a key the target accepts. If the target only allows key logins, for example after [securing it](/docs/core/security/intro), `ssh-copy-id` won't work, so add the key from your own SSH session instead.
+The source connects to the target over SSH to send the backup, so it needs a key the target accepts.
 
-On the source server, create a key and print it:
+<x-alert type="warning">
+Only set this up between servers you control. To share a backup with someone else, don't give them SSH access to your server, but let them download it instead, as described in [Share a Backup with Someone Else](#share-a-backup-with-someone-else).
+</x-alert>
+ If the target only allows key logins, for example after [securing it](/docs/core/security/intro), `ssh-copy-id` won't work, so add the key from your own SSH session instead.
+
+On the source, create a key and print it:
 
 ```bash
 ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
-On the target server, as the Core user, append that line to the authorized keys:
+On the target, as the user that runs Core, append that line to the authorized keys:
 
 ```bash
 echo "ssh-ed25519 AAAA... ark@source" >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-### Push the Database to Another Server
+### Send the Backup
 
-With the key in place, a single command dumps the database, sends it over SSH and imports it on the target:
-
-```bash
-./ark-db-sync.sh push --to ark@203.0.113.20
-```
-
-If the target uses a custom SSH port and [port knocking](/docs/core/security/knocking), pass those as well. The script knocks before connecting, and keeps a single SSH connection open for the whole transfer, so it doesn't matter that the port closes again in the meantime:
+Copy the backup with `rsync`, which needs to be installed on both servers:
 
 ```bash
-./ark-db-sync.sh push --to ark@203.0.113.20 --ssh-port 55555 --knock 7000,8000,9000
+sudo apt-get install -y rsync
 ```
 
-The script will:
+If the target uses [port knocking](/docs/core/security/knocking), knock first. Then run the command for your backup on the source, replacing `55555` with the target's SSH port.
 
-1. Check that the target has Core configured for the same network and has `rsync` and `pg_restore` available.
-2. Reuse the latest complete dump on the source, or create a new one. Pass `--fresh` to always create a new dump, which also removes older dumps for that network.
-3. Check that the target has enough free disk space, then send the dump with `rsync`. An interrupted transfer continues where it left off when you run the command again.
-4. Stop the Core processes on the target that are managed by PM2, replace the database, and start the processes that were running again.
+For a snapshot, replacing `1-7740000` with the folder name of your snapshot:
+
+```bash
+ssh -p 55555 ark@203.0.113.20 'mkdir -p ~/.local/share/ark-core/mainnet/snapshots'
+rsync -az --partial --info=progress2 -e "ssh -p 55555" \
+    ~/.local/share/ark-core/mainnet/snapshots/1-7740000/ \
+    ark@203.0.113.20:.local/share/ark-core/mainnet/snapshots/1-7740000/
+```
+
+For a database dump, which is already compressed, so `rsync` doesn't need to compress it again:
+
+```bash
+ssh -p 55555 ark@203.0.113.20 'mkdir -p ~/ark-db-dumps'
+rsync -a --partial --info=progress2 -e "ssh -p 55555" \
+    ~/ark-db-dumps/mainnet-7740000/ \
+    ark@203.0.113.20:ark-db-dumps/mainnet-7740000/
+```
+
+`--partial` lets you resume an interrupted transfer by running the same command again.
+
+### Share a Backup with Someone Else
+
+To hand a backup to another node operator, let them download it instead of giving them SSH access to your server. First, pack the backup into a single file in a separate folder, and create a checksum for it. It doesn't need to be compressed again. For a snapshot, run the same commands from `~/.local/share/ark-core/mainnet/snapshots` with the snapshot's folder name:
+
+```bash
+mkdir -p ~/ark-db-share
+cd ~/ark-db-dumps
+tar -cf ~/ark-db-share/mainnet-7740000.tar mainnet-7740000
+cd ~/ark-db-share
+sha256sum mainnet-7740000.tar > mainnet-7740000.tar.sha256
+```
+
+You can share these files on any web server or file share you already use. If you don't have one, you can make them available temporarily with [ngrok](https://ngrok.com), without opening any ports on your server.
+
+#### Sharing with ngrok
 
 <x-alert type="info">
-The import replaces the database on the target. The script asks for confirmation first, unless you pass `--yes`.
+The free ngrok plan is limited to 1 GB of data transfer, which is not enough for a backup of mainnet or devnet. You'll need a paid plan to share a backup this way.
 </x-alert>
 
-### Share a Dump with Someone Else
-
-You can also create a dump and import it as separate steps, for example to hand a dump to another node operator, or to keep one as a backup.
-
-On the source server, create the dump:
+Install ngrok and add the authtoken from your [ngrok dashboard](https://dashboard.ngrok.com/get-started/your-authtoken):
 
 ```bash
-./ark-db-sync.sh dump
+sudo snap install ngrok
+ngrok config add-authtoken <your-authtoken>
 ```
 
-The dump is saved in `~/ark-db-dumps/<network>-<height>-<date>`. It is a folder that is already compressed, so you can send it as it is with `rsync`, or pack it into a single file without compressing it again:
+Serve the folder with the backup on your server only. Run this in a separate session, for example with `screen` or `tmux`, as it keeps running until you stop it:
 
 ```bash
-cd ~/ark-db-dumps
-tar -cf mainnet-dump.tar mainnet-7740000-20261026-120000
-sha256sum mainnet-dump.tar > mainnet-dump.tar.sha256
+cd ~/ark-db-share
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Share the `.tar` file together with its checksum, for example on a web server or file share. On the receiving server, [download the script](#download-the-script) to the home directory, verify and unpack the dump, then import it:
+Then open a tunnel to it from another session:
+
+```bash
+ngrok http 8000
+```
+
+ngrok shows a public `https://` address under `Forwarding`. Send that address to the other operator, and send them the checksum through another channel, for example in a chat message, so they can check that the download wasn't tampered with.
+
+<x-alert type="warning">
+Anyone with the address can download the files while the tunnel is open, and everything in the folder you serve is visible. Only serve the folder with the backup, and stop both `ngrok` and the web server with `Ctrl+C` once the download is done.
+</x-alert>
+
+#### Downloading the Backup
+
+The receiving operator downloads the backup to the same location as [above](#send-the-backup), `~/ark-db-dumps` for a database dump or `~/.local/share/ark-core/<network>/snapshots` for a snapshot. Replace the address with the one you received. `-C -` resumes an interrupted download when you run the command again:
 
 ```bash
 mkdir -p ~/ark-db-dumps && cd ~/ark-db-dumps
-sha256sum -c mainnet-dump.tar.sha256
-tar -xf mainnet-dump.tar
-~/ark-db-sync.sh import --path ~/ark-db-dumps/mainnet-7740000-20261026-120000
+curl -fL -C - -O https://example.ngrok.app/mainnet-7740000.tar
 ```
 
-The import checks that the dump is for the same network as your node, stops Core, replaces the database and starts Core again. Once Core is running it syncs the remaining blocks from the network.
-
-### Using Core Snapshots Instead
-
-Add `--method snapshot` to any of the commands above to use Core's own snapshots instead of `pg_dump`:
+Then check it against the checksum you received, and unpack it:
 
 ```bash
-./ark-db-sync.sh push --to ark@203.0.113.20 --method snapshot
+echo "<checksum>  mainnet-7740000.tar" | sha256sum -c
+tar -xf mainnet-7740000.tar && rm mainnet-7740000.tar
 ```
 
-This uses `ark snapshot:dump` on the source, copies the snapshot to `~/.local/share/ark-core/<network>/snapshots` on the target, then runs `ark snapshot:truncate` and `ark snapshot:restore` there. It is slower than the `pg` method, but does not depend on the PostgreSQL versions on both servers.
+### Import the Backup
 
-To import a snapshot that is already on the server, pass its folder name:
+On the target, import the backup with the same method you used to create it:
 
-```bash
-./ark-db-sync.sh import --method snapshot --path 1-7740000
-```
+* For a snapshot, follow [Restoring from a Snapshot](#restoring-from-a-snapshot).
+* For a database dump, follow [Restoring a Database Dump](#restoring-a-database-dump).
 
-### Options
-
-| Option | Description |
-| :----- | :---------- |
-| `--method pg\|snapshot` | `pg_dump`/`pg_restore` (default) or ARK snapshots |
-| `--network NAME` | `mainnet`, `devnet` or `testnet`. Detected automatically if only one is configured |
-| `--jobs N` | Parallel jobs for dump and restore. Defaults to the number of CPUs |
-| `--to user@host` | `push`: the target server |
-| `--ssh-port N` | `push`: the target's SSH port (default `22`) |
-| `--knock a,b,c` | `push`: knock these ports on the target before connecting |
-| `--path DIR` | `import`: the dump folder, or the snapshot folder name |
-| `--keep-remote` | `push`: keep the dump on the target after importing |
-| `--fresh` | `push`: always create a new dump, and remove older dumps for this network |
-| `--no-start` | Don't start Core again after importing |
-| `--yes` | Don't ask for confirmation |
-
-<x-alert type="info">
-**Why not just run `pg_restore`?** Core's database has check constraints that look up other rows, such as the nonce of a sender's previous transaction. `pg_dump` doesn't write rows in that order, so a plain restore fails, or takes hours on mainnet. The script removes these checks while loading and adds them back afterwards. They then apply to every new block, without checking all existing rows again, which were already validated on the source.
-</x-alert>
-
-### Copying Snapshots Manually
-
-You can also copy a snapshot folder yourself, for example to store it in a different location. Use `rsync` over SSH, replacing `55555` with the target's SSH port and `1-7739894` with your snapshot's folder name. Knock first if the target uses [port knocking](/docs/core/security/knocking):
-
-```bash
-rsync -az --partial --info=progress2 -e "ssh -p 55555" \
-    ~/.local/share/ark-core/mainnet/snapshots/1-7739894/ \
-    ark@203.0.113.20:.local/share/ark-core/mainnet/snapshots/1-7739894/
-```
-
-`--partial` lets you resume an interrupted transfer by running the same command again. Once the copy is complete, log in to the target and follow [Restoring from a Snapshot](#restoring-from-a-snapshot).
+Once Core is running again, it syncs the remaining blocks from the network.
