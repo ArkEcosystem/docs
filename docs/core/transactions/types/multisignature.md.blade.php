@@ -8,11 +8,11 @@ By utilizing Schnorr Signatures - multiple signatures and their corresponding ke
 
 For a detailed explanation of how MultiSignature transaction works, please **read our blog post here:**
 
-<livewire:embed-link url="https://blog.ark.io/ark-core-series-schnorrs-multisignatures-4979caac887a" caption="TODO" />
+<livewire:embed-link url="https://arkscic.com/blog/ark-core-series-schnorrs-multisignatures-arkio-blog" caption="TODO" />
 
 You can also set-up your own Multisignature server by following this guide:
 
-<livewire:embed-link url="https://blog.ark.io/ark-core-series-multisignature-server-9557f5a9e711" caption="TODO" />
+<livewire:embed-link url="https://arkscic.com/blog/ark-core-series-multisignature-server-arkio-blog" caption="TODO" />
 
 | References |  |
 | :--- | :--- |

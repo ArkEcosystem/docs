@@ -23,7 +23,7 @@ Throughout the docs, you'll notice that we make use of custom components, in add
 ### Rendering an Embed Link
 
 ```blade
-<livewire:embed-link url="https://blog.ark.io/ark-core-series-schnorrs-multisignatures-4979caac887a" caption="ARK Core - Schnorr" />
+<livewire:embed-link url="https://arkscic.com/blog/ark-core-series-schnorrs-multisignatures-arkio-blog" caption="ARK Core - Schnorr" />
 ```
 
 ### Rendering a Sidebar Group
