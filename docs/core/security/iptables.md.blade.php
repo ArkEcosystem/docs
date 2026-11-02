@@ -6,7 +6,7 @@ title: Security - Applying iptables
 
 iptables is a utility that allows system admins to configure IP packet filtering rules for Linux's kernel firewall. These rules are organized in separate tables and determine how to treat network packets. Limiting connections to your node is _highly recommended_ and shouldn't be overlooked unless required by your system's architecture and/or you're aware of the security implications.
 
-The most important rule caps how many P2P connections a single IP address can keep open at the same time, so one peer can't exhaust your node's connections. There are two ways to apply it. Use the first one if you followed the [Port Knocking](/docs/core/security/knocking) guide or used `secure.sh`, as both rely on `ufw`.
+The most important rule caps how many P2P connections a single IP address can keep open at the same time, so one peer can't exhaust your node's connections. There are two ways to apply it. Use the first one if you followed the [Port Knocking](/docs/core/security/knocking) guide, as it relies on `ufw`.
 
 ## Option 1: Using ufw
 
